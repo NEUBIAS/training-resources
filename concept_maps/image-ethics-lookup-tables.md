@@ -1,4 +1,4 @@
-# Lookup table adjustment
+# Image Ethics: Lookup tables
 
 ## Concepts
 
