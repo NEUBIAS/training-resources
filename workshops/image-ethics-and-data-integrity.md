@@ -32,7 +32,7 @@
 
 #### Explore how saving images can change image content
 
-- Open an image
+- Open image: calibrated_16bit__cells_eres_noisy.tif
 - Inspect its content and take notes of some pixel values and coordinates 
 - Save the image in whatever format (e.g. tiff, png, gif, jpeg, ...)
 - Reopen the image
@@ -43,19 +43,17 @@ Repeat above activity
 - testing different formats for saving
 - adjusting the image display before saving
 
-##### Example data:
-
-- calibrated_16bit__cells_eres_noisy.tif
-
 ### Formative Assessments
 
 How can I ensure that image content is preserved during saving?
+(Please choose one answer)
 
 1. I always use Tiff format, this is safe.
-2. I always test it by checking pixel values and coordinates before and after saving.
-3. 
+2. I test it by checking pixel values and coordinates before and after saving.
+3. I ask my colleagues in the lab, and do what they do.
 
-## Image data presentation
+
+## Image data visualisation
 
 ### Concepts
 
@@ -74,8 +72,29 @@ How can I ensure that image content is preserved during saving?
   }
 '/>
 
+
 ### Activities
 
+- Open image: xy_calibrated_16bit__nuclear_protein_control.tif
+    - This image shows a nuclear protein in control cells.   
+- Open image: xy_calibrated_16bit__nuclear_protein_treated.tif
+    - The cells in this 'treated' image have been subjected to a drug.
+- Inspect the images! 
+    - Did the drug affect the nuclear protein?
+- Adjust the lookup-tables (LUTs) of both images to be the same
+- Add the LUT calibration to both images 
 
 ### Formative Assessments
+
+What helps to scientifically convey image intensity information to my audience?
+(Please select multiple answers)
+
+1. Use a grayscale LUT whenever possible
+2. Color the images in the color of the fluorophore
+3. Add a LUT calibration bar
+4. Use the same LUT for all images
+5. Adjust the LUT to the full bit-depth of the images
+6. Don't change the LUT of the images! Keep it as in the raw data.
+
+
 
