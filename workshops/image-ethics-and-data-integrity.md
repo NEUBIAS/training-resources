@@ -45,8 +45,7 @@ Repeat above activity
 
 ### Formative Assessments
 
-How can I ensure that image content is preserved during saving?
-(Please choose one answer)
+How can I ensure that image content is preserved during saving (one answer)?
 
 1. I always use Tiff format, this is safe.
 2. I test it by checking pixel values and coordinates before and after saving.
@@ -86,15 +85,14 @@ How can I ensure that image content is preserved during saving?
 
 ### Formative Assessments
 
-What helps to scientifically convey image intensity information to my audience?
-(Please select multiple answers)
+What helps to scientifically convey image intensity information (multiple answers)?
 
 1. Use a grayscale LUT whenever possible
 2. Color the images in the color of the fluorophore
 3. Add a LUT calibration bar
 4. Use the same LUT for all images
 5. Adjust the LUT to the full bit-depth of the images
-6. Don't change the LUT of the images! Keep it as in the raw data.
+6. Never change the LUT of images! Always keep it as in the raw data.
 
 
 
