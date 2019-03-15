@@ -33,10 +33,15 @@
 #### Explore how saving images can change image content
 
 - Open an image
-- Inspect it contents, take notes of some pixel values and coordinates 
-- Save the image
+- Inspect its content and take notes of some pixel values and coordinates 
+- Save the image in whatever format (e.g. tiff, png, gif, jpeg, ...)
 - Reopen the image
 - Compare the image content to your notes, did it change?
+
+Repeat above activity
+
+- testing different formats for saving
+- adjusting the image display before saving
 
 ##### Example data:
 
