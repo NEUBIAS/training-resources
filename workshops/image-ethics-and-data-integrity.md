@@ -9,7 +9,9 @@
 - http://www.imagedataintegrity.com/about.html
 - http://jcb.rupress.org/content/166/1/11.full
 
-## Image data integrity
+## Image data saving
+
+### Concepts
 
 <img src='https://g.gravizo.com/svg?
  digraph G {
@@ -28,11 +30,9 @@
 '/>
 
 
-### Activities
+### Activity: Explore image saving can change image content
 
-#### Explore how saving images can change image content
-
-- Open image: calibrated_16bit__cells_eres_noisy.tif
+- Open image: `calibrated_16bit__cells_eres_noisy.tif`
 - Inspect its content and take notes of some pixel values and coordinates 
 - Save the image in whatever format (e.g. tiff, png, gif, jpeg, ...)
 - Reopen the image
@@ -43,7 +43,7 @@ Repeat above activity
 - testing different formats for saving
 - adjusting the image display before saving
 
-### Formative assessments
+### Formative assessment
 
 How can I ensure that image content is preserved during saving (one answer)?
 
@@ -52,7 +52,7 @@ How can I ensure that image content is preserved during saving (one answer)?
 3. I ask my colleagues in the lab, and do what they do.
 
 
-## Image data visualisation
+## Lookup tables
 
 ### Concepts
 
@@ -72,23 +72,18 @@ How can I ensure that image content is preserved during saving (one answer)?
 '/>
 
 
-### Activities
+### Activity: Quantitative image display
 
-#### Comparing images
-
-- Open image: xy_calibrated_16bit__nuclear_protein_control.tif
+- Open image: `xy_calibrated_16bit__nuclear_protein_control.tif`
     - This image shows a nuclear protein in control cells.   
-- Open image: xy_calibrated_16bit__nuclear_protein_treated.tif
+- Open image: `xy_calibrated_16bit__nuclear_protein_treated.tif`
     - The cells in this 'treated' image have been subjected to a drug.
 - Inspect the images! 
     - Did the drug affect the nuclear protein?
 - Adjust the lookup-tables (LUTs) of both images to be the same
 - Add the LUT calibration to both images 
 
-#### Adjusting the LUT for high dynamic range images
-
-
-### Formative Assessments
+### Formative Assessment
 
 What helps to scientifically convey image intensity information (multiple answers)?
 
@@ -99,5 +94,46 @@ What helps to scientifically convey image intensity information (multiple answer
 5. Always adjust the LUT to the image's full bit-depth.
 6. Never change the LUT of images! Always keep it as in the raw data.
 
+## 4-D image display
+
+### Concepts
+
+
+### Activity: ...
+
+- Open image: `xyzt_calibrated_16bit__golgi_bfa.zip`
+- Discuss different options how to present this data
+
+### Formative Assessment
+
+
+## High dynamic range image display
+
+### Concepts
+
+### Activity: Quantitative image display
+
+- Open image: `xyt_calibrated_16bit__golgi_bfa_sum_projection.tif`
+
+### Formative Assessment
+
+
+## Image background subtraction
+
+### Concepts
+
+
+<img src='https://g.gravizo.com/svg?
+ digraph G {
+    shift [fontcolor=white,color=white];
+    image_math -> pixel_values [label="  changes"];
+    image_math -> scientific_image_content [label="  can distort"];
+  }
+'/>
+
+### Activity: ...
+
+
+### Formative Assessment
 
 
