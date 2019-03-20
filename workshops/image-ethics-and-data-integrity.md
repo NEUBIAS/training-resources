@@ -43,7 +43,7 @@ Repeat above activity
 - testing different formats for saving
 - adjusting the image display before saving
 
-### Formative Assessments
+### Formative assessments
 
 How can I ensure that image content is preserved during saving (one answer)?
 
@@ -74,6 +74,8 @@ How can I ensure that image content is preserved during saving (one answer)?
 
 ### Activities
 
+#### Comparing images
+
 - Open image: xy_calibrated_16bit__nuclear_protein_control.tif
     - This image shows a nuclear protein in control cells.   
 - Open image: xy_calibrated_16bit__nuclear_protein_treated.tif
@@ -83,15 +85,18 @@ How can I ensure that image content is preserved during saving (one answer)?
 - Adjust the lookup-tables (LUTs) of both images to be the same
 - Add the LUT calibration to both images 
 
+#### Adjusting the LUT for high dynamic range images
+
+
 ### Formative Assessments
 
 What helps to scientifically convey image intensity information (multiple answers)?
 
-1. Use a grayscale LUT whenever possible
-2. Color the images in the color of the fluorophore
-3. Add a LUT calibration bar
-4. Use the same LUT for all images
-5. Adjust the LUT to the full bit-depth of the images
+1. Use a grayscale LUT whenever possible.
+2. Color the images in the color of the fluorophore.
+3. Add a LUT calibration bar.
+4. Use the same LUT for all images.
+5. Always adjust the LUT to the image's full bit-depth.
 6. Never change the LUT of images! Always keep it as in the raw data.
 
 
