@@ -101,7 +101,7 @@ What helps to scientifically convey image intensity information (multiple answer
 <img src='https://g.gravizo.com/svg?
  digraph G {
     shift [fontcolor=white,color=white];
-    3-D data -> visualisation [label="  multiple options"];
+    3D_data -> visualisation [label="  multiple options"];
     visualisation -> scientific_message [label="  affects"];
   }
 '/>
@@ -109,9 +109,9 @@ What helps to scientifically convey image intensity information (multiple answer
 <img src='https://g.gravizo.com/svg?
  digraph G {
     shift [fontcolor=white,color=white];
-    3-D visualisation -> sum projection;
-    3-D visualisation -> max projection;
-    3-D visualisation -> slice animation;
+    3D_visualisation -> sum_projection;
+    3D_visualisation -> max_projection;
+    3D_visualisation -> slice_animation;
   }
 '/>
 
