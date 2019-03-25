@@ -30,18 +30,20 @@
 '/>
 
 
-### Activity: Explore image saving can change image content
+### Activity: Save an image
+
+![image](/uploads/284ad5edadf96234037f895a86338a58/image.png)
 
 - Open image: `calibrated_16bit__cells_eres_noisy.tif`
-- Inspect its content and take notes of some pixel values and coordinates 
-- Save the image in whatever format (e.g. tiff, png, gif, jpeg, ...)
+- Note down the value and coordinate of the pixel at [218, 332]
+- Save the image in **jpg** format
 - Reopen the image
-- Compare the image content to your notes, did it change?
+- Compare the pixel to your notes, did it change?
 
-Repeat above activity
+Repeat above workflow, but now adjust the image display before saving.
 
-- testing different formats for saving
-- adjusting the image display before saving
+Repeat above workflow, but now save it in a different format (e.g. tif, png).
+
 
 ### Formative assessment
 
@@ -50,7 +52,6 @@ How can I ensure that image content is preserved during saving (one answer)?
 1. I always use Tiff format, this is safe.
 2. I test it by checking pixel values and coordinates before and after saving.
 3. I ask my colleagues in the lab, and do what they do.
-
 
 ## Lookup tables
 
@@ -77,9 +78,9 @@ How can I ensure that image content is preserved during saving (one answer)?
 - Open image: `xy_calibrated_16bit__nuclear_protein_control.tif`
     - This image shows a nuclear protein in control cells.   
 - Open image: `xy_calibrated_16bit__nuclear_protein_treated.tif`
-    - The cells in this 'treated' image have been subjected to a drug.
-- Inspect the images! 
-    - Did the drug affect the nuclear protein?
+    - The cells in this image have been subjected to a drug.
+- Inspect the images:
+    - Did the drug affect the amount of the nuclear protein?
 - Adjust the lookup-tables (LUTs) of both images to be the same
 - Add the LUT calibration to both images 
 
@@ -87,16 +88,32 @@ How can I ensure that image content is preserved during saving (one answer)?
 
 What helps to scientifically convey image intensity information (multiple answers)?
 
-1. Use a grayscale LUT whenever possible.
-2. Color the images in the color of the fluorophore.
+1. Use grayscale LUT whenever possible.
 3. Add a LUT calibration bar.
 4. Use the same LUT for all images.
-5. Always adjust the LUT to the image's full bit-depth.
-6. Never change the LUT of images! Always keep it as in the raw data.
+5. Adjust the LUT to the image's full bit-depth.
+6. Never change the LUT of images! Always keep it as is.
 
-## 4-D image display
+## 3-D image display
 
 ### Concepts
+
+<img src='https://g.gravizo.com/svg?
+ digraph G {
+    shift [fontcolor=white,color=white];
+    3-D data -> visualisation [label="  multiple options"];
+    visualisation -> scientific_message [label="  affects"];
+  }
+'/>
+
+<img src='https://g.gravizo.com/svg?
+ digraph G {
+    shift [fontcolor=white,color=white];
+    3-D visualisation -> sum projection;
+    3-D visualisation -> max projection;
+    3-D visualisation -> slice animation;
+  }
+'/>
 
 
 ### Activity: ...
