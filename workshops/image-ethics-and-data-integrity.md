@@ -9,8 +9,8 @@
     - open and save images
     - change image display settings
     - subtract a value from every pixel in the image
-- The training [material](https://git.embl.de/grp-bio-it/image-analysis-training-resources/-/archive/master/image-analysis-training-resources-master.zip) 
-- Access to this [document](https://git.embl.de/grp-bio-it/image-analysis-training-resources/blob/master/workshops/image-ethics-and-data-integrity.md#image-ethics-and-data-integrity).
+- Please download the training [material](https://git.embl.de/grp-bio-it/image-analysis-training-resources/-/archive/master/image-analysis-training-resources-master.zip) 
+- Make sure you can access to this [document](https://git.embl.de/grp-bio-it/image-analysis-training-resources/blob/master/workshops/image-ethics-and-data-integrity.md#image-ethics-and-data-integrity).
 
 #### Duration
 
