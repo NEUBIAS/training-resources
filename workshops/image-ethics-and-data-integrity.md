@@ -1,15 +1,42 @@
 # Image ethics and data integrity
 
-### Duration
+"No novel training material will survive the first contact with students".
+
+#### Prerequistes
+
+- A computer with an image analysis software (e.g. [Fiji](www.fiji.sc)) already installed.
+- Basic knowledge of how to use above software, e.g. 
+    - open and save images
+    - change image display settings
+    - subtract a value from every pixel in the image
+- The training [material](https://git.embl.de/grp-bio-it/image-analysis-training-resources/-/archive/master/image-analysis-training-resources-master.zip) 
+- Access to this [document](https://git.embl.de/grp-bio-it/image-analysis-training-resources/blob/master/workshops/image-ethics-and-data-integrity.md#image-ethics-and-data-integrity).
+
+#### Duration
 
 1.5 hours
 
-### Learn more
+#### Learn more about image data integrity
 
 - http://www.imagedataintegrity.com/about.html
 - http://jcb.rupress.org/content/166/1/11.full
 
 ## Image data saving
+
+Sometimes it can be necessary to resave your images in a different format. 
+It needs some training to know how to do this properly.
+
+### Motivation
+
+What could be good reasons to resave your data in a different format (multiple answers)?
+
+- I want to publish images on the internet, only some image formats will be possible.
+- I want to import images in PowerPoint, only some formats will work.
+- I want to save disk space, thus I need to find a format that makes the images smaller.
+- I want to use a special software that only accepts certain image data formats.
+- The journal I want to publish in only accepts special image formats.
+- My boss says that (s)he only accepts Tiff images, because this is the standard.
+- My boss says that (s)he cannot open .lif (Leica) or .czi (Zeiss) images.
 
 ### Concepts
 
@@ -26,6 +53,7 @@
  digraph G {
     shift [fontcolor=white,color=white];
     saving_images -> image_content [label="  can change"];
+    saving_images -> pixel_data_type [label="  can change"];
   }
 '/>
 
@@ -40,27 +68,42 @@
 - Reopen the image
 - Compare the pixel to your notes, did it change?
 
-Repeat above workflow, but now adjust the image display before saving.
-
-Repeat above workflow, but now save it in a different format (e.g. tif, png).
+Repeat above workflow, but 
+- adjust the image display before saving
+- save in **png** instead of **tif** format
+- open `xy_float__nuclei_probability.tif` and save as **png**
 
 
 ### Formative assessment
 
-How can I ensure that image content is preserved during saving (one answer)?
+What can I do to avoid data loss during image saving (multiple answers)?
 
-1. I always use Tiff format, this is safe.
-2. I test it by checking pixel values and coordinates before and after saving.
+1. I always save in Tiff format, this is safe.
+2. I always check pixel values and coordinates before and after saving.
 3. I ask my colleagues in the lab, and do what they do.
+4. I keep a copy of the raw data.
 
-## Lookup tables
+## Image display adjustment
+
+### Motivation
+
+Images are just a collection of numbers. To visualise those numbers one needs to decide how to map them onto a color and a brightness. There is no default way of doing this. Thus one has be educated and thoughful about this topic. In fact, it is one of the great responsibilties of a microscopist to ajust the image display settings proplery.
 
 ### Concepts
 
 <img src='https://g.gravizo.com/svg?
  digraph G {
     shift [fontcolor=white,color=white];
+    image_content -> numbers [label="  contains"];
+    numbers -> color_and_brightness [label="  lookup table (LUT)"];
+  }
+'/>
+
+<img src='https://g.gravizo.com/svg?
+ digraph G {
+    shift [fontcolor=white,color=white];
     lookup_table_settings -> image_appearance [label="  change"];
+    lookup_table_settings -> no_default
     image_appearance -> scientific_message [label="  changes"];
   }
 '/>
@@ -82,7 +125,7 @@ How can I ensure that image content is preserved during saving (one answer)?
 - Inspect the images:
     - Did the drug affect the amount of the nuclear protein?
 - Adjust the lookup-tables (LUTs) of both images to be the same
-- Add the LUT calibration to both images 
+- Add a LUT calibration to both images 
 
 ### Formative Assessment
 
@@ -94,7 +137,117 @@ What helps to scientifically convey image intensity information (multiple answer
 5. Adjust the LUT to the image's full bit-depth.
 6. Never change the LUT of images! Always keep it as is.
 
-## 3-D image display
+
+## High dynamic range image display
+
+### Motivation
+
+The intensity in images of biological samples can cover large ranges.
+For example, a GFP tagged protein could occur in the same cell in a diffraction limited volume either 1 or 10000 times. The human visual system can only distinguish about 200 gray values 
+
+### Concepts
+
+<img src='https://g.gravizo.com/svg?
+ digraph G {
+    shift [fontcolor=white,color=white];
+    image_dynamic_range -> highest_to_lowest_value [label="  is"];
+    biological_images -> high_dynamic_range [label="  can have"];
+    paper_reflectance -> lower_dynamic_range [label="  has"];
+    computer_monitors -> lower_dynamic_range [label="  has"];
+    biological_images -> display [label="  is challenging"];
+  }
+'/>
+
+### Activity: High dynamic range image display
+
+- Open image: `xy_16bit__nuclei_high_dynamic_range.tif`
+- Try to adjust the grayscale LUT such that everything can be seen
+	- Do you manage?
+- Try finding other LUTs that help showing all data
+	- Add LUT calibration to image
+
+### Formative Assessment
+
+What can you do to show images with a high dynamic range (multiple answers)?
+
+A. Adjust the LUT that the relevant information can be seen.
+B. Adjust the LUT that the relevant information can be seen, state that this has been done in the
+figure legend, and show the same image with other LUT settings in the supplemental material.
+C. Try to find a LUT that shows all data.
+D. Never use multi color LUTs, they are confusing.
+E. Change microscope settings such that only relevant structures are visible, e.g. lower the gain such that 
+too dark objects have zero pixel values.
+F. Avoid showing background noise, as this is distracting.
+
+
+
+## Image math
+
+It sometimes is necessary to change the numbers in images. It is important to understand how to do this properly in order to avoid uncontrolled artifacts.
+
+### Motivation
+
+What are good reasons to change the pixel values in an image?
+
+A. For intensity measurements, the image background (e.g. camera based offset) should be subtracted from all pixels.
+B. For threshold based image segmentation (object detection), it helps to filter noise in the image.
+C. For intensity measurements, it helps to filter noise in the image.
+D. The image appears to dark, multiplication of all pixels by a constant number is a means to make it brighter..
+E. For uneven illumination (e.g. occuring in wide-field microscopy with large camera chips), one should do flat-field correction.
+F. Images taken on a different microscope had consitently lower gray values than on our usual microscope. It is useful to adjust the values to make them similar.  
+
+### Concepts
+
+<img src='https://g.gravizo.com/svg?
+ digraph G {
+    shift [fontcolor=white,color=white];
+    image_math -> pixel_values [label="  changes"];
+    image_math -> scientific_image_content [label="  can distort"];
+  }
+'/>
+
+<img src='https://g.gravizo.com/svg?
+ digraph G {
+    shift [fontcolor=white,color=white];
+    image_math -> pixel_data_type [label="  does not change"];
+    image_math -> wrong_pixel_values [label = "  can yield"] 
+  }
+'/>
+
+### Activity: Perform pixel based background subtraction
+
+- Open image: xy_8bit__nuclei_noisy_different_intensity.tif
+- Appreciate the significant background intensity
+- Measure pixel value at [ 28 , 35 ] and [ 28, 39 ]
+- Measure background intensity in this region:
+	- upper left corner at [20,35]
+	- width = 10
+	- height = 10 
+- Subtract the measured background intensity from each pixel 
+- Measure pixel values again at above coordinates ( [ 28 , 35 ] and [ 28, 39 ] )
+- Discuss how the pixel values changed during background subtraction
+
+Repeat above activity, but:
+
+- Convert the image to a floating point format after opening
+
+### Formative Assessment
+
+Considering image math operations, which of below statements is correct 
+(multiple answers)?
+
+A. Never change the pixel data type, because it violates image integrity.
+B. One sometimes should change pixel data type, otherwise one gets wrong image processing results.
+C. Changing the pixel data type does not change pixel values.
+D. One should check pixel values after changing pixel data type.
+E. It is forbidden to perform mathematical operations on images, because it changes the pixel values.
+F. As a scientist, one is allowed to perform mathematical operations on images.
+
+
+
+## Display of 3-D images
+
+Biological images are often 3D. However paper and monitors can only show 2D images. It is thus important to understand how to show 3D images in 2D without compromising the scientific message.
 
 ### Concepts
 
@@ -128,34 +281,10 @@ What helps to scientifically convey image intensity information (multiple answer
 
 ### Formative Assessment
 
+Which statements about visualisation and quantification of 3D images are correct (multiple answers)?
 
-
-## High dynamic range image display
-
-### Concepts
-
-### Activity: Quantitative image display
-
-- Open image: `xyt_calibrated_16bit__golgi_bfa_sum_projection.tif`
-
-### Formative Assessment
-
-
-## Image background subtraction
-
-### Concepts
-
-<img src='https://g.gravizo.com/svg?
- digraph G {
-    shift [fontcolor=white,color=white];
-    image_math -> pixel_values [label="  changes"];
-    image_math -> scientific_image_content [label="  can distort"];
-  }
-'/>
-
-### Activity: ...
-
-
-### Formative Assessment
-
+A. Always use maximum intensity projection, it is by far the most commonly used..
+B. Any projection can make sense, you just have scientifically justify it.
+C. Intensity quanitifcations ideally should be done in 3D, not in projections.
+D. It is impossible to quantify intensities in projections.
 
