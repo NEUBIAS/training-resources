@@ -35,6 +35,13 @@
 
 ## Image data saving
 
+<img src='https://g.gravizo.com/svg?
+ digraph G {
+    shift [fontcolor=white,color=white];
+    saving_images -> image_content [label="  can change"];
+  }
+'/>
+
 ### Motivation
 
 Sometimes it can be necessary to save your images in a different formats. 
@@ -51,15 +58,6 @@ What could be good reasons to resave your data in a different format (multiple a
 7. My boss says that (s)he cannot open .lif (Leica) or .czi (Zeiss) images, thus I should save them in a different format.
 
 
-### Image data saving concept map
-
-<img src='https://g.gravizo.com/svg?
- digraph G {
-    shift [fontcolor=white,color=white];
-    saving_images -> image_content [label="  can change"];
-  }
-'/>
-
 ### Activity: Save an image
 
 - Open image: `calibrated_16bit__cells_eres_noisy.tif`
@@ -70,18 +68,18 @@ What could be good reasons to resave your data in a different format (multiple a
 
 Repeat above workflow, but 
 
-1. adjust the image display before saving 
-2. save as **png**
-3. open `xy_float__nuclei_probability.tif` and save as **png**
+- adjust the image display before saving 
+- save as **png**
+- open `xy_float__nuclei_probability.tif` and save as **png**
 
 ### Formative assessment
 
 What can I do to preserve image integrity during image saving (multiple answers)?
 
-A. I always save in Tiff format, this is safe.
-B. I always check pixel values and coordinates before and after saving.
-C. I ask my colleagues in the lab and do what they recommend..
-D. I keep a copy of the raw data.
+1. I always save in Tiff format, this is safe.
+2. I always check pixel values and coordinates before and after saving.
+3. I ask my colleagues in the lab and do what they recommend..
+4. I keep a copy of the raw data.
 
 
 ## Image display adjustment
@@ -96,17 +94,15 @@ Images are a collection of numbers. To visualise those numbers one needs to deci
  digraph G {
     shift [fontcolor=white,color=white];
     image_content -> numbers [label="  contains"];
-    numbers -> color_and_brightness [label="  lookup table (LUT)"];
+    numbers -> image_display [label="  lookup table (LUT)"];
   }
 '/>
 
 <img src='https://g.gravizo.com/svg?
  digraph G {
     shift [fontcolor=white,color=white];
-    lookup_table_settings -> image_appearance [label="  change"];
+    lookup_table_settings -> scientific_message [label="  change"];
     lookup_table_settings -> no_default [label="  have"];
-    image_appearance -> scientific_message [label="  changes"];
-    responsible_scientist -> lookup_table_settings [label="  configures thoughtfully"];
   }
 '/>
 
@@ -125,54 +121,47 @@ Images are a collection of numbers. To visualise those numbers one needs to deci
 
 What helps to scientifically convey image intensity information (multiple answers)?
 
-1. Use grayscale LUT whenever possible.
-3. Add a LUT calibration bar.
-4. Use the same LUT for all images.
-5. Adjust the LUT to the image's full bit-depth.
-6. Never change the LUT of images! Always keep as in raw data.
-
-
+1. Adjust the LUT to the image's full bit-depth.
+2. Add a LUT calibration bar.
+3. Use the same LUT for images acquired with same settings..
+4. Never change the LUT of images! Always keep as in raw data.
 
 ## High dynamic range image display
-
-### Motivation
-
-The number range in images of biological samples can cover large ranges.
-For example, a GFP tagged protein could occur in the same cell at different locations either 1 or 10000 times. This means that the dynamic range can be 10^4 or more. Due to limitations of image display and preception such large dynamics ranges are difficult to display.
-
-### High dynamics range image display concept map
 
 <img src='https://g.gravizo.com/svg?
  digraph G {
     shift [fontcolor=white,color=white];
-    image_dynamic_range -> ratio_max_to_min_value [label="  is"];
-    biological_images -> high_dynamic_range [label="  can have"];
-    paper_reflectance -> low_dynamic_range [label="  has"];
-    computer_monitors -> low_dynamic_range [label="  has"];
-    high_dynamic_range -> display [label="  is challenging"];
+    biological_images -> high_dynamic_range [label="  "];
+    paper_reflectance -> low_dynamic_range [label="  "];
+    computer_monitors -> low_dynamic_range [label="  "];
   }
 '/>
+
+### Motivation
+
+The number range in images of biological samples can cover large ranges.
+For example, a GFP tagged protein could occur in the same cell at different locations either 1 or 10000 times. This means that the dynamic range can be 10^4 or more. Due to limitations of image display and image preception such large dynamics ranges are difficult to display.
+
 
 ### Activity: High dynamic range image display
 
 - Open image: `xy_16bit__nuclei_high_dynamic_range.tif`
-- Try to adjust the grayscale LUT such that everything can be seen
-	- Do you manage?
+- Try to adjust the grayscale LUT such that everything can be seen...
 - Try finding other LUTs that help showing all data
-	- Add LUT calibration to image
+- Add LUT calibration to image
 
 ### Formative Assessment
 
 What can you do to show images with a high dynamic range (multiple answers)?
 
-A. Adjust the LUT such that the scientifically relevant information can be seen.
-B. Adjust the LUT such that the scientifically relevant information can be seen, 
+1. Adjust the LUT such that the scientifically relevant information can be seen.
+2. Adjust the LUT such that the scientifically relevant information can be seen, 
   - and state that the LUT has been adjusted in the figure legend
   - and show the same image with other LUT settings in the supplemental material.
-C. Try to find a LUT that shows all data.
-D. Never use multi color LUTs, they are confusing.
-E. Already on the  microscope change the settings such that only relevant structures are visible, e.g. lower the gain such that dark irrelevant objects have zero pixel values.
-F. Adjust LUT settings such that background noise is not visible, because this is distracting.
+3. Try to find a LUT that shows all data.
+4. Never use multi color LUTs, they are confusing.
+5. Already on the  microscope change the settings such that only relevant structures are visible, e.g. lower the gain such that dark irrelevant objects have zero pixel values.
+6. Adjust LUT settings such that background noise is not visible, because this is distracting.
 G. Add a LUT calibration to the image, such that readers can see that not all information might be visible.
 
 
@@ -184,12 +173,12 @@ It sometimes is necessary to change numberic content of images. It is important 
 
 What are good reasons to change the pixel values in an image?
 
-A. For intensity measurements, the image background (e.g. camera based offset) should be subtracted from all pixels.
-B. For threshold based image segmentation (object detection), it helps to first filter noise in the image.
-C. For intensity measurements, it helps to filter noise in the image.
-D. The image appears to dark, multiplication of all pixels by a constant number is a means to make it brighter.
-E. For uneven illumination (e.g. occuring in wide-field microscopy with large camera chips), one should do flat-field correction, which makes the intensity values even across the image.
-F. Our microscope was broken. We took images on a replacement microscope. The pixel values were consistently higher than on our usual microscope. We multiplied the pixels on all images from the replacement microscope by a constant factor to make them comparable to our usual data.
+1. For intensity measurements, the image background (e.g. camera based offset) should be subtracted from all pixels.
+2. For threshold based image segmentation (object detection), it helps to first filter noise in the image.
+3. For intensity measurements, it helps to filter noise in the image.
+4. The image appears to dark, multiplication of all pixels by a constant number is a means to make it brighter.
+5. For uneven illumination (e.g. occuring in wide-field microscopy with large camera chips), one should do flat-field correction, which makes the intensity values even across the image.
+6. Our microscope was broken. We took images on a replacement microscope. The pixel values were consistently higher than on our usual microscope. We multiplied the pixels on all images from the replacement microscope by a constant factor to make them comparable to our usual data.
 
 
 ### Concepts
@@ -225,18 +214,18 @@ Repeat above activity, but:
 Considering image math operations, which of below statements is correct 
 (multiple answers)?
 
-A. Never change the pixel data type, because it violates image integrity.
-B. One sometimes should change pixel data type, otherwise one gets wrong image processing results.
-C. Changing the pixel data type does not change pixel values.
-D. One should check pixel values after changing pixel data type.
-E. It is forbidden to perform mathematical operations on images, because it changes the pixel values.
-F. As a scientist, one is allowed to perform mathematical operations on images.
+1. Never change the pixel data type, because it violates image integrity.
+2. One sometimes should change pixel data type, otherwise one gets wrong image processing results.
+3. Changing the pixel data type does not change pixel values.
+4. One should check pixel values after changing pixel data type.
+5. It is forbidden to perform mathematical operations on images, because it changes the pixel values.
+6. As a scientist, one is allowed to perform mathematical operations on images.
 
 
 
 ## Display of 3-D images
 
-Biological images are often 3D. However paper and monitors can only show 2D images. It is thus important to understand how to show 3D images in 2D without compromising the scientific message.
+Biological images are often 34. However paper and monitors can only show 2D images. It is thus important to understand how to show 3D images in 2D without compromising the scientific message.
 
 ### Concepts
 
@@ -272,8 +261,8 @@ Biological images are often 3D. However paper and monitors can only show 2D imag
 
 Which statements about visualisation and quantification of 3D images are correct (multiple answers)?
 
-A. Always use maximum intensity projection, it is by far the most commonly used..
-B. Any projection can make sense, you just have scientifically justify it.
-C. Intensity quanitifcations ideally should be done in 3D, not in projections.
-D. It is impossible to quantify intensities in projections.
+1. Always use maximum intensity projection, it is by far the most commonly used..
+2. Any projection can make sense, you just have scientifically justify it.
+3. Intensity quanitifcations ideally should be done in 3D, not in projections.
+4. It is impossible to quantify intensities in projections.
 
