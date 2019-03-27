@@ -42,19 +42,13 @@ It needs some training to know how to do this properly.
 
 What could be good reasons to resave your data in a different format (multiple answers)?
 
-A. I want to share my scientific findings on twitter, thus I need to convert an image to a twitter compatible format.
-
-B. I want to import images in PowerPoint, only some formats will work.
-
-C. I need to save disk space, thus I need to find a format that makes the images smaller.
-
-D. I want to use a special software that only accepts certain image data formats.
-
-E. The journal I want to publish in, only accepts certain image formats.
-
-F. I want to have everything in Tiff format, because this is the standard.
-
-G. My boss says that (s)he cannot open .lif (Leica) or .czi (Zeiss) images, thus I should save them in a different format.
+1. I want to share my scientific findings on twitter, thus I need to convert an image to a twitter compatible format.
+2. I want to import images in PowerPoint, only some formats will work.
+3. I need to save disk space, thus I need to find a format that makes the images smaller.
+4. I want to use a special software that only accepts certain image data formats.
+5. The journal I want to publish in, only accepts certain image formats.
+6. I want to have everything in Tiff format, because this is the standard.
+7. My boss says that (s)he cannot open .lif (Leica) or .czi (Zeiss) images, thus I should save them in a different format.
 
 
 ### Image data saving concept map
