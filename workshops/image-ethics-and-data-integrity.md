@@ -1,14 +1,14 @@
 # Image data integrity
 
-#### Prerequistes
+#### Prerequisites
 
 - A computer with an image analysis software (e.g. [Fiji](www.fiji.sc)) already installed.
 - Basic knowledge of how to use above software, e.g. 
     - open and save images
     - change image display settings
-    - subtract a value from every pixel in the image
+    - subtract a value from every pixel in an image
 - Please download the training [material](https://git.embl.de/grp-bio-it/image-analysis-training-resources/-/archive/master/image-analysis-training-resources-master.zip) 
-- Make sure you can access to this [document](https://git.embl.de/grp-bio-it/image-analysis-training-resources/blob/master/workshops/image-ethics-and-data-integrity.md#image-ethics-and-data-integrity).
+- Please make sure you can access to this [document](https://git.embl.de/grp-bio-it/image-analysis-training-resources/blob/master/workshops/image-ethics-and-data-integrity.md#image-ethics-and-data-integrity).
 
 #### Duration
 
@@ -19,7 +19,7 @@
 - http://www.imagedataintegrity.com/about.html
 - http://jcb.rupress.org/content/166/1/11.full
 
-## Image data integrity concept map
+## Image data integrity
 
 <img src='https://g.gravizo.com/svg?
  digraph G {
@@ -37,17 +37,23 @@
 
 ### Motivation
 
-Sometimes it can be necessary to resave your images in a different format. 
+Sometimes it can be necessary to save your images in a different formats. 
 It needs some training to know how to do this properly.
 
 What could be good reasons to resave your data in a different format (multiple answers)?
 
 A. I want to share my scientific findings on twitter, thus I need to convert an image to a twitter compatible format.
+
 B. I want to import images in PowerPoint, only some formats will work.
+
 C. I need to save disk space, thus I need to find a format that makes the images smaller.
+
 D. I want to use a special software that only accepts certain image data formats.
+
 E. The journal I want to publish in, only accepts certain image formats.
+
 F. I want to have everything in Tiff format, because this is the standard.
+
 G. My boss says that (s)he cannot open .lif (Leica) or .czi (Zeiss) images, thus I should save them in a different format.
 
 
