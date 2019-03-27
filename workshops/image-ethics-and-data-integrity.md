@@ -18,6 +18,9 @@
 
 - http://www.imagedataintegrity.com/about.html
 - http://jcb.rupress.org/content/166/1/11.full
+- Douglas W. Cromey
+	- Digital Images Are Data: And Should be Treated as Such
+	- ...and follow up publications...
 
 ## Image data integrity
 
@@ -60,7 +63,7 @@ What could be good reasons to resave your data in a different format (multiple a
 
 ### Activity: Save an image
 
-- Open image: `calibrated_16bit__cells_eres_noisy.tif`
+- Open image: `xy_calibrated_16bit__cells_eres_noisy.tif`
 - Note down the value and coordinate of the pixel at [218, 332]
 - Save the image in **jpg** format
 - Reopen the image
