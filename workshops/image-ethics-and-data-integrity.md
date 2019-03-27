@@ -1,6 +1,4 @@
-# Image ethics and data integrity
-
-"No novel training material will survive the first contact with students".
+# Image data integrity
 
 #### Prerequistes
 
@@ -21,75 +19,78 @@
 - http://www.imagedataintegrity.com/about.html
 - http://jcb.rupress.org/content/166/1/11.full
 
-## Image data saving
-
-Sometimes it can be necessary to resave your images in a different format. 
-It needs some training to know how to do this properly.
-
-### Motivation
-
-What could be good reasons to resave your data in a different format (multiple answers)?
-
-- I want to publish images on the internet, only some image formats will be possible.
-- I want to import images in PowerPoint, only some formats will work.
-- I want to save disk space, thus I need to find a format that makes the images smaller.
-- I want to use a special software that only accepts certain image data formats.
-- The journal I want to publish in only accepts special image formats.
-- My boss says that (s)he only accepts Tiff images, because this is the standard.
-- My boss says that (s)he cannot open .lif (Leica) or .czi (Zeiss) images.
-
-### Concepts
+## Image data integrity concept map
 
 <img src='https://g.gravizo.com/svg?
  digraph G {
     shift [fontcolor=white,color=white];
-    image_integrity -> image_content [label="  preserving"];
+    image_data_integrity -> image_content [label="  preserving"];
     image_content -> pixel_values;
     image_content -> pixel_coordinates;
-  }
+    pixel_coordinates -> array_indices;
+    pixel_coordinates -> physical_coordinates; 
+ }
 '/>
+
+
+## Image data saving
+
+### Motivation
+
+Sometimes it can be necessary to resave your images in a different format. 
+It needs some training to know how to do this properly.
+
+What could be good reasons to resave your data in a different format (multiple answers)?
+
+A. I want to share my scientific findings on twitter, thus I need to convert an image to a twitter compatible format.
+B. I want to import images in PowerPoint, only some formats will work.
+C. I need to save disk space, thus I need to find a format that makes the images smaller.
+D. I want to use a special software that only accepts certain image data formats.
+E. The journal I want to publish in, only accepts certain image formats.
+F. I want to have everything in Tiff format, because this is the standard.
+G. My boss says that (s)he cannot open .lif (Leica) or .czi (Zeiss) images, thus I should save them in a different format.
+
+
+### Image data saving concept map
 
 <img src='https://g.gravizo.com/svg?
  digraph G {
     shift [fontcolor=white,color=white];
     saving_images -> image_content [label="  can change"];
-    saving_images -> pixel_data_type [label="  can change"];
   }
 '/>
 
-
 ### Activity: Save an image
-
-![image](/uploads/284ad5edadf96234037f895a86338a58/image.png)
 
 - Open image: `calibrated_16bit__cells_eres_noisy.tif`
 - Note down the value and coordinate of the pixel at [218, 332]
 - Save the image in **jpg** format
 - Reopen the image
-- Compare the pixel to your notes, did it change?
+- Compare the value and coordinate of the pixel at [218, 332] to your notes, did it change?
 
 Repeat above workflow, but 
-- adjust the image display before saving
-- save in **png** instead of **tif** format
-- open `xy_float__nuclei_probability.tif` and save as **png**
 
+1. adjust the image display before saving 
+2. save as **png**
+3. open `xy_float__nuclei_probability.tif` and save as **png**
 
 ### Formative assessment
 
-What can I do to avoid data loss during image saving (multiple answers)?
+What can I do to preserve image integrity during image saving (multiple answers)?
 
-1. I always save in Tiff format, this is safe.
-2. I always check pixel values and coordinates before and after saving.
-3. I ask my colleagues in the lab, and do what they do.
-4. I keep a copy of the raw data.
+A. I always save in Tiff format, this is safe.
+B. I always check pixel values and coordinates before and after saving.
+C. I ask my colleagues in the lab and do what they recommend..
+D. I keep a copy of the raw data.
+
 
 ## Image display adjustment
 
 ### Motivation
 
-Images are just a collection of numbers. To visualise those numbers one needs to decide how to map them onto a color and a brightness. There is no default way of doing this. Thus one has be educated and thoughful about this topic. In fact, it is one of the great responsibilties of a microscopist to ajust the image display settings proplery.
+Images are a collection of numbers. To visualise those numbers one needs to decide how to map them onto a color and a brightness. There is no default way of doing this. Thus one has be educated and thoughful about this topic. In fact, it is one of the great responsibilties of a microscopist to ajust the image display settings proplery.
 
-### Concepts
+### Image display concept map
 
 <img src='https://g.gravizo.com/svg?
  digraph G {
@@ -103,18 +104,11 @@ Images are just a collection of numbers. To visualise those numbers one needs to
  digraph G {
     shift [fontcolor=white,color=white];
     lookup_table_settings -> image_appearance [label="  change"];
-    lookup_table_settings -> no_default
+    lookup_table_settings -> no_default [label="  have"];
     image_appearance -> scientific_message [label="  changes"];
-  }
-'/>
-
-<img src='https://g.gravizo.com/svg?
- digraph G {
-    shift [fontcolor=white,color=white];
     responsible_scientist -> lookup_table_settings [label="  configures thoughtfully"];
   }
 '/>
-
 
 ### Activity: Quantitative image display
 
@@ -135,26 +129,27 @@ What helps to scientifically convey image intensity information (multiple answer
 3. Add a LUT calibration bar.
 4. Use the same LUT for all images.
 5. Adjust the LUT to the image's full bit-depth.
-6. Never change the LUT of images! Always keep it as is.
+6. Never change the LUT of images! Always keep as in raw data.
+
 
 
 ## High dynamic range image display
 
 ### Motivation
 
-The intensity in images of biological samples can cover large ranges.
-For example, a GFP tagged protein could occur in the same cell in a diffraction limited volume either 1 or 10000 times. The human visual system can only distinguish about 200 gray values 
+The number range in images of biological samples can cover large ranges.
+For example, a GFP tagged protein could occur in the same cell at different locations either 1 or 10000 times. This means that the dynamic range can be 10^4 or more. Due to limitations of image display and preception such large dynamics ranges are difficult to display.
 
-### Concepts
+### High dynamics range image display concept map
 
 <img src='https://g.gravizo.com/svg?
  digraph G {
     shift [fontcolor=white,color=white];
-    image_dynamic_range -> highest_to_lowest_value [label="  is"];
+    image_dynamic_range -> ratio_max_to_min_value [label="  is"];
     biological_images -> high_dynamic_range [label="  can have"];
-    paper_reflectance -> lower_dynamic_range [label="  has"];
-    computer_monitors -> lower_dynamic_range [label="  has"];
-    biological_images -> display [label="  is challenging"];
+    paper_reflectance -> low_dynamic_range [label="  has"];
+    computer_monitors -> low_dynamic_range [label="  has"];
+    high_dynamic_range -> display [label="  is challenging"];
   }
 '/>
 
@@ -170,31 +165,32 @@ For example, a GFP tagged protein could occur in the same cell in a diffraction 
 
 What can you do to show images with a high dynamic range (multiple answers)?
 
-A. Adjust the LUT that the relevant information can be seen.
-B. Adjust the LUT that the relevant information can be seen, state that this has been done in the
-figure legend, and show the same image with other LUT settings in the supplemental material.
+A. Adjust the LUT such that the scientifically relevant information can be seen.
+B. Adjust the LUT such that the scientifically relevant information can be seen, 
+  - and state that the LUT has been adjusted in the figure legend
+  - and show the same image with other LUT settings in the supplemental material.
 C. Try to find a LUT that shows all data.
 D. Never use multi color LUTs, they are confusing.
-E. Change microscope settings such that only relevant structures are visible, e.g. lower the gain such that 
-too dark objects have zero pixel values.
-F. Avoid showing background noise, as this is distracting.
-
+E. Already on the  microscope change the settings such that only relevant structures are visible, e.g. lower the gain such that dark irrelevant objects have zero pixel values.
+F. Adjust LUT settings such that background noise is not visible, because this is distracting.
+G. Add a LUT calibration to the image, such that readers can see that not all information might be visible.
 
 
 ## Image math
 
-It sometimes is necessary to change the numbers in images. It is important to understand how to do this properly in order to avoid uncontrolled artifacts.
-
 ### Motivation
+
+It sometimes is necessary to change numberic content of images. It is important to understand how to do this properly in order to avoid uncontrolled artifacts.
 
 What are good reasons to change the pixel values in an image?
 
 A. For intensity measurements, the image background (e.g. camera based offset) should be subtracted from all pixels.
-B. For threshold based image segmentation (object detection), it helps to filter noise in the image.
+B. For threshold based image segmentation (object detection), it helps to first filter noise in the image.
 C. For intensity measurements, it helps to filter noise in the image.
-D. The image appears to dark, multiplication of all pixels by a constant number is a means to make it brighter..
-E. For uneven illumination (e.g. occuring in wide-field microscopy with large camera chips), one should do flat-field correction.
-F. Images taken on a different microscope had consitently lower gray values than on our usual microscope. It is useful to adjust the values to make them similar.  
+D. The image appears to dark, multiplication of all pixels by a constant number is a means to make it brighter.
+E. For uneven illumination (e.g. occuring in wide-field microscopy with large camera chips), one should do flat-field correction, which makes the intensity values even across the image.
+F. Our microscope was broken. We took images on a replacement microscope. The pixel values were consistently higher than on our usual microscope. We multiplied the pixels on all images from the replacement microscope by a constant factor to make them comparable to our usual data.
+
 
 ### Concepts
 
@@ -202,13 +198,6 @@ F. Images taken on a different microscope had consitently lower gray values than
  digraph G {
     shift [fontcolor=white,color=white];
     image_math -> pixel_values [label="  changes"];
-    image_math -> scientific_image_content [label="  can distort"];
-  }
-'/>
-
-<img src='https://g.gravizo.com/svg?
- digraph G {
-    shift [fontcolor=white,color=white];
     image_math -> pixel_data_type [label="  does not change"];
     image_math -> wrong_pixel_values [label = "  can yield"] 
   }
