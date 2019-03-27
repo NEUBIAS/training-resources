@@ -156,8 +156,8 @@ What can you do to show images with a high dynamic range (multiple answers)?
 
 1. Adjust the LUT such that the scientifically relevant information can be seen.
 2. Adjust the LUT such that the scientifically relevant information can be seen, 
-	1. and state that the LUT has been adjusted in the figure legend
-	2. and show the same image with other LUT settings in the supplemental material.
+	* and state that the LUT has been adjusted in the figure legend
+	* and show the same image with other LUT settings in the supplemental material.
 3. Try to find a LUT that shows all data.
 4. Never use multi color LUTs, they are confusing.
 5. Already on the  microscope change the settings such that only relevant structures are visible, e.g. lower the gain such that dark irrelevant objects have zero pixel values.
