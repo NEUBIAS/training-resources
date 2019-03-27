@@ -154,8 +154,8 @@ For example, a GFP tagged protein could occur in the same cell at different loca
 
 What can you do to show images with a high dynamic range (multiple answers)?
 
-1. Adjust the LUT such that the scientifically relevant information can be seen.
-2. Adjust the LUT such that the scientifically relevant information can be seen, 
+1. Adjust the LUT such that only the scientifically relevant information can be seen.
+2. Adjust the LUT such that only the scientifically relevant information can be seen 
 	* and state that the LUT has been adjusted in the figure legend
 	* and show the same image with other LUT settings in the supplemental material.
 3. Try to find a LUT that shows all data.
@@ -166,6 +166,15 @@ G. Add a LUT calibration to the image, such that readers can see that not all in
 
 
 ## Image math
+
+<img src='https://g.gravizo.com/svg?
+ digraph G {
+    shift [fontcolor=white,color=white];
+    image_math -> pixel_values [label="  changes"];
+    image_math -> pixel_data_type [label="  does not change"];
+    image_math -> wrong_pixel_values [label = "  can yield"] 
+  }
+'/>
 
 ### Motivation
 
@@ -181,33 +190,22 @@ What are good reasons to change the pixel values in an image?
 6. Our microscope was broken. We took images on a replacement microscope. The pixel values were consistently higher than on our usual microscope. We multiplied the pixels on all images from the replacement microscope by a constant factor to make them comparable to our usual data.
 
 
-### Concepts
-
-<img src='https://g.gravizo.com/svg?
- digraph G {
-    shift [fontcolor=white,color=white];
-    image_math -> pixel_values [label="  changes"];
-    image_math -> pixel_data_type [label="  does not change"];
-    image_math -> wrong_pixel_values [label = "  can yield"] 
-  }
-'/>
-
 ### Activity: Perform pixel based background subtraction
 
-- Open image: xy_8bit__nuclei_noisy_different_intensity.tif
+- Open image: `xy_8bit__nuclei_noisy_different_intensity.tif`
 - Appreciate the significant background intensity
-- Measure pixel value at [ 28 , 35 ] and [ 28, 39 ]
-- Measure background intensity in this region:
-	- upper left corner at [20,35]
+- Measure pixel value at `[ 28, 35 ]` and `[ 28, 39 ]`
+- Measure background intensity in below region:
+	- upper left corner at `[ 20, 35 ]`
 	- width = 10
 	- height = 10 
 - Subtract the measured background intensity from each pixel 
-- Measure pixel values again at above coordinates ( [ 28 , 35 ] and [ 28, 39 ] )
+- Measure pixel values again at above coordinates ( `[ 28, 35 ]` and `[ 28, 39 ]` )
 - Discuss how the pixel values changed during background subtraction
 
 Repeat above activity, but:
 
-- Convert the image to a floating point format after opening
+- After opening the image, convert its pixel data type to floating point
 
 ### Formative Assessment
 
@@ -215,19 +213,14 @@ Considering image math operations, which of below statements is correct
 (multiple answers)?
 
 1. Never change the pixel data type, because it violates image integrity.
-2. One sometimes should change pixel data type, otherwise one gets wrong image processing results.
-3. Changing the pixel data type does not change pixel values.
-4. One should check pixel values after changing pixel data type.
-5. It is forbidden to perform mathematical operations on images, because it changes the pixel values.
-6. As a scientist, one is allowed to perform mathematical operations on images.
-
+2. Changing the pixel data type does not change pixel values.
+3. It is scientifically unethical to perform mathematical operations on images, because it changes the pixel values.
+4. When performing mathematical operations on images, it should be documented (e.g. by a script of code) 
 
 
 ## Display of 3-D images
 
-Biological images are often 34. However paper and monitors can only show 2D images. It is thus important to understand how to show 3D images in 2D without compromising the scientific message.
-
-### Concepts
+Biological images are often 3D. However paper and monitors can only show 2D images. It is thus important to understand how to show 3D images in 2D without compromising the scientific message.
 
 <img src='https://g.gravizo.com/svg?
  digraph G {
@@ -237,6 +230,7 @@ Biological images are often 34. However paper and monitors can only show 2D imag
   }
 '/>
 
+
 <img src='https://g.gravizo.com/svg?
  digraph G {
     shift [fontcolor=white,color=white];
@@ -244,6 +238,7 @@ Biological images are often 34. However paper and monitors can only show 2D imag
     _3D_visualisation -> max_projection;
     _3D_visualisation -> slice_animation;
     _3D_visualisation -> slice_gallery;
+    _3D_visualisation -> ...;
   }
 '/>
 
@@ -261,8 +256,8 @@ Biological images are often 34. However paper and monitors can only show 2D imag
 
 Which statements about visualisation and quantification of 3D images are correct (multiple answers)?
 
-1. Always use maximum intensity projection, it is by far the most commonly used..
-2. Any projection can make sense, you just have scientifically justify it.
+1. Always use maximum intensity projection, it is by far the most commonly used.
+2. Any visualisation can make sense, you just have scientifically justify it.
 3. Intensity quanitifcations ideally should be done in 3D, not in projections.
 4. It is impossible to quantify intensities in projections.
 
