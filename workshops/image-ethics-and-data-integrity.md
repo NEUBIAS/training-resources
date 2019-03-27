@@ -101,8 +101,8 @@ Images are a collection of numbers. To visualise those numbers one needs to deci
 <img src='https://g.gravizo.com/svg?
  digraph G {
     shift [fontcolor=white,color=white];
-    lookup_table_settings -> scientific_message [label="  change"];
-    lookup_table_settings -> no_default [label="  have"];
+    lookup_table_settings -> scientific_message [label="  affects"];;
+    lookup_table_settings -> no_default;
   }
 '/>
 
@@ -156,8 +156,8 @@ What can you do to show images with a high dynamic range (multiple answers)?
 
 1. Adjust the LUT such that the scientifically relevant information can be seen.
 2. Adjust the LUT such that the scientifically relevant information can be seen, 
-  - and state that the LUT has been adjusted in the figure legend
-  - and show the same image with other LUT settings in the supplemental material.
+	1. and state that the LUT has been adjusted in the figure legend
+	2. and show the same image with other LUT settings in the supplemental material.
 3. Try to find a LUT that shows all data.
 4. Never use multi color LUTs, they are confusing.
 5. Already on the  microscope change the settings such that only relevant structures are visible, e.g. lower the gain such that dark irrelevant objects have zero pixel values.
