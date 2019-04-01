@@ -45,10 +45,10 @@ True or false?
 <img src='https://g.gravizo.com/svg?
  digraph G {
     shift [fontcolor=white,color=white];
-    lookup_table -> color;
-    lookup_table -> brightness;
-    LUT_min -> lookup_table;
-    LUT_max -> lookup_table;
+    LUT -> color;
+    LUT -> brightness;
+    min -> LUT;
+    max -> LUT;
     pixel_value -> lookup_table;
   }
 '/>
