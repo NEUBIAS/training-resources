@@ -307,13 +307,11 @@ Which statements are true?
 <img src='https://g.gravizo.com/svg?
  digraph G {
     shift [fontcolor=white,color=white];
-    input_image -> binary_image [label="  threshold"];
+    intensity_image -> binary_image [label="  threshold"];
     binary_image -> label_image [label="  connected components"];
     label_image -> table [label="  measure_shape"];
 }
 '/>
-
-
 
 ### Activity: Segment objects and measure shapes
 
@@ -323,37 +321,62 @@ Which statements are true?
 
 ### Formative assessment
 
-Which statements are true?
+Fill in below blanks, using these words:
 
-- a
-- b
-- c
+equal_to, larger_than, smaller_than, binary, connected_component_analysis, thresholding
 
+- A label image is the result of _____ .
+- The number of pixels in a binary image is typically _____ the number of connected components. 
+- The number of distinct values in a label image is _____ the number of objects (minus one).
+- Converting an intensity image to a _____ image can be achieved by _____ .
+- The number of connected components can be _____ the maximal label.
 
+## Intensity measurements
 
+### Activity: Measure DNA intensity
 
-# Automation / Programming
-
-## Automated object filtering
-
-<img src='https://g.gravizo.com/svg?
- digraph G {
-    shift [fontcolor=white,color=white];
-    label_image -> table [label="  measure_shape"];
-    table -> filtered_objects;
-    filtered_objects -> label_image [label="  remove"];
-}
-'/>
-
-### Activity: Automatically remove objects from label image
-
-This activity requires some more advanced programming.
+- Open image: `xy_float__h2b_bg_corr.tif`
+- Measure for both nuclei:
+	- Maximum intensity
+	- Average intensity
+	- Sum intensity
+- Discuss the interpretation!
+- Discuss where to measure!
 
 
+### Activity: Intensity measurements without pixel based background correction
+
+#### Motivation
+
+There are several good reasons not to subtract the background from each pixel in an image: 
+
+- It is a bit tricky to do it right, because one has to convert to float to accomodate floting point and negative values.
+- If one has really big image data (TB) one would need (at least) another TB storage for the background corrected version of the image.
+
+#### Workflow
+
+- Open image: `xy_calibrated_8bit__two_nuclei_high_background.tif`
+- Measure for both nuclei and a background region:
+	- Maximum intensity
+	- Average intensity
+	- Median intensity
+	- Sum intensity
+- Discuss how to correct the intensities for the background
+- Measure the region areas in pixel units
+	- Watch out: the image is calibrated!
+	- Use the area for the correction.
 
 ### Formative assessment
 
-Which statements are true?
+Fill in below blanks with those words:
+
+integrated, mean, number_of_pixels, decrease, increase, sum
+
+- Average intensity is just another word for _____ intensity.
+- The _____ intensity is equal to the mean intensity times the _____ in the measured region.
+- In an 8-bit image, increasing the size of the measurement region can only _____ the sum intensity.
+- In a float image, increasing the size of the measurement region can _____ the sum intensity. 
+
 
 ### Formative assessment
 
