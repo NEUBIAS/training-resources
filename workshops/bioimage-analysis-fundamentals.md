@@ -86,11 +86,12 @@ decrease, larger_than, increase, smaller_than
     image_math -> pixel_values [label="  changes"];
     image_math -> pixel_data_type [label="  does not change"];
     pixel_data_type -> _8_bit_unsigned_integer;
-    _8_bit_unsigned_integer -> _0_255;
-    _16_bit_unsigned_integer -> _0_65535;
-    _N_bit_unsigned_integer -> _0_2powerN_minus1;
+    _8_bit_unsigned_integer -> "0 to 255";
+    _16_bit_unsigned_integer -> _0_to_65535;
+    _N_bit_unsigned_integer -> _0_to_2powerN_minus1;
     pixel_data_type -> _16_bit_unsigned_integer;
     pixel_data_type -> _32_bit_float;
+    pixel_data_type -> _N_bit_unsigned_integer;
     image_math -> wrong_pixel_values [label = "  can yield"];
   }
 '/>
