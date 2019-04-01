@@ -165,7 +165,7 @@ What can you do to show images with a high dynamic range (multiple answers)?
 4. Never use multi color LUTs, they are confusing.
 5. Already on the  microscope change the settings such that only relevant structures are visible, e.g. lower the gain such that dark irrelevant objects have zero pixel values.
 6. Adjust LUT settings such that background noise is not visible, because this is distracting.
-G. Add a LUT calibration to the image, such that readers can see that not all information might be visible.
+7. Add a LUT calibration to the image, such that readers can see that not all information might be visible.
 
 
 ## Image math
