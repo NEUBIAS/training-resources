@@ -76,12 +76,12 @@ contrast = LUT_max - LUT_min
     shift [fontcolor=white,color=white];
     image_math -> pixel_values [label="  changes"];
     image_math -> pixel_data_type [label="  does not change"];
-    pixel_data_type -> 8_bit_unsigned_integer
-    8_bit_unsigned_integer -> 0_255
-    16_bit_unsigned_integer -> 0_65535
-    N_bit_unsigned_integer -> 0_2powerN_minus1
-    pixel_data_type -> 16_bit_unsigned_integer
-    pixel_data_type -> 32_bit_float
+    pixel_data_type -> _8_bit_unsigned_integer
+    _8_bit_unsigned_integer -> _0_255
+    _16_bit_unsigned_integer -> _0_65535
+    _N_bit_unsigned_integer -> _0_2powerN_minus1
+    pixel_data_type -> _16_bit_unsigned_integer
+    pixel_data_type -> _32_bit_float
     image_math -> wrong_pixel_values [label = "  can yield"]
   }
 '/>
