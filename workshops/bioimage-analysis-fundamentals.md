@@ -30,7 +30,7 @@
 
 ### Formative assessment
 
-Which statements about images are true (multiple answers)? 
+True or false?
 
 - Pixel coordinates are always integer values.
 - Changing the image calibration changes the pixel values.
@@ -47,9 +47,9 @@ Which statements about images are true (multiple answers)?
     shift [fontcolor=white,color=white];
     lookup_table -> color;
     lookup_table -> brightness;
-    lookup_table <- LUT_min;
-    lookup_table <- LUT_max;
-    lookup_table <- pixel_value;
+    LUT_min -> lookup_table;
+    LUT_max -> lookup_table;
+    pixel_value -> lookup_table;
   }
 '/>
 
@@ -68,6 +68,15 @@ contrast = LUT_max - LUT_min
 
 ### Formative Assessment
 
+Fill in the blanks:
+
+decrease, larger_than, increase, smaller_than 
+
+- Pixels with values _____ the LUT_max will appear saturated. 
+- Decreasing the LUT_max while keeping the LUT_min constant will _____ the contrast.
+- Decreasing both LUT_max and LUT_min will _____ the overall brightness.
+- Pixels with values _____ the LUT_min will appear black, when using a grayscale LUT.
+
 
 ## Image math and pixel data types
 
@@ -76,13 +85,13 @@ contrast = LUT_max - LUT_min
     shift [fontcolor=white,color=white];
     image_math -> pixel_values [label="  changes"];
     image_math -> pixel_data_type [label="  does not change"];
-    pixel_data_type -> _8_bit_unsigned_integer
-    _8_bit_unsigned_integer -> _0_255
-    _16_bit_unsigned_integer -> _0_65535
-    _N_bit_unsigned_integer -> _0_2powerN_minus1
-    pixel_data_type -> _16_bit_unsigned_integer
-    pixel_data_type -> _32_bit_float
-    image_math -> wrong_pixel_values [label = "  can yield"]
+    pixel_data_type -> _8_bit_unsigned_integer;
+    _8_bit_unsigned_integer -> _0_255;
+    _16_bit_unsigned_integer -> _0_65535;
+    _N_bit_unsigned_integer -> _0_2powerN_minus1;
+    pixel_data_type -> _16_bit_unsigned_integer;
+    pixel_data_type -> _32_bit_float;
+    image_math -> wrong_pixel_values [label = "  can yield"];
   }
 '/>
 
@@ -128,14 +137,13 @@ Repeat above activity, but:
 
 ### Formative Assessment
 
-Regarding image math operations, which of below statements are correct
-(multiple answers)?
+True or false?
 
-- Subtracting 100 from a 8-bit pixel of value 50 will result in -50.
-- Adding 1 to a 8-bit pixel of value 255 will result in 256.
-- Subtracting 10.1 from a floating point pixel with value 10.0 will result in -0.1
-- Adding 1.0 to a floating point pixel of value 255.0 will result in 256.0
-- Adding 1000.0 to a floatin point pixel of value 1000000000.0 will result in 1000001000.0
+- Subtracting 100 from 50 in a 8-bit image will result in -50.
+- Adding 1 to 255 in a 8-bit image will result in 256.
+- Subtracting 10.1 from 10.0 in a float image will result in -0.1
+- Adding 1.0 to 255.0 in a float image will result in 256.0
+- Adding 1000.0 to 1000000000.0 in a float image will result in 1000001000.0
 
 ### Learn more
 
@@ -147,7 +155,7 @@ Regarding image math operations, which of below statements are correct
  digraph G {
     shift [fontcolor=white,color=white];
     pixel_type_conversion -> pixel_values [label="  can change"];
-    pixel_type_conversion -> pixel_value_range [label"  changes"];
+    pixel_type_conversion -> pixel_value_range [label="  changes"];
   }
 '/>
 
@@ -172,12 +180,12 @@ What are good reasons to change the pixel data type of an image?
 
 ### Formative Assessment
 
-Which statements are true?
+True or false?
 
-1. Changing the pixel data type does not change pixel values.
-2. Changing from 16-bit unsigned integer to float never changes the pixel values.
-3. Chaning from float to 16-bit unsigned integer never changes the pixel values.
- 
+1. Changing pixel data type never changes pixel values.
+2. Converting from 16-bit unsigned integer to float never changes the pixel values.
+3. Changing from float to 16-bit unsigned integer never changes the pixel values.
+
 
 ## Image segmentation overview
 
@@ -187,18 +195,18 @@ Which statements are true?
     shift [fontcolor=white,color=white];
     intensity_image -> binary_image -> label_image;
     binary_image <- background_value;
-    background_value <- 0;
-    foreground_value <- 1;
-    foreground_value <- 255;
-    binary_image <- foreground_value;
-    label_image <- object_indices;
+    _0_ -> background_value;
+    _1_ -> foreground_value;
+    _255_ -> foreground_value;
+    foreground_value -> binary_image;
+    object_indices -> label_image;
   }
 '/>
 
 
 ## Thresholding
 
-In order to find objects in a image, the first step is to determine whether a pixel is part of an object or of the image background. In fluorescence microscopy this often can be done by thresholding.
+In order to find objects in a image, the first step often is to determine whether a pixel is part of an object (foreground) or of the image background. In fluorescence microscopy this often can be achieved by thresholding.
 
 <img src='https://g.gravizo.com/svg?
  digraph G {
@@ -218,14 +226,12 @@ In order to find objects in a image, the first step is to determine whether a pi
 
 ## Formative assessment
 
-Which statements are true?
+True or false? Discuss with your neighbor!
 
 - For each image there is only one correct threshold value.
 - The result of thresholding is a binary image.
 - A binary image can have three values: -1,0,+1
-- Values below the threshold are set to 1.
-
-
+- Values below the threshold are always set to 1.
 
 ## Connected components analysis
 
@@ -233,7 +239,7 @@ Which statements are true?
  digraph G {
     shift [fontcolor=white,color=white];
     intensity_image -> connected_component_analysis -> label_image;
-    connected_component_analysis <- connectivity  
+    connectivity -> connected_component_analysis; 
   }
 '/>
 
@@ -254,17 +260,17 @@ Repeat above activity but use a 3D image:
 
 ### Formative assessment
 
-Which statements are true?
+Fill in the blanks:
+
+less, more, 8, 255, 4, more.
 
 - For a given input image there is only one correct connectivity.
-- Choosing the connectivity can affect the result of conected components analysis.
-- 8-connected connectivity results in more objects than 4-connected connectivity.
-- Label images have two values: background and foreground.
-- Label images are always 8-bit.
-- Label images can suffer from limitations of pixel data type.
-- The pixel value for background in label images typically is 0.
-- The maximum value in an label image often corresponds to the number of objects.
-- The maximum value in an label image always corresponds to the number of objects.
+- In 3D, pixels have _____ neighbors than in 2D.
+- 8-connected connectivity results in _____ objects than 4-connected connectivity.
+- In 3D, pixels have ____ non-diagonal neighbors.
+- In 2D, pixels have ____ non-diagonal neighbors.
+- A 8-bit label image can maximally have _____ objects.
+- The maximum value in a label image is equal to or _____ than the number of objects.
 
 
 ## Shape measurements
@@ -273,8 +279,8 @@ Which statements are true?
  digraph G {
     shift [fontcolor=white,color=white];
     label_image -> shape_analysis -> table;
-    rows__objects -> table;
-    columns__features -> table;  
+    object_rows -> table;
+    feature_columns -> table;  
 }
 '/>
 
@@ -290,7 +296,7 @@ Which statements are true?
 
 ### Formative assessment
 
-Which statements are true?
+Which statements are true? Discuss with your neighbor!
 
 - Circularity is independent of image calibration.
 - Area is independent of image calibration.
@@ -385,6 +391,20 @@ Which statements are true?
 ### Formative assessment
 
 Which statements are true?
+
+
+
+## Recap
+
+Discuss with your neighbor!
+
+- Take one A4 paper
+- Draw a typical workflow: From intensity image to objects shape table.
+- Write down what you remember (max. 3 facts) about:
+	- Intensity measurements
+	- Object shape measurements
+	- Label image
+	- Pixel data types
 
 
 
