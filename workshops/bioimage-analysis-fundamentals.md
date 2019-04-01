@@ -49,7 +49,7 @@ True or false?
     LUT -> brightness;
     min -> LUT;
     max -> LUT;
-    pixel_value -> lookup_table;
+    pixel_value -> LUT;
   }
 '/>
 
