@@ -76,18 +76,10 @@ decrease, larger_than, increase, smaller_than
 <img src='https://g.gravizo.com/svg?
  digraph G {
     shift [fontcolor=white,color=white];
-    aaa -> image;
-   }
-'/>
-
-
-<img src='https://g.gravizo.com/svg?
- digraph G {
-    shift [fontcolor=white,color=white];
     "data type" -> image;
     image -> "pixel values";
-    "image math" -> "pixel values" [label="  changes"];
-    "image math" -> "data type" [label="  doesn't change"];
+    "image math" -> "pixel values";
+    "image math" -> "data type";
     "data type" -> "8-bit unsigned integer";
     "8-bit unsigned integer" -> "0 to 255";
     "16-bit unsigned integer" -> "0 to 65535";
