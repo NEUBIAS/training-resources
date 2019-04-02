@@ -70,17 +70,16 @@ decrease, larger_than, increase, smaller_than
 - Decreasing both `LUT_max` and `LUT_min` will _____ the overall brightness.
 - Pixels with values _____ the `LUT_min` will appear black, when using a grayscale LUT.
 
-&nbsp;&nbsp;&nbsp;
+
 ## Image math and pixel data types
 
 <img src='https://g.gravizo.com/svg?
  digraph G {
     shift [fontcolor=white,color=white];
-   "data type" -> "pixel values" [label="  restricts"];
+    "data type" -> "pixel values" [label="  restricts"];
     "image math" -> "pixel values" [label="  changes"];
     "N-bit unsigned integer" -> "0, 1, ..., 2^N-1";
-    "data type" -> float -> "..., -1031.111, ..., 10.5, ...";
-    "data type" -> "...";
+    "data type" -> float -> "e.g., -1031.111, 10.5";
     "data type" -> "N-bit unsigned integer";
   }
 '/>
@@ -101,20 +100,20 @@ What are good reasons to change the pixel values in an image?
 
 ### Activity: Pixel based background subtraction
 
-- Open image: `xy_8bit__nuclei_noisy_different_intensity.tif`
-- Appreciate the significant background intensity
-- Measure pixel value at `[ 28, 35 ]` and `[ 28, 39 ]`
-- Measure background intensity in below region:
-        - upper left corner at `[ 20, 35 ]`
-        - width = 10
-        - height = 10
-- Subtract the measured background intensity from each pixel
-- Measure pixel values again at above coordinates ( `[ 28, 35 ]` and `[ 28, 39 ]` )
-- Discuss how the pixel values changed during background subtraction
+* Open image: `xy_8bit__nuclei_noisy_different_intensity.tif`
+* Appreciate the significant background intensity
+* Measure pixel value at `[ 28, 35 ]` and `[ 28, 39 ]`
+* Measure background intensity in below region:
+    * upper left corner at `[ 20, 35 ]`
+    * width = 10
+    * height = 10
+* Subtract the measured background intensity from each pixel
+* Measure pixel values again at above coordinates ( `[ 28, 35 ]` and `[ 28, 39 ]` )
+* Discuss how the pixel values changed during background subtraction
 
 Repeat above activity, but:
 
-- After opening the image, convert its pixel data type to floating point
+* After opening the image, convert its pixel data type to floating point
 
 ### Activity: Limitations of float
 
@@ -139,21 +138,19 @@ True or false?
 
 - [Limitations of float](https://randomascii.wordpress.com/2012/02/13/dont-store-that-in-a-float/)
 
-## Data type conversion
+## Pixel data type conversions
 
 <img src='https://g.gravizo.com/svg?
  digraph G {
     shift [fontcolor=white,color=white];
-    "data type conversion" -> "values" [label="  can change"];
-    "data type conversion" -> "value range" [label="  changes"];
+    "pixel_type_conversion" -> "pixel_values" [label="  can change"];
+    "pixel_type_conversion" -> pixel_value_range [label="  changes"];
   }
 '/>
 
 ### Motivation
 
 What are good reasons to change the pixel data type of an image?
-
-TODO
 
 - a
 - b
@@ -162,14 +159,13 @@ TODO
 
 ### Activity: 16-bit to 8-bit conversion
 
-* Open image: `xy_16bit__two_values.tif`
-* Convert to 8-bit
-* Understand the mathematics of the conversion
+- Open image: `xy_16bit__two_values.tif`
+- Convert to 8-bit
 
 ### Activity: 16-bit to float conversion
 
-* Open image: `xy_16bit__two_values.tif`
-* Convert to float
+- Open image: `xy_16bit__two_values.tif`
+- Convert to float
 
 ### Formative Assessment
 
@@ -181,6 +177,7 @@ True or false?
 
 
 ## Image segmentation overview
+
 
 <img src='https://g.gravizo.com/svg?
  digraph G {
@@ -432,7 +429,7 @@ Which statements are true?
 	- Intensity measurements
 	- Object shape measurements
 	- Label image
-	- Data types
+	- Pixel data types
 
 
 
