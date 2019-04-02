@@ -70,7 +70,7 @@ decrease, larger_than, increase, smaller_than
 - Decreasing both LUT_max and LUT_min will _____ the overall brightness.
 - Pixels with values _____ the LUT_min will appear black, when using a grayscale LUT.
 
-
+&nbsp;&nbsp;&nbsp;
 ## Image math and pixel data types
 
 <img src='https://g.gravizo.com/svg?
@@ -83,6 +83,7 @@ decrease, larger_than, increase, smaller_than
     "N bit unsigned integer" -> "0 to 2^N - 1";
     "data type" -> float;
     "data type" -> double;
+    "data type" -> "...";
     "data type" -> "N-bit unsigned integer";
   }
 '/>
@@ -141,19 +142,21 @@ True or false?
 
 - [Limitations of float](https://randomascii.wordpress.com/2012/02/13/dont-store-that-in-a-float/)
 
-## Pixel data type conversions
+## Data type conversion
 
 <img src='https://g.gravizo.com/svg?
  digraph G {
     shift [fontcolor=white,color=white];
-    "pixel_type_conversion" -> "pixel_values" [label="  can change"];
-    "pixel_type_conversion" -> pixel_value_range [label="  changes"];
+    "data type conversion" -> "values" [label="  can change"];
+    "data type conversion" -> "value range" [label="  changes"];
   }
 '/>
 
 ### Motivation
 
 What are good reasons to change the pixel data type of an image?
+
+TODO
 
 - a
 - b
@@ -162,13 +165,14 @@ What are good reasons to change the pixel data type of an image?
 
 ### Activity: 16-bit to 8-bit conversion
 
-- Open image: `xy_16bit__two_values.tif`
-- Convert to 8-bit
+* Open image: `xy_16bit__two_values.tif`
+* Convert to 8-bit
+* Understand the mathematics of the conversion
 
 ### Activity: 16-bit to float conversion
 
-- Open image: `xy_16bit__two_values.tif`
-- Convert to float
+* Open image: `xy_16bit__two_values.tif`
+* Convert to float
 
 ### Formative Assessment
 
@@ -180,7 +184,6 @@ True or false?
 
 
 ## Image segmentation overview
-
 
 <img src='https://g.gravizo.com/svg?
  digraph G {
@@ -432,7 +435,7 @@ Which statements are true?
 	- Intensity measurements
 	- Object shape measurements
 	- Label image
-	- Pixel data types
+	- Data types
 
 
 
