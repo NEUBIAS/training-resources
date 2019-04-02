@@ -80,13 +80,10 @@ decrease, larger_than, increase, smaller_than
     image -> "pixel values";
     "image math" -> "pixel values";
     "image math" -> "data type";
-    "data type" -> "8-bit unsigned integer";
-    "8-bit unsigned integer" -> "0 to 255";
-    "16-bit unsigned integer" -> "0 to 65535";
     "N bit unsigned integer" -> "0 to 2^N - 1";
-    "pixel data type" -> "16-bit unsigned integer";
-    "pixel data type" -> "32-bit float";
-    "pixel data type" -> "N-bit unsigned integer";
+    "data type" -> float;
+    "data type" -> double;
+    "data type" -> "N-bit unsigned integer";
   }
 '/>
 
