@@ -76,10 +76,7 @@ decrease, larger_than, increase, smaller_than
 <img src='https://g.gravizo.com/svg?
  digraph G {
     shift [fontcolor=white,color=white];
-    "data type" -> image;
-    image -> "pixel values";
-    "image math" -> "pixel values" [label="  changes"];
-    "image math" -> "data type" [label="  doesn't change"];
+    aaa -> image;
    }
 '/>
 
