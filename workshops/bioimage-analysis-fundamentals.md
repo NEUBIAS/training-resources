@@ -174,15 +174,14 @@ True or false?
 
 What are good reasons to change the pixel data type of an image?
 
-* a
-* b
-* c
-* d
+* TODO
+* TODO
 
 ### Activity: 16-bit to 8-bit conversion
 
 * Open image: xy_16bit__two_values.tif
 * Convert to 8-bit
+* Understand the mathematics underlying the conversion from 16-bit to 8-bit.
 
 ### Activity: 16-bit to float conversion
 
@@ -191,19 +190,18 @@ What are good reasons to change the pixel data type of an image?
 
 ### Formative Assessment
 
-True or false?
+True or false (discuss with your neighbor)?
 
 1. Changing pixel data type never changes pixel values.
 2. Converting from 16-bit unsigned integer to float never changes the pixel values.
 3. Changing from float to 16-bit unsigned integer never changes the pixel values.
-
-
-&nbsp;
+4. There is only one correct way to convert from 16-bit to 8-bit.
 
 &nbsp;
 
 &nbsp;
 
+&nbsp;
 
 ## Thresholding
 
