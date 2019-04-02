@@ -18,7 +18,7 @@
 
 ### Activity
 
-* Open image: `xy_8bit__nuclei_noisy_different_intensity.tif`
+* Open image: xy_8bit__nuclei_noisy_different_intensity.tif
 	* Explore different ways to inspect pixel values and indices
 	* Add image calibration
 	* Check where the calibration is visible
@@ -63,7 +63,7 @@ contrast = max - min
 
 ### Activity
 
-* Open image: `xy_8bit__nuclei_noisy_different_intensity.tif` 
+* Open image: xy_8bit__nuclei_noisy_different_intensity.tif
 * Explore different LUTs and LUT settings
 	* Appreciate that LUT settings do not affect image content.
 
@@ -72,10 +72,10 @@ contrast = max - min
 
 Fill in the blanks, using those words: decrease, larger_than, increase, smaller_than 
 
-* Pixels with values _____ the `LUT_max` will appear saturated. 
-* Decreasing `LUT_max` while keeping `LUT_min` constant will _____ the contrast.
-* Decreasing both `LUT_max` and `LUT_min` will _____ the overall brightness.
-* Pixels with values _____ the `LUT_min` will appear black, when using a grayscale LUT.
+* Pixels with values _____ `max` will appear saturated. 
+* Decreasing `max` while keeping `min` constant will _____ the contrast.
+* Decreasing both `max` and `min` will _____ the overall brightness.
+* Pixels with values _____ the `min` will appear black, when using a grayscale LUT.
 
 
 &nbsp;
@@ -116,7 +116,7 @@ What are good reasons to change the pixel values in an image?
 
 ### Activity: Pixel based background subtraction
 
-* Open image: `xy_8bit__nuclei_noisy_different_intensity.tif`
+* Open image: xy_8bit__nuclei_noisy_different_intensity.tif
 * Appreciate the significant background intensity
 * Measure pixel values at `[ 28, 35 ]` and `[ 28, 39 ]`
 * Measure the image background intensity in this region:
@@ -181,12 +181,12 @@ What are good reasons to change the pixel data type of an image?
 
 ### Activity: 16-bit to 8-bit conversion
 
-* Open image: `xy_16bit__two_values.tif`
+* Open image: xy_16bit__two_values.tif
 * Convert to 8-bit
 
 ### Activity: 16-bit to float conversion
 
-* Open image: `xy_16bit__two_values.tif`
+* Open image: xy_16bit__two_values.tif
 * Convert to float
 
 ### Formative Assessment
@@ -226,7 +226,7 @@ In order to find objects in a image, the first step often is to determine whethe
 
 ### Activity: Threshold an image
 
-* Open image: `xy_8bit__two_cells.tif`
+* Open image: xy_8bit__two_cells.tif
 * Convert the image to a binary image by means of thresholding.
 
 ### Formative assessment
@@ -304,7 +304,7 @@ Fill in the blanks, using these words: less, more, 8, 255, 4, more.
 
 ### Activity: Measure object shape parameters
 
-* Open image: `xy_8bit_labels__four_objects.tif`
+* Open image: xy_8bit_labels__four_objects.tif
 * Perform shape measurements and discuss their meanings.
 * Color objects by their measurement values.
 * Add a calibration to the image and check which shape measurements are affected.
@@ -345,7 +345,7 @@ Which statements are true? Discuss with your neighbor!
 
 ### Activity: Segment objects and measure shapes
 
-* Open image: `xy_8bit__two_cells.tif`
+* Open image: xy_8bit__two_cells.tif
 * Segment the cells and measure their shapes.
 	* Devise code to automate the workflow.
 
@@ -370,7 +370,7 @@ Fill in below blanks, using these words: equal_to, larger_than, smaller_than, bi
 
 ### Activity: Measure intensities in image regions
 
-* Open image: `xy_float__h2b_bg_corr.tif`
+* Open image: xy_float__h2b_bg_corr.tif
 * Measure for both nuclei:
 	* Maximum intensity
 	* Average intensity
@@ -391,7 +391,7 @@ There are several good reasons not to subtract the background from each pixel in
 
 #### Workflow
 
-* Open image: `xy_calibrated_8bit__two_nuclei_high_background.tif`
+* Open image: xy_calibrated_8bit__two_nuclei_high_background.tif
 * Measure for both nuclei and a background region:
 	* Maximum intensity
 	* Average intensity
@@ -434,7 +434,7 @@ Fill in the blanks, using these words: integrated, mean, number_of_pixels, decre
 
 ### Activity: Explore convolution filters
 
-* Open image: `xy_8bit__nuclei_noisy_different_intensity.tif` 
+* Open image: xy_8bit__nuclei_noisy_different_intensity.tif
 * Try the result of different convolution filters, e.g.
 	* https://en.wikipedia.org/wiki/Kernel_(image_processing)
 	* Mean filter
@@ -444,7 +444,7 @@ Fill in the blanks, using these words: integrated, mean, number_of_pixels, decre
 
 ### Activity: Use mean filter to facilitate image segmentation
 
-* Open image: `xy_8bit__nuclei_noisy_different_intensity.tif` 
+* Open image: xy_8bit__nuclei_noisy_different_intensity.tif
 * Appreciate that you cannot readily threshold the image
 * Apply a mean filter
 * Threshold the filtered image
