@@ -47,7 +47,7 @@ True or false?
 '/>
 
 ```
-brightness( pixel_value ) = ( pixel_value - LUT_min ) / ( LUT_max - LUT_min )
+brightness(pixel_value) = ( pixel_value - LUT_min ) / ( LUT_max - LUT_min )
 0 <= brightness <= 1 
 contrast = LUT_max - LUT_min 
 ``` 
@@ -65,10 +65,10 @@ Fill in the blanks:
 
 decrease, larger_than, increase, smaller_than 
 
-- Pixels with values _____ the LUT_max will appear saturated. 
-- Decreasing the LUT_max while keeping the LUT_min constant will _____ the contrast.
-- Decreasing both LUT_max and LUT_min will _____ the overall brightness.
-- Pixels with values _____ the LUT_min will appear black, when using a grayscale LUT.
+- Pixels with values _____ the `LUT_max` will appear saturated. 
+- Decreasing `LUT_max` while keeping `LUT_min` constant will _____ the contrast.
+- Decreasing both `LUT_max` and `LUT_min` will _____ the overall brightness.
+- Pixels with values _____ the `LUT_min` will appear black, when using a grayscale LUT.
 
 
 ## Image math and pixel data types
@@ -76,13 +76,10 @@ decrease, larger_than, increase, smaller_than
 <img src='https://g.gravizo.com/svg?
  digraph G {
     shift [fontcolor=white,color=white];
-    "data type" -> image;
-    image -> "pixel values";
-    "image math" -> "pixel values";
-    "image math" -> "data type";
-    "N bit unsigned integer" -> "0 to 2^N - 1";
-    "data type" -> float;
-    "data type" -> double;
+    "data type" -> "pixel values" [label="  restricts"];
+    "image math" -> "pixel values" [label="  changes"];
+    "N-bit unsigned integer" -> "0, 1, ..., 2^N-1";
+    "data type" -> float -> "e.g., -1031.111, 10.5";
     "data type" -> "N-bit unsigned integer";
   }
 '/>
