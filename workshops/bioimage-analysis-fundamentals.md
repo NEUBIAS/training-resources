@@ -49,28 +49,28 @@ True or false?
     LUT -> brightness;
     min -> LUT;
     max -> LUT;
-    "pixel value" -> LUT;
+    value -> LUT;
   }
 '/>
 
 ```
-brightness(pixel_value) = ( pixel_value * LUT_min ) / ( LUT_max - LUT_min )
+brightness = ( value - min ) / ( max - min )
+
 0 <= brightness <= 1 
-contrast = LUT_max * LUT_min 
+
+contrast = max - min 
 ``` 
 
 ### Activity
 
 * Open image: `xy_8bit__nuclei_noisy_different_intensity.tif` 
-* Change LUT settings
+* Explore different LUTs and LUT settings
 	* Appreciate that LUT settings do not affect image content.
 
 
 ### Formative Assessment
 
-Fill in the blanks:
-
-decrease, larger_than, increase, smaller_than 
+Fill in the blanks, using those words: decrease, larger_than, increase, smaller_than 
 
 * Pixels with values _____ the `LUT_max` will appear saturated. 
 * Decreasing `LUT_max` while keeping `LUT_min` constant will _____ the contrast.
@@ -118,20 +118,20 @@ What are good reasons to change the pixel values in an image?
 
 * Open image: `xy_8bit__nuclei_noisy_different_intensity.tif`
 * Appreciate the significant background intensity
-* Measure pixel value at `[ 28, 35 ]` and `[ 28, 39 ]`
-* Measure background intensity in below region:
+* Measure pixel values at `[ 28, 35 ]` and `[ 28, 39 ]`
+* Measure the image background intensity in this region:
     * upper left corner at `[ 20, 35 ]`
     * width = 10
     * height = 10
 * Subtract the measured background intensity from each pixel.
-* Measure pixel values again. 
+* Measure the pixel values again. 
 * Observe that the resuls are incorrect.
 
 Repeat above activity, but:
 
 * After opening the image, convert its data type to floating point.
 
-### Activity: Limitations of float
+### Activity: Explore the limitations of `float` data type
 
 * Create an empty image
 * Set all pixel values to 1000000000.0
@@ -165,8 +165,8 @@ True or false?
 <img src='https://g.gravizo.com/svg?
  digraph G {
     shift [fontcolor=white,color=white];
-    "pixel_type_conversion" -> "pixel_values" [label="  can change"];
-    "pixel_type_conversion" -> pixel_value_range [label="  changes"];
+    "data type conversion" -> "values" [label="  can change"];
+    "data type conversion" -> "value range" [label="  changes"];
   }
 '/>
 
@@ -219,8 +219,8 @@ In order to find objects in a image, the first step often is to determine whethe
     "background value" -> "0";
     "foreground value" -> "1";
     "foreground value" -> "255";
-    value -> ">= threshold" -> foreground;
-    value -> "< threshold" -> background;
+    "pixel value" -> ">= threshold" -> foreground;
+    "pixel value" -> "< threshold" -> background;
  }
 '/>
 
@@ -258,7 +258,7 @@ True or false? Discuss with your neighbor!
 
 ### Activity: 2D connected components analysis
 
-* Open image: `xy_8bit_binary__nuclei.tif`
+* Open image: xy_8bit_binary__nuclei.tif
 * Perform connected components analysis
 * Explore multi-color LUTs for object labelling
 * Explore removing and joining labels
@@ -268,13 +268,11 @@ True or false? Discuss with your neighbor!
 
 Repeat above activity but use a 3D image:
 
-* Open image: `xyz_8bit_binary__spots.tif`
+* Open image: xyz_8bit_binary__spots.tif
 
 ### Formative assessment
 
-Fill in the blanks:
-
-less, more, 8, 255, 4, more.
+Fill in the blanks, using these words: less, more, 8, 255, 4, more.
 
 * For a given input image there is only one correct connectivity.
 * In 3D, pixels have _____ neighbors than in 2D.
@@ -353,9 +351,7 @@ Which statements are true? Discuss with your neighbor!
 
 ### Formative assessment
 
-Fill in below blanks, using these words:
-
-equal_to, larger_than, smaller_than, binary, connected_component_analysis, thresholding
+Fill in below blanks, using these words: equal_to, larger_than, smaller_than, binary, connected_component_analysis, thresholding
 
 * A label image is the result of _____ .
 * The number of pixels in a binary image is typically _____ the number of connected components. 
@@ -409,9 +405,7 @@ There are several good reasons not to subtract the background from each pixel in
 
 ### Formative assessment: Intensity measurements
 
-Fill in below blanks with those words:
-
-integrated, mean, number_of_pixels, decrease, increase, sum
+Fill in the blanks, using these words: integrated, mean, number_of_pixels, decrease, increase, sum
 
 * Average intensity is just another word for _____ intensity.
 * The _____ intensity is equal to the mean intensity times the _____ in the measured region.
