@@ -211,12 +211,12 @@ True or false?
  digraph G {
     shift [fontcolor=white,color=white];
     "intensity image" -> "binary image" -> "label image";
-    "binary image" <* "background value";
-    "0" -> "background value";
-    "1" -> "foreground value";
-    "255" -> "foreground value";
-    "foreground value" -> "binary image";
-    "object indices" -> "label image";
+    "binary image" -> "background value";
+    "background value" -> "0";
+    "foreground value" -> "1";
+    "foreground value" -> "255";
+    "binary image" -> "foreground value";
+    "label image" -> "pixel values" -> "object indices";
   }
 '/>
 
@@ -450,8 +450,8 @@ integrated, mean, number_of_pixels, decrease, increase, sum
  digraph G {
     shift [fontcolor=white,color=white];
     "intensity image" -> "convolution" -> "filtered image";
-    "size" -> "small image";
-    "pixel values" -> "small image";
+    "small image" -> size;
+    "small image" -> "pixel values";
     "kernel" -> "small image" [label="  is"]; 
     "kernel" -> "convolution";
 }
@@ -493,7 +493,7 @@ integrated, mean, number_of_pixels, decrease, increase, sum
 
 ## Typical image analysis workflow
 
-![image](/uploads/b4bdce17515908f40d858b35d5e9256e/image.png=250x)
+![image](/uploads/b4bdce17515908f40d858b35d5e9256e/image.png)
 
 &nbsp;
 
