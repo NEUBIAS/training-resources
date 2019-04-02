@@ -18,7 +18,7 @@
 
 ### Activity
 
-- Open image: *_8bit_* 
+- Open image: `xy_8bit__nuclei_noisy_different_intensity.tif`
 	- Explore different ways to inspect pixel values and indices
 	- Add image calibration
 	- Check where the calibration is visible
@@ -42,7 +42,7 @@ True or false?
     LUT -> brightness;
     min -> LUT;
     max -> LUT;
-    pixel_value -> LUT;
+    "pixel value" -> LUT;
   }
 '/>
 
@@ -54,7 +54,7 @@ contrast = LUT_max - LUT_min
 
 ### Activity
 
-- Open image:
+- Open image: `xy_8bit__nuclei_noisy_different_intensity.tif` 
 - Change LUT settings
 	- Appreciate that LUT settings do not affect image content.
 
@@ -72,6 +72,17 @@ decrease, larger_than, increase, smaller_than
 
 
 ## Image math and pixel data types
+
+<img src='https://g.gravizo.com/svg?
+ digraph G {
+    shift [fontcolor=white,color=white];
+    "data type" -> image;
+    image -> "pixel values";
+    "image math" -> "pixel values" [label="  changes"];
+    "image math" -> "data type" [label="  doesn't change"];
+   }
+'/>
+
 
 <img src='https://g.gravizo.com/svg?
  digraph G {
