@@ -190,7 +190,7 @@ What are good reasons to change the pixel data type of an image?
 
 ### Formative Assessment
 
-True or false (discuss with your neighbor)?
+True or false? Discuss with your neighbor!
 
 1. Changing pixel data type never changes pixel values.
 2. Converting from 16-bit unsigned integer to float never changes the pixel values.
@@ -229,7 +229,7 @@ In order to find objects in a image, the first step often is to determine whethe
 
 ### Formative assessment
 
-True or false? Discuss with your neighbor!
+True or false? Discuss with your neighbour!
 
 * For each image there is only one correct threshold value.
 * The result of thresholding is a binary image.
@@ -311,7 +311,7 @@ Fill in the blanks, using these words: less, more, 8, 255, 4, more.
 
 ### Formative assessment
 
-Which statements are true? Discuss with your neighbor!
+True or false? Discuss with your neighbour!
 
 * Circularity is independent of image calibration.
 * Area is independent of image calibration.
