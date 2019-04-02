@@ -204,29 +204,6 @@ True or false?
 
 &nbsp;
 
-## Image segmentation overview
-
-
-<img src='https://g.gravizo.com/svg?
- digraph G {
-    shift [fontcolor=white,color=white];
-    "intensity image" -> "binary image" -> "label image";
-    "binary image" -> "background value";
-    "background value" -> "0";
-    "foreground value" -> "1";
-    "foreground value" -> "255";
-    "binary image" -> "foreground value";
-    "label image" -> "pixel values" -> "object indices";
-  }
-'/>
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
-
-
 
 ## Thresholding
 
@@ -237,11 +214,15 @@ In order to find objects in a image, the first step often is to determine whethe
     shift [fontcolor=white,color=white];
     "intensity image" -> threshold;
     threshold -> "binary image";
+    "binary image" -> "background value";
+    "binary image" -> "foreground value";
+    "background value" -> "0";
+    "foreground value" -> "1";
+    "foreground value" -> "255";
     value -> ">= threshold" -> foreground;
     value -> "< threshold" -> background;
  }
 '/>
-
 
 ### Activity: Threshold an image
 
