@@ -33,6 +33,13 @@ True or false?
 - Pixel indices are always positive integer values.
 - The lowest pixel index of a 2D image always is `[1,1]`.
 
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+
 ## Image display
 
 <img src='https://g.gravizo.com/svg?
@@ -79,14 +86,15 @@ decrease, larger_than, increase, smaller_than
     "data type" -> "pixel values" [label="  restricts"];
     "image math" -> "pixel values" [label="  changes"];
     "N-bit unsigned integer" -> "0, 1, ..., 2^N-1";
-    "data type" -> float -> "e.g., -1031.111, 10.5";
+    "data type" -> float -> "..., -1031.0, ..., 10.5, ...";
+    "data type" -> "...";
     "data type" -> "N-bit unsigned integer";
   }
 '/>
 
 ### Motivation
 
-It sometimes is necessary to change numberic content of images. It is important to understand how to do this properly in order to avoid uncontrolled artifacts.
+It sometimes is necessary to change the numeric content of images. It is important to understand how to do this properly in order to avoid uncontrolled artifacts.
 
 What are good reasons to change the pixel values in an image?
 
@@ -107,20 +115,20 @@ What are good reasons to change the pixel values in an image?
     * upper left corner at `[ 20, 35 ]`
     * width = 10
     * height = 10
-* Subtract the measured background intensity from each pixel
-* Measure pixel values again at above coordinates ( `[ 28, 35 ]` and `[ 28, 39 ]` )
-* Discuss how the pixel values changed during background subtraction
+* Subtract the measured background intensity from each pixel.
+* Measure pixel values again. 
+* Observe that the resuls are incorrect.
 
 Repeat above activity, but:
 
-* After opening the image, convert its pixel data type to floating point
+* After opening the image, convert its data type to floating point.
 
 ### Activity: Limitations of float
 
 - Create an empty image
 - Set all pixel values to 1000000000.0
 - Add 1.0 to all pixel values
-- Be shocked :-)
+- Be shocked...
 
 ...it turns out that from 16777216 on you cannot represent all integers anymore within a float. 
 
@@ -137,6 +145,12 @@ True or false?
 ### Learn more
 
 - [Limitations of float](https://randomascii.wordpress.com/2012/02/13/dont-store-that-in-a-float/)
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
 
 ## Pixel data type conversions
 
@@ -176,6 +190,12 @@ True or false?
 3. Changing from float to 16-bit unsigned integer never changes the pixel values.
 
 
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
 ## Image segmentation overview
 
 
@@ -191,6 +211,13 @@ True or false?
     object_indices -> label_image;
   }
 '/>
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
 
 
 ## Thresholding
@@ -208,12 +235,12 @@ In order to find objects in a image, the first step often is to determine whethe
 '/>
 
 
-## Activity: Threshold an image
+### Activity: Threshold an image
 
 - Open image: `xy_8bit__two_cells.tif`
 - Convert the image to a binary image by means of thresholding.
 
-## Formative assessment
+### Formative assessment
 
 True or false? Discuss with your neighbor!
 
@@ -221,6 +248,13 @@ True or false? Discuss with your neighbor!
 - The result of thresholding is a binary image.
 - A binary image can have three values: -1,0,+1
 - Values below the threshold are always set to 1.
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
 
 ## Connected components analysis
 
@@ -262,6 +296,13 @@ less, more, 8, 255, 4, more.
 - The maximum value in a label image is equal to or _____ than the number of objects.
 
 
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+
 ## Shape measurements
 
 <img src='https://g.gravizo.com/svg?
@@ -297,6 +338,13 @@ Which statements are true? Discuss with your neighbor!
 
 - Especially surface and perimeter measurements are affected by sampling and resolution (see for example: https://en.wikipedia.org/wiki/Coastline_paradox).
 
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+
 ## Object shape measurement workflow
 
 <img src='https://g.gravizo.com/svg?
@@ -325,6 +373,13 @@ equal_to, larger_than, smaller_than, binary, connected_component_analysis, thres
 - The number of distinct values in a label image is _____ the number of objects (minus one).
 - Converting an intensity image to a _____ image can be achieved by _____ .
 - The number of connected components can be _____ the maximal label.
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
 
 ## Intensity measurements
 
@@ -372,6 +427,13 @@ integrated, mean, number_of_pixels, decrease, increase, sum
 - In an 8-bit image, increasing the size of the measurement region can only _____ the sum intensity.
 - In a float image, increasing the size of the measurement region can _____ the sum intensity. 
 
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+
 ## Convolution filters
 
 <img src='https://g.gravizo.com/svg?
@@ -415,9 +477,23 @@ integrated, mean, number_of_pixels, decrease, increase, sum
 
 Which statements are true?
 
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+
 ## Typical image analysis workflow
 
 ![image](/uploads/b4bdce17515908f40d858b35d5e9256e/image.png)
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
 
 ## Recap
 
