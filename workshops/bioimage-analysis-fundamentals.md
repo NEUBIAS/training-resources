@@ -83,16 +83,16 @@ decrease, larger_than, increase, smaller_than
 <img src='https://g.gravizo.com/svg?
  digraph G {
     shift [fontcolor=white,color=white];
-    image_math -> pixel_values [label="  changes"];
-    image_math -> pixel_data_type [label="  does not change"];
-    pixel_data_type -> _8_bit_unsigned_integer;
-    _8_bit_unsigned_integer -> "0 to 255";
-    _16_bit_unsigned_integer -> _0_to_65535;
-    _N_bit_unsigned_integer -> _0_to_2powerN_minus1;
-    pixel_data_type -> _16_bit_unsigned_integer;
-    pixel_data_type -> _32_bit_float;
-    pixel_data_type -> _N_bit_unsigned_integer;
-    image_math -> wrong_pixel_values [label = "  can yield"];
+    "image math" -> "pixel_values" [label="  changes"];
+    "image math" -> "pixel data type" [label="  does not change"];
+    "pixel data type" -> "8-bit unsigned integer";
+    "8-bit unsigned integer" -> "0 to 255";
+    "16-bit unsigned integer" -> "0 to 65535";
+    "N bit unsigned integer" -> "0 to 2^N - 1";
+    "pixel data type" -> "16-bit unsigned integer";
+    "pixel data type" -> "32-bit float";
+    "pixel data type" -> "N-bit unsigned integer";
+    "image math" -> wrong_pixel_values [label = "  can yield"];
   }
 '/>
 
@@ -155,8 +155,8 @@ True or false?
 <img src='https://g.gravizo.com/svg?
  digraph G {
     shift [fontcolor=white,color=white];
-    pixel_type_conversion -> pixel_values [label="  can change"];
-    pixel_type_conversion -> pixel_value_range [label="  changes"];
+    "pixel_type_conversion" -> "pixel_values" [label="  can change"];
+    "pixel_type_conversion" -> pixel_value_range [label="  changes"];
   }
 '/>
 
@@ -194,8 +194,8 @@ True or false?
 <img src='https://g.gravizo.com/svg?
  digraph G {
     shift [fontcolor=white,color=white];
-    intensity_image -> binary_image -> label_image;
-    binary_image <- background_value;
+    "intensity image" -> "binary image" -> label_image;
+    "binary image" <- background_value;
     _0_ -> background_value;
     _1_ -> foreground_value;
     _255_ -> foreground_value;
@@ -212,7 +212,7 @@ In order to find objects in a image, the first step often is to determine whethe
 <img src='https://g.gravizo.com/svg?
  digraph G {
     shift [fontcolor=white,color=white];
-    intensity_image -> threshold;
+    "intensity image" -> threshold;
     threshold -> binary_image;
     pixel_value -> larger_equal_threshold -> foreground;
     pixel_value -> smaller_threshold -> background;
@@ -239,7 +239,7 @@ True or false? Discuss with your neighbor!
 <img src='https://g.gravizo.com/svg?
  digraph G {
     shift [fontcolor=white,color=white];
-    intensity_image -> connected_component_analysis -> label_image;
+    "intensity image" -> connected_component_analysis -> label_image;
     connectivity -> connected_component_analysis; 
   }
 '/>
@@ -279,7 +279,7 @@ less, more, 8, 255, 4, more.
 <img src='https://g.gravizo.com/svg?
  digraph G {
     shift [fontcolor=white,color=white];
-    label_image -> shape_analysis -> table;
+    "label image" -> shape_analysis -> table;
     object_rows -> table;
     feature_columns -> table;  
 }
@@ -314,9 +314,9 @@ Which statements are true? Discuss with your neighbor!
 <img src='https://g.gravizo.com/svg?
  digraph G {
     shift [fontcolor=white,color=white];
-    intensity_image -> binary_image [label="  threshold"];
-    binary_image -> label_image [label="  connected components"];
-    label_image -> table [label="  measure_shape"];
+    "intensity image" -> "binary image" [label="  threshold"];
+    "binary image" -> "label image" [label="  connected components"];
+    "label image" -> table [label="  measure_shape"];
 }
 '/>
 
@@ -373,7 +373,7 @@ There are several good reasons not to subtract the background from each pixel in
 	- Watch out: the image is calibrated!
 	- Use the area for the correction.
 
-### Formative assessment
+### Formative assessment: Intensity measurements
 
 Fill in below blanks with those words:
 
@@ -384,20 +384,56 @@ integrated, mean, number_of_pixels, decrease, increase, sum
 - In an 8-bit image, increasing the size of the measurement region can only _____ the sum intensity.
 - In a float image, increasing the size of the measurement region can _____ the sum intensity. 
 
+## Convolution filters
+
+<img src='https://g.gravizo.com/svg?
+ digraph G {
+    shift [fontcolor=white,color=white];
+    "intensity image" -> "convolution" -> "filtered image";
+    "size" -> "small image";
+    "pixel values" -> "small image";
+    "small image" -> "kernel"; 
+    "kernel" -> "convolution";
+}
+'/>
+
+### Activity: Explore convolution filters
+
+- Open image: `xy_8bit__nuclei_noisy_different_intensity.tif` 
+- Try the result of different convolution filters, e.g.
+	- https://en.wikipedia.org/wiki/Kernel_(image_processing)
+	- Mean filter
+	- Gaussian blur
+	- Edge detection
+- Appreciate that the results are (slightly) wrong within the 8-bit range of the input image.
+
+### Activity: Use mean filter to facilitate image segmentation
+
+- Open image: `xy_8bit__nuclei_noisy_different_intensity.tif` 
+- Appreciate that you cannot readily threshold the image
+- Apply a mean filter
+- Threshold the filtered image
+
+### Formative assessment
+
+- Draw the kernel of a 3x3 mean filter.
+- Draw three different kernels that enhance edges.
+ 
+### Learn more
+
+- https://en.wikipedia.org/wiki/Kernel_(image_processing)
 
 ### Formative assessment
 
 Which statements are true?
 
-### Formative assessment
+## Typical image analysis workflow
 
-Which statements are true?
-
-
+![image](/uploads/b4bdce17515908f40d858b35d5e9256e/image.png)
 
 ## Recap
 
-Discuss with your neighbor!
+(Work in pairs of two)
 
 - Take one A4 paper
 - Draw a typical workflow: From intensity image to objects shape table.
