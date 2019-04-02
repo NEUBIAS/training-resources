@@ -12,8 +12,6 @@
     indices -> calibration;
     calibration -> coordinates;
     image -> calibration [label="  can have"];
-    image -> data_type;
-    data_type -> value [label=" restricts"];
     pixel -> voxel [label="  3D"];   
   }
 '/>
@@ -21,13 +19,10 @@
 ### Activity
 
 - Open image: *_8bit_* 
-	- Explore pixel values and pixels indices
+	- Explore different ways to inspect pixel values and indices
 	- Add image calibration
-	- Explore pixel coordinates
-		- Check whether the sofware changed indices to coordinates
-- Open image: *_float_*
-	- Explore pixel values
-
+	- Check where the calibration is visible
+	
 ### Formative assessment
 
 True or false?
@@ -36,8 +31,6 @@ True or false?
 - Changing the image calibration changes the pixel values.
 - Pixel coordinates depend on image calibration.
 - Pixel indices are always positive integer values.
-- Image data type affects the possible range of pixel coordinates.
-- A pixel can take any value.
 - The lowest pixel index of a 2D image always is `[1,1]`.
 
 ## Image display
@@ -83,16 +76,17 @@ decrease, larger_than, increase, smaller_than
 <img src='https://g.gravizo.com/svg?
  digraph G {
     shift [fontcolor=white,color=white];
-    "image math" -> "pixel_values" [label="  changes"];
-    "image math" -> "pixel data type" [label="  does not change"];
-    "pixel data type" -> "8-bit unsigned integer";
+    "data type" -> image;
+    image -> "pixel values";
+    "image math" -> "pixel values" [label="  changes"];
+    "image math" -> "data type" [label="  doesn't change"];
+    "data type" -> "8-bit unsigned integer";
     "8-bit unsigned integer" -> "0 to 255";
     "16-bit unsigned integer" -> "0 to 65535";
     "N bit unsigned integer" -> "0 to 2^N - 1";
     "pixel data type" -> "16-bit unsigned integer";
     "pixel data type" -> "32-bit float";
     "pixel data type" -> "N-bit unsigned integer";
-    "image math" -> wrong_pixel_values [label = "  can yield"];
   }
 '/>
 
