@@ -13,7 +13,7 @@
     "pixel class image" -> "class00 value";
     "pixel class image" -> "class01 value";
     "pixel class image" -> "class.. value";
-    "pixel class image" -> "class N value";
+    "pixel class image" -> "class C value";
  }
 '/>
 
