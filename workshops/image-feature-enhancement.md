@@ -6,7 +6,7 @@ digraph G {
     image -> filter -> "enhanced image";
     node [shape=box, color=grey, fontcolor=grey];
     "enhanced image" -> "feature" [label=" aka", style=dashed, color=grey, fontcolor=grey, fontsize=10];
-    node [shape=box, color=grey, fontcolor=grey, width=0, height=0 ,margin=0];
+    "feature enhancement" [shape=box, color=grey, fontcolor=grey, margin=0.05];
     filter -> "feature enhancement" [label=" aka", style=dashed, color=grey, fontcolor=grey, fontsize=10];   
 }
 '/>
