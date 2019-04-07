@@ -85,17 +85,15 @@ TODO
 <img src='https://g.gravizo.com/svg?
  digraph G {
     shift [fontcolor=white,color=white];
-	"tophat filter" -> "rank filter sequence" [label="  is"];
-	"tophat filter" -> "local background subtraction";
+	"tophat" -> "rank filter sequence"; 
+	"tophat" -> "local background subtraction";
   }
 '/>
 
 
 ```
-tophat( image ) = image - dilation( erosion( image, r), r )
+tophat( image ) = image - opening( image, r ) =  image - dilation( erosion( image, r), r )
 ```
-
-TODO: Add image from pdf
 
 
 ### Activity: Explore tophat filter
@@ -131,8 +129,9 @@ TODO
 <img src='https://g.gravizo.com/svg?
  digraph G {
     shift [fontcolor=white,color=white];
-	"median" -> "local background";
+	"median" -> "local background" [label="  approximates"];
 	"median" -> "radius" -> "about 3 times larger than foreground objects";
+	
   }
 '/>
 
@@ -141,7 +140,6 @@ TODO
 median_based_background_correction = image - median( image, r)
 ```
 
-TODO: Add image from pdf
 
 
 ### Activity: Implement median based background subtraction
