@@ -32,6 +32,7 @@ True or false?
 * Pixel coordinates depend on image calibration.
 * Pixel indices are always positive integer values.
 * The lowest pixel index of a 2D image always is `[1,1]`.
+* When looking at a 2D image, the lowest pixel index is in the lower left corner.
 
 &nbsp;
 
@@ -39,6 +40,7 @@ True or false?
 
 &nbsp;
 
+\pagebreak
 
 ## Image display
 
@@ -100,20 +102,6 @@ Fill in the blanks, using those words: decrease, larger_than, increase, smaller_
   }
 '/>
 
-### Motivation
-
-It sometimes is necessary to change the numeric content of images. It is important to understand how to do this properly in order to avoid uncontrolled artifacts.
-
-What are good reasons to change the pixel values in an image?
-
-1. For intensity measurements, the image background (e.g. camera based offset) should be subtracted from all pixels.
-2. For threshold based image segmentation (object detection), it helps to first filter noise in the image.
-3. For intensity measurements, it helps to filter noise in the image.
-4. The image appears to dark, multiplication of all pixels by a constant number is a means to make it brighter.
-5. For uneven illumination (e.g. occuring in wide-field microscopy with large camera chips), one should do flat-field correction, which makes the intensity values even across the image.
-6. Our microscope was broken. We took images on a replacement microscope. The pixel values were consistently higher than on our usual microscope. We multiplied the pixels on all images from the replacement microscope by a constant factor to make them comparable to our usual data.
-
-
 ### Activity: Pixel based background subtraction
 
 * Open image: xy_8bit__nuclei_noisy_different_intensity.tif
@@ -170,13 +158,6 @@ True or false?
   }
 '/>
 
-### Motivation
-
-What are good reasons to change the pixel data type of an image?
-
-* TODO
-* TODO
-
 ### Activity: 16-bit to 8-bit conversion
 
 * Open image: xy_16bit__two_values.tif
@@ -209,16 +190,17 @@ In order to find objects in a image, the first step often is to determine whethe
 
 <img src='https://g.gravizo.com/svg?
  digraph G {
-    shift [fontcolor=white,color=white];
-    "intensity image" -> threshold;
-    threshold -> "binary image";
-    "binary image" -> "background value";
-    "binary image" -> "foreground value";
-    "background value" -> "0";
-    "foreground value" -> "1";
-    "foreground value" -> "255";
-    "pixel value" -> ">= threshold" -> foreground;
-    "pixel value" -> "< threshold" -> background;
+	shift [fontcolor=white,color=white];
+	"intensity image" -> threshold;
+	threshold -> "binary image";
+	"binary image" -> "mask" [label="  aka"];
+	"binary image" -> "background value";
+	"binary image" -> "foreground value";
+	"background value" -> "0";
+	"foreground value" -> "1";
+	"foreground value" -> "255";
+	"pixel value" -> ">= threshold" -> foreground;
+	"pixel value" -> "< threshold" -> background;
  }
 '/>
 

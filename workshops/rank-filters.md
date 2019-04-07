@@ -112,17 +112,11 @@ tophat( image ) = image - opening( image, r ) =  image - dilation( erosion( imag
 - Use a tophat filter to remove local background.
 - Threshold the spots in the tophat filtered image.
 
-## Activity: Explore tophat fiter on noisy data
+## Activity: Explore tophat filter on noisy data
 
 - Open image: xy_8bit__spots_local_background_with_noise.tif 
 - Use topHat filter to remove local background
 - Appreciate that noise poses a challenge to the tophat filter
-
-
-### Formative assessment
-
-TODO
-
 
 ## Median filter for local background subtraction
 
@@ -140,8 +134,6 @@ TODO
 median_based_background_correction = image - median( image, r)
 ```
 
-
-
 ### Activity: Implement median based background subtraction
 
 - Write code to implement a median based background subtraction
@@ -151,16 +143,13 @@ median_based_background_correction = image - median( image, r)
 
 - Open images: 
 	- xy_8bit__spots_local_background.tif 
-	- xy_8bit__spots_local_background_with_noise.tif
-	- 
-- Use topHat filter to remove local background
+	- xy_8bit__spots_local_background_with_noise.tif 
+- Use tophat filter to remove local background
 - Devise code to implement a tophat filter using basic functions
 
 ### Formative assessment
 
 TODO
-
-
 
 ## Learn more
 
