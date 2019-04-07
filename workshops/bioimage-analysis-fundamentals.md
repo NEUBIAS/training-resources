@@ -292,10 +292,11 @@ Fill in the blanks, using these words: less, more, 8, 255, 4, more.
 
 <img src='https://g.gravizo.com/svg?
  digraph G {
-    shift [fontcolor=white,color=white];
-    "label image" -> shape_analysis -> table;
-    table -> object_rows;
-    table -> feature_columns;  
+	shift [fontcolor=white,color=white];
+	"label image" -> shape_analysis -> table;
+	table -> object_rows;
+	table -> feature_columns;
+	table -> visualisation;  
 }
 '/>
 
@@ -304,10 +305,10 @@ Fill in the blanks, using these words: less, more, 8, 255, 4, more.
 
 * Open image: xy_8bit_labels__four_objects.tif
 * Perform shape measurements and discuss their meanings.
-* Color objects by their measurement values.
+* Explore results visualisation
+	* Color objects by their measurement values.
 * Add a calibration to the image and check which shape measurements are affected.
 * Draw a test image to understand the shape measurements even better.
-
 
 ### Formative assessment
 
@@ -474,18 +475,6 @@ Fill in the blanks, using these words: integrated, mean, number_of_pixels, decre
 
 &nbsp;
 
-
-## Recap
-
-(Work in pairs of two)
-
-* Take one A4 paper
-* Draw a typical workflow: From intensity image to objects shape table.
-* Write down what you remember (max. 3 facts) about:
-	* Intensity measurements
-	* Object shape measurements
-	* Label image
-	* Pixel data types
 
 
 

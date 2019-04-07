@@ -6,18 +6,17 @@
  digraph G {
     shift [fontcolor=white,color=white];
 	"rank filters" -> awesome [label="  are"];
-	"rank filters" -> minimum [label="  e.g."] -> erosion [label="  aka"];
-	"rank filters" -> maximum [label="  e.g."] -> dilation [label="  aka"];
-	"rank filters" -> median [label="  e.g."];
+	"rank filters" -> minimum -> erosion [label="  aka"];
+	"rank filters" -> maximum -> dilation [label="  aka"];
+	"rank filters" -> median;
+	"rank filters" -> "size" [label="  have"];
   }
 '/>
-
 
 ### Activity: Explore rank filters on binary images
 
 - Open image: xy_8bit_binary__two_spots_different_size.tif
 - Explore how the structures grow and shrink when using erosion and dilation
-
 
 ### Activity: Explore rank filters on grayscale images
 
@@ -26,12 +25,22 @@
 	- removes noise
 	- removes small structures
 	- preserves egdes
-- Compare median filter to a mean filter of same radius
+- Compare median filter to mean filter of same radius
 
 
 ### Formative assessment
 
-TODO
+True or false? Discuss with your neighbour!
+
+1. Median filter is just another name for mean filter.
+2. Small structures can completely disappear from an image when applying a median filter.
+
+Fill in the blanks, using those words: shrinks, increases, decreases, enlarges.
+
+1. An erosion _____ objects in a binary image. 
+2. An erosion in a binary image _____ the number of foreground pixels.
+3. A dilation in a grayscale image _____ the average intensity in the image.
+4. A dilation _____ objects in a binary image.
 
 
 ## Morphological opening and closing
@@ -84,6 +93,9 @@ TODO
 topHat( image ) = image - dilation( erosion( image, r), r )
 ```
 
+TODO: Add image from pdf
+
+
 ### Activity: Explore tophat filter
 
 - Open image: xy_8bit__spots_local_background.tif
@@ -124,6 +136,9 @@ TODO
 ```
 median_based_background_correction = image - median( image, r)
 ```
+
+TODO: Add image from pdf
+
 
 ### Activity: Implement median based background subtraction
 
