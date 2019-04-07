@@ -72,12 +72,12 @@ contrast = max - min
 
 ### Formative Assessment
 
-Fill in the blanks, using those words: decrease, larger_than, increase, smaller_than 
+Fill in the blanks, using those words: decrease, larger than, increase, smaller than 
 
-* Pixels with values _____ `max` will appear saturated. 
-* Decreasing `max` while keeping `min` constant will _____ the contrast.
-* Decreasing both `max` and `min` will _____ the overall brightness.
-* Pixels with values _____ the `min` will appear black, when using a grayscale LUT.
+1. Pixels with values _____ `max` will appear saturated. 
+2. Decreasing `max` while keeping `min` constant will _____ the contrast.
+3. Decreasing both `max` and `min` will _____ the overall brightness.
+4. Pixels with values _____ the `min` will appear black, when using a grayscale LUT.
 
 
 &nbsp;
@@ -254,13 +254,12 @@ Repeat above activity but use a 3D image:
 
 Fill in the blanks, using these words: less, more, 8, 255, 4, more.
 
-* For a given input image there is only one correct connectivity.
-* In 3D, pixels have _____ neighbors than in 2D.
-* 8-connected connectivity results in _____ objects than 4-connected connectivity.
-* In 3D, pixels have ____ non-diagonal neighbors.
-* In 2D, pixels have ____ non-diagonal neighbors.
-* A 8-bit label image can maximally have _____ objects.
-* The maximum value in a label image is equal to or _____ than the number of objects.
+1. In 3D, pixels have _____ neighbors than in 2D.
+2. 8-connected connectivity results in _____ objects than 4-connected connectivity.
+3. In 3D, pixels have ____ non-diagonal neighbors.
+4. In 2D, pixels have ____ non-diagonal neighbors.
+5. A 8-bit label image can maximally have _____ objects.
+6. The maximum value in a label image is equal to or _____ than the number of objects.
 
 
 &nbsp;
@@ -338,11 +337,11 @@ True or false? Discuss with your neighbour!
 
 Fill in below blanks, using these words: equal_to, larger_than, smaller_than, binary, connected_component_analysis, thresholding
 
-* A label image is the result of _____ .
-* The number of pixels in a binary image is typically _____ the number of connected components. 
-* The number of distinct values in a label image is _____ the number of objects (minus one).
-* Converting an intensity image to a _____ image can be achieved by _____ .
-* The number of connected components can be _____ the maximal label.
+1. A label image is the result of _____ .
+2. The number of pixels in a binary image is typically _____ the number of connected components. 
+3. The number of distinct values in a label image is _____ the number of objects (minus one).
+4. Converting an intensity image to a _____ image can be achieved by _____ .
+5. The number of connected components can be _____ the maximal label.
 
 &nbsp;
 
@@ -392,10 +391,10 @@ There are several good reasons not to subtract the background from each pixel in
 
 Fill in the blanks, using these words: integrated, mean, number_of_pixels, decrease, increase, sum
 
-* Average intensity is just another word for _____ intensity.
-* The _____ intensity is equal to the mean intensity times the _____ in the measured region.
-* In an 8-bit image, increasing the size of the measurement region can only _____ the sum intensity.
-* In a float image, increasing the size of the measurement region can _____ the sum intensity. 
+1. Average intensity is just another word for _____ intensity.
+2. The _____ intensity is equal to the mean intensity times the _____ in the measured region.
+3. In an 8-bit image, increasing the size of the measurement region can only _____ the sum intensity.
+4. In a float image, increasing the size of the measurement region can _____ the sum intensity. 
 
 &nbsp;
 

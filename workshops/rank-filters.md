@@ -58,11 +58,11 @@ Fill in the blanks, using those words: shrinks, increases, decreases, enlarges.
 '/>
 
 ```
-opening( image ) = dilation( erosion( image ) )
+opening( image, r ) = dilation( erosion( image, r ), r )
 ```
 
 ```
-closing( image ) = erosion( dilation( image ) )
+closing( image, r ) = erosion( dilation( image, r ), r )
 ```
 
 
@@ -72,13 +72,16 @@ closing( image ) = erosion( dilation( image ) )
 - Explore effects of morphological closing and opening:
 	- closing can fill holes
 	- closing can connect gaps
-	- opening can remove thin structures 
+	- opening can remove thin structures
 
 
 ### Formative assessment
 
-TODO
+True of false? Discuss with your neighbour!
 
+1. Morphological openings on binary images can decrease the number of foreground pixels.
+2. Morphological closings on binary images never decreases the number of foreground pixels.
+3. Performing a morphological closing a twice in a row does not make sense, because the second closing does not further change the image.   
 
 ## Top hat filter for local background subtraction
 
@@ -149,7 +152,11 @@ median_based_background_correction = image - median( image, r)
 
 ### Formative assessment
 
-TODO
+Answer below questions. Discuss with your neighbour!
+
+1. What could one do to close small gaps in a binary image? 
+2. What could one do to remove small objects in a image?
+3. What could you use for local background subtraction in a very noisy image?
 
 ## Learn more
 
