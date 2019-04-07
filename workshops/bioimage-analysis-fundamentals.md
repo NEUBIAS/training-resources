@@ -40,7 +40,7 @@ True or false?
 
 &nbsp;
 
-\pagebreak
+<div style="page-break-after: always;"></div>
 
 ## Image display
 
