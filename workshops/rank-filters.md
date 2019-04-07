@@ -130,8 +130,8 @@ TODO
  digraph G {
     shift [fontcolor=white,color=white];
 	"median" -> "local background" [label="  approximates"];
-	"median" -> "radius" -> "about 3 times larger than foreground objects";
-	
+	"median" -> "radius" -> "> object width";
+	"radius" -> "< spatial background frequency";
   }
 '/>
 
