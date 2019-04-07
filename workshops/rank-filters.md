@@ -6,8 +6,10 @@
  digraph G {
     shift [fontcolor=white,color=white];
 	"rank filters" -> awesome [label="  are"];
-	"rank filters" -> minimum -> erosion [label="  aka"];
-	"rank filters" -> maximum -> dilation [label="  aka"];
+	"rank filters" -> minimum; 
+	minimum -> erosion [label="  aka"];
+	"rank filters" -> maximum; 
+	maximum -> dilation [label="  aka"];
 	"rank filters" -> median;
 	"rank filters" -> "size" [label="  have"];
   }
@@ -16,7 +18,7 @@
 ### Activity: Explore rank filters on binary images
 
 - Open image: xy_8bit_binary__two_spots_different_size.tif
-- Explore how the structures grow and shrink when using erosion and dilation
+- Explore how structures grow and shrink, using erosion and dilation
 
 ### Activity: Explore rank filters on grayscale images
 
@@ -51,7 +53,7 @@ Fill in the blanks, using those words: shrinks, increases, decreases, enlarges.
         "opening" -> "rank filter sequence" [label="  is"];
         "closing" -> "rank filter sequence" [label="  is"];
 	"opening" -> "removes small structures";
-	"closing -> "fills small gaps";
+	"closing" -> "fills small gaps";
   }
 '/>
 
@@ -60,17 +62,17 @@ opening( image ) = dilation( erosion( image ) )
 ```
 
 ```
-closing( image ) = erosion( dilation ( image ) )
+closing( image ) = erosion( dilation( image ) )
 ```
 
 
 ### Activity: Explore opening and closing on binary images
 
 - Open image: xy_8bit_binary__for_open_and_close.tif
-- Explore the effect of morphological closing and opening
-	- Closing can fill the hole
-	- Closing can connect the circle
-	- Opening can remove thin structures 
+- Explore effects of morphological closing and opening:
+	- closing can fill holes
+	- closing can connect gaps
+	- opening can remove thin structures 
 
 
 ### Formative assessment
@@ -83,14 +85,14 @@ TODO
 <img src='https://g.gravizo.com/svg?
  digraph G {
     shift [fontcolor=white,color=white];
-	"top hat filter" -> "rank filter sequence" [label="  is"];
-	"top hat filter" -> "local background subtraction";
+	"tophat filter" -> "rank filter sequence" [label="  is"];
+	"tophat filter" -> "local background subtraction";
   }
 '/>
 
 
 ```
-topHat( image ) = image - dilation( erosion( image, r), r )
+tophat( image ) = image - dilation( erosion( image, r), r )
 ```
 
 TODO: Add image from pdf
@@ -99,16 +101,18 @@ TODO: Add image from pdf
 ### Activity: Explore tophat filter
 
 - Open image: xy_8bit__spots_local_background.tif
-- Use topHat filter to remove local background
+- Use a tophat filter to remove local background
 
 ## Activity: Implement a tophat filter
 
-- Devise code to implement a tophat filter using basic functions
+- Devise code implementing a tophat filter, using minimum and maximum filters
 
 ## Activity: Explore tophat filter on biological data
 
 - Open image: xy_16bit__autophagosomes.tif 
-- Use topHat filter to remove local background
+- Appreciate that you cannot readliy segment the spots.
+- Use a tophat filter to remove local background.
+- Threshold the spots in the tophat filtered image.
 
 ## Activity: Explore tophat fiter on noisy data
 
@@ -124,7 +128,7 @@ TODO
 
 ## Median filter for local background subtraction
 
-<img src='https§://g.gravizo.com/svg?
+<img src='https://g.gravizo.com/svg?
  digraph G {
     shift [fontcolor=white,color=white];
 	"median" -> "local background";
@@ -160,7 +164,9 @@ TODO
 
 
 
+## Learn more
 
+- https://imagej.net/MorphoLibJ#Grayscale_morphological_filters
 
 
 

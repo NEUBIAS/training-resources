@@ -322,7 +322,11 @@ True or false? Discuss with your neighbour!
 
 ### Learn more
 
-* Especially surface and perimeter measurements are affected by sampling and resolution (see for example: https://en.wikipedia.org/wiki/Coastline_paradox).
+* Especially surface and perimeter measurements are affected by sampling and resolution, see for example:
+	* https://en.wikipedia.org/wiki/Coastline_paradox).
+* Results visualisation:
+	* https://imagej.net/MorphoLibJ#Grayscale_morphological_filters: **Label visualization in 3D viewer**
+
 
 &nbsp;
 

@@ -41,7 +41,9 @@ digraph G {
  
 ### Learn more
 
+- https://imagescience.org/meijering/software/featurej/
 - https://en.wikipedia.org/wiki/Difference_of_Gaussians
+- https://github.com/CellProfiler/CellProfiler/blob/master/cellprofiler/modules/enhanceorsuppressfeatures.py#L4
 
 
 ### Formative Assessment
