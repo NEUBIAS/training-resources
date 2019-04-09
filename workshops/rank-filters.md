@@ -1,11 +1,38 @@
-# Rank filters
-
-## Basic rank filters
+# Neighborhood filters
 
 <img src='https://g.gravizo.com/svg?
  digraph G {
     shift [fontcolor=white,color=white];
-	"rank filters" -> awesome [label="  are"];
+	"neighbourhood filter" -> "central neighbourhood pixel" [label="  replaces"]; 
+	"neighbourhood filter" -> "size" [label="  has"];
+	"neighbourhood filter" -> "shape" [label="  has"];
+	"neighbourhood filter" -> "convolution filters";
+ 	"neighbourhood filter" -> "rank filters";
+}
+'/>
+
+
+|   |   |   |   |   |   |   |   |
+|---|---|---|---|---|---|---|---|
+| NC  | NC  | NC  |   |   |   |   |   |
+| NC  | C, NC  | NC  |   |   |   |   |   |
+| NC  | NC  | NC  |   |   |   |   |   |
+|   |   |   |   | NB  | NB  | NB  |   |
+|   |   |   |   |  NB | B, NB| NB  |   |
+|   |   |   |   |  NB |  NB |  NB |   |
+|   |   |   |   |   |   |   |   |
+
+
+
+
+
+# Rank filters
+
+## Basic rank filters
+<img src='https://g.gravizo.com/svg?
+ digraph G {
+    shift [fontcolor=white,color=white];
+	"rank filters" -> "neighbourhood filters" [label="  are"];
 	"rank filters" -> minimum; 
 	minimum -> erosion [label="  aka"];
 	"rank filters" -> maximum; 
@@ -14,6 +41,8 @@
 	"rank filters" -> "size" [label="  have"];
   }
 '/>
+
+
 
 ### Activity: Explore rank filters on binary images
 

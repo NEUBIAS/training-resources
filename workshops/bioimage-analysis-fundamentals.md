@@ -1,38 +1,61 @@
 # Bioimage analysis fundamentals
 
-## Pixel values, coordinates, and data types
-
+## Pixel values and indices
+ 
 <img src='https://g.gravizo.com/svg?
  digraph G {
     shift [fontcolor=white,color=white];
     image -> pixel [label="  has many"];
     pixel -> value;
     pixel -> indices;
-    pixel -> coordinates;
-    indices -> calibration;
-    calibration -> coordinates;
-    image -> calibration [label="  can have"];
     pixel -> voxel [label="  3D"];   
   }
 '/>
 
-### Activity
+### Activity: Explore pixel values and indices
 
 * Open image: xy_8bit__nuclei_noisy_different_intensity.tif
-	* Explore different ways to inspect pixel values and indices
-	* Add image calibration
-	* Check where the calibration is visible
+* Explore different ways to inspect pixel values and indices
+* Check where the lowest pixel indices are in the displayed image:
+	* Most commonly: Upper left corner, which is different to conventional coordinate systems.
+
+
+## Image calibration
+
+<img src='https://g.gravizo.com/svg?
+ digraph G {
+    shift [fontcolor=white,color=white];
+    pixel -> indices;
+    pixel -> coordinates;
+    indices -> calibration;
+    calibration -> coordinates;
+    calibration -> anisotropic [label="  can be"];
+    image -> calibration [label="  can have"];
+  }
+'/>
+
+
+### Activity: Explore image calibration
+
+* Open image: xy_8bit__nuclei_noisy_different_intensity.tif
+* Add image calibration
+* Explore whether and how this affects image display and measurements (e.g. distance between two points)
+ 
+		
+### Activity: Explore anisotropic 3D image data
+
+* Open image: xy_8bit_calibrated_anisotropic__mri_stack.tif
+	* Appreciate that the pixels are anisotropic
+
 	
 ### Formative assessment
 
 True or false?
 
-* Pixel coordinates are always integer values.
 * Changing the image calibration changes the pixel values.
 * Pixel coordinates depend on image calibration.
-* Pixel indices are always positive integer values.
 * The lowest pixel index of a 2D image always is `[1,1]`.
-* When looking at a 2D image, the lowest pixel index is in the lower left corner.
+* When looking at a 2D image, the lowest pixel indices are always in the lower left corner.
 
 &nbsp;
 
