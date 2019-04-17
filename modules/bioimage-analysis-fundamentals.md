@@ -317,6 +317,14 @@ Fill in the blanks, using these words: less, more, 8, 255, 4, more.
 * Add a calibration to the image and check which shape measurements are affected.
 * Draw a test image to understand the shape measurements even better.
 
+### Activity: Explore sampling limits
+
+* Draw a square (=circle) of 2x2 pixels (paper, whiteboard, ...)
+	* Measure area, perimeter and circularity
+	* Discuss the results
+* Discuss the England's coastline paradox 
+
+
 ### Formative assessment
 
 True or false? Discuss with your neighbour!
