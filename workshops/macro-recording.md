@@ -550,6 +550,32 @@ function measureCells() {
 Solution:
 - ../macros/CountCells-Functions.ijm
 
+## Indentations
+
+Indentations (by multiple spaces are tabs) are very important for code readability!
+In python they are even mandatory, your code will not run if you do not get the indentations right!
+
+Below code will run, but it really is not readable!
+
+```
+s = "Hello"
+   function printString(    s )
+   {
+print    (  s );
+          }
+```
+
+This is much better:
+
+```
+s = "Hello"
+
+function printString( s )
+{
+	print( s );
+}
+```
+
 
 ## Analyzing multiple images in one folder
 
@@ -694,14 +720,34 @@ function processFile( path )
 }
 ```
 
-### Concepts
-
-#### Recursion
-
-A function calling itself
-
-#### If-else statement
+### If-else statement
 
 Conditional code execution
 
+#### Activity: Interactively explore if-else statements
+
+```
+a = 10;
+
+if ( a > 100 )
+{
+	print( "Yeah!" );
+}
+else
+{
+	print( "Nah..." );
+}
+ 
+```
+
+
+
+### Recursion
+
+A function calling itself
+
+
+## ImageJ2 way of retrieving parameters via graphical user interface (GUI)
+
+...
 
