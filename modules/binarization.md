@@ -19,7 +19,6 @@ Few sentences.
 
 ## Concept map
 
-
 <img src='https://g.gravizo.com/svg?
  digraph G {
 shift [fontcolor=white,color=white];
