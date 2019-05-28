@@ -5,7 +5,7 @@
 <img src='https://g.gravizo.com/svg?
  digraph G {
     shift [fontcolor=white,color=white];
-    image -> pixel [label="  has many"];
+    intenstiy image -> threshold;
     pixel -> value;
     pixel -> indices;
     pixel -> voxel [label="  3D"];   
