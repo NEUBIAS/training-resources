@@ -19,7 +19,6 @@ Few sentences.
 
 ## Concept map
 
-
 <img src='https://g.gravizo.com/svg?
  digraph G {
 shift [fontcolor=white,color=white];
@@ -35,6 +34,25 @@ shift [fontcolor=white,color=white];
 ![binarization_figure_00](../figures/binarization_concept_example.png)
 
 ## Activity
+
+Open an image and binarize it by applying a threshold.
+
+<details>
+ <summary>ImageJ user interface</summary>
+	- `Open...`
+		- "/image-analysis-training-resources/image_data/xy_8bit__two_cells.tif";
+  	- `Threshold...` 
+</details>
+
+<details>
+ <summary>ImageJ macro</summary>
+  open("/image-analysis-training-resources/image_data/xy_8bit__two_cells.tif");
+  setThreshold(30, 255);
+  setOption("BlackBackground", true);
+  run("Convert to Mask");
+</details>
+
+
 
 
 ## Formative assessment
