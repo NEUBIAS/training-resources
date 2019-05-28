@@ -1,0 +1,27 @@
+image: ruby:2.3
+variables:
+  JEKYLL_ENV: production
+  LC_ALL: C.UTF-8
+
+before_script:
+  - bundle install
+  - cat header.txt publications.md > index.md
+
+test:
+  stage: test
+  script:
+    - bundle exec jekyll build -d test
+  artifacts:
+    paths:
+    - test
+
+pages:
+  stage: deploy
+  script:
+    - bundle exec jekyll build -d public
+  artifacts:
+    paths:
+    - public
+  only:
+    - 10-jekyll
+    - master
