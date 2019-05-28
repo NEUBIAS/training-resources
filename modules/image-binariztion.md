@@ -6,9 +6,10 @@
  digraph G {
     shift [fontcolor=white,color=white];
     intenstiy_image -> threshold;
-    threshold -> background;
-    threshold -> foreground;
-    pixel -> voxel [label="  3D"];   
+    threshold -> background [label="  <threshold"];
+    threshold -> foreground [label="  >=threshold"];
+    background -> binaryimage;
+	foreground -> binaryimage;   
   }
 '/>
 
