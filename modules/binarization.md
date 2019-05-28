@@ -37,7 +37,7 @@ shift [fontcolor=white,color=white];
 
 ## Example
 
-![binarization_figure_00](../figures/binarization_concept_example.png)
+![binarization_figure_00](/figures/binarization_concept_example.png)
 
 ## Activity
 
