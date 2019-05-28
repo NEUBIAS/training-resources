@@ -40,17 +40,12 @@ shift [fontcolor=white,color=white];
 ![binarization_figure_00](/figures/binarization_concept_example.png)
 
 ## Activity
-<details open>
-<summary>Jython script</summary>
-<br>
-```python
-from ij import IJ, ImagePlus
-from ij.plugin import Thresholder
 
 Open an image and binarize it by applying a threshold.
 
 <details>
  <summary>ImageJ user interface</summary>
+	
 	- `Open...`
 		- "/image-analysis-training-resources/image_data/xy_8bit__two_cells.tif";
   	- `Threshold...` 
@@ -58,6 +53,7 @@ Open an image and binarize it by applying a threshold.
 
 <details>
  <summary>ImageJ macro</summary>
+  
   open("/image-analysis-training-resources/image_data/xy_8bit__two_cells.tif");
   setThreshold(30, 255);
   setOption("BlackBackground", true);
@@ -65,16 +61,22 @@ Open an image and binarize it by applying a threshold.
 </details>
 
 
+<details>
+<summary>Jython script</summary>
 
+```
+from ij import IJ, ImagePlus
+from ij.plugin import Thresholder
 
 inputImage=IJ.getImage()
 
 IJ.setRawThreshold(inputImage, 60, 255, None)
-
 binaryImage=ImagePlus('Binary image',Thresholder.createMask(inputImage))
 
 binaryImage.show()
 ```
+
+
 </details>
 
 ## Formative assessment
@@ -88,4 +90,3 @@ Quizz or something
 ## Learn more
 
 External links...
-
