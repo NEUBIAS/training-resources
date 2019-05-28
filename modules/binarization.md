@@ -30,13 +30,9 @@ shift [fontcolor=white,color=white];
   }
 '/>
 
-
-
-- Intensity image --- threshold ---> Binary image
-- 
-
 ## Example
 
+![binarization_figure_00](../figures/binarization_concept_example.png)
 
 ## Activity
 
