@@ -9,7 +9,9 @@
     threshold -> background [label="  <threshold"];
     threshold -> foreground [label="  >=threshold"];
     background -> binaryimage;
-	foreground -> binaryimage;   
+	foreground -> binaryimage;
+	binaryimage -> 0 [label="  background"];
+	binaryimage -> 1 [label="  foreground"];   
   }
 '/>
 
