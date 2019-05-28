@@ -30,3 +30,7 @@ True or false?
 
 * The lowest pixel index of a 2D image always is `[1,1]`.
 * When looking at a 2D image, the lowest pixel indices are always in the lower left corner.
+
+## Learn next
+
+- display.md
