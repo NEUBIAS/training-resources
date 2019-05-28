@@ -46,33 +46,32 @@ Open an image and binarize it by applying a threshold.
 <details>
  <summary>ImageJ user interface</summary>
 	
-	- `Open...`
-		- "/image-analysis-training-resources/image_data/xy_8bit__two_cells.tif";
-  	- `Threshold...` 
+- **[ Open... ]** "/image-analysis-training-resources/image_data/xy_8bit__two_cells.tif" <br/>
+- **[ Threshold... ]**
 </details>
 
 <details>
- <summary>ImageJ macro</summary>
+<summary>ImageJ macro</summary>
   
-  open("/image-analysis-training-resources/image_data/xy_8bit__two_cells.tif");
-  setThreshold(30, 255);
-  setOption("BlackBackground", true);
-  run("Convert to Mask");
+```
+open("/image-analysis-training-resources/image_data/xy_8bit__two_cells.tif");
+setThreshold(30, 255);
+setOption("BlackBackground", true);
+run("Convert to Mask");
+```
 </details>
 
 
 <details>
 <summary>Jython script</summary>
 
-```
+```python
 from ij import IJ, ImagePlus
 from ij.plugin import Thresholder
 
 inputImage=IJ.getImage()
-
 IJ.setRawThreshold(inputImage, 60, 255, None)
 binaryImage=ImagePlus('Binary image',Thresholder.createMask(inputImage))
-
 binaryImage.show()
 ```
 
