@@ -35,6 +35,25 @@ shift [fontcolor=white,color=white];
 
 ## Activity
 
+Open an image and binarize it by applying a threshold.
+
+<details>
+ <summary>ImageJ user interface</summary>
+	- `Open...`
+		- "/image-analysis-training-resources/image_data/xy_8bit__two_cells.tif";
+  	- `Threshold...` 
+</details>
+
+<details>
+ <summary>ImageJ macro</summary>
+  open("/image-analysis-training-resources/image_data/xy_8bit__two_cells.tif");
+  setThreshold(30, 255);
+  setOption("BlackBackground", true);
+  run("Convert to Mask");
+</details>
+
+
+
 
 ## Formative assessment
 
