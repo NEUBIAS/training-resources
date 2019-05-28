@@ -1,3 +1,9 @@
+---
+title:     Image binarization
+layout:    page
+permalink: /binarization
+---
+
 # Image binarization 
 
 ## Requirements
