@@ -40,6 +40,12 @@ shift [fontcolor=white,color=white];
 ![binarization_figure_00](/figures/binarization_concept_example.png)
 
 ## Activity
+<details open>
+<summary>Jython script</summary>
+<br>
+```python
+from ij import IJ, ImagePlus
+from ij.plugin import Thresholder
 
 Open an image and binarize it by applying a threshold.
 
@@ -60,6 +66,16 @@ Open an image and binarize it by applying a threshold.
 
 
 
+
+inputImage=IJ.getImage()
+
+IJ.setRawThreshold(inputImage, 60, 255, None)
+
+binaryImage=ImagePlus('Binary image',Thresholder.createMask(inputImage))
+
+binaryImage.show()
+```
+</details>
 
 ## Formative assessment
 
