@@ -5,9 +5,9 @@
 <img src='https://g.gravizo.com/svg?
  digraph G {
     shift [fontcolor=white,color=white];
-    intenstiy image -> threshold;
-    pixel -> value;
-    pixel -> indices;
+    intenstiy-image -> threshold;
+    threshold -> background;
+    threshold -> foreground;
     pixel -> voxel [label="  3D"];   
   }
 '/>
