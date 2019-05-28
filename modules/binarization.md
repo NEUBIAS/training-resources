@@ -19,6 +19,19 @@ Few sentences.
 
 ## Concept map
 
+
+<img src='https://g.gravizo.com/svg?
+ digraph G {
+shift [fontcolor=white,color=white];
+	"pixel values" -> "foreground\n1,255" [label = " >= threshold"];
+	"pixel values" -> "background\n0" [label = " < threshold"];
+	"foreground\n1,255" -> "binarised pixel values"
+	"background\n0" -> "binarised pixel values"
+  }
+'/>
+
+
+
 - Intensity image --- threshold ---> Binary image
 - 
 
