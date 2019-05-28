@@ -1,3 +1,9 @@
+---
+title:     Example Images
+layout:    page
+permalink: /example-images/
+---
+
 # Example Images for Teaching
 
 Below is a list of links to images that instructors have used as examples when
