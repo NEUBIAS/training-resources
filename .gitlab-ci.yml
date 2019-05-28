@@ -5,7 +5,6 @@ variables:
 
 before_script:
   - bundle install
-  - cat header.txt publications.md > index.md
 
 test:
   stage: test
