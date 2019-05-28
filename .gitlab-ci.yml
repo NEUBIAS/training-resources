@@ -22,5 +22,5 @@ pages:
     paths:
     - public
   only:
-    - 10-jekyll
+    - jekyll
     - master
