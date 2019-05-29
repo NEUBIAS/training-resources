@@ -9,3 +9,7 @@ Current structure:
 - `before_after/`: intended to contain small "before/after" images to illustrate the effect of various actions being taught e.g. thresholding, smoothing, etc
 - `exercises/`: intended to contain directories of markdown files with exercises relating to each mapped concept (subdirectories named according to related concept map)
 - `example_images.md`: intended to contain links to images that would make good examples when teaching
+- 
+## Website
+
+Please visit the repositorie's [website](https://grp-bio-it.embl-community.io/image-analysis-training-resources/).
