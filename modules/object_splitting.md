@@ -1,4 +1,14 @@
+---
+title:     Object splitting
+layout:    page
+---
+
 # Object splitting
+
+## Requirements
+
+- binarisation.md
+- distance_transform.md
 
 ## "Intensity based" watershed
 
@@ -9,7 +19,6 @@
 	"label image" -> "pond regions";
 }
 '/>
-
 
 ### Activity: Explore intensity based watershed 
 
