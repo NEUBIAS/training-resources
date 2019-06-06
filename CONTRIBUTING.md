@@ -1,6 +1,9 @@
+---
+layout: default
+---
 # Guidelines for Contributing
 
-Contributions to this project are very welcome. 
+Contributions to this project are very welcome.
 Changes should be submitted by merge request from a new branch to `master`.
 Merge requests should be reviewed by at least one Maintainer before merging.
 
@@ -12,9 +15,111 @@ To contribute to this project, please follow those steps:
 
 1. Clone this repository: `git clone https://git.embl.de/grp-bio-it/image-analysis-training-resources.git`
 1. On your computer, make a new branch. For example, if you would like to contribute python code to the binarization.md module you may: `git checkout -b pythonBinarization`
-1. Now add your changes on your computer (staying in this branch).
+1. Now add your changes on your computer (staying in this branch) - see "Adding a new module" section, below.
 1. When you are done, please `git add .; git commit -m "some message"`
-1. Now you can upload your branch to the online repository by typing: `git push --set-upstream origin pythonBinarization`. 
+1. Now you can upload your branch to the online repository by typing: `git push --set-upstream origin pythonBinarization`.
 1. Go to the online repository on gitlab: https://git.embl.de/grp-bio-it/image-analysis-training-resources
 1. On gitlab, there will now be button at the top of the page. Click this button to stage a "merge request" of your contribution (in your branch) to the master branch. There will also a possibility to assign a project maintainer to review your contribution and to merge it. Please select someone appropriate here.
 1. Thank you for your contribution!
+
+## Adding a new module
+
+Each module page is built from a template (`_layouts/module.html`),
+ensuring a consistent structure and style for the whole collection.
+To create a new module, you will need to add a few files
+in a few different places in this repository.
+
+### Module file
+Most important is the module file itself.
+This module file should be saved with a short, descriptive name (no spaces!)
+ending with the `.md` (Markdown) extension.
+Typically, the only content of this Markdown file should be a header
+written in YAML. See the specification below.
+All fields not marked as optional are required for the page to build.
+You can check that your YAML is valid with [this tool](http://www.yamllint.com/).
+
+```yaml
+---
+title:     Title of the Module
+layout:    module               # don't change this
+prerequisites:
+  - "a list of things that learners should know"
+  - "in order to understand this module"
+objectives:
+  - "a list of learning objectives"
+  - "see note 1 below for more info"
+motivation: >
+  A description of *why* you would want to learn this.
+  Can be written in
+  (GitHub-flavoured) [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+  and split
+  across
+  multiple
+  lines.
+concept_map: > # see note 2
+  graph TD
+      A[Christmas] -->|Get money| B(Go shopping)
+      B --> C{Let me think}
+      C -->|One| D[Laptop]
+      C -->|Two| E[iPhone]
+      C -->|Three| F[fa:fa-car Car];
+figure: /figures/mymodule.png # store the example image for your module in the `figures` folder and provide the absolute path from the root of the site here.
+figure_legend: Some description of the figure. (optional)
+activity_preface: >
+  Some general description of the activity for
+  that learners will do while studying the module.
+  It will be followed by platform-specific instructions/example code.
+  (optional)
+activities: # platform-specific activity instruction/example code files (see note 3) (optional)
+  "ImageJ GUI": "mymodule/activities/mymodule_imagejgui.md"
+  "ImageJ Macro": "mymodule/activities/mymodule_imagejmacro.md"
+  "Jython": "mymodule/activities/mymodule_jython.md"
+exercises_preface: >
+  You could put general, language-agnostic questions here...
+  (optional)
+exercises: # platform-specific exercises (in Markdown files) (see note 3) (optional)
+  "ImageJ GUI": "mymodule/exercises/mymodule_imagejgui.md"
+  "ImageJ Macro": "mymodule/exercises/mymodule_imagejmacro.md"
+  "Jython": "mymodule/exercises/mymodule_jython.md"
+  "MATLAB": "mymodule/exercises/mymodule_matlab.md"
+learn_next: # see note 4
+  - "[name_of_one](calibration)"
+  - "[or_more_modules](object_splitting)"
+  - "[to link to next](display)"
+external_links:
+  - "[link to](https://external.page.com)"
+---
+```
+
+Notes:
+
+1. Learning objectives should be worded as endings to a sentence beginning "After completing this lesson, learners should be able to...". We recommend starting each learning objective with a verb from [Bloom's Taxonomy](https://cft.vanderbilt.edu/guides-sub-pages/blooms-taxonomy/)
+2. Concept maps are drawn with [Mermaid.js](https://mermaidjs.github.io/flowchart.html). The indentation of the chart description is important, so be careful!
+3. The `activities` and `exercises` fields should be populated with key-value pairs, where the key is the name of the platform (e.g. "ImageJ GUI", "Python", etc) and the value is the path (relative to `_includes/`) to the file containing the activity instructions/exercises for that platform.
+4. The points in "Learn Next" are Markdown links, which should be formed as `[Module Title](modulefilename)`, where the extension has been removed from the filename.
+
+### Associated files
+
+Below is a list of all the other files that you should provide
+to accompany a new module,
+as well as the appropriate location for each
+(relative to the top level of the repository).
+Examples are given for a `/modules/mymodule.md`
+
+- The `figure` image
+  - an file containing an example image to illustrate the concept being taught in the module
+  - location: `/figures/mymodule.md`
+- The `activities` files
+  - Markdown files containing instructions and/or example code for an activity that learners should follow to learn how to apply the concept on a particular platform (ImageJ Macro, MATLAB, etc)
+  - location: `_includes/mymodule/activities/mymodule_platformnospaces.md`
+- The `exercises` files
+  - Markdown files containing exercises to test the learner's understanding of applying the concept on a particular platform
+  - location: `_includes/mymodule/exercises/mymodule_platformnospaces.md`
+
+## Adding exercises/activity instructions for a new platform
+
+Contributions of instructions and exercises for more platforms are very welcome - please see the "Associated files" subsection above for details of where these contributed files should be added.
+
+## Questions about the module layout
+
+If you have questions about the module layout, please contact [Toby Hodges](mailto:toby.hodges@embl.de).

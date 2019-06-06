@@ -1,109 +1,47 @@
 ---
 title:     Image binarization
-layout:    page
-permalink: /binarization
+layout:    module
+prerequisites:
+  - "the concepts of image files, pixels, and intensity"
+  - "something else __that__ `requires` _formatting_"
+objectives:
+  - "describe the relationship between an intensity image and a derived binary image"
+  - "use thresholding to distinguish foreground and background pixels"
+motivation: >
+  A description of *why* you would want to learn this.
+  Can be written in
+  (GitHub-flavoured) [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+  and split
+  across
+  multiple
+  lines.
+concept_map: >
+  graph TD
+      A[Christmas] -->|Get money| B(Go shopping)
+      B --> C{Let me think}
+      C -->|One| D[Laptop]
+      C -->|Two| E[iPhone]
+      C -->|Three| F[fa:fa-car Car];
+figure: /figures/binarization.png
+figure_legend: Some description of the figure (optional)
+activity_preface: >
+  Open an image and binarize it by applying a threshold.
+activities:
+  "ImageJ GUI": "binarization/activities/binarization_imagejgui.md"
+  "ImageJ Macro": "binarization/activities/binarization_imagejmacro.md"
+  "Jython": "binarization/activities/binarization_jython.md"
+  "MATLAB": "binarization/activities/binarization_matlab.md"
+exercises_preface: >
+  You could put general, language-agnostic questions here...
+exercises:
+  "ImageJ GUI": "binarization/exercises/binarization_imagejgui.md"
+  "ImageJ Macro": "binarization/exercises/binarization_imagejmacro.md"
+  "Jython": "binarization/exercises/binarization_jython.md"
+  "MATLAB": "binarization/exercises/binarization_matlab.md"
+learn_next:
+  - "[name_of_one](calibration)"
+  - "[or_more_modules](display)"
+  - "[to link to next](filter_convolution)"
+external_links:
+  - "[link to](https://external.page.com)"
 ---
-
-# Image binarization 
-
-## Requirements
-
-To understand this episode you need to know:
-
-- A
-- B
-- C
-
-## Motivation
-
-Few sentences.
-
-## Learning objectives
-
-- Understand the relationship between an intensity image and a derived binary image.
-- Execute binarization on an image.
-
-## Concept map
-
-<img src='https://g.gravizo.com/svg?
- digraph G {
-shift [fontcolor=white,color=white];
-	"pixel values" -> "foreground\n1,255" [label = " >= threshold"];
-	"pixel values" -> "background\n0" [label = " < threshold"];
-	"foreground\n1,255" -> "binarised pixel values"
-	"background\n0" -> "binarised pixel values"
-  }
-'/>
-
-## Example
-
-![binarization_figure_00](/figures/binarization_concept_example.png)
-
-## Activity
-
-Open an image and binarize it by applying a threshold.
-
-<details>
- <summary>ImageJ user interface</summary>
-	
-- **[ Open... ]** "/image-analysis-training-resources/image_data/xy_8bit__two_cells.tif" <br/>
-- **[ Threshold... ]**
-</details>
-
-<details>
-<summary>ImageJ macro</summary>
-  
-```
-open("/image-analysis-training-resources/image_data/xy_8bit__two_cells.tif");
-setThreshold(30, 255);
-setOption("BlackBackground", true);
-run("Convert to Mask");
-```
-</details>
-
-
-<details>
-<summary>Jython script</summary>
-
-```python
-from ij import IJ, ImagePlus
-from ij.plugin import Thresholder
-
-inputImage=IJ.getImage()
-IJ.setRawThreshold(inputImage, 60, 255, None)
-binaryImage=ImagePlus('Binary image',Thresholder.createMask(inputImage))
-binaryImage.show()
-```
-</details>
-
-
-<details>
-<summary>MATLAB Script</summary>
-
-```matlab
-function src_binarize_image()
-%This function illustrates separating foreground from background using a 
-%fixed threshold value  
-
-threshold = 50; %example hreshold value
-%Read input image
-in_image = imread(['image_data' filesep 'xy_8bit__two_cells.tif']); 
-figure; imagesc(in_image); %display input image
-%Binarized input image with the threshold value;
-bin_image = uint8(in_image>= threshold);
-figure; imagesc(bin_image) % display binary image
-end
-```
-</details>
-
-## Formative assessment
-
-Quizz or something
-
-## Follow-up material
-
-- [http:// ](next module in this repo)
-
-## Learn more
-
-External links...

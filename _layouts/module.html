@@ -1,0 +1,215 @@
+---
+layout: default
+---
+<article class="module">
+
+{% assign first = false %}
+{% if page.activities or page.exercises %}
+<script language="javascript" type="text/javascript">
+function set_view_defaults() {
+set_activity_view_defaults();
+set_exercises_view_defaults();
+}
+function set_activity_view_defaults() {
+{% assign first = true %}
+{% endif %}
+{% for platform in page.activities %}
+document.getElementById("{{ platform[0] | slugify }}-activity-div").style.display = 'none';
+{% if first %}
+document.getElementById("{{ platform[0] | slugify }}-activity-div").style.display = 'block';
+{% assign first = false %}
+{% endif %}
+{% endfor %}
+{% if page.activities or page.exercises %}
+};
+function change_activity_content_by_platform(form_control){
+{% assign first = true %}
+{% endif %}
+{% for platform in page.activities %}
+document.getElementById("{{ platform[0] | slugify }}-activity-div").style.display = 'none';
+{% endfor %}
+{% for platform in page.activities %}
+{% if first %}
+if (!form_control || document.getElementById(form_control).value == "{{ platform[0] | slugify }}-activity") {
+set_activity_view_defaults();
+{% assign first = false %}
+{% else %}
+} else if (document.getElementById(form_control).value == "{{ platform[0] | slugify }}-activity") {
+document.getElementById("{{ platform[0] | slugify }}-activity-div").style.display = 'block';
+{% endif %}
+{% endfor %}
+{% if page.activities %}
+} else {
+alert("Error: Missing platform value for 'change_activity_content_by_platform()' script!");
+}
+{% endif %}
+{% if page.activities or page.exercises %}
+}
+{% assign first = false %}
+function set_exercises_view_defaults() {
+{% assign first = true %}
+{% endif %}
+{% for platform in page.exercises %}
+document.getElementById("{{ platform[0] | slugify }}-exercises-div").style.display = 'none';
+{% if first %}
+document.getElementById("{{ platform[0] | slugify }}-exercises-div").style.display = 'block';
+{% assign first = false %}
+{% endif %}
+{% endfor %}
+{% if page.activities or page.exercises %}
+};
+function change_exercises_content_by_platform(form_control){
+{% assign first = true %}
+{% endif %}
+{% for platform in page.exercises %}
+document.getElementById("{{ platform[0] | slugify }}-exercises-div").style.display = 'none';
+{% endfor %}
+{% for platform in page.exercises %}
+{% if first %}
+if (!form_control || document.getElementById(form_control).value == "{{ platform[0] | slugify }}-exercises") {
+set_exercises_view_defaults();
+{% assign first = false %}
+{% else %}
+} else if (document.getElementById(form_control).value == "{{ platform[0] | slugify }}-exercises") {
+document.getElementById("{{ platform[0] | slugify }}-exercises-div").style.display = 'block';
+{% endif %}
+{% endfor %}
+{% if page.exercises %}
+} else {
+alert("Error: Missing platform value for 'change_exercises_content_by_platform()' script!");
+}
+{% endif %}
+{% if page.activities or page.exercises %}
+}
+
+window.onload = set_view_defaults;
+</script>
+{% endif %}
+
+<header class="post-header">
+  <h1 class="post-title">{{ page.title }}</h1>
+</header>
+{% if page.prerequisites %}
+<div class="prerequisites">
+  <h2>Prerequisites</h2>
+  Before starting this lesson, you should be familiar with:
+  <ul>
+    {% for prereq in page.prerequisites %}
+<li>{{ prereq | markdownify }}</li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
+<div class="learning-objectives">
+  <h2>Learning Objectives</h2>
+  After completing this lesson, learners should be able to:
+  <ul>
+    {% for objective in page.objectives %}
+<li>{{ objective | markdownify }}</li>
+    {% endfor %}
+  </ul>
+</div>
+
+<h2>Motivation</h2>
+
+{{ page.motivation | markdownify }}
+
+<h2>Concept map</h2>
+<div class="mermaid">
+{{ page.concept_map }}
+</div>
+
+<h2>Example</h2>
+
+<figure>
+<img src="{{ page.figure | relative_url }}">
+{% if page.figure_legend %}
+<figcaption>{{ page.figure_legend }}</figcaption>
+{% endif %}
+</figure>
+
+<div class="module-content">
+{{ content }}
+</div>
+
+<h2>Activity</h2>
+
+{% if page.activity_preface %}
+{{ page.activity_preface | markdownify }}
+{% endif %}
+
+{% if page.activities %}
+Choose a platform to display instructions for: <select id="id_activity_platform" name="activityplatformlist" onchange="change_activity_content_by_platform('id_activity_platform');return false;">
+  {% assign first = true %}
+{% endif %}
+{% for platform in page.activities %}
+  {% if first %}
+<option value="{{ platform[0] | slugify }}-activity" id="{{ platform[0] | slugify }}-activity-option" selected="selected"> {{ platform[0] }} </option>
+
+    {% assign first = false %}
+  {% else %}
+<option value="{{ platform[0] | slugify }}-activity" id="{{ platform[0] | slugify }}-activity-option"> {{ platform[0] }} </option>
+  {% endif %}
+{% endfor %}
+{% if page.activities %}
+</select>
+{% endif %}
+{% for platform in page.activities %}
+<div id="{{ platform[0] | slugify }}-activity-div">
+<h3>{{ platform[0] }}</h3>
+{% assign includefile = platform[1] %}
+{% capture activity %}{% include {{ includefile }} %}{% endcapture %}
+{{ activity | markdownify }}
+</div>
+{% endfor %}
+
+{% if page.exercises_preface or page.exercises %}
+<h2>Formative assessment</h2>
+{% endif %}
+
+{% if page.exercises_preface %}
+{{ page.exercises_preface | markdownify }}
+{% endif %}
+
+{% if page.exercises %}
+Choose a platform to display instructions for: <select id="id_exercises_platform" name="exercisesplatformlist" onchange="change_exercises_content_by_platform('id_exercises_platform');return false;">
+  {% assign first = true %}
+{% endif %}
+{% for platform in page.exercises %}
+  {% if first %}
+<option value="{{ platform[0] | slugify }}-exercises" id="{{ platform[0] | slugify }}-exercises-option" selected="selected"> {{ platform[0] }} </option>
+
+    {% assign first = false %}
+  {% else %}
+<option value="{{ platform[0] | slugify }}-exercises" id="{{ platform[0] | slugify }}-exercises-option"> {{ platform[0] }} </option>
+  {% endif %}
+{% endfor %}
+{% if page.exercises %}
+</select>
+{% endif %}
+{% for platform in page.exercises %}
+<div id="{{ platform[0] | slugify }}-exercises-div">
+<h3>{{ platform[0] }}</h3>
+{% assign includefile = platform[1] %}
+{% capture exercise %}{% include {{ includefile }} %}{% endcapture %}
+{{ exercise | markdownify }}
+</div>
+{% endfor %}
+
+<h2>Follow-up material</h2>
+
+<ul>
+{% for follow_up in page.learn_next %}
+<li>{{ follow_up | markdownify }}</li>
+{% endfor %}
+</ul>
+
+<h2>Learn more</h2>
+
+<ul>
+{% for external_link in page.external_links %}
+<li>{{ external_link | markdownify }}</li>
+{% endfor %}
+</ul>
+
+</article>
