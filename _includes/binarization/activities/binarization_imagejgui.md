@@ -1,0 +1,2 @@
+- **[ Open... ]** "/image-analysis-training-resources/image_data/xy_8bit__two_cells.tif"
+- **[ Threshold... ]**
