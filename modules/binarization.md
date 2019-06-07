@@ -2,28 +2,20 @@
 title:     Image binarization
 layout:    module
 prerequisites:
-  - "the concepts of image files, pixels, and intensity"
-  - "something else __that__ `requires` _formatting_"
+  - "[Basic properties of images and pixels](pixels)"
 objectives:
-  - "describe the relationship between an intensity image and a derived binary image"
-  - "use thresholding to distinguish foreground and background pixels"
+  - "Describe the relationship between an intensity image and a derived binary image"
+  - "Apply a threshold to distinguish foreground and background pixels"
 motivation: >
-  A description of *why* you would want to learn this.
-  Can be written in
-  (GitHub-flavoured) [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-  and split
-  across
-  multiple
-  lines.
+  Very often, one wants to detect objects or specific regions in images. Typically, the first step to achieve this aim is to distinguish so-called background pixels, which do not contain objects or interesting regions, from foreground pixels, which mark the areas of interest. The foreground regions can than be further processed, e.g to detect objects or perform measurements.      
 concept_map: >
   graph TD
-      A[Christmas] -->|Get money| B(Go shopping)
-      B --> C{Let me think}
-      C -->|One| D[Laptop]
-      C -->|Two| E[iPhone]
-      C -->|Three| F[fa:fa-car Car];
+  PV(Pixel values) --> |>= threshold| FG(Foreground 1,255)
+  PV(Pixel values) --> |< threshold| BG(Background 0)
+  BG --> BPV(Binarized pixel values)
+  FG --> BPV(Binarized pixel values)
 figure: /figures/binarization.png
-figure_legend: Some description of the figure (optional)
+figure_legend: An image before and after applying a threshold. Can you see what the treshold value was?
 activity_preface: >
   Open an image and binarize it by applying a threshold.
 activities:
@@ -32,16 +24,17 @@ activities:
   "Jython": "binarization/activities/binarization_jython.md"
   "MATLAB": "binarization/activities/binarization_matlab.md"
 exercises_preface: >
-  You could put general, language-agnostic questions here...
+  ### Fill in the blanks
+  - Pixels in a binary image can have maximally ___ different values.
+  - If the threshold is larger than the maximal pixel value in the intensity image, all pixels in the binary image have a value of ___.
 exercises:
   "ImageJ GUI": "binarization/exercises/binarization_imagejgui.md"
   "ImageJ Macro": "binarization/exercises/binarization_imagejmacro.md"
   "Jython": "binarization/exercises/binarization_jython.md"
   "MATLAB": "binarization/exercises/binarization_matlab.md"
 learn_next:
-  - "[name_of_one](calibration)"
-  - "[or_more_modules](display)"
-  - "[to link to next](filter_convolution)"
+  - "[Algorithms to automatically determine a threshold value](auto_threshold)"
+  - "[Finding objects in a binary image](connected_components)"
 external_links:
-  - "[link to](https://external.page.com)"
+  - "[Wikipedia: Binary image](https://en.wikipedia.org/wiki/Binary_image)"
 ---
