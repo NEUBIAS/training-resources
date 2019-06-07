@@ -123,3 +123,22 @@ Contributions of instructions and exercises for more platforms are very welcome 
 ## Questions about the module layout
 
 If you have questions about the module layout, please contact [Toby Hodges](mailto:toby.hodges@embl.de).
+
+## Building locally
+
+To test your changes locally, install `jekyll` on your system. Instructions for Mac OSX are here: [https://jekyllrb.com/docs/installation/macos/](https://jekyllrb.com/docs/installation/macos/).
+
+Once you have `jekyll` and `bundler` setup,
+clone and move into this repository,
+and run:
+
+```bash
+bundle exec jekyll serve
+```
+
+All going well, your built pages are now beng served locally.
+Copy the URL provided in the output
+(should be http://127.0.0.1:4000/image-analysis-training-resources/)
+and paste it into your web browser.
+Now you can navigate around the locally-built version of the pages
+and check whether you're happy to submit your changes to be merged into `master` :+1:
