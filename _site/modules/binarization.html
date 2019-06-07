@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Image binarization</title>
+  <meta name="description" content="A collection of material for teaching image analysis. Includes concept maps, exercises, example data
+">
+
+  <link rel="stylesheet" href="/image-analysis-training-resources/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/image-analysis-training-resources/modules/binarization.html">
+  <link rel="alternate" type="application/rss+xml" title="Image Analysis Training" href="http://localhost:4000/image-analysis-training-resources/feed.xml">
+  <script src="https://unpkg.com/mermaid@8.0.0/dist/mermaid.min.js"></script>
+  <script>mermaid.initialize({startOnLoad:true});</script>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/image-analysis-training-resources/">Image Analysis Training</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+        
+          
+          <a class="page-link" href="/image-analysis-training-resources/modules/basic_image_analysis_workflow.html">Basic image analysis workflow</a>
+          
+        
+          
+          <a class="page-link" href="/image-analysis-training-resources/modules/binarization.html">Image binarization</a>
+          
+        
+          
+          <a class="page-link" href="/image-analysis-training-resources/modules/calibration.html">Image calibration</a>
+          
+        
+          
+          <a class="page-link" href="/image-analysis-training-resources/modules/connected_components.html">Connected components</a>
+          
+        
+          
+          <a class="page-link" href="/image-analysis-training-resources/modules/display.html">Image display</a>
+          
+        
+          
+          <a class="page-link" href="/image-analysis-training-resources/example-images/">Example Images</a>
+          
+        
+          
+          <a class="page-link" href="/image-analysis-training-resources/modules/filter_convolution.html">Image math</a>
+          
+        
+          
+          <a class="page-link" href="/image-analysis-training-resources/modules/filter_difference_of_gaussian.html">Difference of Gaussian</a>
+          
+        
+          
+          <a class="page-link" href="/image-analysis-training-resources/">Image Analysis Training Material</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/image-analysis-training-resources/modules/measure_intensities.html">Intensity measurements</a>
+          
+        
+          
+          <a class="page-link" href="/image-analysis-training-resources/modules/measure_shapes.html">Object shape measurements</a>
+          
+        
+          
+          <a class="page-link" href="/image-analysis-training-resources/modules/object_splitting.html">Object splitting</a>
+          
+        
+          
+          <a class="page-link" href="/image-analysis-training-resources/modules/pixel_data_types.html">Pixel data types</a>
+          
+        
+          
+          <a class="page-link" href="/image-analysis-training-resources/modules/pixel_math.html">Image math</a>
+          
+        
+          
+          <a class="page-link" href="/image-analysis-training-resources/modules/pixels.html">Pixels</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="module">
+
+
+
+<script language="javascript" type="text/javascript">
+function set_view_defaults() {
+set_activity_view_defaults();
+set_exercises_view_defaults();
+}
+function set_activity_view_defaults() {
+
+
+
+document.getElementById("imagej-gui-activity-div").style.display = 'none';
+
+document.getElementById("imagej-gui-activity-div").style.display = 'block';
+
+
+
+document.getElementById("imagej-macro-activity-div").style.display = 'none';
+
+
+document.getElementById("jython-activity-div").style.display = 'none';
+
+
+document.getElementById("matlab-activity-div").style.display = 'none';
+
+
+
+};
+function change_activity_content_by_platform(form_control){
+
+
+
+document.getElementById("imagej-gui-activity-div").style.display = 'none';
+
+document.getElementById("imagej-macro-activity-div").style.display = 'none';
+
+document.getElementById("jython-activity-div").style.display = 'none';
+
+document.getElementById("matlab-activity-div").style.display = 'none';
+
+
+
+if (!form_control || document.getElementById(form_control).value == "imagej-gui-activity") {
+set_activity_view_defaults();
+
+
+
+
+} else if (document.getElementById(form_control).value == "imagej-macro-activity") {
+document.getElementById("imagej-macro-activity-div").style.display = 'block';
+
+
+
+} else if (document.getElementById(form_control).value == "jython-activity") {
+document.getElementById("jython-activity-div").style.display = 'block';
+
+
+
+} else if (document.getElementById(form_control).value == "matlab-activity") {
+document.getElementById("matlab-activity-div").style.display = 'block';
+
+
+
+} else {
+alert("Error: Missing platform value for 'change_activity_content_by_platform()' script!");
+}
+
+
+}
+
+function set_exercises_view_defaults() {
+
+
+
+document.getElementById("imagej-gui-exercises-div").style.display = 'none';
+
+document.getElementById("imagej-gui-exercises-div").style.display = 'block';
+
+
+
+document.getElementById("imagej-macro-exercises-div").style.display = 'none';
+
+
+document.getElementById("jython-exercises-div").style.display = 'none';
+
+
+document.getElementById("matlab-exercises-div").style.display = 'none';
+
+
+
+};
+function change_exercises_content_by_platform(form_control){
+
+
+
+document.getElementById("imagej-gui-exercises-div").style.display = 'none';
+
+document.getElementById("imagej-macro-exercises-div").style.display = 'none';
+
+document.getElementById("jython-exercises-div").style.display = 'none';
+
+document.getElementById("matlab-exercises-div").style.display = 'none';
+
+
+
+if (!form_control || document.getElementById(form_control).value == "imagej-gui-exercises") {
+set_exercises_view_defaults();
+
+
+
+
+} else if (document.getElementById(form_control).value == "imagej-macro-exercises") {
+document.getElementById("imagej-macro-exercises-div").style.display = 'block';
+
+
+
+} else if (document.getElementById(form_control).value == "jython-exercises") {
+document.getElementById("jython-exercises-div").style.display = 'block';
+
+
+
+} else if (document.getElementById(form_control).value == "matlab-exercises") {
+document.getElementById("matlab-exercises-div").style.display = 'block';
+
+
+
+} else {
+alert("Error: Missing platform value for 'change_exercises_content_by_platform()' script!");
+}
+
+
+}
+
+window.onload = set_view_defaults;
+</script>
+
+
+<header class="post-header">
+  <h1 class="post-title">Image binarization</h1>
+</header>
+
+<div class="prerequisites">
+  <br>
+  <br>
+  <h2>Prerequisites</h2>
+  Before starting this lesson, you should be familiar with:<br>
+  <br>
+  <ul>
+    
+<li><p><a href="pixels">Basic properties of images and pixels</a></p>
+</li>
+    
+  </ul>
+</div>
+
+<div class="learning-objectives">
+  <br>
+  <br>
+  <h2>Learning Objectives</h2>
+  After completing this lesson, learners should be able to:<br>
+  <br>
+  <ul>
+    
+<li><p>Describe the relationship between an intensity image and a derived binary image</p>
+</li>
+    
+<li><p>Apply a threshold to distinguish foreground and background pixels</p>
+</li>
+    
+  </ul>
+</div>
+
+<br>
+<br>
+<h2>Motivation</h2>
+
+<p>Very often, one wants to detect objects or specific regions in images. Typically, the first step to achieve this aim is to distinguish so-called background pixels, which do not contain objects or interesting regions, from foreground pixels, which mark the areas of interest. The foreground regions can than be further processed, e.g to detect objects or perform measurements.</p>
+
+
+<br>
+<br>
+<h2>Concept map</h2>
+<div class="mermaid">
+graph TD
+  PV(Pixel values) --> |>= threshold| FG(Foreground 1,255)
+  PV(Pixel values) --> |< threshold| BG(Background 0)
+  BG --> BPV(Binarized pixel values)
+  FG --> BPV(Binarized pixel values)
+
+</div>
+
+<br>
+<br>
+<h2>Example</h2>
+
+<figure>
+<img src="/image-analysis-training-resources/figures/binarization.png">
+
+<figcaption>An image before and after applying a threshold. Can you see what the treshold value was?</figcaption>
+
+</figure>
+
+<div class="module-content">
+
+</div>
+
+<br>
+<br>
+<h2>Activity</h2>
+
+
+<p>Open an image and binarize it by applying a threshold.</p>
+
+
+
+
+Show activity for: <select id="id_activity_platform" name="activityplatformlist" onchange="change_activity_content_by_platform('id_activity_platform');return false;">
+  
+
+
+  
+<option value="imagej-gui-activity" id="imagej-gui-activity-option" selected="selected"> ImageJ GUI </option>
+
+    
+  
+
+  
+<option value="imagej-macro-activity" id="imagej-macro-activity-option"> ImageJ Macro </option>
+  
+
+  
+<option value="jython-activity" id="jython-activity-option"> Jython </option>
+  
+
+  
+<option value="matlab-activity" id="matlab-activity-option"> MATLAB </option>
+  
+
+
+</select>
+
+
+
+<div id="imagej-gui-activity-div">
+&nbsp; <br>
+<h3>ImageJ GUI</h3>
+
+
+<ul>
+<li><strong>[ Open... ]</strong> &quot;/image-analysis-training-resources/image_data/xy_8bit__two_cells.tif&quot;</li>
+<li><strong>[ Threshold... ]</strong></li>
+</ul>
+
+</div>
+
+<div id="imagej-macro-activity-div">
+&nbsp; <br>
+<h3>ImageJ Macro</h3>
+
+
+<pre><code>open(&quot;/image-analysis-training-resources/image_data/xy_8bit__two_cells.tif&quot;);
+setThreshold(30, 255);
+setOption(&quot;BlackBackground&quot;, true);
+run(&quot;Convert to Mask&quot;);
+</code></pre>
+
+</div>
+
+<div id="jython-activity-div">
+&nbsp; <br>
+<h3>Jython</h3>
+
+
+<pre><code class="language-python">from ij import IJ, ImagePlus
+from ij.plugin import Thresholder
+
+inputImage=IJ.getImage()
+IJ.setRawThreshold(inputImage, 60, 255, None)
+binaryImage=ImagePlus('Binary image',Thresholder.createMask(inputImage))
+binaryImage.show()
+</code></pre>
+
+</div>
+
+<div id="matlab-activity-div">
+&nbsp; <br>
+<h3>MATLAB</h3>
+
+
+<pre><code class="language-matlab">function src_binarize_image()
+%This function illustrates separating foreground from background using a
+%fixed threshold value
+
+threshold = 50; %example hreshold value
+%Read input image
+in_image = imread(['image_data' filesep 'xy_8bit__two_cells.tif']);
+figure; imagesc(in_image); %display input image
+%Binarized input image with the threshold value;
+bin_image = uint8(in_image&gt;= threshold);
+figure; imagesc(bin_image) % display binary image
+end
+</code></pre>
+
+</div>
+
+
+
+
+<br>
+<br>
+<h2>Formative assessment</h2>
+
+
+
+<h3 id="fill-in-the-blanks">Fill in the blanks</h3>
+<ul>
+<li>Pixels in a binary image can have maximally ___ different values.</li>
+<li>If the threshold is larger than the maximal pixel value in the intensity image, all pixels in the binary image have a value of ___.</li>
+</ul>
+
+
+
+
+Perform additional excercises for: <select id="id_exercises_platform" name="exercisesplatformlist" onchange="change_exercises_content_by_platform('id_exercises_platform');return false;">
+  
+
+
+  
+<option value="imagej-gui-exercises" id="imagej-gui-exercises-option" selected="selected"> ImageJ GUI </option>
+
+    
+  
+
+  
+<option value="imagej-macro-exercises" id="imagej-macro-exercises-option"> ImageJ Macro </option>
+  
+
+  
+<option value="jython-exercises" id="jython-exercises-option"> Jython </option>
+  
+
+  
+<option value="matlab-exercises" id="matlab-exercises-option"> MATLAB </option>
+  
+
+
+</select>
+
+
+<div id="imagej-gui-exercises-div">
+&nbsp; <br>
+<h3>ImageJ GUI</h3>
+
+
+<p>This file should contain language-specific exercises, <em>written</em> in <strong>Markdown</strong></p>
+<p>...but probably with some HTML mixed in, so that you can add expandable Solution boxes.</p>
+<h4 id="exercise-1">Exercise 1</h4>
+<p>What is the solution to the first exercise?</p>
+<details>
+<summary>Solution</summary>
+This is the solution to the first exercise.
+</details>
+<h4 id="exercise-2">Exercise 2</h4>
+<p>What is the solution to the second exercise?</p>
+<details>
+<summary>Solution</summary>
+This is the solution to the second exercise.
+</details>
+
+</div>
+
+<div id="imagej-macro-exercises-div">
+&nbsp; <br>
+<h3>ImageJ Macro</h3>
+
+
+<p>This file should contain language-specific exercises, <em>written</em> in <strong>Markdown</strong></p>
+<p>...but probably with some HTML mixed in, so that you can add expandable Solution boxes.</p>
+<h4 id="exercise-1">Exercise 1</h4>
+<p>What is the solution to the first exercise?</p>
+<details>
+<summary>Solution</summary>
+This is the solution to the first exercise.
+</details>
+<h4 id="exercise-2">Exercise 2</h4>
+<p>What is the solution to the second exercise?</p>
+<details>
+<summary>Solution</summary>
+This is the solution to the second exercise.
+</details>
+
+</div>
+
+<div id="jython-exercises-div">
+&nbsp; <br>
+<h3>Jython</h3>
+
+
+<p>This file should contain language-specific exercises, <em>written</em> in <strong>Markdown</strong></p>
+<p>...but probably with some HTML mixed in, so that you can add expandable Solution boxes.</p>
+<h4 id="exercise-1">Exercise 1</h4>
+<p>What is the solution to the first exercise?</p>
+<details>
+<summary>Solution</summary>
+This is the solution to the first exercise.
+</details>
+<h4 id="exercise-2">Exercise 2</h4>
+<p>What is the solution to the second exercise?</p>
+<details>
+<summary>Solution</summary>
+This is the solution to the second exercise.
+</details>
+
+</div>
+
+<div id="matlab-exercises-div">
+&nbsp; <br>
+<h3>MATLAB</h3>
+
+
+<p>This file should contain language-specific exercises, <em>written</em> in <strong>Markdown</strong></p>
+<p>...but probably with some HTML mixed in, so that you can add expandable Solution boxes.</p>
+<h4 id="exercise-1">Exercise 1</h4>
+<p>What is the solution to the first exercise?</p>
+<details>
+<summary>Solution</summary>
+This is the solution to the first exercise.
+</details>
+<h4 id="exercise-2">Exercise 2</h4>
+<p>What is the solution to the second exercise?</p>
+<details>
+<summary>Solution</summary>
+This is the solution to the second exercise.
+</details>
+
+</div>
+
+
+<br>
+<br>
+<h2>Follow-up material</h2>
+
+<ul>
+
+<li><p><a href="auto_threshold">Algorithms to automatically determine a threshold value</a></p>
+</li>
+
+<li><p><a href="connected_components">Finding objects in a binary image</a></p>
+</li>
+
+</ul>
+
+<br>
+<br>
+<h2>Learn more</h2>
+
+<ul>
+
+<li><p><a href="https://en.wikipedia.org/wiki/Binary_image">Wikipedia: Binary image</a></p>
+</li>
+
+</ul>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Image Analysis Training</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>Image Analysis Training</li>
+          <li><a href="mailto:image-analysis-support@embl.de">image-analysis-support@embl.de</a></li>
+          <li><a href="https://git.embl.de/grp-bio-it/image-analysis-training-resources/">Source code</a></li>
+          <li><a href="/image-analysis-training-resources/CONTRIBUTING">Contributions to this material are very welcome.</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>A collection of material for teaching image analysis. Includes concept maps, exercises, example data
+</p>
+        <p>Use of this site falls under <a href="https://www.embl.de/aboutus/privacy_policy/index.html">EMBL's Privacy Policy</a>.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
