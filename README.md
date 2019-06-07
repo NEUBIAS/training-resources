@@ -3,13 +3,22 @@
 This project is intended to collect together various resources that can be useful
 when planning/delivering training in image analysis.
 
-Current structure:
+Detailed guidance for contributing can be found in [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
-- `concept_maps/`: intended to contain SVGs/PDFs of concept maps covering core concepts in image analysis
-- `before_after/`: intended to contain small "before/after" images to illustrate the effect of various actions being taught e.g. thresholding, smoothing, etc
-- `exercises/`: intended to contain directories of markdown files with exercises relating to each mapped concept (subdirectories named according to related concept map)
+## Repository
+
+Current repository structure:
+
+- `_includes/`: among other things, contains folders holding activities and exercises specific to different platforms for image analysis, for each module
+- `_layouts/`, `_sass/`, `Gemfile`, `_config.yml`, `.gitlab-ci.yml`: material for building the webpages associated with this repository 
+- `figures/`: a collection of illustrations/diagrams used to help explain the concepts in each module.
+- `image_data/`: image files used in activities and exercises
+- `modules/`: all of the individual module pages are collected here
+- `src/`: code for image analysis
+- `workshops/`: information on workshops taught using this material
 - `example_images.md`: intended to contain links to images that would make good examples when teaching
-- 
+- `index.md`: content for the website landing page
+
 ## Website
 
-Please visit the repositorie's [website](https://grp-bio-it.embl-community.io/image-analysis-training-resources/).
+Please visit the repository's [website](https://grp-bio-it.embl-community.io/image-analysis-training-resources/).
