@@ -91,8 +91,11 @@ window.onload = set_view_defaults;
 </header>
 {% if page.prerequisites %}
 <div class="prerequisites">
+  <br>
+  <br>
   <h2>Prerequisites</h2>
-  Before starting this lesson, you should be familiar with:
+  Before starting this lesson, you should be familiar with:<br>
+  <br>
   <ul>
     {% for prereq in page.prerequisites %}
 <li>{{ prereq | markdownify }}</li>
@@ -101,8 +104,11 @@ window.onload = set_view_defaults;
 </div>
 {% endif %}
 <div class="learning-objectives">
+  <br>
+  <br>
   <h2>Learning Objectives</h2>
-  After completing this lesson, learners should be able to:
+  After completing this lesson, learners should be able to:<br>
+  <br>
   <ul>
     {% for objective in page.objectives %}
 <li>{{ objective | markdownify }}</li>
@@ -110,15 +116,21 @@ window.onload = set_view_defaults;
   </ul>
 </div>
 
+<br>
+<br>
 <h2>Motivation</h2>
 
 {{ page.motivation | markdownify }}
 
+<br>
+<br>
 <h2>Concept map</h2>
 <div class="mermaid">
 {{ page.concept_map }}
 </div>
 
+<br>
+<br>
 <h2>Example</h2>
 
 <figure>
@@ -132,6 +144,8 @@ window.onload = set_view_defaults;
 {{ content }}
 </div>
 
+<br>
+<br>
 <h2>Activity</h2>
 
 {% if page.activity_preface %}
@@ -139,7 +153,7 @@ window.onload = set_view_defaults;
 {% endif %}
 
 {% if page.activities %}
-Choose a platform to display instructions for: <select id="id_activity_platform" name="activityplatformlist" onchange="change_activity_content_by_platform('id_activity_platform');return false;">
+Show activity for: <select id="id_activity_platform" name="activityplatformlist" onchange="change_activity_content_by_platform('id_activity_platform');return false;">
   {% assign first = true %}
 {% endif %}
 {% for platform in page.activities %}
@@ -166,6 +180,9 @@ Choose a platform to display instructions for: <select id="id_activity_platform"
 {% endfor %}
 
 {% if page.exercises_preface or page.exercises %}
+
+<br>
+<br>
 <h2>Formative assessment</h2>
 {% endif %}
 
@@ -174,7 +191,7 @@ Choose a platform to display instructions for: <select id="id_activity_platform"
 {% endif %}
 
 {% if page.exercises %}
-Choose a platform to display instructions for: <select id="id_exercises_platform" name="exercisesplatformlist" onchange="change_exercises_content_by_platform('id_exercises_platform');return false;">
+Perform additional excercises for: <select id="id_exercises_platform" name="exercisesplatformlist" onchange="change_exercises_content_by_platform('id_exercises_platform');return false;">
   {% assign first = true %}
 {% endif %}
 {% for platform in page.exercises %}
@@ -199,6 +216,8 @@ Choose a platform to display instructions for: <select id="id_exercises_platform
 </div>
 {% endfor %}
 
+<br>
+<br>
 <h2>Follow-up material</h2>
 
 <ul>
@@ -207,6 +226,8 @@ Choose a platform to display instructions for: <select id="id_exercises_platform
 {% endfor %}
 </ul>
 
+<br>
+<br>
 <h2>Learn more</h2>
 
 <ul>
