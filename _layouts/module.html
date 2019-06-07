@@ -154,9 +154,11 @@ Choose a platform to display instructions for: <select id="id_activity_platform"
 {% if page.activities %}
 </select>
 {% endif %}
-<p>
+
 {% for platform in page.activities %}
 <div id="{{ platform[0] | slugify }}-activity-div">
+&nbsp; <br>
+&nbsp; <br>
 <h3>{{ platform[0] }}</h3>
 {% assign includefile = platform[1] %}
 {% capture activity %}{% include {{ includefile }} %}{% endcapture %}
