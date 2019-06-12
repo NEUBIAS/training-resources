@@ -9,11 +9,11 @@ objectives:
 motivation: >
   Very often, one wants to detect objects or specific regions in images. Typically, the first step to achieve this aim is to distinguish so-called background pixels, which do not contain objects or interesting regions, from foreground pixels, which mark the areas of interest. The foreground regions can than be further processed, e.g to detect objects or perform measurements.      
 concept_map: >
-  graph TD
-    PV(Pixel values) --> |>= threshold| FG(Foreground 1,255)
-    PV(Pixel values) --> |< threshold| BG(Background 0)
-    BG --> BPV(Binarized pixel values)
-    FG --> BPV(Binarized pixel values)
+graph TD
+    PV("Pixel values") --> BA(Binarization algorithm)
+    BA --> BPV("Binarized pixel values")
+    BPV --> BG("Background (0)")
+    BPV --> FG("Foreground (1)")
 
 figure: /figures/binarization.png
 figure_legend: An image before and after applying a threshold. Can you see what the treshold value was?
