@@ -1,21 +1,28 @@
 ---
-title:     Image math
+title:     Pixel processing
 layout:    page
 ---
 
-## Image math 
+## Pixel processing 
 
-<img src='https://g.gravizo.com/svg?
- digraph G {
-    shift [fontcolor=white,color=white];
-    "data type" -> "pixel values" [label="  restricts"];
-    "image math" -> "pixel values" [label="  changes"];
-    "N-bit unsigned integer" -> "0, 1, ..., 2^N-1";
-    "data type" -> float -> "..., -1031.0, ..., 10.5, ...";
-    "data type" -> "...";
-    "data type" -> "N-bit unsigned integer";
-  }
-'/>
+```mermaid
+  graph TD
+     PV(pixel values) --> PO(processing operation)
+     PO -.- |e.g.| SV(subtract value)
+     PO --> |replaces| PV(pixel values) 
+```
+
+```mermaid
+  graph TD
+     PV("pixel values") --> MO("processing operation")
+     MO --> NPV("new image") 
+```
+
+```mermaid
+  graph TD
+     PO("processing operation") --> |changes| PV(pixel values)
+     DT("data type") --> |limits| PV
+```
 
 ### Activity: Pixel based background subtraction
 

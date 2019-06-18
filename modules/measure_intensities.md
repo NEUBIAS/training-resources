@@ -5,9 +5,17 @@ layout:    page
 
 ## Intensity measurements
 
+### Concept map
+
+```mermaid
+graph TD
+   (TODO)
+```
+
 ### Activity: Measure intensities in image regions
 
 * Open image: xy_float__h2b_bg_corr.tif
+* Appreciate that this image is already background corrected.
 * Measure for both nuclei:
         * Maximum intensity
         * Average intensity
@@ -17,7 +25,7 @@ layout:    page
 * Discuss where to measure!
 
 
-### Activity: Intensity measurements without pixel based background correction
+### Optional activity: Intensity measurements without pixel based background correction
 
 #### Motivation
 
