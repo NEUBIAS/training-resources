@@ -1,5 +1,7 @@
 # Image Analysis Training Resources
 
+![](https://git.embl.de/grp-bio-it/image-analysis-training-resources/badges/master/pipeline.svg)
+
 This project is intended to collect together various resources that can be useful
 when planning/delivering training in image analysis.
 
@@ -10,7 +12,7 @@ Detailed guidance for contributing can be found in [`CONTRIBUTING.md`](CONTRIBUT
 Current repository structure:
 
 - `_includes/`: among other things, contains folders holding activities and exercises specific to different platforms for image analysis, for each module
-- `_layouts/`, `_sass/`, `Gemfile`, `_config.yml`, `.gitlab-ci.yml`: material for building the webpages associated with this repository 
+- `_layouts/`, `_sass/`, `Gemfile`, `_config.yml`, `.gitlab-ci.yml`: material for building the webpages associated with this repository
 - `figures/`: a collection of illustrations/diagrams used to help explain the concepts in each module.
 - `image_data/`: image files used in activities and exercises
 - `modules/`: all of the individual module pages are collected here
