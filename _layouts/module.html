@@ -10,78 +10,60 @@ function set_view_defaults() {
 set_activity_view_defaults();
 set_exercises_view_defaults();
 }
+{% endif %}
+{% if page.activities %}
 function set_activity_view_defaults() {
-{% assign first = true %}
 {% endif %}
 {% for platform in page.activities %}
 document.getElementById("{{ platform[0] | slugify }}-activity-div").style.display = 'none';
-{% if first %}
-document.getElementById("{{ platform[0] | slugify }}-activity-div").style.display = 'block';
-{% assign first = false %}
-{% endif %}
 {% endfor %}
-{% if page.activities or page.exercises %}
+{% if page.activities %}
 };
 function change_activity_content_by_platform(form_control){
-{% assign first = true %}
 {% endif %}
 {% for platform in page.activities %}
 document.getElementById("{{ platform[0] | slugify }}-activity-div").style.display = 'none';
 {% endfor %}
-{% for platform in page.activities %}
-{% if first %}
-if (!form_control || document.getElementById(form_control).value == "{{ platform[0] | slugify }}-activity") {
+{% if page.activities %}
+if (!form_control || document.getElementById(form_control).value == "default-activity") {
 set_activity_view_defaults();
-{% assign first = false %}
-{% else %}
+{% endif %}
+{% for platform in page.activities %}
 } else if (document.getElementById(form_control).value == "{{ platform[0] | slugify }}-activity") {
 document.getElementById("{{ platform[0] | slugify }}-activity-div").style.display = 'block';
-{% endif %}
 {% endfor %}
 {% if page.activities %}
 } else {
 alert("Error: Missing platform value for 'change_activity_content_by_platform()' script!");
 }
-{% endif %}
-{% if page.activities or page.exercises %}
 }
-{% assign first = false %}
+{% endif %}
+{% if page.exercises %}
 function set_exercises_view_defaults() {
-{% assign first = true %}
 {% endif %}
 {% for platform in page.exercises %}
 document.getElementById("{{ platform[0] | slugify }}-exercises-div").style.display = 'none';
-{% if first %}
-document.getElementById("{{ platform[0] | slugify }}-exercises-div").style.display = 'block';
-{% assign first = false %}
-{% endif %}
 {% endfor %}
-{% if page.activities or page.exercises %}
+{% if page.exercises %}
 };
 function change_exercises_content_by_platform(form_control){
-{% assign first = true %}
 {% endif %}
 {% for platform in page.exercises %}
 document.getElementById("{{ platform[0] | slugify }}-exercises-div").style.display = 'none';
 {% endfor %}
-{% for platform in page.exercises %}
-{% if first %}
-if (!form_control || document.getElementById(form_control).value == "{{ platform[0] | slugify }}-exercises") {
+if (!form_control || document.getElementById(form_control).value == "default-exercises") {
 set_exercises_view_defaults();
-{% assign first = false %}
-{% else %}
+{% for platform in page.exercises %}
 } else if (document.getElementById(form_control).value == "{{ platform[0] | slugify }}-exercises") {
 document.getElementById("{{ platform[0] | slugify }}-exercises-div").style.display = 'block';
-{% endif %}
 {% endfor %}
 {% if page.exercises %}
 } else {
 alert("Error: Missing platform value for 'change_exercises_content_by_platform()' script!");
 }
+}
 {% endif %}
 {% if page.activities or page.exercises %}
-}
-
 window.onload = set_view_defaults;
 </script>
 {% endif %}
@@ -154,16 +136,10 @@ window.onload = set_view_defaults;
 
 {% if page.activities %}
 Show activity for: <select id="id_activity_platform" name="activityplatformlist" onchange="change_activity_content_by_platform('id_activity_platform');return false;">
-  {% assign first = true %}
+<option value="default-activity" id="default-activity-option" selected="selected"> Select a platform... </option>
 {% endif %}
 {% for platform in page.activities %}
-  {% if first %}
-<option value="{{ platform[0] | slugify }}-activity" id="{{ platform[0] | slugify }}-activity-option" selected="selected"> {{ platform[0] }} </option>
-
-    {% assign first = false %}
-  {% else %}
 <option value="{{ platform[0] | slugify }}-activity" id="{{ platform[0] | slugify }}-activity-option"> {{ platform[0] }} </option>
-  {% endif %}
 {% endfor %}
 {% if page.activities %}
 </select>
@@ -192,16 +168,10 @@ Show activity for: <select id="id_activity_platform" name="activityplatformlist"
 
 {% if page.exercises %}
 Perform additional excercises for: <select id="id_exercises_platform" name="exercisesplatformlist" onchange="change_exercises_content_by_platform('id_exercises_platform');return false;">
-  {% assign first = true %}
+<option value="default-exercises" id="default-exercises-option" selected="selected"> Select a platform... </option>
 {% endif %}
 {% for platform in page.exercises %}
-  {% if first %}
-<option value="{{ platform[0] | slugify }}-exercises" id="{{ platform[0] | slugify }}-exercises-option" selected="selected"> {{ platform[0] }} </option>
-
-    {% assign first = false %}
-  {% else %}
 <option value="{{ platform[0] | slugify }}-exercises" id="{{ platform[0] | slugify }}-exercises-option"> {{ platform[0] }} </option>
-  {% endif %}
 {% endfor %}
 {% if page.exercises %}
 </select>
