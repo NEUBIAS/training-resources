@@ -18,6 +18,9 @@ function set_activity_view_defaults() {
 document.getElementById("{{ platform[0] | slugify }}-activity-div").style.display = 'none';
 {% endfor %}
 {% if page.activities %}
+{% unless site.default-platform == "NONE" %}
+document.getElementById("{{ site.default-platform | slugify }}-activity-div").style.display = 'block';
+{% endunless %}
 };
 function change_activity_content_by_platform(form_control){
 {% endif %}
@@ -45,6 +48,9 @@ function set_exercises_view_defaults() {
 document.getElementById("{{ platform[0] | slugify }}-exercises-div").style.display = 'none';
 {% endfor %}
 {% if page.exercises %}
+{% unless site.default-platform == "NONE" %}
+document.getElementById("{{ site.default-platform | slugify }}-exercises-div").style.display = 'block';
+{% endunless %}
 };
 function change_exercises_content_by_platform(form_control){
 {% endif %}
@@ -136,10 +142,16 @@ window.onload = set_view_defaults;
 
 {% if page.activities %}
 Show activity for: <select id="id_activity_platform" name="activityplatformlist" onchange="change_activity_content_by_platform('id_activity_platform');return false;">
+{% if site.default-platform == "NONE" %}
 <option value="default-activity" id="default-activity-option" selected="selected"> Select a platform... </option>
+{% else %}
+<option value="{{ site.default-platform | slugify }}-activity" id="{{ site.default-platform | slugify }}-option" selected="selected"> {{ site.default-platform }} </option>
+{% endif %}
 {% endif %}
 {% for platform in page.activities %}
+{% unless platform[0] == site.default-platform %}
 <option value="{{ platform[0] | slugify }}-activity" id="{{ platform[0] | slugify }}-activity-option"> {{ platform[0] }} </option>
+{% endunless %}
 {% endfor %}
 {% if page.activities %}
 </select>
@@ -168,10 +180,16 @@ Show activity for: <select id="id_activity_platform" name="activityplatformlist"
 
 {% if page.exercises %}
 Perform additional excercises for: <select id="id_exercises_platform" name="exercisesplatformlist" onchange="change_exercises_content_by_platform('id_exercises_platform');return false;">
-<option value="default-exercises" id="default-exercises-option" selected="selected"> Select a platform... </option>
+{% if site.default-platform == "NONE" %}
+<option value="null-exercises" id="null-exercises-option" selected="selected"> Select a platform... </option>
+{% else %}
+<option value="{{ site.default-platform | slugify }}-exercises" id="{{ site.default-platform | slugify }}-exercises-option" selected="selected"> {{ site.default-platform }} </option>
+{% endif %}
 {% endif %}
 {% for platform in page.exercises %}
+{% unless platform[0] == site.default-platform %}
 <option value="{{ platform[0] | slugify }}-exercises" id="{{ platform[0] | slugify }}-exercises-option"> {{ platform[0] }} </option>
+{% endunless %}
 {% endfor %}
 {% if page.exercises %}
 </select>
