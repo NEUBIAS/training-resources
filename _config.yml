@@ -13,3 +13,6 @@ commonmark:
   options: ["SMART"]
 highlighter: rouge
 exclude: ["README.md", "TEACHING.md"]
+
+# options are: "NONE", "ImageJ GUI", "ImageJ Macro", "Jython", "MATLAB"
+default-platform: "NONE"
