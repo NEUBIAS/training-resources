@@ -4,18 +4,16 @@ This file should contain language-specific exercises, *written* in **Markdown**
 
 #### Exercise 1
 
-What is the solution to the first exercise? 
+What is the solution to the first exercise?
 
-<details>
-<summary>Solution</summary>
-This is the solution to the first exercise.
-</details>
+> ## Solution
+> This is the solution to the first exercise.
+{: .solution}
 
 #### Exercise 2
 
 What is the solution to the second exercise?
 
-<details>
-<summary>Solution</summary>
-This is the solution to the second exercise.
-</details>
+> ## Solution
+> This is the solution to the second exercise.
+{: .solution}
