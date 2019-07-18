@@ -1,31 +1,13 @@
 ---
 title:     Neighbourhood image filters
-layout:    page
-permalink: /filtersneighbourhood
----
+layout:    module
+prerequisites:
+  - "[Image pixels](image_pixels)"
+objectives:
+  - Understand the basic principle of a neighbourhood filter
+motivation: >
+  This module explains how image features (objects) can be enhanced using filters
 
-# Neighborhood filters
-
-## Requirements
-
-- Pixel properties
-
-## Motivation
-
-This module explains how image features (objects) can be enhanced using filters
-
-## Learning objectives
-
-- Understand the basic principle of a neighbourhood filter.
-
-## Concept map
-
-```mermaid
-graph TB
-	P(pixel) --> |has| NBH(neighbourhood pixels) 
-	NBH --> |are used in| A(mathematical formula)
-	A --> |compute new| NP(pixel value) 
-```
 
 |   |   |   |   |   |   |   |   |
 |---|---|---|---|---|---|---|---|
@@ -37,15 +19,38 @@ graph TB
 |   |   |   |   |  NB |  NB |  NB |   |
 |   |   |   |   |   |   |   |   |
 
-## Example
+concept_map: >
+  graph TB
+	P(pixel) --> |has| NBH(neighbourhood pixels) 
+	NBH --> |are used in| A(mathematical formula)
+	A --> |compute new| NP(pixel value) 
 
-TODO: Mean filter image
+# figure: /figures/binarization.png
+# figure_legend: Image before and after binarization by applying a threshold.
 
-## Activity: Use mean filter to facilitate image binarization
+activity_preface: >
+  Use mean filter to facilitate image binarization
 
-* Open image: xy_8bit__nuclei_noisy_different_intensity.tif
-* Appreciate that you cannot readily apply a threshold to binarize the image into two nuclei and background
-* Apply a mean filter, exploring different neighbourhood sizes
-* Appreciate that the filtered pixel values are slightly wrong due to integer data type
-* Binarize the filtered image by applying a threshold
+activities:
 
+  "ImageJ GUI": "filter_nighbourhood/activities/mean_filter_imagejgui.md"
+#  "ImageJ Macro":
+#  "Jython":
+#  "MATLAB":
+
+exercises_preface: >
+
+
+exercises:
+#  "ImageJ GUI": 
+#  "ImageJ Macro":
+#  "Jython":
+#  "MATLAB":
+
+learn_next:
+- "[Convolution filters](filter_convolution)"
+- "[Rank filters](filter_rank)"
+
+external_links:
+
+---
