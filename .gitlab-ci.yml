@@ -1,25 +1,24 @@
 image: ruby:2.5
+
 variables:
   JEKYLL_ENV: production
   LC_ALL: C.UTF-8
 
 before_script:
-  - bundle install
-
-test:
-  stage: test
-  script:
-    - bundle exec jekyll build -d test
-  artifacts:
-    paths:
-    - test
+  - apt-get -y update
+  - apt-get install -y python3
+  - apt-get install -y python3-pip
+  - gem install json kramdown jekyll
+  - pip3 install pyyaml
 
 pages:
   stage: deploy
   script:
-    - bundle exec jekyll build -d public
+    - make --always-make site
   artifacts:
     paths:
     - public
   only:
     - master
+    - carpentries-style
+    - theme

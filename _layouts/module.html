@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: base
 ---
 <article class="module">
 
@@ -78,62 +78,51 @@ window.onload = set_view_defaults;
   <h1 class="post-title">{{ page.title }}</h1>
 </header>
 {% if page.prerequisites %}
-<div class="prerequisites">
-  <br>
-  <br>
+<blockquote class="prereq">
   <h2>Prerequisites</h2>
   Before starting this lesson, you should be familiar with:<br>
-  <br>
   <ul>
     {% for prereq in page.prerequisites %}
 <li>{{ prereq | markdownify }}</li>
     {% endfor %}
   </ul>
-</div>
+</blockquote>
 {% endif %}
-<div class="learning-objectives">
-  <br>
-  <br>
+<blockquote class="objectives">
   <h2>Learning Objectives</h2>
-  After completing this lesson, learners should be able to:<br>
-  <br>
+  After completing this lesson, learners should be able to:
   <ul>
     {% for objective in page.objectives %}
 <li>{{ objective | markdownify }}</li>
     {% endfor %}
   </ul>
-</div>
+</blockquote>
 
-<br>
-<br>
 <h2>Motivation</h2>
 
 {{ page.motivation | markdownify }}
 
-<br>
-<br>
-<h2>Concept map</h2>
+<h2>Concept</h2>
+<div class="row">
+<div class="col-md-5">
 <div class="mermaid">
 {{ page.concept_map }}
 </div>
-
-<br>
-<br>
-<h2>Example</h2>
-
+</div>
+<div class="col-md-5">
 <figure>
-<img src="{{ page.figure | relative_url }}">
+<img src="{{ page.figure | relative_url }}" class="example_figure">
 {% if page.figure_legend %}
 <figcaption>{{ page.figure_legend }}</figcaption>
 {% endif %}
 </figure>
+</div>
+</div>
 
 <div class="module-content">
 {{ content }}
 </div>
 
-<br>
-<br>
 <h2>Activity</h2>
 
 {% if page.activity_preface %}
@@ -158,19 +147,16 @@ Show activity for: <select id="id_activity_platform" name="activityplatformlist"
 {% endif %}
 
 {% for platform in page.activities %}
-<div id="{{ platform[0] | slugify }}-activity-div">
-&nbsp; <br>
-<h3>{{ platform[0] }}</h3>
+<blockquote class="discussion" id="{{ platform[0] | slugify }}-activity-div">
+<h2>{{ platform[0] }}</h2>
 {% assign includefile = platform[1] %}
 {% capture activity %}{% include {{ includefile }} %}{% endcapture %}
 {{ activity | markdownify }}
-</div>
+</blockquote>
 {% endfor %}
 
 {% if page.exercises_preface or page.exercises %}
 
-<br>
-<br>
 <h2>Formative assessment</h2>
 {% endif %}
 
@@ -179,7 +165,7 @@ Show activity for: <select id="id_activity_platform" name="activityplatformlist"
 {% endif %}
 
 {% if page.exercises %}
-Perform additional excercises for: <select id="id_exercises_platform" name="exercisesplatformlist" onchange="change_exercises_content_by_platform('id_exercises_platform');return false;">
+Perform additional exercises for: <select id="id_exercises_platform" name="exercisesplatformlist" onchange="change_exercises_content_by_platform('id_exercises_platform');return false;">
 {% if site.default-platform == "NONE" %}
 <option value="null-exercises" id="null-exercises-option" selected="selected"> Select a platform... </option>
 {% else %}
@@ -195,33 +181,32 @@ Perform additional excercises for: <select id="id_exercises_platform" name="exer
 </select>
 {% endif %}
 {% for platform in page.exercises %}
-<div id="{{ platform[0] | slugify }}-exercises-div">
-&nbsp; <br>
-<h3>{{ platform[0] }}</h3>
+<blockquote class="challenge" id="{{ platform[0] | slugify }}-exercises-div">
+<h2>{{ platform[0] }}</h2>
 {% assign includefile = platform[1] %}
 {% capture exercise %}{% include {{ includefile }} %}{% endcapture %}
 {{ exercise | markdownify }}
-</div>
+</blockquote>
 {% endfor %}
-
-<br>
-<br>
+<br/>
+<blockquote class="keypoints">
 <h2>Follow-up material</h2>
-
+<p>We recommend reading these modules next:</p>
 <ul>
 {% for follow_up in page.learn_next %}
 <li>{{ follow_up | markdownify }}</li>
 {% endfor %}
 </ul>
 
-<br>
-<br>
-<h2>Learn more</h2>
-
+<p>Learn more:</p>
 <ul>
 {% for external_link in page.external_links %}
 <li>{{ external_link | markdownify }}</li>
 {% endfor %}
 </ul>
+</blockquote>
 
 </article>
+
+{% capture links %}{% include links.md %}{% endcapture %}
+{{ links | markdownify }}
