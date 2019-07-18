@@ -18,8 +18,8 @@ figure_legend: Connected component analysis
 activity_preface: >
 
 activities:
-#  "ImageJ GUI": "this_module/activities/this_module_ijgui.md"
-#  "ImageJ Macro": "this_module/activities/this_module_ijmacro.md"
+#  "ImageJ GUI": "this_module/activities/this_module_imagejgui.md"
+#  "ImageJ Macro": "this_module/activities/this_module_imagejmacro.md"
 #  "Jython": "this_module/activities/this_module_jython.md"
 #  "MATLAB": "this_module/activities/this_module_matlab.md"
 
