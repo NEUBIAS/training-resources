@@ -8,22 +8,21 @@ objectives:
 motivation: >
   This module explains how image features (objects) can be enhanced using filters
 
-
-|   |   |   |   |   |   |   |   |
-|---|---|---|---|---|---|---|---|
-| NC  | NC  | NC  |   |   |   |   |   |
-| NC  | C, NC  | NC  |   |   |   |   |   |
-| NC  | NC  | NC  |   |   |   |   |   |
-|   |   |   |   | NB  | NB  | NB  |   |
-|   |   |   |   |  NB | B, NB| NB  |   |
-|   |   |   |   |  NB |  NB |  NB |   |
-|   |   |   |   |   |   |   |   |
+#|   |   |   |   |   |   |   |   |
+#|---|---|---|---|---|---|---|---|
+#| NC  | NC  | NC  |   |   |   |   |   |
+#| NC  | C, NC  | NC  |   |   |   |   |   |
+#| NC  | NC  | NC  |   |   |   |   |   |
+#|   |   |   |   | NB  | NB  | NB  |   |
+#|   |   |   |   |  NB | B, NB| NB  |   |
+#|   |   |   |   |  NB |  NB |  NB |   |
+#|   |   |   |   |   |   |   |   |
 
 concept_map: >
   graph TB
-	P(pixel) --> |has| NBH(neighbourhood pixels) 
-	NBH --> |are used in| A(mathematical formula)
-	A --> |compute new| NP(pixel value) 
+    P(pixel) --> |has| NBH(neighbourhood pixels) 
+    NBH --> |are used in| A(mathematical formula)
+    A --> |compute new| NP(pixel value) 
 
 # figure: /figures/binarization.png
 # figure_legend: Image before and after binarization by applying a threshold.
@@ -33,7 +32,7 @@ activity_preface: >
 
 activities:
 
-  "ImageJ GUI": "filter_nighbourhood/activities/mean_filter_imagejgui.md"
+  "ImageJ GUI": "filter_neighbourhood/activities/mean_filter_imagejgui.md"
 #  "ImageJ Macro":
 #  "Jython":
 #  "MATLAB":
