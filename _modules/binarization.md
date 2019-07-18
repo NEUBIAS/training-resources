@@ -7,7 +7,7 @@ objectives:
   - "Describe the relationship between an intensity image and a derived binary image"
   - "Apply a threshold to distinguish foreground and background pixels"
 motivation: >
-  Very often, one wants to detect objects or specific regions in images. Typically, the first step to achieve this aim is to distinguish so-called background pixels, which do not contain objects or interesting regions, from foreground pixels, which mark the areas of interest. The foreground regions can than be further processed, e.g to detect objects or perform measurements.      
+  Very often, one wants to detect objects or specific regions in images. Typically, the first step to achieve this aim is to distinguish so-called background pixels, which do not contain objects or interesting regions, from foreground pixels, which mark the areas of interest. The foreground regions can than be further processed, e.g to detect objects or perform measurements.
 concept_map: >
   graph TD
     PV("Pixel values") --> BA(Binarization algorithm)
@@ -16,7 +16,7 @@ concept_map: >
     BPV --> FG("Foreground (1)")
 
 figure: /figures/binarization.png
-figure_legend: Image before and after binarization by applying a threshold. 
+figure_legend: Image before and after binarization by applying a threshold.
 
 activity_preface: >
   Open an image and binarize it by applying a threshold.
