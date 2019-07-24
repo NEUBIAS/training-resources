@@ -1,5 +1,8 @@
 ---
+layout: page
 title: About
 ---
-{% include carpentries.html %}
+
+TODO
+
 {% include links.md %}

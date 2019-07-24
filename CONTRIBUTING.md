@@ -1,7 +1,7 @@
 ---
-layout: default
+layout: page
+title: Guidelines for Contributing
 ---
-# Guidelines for Contributing
 
 Contributions to this project are very welcome.
 Changes should be submitted by merge request from a new branch to `master`.
