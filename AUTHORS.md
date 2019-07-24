@@ -5,13 +5,13 @@ title: Authors
 
 This material is the product of contributions from the following people:
 
-* Christian Tischer
-* Toby Hodges
 * Aliaksandr Halavatyi
-* Julius Hossain
 * Jean-Karim Hériché
-* Constantin Pape
+* Toby Hodges
+* Julius Hossain
 * Dominik Kutra
+* Constantin Pape
+* Christian Tischer
 
 The material also owes much to [The Carpentries](https://carpentries.org):
 the site theme is based on
