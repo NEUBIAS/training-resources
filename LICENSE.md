@@ -1,3 +1,8 @@
+---
+layout: page
+title: License
+---
+
 This material is made available under the [Creative Commons Attribution license][cc-by-human].
 The following is a human-readable summary of (and not a substitute for)
 the [full legal text of the CC BY 4.0 license][cc-by-legal].
@@ -35,7 +40,7 @@ Notices:
   permissions necessary for your intended use. For example, other
   rights such as publicity, privacy, or moral rights may limit how you
   use the material.
-  
+
 [cc-by-human]: https://creativecommons.org/licenses/by/4.0/
 [cc-by-legal]: https://creativecommons.org/licenses/by/4.0/legalcode
 [our-gitlab-repo]: https://git.embl.de/grp-bio-it/image-analysis-training-resources/
