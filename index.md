@@ -19,10 +19,10 @@ Happy teaching and learning!
 
 # How to contribute to this resource
 
-Please see [CONTRIBUTING.md](CONTRIBUTING.md)
+Please see our [Contributors Guide](CONTRIBUTING.md)
 
 # How to teach using this resource
 
-Please see [TEACHING.md](TEACHING.md)
+Please see the [Instructor Notes](guide/index.html)
 
 {% include links.md %}
