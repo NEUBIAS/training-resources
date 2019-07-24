@@ -17,12 +17,12 @@ The modules are meant to be taught hands-on, i.e. following the teacher's guidan
 
 Happy teaching and learning!
 
-# How to contribute to this resource
+#### How to contribute to this resource
 
-Please see [CONTRIBUTING.md](CONTRIBUTING.md)
+Please see our [Contributors Guide](contributing).
 
-# How to teach using this resource
+#### How to teach using this resource
 
-Please see [TEACHING.md](TEACHING.md)
+Please see the [Instructor Notes](guide).
 
 {% include links.md %}

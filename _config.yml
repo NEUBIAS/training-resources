@@ -19,6 +19,7 @@ life_cycle: "pre-alpha"
 kind: "lesson"
 
 # Sites
+repository: "https://git.embl.de/grp-bio-it/image-analysis-training-resources"
 repo_url: "https://git.embl.de/grp-bio-it/image-analysis-training-resources"
 cc_by_human: "https://creativecommons.org/licenses/by/4.0/"
 
