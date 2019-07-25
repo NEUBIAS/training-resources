@@ -133,7 +133,7 @@ clone and move into this repository,
 and run:
 
 ```bash
-bundle exec jekyll serve
+make serve
 ```
 
 All going well, your built pages are now beng served locally.
