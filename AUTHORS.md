@@ -6,6 +6,7 @@ title: Authors
 This material is the product of contributions from the following people:
 
 * Aliaksandr Halavatyi
+* Stefan Helfrich
 * Jean-Karim Hériché
 * Toby Hodges
 * Julius Hossain

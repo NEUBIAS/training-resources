@@ -33,6 +33,7 @@ activity_preface: >
 activities:
 
   "ImageJ GUI": "filter_neighbourhood/activities/mean_filter_imagejgui.md"
+  "KNIME": "filter_neighbourhood/activities/mean_filter_knime.md"
 #  "ImageJ Macro":
 #  "Jython":
 #  "MATLAB":

@@ -25,6 +25,7 @@ activity_preface: >
 
 activities:
   "ImageJ GUI": "connected_components/activities/connected_components_imagejgui.md"
+  "KNIME": "connected_components/activities/connected_components_knime.md"
 #  "MATLAB": "" 
 
 exercises_preface: >
