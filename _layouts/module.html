@@ -57,8 +57,10 @@ function change_exercises_content_by_platform(form_control){
 {% for platform in page.exercises %}
 document.getElementById("{{ platform[0] | slugify }}-exercises-div").style.display = 'none';
 {% endfor %}
+{% if page.exercises %}
 if (!form_control || document.getElementById(form_control).value == "default-exercises") {
 set_exercises_view_defaults();
+{% endif %}
 {% for platform in page.exercises %}
 } else if (document.getElementById(form_control).value == "{{ platform[0] | slugify }}-exercises") {
 document.getElementById("{{ platform[0] | slugify }}-exercises-div").style.display = 'block';
