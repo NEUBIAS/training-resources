@@ -26,6 +26,7 @@ activities:
   "ImageJ Macro": "binarization/activities/binarization_imagejmacro.md"
   "Jython": "binarization/activities/binarization_jython.md"
   "MATLAB": "binarization/activities/binarization_matlab.md"
+  "KNIME": "binarization/activities/binarization_knime.md"
 
 exercises_preface: >
 
