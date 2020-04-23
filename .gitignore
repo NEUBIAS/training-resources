@@ -4,3 +4,5 @@ Gemfile.lock
 _site*
 *.swp
 .travis.yml
+.bundle/
+.vendor/
