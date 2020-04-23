@@ -13,7 +13,7 @@ See `README.md` for information on the structure of the repository.
 
 To contribute to this project, please follow those steps:
 
-1. Clone this repository: `git clone https://git.embl.de/grp-bio-it/image-analysis-training-resources.git`
+1. Clone this repository: `git clone https://github.com/NEUBIAS/training-resources/`
 1. On your computer, make a new branch. For example, if you would like to contribute python code to the binarization.md module you may: `git checkout -b pythonBinarization`
 1. Now add your changes on your computer (staying in this branch) - see "Adding a new module" section, below.
 1. When you are done, please `git add .; git commit -m "some message"`
@@ -122,7 +122,7 @@ Contributions of instructions and exercises for more platforms are very welcome 
 
 ## Questions about the module layout
 
-If you have questions about the module layout, please contact [Toby Hodges](mailto:toby.hodges@embl.de).
+If you have questions about the module layout, please contact image-analysis-support@embl.de.
 
 ## Building locally
 
