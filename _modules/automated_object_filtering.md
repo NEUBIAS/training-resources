@@ -1,3 +1,8 @@
+---
+title:     Automated object filtering
+layout:    module
+---
+
 # Image analysis automation
 
 ## Automated object filtering
@@ -18,5 +23,3 @@
 	- Remove all cells larger than N pixels in area
 
 ### Formative assessment
-
-

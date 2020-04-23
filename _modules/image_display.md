@@ -1,6 +1,6 @@
 ---
 title:     Image display
-layout:    page
+layout:    module
 ---
 
 # Prerequisites
@@ -33,7 +33,7 @@ contrast = max - min
 
 ## Activity
 
-* Open image: xy_16bit__nuclei_high_dynamic_range.tif 
+* Open image: xy_16bit__nuclei_high_dynamic_range.tif
 * Explore different single color LUTs and LUT settings
 * Appreciate that LUT settings do not change the pixel values
 * Explore multi-color LUT for visualisation of high dynamic range images
@@ -54,5 +54,3 @@ Fill in the blanks, using those words: decrease, larger than, increase, smaller 
 ### TODO: Comparative image display
 
 Open two images and display with the same LUT settings.
-
-

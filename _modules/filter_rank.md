@@ -1,7 +1,6 @@
 ---
 title:     Rank filters
-layout:    page
-permalink: /filterrank
+layout:    module
 ---
 
 # Rank filters
@@ -29,7 +28,7 @@ In this module one would learn basic principles of rank image filters and unders
 ## Concept map
 ```mermaid
 graph TB
-	pixel --> values[neighbourhood pixel values] 
+	pixel --> values[neighbourhood pixel values]
 	values --> sorted[sorted pixel values]
 	sorted --> min
 	sorted --> max
@@ -69,4 +68,3 @@ True or false? Discuss with your neighbour!
 ### Learn next
 
 - median based local background subtraction
-

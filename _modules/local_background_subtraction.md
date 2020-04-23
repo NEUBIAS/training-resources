@@ -1,7 +1,6 @@
 ---
 title:     Local background subtraction
-layout:    page
-permalink: /localbackground
+layout:    module
 ---
 
 # Local background subtraction
@@ -21,7 +20,7 @@ This module explains how to remove background which has different values in diff
 ## Learning objectives
 
 - Understand how to use filters to create background image
-- Learn differences between different methods/filters for generating background image 
+- Learn differences between different methods/filters for generating background image
 - Practice background subtraction
 
 
@@ -56,14 +55,14 @@ graph TD;
 
 ## Activity: Explore tophat filter on biological data
 
-- Open image: xy_16bit__autophagosomes.tif 
+- Open image: xy_16bit__autophagosomes.tif
 - Appreciate that you cannot readliy segment the spots.
 - Use a tophat filter to remove local background.
 - Threshold the spots in the tophat filtered image.
 
 ## Activity: Explore tophat filter on noisy data
 
-- Open image: xy_8bit__spots_local_background_with_noise.tif 
+- Open image: xy_8bit__spots_local_background_with_noise.tif
 - Use topHat filter to remove local background
 - Appreciate that noise poses a challenge to the tophat filter
 
@@ -74,9 +73,9 @@ graph TD;
 
 ### Activity: Explore median filter for local background subtraction
 
-- Open images: 
-	- xy_8bit__spots_local_background.tif 
-	- xy_8bit__spots_local_background_with_noise.tif 
+- Open images:
+	- xy_8bit__spots_local_background.tif
+	- xy_8bit__spots_local_background_with_noise.tif
 - Use tophat filter to remove local background
 - Devise code to implement a tophat filter using basic functions
 
@@ -84,10 +83,6 @@ graph TD;
 
 Answer below questions. Discuss with your neighbour!
 
-1. What could one do to close small gaps in a binary image? 
+1. What could one do to close small gaps in a binary image?
 2. What could one do to remove small objects in a image?
 3. What could you use for local background subtraction in a very noisy image?
-
-
-
-

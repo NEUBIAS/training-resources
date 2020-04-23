@@ -1,6 +1,6 @@
 ---
 title:     Pixel data types
-layout:    page
+layout:    module
 ---
 
 ## Pixel data types
@@ -45,4 +45,3 @@ True or false? Discuss with your neighbor!
 2. Converting from 16-bit unsigned integer to float never changes the pixel values.
 3. Changing from float to 16-bit unsigned integer never changes the pixel values.
 4. There is only one correct way to convert from 16-bit to 8-bit.
-

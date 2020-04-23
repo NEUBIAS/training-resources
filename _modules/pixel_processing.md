@@ -1,21 +1,21 @@
 ---
 title:     Pixel processing
-layout:    page
+layout:    module
 ---
 
-## Pixel processing 
+## Pixel processing
 
 ```mermaid
   graph TD
      PV(pixel values) --> PO(processing operation)
      PO -.- |e.g.| SV(subtract value)
-     PO --> |replaces| PV(pixel values) 
+     PO --> |replaces| PV(pixel values)
 ```
 
 ```mermaid
   graph TD
      PV("pixel values") --> MO("processing operation")
-     MO --> NPV("new image") 
+     MO --> NPV("new image")
 ```
 
 ```mermaid
@@ -63,4 +63,3 @@ True or false?
 ### Learn more
 
 * [Limitations of float](https://randomascii.wordpress.com/2012/02/13/dont-store-that-in-a-float/)
-

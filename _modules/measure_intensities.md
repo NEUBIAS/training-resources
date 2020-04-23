@@ -1,6 +1,6 @@
 ---
-title:     Intensity measurements 
-layout:    page
+title:     Intensity measurements
+layout:    module
 ---
 
 ## Intensity measurements
@@ -56,4 +56,3 @@ Fill in the blanks, using these words: integrated, mean, number_of_pixels, decre
 2. The _____ intensity is equal to the mean intensity times the _____ in the measured region.
 3. In an 8-bit image, increasing the size of the measurement region can only _____ the sum intensity.
 4. In a float image, increasing the size of the measurement region can _____ the sum intensity.
-

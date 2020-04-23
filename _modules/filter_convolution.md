@@ -1,6 +1,6 @@
 ---
 title:     Image math
-layout:    page
+layout:    module
 ---
 
 ## Convolution filters
