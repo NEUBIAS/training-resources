@@ -21,10 +21,10 @@ kind: "lesson"
 # Order of modules
 
 module_order:
+  - binarization
   - pixels
   - automated_object_filtering
   - basic_image_analysis_workflow
-  - binarization
   - connected_components
   - distance_transform
   - enhance_image_features
