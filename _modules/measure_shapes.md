@@ -1,6 +1,6 @@
 ---
-title:     Object shape measurements 
-layout:    page
+title:     Object shape measurements
+layout:    module
 ---
 
 ## Shape measurements

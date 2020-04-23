@@ -1,7 +1,6 @@
 ---
 title:     Morphological filters
-layout:    page
-permalink: /filtermorphological
+layout:    module
 ---
 
 # Morphological filters
@@ -26,7 +25,7 @@ graph TD
     image --> min1[min]
     image --> max2[max]
     image --> min2[min]
-    image --> d 
+    image --> d
 subgraph rank filter sequence
     max2 --> min3[min]
     min2 --> max3[max]
@@ -48,7 +47,7 @@ subgraph rank filter sequence
     end
 ```
 
-[*] Concept map above assumes bright objects on dark background. For dark objects on bright background effect of min and max filters inverses 
+[*] Concept map above assumes bright objects on dark background. For dark objects on bright background effect of min and max filters inverses
 
 ### Activity: Explore erosion and dilation on binary images
 
@@ -67,7 +66,7 @@ subgraph rank filter sequence
 
 Fill in the blanks, using those words: shrinks, increases, decreases, enlarges.
 
-1. An erosion _____ objects in a binary image. 
+1. An erosion _____ objects in a binary image.
 2. An erosion in a binary image _____ the number of foreground pixels.
 3. A dilation in a grayscale image _____ the average intensity in the image.
 4. A dilation _____ objects in a binary image.

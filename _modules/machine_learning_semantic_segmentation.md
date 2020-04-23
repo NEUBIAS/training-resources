@@ -1,4 +1,7 @@
-# Semantic image segmentation using machine learning
+---
+title:  Semantic image segmentation using machine learning
+layout: module
+---
 
 <img src='https://g.gravizo.com/svg?
  digraph G {
@@ -64,4 +67,3 @@ True or false? Discuss with your neighbour!
 - In contrast to simple thresholding, using machine learning for pixel classification, one always has more than 2 classes.
 - If one wants to learn 4 different classes one has to, at least, add 4 annotations on the training image.
 - One cannot classify an image where one did not put any training annotations.
-

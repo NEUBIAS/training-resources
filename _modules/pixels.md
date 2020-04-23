@@ -1,26 +1,26 @@
 ---
-title: Pixels     
-layout: module   
+title: Pixels
+layout: module
 
 prerequisites:
 
 objectives:
-  - Examine the values of pixels in an image. 
+  - Examine the values of pixels in an image.
 
 motivation: >
-  Images are very often composed of pixels. Pixel stands for "picture element". In 3-D, a pixel is sometimes also called a voxel, which stands for "volume element". 
-  To analyse images it is very important to know how to examine the pixels (voxels) in an image. 
+  Images are very often composed of pixels. Pixel stands for "picture element". In 3-D, a pixel is sometimes also called a voxel, which stands for "volume element".
+  To analyse images it is very important to know how to examine the pixels (voxels) in an image.
 
 concept_map: >
   graph TD
-    Im("Image") -->|has many| P("Pixel") 
+    Im("Image") -->|has many| P("Pixel")
     P -->|has| V("Value")
     P -->|has| I("Indices")
-    P -->|aka| V("Voxel") 
-    P -->|can have| S("Size") 
+    P -->|aka| V("Voxel")
+    P -->|can have| S("Size")
 
 figure: /figures/pixels.png
-figure_legend: 
+figure_legend:
 
 activity_preface: >
 

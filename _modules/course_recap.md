@@ -1,7 +1,10 @@
-## Recap
+---
+title:	Recap
+layout:	module
+---
 
 Take few sheets of empty (A4) paper.
-Work in pairs of two or three. 
+Work in pairs of two or three.
 
 * Draw a typical image analysis workflow: From intensity image to objects shape table.
 

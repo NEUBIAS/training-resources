@@ -1,6 +1,6 @@
 ---
 title:     Difference of Gaussian
-layout:    page
+layout:    module
 ---
 
 ## Difference of Gaussian (DoG)
@@ -34,5 +34,3 @@ layout:    page
 - https://imagescience.org/meijering/software/featurej/
 - https://en.wikipedia.org/wiki/Difference_of_Gaussians
 - https://github.com/CellProfiler/CellProfiler/blob/master/cellprofiler/modules/enhanceorsuppressfeatures.py#L4
-
-

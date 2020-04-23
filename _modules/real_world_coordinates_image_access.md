@@ -1,3 +1,8 @@
+---
+title:  Real World coordinates
+layout: module
+---
+
 ```mermaid
 graph TD
     VV(Voxel values) --> |accessed by| VI(Voxel indices)

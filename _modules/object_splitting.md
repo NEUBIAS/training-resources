@@ -1,6 +1,6 @@
 ---
 title:     Object splitting
-layout:    page
+layout:    module
 ---
 
 # Object splitting
@@ -20,17 +20,17 @@ layout:    page
 }
 '/>
 
-### Activity: Explore intensity based watershed 
+### Activity: Explore intensity based watershed
 
 - Open image: xy_8bit__touching_objects.tif
-- Invert image for watershed 
+- Invert image for watershed
 - Apply watershed
 
 ### Activity: Use intensity based watershed for object segmentation
 
 - Open intensity image: xy_8bit__touching_objects.tif
 - Threshold intensity image => binary image (aka "mask")
-- Invert intensity image for watershed 
+- Invert intensity image for watershed
 - Apply watershed, using the mask
 
 ## "Shape based" watershed
@@ -49,7 +49,7 @@ layout:    page
 - Threshold -> Binary image
 	- Copy binary image (we'll need it as mask later...)
 - Binary image -> Distance map
-- Distance map -> Watershed 
+- Distance map -> Watershed
 
 
 ### Learn more
@@ -59,4 +59,3 @@ TODO
 ### Formative Assessment
 
 TODO
-

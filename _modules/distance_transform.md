@@ -1,4 +1,7 @@
-# Distance transform
+---
+title:  Distance transform
+layout: module
+---
 
 <img src='https://g.gravizo.com/svg?
  digraph G {
@@ -8,7 +11,7 @@
 }
 '/>
 
-## Activity: Explore distance transform 
+## Activity: Explore distance transform
 
 - Open image: xy_8bit_binary__two_objects.tif
 - Learn:
@@ -20,9 +23,9 @@
 ## Actvity: Use distance map for automated distance measurements
 
 - Open reference object image: xy_8bit_binary__single_object.tif
-- Compute distance map 
+- Compute distance map
 - Open label image: xy_8bit_labels__two_spots.tif
-- Measure "intensity" of label image objects in distance map 
+- Measure "intensity" of label image objects in distance map
 	- intensity is distance
 
 ## Activity: Use distance map for automated region selection
@@ -30,7 +33,7 @@
 - Open reference object image: xy_8bit_binary__single_object.tif
 - Compute distance map
 - Threshold distance map to select regions
- 
+
 ### Formative Assessment
 
 TODO

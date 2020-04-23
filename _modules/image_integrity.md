@@ -1,13 +1,16 @@
-# Image data integrity
+---
+title:  Image data integrity
+layout: module
+---
 
 #### Prerequisites
 
 - A computer with an image analysis software (e.g. [Fiji](www.fiji.sc)) already installed.
-- Basic knowledge of how to use above software, e.g. 
+- Basic knowledge of how to use above software, e.g.
     - open and save images
     - change image display settings
     - subtract a value from every pixel in an image
-- Please download the training [material](https://git.embl.de/grp-bio-it/image-analysis-training-resources/-/archive/master/image-analysis-training-resources-master.zip) 
+- Please download the training [material](https://git.embl.de/grp-bio-it/image-analysis-training-resources/-/archive/master/image-analysis-training-resources-master.zip)
 - Please make sure you can access to this [document](https://git.embl.de/grp-bio-it/image-analysis-training-resources/blob/master/workshops/image-ethics-and-data-integrity.md#image-ethics-and-data-integrity).
 
 #### Duration
@@ -31,7 +34,7 @@
     image_content -> pixel_values;
     image_content -> pixel_coordinates;
     pixel_coordinates -> array_indices;
-    pixel_coordinates -> physical_coordinates; 
+    pixel_coordinates -> physical_coordinates;
  }
 '/>
 
@@ -47,7 +50,7 @@
 
 ### Motivation
 
-Sometimes it can be necessary to save your images in a different formats. 
+Sometimes it can be necessary to save your images in a different formats.
 It needs some training to know how to do this properly.
 
 What could be good reasons to resave your data in a different format (multiple answers)?
@@ -69,9 +72,9 @@ What could be good reasons to resave your data in a different format (multiple a
 - Reopen the image
 - Compare the value and coordinate of the pixel at [218, 332] to your notes, did it change?
 
-Repeat above workflow, but 
+Repeat above workflow, but
 
-- adjust the image display before saving 
+- adjust the image display before saving
 - save as **png**
 - open `xy_float__nuclei_probability.tif` and save as **png**
 
@@ -112,13 +115,13 @@ Images are a collection of numbers. To visualise those numbers one needs to deci
 ### Activity: Quantitative image display
 
 - Open image: `xy_calibrated_16bit__nuclear_protein_control.tif`
-    - This image shows a nuclear protein in control cells.   
+    - This image shows a nuclear protein in control cells.
 - Open image: `xy_calibrated_16bit__nuclear_protein_treated.tif`
     - The cells in this image have been subjected to a drug.
 - Inspect the images:
     - Did the drug affect the amount of the nuclear protein?
 - Adjust the lookup-tables (LUTs) of both images to be the same
-- Add a LUT calibration to both images 
+- Add a LUT calibration to both images
 
 ### Formative Assessment
 
@@ -158,7 +161,7 @@ For example, a GFP tagged protein could occur in the same cell at different loca
 What can you do to show images with a high dynamic range (multiple answers)?
 
 1. Adjust the LUT such that only the scientifically relevant information can be seen.
-2. Adjust the LUT such that only the scientifically relevant information can be seen 
+2. Adjust the LUT such that only the scientifically relevant information can be seen
 	* and state that the LUT has been adjusted in the figure legend
 	* and show the same image with other LUT settings in the supplemental material.
 3. Try to find a LUT that shows all data.
@@ -175,7 +178,7 @@ What can you do to show images with a high dynamic range (multiple answers)?
     shift [fontcolor=white,color=white];
     image_math -> pixel_values [label="  changes"];
     image_math -> pixel_data_type [label="  does not change"];
-    image_math -> wrong_pixel_values [label = "  can yield"] 
+    image_math -> wrong_pixel_values [label = "  can yield"]
   }
 '/>
 
@@ -201,8 +204,8 @@ What are good reasons to change the pixel values in an image?
 - Measure background intensity in below region:
 	- upper left corner at `[ 20, 35 ]`
 	- width = 10
-	- height = 10 
-- Subtract the measured background intensity from each pixel 
+	- height = 10
+- Subtract the measured background intensity from each pixel
 - Measure pixel values again at above coordinates ( `[ 28, 35 ]` and `[ 28, 39 ]` )
 - Discuss how the pixel values changed during background subtraction
 
@@ -212,13 +215,13 @@ Repeat above activity, but:
 
 ### Formative Assessment
 
-Considering image math operations, which of below statements is correct 
+Considering image math operations, which of below statements is correct
 (multiple answers)?
 
 1. Never change the pixel data type, because it violates image integrity.
 2. Changing the pixel data type does not change pixel values.
 3. It is scientifically unethical to perform mathematical operations on images, because it changes the pixel values.
-4. When performing mathematical operations on images, it should be documented (e.g. by a script of code) 
+4. When performing mathematical operations on images, it should be documented (e.g. by a script of code)
 
 
 ## Display of 3-D images
@@ -263,4 +266,3 @@ Which statements about visualisation and quantification of 3D images are correct
 2. Any visualisation can make sense, you just have scientifically justify it.
 3. Intensity quanitifcations ideally should be done in 3D, not in projections.
 4. It is impossible to quantify intensities in projections.
-
