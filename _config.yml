@@ -18,6 +18,33 @@ default-platform: "NONE"
 life_cycle: "pre-alpha"
 kind: "lesson"
 
+# Order of modules
+
+module_order:
+  - pixels
+  - automated_object_filtering
+  - basic_image_analysis_workflow
+  - binarization
+  - connected_components
+  - distance_transform
+  - enhance_image_features
+  - filter_convolution
+  - filter_difference_of_gaussian
+  - filter_morphological
+  - filter_neighbourhood
+  - filter_rank
+  - image_display
+  - image_integrity
+  - local_background_subtraction
+  - machine_learning_semantic_segmentation
+  - measure_intensities
+  - measure_shapes
+  - object_splitting
+  - pixel_data_types
+  - pixel_processing
+  - real_world_coordinates_image_access
+  - course_recap
+
 # Sites
 repository: "https://git.embl.de/grp-bio-it/image-analysis-training-resources"
 repo_url: "https://git.embl.de/grp-bio-it/image-analysis-training-resources"
