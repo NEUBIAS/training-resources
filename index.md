@@ -9,7 +9,7 @@ This is a resource for image analysis training material, with a focus on researc
 Currently, this resource is mainly meant to serve image analysis trainers, helping them to design courses.
 However, we might add more text (or videos) to the material such that it could also be used by students for self-directed study.
 
-The material is divided into small modules, where the teaching of each module should take about 10-20 minutes. Each module covers a specific aspect of image analysis. At the beginning of each module there is a list of modules containing prerequiste topics. At the end of each module there are suggestions of what could be taught next. This provides trainers guidance on how to combine modules into a longer workshop.
+The material is divided into small modules, where the teaching of each module should take about 10-20 minutes. Each module covers a specific aspect of image analysis. At the beginning of each module there is a list of modules containing prerequisite topics. At the end of each module there are suggestions of what could be taught next. This provides trainers guidance on how to combine modules into a longer workshop.
 
 The modules are designed based on current research in the psychology of learning. For example, concept maps with a limited number of items ensure that the new information in each module is well defined, well structured and limited, respecting the maximal cognitive load that students can bear with.
 
