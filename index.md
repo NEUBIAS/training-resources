@@ -1,5 +1,5 @@
 ---
-title:     Image Analysis Training Material
+title:     Welcome
 layout:    page
 permalink: /
 ---
