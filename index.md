@@ -19,7 +19,7 @@ Happy teaching and learning!
 
 #### How to contribute to this resource
 
-Please see our [Contributors Guide](contributing).
+Please see our [Contributors Guide](CONTRIBUTING).
 
 #### How to teach using this resource
 
