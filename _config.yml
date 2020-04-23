@@ -1,10 +1,10 @@
-title: "Image Analysis Training"
+title: "Image Analysis Training Resources"
 email: "image-analysis-support@embl.de"
 description: > # this means to ignore newlines until "baseurl:"
   A collection of material for teaching image analysis.
   Includes concept maps, exercises, example data
-baseurl: "/image-analysis-training-resources" # the subpath of your site, e.g. /blog
-url: "https://grp-bio-it.embl-community.io/" # the base hostname & protocol for your site
+baseurl: "/training-resources" # the subpath of your site, e.g. /blog
+url: "https://neubias.github.io/" # the base hostname & protocol for your site
 contributing: CONTRIBUTING
 
 # Build settings
