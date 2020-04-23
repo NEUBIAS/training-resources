@@ -4,6 +4,13 @@ title: License
 ---
 
 This material is made available under the [Creative Commons Attribution license][cc-by-human].
+It is based on material developed by members of
+the [Centre for Bioimage Analysis][cba]
+and the [Bio-IT Project][bio-it]
+at the [European Molecular Biology Laboratory][embl].
+The website template was adapted from a
+lesson template created by [The Carpentries][carpentries].
+
 The following is a human-readable summary of (and not a substitute for)
 the [full legal text of the CC BY 4.0 license][cc-by-legal].
 
@@ -21,8 +28,8 @@ Under the following terms:
 
 * **Attribution**---You must give appropriate credit (mentioning that
   your work is derived from work that is Copyright ©
-  European Molecualr Biology Laboratory and, where practical, link to
-  the [source project repository][our-gitlab-repo]) and [the license][cc-by-human],
+  NEUBIAS and, where practical, link to
+  the [source project repository][our-github-repo]) and [the license][cc-by-human],
   and indicate if changes were made. You may do
   so in any reasonable manner, but not in any way that suggests the
   licensor endorses you or your use.
@@ -41,6 +48,10 @@ Notices:
   rights such as publicity, privacy, or moral rights may limit how you
   use the material.
 
+[bio-it]: https://bio-it.embl.de
+[carpentries]: https://carpentries.org
+[cba]: https://bio-it.embl.de/centres/
 [cc-by-human]: https://creativecommons.org/licenses/by/4.0/
 [cc-by-legal]: https://creativecommons.org/licenses/by/4.0/legalcode
-[our-gitlab-repo]: https://git.embl.de/grp-bio-it/image-analysis-training-resources/
+[embl]: https://embl.de
+[our-gitlab-repo]: https://github.com/NEUBIAS/training-resources/
