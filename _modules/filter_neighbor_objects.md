@@ -31,7 +31,7 @@ activities:
   "CLIJ2 Macro": "filter_neighbor_objects/random_labelmap.md"
 
 # figure: /figures/filter_neighbor_objects/image_1588707389177.png
-# figure_legend:
+# figure_legend: Random labels
 
 Before running operations on neighbors, we need to determine which labels of the
 label map are neighbors. Furthermore, we can draw the neighborhood relationships as a graph/mesh.
@@ -41,7 +41,7 @@ activities:
   "CLIJ2 Macro": "filter_neighbor_objects/generate_touch_matrix.md"
 
 # figure: /figures/filter_neighbor_objects/image_1588707389261.png
-# figure_legend:
+# figure_legend: A graph derived from the labelmap
 
 ## Distribute values in space
 We get the center of mass of all objects in our label map and generate vector
@@ -59,7 +59,7 @@ activities:
   "CLIJ2 Macro": "filter_neighbor_objects/draw_parametric_image.md"
 
 # figure: /figures/filter_neighbor_objects/image_1588707389508.png
-# figure_legend:
+# figure_legend: Mean intensity of neighbors
 
 ## Smoothing between neighbors
 We can apply smoothing operations, e.g. the mean filter:
@@ -69,7 +69,7 @@ activities:
   "CLIJ2 Macro": "filter_neighbor_objects/mean_of_neighbors.md"
 
 # figure: /figures/filter_neighbor_objects/image_1588707389595.png
-# figure_legend:
+# figure_legend: Mean intensity of neighbors
 
 To prevent the orange stripe in the center, we use the median filter:
 
@@ -78,7 +78,7 @@ activities:
   "CLIJ2 Macro": "filter_neighbor_objects/median_of_neighbors.md"
 
 # figure: /figures/filter_neighbor_objects/image_1588707389685.png
-# figure_legend:
+# figure_legend: Median intensity among neighbors
 
 Based on that image, we can visualize the border:
 
@@ -87,7 +87,7 @@ activities:
   "CLIJ2 Macro": "filter_neighbor_objects/stddev_of_neighbors.md"
 
 # figure: /figures/filter_neighbor_objects/image_1588707389789.png
-# figure_legend:
+# figure_legend: Standard deviation of mean intensities between neighbors
 
 ## Increasing the radius of operation
 Furthermore, we can increase the radius of operation by using `neighborsOfNeighbors();`.
@@ -98,7 +98,7 @@ activities:
   "CLIJ2 Macro": "filter_neighbor_objects/mean_of_neighbors_of_neighbors.md"
 
 # figure: /figures/filter_neighbor_objects/image_1588707389916.png
-# figure_legend:
+# figure_legend: Mean intensity of neighbors of neighbors
 
 At the end of the macro, clean up:
 
