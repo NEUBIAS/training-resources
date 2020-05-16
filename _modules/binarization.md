@@ -24,7 +24,9 @@ activity_preface: >
 activities:
   "ImageJ GUI": "binarization/activities/binarization_imagejgui.md"
   "ImageJ Macro": "binarization/activities/binarization_imagejmacro.md"
+  "CLIJ2 Macro": "binarization/activities/binarization_clij2macro.md"
   "Jython": "binarization/activities/binarization_jython.md"
+  "CLIJ2 Jython": "binarization/activities/binarization_clij2jython.md"
   "MATLAB": "binarization/activities/binarization_matlab.md"
   "KNIME": "binarization/activities/binarization_knime.md"
 
