@@ -14,9 +14,9 @@ motivation: >
 concept_map: >
   graph TD
     Im("Image") -->|has many| P("Pixel")
-    P -->|has| V("Value")
+    P -->|has| Va("Value")
     P -->|has| I("Indices")
-    P -->|aka| V("Voxel")
+    P -->|aka| Vo("Voxel")
     P -->|can have| S("Size")
 
 figure: /figures/pixels.png
