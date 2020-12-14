@@ -1,5 +1,5 @@
 ---
-title: Image display
+title: Lookup table
 layout: module
 
 prerequisites:
@@ -8,7 +8,7 @@ objectives:
   - Visualise the pixel values of an image. 
 
 motivation: >
-  Images are a collection of a lot (millions) of values, which is information that is hard to process for our human brains. Thus, one typically assigns a color to each distinct value, by means of lookup tables (LUTs). 
+  Images are a collection of a lot (millions) of values, which is information that is hard to process for our human brains. Thus, one typically assigns a color to each distinct value, by means of a lookup table (LUT). 
 
 concept_map: >
   graph TD
