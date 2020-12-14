@@ -3,8 +3,6 @@ email: "image-analysis-support@embl.de"
 description: > # this means to ignore newlines until "baseurl:"
   A collection of material for teaching image analysis.
   Includes concept maps, exercises, example data
-baseurl: "/training-resources" # the subpath of your site, e.g. /blog
-url: "https://neubias.github.io/" # the base hostname & protocol for your site
 contributing: CONTRIBUTING
 
 # Build settings
@@ -46,8 +44,7 @@ module_order:
   - course_recap
 
 # Sites
-repository: "https://git.embl.de/grp-bio-it/image-analysis-training-resources"
-repo_url: "https://git.embl.de/grp-bio-it/image-analysis-training-resources"
+repository: <USERNAME>/<PROJECT>
 cc_by_human: "https://creativecommons.org/licenses/by/4.0/"
 
 # Specify that things in the episodes collection should be output.
@@ -82,3 +79,6 @@ exclude:
   - Makefile
   - bin/
   - .Rproj.user/
+  - .vendor/
+  - vendor/
+  - .docker-vendor/
