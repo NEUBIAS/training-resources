@@ -1,7 +1,7 @@
 ---
 title:     Welcome
 layout:    page
-permalink: /
+permalink: /index.html
 ---
 
 This is a resource for image analysis training material, with a focus on research in the life sciences.
