@@ -1,7 +1,6 @@
-
 # Image Analysis Training Resources
 
-[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/manerotoni/training-resources)
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/neubias/training-resources)
 
 **[Visit the rendered pages](https://neubias.github.io/training-resources).**
 
