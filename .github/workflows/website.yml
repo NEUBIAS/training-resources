@@ -79,7 +79,3 @@ jobs:
           done < <(Rscript -e 'cat(remotes::system_requirements("ubuntu", "18.04"), sep = "\n")')
 
       - run: make site
-      - run: make lesson-check
-        if: always()
-      - run: make lesson-check-all
-        if: always()
