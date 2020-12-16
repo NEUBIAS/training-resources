@@ -2,7 +2,7 @@
 title:     Image binarization
 layout:    module
 prerequisites:
-  - "[Basic properties of images and pixels]({{page.root}}/pixels/)"
+  - "[Basic properties of images and pixels](../pixels/)"
 objectives:
   - "Describe the relationship between an intensity image and a derived binary image"
   - "Apply a threshold to distinguish foreground and background pixels"
