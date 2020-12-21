@@ -2,8 +2,12 @@
 
 * Open image: xy_8bit__nuclei_noisy_different_intensity.tif
 * Explore different ways to inspect pixel values and indices
+  * Mouse hover
+  * Pixel inspector
+  * Line profile
+  * Histogram
 * Check where the lowest pixel indices are in the displayed image:
-        * Most commonly: Upper left corner, which is different to conventional coordinate systems.
+  * Most commonly: Upper left corner, which is different to conventional coordinate systems.
 
 ## Explore pixel sizes 
 
