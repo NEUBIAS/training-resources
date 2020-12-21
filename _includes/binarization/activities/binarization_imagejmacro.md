@@ -1,6 +1,6 @@
 ```
-open("/image-analysis-training-resources/image_data/xy_8bit__two_cells.tif");
-setThreshold(30, 255);
+open(); //image is xy_8bit__two_cells.tif
+setThreshold(49, 255);
 setOption("BlackBackground", true);
 run("Convert to Mask");
 ```
