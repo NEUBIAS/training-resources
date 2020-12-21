@@ -2,12 +2,17 @@
 title:     Image binarization
 layout:    module
 prerequisites:
-  - "[Basic properties of images and pixels](../pixels/)"
+  - "[Basic properties of images and pixels](../pixels)"
+  - "[Data types (unsigned 8-bit)](../pixel_data_types)" 
 objectives:
   - "Describe the relationship between an intensity image and a derived binary image"
   - "Apply a threshold to distinguish foreground and background pixels"
-motivation: >
-  Very often, one wants to detect objects or specific regions in images. Typically, the first step to achieve this aim is to distinguish so-called background pixels, which do not contain objects or interesting regions, from foreground pixels, which mark the areas of interest. The foreground regions can than be further processed, e.g to detect objects or perform measurements.
+motivation: |
+  Typically, to detect objects or specific regions in images, one starts distinguish so-called background pixels, 
+  which do not contain objects or interesting regions, from foreground pixels, which mark the areas of interest. 
+  This process is called **two class semantic segmentation** and is often referred to as **image binarization**. 
+  The foreground regions can then be further processed, e.g to detect objects or perform intensity measurements.
+  
 concept_map: >
   graph TD
     PV("Pixel values") --> BA(Binarization algorithm)
@@ -19,7 +24,8 @@ figure: /figures/binarization.png
 figure_legend: Image before and after binarization by applying a threshold.
 
 activity_preface: >
-  Open an image and binarize it by applying a threshold.
+  Open a binary image and discuss binary data-type. Discuss differences of binary data-type depending on the software 
+  (e.g. ImageJ and MATLAB). Open and image and binarize it by applying a manually defined threshold.
 
 activities:
   "ImageJ GUI": "binarization/activities/binarization_imagejgui.md"
@@ -34,7 +40,22 @@ exercises_preface: >
 
     - Pixels in a binary image can have maximally ___ different values.
     - If the threshold is larger than the maximal pixel value in the intensity image, all pixels in the binary image have a value of ___.
-
+ 
+    
+    > ## Solution
+    >   - Pixels in a binary image can have maximally **2** different values.
+    >   - If the threshold is larger than the maximal pixel value in the intensity image, 
+    > all pixels in the binary image have a value of **0**.
+    {: .solution}
+    
+  ### True or False
+    - There is only one correct threshold value in order to convert an intensity image into a binary image. 
+    - Binary images are always unsigned 8-bit where the foreground is 255.
+    
+    > ## Solution
+    >   - There is only one correct threshold value in order to convert an intensity image into a binary image. **False**
+    >   -  Binary images are always unsigned 8-bit where the foreground is 255. **False**
+    {: .solution}
 exercises:
   "ImageJ GUI": "binarization/exercises/binarization_imagejgui.md"
   "ImageJ Macro": "binarization/exercises/binarization_imagejmacro.md"
@@ -47,4 +68,14 @@ learn_next:
 
 external_links:
   - "[Wikipedia: Binary image](https://en.wikipedia.org/wiki/Binary_image)"
+  
 ---
+## Image thresholding
+A common algorithm for binarization is thresholding. Typically a threshold value *t* is chosen, either manually or automatically, 
+and all pixels with intensities below *t* are set to 0, whereas pixels with intensities >= *t* are set to the value for the foreground. 
+Depending on the software the foreground value can be different (e.g. 1 in MATLAB or 255 in ImageJ).
+
+It is also possible to define an interval of threshold values, i.e. a lower and upper threshold value. Pixels with intensities 
+within this interval belong to the foreground. 
+ 
+
