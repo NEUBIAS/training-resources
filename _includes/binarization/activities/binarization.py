@@ -1,4 +1,3 @@
-``` python
 import numpy as np
 import matplotlib.pyplot as plt
 from skimage import io
@@ -18,7 +17,5 @@ ax[0].set_title("Image")
 ax[1].imshow(binarized)
 ax[1].set_title("Binarized")
 
-```
-
-For associated course material in jupyter, [click here](https://nbviewer.jupyter.org/github/embl-bio-it/image-analysis-with-python/blob/carpentry/image-analysis-session/image-binarization.ipynb#Image-Binarization).
-You can also spin up an interactive [binder session](https://gke.mybinder.org/v2/gh/embl-bio-it/image-analysis-with-python/carpentry?filepath=image-analysis-session/image-binarization.ipynb).
+# For associated course material in jupyter, go to https://nbviewer.jupyter.org/github/embl-bio-it/image-analysis-with-python/blob/carpentry/image-analysis-session/image-binarization.ipynb#Image-Binarization
+# You can also spin up an interactive binder session: https://gke.mybinder.org/v2/gh/embl-bio-it/image-analysis-with-python/carpentry?filepath=image-analysis-session/image-binarization.ipynb
