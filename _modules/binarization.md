@@ -22,24 +22,25 @@ activity_preface: >
   Open an image and binarize it by applying a threshold.
 
 activities:
-  "ImageJ GUI": "binarization/activities/binarization_imagejgui.md"
-  "ImageJ Macro": "binarization/activities/binarization_imagejmacro.md"
-  "Jython": "binarization/activities/binarization_jython.md"
-  "MATLAB": "binarization/activities/binarization_matlab.md"
-  "KNIME": "binarization/activities/binarization_knime.md"
+  - ["ImageJ GUI", "binarization/activities/binarization_imagejgui.md", "markdown"]
+  - ["ImageJ Macro", "binarization/activities/binarization_imagejmacro.md", "java"]
+  - ["Jython", "binarization/activities/binarization_jython.md", "python"]
+  - ["MATLAB", "binarization/activities/binarization_matlab.md", "matlab"]
+  - ["KNIME", "binarization/activities/binarization_knime.md", "markdown"]
+  - ["Python", "binarization/activities/binarization.py", "python"]
 
-exercises_preface: >
+exercises:
+  - ["ImageJ GUI", "binarization/exercises/binarization_imagejgui.md"]
+  - ["ImageJ Macro", "binarization/exercises/binarization_imagejmacro.md"]
+  - ["Jython", "binarization/exercises/binarization_jython.md"]
+  - ["MATLAB", "binarization/exercises/binarization_matlab.md"]
+
+assessment: >
 
   ### Fill in the blanks
 
     - Pixels in a binary image can have maximally ___ different values.
     - If the threshold is larger than the maximal pixel value in the intensity image, all pixels in the binary image have a value of ___.
-
-exercises:
-  "ImageJ GUI": "binarization/exercises/binarization_imagejgui.md"
-  "ImageJ Macro": "binarization/exercises/binarization_imagejmacro.md"
-  "Jython": "binarization/exercises/binarization_jython.md"
-  "MATLAB": "binarization/exercises/binarization_matlab.md"
 
 learn_next:
   - "[Algorithms to automatically determine a threshold value](auto_threshold)"
