@@ -1,10 +1,13 @@
-Open image *xy_8bit_PCNA.tif* and 
+Open image *xy_8bit__PCNA.tif* and 
 1. Find a threshold value so that there are 2 foreground nuclei.
-2. Find an upper and lower threshold value so that only the boundary of the nuclei remains.
-3. Find a threshold value so that only the bright dots remain
+2. Find a threshold value so that only the bright dots remain
+3. Find threshold interval so that only the boundary of the nuclei remains.
+
     
 > ## Solution
-> 1. Threshold of about 5
-> 2. lower value 4, upper value 4-5
-> 3. Threshold of about 44
+> **[File > Open...]** *xy_8bit__PCNA.tif*
+> **[Image > Adjust > Threshold...]** or **[Ctrl-Shift-T]** opens the threshold menu
+> 1. Lower threshold, i.e. upper slider,  at about 5 
+> 2. Lower threshold at about 44
+> 3. Lower threshold at about 4, upper threshold at about 4-5
 {: .solution}

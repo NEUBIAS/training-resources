@@ -28,19 +28,25 @@ activity_preface: >
   (e.g. ImageJ and MATLAB). Open and image and binarize it by applying a manually defined threshold.
 
 activities:
-  "ImageJ GUI": "binarization/activities/binarization_imagejgui.md"
-  "ImageJ Macro": "binarization/activities/binarization_imagejmacro.md"
-  "Jython": "binarization/activities/binarization_jython.md"
-  "MATLAB": "binarization/activities/binarization_matlab.md"
-  "KNIME": "binarization/activities/binarization_knime.md"
+  - ["ImageJ GUI", "binarization/activities/binarization_imagejgui.md", "markdown"]
+  - ["ImageJ Macro", "binarization/activities/binarization_imagejmacro.md", "java"]
+  - ["ImageJ Jython", "binarization/activities/binarization_jython.py", "python"]
+  - ["MATLAB", "binarization/activities/binarization_matlab.m", "matlab"]
+  - ["KNIME", "binarization/activities/binarization_knime.md", "markdown"]
+  - ["Python", "binarization/activities/binarization.py", "python"]
 
-exercises_preface: >
+exercises:
+  - ["ImageJ GUI", "binarization/exercises/binarization_imagejgui.md"]
+  - ["ImageJ Macro", "binarization/exercises/binarization_imagejmacro.md"]
+  - ["Jython", "binarization/exercises/binarization_jython.md"]
+  - ["MATLAB", "binarization/exercises/binarization_matlab.md"]
+
+assessment: >
 
   ### Fill in the blanks
 
     - Pixels in a binary image can have maximally ___ different values.
     - If the threshold is larger than the maximal pixel value in the intensity image, all pixels in the binary image have a value of ___.
- 
     
     > ## Solution
     >   - Pixels in a binary image can have maximally **2** different values.
@@ -56,11 +62,6 @@ exercises_preface: >
     >   - There is only one correct threshold value in order to convert an intensity image into a binary image. **False**
     >   -  Binary images are always unsigned 8-bit where the foreground is 255. **False**
     {: .solution}
-exercises:
-  "ImageJ GUI": "binarization/exercises/binarization_imagejgui.md"
-  "ImageJ Macro": "binarization/exercises/binarization_imagejmacro.md"
-  "Jython": "binarization/exercises/binarization_jython.md"
-  "MATLAB": "binarization/exercises/binarization_matlab.md"
 
 learn_next:
   - "[Algorithms to automatically determine a threshold value](auto_threshold)"

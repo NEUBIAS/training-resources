@@ -1,8 +1,5 @@
-```matlab
-
 %These matlab scripts illustrate separating the foreground from the
 %background using a threshold value provided by the user
-
 %Prompt user for a threshold value
 thres_val = input('Enter a threshold value: '); 
 % Prompt user to choose an image, e.g. xy_8bit__two_cells.tif
@@ -15,5 +12,3 @@ figure; imagesc(in_image);
 bin_image = uint8(in_image>= thres_val);
 % Display binary image
 figure; imagesc(bin_image); 
-
-```
