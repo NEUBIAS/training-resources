@@ -10,7 +10,3 @@ minimal value is 0, maximal value is 255)
 - Press **[Apply]** discuss resulting image
 - **[ File > Open... ]** *xy_8bit__two_cells.tif*
 - Apply a higher threshold so that only the high intensity level nuclei remains 
-
- 
-
-
