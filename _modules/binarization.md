@@ -1,5 +1,5 @@
 ---
-title:     Image binarization
+title:     Binarization
 layout:    module
 prerequisites:
   - "[Basic properties of images and pixels](../pixels)"
