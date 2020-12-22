@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from skimage import io
 
 # load the image from file
-image_file = "/image-analysis-training-resources/image_data/xy_8bit__two_cells.tif"
+image_file = "/image_data/xy_8bit__two_cells.tif"
 image = io.imread(image_file)
 
 # binarize the image, so that all values larger than the threshold are foreground
