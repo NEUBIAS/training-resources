@@ -47,10 +47,10 @@ activity_preface: |
   Compare the median filter with respect to a mean filter.
   
 activities:
-    "ImageJ GUI": "filter_rank/activities/filter_rank_imagejgui.md"
+    - ["ImageJ GUI", "filter_rank/activities/filter_rank_imagejgui.md", "markdown"]
 
-exercises_preface: |
-    True or false? 
+assessment: | 
+    ### True or false? 
       1. Median filter is just another name for mean filter.
       2. Small structures can completely disappear from an image when applying a median filter. 
     
@@ -60,7 +60,7 @@ exercises_preface: |
     {: .solution}
 
 exercises: 
-  "ImageJ GUI": "filter_rank/exercises/filter_rank_imagejgui.md"       
+  - ["ImageJ GUI", "filter_rank/exercises/filter_rank_imagejgui.md"]      
 
 ---
 
