@@ -6,6 +6,7 @@ FROM gitpod/workspace-full
 #
 # More information: https://www.gitpod.io/docs/config-docker/
 
-RUN brew install rbenv ruby-build
-RUN rbenv install 2.7.2
-RUN rbenv global 2.7.2
+RUN apt-add-repository -y ppa:rael-gc/rvm
+RUN apt-get update
+RUN apt-get install rvm
+RUN rvm install ruby-2.7.1
