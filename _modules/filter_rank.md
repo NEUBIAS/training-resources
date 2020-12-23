@@ -31,7 +31,7 @@ concept_map: >
     subgraph replace pixel value
     fpixel1
     end
-    median --> fpixel1[median filtered pixel]
+    median --> fpixel1[rank filtered pixel]
     min -.-> fpixel1
     max -.-> fpixel1
     ... -.-> fpixel1
