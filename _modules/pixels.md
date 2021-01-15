@@ -30,35 +30,40 @@ activity_preface: |
     - Compute and plot pixel value histograms
 
 activities:
-#  "ImageJ GUI": "pixels/activities/pixels_imagejgui.md"
-#  "ImageJ Macro": "pixels/activities/pixels_ijmacro.md"
-#  "Jython": "pixels/activities/pixels_jython.md"
-#  "MATLAB": "pixels/activities/pixels_matlab.md"
 
-exercises_preface: |
+exercises:
 
-  - Inspect a 2D image: xy_8bit__nuclei_noisy_different_intensity.tif¶
-  1. What is the value of the pixel at the indices (20,20)?
-  1. What is the highest value in the image?
-  1. What is the most frequently occuring value in the image?
-  1. What are the lowest pixel indices (?,?) and where is this pixel?
-  1. How many pixels does this image have in the horizontal direction?
-  1. What is the highest pixel index in the horizontal direction?
-  1. If you were to rotate the image by 90 degrees, would it change the image histogram?
+assessment: >
+
+  ### 2D image inspection
+    Open image: xy_8bit__nuclei_noisy_different_intensity.tif
+    1. What is the value of the pixel at the indices (20,20)?
+    1. What is the highest value in the image?
+    1. What is the most frequently occuring value in the image?
+    1. Where is this pixel with the indices (0,0)? Why is this potentially confusing?
+    1. How many pixels does this image have in the horizontal direction?
+    1. What is the highest pixel index in the horizontal direction?
+    1. If you were to rotate the image by 90 degrees, would it change the image histogram?
     
-  > ## Solution
-  > 1. TODO
+    > ## Solution
+    > 1. 82
+    > 1. 129
+    > 1. 55
+    > 1. Top left; normally x/y coordinate systems have their origin at the bottom left
+    > 1. 59
+    > 1. 58
+    > 1. No, the gray value histogram is independent of the pixel locations 
   {: .solution}
 
-  - Inspect a 3D image: TODO¶
-  1. What is the value of the voxel at the indices (100,100,100)?
-  1. Whats is the highest value in the image?
-  1. What is the most frequently occuring value in the image?
-  1. Where is the voxel with the lowest indices and what are those indices (?,?,?) ?¶
-  
-  > ## Solution
-  > 1. TODO
-  {: .solution}
+  ### 3D image inspection
+    Open image: xyz_8bit__mri_head.tif
+    1. What is the value of the voxel at the indices (93,124,13)?
+    1. Whats is the highest value in the image?
+    
+    > ## Solution
+    > 1. 47
+    > 1. 255
+    {: .solution}
   
 
 exercises:
