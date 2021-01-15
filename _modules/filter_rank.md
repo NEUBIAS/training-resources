@@ -62,5 +62,8 @@ assessment: |
 exercises: 
   - ["ImageJ GUI", "filter_rank/exercises/filter_rank_imagejgui.md"]      
 
+
+learn_next:
+    "[Median filter properties](../median_filter)"
 ---
 
