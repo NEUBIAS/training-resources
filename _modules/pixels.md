@@ -19,7 +19,7 @@ concept_map: >
     P -->|has| I("Indices")
     P -->|aka| Vo("Voxel")
 
-figure: /figures/pixels.png
+figure: /figures/pixels_2.png
 figure_legend:
 
 activity_preface: |
@@ -30,6 +30,7 @@ activity_preface: |
     - Compute and plot pixel value histograms
 
 activities:
+    - ["ImageJ GUI", "pixels/activities/pixels_imagejgui.md", "markdown"]
 
 exercises:
 
@@ -69,7 +70,7 @@ assessment: >
 exercises:
 
 learn_next:
-  - "[Image display](image_display)"
+    "[Lookup tables](../lut)"
 external_links:
 
 ---

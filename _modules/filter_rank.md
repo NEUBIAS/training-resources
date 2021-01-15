@@ -2,7 +2,7 @@
 title:     Rank filters
 layout:    module
 prerequisites:
-  - "[Basic properties of images and pixels](../pixels)"
+  - "[Pixels](../pixels)"
   - "[Neighbourhood image filters](../filter_neighbourhood)"
 objectives: 
   - "Understand how rank filters function."
