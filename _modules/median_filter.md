@@ -15,7 +15,8 @@ concept_map: >
     median --> MF("median filtered pixel value")
 
 figure: /figures/median_filter_binary.png
-figure_legend: Left: Binary input image; Middle: After a 5x5 median filter; Right: Difference image
+figure_legend: Left - Binary input image; Middle - After a 5x5 median filter; Right - Difference image
+
 
 activity_preface: >
   Use example images that are relevant to your science and explore in detail what happens when applying a median filter.
@@ -26,24 +27,15 @@ activities:
 exercises:
 
 
-assessment: >
-
-  ### True or False
-    - There is only one correct threshold value in order to convert an intensity image into a binary image. 
-    - Binary images are always unsigned 8-bit where the foreground is 255.
-    
-    > ## Solution
-    >   - There is only one correct threshold value in order to convert an intensity image into a binary image. **False**
-    >   -  Binary images are always unsigned 8-bit where the foreground is 255. **False**
-    {: .solution}
+assessment:
 
 learn_next:
-
+    "[Median filter properties](../median_filter)"
 external_links:
 
 ---
 
-## Median filter
+## Properties of median filter
 
 In general, for any neighbourhood filter, if the spatial extend of the neighbourhood is significantly (maybe three-fold) smaller than the smallest spatial length scale that you care about, you are on the safe side.
 
