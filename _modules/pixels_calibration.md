@@ -3,7 +3,7 @@ title: Pixels calibration
 layout: module
 
 prerequisites:
-  -[Pixels](../pixels.md)
+  - "[Pixels](../pixels)"
   
 objectives:
   - Understand that an pixel are related to a physical size.
@@ -19,12 +19,13 @@ motivation: >
    
 concept_map: >
   graph TD
-    Im("Image") -->|has many| P("Pixel")
+    Im("Image") -->|has many| P("Pixel/Voxel")
+    Im --> |has| C("Calibration")
     P -->|has| Va("Value")
     P -->|has| I("Indices")
-    P -->|has| C("Calibration")
-    P -->|aka| Vo("Voxel")
-
+    P --> |has| RWC("Real world coordinate")
+    C --> RWC
+    I --> RWC
 
 activity_preface: |
 
