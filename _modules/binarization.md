@@ -3,9 +3,9 @@ title:     Binarization
 layout:    module
 prerequisites:
   - "[Basic properties of images and pixels](../pixels)"
-  - "[Data types (unsigned 8-bit)](../pixel_data_types)" 
+  - "[Data types (unsigned 8-bit)](../pixel_data_types)"
 objectives:
-  - "Describe the relationship between an intensity image and a derived binary image"
+  - "Describe the relationship between an intensity image and a derived binary image."
   - "Apply a threshold to distinguish foreground and background pixels"
 motivation: |
   One strategy to detect objects or specific regions in images is to first distinguish so-called background pixels,
