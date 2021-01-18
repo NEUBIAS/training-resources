@@ -343,3 +343,9 @@ kbd {
     white-space: nowrap;
     font-style: normal;
 }
+
+div.mermaid svg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}    
