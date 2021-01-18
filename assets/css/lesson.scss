@@ -344,11 +344,22 @@ kbd {
     font-style: normal;
 }
 
-div.mermaid svg {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}    
+div.mermaid {
+    max-width: 30%;
+    display: inline-block;
+    margin-left: 2%;
+    margin-right: 4%;
+    vertical-align: top;
+}
+figure {
+    max-width: 66%;
+    display: inline-block;
+    margin-left: 2%;
+}
+figure img {
+    max-width: 100%;
+    margin: auto;
+}
 figcaption {
     text-align: center;
 }
