@@ -1,0 +1,10 @@
+run("Close All");
+//open("/Users/tischer/Documents/training-resources/image_data/xy_8bit_mitocheck_incenp_t1.tif");
+//open("/Users/tischer/Documents/training-resources/image_data/xy_8bit_mitocheck_incenp_t70.tif");
+run("Duplicate...", "title=binary");
+run("Options...", "iterations=1 count=1 black do=Nothing");
+setThreshold(25, 255);
+run("Convert to Mask");
+run("Connected Components Labeling", "connectivity=4 type=[8 bits]");
+run("glasbey_on_dark");
+run("Analyze Regions", "area");
