@@ -12,14 +12,14 @@ objectives:
 
 motivation: >
   In bioimage analysis one very often wants to detect objects or specific regions in images. A typical workflow is to first categorise an image into in background and foreground regions, which can be represented as a binary image. The next step is a connected components labeling, where spatially connected regions of foreground pixels are assigned (labeled) as being part of one region (object).
-  
+
 concept_map: >
   graph TD
     BI("Binary image") --> CC("Connected component analysis")
     CC -->|has parameter|C("Connectivity")
     CC --> LI("Label image")
-	LI -->|is best seen with|MCL("Multi color LUT")
-    LI --> PV("Integer pixel values")
+    LI -->|is best seen with|MCL("Multi color LUT")
+    LI -->|has content|PV("Integer pixel values")
     PV --> BG("0: Background")
     PV --> R1("1: Region 1")
     PV --> R2("2: Region 2")
@@ -48,7 +48,7 @@ exercises:
 
 assessment: >
 
-  ### Connected component labelling and label mask image properties
+  #### Fill in the blanks
     Fill in the blanks, using these words: less, more, 8, 255, 4, more.
     1. In 3D, pixels have _____ neighbors than in 2D.
     1. 8-connected connectivity results in _____ objects than 4-connected connectivity.
