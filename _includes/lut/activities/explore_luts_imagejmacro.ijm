@@ -1,0 +1,15 @@
+run("Close All");
+open("/Users/tischer/Documents/training-resources/image_data/xy_8bit__nuclei_high_dynamic_range.tif");
+rename("gray_0_255");
+run("Duplicate...", "title=gray_0_43");
+setMinAndMax(0, 43);
+run("Duplicate...", "title=blue_0_255");
+run("Blue");
+setMinAndMax(0, 255);
+run("Duplicate...", "title=fire_0_255");
+run("Fire");
+run("Duplicate...", "title=hilo_0_255");
+run("HiLo");
+run("Duplicate...", "title=hilo_0_100");
+setMinAndMax(0, 100);
+run("Tile");
