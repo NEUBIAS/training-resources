@@ -28,10 +28,13 @@ concept_map: >
     I --> RWC
 
 activity_preface: |
-
+    Open an image with spatial calibration and show where you can find this information (Properties, Info, etc.). 
+    How can we edit the spatial calibration. Open the same image without spatial calibration. 
+    Measure a line in the one or the other case. Show how the pixel length can be converted to real length. 
+    
 
 activities:
-    - ["ImageJ GUI", "real_world_coordinates/activities/real_world_coordinates_imagejgui.md", "markdown"]
+    - ["ImageJ GUI", "spatial_calibration/activities/spatial_calibration_imagejgui.md", "markdown"]
 
 exercises:
 
