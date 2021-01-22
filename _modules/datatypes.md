@@ -56,5 +56,7 @@ learn_next:
 external_links:
   - "[Bit depth](https://petebankhead.gitbooks.io/imagej-intro/content/chapters/bit_depths/bit_depths.html)"
   - "[Wikipedia: Integer data type](https://en.wikipedia.org/wiki/Integer_(computer_science))"
+  - "[Floating points in binary notation](http://www.davdata.nl/math/floatingpoint.html)"
+  - "[Floating points explained](https://en.wikibooks.org/wiki/A-level_Computing/AQA/Paper_2/Fundamentals_of_data_representation/Floating_point_numbers)" 
   - "[Wikipedia: Half-precision floating-point format](https://en.wikipedia.org/wiki/Half-precision_floating-point_format)"
 ---
