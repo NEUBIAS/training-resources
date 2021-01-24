@@ -23,5 +23,5 @@ diameter-circle (px)	| Area (theory) | Perimeter (theory) | Area (MLJ) | Perimet
 51	| 2042.82	| 160.22 | 	2053 |	161.19
 
 * Discuss the England's coastline paradox [Wiki](https://en.wikipedia.org/wiki/Coastline_paradox)
-* Show measurements of objects in 3D. Open image [xyz_16bit_labels__spindle_spots.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit_labels__spindle_spots.tif)
+* Show measurements of objects in 3D. Open image [xyz_16bit_labels__spindle_spots.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_16bit_labels__spindle_spots.tif)
 and **[Plugins > MorphoLibJ > Analyze > Analyze Regions]**
