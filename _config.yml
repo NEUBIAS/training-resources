@@ -16,7 +16,7 @@ default-platform: "NONE"
 life_cycle: "pre-alpha"
 kind: "lesson"
 
-module-order:
+module_order:
   - pixels
   - spatial_calibration
   - lut
