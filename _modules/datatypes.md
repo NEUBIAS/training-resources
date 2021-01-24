@@ -13,21 +13,18 @@ motivation: |
   Images contain numerical values that must be somehow stored on the hard disc or within the computer memory. To do so, for each pixel a certain amount of space (memory) must be allocated (usually measure in bits). Generally, the more bits you allocated the bigger are the numbers that you can store, however you also need more space. Thus chosing the right data type usually is a balance between what you can represent and how much space you want to afford for this. Especially for large image data such as volume EM and light-sheet data the choice of the data type can have quite some impact on your purse. In addition, certain operations on images can yield results that yield values outside of the original data type; this is a serious and frequently occurring source of mistakes when handling image data and thus must be well understood!
 
 concept_map: >
-  graph TD
-    DT("Data type") -->|limits|PV("Pixel values")
-    DT -->|has|BD("Bit depth / interpretation")
-    BD -->|e.g.|8("8-bit / unsigned integer")
-    BD -->|e.g.|16a("16-bit / unsigned integer")
-    BD -->|e.g.|16b("16-bit / signed integer")
-    BD -->|e.g.|16c("16-bit / half-precising floating-point")
-
+  graph LR
+    I("Image") -->|has|DT("Data type")
+    DT -->|limits|PV("Pixel values")
+    DT -->|has|BD("Bit depth")
+    DT -->|has|VR("Value range")
 
 figure: /figures/data_types.png
 figure_legend: Examples for data types of different bit depths.
 
 activity_preface: |
 
-  Open the following images and discuss (i) their data type, and (ii) whether there are any signs of intensity clipping.
+  Open the following images and discuss (a) their data type, and (b) whether there are any signs of intensity clipping.
   - [xy_8bit__nuclei_noisy_different_intensity.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_different_intensity.tif)
   - [xy_8bit__nuclei_clipping_issue_a.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_clipping_issue_a.tif)
   - [xy_8bit__nuclei_clipping_issue_b.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_clipping_issue_b.tif)
@@ -76,15 +73,13 @@ external_links:
 
 ### Image data types
 
-The image data type limits the values that pixels can take. 
+The pixels in an image have a certain data type. The data type limits the values that pixels can take.
 
-For unsigned N-bit integer images, the range is 0 to 2^(N-1).
-
-Important examples are:
+For example, unsigned N-bit integer images can represent values from 0 to 2^(N-1), e.g.
   - 8-bit unsigned integer: 0 - 255
   - 12-bit unsigned integer: 0 - 4095
   - 16-bit unsigned integer: 0 - 65535
 
 ### Intensity clipping (saturation)
 
-If pixels take on values on the edges of those ranges you cannot know for sure whether you lost information at some point in the process of the microscopy or data transfer and storage. For example, if there is a pixel with the value 255 in an unsigned integer 8-bit image, it may be that the actual intensity "was higher", e.g. would have corresponded to a gray value of 302. One speaks of "saturation" or "intensity clipping" in such cases. It is important to realise that there can be also clipping at the lower end of the range (some microscopes have an unfortunate "offset" slider that can be set to negative values, which can cause this).
+If the value of a pixel in an N-bit unsigned integer image is equal to either 0 or 2^(N-1), you cannot know for sure whether you lost information at some point during the image acquisition or image storage. For example, if there is a pixel with the value 255 in an unsigned integer 8-bit image, it may be that the actual intensity "was higher", e.g. would have corresponded to a gray value of 302. One speaks of "saturation" or "intensity clipping" in such cases. It is important to realise that there can be also clipping at the lower end of the range (some microscopes have an unfortunate "offset" slider that can be set to negative values, which can cause this).
