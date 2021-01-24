@@ -3,7 +3,7 @@ title:  Spatial calibration
 layout: module
 
 prerequisites:
-  - "[Pixels](../pixels)"
+  - "[Basics properties of images and pixels](../pixels)"
   
 objectives:
   - Understand that a pixel index is related to a physical coordinate.
@@ -46,7 +46,7 @@ activities:
     - ["ImageJ GUI", "spatial_calibration/activities/spatial_calibration_imagejgui.md", "markdown"]
 
 exercises:
-    - ["ImageJ GUI", "spatial_calibraton/exercises/spatial_calibration_imagejgui.md"]
+    - ["ImageJ GUI", "spatial_calibration/exercises/spatial_calibration_imagejgui.md"]
     
 assessment: |
     ### Fill in the blanks
@@ -60,8 +60,7 @@ assessment: |
     {: .solution}
 
 
-exercises:
-    - ["ImageJ GUI", "spatial_calibration/exercises/spatial_calibration_imagejgui.md"]
+
 learn_next:
 
 external_links:
