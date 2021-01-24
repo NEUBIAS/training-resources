@@ -5,7 +5,7 @@ layout:    module
 prerequisites:
   - "[Binarization](../binarization)"
   - "[Lookup tables](../lut)"
-  - "[Data types](../data_types)"
+  - "[Data types](../datatypes)"
 
 objectives:
   - Understand how objects in images are represented as a label mask image.
