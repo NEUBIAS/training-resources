@@ -5,7 +5,7 @@ Use imageJMacro to create 3 binary images from *xy_8bit_PCNA.tif* where
 
 > ## Solution
 > ```
-> // duplicate the image
+> open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__PCNA.tif")
 > selectWindow("xy_8bit__PCNA.tif");
 > run("Duplicate...", "title=[2 nuclei]");
 > selectWindow("xy_8bit__PCNA.tif");

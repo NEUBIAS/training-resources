@@ -8,7 +8,7 @@ Use imageJMacro to create 3 binary images from *xy_8bit_PCNA.tif* where
 > from ij import IJ, ImagePlus
 > from ij.plugin import Thresholder
 > # image is xy_8bit_PCNA.tif
-> inputImage = IJ.getImage() #get Current open Image
+> inputImage = IJ.openImage("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__PCNA.tif")
 > IJ.setRawThreshold(inputImage, 5, 255, None)
 > binaryImage = ImagePlus('Binary image 2 nuclei', Thresholder.createMask(inputImage))
 > binaryImage.show()
@@ -29,7 +29,7 @@ Use imageJMacro to create 3 binary images from *xy_8bit_PCNA.tif* where
 > from ij import IJ, ImagePlus
 > from ij.plugin import Thresholder
 > # image is xy_8bit_PCNA.tif should be already open
-> inputImage = IJ.getImage() #get Current open Image
+> inputImage = IJ.openImage("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__PCNA.tif")
 > IJ.setRawThreshold(inputImage, thr1, thr2, None)
 > binaryImage = ImagePlus('Thresholded image', Thresholder.createMask(inputImage))
 > binaryImage.show()
