@@ -1,14 +1,15 @@
-Use imageJMacro to create 3 binary images from *xy_8bit_PCNA.tif* where 
-1. 2 foreground nuclei.
-2. only the boundary of the 2 nuclei
-3. only the bright dots remain
+Open image [xy_8bit__PCNA.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__PCNA.tif) and 
+1. Find a threshold value so that there are 2 foreground nuclei.
+2. Find a threshold value so that only the bright dots remain
+3. Find threshold interval so that only the boundary of the nuclei remains.
+
 
 > ## Solution
 > ```python
 > from ij import IJ, ImagePlus
 > from ij.plugin import Thresholder
 > # image is xy_8bit_PCNA.tif
-> inputImage = IJ.getImage() #get Current open Image
+> inputImage = IJ.openImage("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__PCNA.tif")
 > IJ.setRawThreshold(inputImage, 5, 255, None)
 > binaryImage = ImagePlus('Binary image 2 nuclei', Thresholder.createMask(inputImage))
 > binaryImage.show()
@@ -29,7 +30,7 @@ Use imageJMacro to create 3 binary images from *xy_8bit_PCNA.tif* where
 > from ij import IJ, ImagePlus
 > from ij.plugin import Thresholder
 > # image is xy_8bit_PCNA.tif should be already open
-> inputImage = IJ.getImage() #get Current open Image
+> inputImage = IJ.openImage("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__PCNA.tif")
 > IJ.setRawThreshold(inputImage, thr1, thr2, None)
 > binaryImage = ImagePlus('Thresholded image', Thresholder.createMask(inputImage))
 > binaryImage.show()
