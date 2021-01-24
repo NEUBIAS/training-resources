@@ -36,7 +36,8 @@ exercises:
 assessment: >
 
   ### 2D image inspection
-    Open image [xy_8bit__nuclei_noisy_different_intensity.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_different_intensity.tif)
+    Open image 
+    [xy_8bit__nuclei_noisy_different_intensity.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_different_intensity.tif).
     Hint: For certain exercises the inspection of the histogram will help
     1. What is the value of the pixel at the indices (20,20)?
     1. What is the highest value in the image?
