@@ -30,8 +30,8 @@
   <script>var config = {
             startOnLoad:true,
             htmlLabels:true,
-            container:{display:flex; justify-content: center;}
-            flowchart:{width:'400%' !important,useMaxWidth:true}
+            container:{display:flex; justify-content: center;},
+            flowchart:{width:'400%' !important, useMaxWidth:false}
         };mermaid.initialize(config);</script>
   <title>
   {% if page.title %}{{ page.title }}{% endif %}{% if page.title and site.title %} &ndash; {% endif %}{% if site.title %}{{ site.title }}{% endif %}
