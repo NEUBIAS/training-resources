@@ -3,8 +3,8 @@ title:     Connected component labeling
 layout:    module
 
 prerequisites:
-  - "[Binarization](binarization)"
-  - "[Lookup tables](lut)"
+  - "[Binarization](./binarization)"
+  - "[Lookup tables](./lut)"
 
 objectives:
   - Understand how objects in images are represented as a label mask image.
