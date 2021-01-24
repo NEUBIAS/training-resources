@@ -5,6 +5,7 @@ layout:    module
 prerequisites:
   - "[Binarization](../binarization)"
   - "[Lookup tables](../lut)"
+  - "[Data types](../data_types)"
 
 objectives:
   - Understand how objects in images are represented as a label mask image.
@@ -17,6 +18,7 @@ concept_map: >
   graph TD
     BI("Binary image") -->|input|CC("Connected component analysis")
     C("Connectivity") -->|parameter|CC
+    OD("Output data type") -->|parameter|CC
     CC -->|output|LI("Label image")
     LI -->|display with|MCL("Multi color LUT")
     LI -->|content|PV("Integer pixel values")
@@ -43,6 +45,9 @@ activities:
 #  "KNIME": "connected_components/activities/connected_components_knime.md"
 
 exercises:
+  - ["ImageJ MorpholibJ Macro & GUI", "connected_components/exercises/connected_components_imagejmacro.md", java]
+
+
 
 assessment: >
 
