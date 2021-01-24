@@ -29,14 +29,13 @@
   <script src="https://unpkg.com/mermaid@8.0.0/dist/mermaid.min.js"></script>
   <script>var config = {
             startOnLoad:true,
-            flowchart:{
-                    useMaxWidth:true,
-            }
+            htmlLabels:true,
+            container:{display:flex; justify-content: center;}
+            flowchart:{width:'400%' !important,useMaxWidth:true}
         };mermaid.initialize(config);</script>
   <title>
   {% if page.title %}{{ page.title }}{% endif %}{% if page.title and site.title %} &ndash; {% endif %}{% if site.title %}{{ site.title }}{% endif %}
   </title>
-
   </head>
   <body>
 

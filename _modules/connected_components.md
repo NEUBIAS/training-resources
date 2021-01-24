@@ -15,11 +15,11 @@ motivation: >
 
 concept_map: >
   graph TD
-    BI("Binary image") --> CC("Connected component analysis")
-    CC -->|has parameter|C("Connectivity")
-    CC --> LI("Label image")
-    LI -->|is best seen with|MCL("Multi color LUT")
-    LI -->|has content|PV("Integer pixel values")
+    BI("Binary image") -->|input|CC("Connected component analysis")
+    C("Connectivity") -->|parameter|CC
+    CC -->|output|LI("Label image")
+    LI -->|display with|MCL("Multi color LUT")
+    LI -->|content|PV("Integer pixel values")
     PV --> BG("0: Background")
     PV --> R1("1: Region 1")
     PV --> R2("2: Region 2")
@@ -30,21 +30,19 @@ figure_legend:
 
 activity_preface: >
   1. 2D connected component labeling:
-    - Open the 2D binary image "xy_8bit_binary__nuclei.tif".
+    - Open image [xy_8bit_binary__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__nuclei.tif).
     - Create a label image by means of 4-connected connected components labeling. 
     - Apply a multi-color LUT.
-    - Repeat with 8-connected labeling and appreciate the difference.
-  2. Repeat above activity with the 3D binary image "xyz_8bit_binary__spots.tif".
-    - Inspect the image historam of the label image and discuss what you can learn from it.
+    - Repeat with 8-connected labeling and discuss the difference.
+  2. 3D connected component labeling:
+    - Open image [xyz_8bit_binary__spots.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit_binary__spots.tif) 
+    - Inspect the histogram of the label image and discuss what you can learn from it.
 
 activities:
-  - ["ImageJ Macro 1", "connected_components/activities/connected_components_imagejmacro.ijm", java]
-  - ["ImageJ Macro 2", "connected_components/activities/connected_components_imagejmacro.ijm", java]
+  - ["ImageJ MorpholibJ Macro & GUI", "connected_components/activities/connected_components_imagejmacro.ijm", java]
 #  "KNIME": "connected_components/activities/connected_components_knime.md"
-#  "MATLAB": "" 
 
 exercises:
-#  - ["ImageJ Macro", "connected_components/activities/binarization_imagejmacro.md"]
 
 assessment: >
 
