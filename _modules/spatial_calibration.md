@@ -37,8 +37,8 @@ activity_preface: |
     Discuss how for certain cases one can convert pixel measurements to calibrated measurements, e.g. 
     For example area and lengths for 2D and Volume for 3D.
     Some example images:
-    - [xyz_8bit__mitotic_plate_calibrated.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit_mitotic_plate_calibrated.tif)
-    - [xyz_8bit__mitotic_plate_badZcalibrated.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit_mitotic_plate_badZcalibrated.tif)
+    - [xyz_8bit__mitotic_plate_calibrated.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit__mitotic_plate_calibrated.tif)
+    - [xyz_8bit__mitotic_plate_badZcalibrated.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit__mitotic_plate_badZcalibrated.tif)
     - [xyz_8bit__mri_head.tif](../image_data/xyz_8bit__mri_head.tif)
 
 
