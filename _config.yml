@@ -16,6 +16,16 @@ default-platform: "NONE"
 life_cycle: "pre-alpha"
 kind: "lesson"
 
+module_order:
+  - pixels
+  - spatial_calibration
+  - lut
+  - binarization
+  - connected_components
+  - measure_shapes
+  - workflow_segment_2d_nuclei_measure_shape
+  - datatypes
+
 # Sites
 repository: <USERNAME>/<PROJECT>
 cc_by_human: "https://creativecommons.org/licenses/by/4.0/"

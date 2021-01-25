@@ -3,7 +3,7 @@ title:     Binarization
 layout:    module
 prerequisites:
   - "[Basic properties of images and pixels](../pixels)"
-  - "[Data types (unsigned 8-bit)](../pixel_data_types)"
+  - "[Data types (unsigned 8-bit)](../datatypes)"
 objectives:
   - "Describe the relationship between an intensity image and a derived binary image."
   - "Apply a threshold to distinguish foreground and background pixels"
@@ -31,7 +31,7 @@ activity_preface: |
 
 activities:
   - ["ImageJ GUI", "binarization/activities/binarization_imagejgui.md", "markdown"]
-  - ["ImageJ Macro", "binarization/activities/binarization_imagejmacro.md", "java"]
+  - ["ImageJ Macro", "binarization/activities/binarization_imagejmacro.ijm", "java"]
   - ["ImageJ Jython", "binarization/activities/binarization_jython.py", "python"]
   - ["MATLAB", "binarization/activities/binarization_matlab.m", "matlab"]
   - ["KNIME", "binarization/activities/binarization_knime.md", "markdown"]
@@ -40,7 +40,7 @@ activities:
 exercises:
   - ["ImageJ GUI", "binarization/exercises/binarization_imagejgui.md"]
   - ["ImageJ Macro", "binarization/exercises/binarization_imagejmacro.md"]
-  - ["Jython", "binarization/exercises/binarization_jython.md"]
+  - ["ImageJ Jython", "binarization/exercises/binarization_jython.md"]
 
 assessment: >
 

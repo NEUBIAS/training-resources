@@ -1,5 +1,5 @@
 ---
-title: Pixels
+title: Basics properties of images and pixels
 layout: module
 
 prerequisites:
@@ -22,21 +22,23 @@ figure: /figures/pixels_2.png
 figure_legend:
 
 activity_preface: |
-  - Open image: xy_8bit__nuclei_noisy_different_intensity.tif
+  - Open image: [xy_8bit__nuclei_noisy_different_intensity.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_different_intensity.tif)
   - Explore different ways to inspect pixel values and indices, e.g.,
     - Examine individual (or a range of) pixel values
     - Plot line profiles
     - Compute and plot pixel value histograms
 
 activities:
-    - ["ImageJ GUI", "pixels/activities/pixels_imagejgui.md", "markdown"]
+  - ["ImageJ GUI", "pixels/activities/pixels_imagejgui.md", "markdown"]
 
 exercises:
 
 assessment: >
 
   ### 2D image inspection
-    Open image: xy_8bit__nuclei_noisy_different_intensity.tif
+    Open image 
+    [xy_8bit__nuclei_noisy_different_intensity.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_different_intensity.tif).
+    Hint: For certain exercises the inspection of the histogram will help
     1. What is the value of the pixel at the indices (20,20)?
     1. What is the highest value in the image?
     1. What is the most frequently occuring value in the image?
@@ -56,7 +58,7 @@ assessment: >
   {: .solution}
 
   ### 3D image inspection
-    Open image: xyz_8bit__mri_head.tif
+    Open image: [xyz_8bit__mri_head.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit__mri_head.tif)
     1. What is the value of the voxel at the indices (93,124,13)?
     1. Whats is the highest value in the image?
     
@@ -69,7 +71,10 @@ assessment: >
 exercises:
 
 learn_next:
-    "[Lookup tables](../lut)"
+   - "[Lookup tables](../lut)"
+   - "[Spatial calibration](../spatial_calibration)"
+   - "[Data types](../datatypes)"
+   
 external_links:
 
 ---
