@@ -77,9 +77,9 @@ A common algorithm for binarization is thresholding. A threshold value `t` is ch
 and all pixels with intensities below `t` are set to 0, whereas pixels with intensities `>= t` are set to the value for the foreground. 
 Depending on the software the foreground value can be different (e.g. 1 in MATLAB or 255 in ImageJ).
 
-`p_im(x,y) < t  => p_bin(x,y) = 0`
+`p_im(x,y) < t` -> `p_bin(x,y) = 0`
 
-`p_im(x,y) >= t => p_bin(x,y) = 1 or 255`
+`p_im(x,y) >= t` -> `p_bin(x,y) = 1`
 
 It is also possible to define an interval of threshold values, i.e. a lower and upper threshold value. Pixels with intensities 
 within this interval belong to the foreground. 
