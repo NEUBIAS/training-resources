@@ -1,0 +1,67 @@
+title: "Image Analysis Training Resources"
+email: "image-analysis-support@embl.de"
+description: > # this means to ignore newlines until "baseurl:"
+  A collection of material for teaching image analysis.
+  Includes concept maps, exercises, example data
+contributing: CONTRIBUTING
+
+# Build settings
+# Turn on built-in syntax highlighting.
+highlighter: rouge
+exclude: ["README.md", "TEACHING.md"]
+
+# options are: "NONE", "ImageJ GUI", "ImageJ Macro", "Jython", "MATLAB"
+default-platform: "NONE"
+
+life_cycle: "pre-alpha"
+kind: "lesson"
+
+module_order:
+  - pixels
+  - spatial_calibration
+  - lut
+  - binarization
+  - connected_components
+  - measure_shapes
+  - workflow_segment_2d_nuclei_measure_shape
+  - datatypes
+
+# Sites
+repository: <USERNAME>/<PROJECT>
+cc_by_human: "https://creativecommons.org/licenses/by/4.0/"
+
+# Specify that things in the episodes collection should be output.
+collections:
+  modules:
+    output: true
+    permalink: /:path/index.html
+  extras:
+    output: true
+    permalink: /:path/index.html
+
+# Set the default layout for things in the modules collection.
+defaults:
+  - values:
+      root: .
+      layout: page
+  - scope:
+      path: ""
+      type: modules
+    values:
+      root: ..
+      layout: module
+  - scope:
+      path: ""
+      type: extras
+    values:
+      root: ..
+      layout: page
+
+# Files and directories that are not to be copied.
+exclude:
+  - Makefile
+  - bin/
+  - .Rproj.user/
+  - .vendor/
+  - vendor/
+  - .docker-vendor/

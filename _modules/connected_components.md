@@ -3,8 +3,9 @@ title:     Connected component labeling
 layout:    module
 
 prerequisites:
-  - "[Binarization](binarization)"
-  - "[Lookup tables](lut)"
+  - "[Binarization](../binarization)"
+  - "[Lookup tables](../lut)"
+  - "[Data types](../datatypes)"
 
 objectives:
   - Understand how objects in images are represented as a label mask image.
@@ -15,11 +16,12 @@ motivation: >
 
 concept_map: >
   graph TD
-    BI("Binary image") --> CC("Connected component analysis")
-    CC -->|has parameter|C("Connectivity")
-    CC --> LI("Label image")
-    LI -->|is best seen with|MCL("Multi color LUT")
-    LI -->|has content|PV("Integer pixel values")
+    BI("Binary image") -->|input|CC("Connected component analysis")
+    C("Connectivity") -->|parameter|CC
+    OD("Output data type") -->|parameter|CC
+    CC -->|output|LI("Label image")
+    LI -->|display with|MCL("Multi color LUT")
+    LI -->|content|PV("Integer pixel values")
     PV --> BG("0: Background")
     PV --> R1("1: Region 1")
     PV --> R2("2: Region 2")
@@ -30,21 +32,22 @@ figure_legend:
 
 activity_preface: >
   1. 2D connected component labeling:
-    - Open the 2D binary image "xy_8bit_binary__nuclei.tif".
+    - Open image [xy_8bit_binary__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__nuclei.tif).
     - Create a label image by means of 4-connected connected components labeling. 
     - Apply a multi-color LUT.
-    - Repeat with 8-connected labeling and appreciate the difference.
-  2. Repeat above activity with the 3D binary image "xyz_8bit_binary__spots.tif".
-    - Inspect the image historam of the label image and discuss what you can learn from it.
+    - Repeat with 8-connected labeling and discuss the difference.
+  2. 3D connected component labeling:
+    - Open image [xyz_8bit_binary__spots.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit_binary__spots.tif) 
+    - Inspect the histogram of the label image and discuss what you can learn from it.
 
 activities:
-  - ["ImageJ Macro 1", "connected_components/activities/connected_components_imagejmacro.ijm", java]
-  - ["ImageJ Macro 2", "connected_components/activities/connected_components_imagejmacro.ijm", java]
+  - ["ImageJ MorpholibJ Macro & GUI", "connected_components/activities/connected_components_imagejmacro.ijm", java]
 #  "KNIME": "connected_components/activities/connected_components_knime.md"
-#  "MATLAB": "" 
 
 exercises:
-#  - ["ImageJ Macro", "connected_components/activities/binarization_imagejmacro.md"]
+  - ["ImageJ MorpholibJ Macro & GUI", "connected_components/exercises/connected_components_imagejmacro.md", java]
+
+
 
 assessment: >
 
@@ -72,3 +75,18 @@ learn_next:
 external_links:
   - "[Wikipedia: Connected components labeling](https://en.wikipedia.org/wiki/Connected-component_labeling)"
 ---
+
+# Connectivity
+
+In an image pixels are ordered in a squared configuration. For performing a connected component analysis 
+it is important to define which pixels are considered direct neighbors of a pixel. This is called connectivity and defines which 
+pixels are considered connected to each other. Unfortunately, there is not only one way to define connectivity. Depending,
+if we consider corner pixels or not we can have in 2D a 4 or 8--connectivity, respectively, in 3D a 6 or 26-connectivity. Which connectivity 
+value we choose can affect the object size.
+<img src="../figures/connected_components_connectivity2D.png"  align ="left" width="50%" >
+<img src="../figures/connected_components_connectivity3D.png"  align ="right" width="50%">
+
+
+
+
+

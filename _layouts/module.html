@@ -104,18 +104,18 @@ window.onload = set_view_defaults;
 
 {{ page.motivation | markdownify }}
 
-<h2>Concept</h2>
-<div class="row">
+<h2>Concept map</h2>
 <div class="mermaid">
 {{ page.concept_map }}
 </div>
+
+<h2>Example figure</h2>
 <figure>
 <img src="{{ page.figure | relative_url }}" class="example_figure">
 {% if page.figure_legend %}
 <figcaption>{{ page.figure_legend }}</figcaption>
 {% endif %}
 </figure>
-</div>
 
 <div class="module-content">
 {{ content }}
