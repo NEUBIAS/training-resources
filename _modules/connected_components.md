@@ -75,3 +75,18 @@ learn_next:
 external_links:
   - "[Wikipedia: Connected components labeling](https://en.wikipedia.org/wiki/Connected-component_labeling)"
 ---
+
+# Connectivity
+
+In an image pixels are ordered in a squared configuration. For performing a connected component analysis 
+it is important to define which pixels are considered direct neighbors of a pixel. This is called connectivity and defines which 
+pixels are considered connected to each other. Unfortunately, there is not only one way to define connectivity. Depending,
+if we consider corner pixels or not we can have in 2D a 4 or 8--connectivity, respectively, in 3D a 6 or 26-connectivity. Which connectivity 
+value we choose can affect the object size.
+<img src="../figures/connected_components_connectivity2D.png"  align ="left" width="50%" >
+<img src="../figures/connected_components_connectivity3D.png"  align ="right" width="50%">
+
+
+
+
+
