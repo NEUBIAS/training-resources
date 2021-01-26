@@ -9,8 +9,8 @@
 run("Close All");
 run("Options...", "iterations=1 count=1 black do=Nothing");
 
-analyseNuclei( "INCENP_T1", "https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_mitocheck_incenp_t1.tif" );
-analyseNuclei( "INCENP_T70", "https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_mitocheck_incenp_t70.tif" );
+analyseNuclei( "INCENP_T1", "https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__mitocheck_incenp_t1.tif" );
+analyseNuclei( "INCENP_T70", "https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__mitocheck_incenp_t70.tif" );
 run("Tile");
 
 function analyseNuclei( name, filePath )
