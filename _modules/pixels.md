@@ -1,5 +1,5 @@
 ---
-title: Basics properties of images and pixels
+title: Basic properties of images and pixels
 layout: module
 
 prerequisites:
