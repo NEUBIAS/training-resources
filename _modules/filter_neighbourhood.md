@@ -1,11 +1,14 @@
 ---
-title:     Neighbourhood filters
+title:     Neighbourhood filters (introduction)
 layout:    module
 prerequisites:
   - "[Image pixels](image_pixels)"
+  - "[Binarization](binarization)"
+
 objectives:
   - Understand the basic principle of a neighbourhood filter.
   - Apply a mean filter to an image.
+
 motivation: >
   Images are quite often noisy or have other issues that make them hard to segment, e.g. by means of a simple intensity threshold. Neighbourhood filters are a very important (maybe the most important) means to enhanced images in a sense of making them more amendable for segmentation. 
 
@@ -17,25 +20,22 @@ concept_map: >
     A -->NP(New pixel value) 
 
 figure: /figures/filter_neighbourhood.png
-figure_legend: The same input image filtered with neighborhood filters of different kinds (mean, median, edge) and shapes (circular with a radius of 1 pixel, top row; radius of 3 pixels, bottom row).
+figure_legend: Image with a pixel neighourhood. Same image filtered with neighborhood filters of different kinds (mean, median, vertical edge) and structuring elements (circular with a radius of 1 pixel, top row; radius of 3 pixels, bottom row).
 
-activity_preface: >
-  Open image [xy_8bit__noisy_two_nuclei.tif]( https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__noisy_two_nuclei.tif) and explore the effect of a mean filter of different sizes.
+activity_preface: |
+  - Open image [xy_8bit__noisy_two_nuclei.tif]( https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__noisy_two_nuclei.tif)
+  - Explore the effect of a mean filter of different sizes.
+  - Find the minimal size of a mean filter that enables binarization of the image into two forground objects (i.e. the nuclei).
 
 activities:
-- ["ImageJ Macro & GUI", "filter_neighbourhood/activities/mean_filter_imagejmacro.ijm", "java"]
+- ["ImageJ Macro & GUI", "filter_neighbourhood/activities/filter_mean_imagejmacro.ijm", "java"]
 # "KNIME": "filter_neighbourhood/activities/mean_filter_knime.md"
 #  "ImageJ Macro":
 #  "Jython":
 #  "MATLAB":
 
-exercises_preface: >
-
 exercises:
-#  "ImageJ GUI": 
-#  "ImageJ Macro":
-#  "Jython":
-#  "MATLAB":
+  - ["ImageJ Macro & GUI", "filter_neighbourhood/exercises/filter_mean_imagejmacro.md"]
 
 learn_next:
 - "[Convolution filters](filter_convolution)"
@@ -59,3 +59,7 @@ Here, we use one of the simplest and most widely used neighbourhoods, namely a c
 #### The math
 
 There are really many many ways how to cleverly compute on a pixel neighborhood. For example, one class of computations is called convolutional filters, another is called rank filters. Here, we focus on the relatively simple mean filter, which is the mean filter.
+
+#### Best practice
+
+As usual, everything depends one the scientific question, but maybe one could say to use a filter that changes the image as little as possible.
