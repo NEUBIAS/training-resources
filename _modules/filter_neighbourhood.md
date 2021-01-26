@@ -2,8 +2,8 @@
 title:     Neighbourhood filters (introduction)
 layout:    module
 prerequisites:
-  - "[Image pixels](image_pixels)"
-  - "[Binarization](binarization)"
+  - "[Image pixels](../pixels)"
+  - "[Binarization](../binarization)"
 
 objectives:
   - Understand the basic principle of a neighbourhood filter.
@@ -26,7 +26,8 @@ activity_preface: |
   - Open image [xy_8bit__noisy_two_nuclei.tif]( https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__noisy_two_nuclei.tif)
   - Explore the effect of a mean filter of different sizes.
   - Find the minimal size of a mean filter that enables binarization of the image into two forground objects (i.e. the nuclei).
-
+  
+  
 activities:
 - ["ImageJ Macro & GUI", "filter_neighbourhood/activities/filter_mean_imagejmacro.ijm", "java"]
 # "KNIME": "filter_neighbourhood/activities/mean_filter_knime.md"
@@ -37,19 +38,39 @@ activities:
 exercises:
   - ["ImageJ Macro & GUI", "filter_neighbourhood/exercises/filter_mean_imagejmacro.md"]
 
+assessment: >
+  #### Fill in the blanks
+    Fill in the blanks, using these words: structuring element, mean filter, size, brightness, large, small, decrease, increase, help
+    - A synonym for neighbourhood is  ____
+    - The filter radius characterize the filter ___
+    - ___ filter size can cause a loss of details in the filtered image
+    - Filter can be used to ____ the noise in an image
+    - The usage of filters can ____ image segmentation/binarization
+    
+    > ## Solution
+    > - A synonym for neighbourhood is **structuring element**
+    > - Filter radius is describe the filter ___
+    > - **large** filter size can cause a loss of details in the filtered image
+    > - Filter can be used to **decrease** the noise in an image
+    > - The usage of filters can ____ image segmentation/binarization
+    {: .solution}
 learn_next:
-- "[Convolution filters](filter_convolution)"
-- "[Rank filters](filter_rank)"
-
+- "[Convolution filters](../filter_convolution)"
+- "[Rank filters](../filter_rank)"
+- "[Median filter](../median_filter)"
 external_links:
 
 ---
 
 ### Neighbourhood filers
 
-Neighborhood filters comprise two ingredients: a definition of the pixel neighbourhood (size and shape) and a mathematical recipe what to compute on this neighourhood. The result of this computation will be used to replace the value of the central pixel in the neighbourhood.
+Neighborhood filters comprise two ingredients: a definition of the pixel neighbourhood (size and shape) and a mathematical recipe what to compute on this neighbourhood. 
+The result of this computation will be used to replace the value of the central pixel in the neighbourhood. This procedure can be applied to several (all) pixels of an image 
+to obtain a filtered image. The animation shows a square neighbourhoods (3x3) applied to the inner pixels of the image. 
 
 There are really tons of different neighborhood filters, and you can invent a new one!
+
+<img src="../figures/filter_neighbourhood.gif"  align ="center" width="50%" >
 
 #### The neighbourhoods 
 
@@ -63,3 +84,5 @@ There are really many many ways how to cleverly compute on a pixel neighborhood.
 #### Best practice
 
 As usual, everything depends one the scientific question, but maybe one could say to use a filter that changes the image as little as possible.
+
+
