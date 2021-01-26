@@ -16,15 +16,18 @@ default-platform: "NONE"
 life_cycle: "pre-alpha"
 kind: "lesson"
 
-#module_order:
-#  - pixels
-#  - spatial_calibration
-#  - lut
-#  - binarization
-#  - connected_components
-#  - measure_shapes
-#  - workflow_segment_2d_nuclei_measure_shape
-#  - datatypes
+module_order:
+  - pixels
+  - spatial_calibration
+  - lut
+  - binarization
+  - connected_components
+  - measure_shapes
+  - workflow_segment_2d_nuclei_measure_shape
+  - filter_objects
+  - filter_neighbourhood
+  - workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape
+  - datatypes
 
 # Sites
 repository: <USERNAME>/<PROJECT>
