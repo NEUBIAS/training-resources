@@ -1,3 +1,5 @@
+run("Close All")
+
 // File > Open
 open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__nuclei_touchborder.tif")
 
