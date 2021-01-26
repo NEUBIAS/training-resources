@@ -52,7 +52,7 @@ exercises:
 assessment: >
 
   #### Fill in the blanks
-    Fill in the blanks, using these words: less, more, 8, 255, 4, more.
+    Fill in the blanks, using these words: less, more, 6, 255, 4, more.
     1. In 3D, pixels have _____ neighbors than in 2D.
     1. 8-connected connectivity results in _____ objects than 4-connected connectivity.
     1. In 3D, pixels have ____ non-diagonal neighbors.
@@ -63,7 +63,7 @@ assessment: >
     > ## Solution
     > 1. more
     > 1. less
-    > 1. 8
+    > 1. 6
     > 1. 4
     > 1. 255
     > 1. less
