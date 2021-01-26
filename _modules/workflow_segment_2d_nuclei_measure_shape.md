@@ -29,8 +29,8 @@ figure_legend: Nuclei segmentation and area measurement
 activity_preface: |
   
   #### Input images
-    - [xy_8bit_mitocheck_incenp_t1.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_mitocheck_incenp_t1.tif)
-  - [xy_8bit_mitocheck_incenp_t70.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_mitocheck_incenp_t70.tif)
+    - [xy_8bit__mitocheck_incenp_t1.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__mitocheck_incenp_t1.tif)
+  - [xy_8bit__mitocheck_incenp_t70.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__mitocheck_incenp_t70.tif)
   
   The images are two time points of a time lapse experiment where the INCENP gene was subjected to siRNA knock-down. The data are taken from the published [mitocheck screen](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3108885/). In this screen the authors carried out a genome-wide phenotypic profiling of each of the ~21,000 human protein-coding genes by two-day live imaging of fluorescently labelled chromosomes. Phenotypes were scored quantitatively by computational image processing, which allowed them to identify hundreds of human genes involved in diverse biological functions including cell division, migration and survival.
   
