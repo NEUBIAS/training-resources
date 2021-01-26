@@ -1,6 +1,8 @@
 /**
- * 2D Nuclei segmentation (simple workflow)
- * 
+ * 2D nuclei segmentation, including
+ *  - image denoising by a mean filter
+ *  - removal of small and boundary objects
+ *  
  * Requirements:
  *   - Update site: IJPB-Plugins (MorpholibJ)
  * 
@@ -9,8 +11,8 @@
 run("Close All");
 run("Options...", "iterations=1 count=1 black do=Nothing");
 
-analyseNuclei( "INCENP_T1", "https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_mitocheck_incenp_t1.tif" );
-analyseNuclei( "INCENP_T70", "https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_mitocheck_incenp_t70.tif" );
+analyseNuclei( "Ctrl", "https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_small.tif" );
+//analyseNuclei( "Treat", "https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_large.tif" );
 run("Tile");
 
 function analyseNuclei( name, filePath )
@@ -22,6 +24,10 @@ function analyseNuclei( name, filePath )
 	// Image › Adjust › Brightness/Contrast...
 	setMinAndMax(0, 100);
 	// Image › Duplicate...
+	run("Duplicate...", "title=" + name + "_denoise" );
+	// Process › Filters › Mean...
+	run("Mean...", "radius=3");
+	// Image › Duplicate...
 	run("Duplicate...", "title=" + name + "_binary" );
 	// Image › Adjust › Threshold...  [ Apply ]
 	setThreshold(25, 255);
@@ -30,6 +36,10 @@ function analyseNuclei( name, filePath )
 	run("Connected Components Labeling", "connectivity=4 type=[8 bits]");
 	// Image › Lookup Tables › glasbey_on_dark
 	run("glasbey_on_dark");
+	// Plugins › MorphoLibJ › Label Images › Label Size Opening
+	run("Label Size Opening", "min=100");
+	// Plugins › MorphoLibJ › Label Images › Remove Border Labels
+	run("Remove Border Labels", "left right top bottom");
 	// Plugins › MorphoLibJ › Analyze › Analyze Regions
 	run("Analyze Regions", "area");
 }
