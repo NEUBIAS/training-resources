@@ -19,8 +19,8 @@ figure: /figures/filter_objects.png
 figure_legend: 
 
 activity_preface: |
-  Open a label mask image and remove labels (objects) from it. Discuss how filtering can also be done afterwards using execel. 
-  Advantages to created a filtered label image.
+  Open a label mask image and remove labels (objects) from it. Discuss how filtering can also be done afterwards using a spread-sheet software. 
+  Advantages to create a filtered label image.
   
 activities:
     - ["ImageJ Macro & GUI", "filter_objects/activities/filter_objects_imagejmacro_gui.ijm", "java"]
@@ -51,6 +51,7 @@ assessment: >
     > 1. Automated typically is better as it forces you to define objective and reproducible criteria for which objects to remove.
     > 1. Very important topic, but too much to write, ask your bioimage analysis consultant ;-)
     {: .solution}
+    
 learn_next:
 
 external_links:
