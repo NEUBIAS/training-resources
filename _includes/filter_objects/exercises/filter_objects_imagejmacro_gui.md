@@ -11,6 +11,6 @@
 >// Plugins › MorphoLibJ › Analyze › Analyze Regions
 > run("Analyze Regions", "area")
 > // Plugins › MorphoLibJ › Label Images › Label Size Filtering
-> run("Label Size Filtering", "operation=Larger_Than size=4000");
+> run("Label Size Filtering", "operation=Lower_Than size=4000");
 > ```
 {: .solution}
