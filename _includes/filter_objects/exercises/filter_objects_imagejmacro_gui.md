@@ -4,6 +4,7 @@
 
 > ## Solution
 > ```
+> run("Close All")
 > // File > Open
 > open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__nuclei_touchborder_2.tif")
 > //  Plugins › MorphoLibJ › Label Images › Remove Border Labels
