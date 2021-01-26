@@ -45,7 +45,7 @@ activities:
 #  "KNIME": "connected_components/activities/connected_components_knime.md"
 
 exercises:
-  - ["ImageJ MorpholibJ Macro & GUI", "connected_components/exercises/connected_components_imagejmacro.md", java]
+  - ["ImageJ MorpholibJ Macro & GUI", "connected_components/exercises/connected_components_imagejmacro.md"]
 
 
 
