@@ -56,7 +56,7 @@ assessment: |
     
     > ## Solution
     >   - Given a 2D image with pixel-height = pixel-width = 0.13 um. What is a distance of 147 pixels? **147 * 0.13 = 19.11 um** 
-    >   - What is the area spanned by 10 pixels in um2 with a spatial calibration with pixel-height = pixel-width = 0.13 um? **10 * 0.13 * 0.13 = 0.39 um2**
+    >   - What is the area spanned by 10 pixels in um2 with a spatial calibration with pixel-height = pixel-width = 0.13 um? **10 * 0.13 * 0.13 = 0.169 um2**
     {: .solution}
 
 
