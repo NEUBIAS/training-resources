@@ -2,7 +2,7 @@
 title:     Neighbourhood filters (introduction)
 layout:    module
 prerequisites:
-  - "[Image pixels](../pixels)"
+  - "[Basic properties of images and pixels](../pixels)"
   - "[Binarization](../binarization)"
 
 objectives:
