@@ -32,7 +32,7 @@ run("32-bit");
 run("Subtract...", "value=104.399");
 
 // Image › Adjust › Brightness/Contrast...
-setMinAndMax(-10, 30);
+setMinAndMax(-5, 10);
 
 // Use the Line tool from ImageJ's tool bar
 makeLine(17, 7, 69, 94);

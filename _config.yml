@@ -29,6 +29,7 @@ module_order:
   - workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape
   - datatypes
   - measure_intensities
+  - global_background_correction
 
 # Sites
 repository: <USERNAME>/<PROJECT>
