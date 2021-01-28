@@ -69,3 +69,11 @@ external_links:
 #### Background correction
 
 In this module the images that we work are background corrected, meaning that the average intensity in regions without objects is zero. In general this is not the case and, in fact, proper background correction is a super important and very often also quite difficult task in bioimage analysis. There are thus several modules dedicated to background correction for intensity measurements. See below "Learn next" section.
+
+#### Key points
+
+- Intensity measurements are generally very tricky and most likely the source of many scientific mistakes. Please always consider consulting an bioimage analysis expert!
+- Intensity measurements need a background correction. This can be achieved in several ways.
+- At least, think carefully about whether the mean or sum intensity is the right readout for your biological question.
+- If you publish or present something label your measurement properly, e.g. “Sum Intensity”. Just “Intensity” is not enough!
+- Objects based intensity measurements require two input images: the (background corrected) intensity image and a label mask image.
