@@ -15,13 +15,11 @@ motivation: >
 
 concept_map: >
   graph LR
-    li[Label Image] --> im("Intensity Measurement")
-    li[Intensity Image] --> im("Intensity Measurement")
-    li[Intensity Image] -->|may be|bc("Background corrected")
-    im -.-> |"example <br> intensity features"| ex["mean <br>sum <br>max"]
-    im --> table[]"Results table"]
-    table --> object_rows["Rows are objects"]
-    table --> feature_columns["Columns are intensity features"]
+    li[Label image] --> im("Intensity measurement")
+    ii[Intensity image] --> im("Intensity measurement")
+    ii[Intensity image] -->|may be|bc("Background corrected")
+    im --> table["Results table"]
+    table --> object_rows["Rows: Objects<br><br>Columns: Features<br>e.g., mean, sum, max"]
 
 figure: /figures/measure_intensities.png
 figure_legend: Object intensity measurements. 
@@ -30,40 +28,49 @@ activity_preface: |
   - Open image [xy_float__h2b_bg_corr.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_float__h2b_bg_corr.tif)
   - Appreciate that the mean intensity in the background is zero.
   - Open label mask [xy_8bit_labels__h2b_bg_corr](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__h2b_bg_corr.tif)
- Explain simple shape features (area, volume, perimeter) and some more complexes
-    like circularity, elongation. Show that results can also be represented as an image.
- 
+  - Measure the mean, max and sum intensities in both objects
+  - Discuss the measurements' biophysical interpretation
+    - The signal is H2B in a dividing and in an interphase cell.
+    - Importantly, this was acquired with a widefield microscope!
+      - The interpretation for a confocal microscope would be different!
+  - Discuss that it is not really clear how large exactly the label regions have to be
+  - Open label mask [xy_8bit_labels__larger_regions_h2b_bg_corr](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__larger_regions_h2b_bg_corr.tif)
+  - Measure the intensities again, one with the larger label mask
+  - Discuss which values changed and by how much percent
+
 activities:
-    - ["ImageJ GUI", "measure_shapes/activities/measure_shapes_imagejgui.md", "markdown"]
+    - ["ImageJ Macro & GUI", "measure_intensities/activities/measure_intensities_imagejmacro.ijm", "java"]
 
 exercises:
-    - ["ImageJ GUI", "measure_shapes/exercises/measure_shapes_imagejgui.md"]
 
-assessment: >
+assessment: |
 
-    ### True or false? Discuss with your neighbour      
-       * Circularity is independent of image calibration.
-       * Area is independent of image calibration.
-       * Perimeter can strongly depend on spatial sampling.
-       * Volume can strongly depend on spatial sampling.
-       * Drawing test images to check how certain shape parameters behave is a good idea.
-       
+  ### Fill in the blanks (discuss with your neighbour)
+
+    Fill in the blanks, using these words: number of pixels, integrated, mean, decrease, increase, increase, sum, decrease
+
+    1. Average intensity is just another word for \_\_\_\_ intensity.
+    1. Sum intensity is sometimes also called \_\_\_\_ intensity.
+    1. The \_\_\_\_ intensity is equal to the mean intensity times the \_\_\_\_ in the measured region.
+    1. In an unsigned integer image, increasing the size of the measurement region can only _____ the sum intensity.
+    1. In an unsigned integer image, decreasing the size of the measurement region can \_\_\_\_ or \_\_\_\_ the mean intensity.
+    1. In a floating point image, increasing the size of the measurement region could \_\_\_\_ the sum intensity.
+    
      > ## Solution
-     > - Circularity is independent of image calibration **True**
-     > - Area is independent of image calibration. **False**
-     > - Perimeter can strongly depend on spatial sampling. **True**
-     > - Volume can strongly depend on spatial sampling. **True**
-     > - Drawing test images to check how certain shape parameters behave is a good idea. **True**
+     > 1. mean
+     > 1. integrated
+     > 1. sum, number of pixels
+     > 1. increase
+     > 1. decrease, increase
+     > 1. decrease
      {: .solution}
 
 learn_next:
-  - "[Workflow - Simple 2D object analysis](../workflow_segment_2d_nuclei_measure_shape)"
-  - "[Object intensity meaurements](../measure_intensities)"
-
+  - "[Global background subtraction](../global_background_subtraction)"
+  - "[Local background subtraction](../local_background_subtraction)"
 
 external_links:
-    - "[Wikipedia coastal line paradox](https://en.wikipedia.org/wiki/Coastline_paradox). Effect of Sampling and resolution on the measurements"
-    - "[Results visualisation](https://imagej.net/MorphoLibJ#Grayscale_morphological_filters). Label visualization in 3D viewer"
+
 
 ---
 #### Background correction
