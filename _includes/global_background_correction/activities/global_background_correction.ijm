@@ -1,59 +1,41 @@
-open("/Users/tischer/Documents/training-resources/image_data/xy_8bit__two_nuclei_high_background.tif");
-run("In [+]");
-run("In [+]");
-run("In [+]");
-run("In [+]");
-run("In [+]");
-close();
-open("/Users/tischer/Documents/training-resources/image_data/xy_8bit__nuclei_high_dynamic_range.tif");
-//run("Brightness/Contrast...");
-run("Enhance Contrast", "saturated=0.35");
-run("In [+]");
-run("In [+]");
-run("In [+]");
-run("In [+]");
-run("Enhance Contrast", "saturated=0.35");
-run("Enhance Contrast", "saturated=0.35");
-run("16-bit");
-run("Add...", "value=100");
-run("Enhance Contrast", "saturated=0.35");
-run("Add Noise");
-run("Undo");
-run("Add Specified Noise...", "standard=5");
-run("Enhance Contrast", "saturated=0.35");
-run("Undo");
-//setTool("line");
-makeLine(119, 75, 49, 42);
-run("Plot Profile");
-close();
-selectWindow("xy_8bit__nuclei_high_dynamic_range.tif");
-makeLine(47, 30, 47, 30);
-makeLine(5, 7, 144, 94);
-run("Plot Profile");
-close();
-selectWindow("xy_8bit__nuclei_high_dynamic_range.tif");
-makeLine(103, 32, 103, 32);
-makeLine(108, 27, 108, 27);
-saveAs("Tiff", "/Users/tischer/Documents/training-resources/image_data/xy_16bit__nuclei_high_dynamic_range_with_offset.tif");
-open("/Users/tischer/Documents/training-resources/image_data/xy_8bit__nuclei_PLK1_inhibition.tif");
-close();
-open("/Users/tischer/Documents/training-resources/image_data/xy_16bit__scanR_datatype_issue.tif");
-run("Histogram");
-close();
-close();
-selectWindow("xy_16bit__nuclei_high_dynamic_range_with_offset.tif");
-//run("Brightness/Contrast...");
+/**
+ * Global background correction
+ */
+
+
+run("Close All");
+
+open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit__nuclei_high_dynamic_range_with_offset.tif");
+
+// Image › Adjust › Brightness/Contrast...
 setMinAndMax(100, 115);
-//setTool("rectangle");
+
+// Use the Rectangle tool from ImageJ's tool bar
 makeRectangle(4, 8, 20, 42);
-run("Measure");
+
+// Analyze › Set Measurements...
 run("Set Measurements...", "mean redirect=None decimal=3");
+
+// Analyze › Measure
+run("Measure");
+
+// Edit › Selection › Select None (VERY IMPORTANT, otherwise everything you do later will only operate on this region)
 run("Select None");
+
+// Image › Duplicate...
+run("Duplicate...", "title=float");
+
+// Image › Type › 32-bit
 run("32-bit");
+
+// Process › Math › Subtract...
 run("Subtract...", "value=104.399");
-//run("Brightness/Contrast...");
-run("Enhance Contrast", "saturated=0.35");
+
+// Image › Adjust › Brightness/Contrast...
 setMinAndMax(-10, 30);
-//setTool("line");
+
+// Use the Line tool from ImageJ's tool bar
 makeLine(17, 7, 69, 94);
+
+// Analyze › Plot Profile
 run("Plot Profile");

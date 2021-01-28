@@ -41,6 +41,7 @@ activity_preface: |
       - mean intensity outside objects
 
 activities:
+    - ["ImageJ Macro & GUI", "global_background_correction/activities/global_background_correction.ijm", "java"]
 
 exercises_preface:
 
