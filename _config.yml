@@ -28,6 +28,7 @@ module_order:
   - filter_neighbourhood
   - workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape
   - datatypes
+  - measure_intensities
 
 # Sites
 repository: <USERNAME>/<PROJECT>
