@@ -1,58 +1,65 @@
 ---
-title:     Intensity measurements
+title:     Object shape measurements
 layout:    module
+
+
+prerequisites:
+  - "[Connected component analysis](../connected_components)"
+    
+objectives:
+  - Understand shape measurements and their limitations
+  - Perform shape measurements on objects. 
+  
+motivation: >
+ Our eyes are extremely good in distinguishing forms and this has proven to be a powerful tool for characterizing different 
+ cell-types, functions, phenotypes, etc. In image processing we use shape measurements (e.g. area, 
+ volume, elongation, ...) for an automated and objective characterization of forms. From the shape features we can address
+ scientific questions or filter objects that should be used for further processing. 
+ Typically we apply shape measurements on a labeled image. The labeled image, as obtained after a connected component analysis, 
+ defines a set of objects in 2D/3D. 
+
+concept_map: >
+  graph LR
+    li[Label Image] --> sa("Shape Analysis")
+    li -.-> |"example <br> shape features"| ex["area (volume) <br> perimeter (surface)<br>circularity = 4 Pi A/P^2"]
+    sa --> table("Results table")
+    table --> object_rows["Rows are objects"]
+    table --> feature_columns["Columns are shape features"]
+
+activity_preface: |
+    Open an image and perform shape measurements. Explain simple shape features (area, volume, perimeter) and some more complexes
+    like circularity, elongation. Show that results can also be represented as an image.
+ 
+activities:
+    - ["ImageJ GUI", "measure_shapes/activities/measure_shapes_imagejgui.md", "markdown"]
+
+exercises:
+    - ["ImageJ GUI", "measure_shapes/exercises/measure_shapes_imagejgui.md"]
+
+assessment: >
+
+    ### True or false? Discuss with your neighbour      
+       * Circularity is independent of image calibration.
+       * Area is independent of image calibration.
+       * Perimeter can strongly depend on spatial sampling.
+       * Volume can strongly depend on spatial sampling.
+       * Drawing test images to check how certain shape parameters behave is a good idea.
+       
+     > ## Solution
+     > - Circularity is independent of image calibration **True**
+     > - Area is independent of image calibration. **False**
+     > - Perimeter can strongly depend on spatial sampling. **True**
+     > - Volume can strongly depend on spatial sampling. **True**
+     > - Drawing test images to check how certain shape parameters behave is a good idea. **True**
+     {: .solution}
+
+learn_next:
+  - "[Workflow - Simple 2D object analysis](../workflow_segment_2d_nuclei_measure_shape)"
+  - "[Object intensity meaurements](../measure_intensities)"
+
+
+external_links:
+    - "[Wikipedia coastal line paradox](https://en.wikipedia.org/wiki/Coastline_paradox). Effect of Sampling and resolution on the measurements"
+    - "[Results visualisation](https://imagej.net/MorphoLibJ#Grayscale_morphological_filters). Label visualization in 3D viewer"
+
 ---
-
-## Intensity measurements
-
-### Concept map
-
-```mermaid
-graph TD
-   (TODO)
-```
-
-### Activity: Measure intensities in image regions
-
-* Open image: xy_float__h2b_bg_corr.tif
-* Appreciate that this image is already background corrected.
-* Measure for both nuclei:
-        * Maximum intensity
-        * Average intensity
-        * Median intensity
-        * Sum intensity
-* Discuss the interpretation!
-* Discuss where to measure!
-
-
-### Optional activity: Intensity measurements without pixel based background correction
-
-#### Motivation
-
-There are several good reasons not to subtract the background from each pixel in an image:
-
-* It is a bit tricky to do it right, because one has to convert to float to accomodate floting point and negative values.
-* If one has really big image data (TB) one would need (at least) another TB storage for the background corrected version of the image.
-
-#### Workflow
-
-* Open image: xy_calibrated_8bit__two_nuclei_high_background.tif
-* Measure for both nuclei and a background region:
-        * Maximum intensity
-        * Average intensity
-        * Median intensity
-        * Sum intensity
-* Discuss how to correct the intensities for the background
-        * Appreciate that you also need the region areas for this task
-        * Measure the region areas
-                * Watch out: the image is calibrated!
-                * Use the area for the correction.
-
-### Formative assessment: Intensity measurements
-
-Fill in the blanks, using these words: integrated, mean, number_of_pixels, decrease, increase, sum
-
-1. Average intensity is just another word for _____ intensity.
-2. The _____ intensity is equal to the mean intensity times the _____ in the measured region.
-3. In an 8-bit image, increasing the size of the measurement region can only _____ the sum intensity.
-4. In a float image, increasing the size of the measurement region can _____ the sum intensity.
