@@ -16,6 +16,7 @@ rename("intensity");
 run("Set... ", "zoom=400");
 
 open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__h2b_bg_corr.tif");
+//open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__larger_regions_h2b_bg_corr.tif");
 rename("labels");
 run("glasbey_on_dark");
 run("Set... ", "zoom=400");
