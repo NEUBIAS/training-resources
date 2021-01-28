@@ -19,12 +19,12 @@ concept_map: >
   graph TD
     I("Image") --> SB("Subtract background")
     SB --> BCI("Background corrected image")
-    BCI -->|"should be"| FP("Floating point")
+    BCI ---|"datatype"| FP("Floating point")
     I --> MB("Measure background")
     MB --> SB
 
-figure: 
-figure_legend: 
+figure: figures/global_background_correction.png
+figure_legend: Image before and after background correction
 
 activity_preface: |
   - Open image [xy_16bit__nuclei_high_dynamic_range_with_offset](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit__nuclei_high_dynamic_range_with_offset.tif)
@@ -33,8 +33,7 @@ activity_preface: |
     - Choose rather dim nuclei of different intensities
     - Measure the intensity ratio with and without background correction
   - Subtract the background value from the image
-    - Appreciate that this yields a non-zero background for unsigned integer data types
-    - Appreciate that a floating point data type is thus necessary
+    - Appreciate that this yields a non-zero background for unsigned integer data types and that a floating point data type is thus necessary
   - Open image [xy_16bit__scanR_datatype_issue](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit__scanR_datatype_issue.tif)
     - Discuss automated global background estimation methods, e.g.
       - mode
