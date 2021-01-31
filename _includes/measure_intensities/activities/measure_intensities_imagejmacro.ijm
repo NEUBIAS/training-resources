@@ -25,6 +25,12 @@ run("Set... ", "zoom=400");
 
 run("Tile");
 
+/**
+ * Display labels as overlays
+ **/
+selectWindow("intensity");
+run("Add Image...", "image=labels x=0 y=0 opacity=50");
+
 /** 
  * Measure object intensities
  */

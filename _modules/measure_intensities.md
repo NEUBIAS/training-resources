@@ -35,6 +35,7 @@ activity_preface: |
       - The interpretation for a confocal microscope would be different!
   - Discuss that it is not really clear how large exactly the label regions have to be
   - Open label mask [xy_8bit_labels__larger_regions_h2b_bg_corr](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__larger_regions_h2b_bg_corr.tif)
+  - Display the label mask on top of the raw image **[Image > Overlay > Add Image...]**
   - Measure the intensities again, one with the larger label mask
   - Discuss which values changed and by how much percent
 
