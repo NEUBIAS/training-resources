@@ -40,11 +40,11 @@ Which measurement could be problematic?
 >  // Image > Adjust > Brightness/Contrast... Auto
 >  run("Enhance Contrast", "saturated=0.35");
 >  // File > Open
->  open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__nup.tif");\
+>  open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__nup.tif");
 >  // Check if label mask fit our expected rim
 >  // Image > Overlay > Add Image...
 >  selectWindow("xy_8bit__nup_bgsubtracted.tif");
->  run("Add Image...", "image=xy_8bit_labels__nup x=0 y=0 opacity=50");
+>  run("Add Image...", "image=xy_8bit_labels__nup.tif x=0 y=0 opacity=50");
 >  run("Tile")
 >```
 {: .solution}
