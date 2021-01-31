@@ -66,7 +66,7 @@ assessment: |
      {: .solution}
 
 learn_next:
-  - "[Global background subtraction](../global_background_subtraction)"
+  - "[Global background subtraction](../global_background_correction)"
   - "[Local background subtraction](../local_background_subtraction)"
 
 external_links:
