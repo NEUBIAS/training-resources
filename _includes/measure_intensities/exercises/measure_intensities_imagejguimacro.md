@@ -20,7 +20,7 @@ shows the intensity of a nuclear pore protein (NUP) on the nuclear membrane. Ope
 >  // Image > Adjust > Brightness/Contrast... Auto
 >  run("Enhance Contrast", "saturated=0.35");
 >  // File > Open
->  open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__nup.tif");\
+>  open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__nup.tif");
 >
 >  // Measure intensities
 >  //Plugins > MorpholibJ > Analyze > Intensity Measurements 2D/3D
