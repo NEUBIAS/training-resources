@@ -1,10 +1,54 @@
-Open image [xy_16bit_labels__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit_labels__nuclei.tif)
-1. Measure shapes and find label index of nuclei with largest perimeter
-2. Create an image with the circulaty feature displayed
-3. Change pixel size to 0.5 um and repeat the measurements. Why some parameters change and some other don't ?
+Open image 
+[xy_16bit__nuclei_with_background.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit__nuclei_with_background.tif)
+1. Measure the background 
+2. Subtract the background from the image 
+3. Is the mean intensity in the background region close to 0 (<<1)? If not which image conversion have you forgotten?
+3. Verify that the histogram has not been clipped by the background subtraction operation.
 
 > ## Solution
-> 1. **[Plugins > MorphoLibJ > Analyze > Analyze Regions]** the upper right nuclei.
-> 2. **[Plugins > MorphoLibJ > Label Regions > Assign Measure to Label]**.
-> 3. Some features are the ratio of dimensional features and so are independent of the spatial calibration.
+> run("Close All");
+> roiManager("reset");
+> run("Clear Results");
+> open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit__nuclei_with_background.tif");
+> rename("intenisty")
+> // 1. Measure the background
+> // Draw a rectangle 
+> makeRectangle(19, 16, 70, 52);
+>
+> //Add to RoiManager using key t
+> roiManager("Add");
+> // Measure intensity
+> run("Measure");
+> // Disable current ROI (select the whole image or click on it)
+> run("Select All");
+>
+> // 2. Subtract the background without conversion  and check mean in background region
+> // Process › Math › Subtract...
+> run("Subtract...", "value=104.182");
+> rename("bg subtracted 16bit")
+> setMinAndMax("0.00", "100");
+> run("Enhance Contrast", "saturated=0.35");
+> // Measure the intensity in background region
+> roiManager("Select", 0);
+> run("Measure");
+> run("Histogram");
+> 
+> // 3. Subtract the background with prior conversion
+> // Open the image again
+> open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit__nuclei_with_background.tif");
+> // Subtract the background with prior conversion to float (32-bit)
+> // Image > Type > 32-bit
+> run("32-bit");
+> //  Process › Math › Subtract...
+> run("Subtract...", "value=104.182");
+> run("Enhance Contrast", "saturated=0.35");
+> rename("bg subtracted 32bit")
+> // Measure the intensity in background region
+> roiManager("Select", 0);
+> run("Measure");
+> setMinAndMax("0.00", "100");
+> run("Histogram", "bins=256 use x_min=0 x_max=81.47 y_max=Auto");
 {: .solution}
+
+
+Can you think of a way of automatically computing a global background? 
