@@ -41,8 +41,9 @@ activity_preface: |
 activities:
     - ["ImageJ Macro & GUI", "measure_intensities/activities/measure_intensities_imagejmacro.ijm", "java"]
 
-exercises:
-
+exercises: 
+    - ["ImageJ Macro & GUI", "measure_intensities/exercises/measure_intensities_imagejguimacro.md"]
+    
 assessment: |
 
   ### Fill in the blanks (discuss with your neighbour)
@@ -66,7 +67,7 @@ assessment: |
      {: .solution}
 
 learn_next:
-  - "[Global background subtraction](../global_background_subtraction)"
+  - "[Global background subtraction](../global_background_correction)"
   - "[Local background subtraction](../local_background_subtraction)"
 
 external_links:
