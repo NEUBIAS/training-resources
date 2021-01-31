@@ -17,14 +17,19 @@ shows the intensity of a nuclear pore protein (NUP) on the nuclear membrane. Ope
 >  run("Close All");
 >  // File > Open
 >  open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nup_bgsubtracted.tif");
+>  rename("intensity")
 >  // Image > Adjust > Brightness/Contrast... Auto
 >  run("Enhance Contrast", "saturated=0.35");
 >  // File > Open
->  open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__nup.tif");
->
+>  open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__nup.tif");
+>  rename("binary")
+>  // Create label image;  
+>  // Plugins › MorphoLibJ › Binary Images › Connected Components Labeling
+>  run("Connected Components Labeling", "connectivity=4 type=[8 bits]");
+>  rename("labels")
 >  // Measure intensities
->  //Plugins > MorpholibJ > Analyze > Intensity Measurements 2D/3D
->  run("Intensity Measurements 2D/3D", "input=xy_8bit__nup_bgsubtracted labels=xy_8bit_labels__nup mean max min median numberofvoxels");
+>  // Plugins > MorpholibJ > Analyze > Intensity Measurements 2D/3D
+>  run("Intensity Measurements 2D/3D", "input=intensity labels=labels mean max min median numberofvoxels");
 > ```
 {: .solution}
 
@@ -37,14 +42,16 @@ Which measurement could be problematic?
 >  run("Close All");
 >  // File > Open
 >  open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nup_bgsubtracted.tif");
+>  rename("intensity")
 >  // Image > Adjust > Brightness/Contrast... Auto
 >  run("Enhance Contrast", "saturated=0.35");
 >  // File > Open
 >  open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__nup.tif");
+>  rename("labels")
 >  // Check if label mask fit our expected rim
 >  // Image > Overlay > Add Image...
->  selectWindow("xy_8bit__nup_bgsubtracted.tif");
->  run("Add Image...", "image=xy_8bit_labels__nup.tif x=0 y=0 opacity=50");
+>  selectWindow("intensity");
+>  run("Add Image...", "image=labels x=0 y=0 opacity=50");
 >  run("Tile")
 >```
 {: .solution}
