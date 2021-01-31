@@ -41,8 +41,9 @@ activity_preface: |
 activities:
     - ["ImageJ Macro & GUI", "measure_intensities/activities/measure_intensities_imagejmacro.ijm", "java"]
 
-exercises:
-
+exercises: 
+    - ["ImageJ Macro & GUI", "measure_intensities/exercises/measure_intensities_imagejguimacro.md"]
+    
 assessment: |
 
   ### Fill in the blanks (discuss with your neighbour)
