@@ -3,9 +3,9 @@ title:     Global background correction
 layout:    module
 
 prerequisites:
-  - "[Basic properties of images and pixels](pixels)"
-  - "[Pixel data types](pixel_data_types)"
-  - "[Image math](image_math)"
+  - "[Basic properties of images and pixels](../pixels)"
+  - "[Data types](../datatypes)"
+  - "[Image math](../image_math)"
 
 objectives:
   - Measure the background in an image
@@ -42,11 +42,25 @@ activity_preface: |
 activities:
     - ["ImageJ Macro & GUI", "global_background_correction/activities/global_background_correction.ijm", "java"]
 
-exercises_preface:
-
 exercises:
+    - ["ImageJ Macro & GUI", "global_background_correction/exercises/global_background_correction.md"]
+
+assessment: |
+    ### True or false? 
+      1. The datatype is irrelevant for background subtraction.
+      2. Background subtraction using a unsigned integer image will always lead to a positive valued background.
+      3. Global background subtraction is important for ratiometric computations.
+      4. Global background subtraction affects differences in intensities.
+        
+    > ## Solution
+    >  1. The datatype is irrelevant for background subtraction. **FALSE**
+    >  2. Background subtraction using a unsigned integer image will always lead to a positive valued background. **TRUE**
+    >  3. Global background subtraction is important for ratiometric computations. **TRUE**
+    >  4. Global background subtraction affects differences in intensities. **FALSE**       
+    {: .solution}
 
 learn_next:
+    "[Local background subtraction](../local_background_subtraction)"
 
 external_links:
 ---

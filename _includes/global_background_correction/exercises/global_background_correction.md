@@ -6,6 +6,10 @@ Open image
 3. Verify that the histogram has not been clipped by the background subtraction operation.
 
 > ## Solution
+> In order to obtain a correct result the background subtraction should be performed with an image that 
+> has been converted to a float (in ImageJ 32-bit). This avoid clipping of the data for the low values. 
+>
+> ```
 > run("Close All");
 > roiManager("reset");
 > run("Clear Results");
@@ -48,7 +52,34 @@ Open image
 > run("Measure");
 > setMinAndMax("0.00", "100");
 > run("Histogram", "bins=256 use x_min=0 x_max=81.47 y_max=Auto");
+> ```
 {: .solution}
 
 
-Can you think of a way of automatically computing a global background? 
+Can you think of a way of automatically computing a global background?  
+> ## Solution
+> For this exercise we just compute the mean intensity in the space that is not the nuclei.  We can use
+> thresholding but with different low and upper values. 
+>
+> ```
+> /**
+> * Required update sites: 
+> *   - IJPB-Plugins (MorpholibJ)
+> **/
+>
+> //File> Open...
+> open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit__nuclei_with_background.tif")
+> // Image > Duplicate...
+> run("Duplicate...", "binary");
+> // Image > Adjust > Threshold ...
+> setThreshold(0, 117);
+> setOption("BlackBackground", true);
+> run("Convert to Mask");
+>
+> // Plugins › MorphoLibJ › Binary Images › Connected Components Labeling
+> run("Connected Components Labeling", "connectivity=4 type=[16 bits]");
+> rename("labels");
+> // Plugins › MorphoLibJ › Analyze › Intensity Measurements 2D/3D
+> run("Intensity Measurements 2D/3D", "input=intensity labels=labels mean max numberofvoxels");
+> ```
+{: .solution}
