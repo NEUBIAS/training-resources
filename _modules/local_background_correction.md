@@ -57,14 +57,19 @@ external_links:
 
 ---
 
-### Commonly used filters for creating background images
+### Common filters for creating background images
 
 - Median filter
-- ImageJ's "Subtract Background"
-  - A "rolling ball" background estimation
-  - Missing: explanation how it works, exactly
+- "Rolling ball" background 
+  - ImageJ's "Subtract Background"
+    - Missing: explanation how it works, exactly
 - Morphological opening filter
-  - The result of background subtraction operation is called top-hat filter
+  - The result of background subtraction using a grayscale opening is called top-hat filter
+
+#### Advanced and powerful filters for creating background images
+
 - Morphological opening using reconstruction
-  - MATLAB has this option, typically very good
+  - How do the work?
+  - MATLAB has this option... `imreconstruct`
+  - ImageJ MorpholibJ has a Grayscale Attribute Filtering, which seems similar (the same)?
 
