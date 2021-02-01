@@ -29,7 +29,7 @@ module_order:
   - global_background_correction
   - filter_neighbourhood
   - median_filter
-  - local_background_subtraction
+  - local_background_correction
   - filter_objects
   - workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape
 
