@@ -5,7 +5,7 @@ open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bi
 rename("input");
 
 // Create background image
-run("Duplicate...", "title=bg");
+run("Duplicate...", "title=background");
 run("Median...", "radius=30");
 rename("background");
 
@@ -32,4 +32,6 @@ selectWindow("foreground");
 makeLine(30, 201, 272, 34);
 run("Plot Profile");
 Plot.setLimits(0,290,-30.0,250);
+
+
 
