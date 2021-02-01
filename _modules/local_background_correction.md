@@ -29,11 +29,13 @@ activity_preface: |
   - Compute a background image using a median filter
   - Create a foreground image by subtracting the background image from the input image
   - Check how well the background corrrection worked and whether any artefacts were introduced
+  - Optional: discuss how one could automatically segment the two spots in the resulting foreground image (mean filter and object size filter)
 
 activities:
-  - ["ImageJ Macro", "local_background_correction/activities/local_background_correction.ijm", "java"]
+  - ["ImageJ GUI & Macro", "local_background_correction/activities/local_background_correction.ijm", "java"]
 
 exercises:
+  - ["ImageJ GUI & Macro", "local_background_correction/exercises/local_background_correction_imagejmacro.md"]
 
 assessment: |
 
@@ -44,9 +46,9 @@ assessment: |
     1. The size of the filter's structuring element for generating the background image should be much smaller than the size of the objects.
     
     > ## Solution
-    > 1. False
-    > 1. True
-    > 1. False
+    > 1. False (mean filter is really quite poor in terms of removing foreground information)
+    > 1. True (because this is the background image, so it should not contain any foreground information)
+    > 1. False (it should be much (maybe ~3 times) larger)
     {: .solution}
 
 learn_next:
@@ -55,8 +57,14 @@ external_links:
 
 ---
 
-### Typical filters for creating background images
+### Commonly used filters for creating background images
 
 - Median filter
+- ImageJ's "Subtract Background"
+  - A "rolling ball" background estimation
+  - Missing: explanation how it works, exactly
 - Morphological opening filter
   - The result of background subtraction operation is called top-hat filter
+- Morphological opening using reconstruction
+  - MATLAB has this option, typically very good
+
