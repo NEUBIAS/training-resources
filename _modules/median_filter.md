@@ -25,7 +25,7 @@ activity_preface: >
   Use example images that are relevant to your science and explore in detail what happens when applying a median filter.
   On purpose, increase the neighbourhood to an extend where your structures of interest become clearly compromised. Do some of all of these activities.
   
-  - Open image [xy_8bit_binary__squares_different_size.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__square_different_size.tif)
+  - Open image [xy_8bit_binary__squares_different_size.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__squares_different_size.tif)
     discuss effect of median filter on removing small objects, preserving edge and changing edges for large radii. 
     
   - Open image [xy_8bit_binary__large_spot.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__large_spot.tif)
