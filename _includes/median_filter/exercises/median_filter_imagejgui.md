@@ -3,7 +3,7 @@
 - Apply median filter with radius 1 and 3, respectively
 - Estimate width of microtubules for non-filtered and filtered images using line profile,  **[Analyze > Plot Profile]**
 - Repeat operation with a mean filter
-- How dows the width of microtbules change
+- How does the width of microtbules change?
 
 
 > ## Solution
@@ -31,8 +31,6 @@
 - Compare median filter to mean filter of same radii
   - What are the advantages of a median filter?
   - What are the advantages of a mean filter?
-- Apply a min filter of radius 1, what is happening?
-- Apply a max filter of radius 1, what is happening?
 
 > ## Solution
 >   - **[File > Open ...]** *xy_8bit__nuclei_noisy_different_intensity.tif*
@@ -46,6 +44,4 @@
 >    - Compare median filter to mean filter of same radii
 >        - What are the advantages of a median filter? **edge preserving**
 >        - What are the advantages of a mean filter? **small structure preserving**
->    - Apply a min filter of radius 1, can you describe what is happening? **nuclei shrink**
->    - Apply a max filter of radius 1, can you describe what is happening? **nuclei expand**
 {: .solution}
