@@ -51,7 +51,7 @@ Open image
 > roiManager("Select", 0);
 > run("Measure");
 > setMinAndMax("0.00", "100");
-> run("Histogram", "bins=256 use x_min=0 x_max=81.47 y_max=Auto");
+> run("Histogram", "bins=256 use x_min=-10 x_max=100.0 y_max=Auto");
 > ```
 {: .solution}
 
