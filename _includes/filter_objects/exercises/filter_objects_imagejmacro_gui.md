@@ -1,4 +1,4 @@
-- Open [xy_8bit_labels__nuclei_touchborder_2.tif]("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__nuclei_touchborder_2.tif")
+- Open [xy_8bit_labels__nuclei_touchborder_2.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__nuclei_touchborder_2.tif)
 - Remove objects touching the border
 - Create a label mask that contains only the smallest object (metaphase cell)
 
