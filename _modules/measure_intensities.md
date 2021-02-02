@@ -22,7 +22,7 @@ concept_map: >
     table --> object_rows["Rows: Objects<br><br>Columns: Features<br>e.g., mean, sum, max"]
 
 figure: /figures/measure_intensities.png
-figure_legend: Object intensity measurements. 
+figure_legend: Object intensity measurements.
 
 activity_preface: |
   - Open image [xy_float__h2b_bg_corr.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_float__h2b_bg_corr.tif)
@@ -40,7 +40,7 @@ activity_preface: |
   - Discuss which values changed and by how much percent
 
 activities:
-    - ["ImageJ Macro & GUI", "measure_intensities/activities/measure_intensities_imagejmacro.ijm", "java"]
+  - ["ImageJ Macro & GUI", "measure_intensities/activities/measure_intensities_imagejmacro.ijm", "java"]
 
 exercises: 
     - ["ImageJ Macro & GUI", "measure_intensities/exercises/measure_intensities_imagejguimacro.md"]
