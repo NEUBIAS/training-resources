@@ -1,8 +1,8 @@
 Open the intensity image 
 [xy_8bit__nup_bgsubtracted.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nup_bgsubtracted.tif). The image
-shows the intensity of a nuclear pore protein (NUP) on the nuclear membrane. Open the label image [xy_8bit_labels__nup.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__nup.tif)
+shows the intensity of a nuclear pore protein (NUP) on the nuclear membrane. Open the binary image [xy_8bit_binary__nup.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__nup.tif)
 
-- Compute the mean intensity for each nucleus.
+- Generate a label image and compute the mean intensity for each nucleus. 
 - Calculate the total intensity of the NUP for each nucleus.
 
 
