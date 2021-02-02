@@ -23,8 +23,14 @@ figure_legend: Left - Binary input image; Middle - After a 5x5 median filter; Ri
 
 activity_preface: >
   Use example images that are relevant to your science and explore in detail what happens when applying a median filter.
-  On purpose, increase the neighbourhood to an extend where your structures of interest become clearly compromised. 
+  On purpose, increase the neighbourhood to an extend where your structures of interest become clearly compromised. Do some of all of these activities.
   
+  - Open image [xy_8bit_binary__squares_different_size.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__square_different_size.tif)
+    discuss effect of median filter on removing small objects, preserving edge and changing edges for large radii. 
+    
+  - Open image [xy_8bit_binary__large_spot.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__large_spot.tif)
+    discuss effect of median filter on edge changes. Use a ROI and apply filter only on the ROI. Compare also to mean filter. 
+    
   - Open image [xy_8bit__two_noisy_squares_different_size.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__two_noisy_squares_different_size.tif)
   and discuss effect of median and mean filter of different size with respect to noise and preservation of structure. 
   
@@ -64,6 +70,11 @@ external_links:
 ---
 
 ## Properties of median filter
+
+The median filter is based on ranking the pixels in the neighbourhood
+
+<img src="../figures/median_filter_and_ranking.png"  align ="center" width="50%" >
+
 
 In general, for any neighbourhood filter, if the spatial extend of the neighbourhood is significantly 
 (maybe three-fold) smaller than the smallest spatial length scale that you care about, you are on the safe side.
