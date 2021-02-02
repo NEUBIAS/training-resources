@@ -40,19 +40,19 @@ exercises:
 
 assessment: >
   #### Fill in the blanks
-    Fill in the blanks, using these words: structuring element, mean filter, size, brightness, large, small, decrease, increase, help
+    Fill in the blanks, using these words: decrease, increase, size, structuring element, large
     - A synonym for neighbourhood is  ____
     - The filter radius characterize the filter ___
     - ___ filter size can cause a loss of details in the filtered image
     - Filter can be used to ____ the noise in an image
-    - The usage of filters can ____ image segmentation/binarization
+    - The usage of filters can ____ the quality of image segmentation/binarization
     
     > ## Solution
     > - A synonym for neighbourhood is **structuring element**
-    > - Filter radius is describe the filter ___
+    > - The filter radius characterize the filter **size**
     > - **large** filter size can cause a loss of details in the filtered image
     > - Filter can be used to **decrease** the noise in an image
-    > - The usage of filters can ____ image segmentation/binarization
+    > - The usage of filters can **increase** the quality of image segmentation/binarization
     {: .solution}
 learn_next:
 - "[Convolution filters](../filter_convolution)"
