@@ -17,7 +17,7 @@ concept_map: >
     I("Image") --> R("Resolution levels")
     R --> C("Chunks")
 
-figure: figures/global_background_correction.png
+figure: figures/chunked_pyramidal_image_storage.png
 figure_legend: TODO: Image before and after background correction
 
 activity_preface: |
