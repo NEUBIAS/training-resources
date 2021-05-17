@@ -9,7 +9,6 @@ objectives:
   - Understand that a pixel index is related to a physical coordinate.
   - Understand that a spatial calibration allows for physical size measurements.
 
-
 motivation: >
   We would like to relate the image dimensions to a physical size. 
   The relation between pixels and physical size is referred to as spatial calibration. 
@@ -51,18 +50,25 @@ exercises:
 assessment: |
     ### Fill in the blanks
     
-    - Given a 2D image with pixel-height = pixel-width = 0.13 um. What is a distance of 147 pixels? __
-    - What is the area spanned by 10 pixels in um2 with a spatial calibration with pixel-height = pixel-width = 0.13 um? __
+    - Given a 2D image with pixel height = pixel width = 0.13 micrometer. What is a distance of 147 pixels? __
+    - What is the area covered by 10 pixels in micrometer square, given a spatial calibration of pixel height = pixel width = 0.13 micrometer? __
     
     > ## Solution
-    >   - Given a 2D image with pixel-height = pixel-width = 0.13 um. What is a distance of 147 pixels? **147 * 0.13 = 19.11 um** 
-    >   - What is the area spanned by 10 pixels in um2 with a spatial calibration with pixel-height = pixel-width = 0.13 um? **10 * 0.13 * 0.13 = 0.169 um2**
+    >   - 147 * 0.13 = 19.11 micrometer
+    >   - 10 * 0.13 * 0.13 = 0.169 micrometer square
     {: .solution}
-
-
 
 learn_next:
 
 external_links:
 
 ---
+
+## Isotropy
+
+One speaks of **isotropic sampling** if the pixels have the same extent in all dimensions (2D or 3D).
+
+While microscopy images typically are isotropic in 2D they are typically **anisotropic** in 3D with coarser sampling in the z-direction. 
+
+It is very convenient for image analysis if pixels are isotropic, thus one sometimes resamples the image during image analysis such that they become isotropic.
+ 
