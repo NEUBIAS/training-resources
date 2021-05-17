@@ -23,8 +23,7 @@ the image into exactly three disjoint foreground regions (the three nuclei). It 
 {: .solution}
 
 ## Exercise 2
-Sometimes you would like to find out how the structuring-element (the neighbourhood) of a filter looks like. One way to do this is to
-apply a filter to a single white pixel and look at the resulting form.
+Sometimes you would like to find out how the structuring-element (the neighbourhood) of a filter looks like. One way to do this is to apply a filter to a single white pixel and look at the resulting form.
 
 - Open [xy_8bit_binary__one_foreground_pixel.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__one_foreground_pixel.tif)
 - Apply a Maximum filter to the image **[Process > Filters > Maxima...]** the resulting image is the structuring element of your filter

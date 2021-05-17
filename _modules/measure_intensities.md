@@ -16,9 +16,9 @@ motivation: >
 concept_map: >
   graph LR
     li[Label image] --> im("Intensity measurement")
-    ii[Intensity image] --> im("Intensity measurement")
-    ii[Intensity image] -->|may be|bc("Background corrected")
-    im --> table["Results table"]
+    ii[Intensity image] --> bc("Background corrected image")
+    bc --> im
+	im --> table["Results table"]
     table --> object_rows["Rows: Objects<br><br>Columns: Features<br>e.g., mean, sum, max"]
 
 figure: /figures/measure_intensities.png
@@ -43,7 +43,7 @@ activities:
   - ["ImageJ Macro & GUI", "measure_intensities/activities/measure_intensities_imagejmacro.ijm", "java"]
 
 exercises: 
-    - ["ImageJ Macro & GUI", "measure_intensities/exercises/measure_intensities_imagejguimacro.md"]
+  - ["ImageJ Macro & GUI", "measure_intensities/exercises/measure_intensities_imagejguimacro.md"]
     
 assessment: |
 
