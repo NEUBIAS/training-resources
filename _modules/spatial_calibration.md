@@ -51,9 +51,9 @@ assessment: |
     ### Fill in the blanks
     
     - Given a 2D image with pixel height (dx) = pixel width (dy) = 0.13 micrometer, what distance do the pixels at the (x,y) indices (10,10) and (9,21) have in micrometer units?
-    - Given a 3D image with dx = dy = 0.13 micrometer and dz = 1 micrometer, what distance do the pixels at the (x,y,z) indices (10,10,0) and (9,21,3) have in micrometer units?
-    - What is the area covered by 10 pixels, given a spatial calibration of dx = dy = 0.13 micrometer?
-	- What is the volume covered by 10 voxels, given a spatial calibration of dx = dy = 0.13 micrometer and dz = 1 micrometer?
+    - Given a 3D image with dx = dy = 0.13 micrometer and dz = 1 micrometer, what is the calibrated (micrometer units) distance of two pixels at the (x,y,z) indices (10,10,0) and (9,21,3)?
+    - What is the calibrated (micrometer units) area covered by 10 pixels, given a spatial calibration of dx = dy = 0.13 micrometer?
+	- What is the calibrated (micrometer units) volume covered by 10 voxels, given a spatial calibration of dx = dy = 0.13 micrometer and dz = 1 micrometer?
     
     > ## Solution
     >   - sqrt( (x0*dx-x1*dx)^2 + (y0*dy-y1*dy)^2 ) = sqrt( (x0-x1)^2 + (y0-y1)^2 ) * dxy = sqrt( (10-9)^2 + (10-21)^2 ) * 0.13 = 11.04536 * 0.13 micrometer = 1.435897 micrometer
