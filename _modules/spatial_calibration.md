@@ -31,15 +31,10 @@ figure: /figures/spatial_calibration.png
 figure_legend: Spatial calibration and size measurements
 
 activity_preface: |
-    Emphasize where to find spatial calibration information and why it can 
-    be important. How to edit spatial calibration and perform consistency checks. 
-    Discuss how for certain cases one can convert pixel measurements to calibrated measurements, e.g. 
-    For example area and lengths for 2D and Volume for 3D.
-    Some example images:
-    - [xyz_8bit__mitotic_plate_calibrated.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit__mitotic_plate_calibrated.tif)
-    - [xyz_8bit__mitotic_plate_badZcalibrated.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit__mitotic_plate_badZcalibrated.tif)
-    - [xyz_8bit__mri_head.tif](../image_data/xyz_8bit__mri_head.tif)
-
+    - Open image: [xyz_8bit__mitotic_plate_calibrated.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit__mitotic_plate_calibrated.tif)
+    - Emphasize where to find spatial calibration image metadata and why it can be important. 
+    - Explain how to edit spatial calibration and perform consistency checks. 
+    - Show how to measure the Euclidian calibrated distances of two pixels in a 2D and 3D image.
 
 activities:
     - ["ImageJ GUI", "spatial_calibration/activities/spatial_calibration_imagejgui.md", "markdown"]
