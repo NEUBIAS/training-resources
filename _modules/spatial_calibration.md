@@ -50,12 +50,16 @@ exercises:
 assessment: |
     ### Fill in the blanks
     
-    - Given a 2D image with pixel height = pixel width = 0.13 micrometer. What is a distance of 147 pixels? __
-    - What is the area covered by 10 pixels in micrometer square, given a spatial calibration of pixel height = pixel width = 0.13 micrometer? __
+    - Given a 2D image with pixel height (dx) = pixel width (dy) = 0.13 micrometer, what distance do the pixels at the (x,y) indices (10,10) and (9,21) have in micrometer units?
+    - Given a 3D image with dx = dy = 0.13 micrometer and dz = 1 micrometer, what is the calibrated (micrometer units) distance of two pixels at the (x,y,z) indices (10,10,0) and (9,21,3)?
+    - What is the calibrated (micrometer units) area covered by 10 pixels, given a spatial calibration of dx = dy = 0.13 micrometer?
+	- What is the calibrated (micrometer units) volume covered by 10 voxels, given a spatial calibration of dx = dy = 0.13 micrometer and dz = 1 micrometer?
     
     > ## Solution
-    >   - 147 * 0.13 = 19.11 micrometer
-    >   - 10 * 0.13 * 0.13 = 0.169 micrometer square
+    >   - sqrt( (x0*dx-x1*dx)^2 + (y0*dy-y1*dy)^2 ) = sqrt( (x0-x1)^2 + (y0-y1)^2 ) * dxy = sqrt( (10-9)^2 + (10-21)^2 ) * 0.13 = 11.04536 * 0.13 micrometer = 1.435897 micrometer
+    >   - sqrt( (x0*dx-x1*dx)^2 + (y0*dy-y1*dy)^2 + (z0*dz-z1*dz)^2  ) = sqrt( (10*0.13-9*0.13)^2 + (10*0.13-21*0.13)^2 + (0*1.0-3*1.0)^2 ) micrometer = 3.325928 micrometer
+    >   - 10 * 0.13 micrometer * 0.13 micrometer  = 0.169 micrometer square
+    >   - 10 * 0.13 micrometer * 0.13 micrometer * 1.0 micrometer = 0.169 micrometer cube (note: it is mathematically easier to measure volumes than distances in 3D)
     {: .solution}
 
 learn_next:
