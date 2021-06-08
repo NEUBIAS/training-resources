@@ -59,6 +59,8 @@ learn_next:
 
 
 external_links:
+    
+    - "[Segmentation Annotator](https://github.com/tischi/segmentation-annotator#segmentation-annotator). Label mask and measurements exploration and annotation in ImageJ"
     - "[Wikipedia coastal line paradox](https://en.wikipedia.org/wiki/Coastline_paradox). Effect of Sampling and resolution on the measurements"
     - "[Results visualisation](https://imagej.net/MorphoLibJ#Grayscale_morphological_filters). Label visualization in 3D viewer"
 
