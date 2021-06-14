@@ -39,12 +39,12 @@ assessment: >
     Open image 
     [xy_8bit__nuclei_noisy_different_intensity.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_different_intensity.tif).
     Hint: For certain exercises the inspection of the histogram will help
-    1. What is the value of the pixel at the indices (20,20)?
+    1. What is the value of the pixel at the indices (x=20,y=20)?
     1. What is the highest value in the image?
     1. What is the most frequently occuring value in the image?
-    1. Where is this pixel with the indices (0,0)? Why is this potentially confusing?
-    1. How many pixels does this image have in the horizontal direction?
-    1. What is the highest pixel index in the horizontal direction?
+    1. Where is this pixel with the indices (x=0,y=0)? Why is this potentially confusing?
+    1. How many pixels does this image have in the x direction?
+    1. What is the highest pixel index in the x direction?
     1. If you were to rotate the image by 90 degrees, would it change the image histogram?
     
     > ## Solution
@@ -59,8 +59,8 @@ assessment: >
 
   ### 3D image inspection
     Open image: [xyz_8bit__mri_head.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit__mri_head.tif)
-    1. What is the value of the voxel at the indices (93,124,13)?
-    1. Whats is the highest value in the image?
+    1. What is the value of the voxel at the indices (x=93,y=124,z=13)?
+    1. Which is the highest value in the image?
     
     > ## Solution
     > 1. 47

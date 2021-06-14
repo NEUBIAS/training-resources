@@ -10,7 +10,7 @@ objectives:
   
 motivation: |
   The median filter is a rank filter and is one of the most popular filters for reducing noise in microscopy images.
-  While the median filter has indeed many good properties, it should be - like any other filter -  used with care and a good understanding of its properties.
+  While the median filter has indeed many good properties, it should be - like any other filter - used with care and a good understanding of its properties.
   
 concept_map: >
   graph TD
@@ -18,8 +18,8 @@ concept_map: >
     NE -->  median
     median --> MF("median filtered pixel value")
 
-figure: /figures/median_filter_binary.png
-figure_legend: Left - Binary input image; Middle - After a 5x5 median filter; Right - Difference image
+figure: /figures/median_filter_grayscale.png
+figure_legend: Median filter example. Left: Raw; Right: After a 5x5 median filter.
 
 activity_preface: >
   Use example images that are relevant to your science and explore in detail what happens when applying a median filter.
@@ -45,8 +45,6 @@ activities:
     - ["ImageJ GUI & Macro median", "median_filter/activities/median_filter_imagejmacrogui.ijm", "java"]
     - ["ImageJ GUI & Macro mean", "median_filter/activities/mean_filter_imagejmacrogui.ijm", "java"]
         
-
-
 exercises:
     - ["ImageJ GUI", "median_filter/exercises/median_filter_imagejgui.md"]
     

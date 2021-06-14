@@ -3,9 +3,8 @@
 Note: This module's activity (see above) contains all the ImageJ commands that you need for below exercise.
 
 - Open [xy_16bit__autophagosomes_crop.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit__autophagosomes_crop.tif)
-- Duplicate the image and apply a median filter
+- Duplicate the image and apply a median filter in order to create the background image
   - Choose the radius of the median filter just large enough such that the bright spots dissappear
-  - You have create a background image
 - Subtract the resulting background image from the input image
   - You should see an image with the bright spots, but now without the uneven background
 
