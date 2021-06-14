@@ -18,7 +18,7 @@ concept_map: >
     NE -->  median
     median --> MF("median filtered pixel value")
 
-figure: /figures/median_filter_binary.png
+figure: /figures/median_filter_grayscale.png
 figure_legend: Left - Binary input image; Middle - After a 5x5 median filter; Right - Difference image
 
 activity_preface: >
