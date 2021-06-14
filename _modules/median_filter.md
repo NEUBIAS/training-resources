@@ -19,7 +19,7 @@ concept_map: >
     median --> MF("median filtered pixel value")
 
 figure: /figures/median_filter_grayscale.png
-figure_legend: Left - Binary input image; Middle - After a 5x5 median filter; Right - Difference image
+figure_legend: Median filter example. Left: Raw; Right: After a 5x5 median filter.
 
 activity_preface: >
   Use example images that are relevant to your science and explore in detail what happens when applying a median filter.
