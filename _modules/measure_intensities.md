@@ -27,7 +27,7 @@ activity_preface: |
   - Open image [xy_float__h2b_bg_corr.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_float__h2b_bg_corr.tif)
   - Appreciate that the mean intensity in the background is zero.
   - Open label mask [xy_8bit_labels__h2b_bg_corr](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__h2b_bg_corr.tif)
-  - Measure the mean, max and sum intensities in both objects
+  - Measure the mean, max and sum intensities in both objects. For the sum measurements explain how to compute it and perform it in, e.g. excel or R.
   - Discuss the measurements' biophysical interpretation
     - The signal is H2B in a dividing and in an interphase cell.
     - Importantly, this was acquired with a widefield microscope!
