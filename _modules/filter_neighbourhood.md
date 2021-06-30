@@ -62,7 +62,7 @@ external_links:
 
 ---
 
-### Neighbourhood filers
+### Neighbourhood filters
 
 Neighborhood filters comprise two ingredients: a definition of the pixel neighbourhood (size and shape) and a mathematical recipe what to compute on this neighbourhood. 
 The result of this computation will be used to replace the value of the central pixel in the neighbourhood. This procedure can be applied to several (all) pixels of an image 
