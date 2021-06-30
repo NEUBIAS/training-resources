@@ -26,7 +26,7 @@ figure_legend: Image before and after binarization by applying a threshold.
 activity_preface: |
   - Open the binary image [xy_8bit_binary__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__nuclei.tif).
   - Discuss the image data type and the pixel values.
-  - Open an image and binarize it by applying a manually defined threshold.
+  - Open the image [xy_8bit__two_cells.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__two_cells.tif) and binarize it by applying a manually defined threshold.
 
 activities:
   - ["ImageJ GUI", "binarization/activities/binarization_imagejgui.md", "markdown"]
