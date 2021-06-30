@@ -71,7 +71,7 @@ external_links:
   - "[Wikipedia: Binary image](https://en.wikipedia.org/wiki/Binary_image)"
   
 ---
-## Image thresholding
+#### Image thresholding
 A common algorithm for binarization is thresholding. A threshold value `t` is chosen, either manually or automatically, 
 and all pixels with intensities below `t` are set to 0, whereas pixels with intensities `>= t` are set to the value for the foreground. 
 Depending on the software the foreground value can be different (e.g. 1 in MATLAB or 255 in ImageJ).
