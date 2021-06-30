@@ -15,19 +15,7 @@
  * 
  */
 
-//run("Close All");
-//newImage("xyz_binary_shapes", "8-bit black", 200, 200, 20);
-//setForegroundColor(255, 255, 255);
-//setLineWidth(1);
-//setSlice(10);
 
-//// draw structures
-//drawLine(57, 36, 32, 135);
-//drawOval(52, 162, 1, 1);
-//fillRect(88, 51, 85, 83);
-//
-//// adapt structure thickness
-//run("Maximum 3D...", "x=1 y=1 z=1");
 
 rename("image");
 
@@ -40,16 +28,6 @@ selectWindow("image middle Hessian eigenvalues");
 setSlice(10);
 selectWindow("image smallest Hessian eigenvalues");
 setSlice(10);
-
-// structure
-//selectWindow("image");
-//run("FeatureJ Structure", "largest middle smallest smoothing=1 integration=1");
-//selectWindow("image largest structure eigenvalues");
-//setSlice(10);
-//selectWindow("image middle structure eigenvalues");
-//setSlice(10);
-//selectWindow("image smallest structure eigenvalues");
-//setSlice(10);
 
 // parameters to match the intensity scale
 s1 = 50;
@@ -72,3 +50,21 @@ run("Image Expression Parser (Macro)", "expression=(A>0)*exp(-B*B/"+s2+")*exp(-C
 rename("membraneness");
 setMinAndMax(0, 1);
 setSlice(10);
+
+
+function createExampleImage()
+{
+	//run("Close All");
+	newImage("xyz_binary_shapes", "8-bit black", 200, 200, 20);
+	setForegroundColor(255, 255, 255);
+	setLineWidth(1);
+	setSlice(10);
+	
+	// draw structures
+	drawLine(57, 36, 32, 135);
+	drawOval(52, 162, 1, 1);
+	fillRect(88, 51, 85, 83);
+	
+	// adapt structure thickness
+	run("Maximum 3D...", "x=1 y=1 z=1");
+}
