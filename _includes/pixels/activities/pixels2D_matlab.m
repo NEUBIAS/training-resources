@@ -4,10 +4,8 @@
 % one after the other with the corresponding command in the Editor Toolstrip
 
 %% Choose and load the image %%
-% Prompt user to choose an image, e.g. xy_8bit__nuclei_noisy_different_intensity.tif
-[file, path] = uigetfile("*.tif");
 % Read input image
-in_image = imread(fullfile(path, file));
+in_image = webread('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_different_intensity.tif');
 % Display input image
 figure 
 imagesc(in_image)
