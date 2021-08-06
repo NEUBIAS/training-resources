@@ -12,7 +12,7 @@ objectives:
   - "Draw a biophysically meaningful conclusion from applying an image analysis workflow to a set of images."
 
 motivation: |
-  Detecting a set of objects in an image, counting them and measuring certain characteristics about their morphology is probably the most frequently occurring task in bioimage analysis. Depending on the image, even this task could become quite challenging and the workflow could become quite complex. Here we start with a relatively easy image where combining a minimal set of image analysis components into a simple workflow does the job.
+  Detecting a set of objects in an image, counting them and measuring certain characteristics about their morphology is probably the most frequently occurring task in bioimage analysis. Depending on the image, even this task could become quite challenging and the workflow could become quite complex. Here we start with a relatively simpler image where combining a minimal set of image analysis components into a simple workflow does the job.
   
 concept_map: >
   graph TD
