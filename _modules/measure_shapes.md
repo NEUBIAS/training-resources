@@ -11,11 +11,11 @@ objectives:
   - Perform shape measurements on objects. 
   
 motivation: >
- Our eyes are extremely good in distinguishing forms and this has proven to be a powerful tool for characterizing different 
- cell-types, functions, phenotypes, etc. In image processing we use shape measurements (e.g. area, 
- volume, elongation, ...) for an automated and objective characterization of forms. From the shape features we can address
+ Our eyes are extremely good in distinguishing forms and patterns and this has proven to be a powerful tool for characterizing different 
+ cell-types, functions, phenotypes, etc. In image processing, we use shape measurements (e.g. area, 
+ volume, elongation, ...) for an automated and objective characterization of forms. Consequently, one can address
  scientific questions or filter objects that should be used for further processing. 
- Typically we apply shape measurements on a labeled image. The labeled image, as obtained after a connected component analysis, 
+ Typically, we apply shape measurements on a labeled image. The labeled image, as obtained after a connected component analysis, 
  defines a set of objects in 2D/3D. 
 
 concept_map: >
@@ -65,3 +65,7 @@ external_links:
     - "[Results visualisation](https://imagej.net/MorphoLibJ#Grayscale_morphological_filters). Label visualization in 3D viewer"
 
 ---
+
+Example image:
+![Feature_calculation](https://user-images.githubusercontent.com/17739639/128513829-a254a5d1-f60d-40d0-a1e3-5b634a386279.JPG)
+
