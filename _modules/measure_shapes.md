@@ -26,6 +26,9 @@ concept_map: >
     table --> object_rows["Rows are objects"]
     table --> feature_columns["Columns are shape features"]
 
+figure: /figures/measure_shapes.jpg
+figure_legend: 
+
 activity_preface: |
     Open an image and perform shape measurements. Explain simple shape features (area, volume, perimeter) and some more complexes
     like circularity, elongation. Show that results can also be represented as an image.
@@ -66,6 +69,4 @@ external_links:
 
 ---
 
-Example image:
-![Feature_calculation](https://user-images.githubusercontent.com/17739639/128513829-a254a5d1-f60d-40d0-a1e3-5b634a386279.JPG)
 
