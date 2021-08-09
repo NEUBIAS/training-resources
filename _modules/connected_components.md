@@ -12,8 +12,8 @@ objectives:
   - Apply connected component labeling to a binary image to create a label mask image.
 
 motivation: >
-A main task of bioimage analysis is to detect objects in images. To do so one needs to be able to label pixels that are part of the same object in a way that this can be efficiently stored and processed by the computer. A prevalent way of doing this is "connected component labeling", which is discussed in this module.
-  
+  A main task of bioimage analysis is to detect objects in images. To do so one needs to be able to label pixels that are part of the same object in a way that this can be efficiently stored and processed by the computer. A prevalent way of doing this is connected component labeling, which is discussed in this module.
+
 
 concept_map: >
   graph TD
