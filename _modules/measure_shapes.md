@@ -26,7 +26,7 @@ concept_map: >
     table --> object_rows["Rows are objects"]
     table --> feature_columns["Columns are shape features"]
 
-figure: /figures/measure_shapes.jpg
+figure: /figures/Feature_calculation.JPG
 figure_legend: 
 
 activity_preface: |
