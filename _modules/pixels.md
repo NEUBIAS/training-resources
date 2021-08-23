@@ -10,7 +10,7 @@ objectives:
   - Examine the values and indices of pixels in an image.
 
 motivation: >
-  Although the technical [definition](https://mathworld.wolfram.com/Image.html) an image is more general, in practice images are very often represented as an array of pixels (voxels). Pixel stands for "picture element". In 3-D, a pixel is sometimes also called a voxel, which stands for "volume element". For image analysis it is crucial to know how to examine the pixels (voxels) in an image.
+  Although the technical [definition](https://mathworld.wolfram.com/Image.html) of an image is more general, in practice images are very often represented as an array of pixels (voxels). Pixel stands for "picture element". In 3-D, a pixel is sometimes also called a voxel, which stands for "volume element". For image analysis, it is crucial to know how to examine the pixels (voxels) in an image.
 
 concept_map: >
   graph TD
