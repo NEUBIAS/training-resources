@@ -10,7 +10,7 @@ objectives:
   - "Understand common data types such as 8-bit and 16-bit unsigned integer."
 
 motivation: |
-  Images contain numerical values that must be somehow stored on the hard disc or within the computer memory. To do so, for each pixel a certain amount of space (memory) must be allocated (usually measure in bits). Generally, the more bits you allocated the bigger are the numbers that you can store, however you also need more space. Thus chosing the right data type usually is a balance between what you can represent and how much space you want to afford for this. Especially for large image data such as volume EM and light-sheet data the choice of the data type can have quite some impact on your purse. In addition, certain operations on images can yield results that yield values outside of the original data type; this is a serious and frequently occurring source of mistakes when handling image data and thus must be well understood!
+  Images contain numerical values that must be somehow stored on the hard disc or within the computer memory. To do so, for each pixel a certain amount of space (memory) must be allocated (usually measure in bits). Generally, the more bits you allocate, the bigger are the numbers that you can store, however, you also need more space. Thus choosing the right data type usually is a balance between what you can represent and how much space you want to afford for this. Especially, for large image data such as volume EM and light-sheet data, the choice of the data type can have quite some impact on your purse. In addition, certain operations on images can yield results with values outside of the original data type; this is a serious and frequently occurring source of mistakes when handling image data and thus must be well understood!
 
 concept_map: >
   graph LR
@@ -46,9 +46,9 @@ assessment: >
     2. Converting from 16-bit unsigned integer to 32-bit floating point never changes the pixel values.
     3. Changing from 32-bit floating point to 16-bit unsigned integer never changes the pixel values.
     4. There is only one correct way to convert from 16-bit to 8-bit.
-    5. If the highest value in an image is 255 I can conclude that it is an 8-bit unsigned integer image.
-    6. If the highest value in an image is 1034 I can conclude that it is not an 8-bit unsigned integer image.
-    7. If the bit-depth is 16 and there are a lot of neighboring pixels with the value 4095 and no pixels with a higher value, most likely this image was acquired with 12 bit camera. 
+    5. If the highest value in an image is 255, one can conclude that it is an 8-bit unsigned integer image.
+    6. If the highest value in an image is 1034, one can conclude that it is not an 8-bit unsigned integer image.
+    7. If the bit-depth is 16 and there are a lot of neighboring pixels with the value 4095 and no pixels with a higher value, most likely this image was acquired with 12-bit camera. 
 
     > ## Solution
     > 1. False
