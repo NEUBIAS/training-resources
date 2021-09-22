@@ -1,0 +1,3 @@
+- Start macro recording: `Plugins › Macros › Record...`
+- Open an image: `File › Open Samples › Blobs`
+- ....

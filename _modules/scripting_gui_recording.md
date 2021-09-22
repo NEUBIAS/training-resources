@@ -15,21 +15,15 @@ concept_map: >
     S --> shareable
     S --> batchable
 
-figure: /figures/binarization.png
-figure_legend: Image before and after binarization by applying a threshold.
+figure: /figures/scripting_gui_recording.png
+figure_legend: GUI recording in ImageJ.
 
 activity_preface: |
-  - Open the binary image [xy_8bit_binary__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__nuclei.tif).
-  - Discuss the image data type and the pixel values.
-  - Open the image [xy_8bit__two_cells.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__two_cells.tif) and binarize it by applying a manually defined threshold.
+  - blabla
 
 activities:
-  - ["ImageJ GUI", "binarization/activities/binarization_imagejgui.md", "markdown"]
-  - ["ImageJ Macro", "binarization/activities/binarization_imagejmacro.ijm", "java"]
-  - ["ImageJ Jython", "binarization/activities/binarization_jython.py", "python"]
-  - ["MATLAB", "binarization/activities/binarization_matlab.m", "matlab"]
-  - ["KNIME", "binarization/activities/binarization_knime.md", "markdown"]
-  - ["Python", "binarization/activities/binarization.py", "python"]
+  - ["ImageJ Macro", "scripting_gui_recording/activities/scripting_gui_recording_activity_1.md", "markdown"]
+
 
 exercises:
   - ["ImageJ GUI", "binarization/exercises/binarization_imagejgui.md"]
