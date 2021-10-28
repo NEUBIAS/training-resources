@@ -1,10 +1,9 @@
 ### Exercise 1
 - Open *xy_16bit__microtubules.tif*
 - Apply median filter with radius 1 and 3, respectively
-- Estimate width of microtubules for non-filtered and filtered images using line profile,  **[Analyze > Plot Profile]**
-- Repeat operation with a mean filter
-- How does the width of microtbules change?
-
+- Estimate the width of microtubules for non-filtered and filtered images using line profile, **[Analyze > Plot Profile]**
+- What happens if you median filter with radius above 10?
+- What happens to the microtubule width if you **mean** filter with radius 3
 
 > ## Solution
 >   - **[File > Open ...]** *xy_16bit__microtubules.tif*
@@ -16,7 +15,8 @@
 >   - Measure line width using **[Analyze > Plot Profile]** or **[Ctrl-K]**
 >    - Estimate width or in profile window **[Data>> > Add fit...]** and **[Fit function > Gaussian]** the parameter *d*  
 >    is a proxy for the width (d = sigma). 
->   - Repeat for mean filter. 
+>   - For radii larger than 10 the microtubules disappear
+>   - A mean filter with radius 3 will increase the apparent width (blur) the microtubules
 {: .solution}
 
 ### Exercise 2

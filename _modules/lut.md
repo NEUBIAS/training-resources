@@ -55,19 +55,14 @@ assessment: |
 
   ### Fill in the blanks
 
-  Fill in the blanks using those words: decrease, larger than, increase, smaller than
+  Fill in the blanks using those words: larger than, smaller than
   1. Pixels with values _____ `max` will appear saturated.
-  2. Decreasing `max` while keeping `min` constant will _____ the contrast.
-  3. Decreasing both `max` and `min` will _____ the overall brightness.
-  4. Pixels with values _____ the `min` will appear black (using a single color LUT).
+  2. Pixels with values _____ the `min` will appear black (using a single color LUT).
 
   > ## Solution
   > 1. larger than
-  > 2. increase
-  > 3. decrease
-  > 4. smaller than
+  > 2. smaller than
   {: .solution}
-
 
 learn_next:
 
@@ -87,8 +82,6 @@ Single color lookup tables are typically configured by chosing one color such as
 In this formula, 1 corresponds to the maximal brightness and 0 corresponds to the minimal brightness that, e.g., your computer monitor can produce.
 
 Depending on the values of `value`, `min` and `max` it can be that the formula yields values that are less than 0 or larger than 1. This is handled by assinging a brightness of 0 even if the formula yields values < 0 and assigning a brightness of 1 even if the forumla yield values larger than `1`. In such cases one speaks of "clipping", because one looses ("clips") information about the pixel value (see below for an example).
-
-`1 / ( max - min)` is also sometimes called the "contrast" and `max + min` the "brightness" of the LUT.
 
 #### Clipping example
 

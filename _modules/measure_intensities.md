@@ -1,23 +1,22 @@
 ---
-title:     Object intensity measurements
-layout:    module
-
+title:  Object intensity measurements
+layout: module
 
 prerequisites:
   - "[Connected component analysis](../connected_components)"
-    
+
 objectives:
   - Understand the correct biophysical interpretation of the most common object intensity measurements
   - Perform object intensity measurements
-  
+
 motivation: >
-  The measurement of intensities in biological images is very common, e.g. to quantify expression levels of certain proteins by means of immuno-histochemistry. However, performing correct intensity measurements is very tricky and there are a lot of pitfalls. It is thus of utmost important to understand very well what one is doing. Without in-depth understanding the chance to publish wrong results based on intensity measurements is rather high. 
+  The measurement of intensities in biological images is very common, e.g. to quantify expression levels of certain proteins by means of immuno-histochemistry. However, performing correct intensity measurements is very tricky and there are a lot of pitfalls. It is thus of utmost important to understand very well what one is doing. Without in-depth understanding the chance to publish wrong results based on intensity measurements is rather high.
 
 concept_map: >
   graph LR
     li[Label image] --> im("Intensity measurement")
-    ii[Intensity image] --> im("Intensity measurement")
-    ii[Intensity image] -->|may be|bc("Background corrected")
+    ii[Intensity image] --> bc("Background corrected image")
+    bc --> im
     im --> table["Results table"]
     table --> object_rows["Rows: Objects<br><br>Columns: Features<br>e.g., mean, sum, max"]
 
@@ -28,7 +27,7 @@ activity_preface: |
   - Open image [xy_float__h2b_bg_corr.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_float__h2b_bg_corr.tif)
   - Appreciate that the mean intensity in the background is zero.
   - Open label mask [xy_8bit_labels__h2b_bg_corr](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__h2b_bg_corr.tif)
-  - Measure the mean, max and sum intensities in both objects
+  - Measure the mean, max and sum intensities in both objects. For the sum measurements explain how to compute it and perform it in, e.g. excel or R.
   - Discuss the measurements' biophysical interpretation
     - The signal is H2B in a dividing and in an interphase cell.
     - Importantly, this was acquired with a widefield microscope!
@@ -43,8 +42,8 @@ activities:
   - ["ImageJ Macro & GUI", "measure_intensities/activities/measure_intensities_imagejmacro.ijm", "java"]
 
 exercises: 
-    - ["ImageJ Macro & GUI", "measure_intensities/exercises/measure_intensities_imagejguimacro.md"]
-    
+  - ["ImageJ Macro & GUI", "measure_intensities/exercises/measure_intensities_imagejguimacro.md"]
+
 assessment: |
 
   ### Fill in the blanks (discuss with your neighbour)

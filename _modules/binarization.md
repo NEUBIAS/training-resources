@@ -24,10 +24,9 @@ figure: /figures/binarization.png
 figure_legend: Image before and after binarization by applying a threshold.
 
 activity_preface: |
-  Open a binary image and discuss binary data-type. Discuss differences of binary data-type depending on the software 
-  (e.g. ImageJ and MATLAB). 
-  
-  Open an image and binarize it by applying a manually defined threshold.
+  - Open the binary image [xy_8bit_binary__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__nuclei.tif).
+  - Discuss the image data type and the pixel values.
+  - Open the image [xy_8bit__two_cells.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__two_cells.tif) and binarize it by applying a manually defined threshold.
 
 activities:
   - ["ImageJ GUI", "binarization/activities/binarization_imagejgui.md", "markdown"]
@@ -72,16 +71,18 @@ external_links:
   - "[Wikipedia: Binary image](https://en.wikipedia.org/wiki/Binary_image)"
   
 ---
-## Image thresholding
+#### Image thresholding
 A common algorithm for binarization is thresholding. A threshold value `t` is chosen, either manually or automatically, 
 and all pixels with intensities below `t` are set to 0, whereas pixels with intensities `>= t` are set to the value for the foreground. 
-Depending on the software the foreground value can be different (e.g. 1 in MATLAB or 255 in ImageJ).
+Depending on the software the foreground value can be different (e.g. 1 in MATLAB or 255 in ImageJ). At any pixel (x,y):
 
 `p_im(x,y) < t` -> `p_bin(x,y) = 0`
 
 `p_im(x,y) >= t` -> `p_bin(x,y) = 1`
 
-It is also possible to define an interval of threshold values, i.e. a lower and upper threshold value. Pixels with intensities 
-within this interval belong to the foreground. 
+where, p_im and p_bin are the intensity and binary images respectively.
+
+It is also possible to define an interval of threshold values, i.e. a lower and upper threshold value. Pixels with intensity values 
+within this interval belong to the foreground and vice versa. 
  
 

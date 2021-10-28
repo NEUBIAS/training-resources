@@ -11,11 +11,11 @@ objectives:
   - Perform shape measurements on objects. 
   
 motivation: >
- Our eyes are extremely good in distinguishing forms and this has proven to be a powerful tool for characterizing different 
- cell-types, functions, phenotypes, etc. In image processing we use shape measurements (e.g. area, 
- volume, elongation, ...) for an automated and objective characterization of forms. From the shape features we can address
+ Our eyes are extremely good in distinguishing forms and patterns and this has proven to be a powerful tool for characterizing different 
+ cell-types, functions, phenotypes, etc. In image processing, we use shape measurements (e.g. area, 
+ volume, elongation, ...) for an automated and objective characterization of forms. Consequently, one can address
  scientific questions or filter objects that should be used for further processing. 
- Typically we apply shape measurements on a labeled image. The labeled image, as obtained after a connected component analysis, 
+ Typically, we apply shape measurements on a labeled image. The labeled image, as obtained after a connected component analysis, 
  defines a set of objects in 2D/3D. 
 
 concept_map: >
@@ -25,6 +25,9 @@ concept_map: >
     sa --> table("Results table")
     table --> object_rows["Rows are objects"]
     table --> feature_columns["Columns are shape features"]
+
+figure: /figures/Feature_calculation.JPG
+figure_legend: 
 
 activity_preface: |
     Open an image and perform shape measurements. Explain simple shape features (area, volume, perimeter) and some more complexes
@@ -59,7 +62,11 @@ learn_next:
 
 
 external_links:
+    
+    - "[Segmentation Annotator](https://github.com/tischi/segmentation-annotator#segmentation-annotator). Label mask and measurements exploration and annotation in ImageJ"
     - "[Wikipedia coastal line paradox](https://en.wikipedia.org/wiki/Coastline_paradox). Effect of Sampling and resolution on the measurements"
     - "[Results visualisation](https://imagej.net/MorphoLibJ#Grayscale_morphological_filters). Label visualization in 3D viewer"
 
 ---
+
+

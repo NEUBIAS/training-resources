@@ -2,11 +2,11 @@ Open image
 [xy_16bit__nuclei_with_background.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit__nuclei_with_background.tif)
 1. Measure the background 
 2. Subtract the background from the image 
-3. Is the mean intensity in the background region close to 0 (<<1)? If not which image conversion have you forgotten?
+3. Is the mean intensity in the background region close to 0 (<<1)? If not, which image data type conversion have you forgotten?
 3. Verify that the histogram has not been clipped by the background subtraction operation.
 
 > ## Solution
-> In order to obtain a correct result the background subtraction should be performed with an image that 
+> In order to obtain a correct result, the background subtraction should be performed with an image that 
 > has been converted to a float (in ImageJ 32-bit). This avoid clipping of the data for the low values. 
 >
 > ```
@@ -26,7 +26,7 @@ Open image
 > // Disable current ROI (select the whole image or click on it)
 > run("Select All");
 >
-> // 2. Subtract the background without conversion  and check mean in background region
+> // 2. Subtract the background without conversion and check mean in background region
 > // Process › Math › Subtract...
 > run("Subtract...", "value=104.182");
 > rename("bg subtracted 16bit")

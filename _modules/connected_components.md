@@ -12,7 +12,8 @@ objectives:
   - Apply connected component labeling to a binary image to create a label mask image.
 
 motivation: >
-  In bioimage analysis one very often wants to detect objects or specific regions in images. A typical workflow is to first categorise an image into in background and foreground regions, which can be represented as a binary image. The next step is a connected components labeling, where spatially connected regions of foreground pixels are assigned (labeled) as being part of one region (object).
+  A main task of bioimage analysis is to detect objects in images. To do so one needs to be able to label pixels that are part of the same object in a way that this can be efficiently stored and processed by the computer. A prevalent way of doing this is connected component labeling, which is discussed in this module.
+
 
 concept_map: >
   graph TD
@@ -76,13 +77,17 @@ external_links:
   - "[Wikipedia: Connected components labeling](https://en.wikipedia.org/wiki/Connected-component_labeling)"
 ---
 
+# Connected components
+
+A typical workflow is to first categorise an image into background and foreground regions, which can be represented as a binary image. If there are more than one object of interest, cluster of pixels which are spatially connected to each other can be assigned a same pixel value. Such clusters in the segmented image can be called as connected components. The relation between two or more pixels is described by its connectivity. The next step is a connected components labeling, where spatially connected regions of foreground pixels are assigned (labeled) as being part of one region (object).
+
 # Connectivity
 
-In an image pixels are ordered in a squared configuration. For performing a connected component analysis 
+In an image, pixels are ordered in a squared configuration. For performing a connected component analysis, 
 it is important to define which pixels are considered direct neighbors of a pixel. This is called connectivity and defines which 
-pixels are considered connected to each other. Unfortunately, there is not only one way to define connectivity. Depending,
-if we consider corner pixels or not we can have in 2D a 4 or 8--connectivity, respectively, in 3D a 6 or 26-connectivity. Which connectivity 
-value we choose can affect the object size.
+pixels are considered connected to each other. Unfortunately, there is not only one way to define connectivity. Depending upon the inclusion of corner pixels,
+one can have a 4 or 8--connectivity in 2D and  a 6 or 26-connectivity in 3D respectively. The chosen connectivity 
+type may affect the object size.
 <img src="../figures/connected_components_connectivity2D.png"  align ="left" width="50%" >
 <img src="../figures/connected_components_connectivity3D.png"  align ="right" width="50%">
 
