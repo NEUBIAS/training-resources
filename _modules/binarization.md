@@ -35,6 +35,7 @@ activities:
   - ["MATLAB", "binarization/activities/binarization_matlab.m", "matlab"]
   - ["KNIME", "binarization/activities/binarization_knime.md", "markdown"]
   - ["Python", "binarization/activities/binarization.py", "python"]
+  - ["Python Napari", "binarization/activities/binarization_napari.py", "python"]
 
 exercises:
   - ["ImageJ GUI", "binarization/exercises/binarization_imagejgui.md"]
