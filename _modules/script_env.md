@@ -1,36 +1,30 @@
 ---
-title:     Binarization
+title:     Setting up a scripting environment
 layout:    module
 prerequisites:
-  - "[Basic properties of images and pixels](../pixels)"
-  - "[Data types (unsigned 8-bit)](../datatypes)"
+
 objectives:
-  - "Describe the relationship between an intensity image and a derived binary image."
-  - "Apply a threshold to distinguish foreground and background pixels"
+  - "Set up a scripting environment for your platform"
 motivation: |
-  One strategy to detect objects or specific regions in images is to first distinguish so-called background pixels,
-  which do not contain objects or interesting regions,  from foreground pixels, which mark the areas of interest. 
-  This process is called **two class semantic segmentation** and is often referred to as **image binarization**. 
-  The foreground regions can then be further processed, e.g to detect objects or perform intensity measurements.
+  In order to run image analysis scripts you need a platform where you can actually excute those scripts. 
+  In this module there is a collection of installation instructions for some common platforms.
   
 concept_map: >
   graph TD
-    PV("Pixel values") --> BA(Binarization algorithm)
-    BA --> BPV("Binarized pixel values")
-    BPV --> BG("Background (0)")
-    BPV --> FG("Foreground (1)")
+    S("Script") -->|contains| C("Code")
+    E("Environment") -->|executes| C
+    S("Script editor") -->|modifies| C
+    S("Script editor") -->|may have| A("Auto-completion")
+    S("Script editor") -->|may have| B("Break-points")
 
-figure: /figures/binarization.png
-figure_legend: Image before and after binarization by applying a threshold.
+figure: 
 
 activity_preface: |
-  - Open the binary image [xy_8bit_binary__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__nuclei.tif).
-  - Discuss the image data type and the pixel values.
-  - Open the image [xy_8bit__two_cells.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__two_cells.tif) and binarize it by applying a manually defined threshold.
+  - Install a scripting environment for your platform of choice.
 
 activities:
-  - ["ImageJ GUI", "binarization/activities/binarization_imagejgui.md", "markdown"]
-  - ["ImageJ Macro", "binarization/activities/binarization_imagejmacro.ijm", "java"]
+  - ["Napari with script editor plugin", "script_env/activities/binarization_imagejgui.md", "markdown"]
+  - ["Fiji script editor", "script_env/activities/binarization_imagejmacro.ijm", "java"]
   - ["ImageJ Jython", "binarization/activities/binarization_jython.py", "python"]
   - ["MATLAB", "binarization/activities/binarization_matlab.m", "matlab"]
   - ["KNIME", "binarization/activities/binarization_knime.md", "markdown"]
