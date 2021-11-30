@@ -2,10 +2,10 @@
 title:     Running a script
 layout:    module
 prerequisites:
-
+  - "[TODO: Setting up your scripting environment](../script_env)"
 objectives:
-  - "Understand that a script is a single text file that is written in a programming language."
-  - "Understand the basic building blocks of a script, e.g. it is comprised of functions with inputs and outputs"
+  - "Understand that a script is a single text file that is written in a specific scripting language."
+  - "Roughly understand the basic building blocks of a script, i.e. what happens in each line."
   - "Run a bioimage analysis script in your favorite platform."
 motivation: |
   Scripts are a very good (maybe the best) way of sharing and publishing bioimage analysis workflows.
@@ -15,75 +15,99 @@ motivation: |
 concept_map: >
   graph TD
     S("Script") --> R("Run")
-    S("Script") --> "Share, Publish, Reproduce"
-    R --> "With user interaction"
-    R --> "Without user interaction (batch run)"
-    S -->|contains| T(Text)
+    S --> X("Share, Publish, Reproduce")
+    R --> Y("With user interaction")
+    R --> Z("Batch")
+    S --> T("Text")
     T --> P("Programming language")
-    P --> "Objects, functions, parameters"
+    P --> OFP("Objects, functions, parameters, comments, ...")
 
 figure: 
 
 activity_preface: |
-  - Open the binary image [xy_8bit_binary__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__nuclei.tif).
-  - Discuss the image data type and the pixel values.
-  - Open the image [xy_8bit__two_cells.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__two_cells.tif) and binarize it by applying a manually defined threshold.
+  - Download a bioimage analysis script
+  - Open the script
+  - Run the script
+  - Roughly discuss the typical content of a programming script, such as:
+    - Language
+    - Includes
+    - Comments
+    - Functions
+    - Parameters
+    - Objects/Variables
+  - Discuss particularities for your platform
 
 activities:
-  - ["ImageJ GUI", "binarization/activities/binarization_imagejgui.md", "markdown"]
-  - ["ImageJ Macro", "binarization/activities/binarization_imagejmacro.ijm", "java"]
-  - ["ImageJ Jython", "binarization/activities/binarization_jython.py", "python"]
-  - ["MATLAB", "binarization/activities/binarization_matlab.m", "matlab"]
-  - ["KNIME", "binarization/activities/binarization_knime.md", "markdown"]
-  - ["Python", "binarization/activities/binarization.py", "python"]
+  - ["Napari console", "script_run/activities/script_run_napari_terminal.md", "markdown"]
 
 exercises:
-  - ["ImageJ GUI", "binarization/exercises/binarization_imagejgui.md"]
-  - ["ImageJ Macro", "binarization/exercises/binarization_imagejmacro.md"]
-  - ["ImageJ Jython", "binarization/exercises/binarization_jython.md"]
 
 assessment: >
 
-  ### Fill in the blanks
-
-    - Pixels in a binary image can have maximally ___ different values.
-    - If the threshold is larger than the maximal pixel value in the intensity image, all pixels in the binary image have a value of ___.
-    
-    > ## Solution
-    >   - Pixels in a binary image can have maximally **2** different values.
-    >   - If the threshold is larger than the maximal pixel value in the intensity image, 
-    > all pixels in the binary image have a value of **0**.
-    {: .solution}
-    
   ### True or False
-    - There is only one correct threshold value in order to convert an intensity image into a binary image. 
-    - Binary images are always unsigned 8-bit where the foreground is 255.
+    - Python is a scripting language. 
+    - A comment is a line of code that will be executed.
+    - You can run scripts in Excel and Word.
+    - You can run scripts in Fiji.
     
     > ## Solution
-    >   - There is only one correct threshold value in order to convert an intensity image into a binary image. **False**
-    >   -  Binary images are always unsigned 8-bit where the foreground is 255. **False**
+    >   - **True**
+    >   - **False** Comments are just for humans to read.
+    >   - **True** Excel and Word in fact do have their own [scripting capabilities}(https://support.microsoft.com/en-us/office/introduction-to-office-scripts-in-excel-9fbe283d-adb8-4f13-a75b-a81c6baf163a)
+    >   - **True**
     {: .solution}
 
 learn_next:
-  - "[Automatic threshold for binarization](../auto_threshold)"
-  - "[Finding objects in a binary image](../connected_components)"
 
 external_links:
-  - "[Wikipedia: Binary image](https://en.wikipedia.org/wiki/Binary_image)"
-  
+  - "[Scripting Fiji](https://imagej.net/scripting/)"
+  - "[Scripting QuPath](https://qupath.readthedocs.io/en/stable/docs/scripting/overview.html)"
 ---
-#### Image thresholding
-A common algorithm for binarization is thresholding. A threshold value `t` is chosen, either manually or automatically, 
-and all pixels with intensities below `t` are set to 0, whereas pixels with intensities `>= t` are set to the value for the foreground. 
-Depending on the software the foreground value can be different (e.g. 1 in MATLAB or 255 in ImageJ). At any pixel (x,y):
 
-`p_im(x,y) < t` -> `p_bin(x,y) = 0`
+#### Image analysis platforms with scripting capabilities
 
-`p_im(x,y) >= t` -> `p_bin(x,y) = 1`
+- Fiji
+- QuPath
+- Napari
 
-where, p_im and p_bin are the intensity and binary images respectively.
+#### Script content
 
-It is also possible to define an interval of threshold values, i.e. a lower and upper threshold value. Pixels with intensity values 
-within this interval belong to the foreground and vice versa. 
- 
+A script is a text file where each line is code that can be executed by the platform in which you are running the script. There are different types of content that a line can represent. Sometimes one line can even contain multiple of such contents.
 
+##### Comments
+
+It is good practice to add some human readable comments to explain what the code is doing.
+This is achieved by starting the line with a special symbol, such as `#` or `//` or `/*`.
+Note that a comment can be either a whole line in the script or also added behind an actual coding statement.
+
+Examples:
+- IJ-Macro: ...
+- IJ-Groovy: ...
+- Python: `# binarise the image`
+- Python: `binary_image = image > 49 # binarise the image`
+
+
+##### Import statements
+
+In some cases one needs to tell the executing environment which libraries are needed to run the code. This is done via so-called import statements.
+
+Examples:
+- IJ-Macro: You don't need import statemts as everything is available by default.
+- IJ-Groovy: ...
+- Python: `import imageio`
+
+
+##### Functions and parameter
+
+Examples:
+- IJ-Macro: `IJ.run(...)`
+- Python: `viewer.add_image(image)`
+
+
+##### Objects
+
+Very often you want to store the results of some computation in an object. In most languages this is achieved by the `=` sign operator, where you assign the output of the computation on the right of the `=` sign to the object on the left.
+
+Examples:
+- IJ-Macro: ???
+- Python: `binary_image = threshold(image, 10)`
