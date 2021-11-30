@@ -22,7 +22,9 @@ concept_map: >
     T --> P("Programming language")
     P --> OFP("Objects, functions, parameters, comments, ...")
 
-figure: 
+figure: /figures/script_run.png
+figure_legend: Running a python script in the napari script editor plugin.
+
 
 activity_preface: |
   - Download a bioimage analysis script
