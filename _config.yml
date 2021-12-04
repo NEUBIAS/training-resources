@@ -13,7 +13,7 @@ exclude: ["README.md", "TEACHING.md"]
 # options are: "NONE", "ImageJ GUI", "ImageJ Macro", "Jython", "MATLAB"
 default-platform: "NONE"
 
-life_cycle: "pre-alpha"
+life_cycle: "stable"
 kind: "lesson"
 
 module_order:
