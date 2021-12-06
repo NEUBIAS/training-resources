@@ -13,25 +13,25 @@ exclude: ["README.md", "TEACHING.md"]
 # options are: "NONE", "ImageJ GUI", "ImageJ Macro", "Jython", "MATLAB"
 default-platform: "NONE"
 
-life_cycle: "pre-alpha"
+life_cycle: "stable"
 kind: "lesson"
 
 module_order:
-# - pixels
-# - spatial_calibration
-# - lut
-# - binarization
-# - connected_components
-# - datatypes
-# - measure_shapes
-# - workflow_segment_2d_nuclei_measure_shape
-# - measure_intensities
-# - global_background_correction
-# - filter_neighbourhood
-# - median_filter
-# - local_background_correction
-# - filter_objects
-# - workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape
+- pixels
+- spatial_calibration
+- lut
+- binarization
+- connected_components
+- datatypes
+- measure_shapes
+- workflow_segment_2d_nuclei_measure_shape
+- measure_intensities
+- global_background_correction
+- filter_neighbourhood
+- median_filter
+- local_background_correction
+- filter_objects
+- workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape
 
 # Sites
 repository: <USERNAME>/<PROJECT>
