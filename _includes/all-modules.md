@@ -23,7 +23,7 @@ open an issue: https://github.com/carpentries/styles/issues/new
     <a href="{{ e.url }}">
       <h4>{{ e.title }}</h4>
     </a>
-    <img src="{{ e.figure }}" alt="">
+    <img src="{{ e.figure | relative_url }}" alt="">
   </div>
 </div>  
 
