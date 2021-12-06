@@ -1,5 +1,5 @@
 ---
-permalink: /aio2/index.html
+permalink: /all-modules/index.html
 ---
 
 {% comment %}
@@ -10,4 +10,4 @@ open an issue: https://github.com/carpentries/styles/issues/new
 
 {% include base_path.html %}
 
-{% include aio2-script.md %}
+{% include all-modules.md %}
