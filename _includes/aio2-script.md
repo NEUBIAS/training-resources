@@ -6,7 +6,22 @@ open an issue: https://github.com/carpentries/styles/issues/new
 
 {% include manual_episode_order.html %}
 
+<style>
+p.dotted {border-style: dotted;}
+p.dashed {border-style: dashed;}
+p.solid {border-style: solid;}
+p.double {border-style: double;}
+p.groove {border-style: groove;}
+p.ridge {border-style: ridge;}
+p.inset {border-style: inset;}
+p.outset {border-style: outset;}
+p.none {border-style: none;}
+p.hidden {border-style: hidden;}
+p.mix {border-style: dotted dashed solid double;}
+</style>
 
+
+<div class="container-fluid">
 <div class="row">
 
 {% for lesson_episode in lesson_episodes %}
@@ -17,22 +32,16 @@ open an issue: https://github.com/carpentries/styles/issues/new
   {% assign e = lesson_episode %}
 {% endif %}
 
-<div class="col-sm-6">
-  <div class="card border-primary bg-dark" style="max-width: 24rem;">
-    <div class="card-header">{{ e.title }}</div>
-    <div class="card-body">
-      <h5 class="card-title">Info card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    </div>
+<div class="col-xs-6">
+  <div style="border:1px solid white; margin: 20px; padding: 20px;">
+    <a href="{{ e.url }}">
+      <h4>{{ e.title }}</h4>
+    </a>
+    <img src="{{ e.figure }}" alt="">
   </div>
 </div>  
 
-<hr />
 {% endfor %}
-</div>
 
-{% comment %}
-<div class="card-body">
-      <img class="card-img-top" src="{{ e.figure }}" alt="Card image cap">
-    </div>
-{% endcomment %}
+</div>
+</div>
