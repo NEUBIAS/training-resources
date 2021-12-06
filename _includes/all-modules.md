@@ -6,20 +6,6 @@ open an issue: https://github.com/carpentries/styles/issues/new
 
 {% include manual_episode_order.html %}
 
-<style>
-p.dotted {border-style: dotted;}
-p.dashed {border-style: dashed;}
-p.solid {border-style: solid;}
-p.double {border-style: double;}
-p.groove {border-style: groove;}
-p.ridge {border-style: ridge;}
-p.inset {border-style: inset;}
-p.outset {border-style: outset;}
-p.none {border-style: none;}
-p.hidden {border-style: hidden;}
-p.mix {border-style: dotted dashed solid double;}
-</style>
-
 
 <div class="container-fluid">
 <div class="row">
