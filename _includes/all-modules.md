@@ -20,7 +20,7 @@ open an issue: https://github.com/carpentries/styles/issues/new
 
 <div class="col-xs-6">
   <div style="border:1px solid white; margin: 20px; padding: 20px;">
-    <a href="{{ e.url }}">
+    <a href="{{ e.url | relative_url }}">
       <h4>{{ e.title }}</h4>
     </a>
     <img src="{{ e.figure | relative_url }}" alt="">
