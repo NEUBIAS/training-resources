@@ -2,7 +2,6 @@
 title:     Object shape measurements
 layout:    module
 
-
 prerequisites:
   - "[Connected component analysis](../connected_components)"
     
@@ -57,7 +56,7 @@ assessment: >
      {: .solution}
 
 learn_next:
-  - "[Workflow - Simple 2D object analysis](../workflow_segment_2d_nuclei_measure_shape)"
+  - "[Workflow: Simple 2D object analysis](../workflow_segment_2d_nuclei_measure_shape)"
   - "[Object intensity meaurements](../measure_intensities)"
 
 

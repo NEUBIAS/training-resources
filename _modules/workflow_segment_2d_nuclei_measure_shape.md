@@ -1,5 +1,5 @@
 ---
-title:     Workflow - Simple 2D object analysis
+title:     "Workflow: Simple 2D object analysis"
 layout:    module
 prerequisites:
   - "[Binarization](../binarization)"

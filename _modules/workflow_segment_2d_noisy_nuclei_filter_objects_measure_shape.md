@@ -1,5 +1,5 @@
 ---
-title:     Workflow - 2D noisy object segmentation and filtering
+title:     "Workflow: 2D noisy object segmentation and filtering"
 layout:    module
 prerequisites:
   - "[Neighbourhood filters](../filter_neighbourhood)"
