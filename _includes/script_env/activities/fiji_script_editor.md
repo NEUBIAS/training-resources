@@ -2,6 +2,12 @@
 - Open Fiji
 - <kdb>File > New > Script...</kbd>
 - <kbd>Run</kbd> button to execute the code.
-- Choose between different languages in the [Language] menu item
-- Auto-completion for IJ-Macro language
-- No break-points 
+- Languages
+  - IJ-Macro
+  - Javascript
+  - Jython
+  - Groovy
+  - and some more...
+- Choose between different languages in the Language menu item
+- [X] Auto-completion for IJ-Macro language
+- [ ] Break-points 

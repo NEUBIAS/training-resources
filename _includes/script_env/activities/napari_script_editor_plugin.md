@@ -1,1 +1,3 @@
 - Install python, napari and the script editor; see [here](https://github.com/haesleinhuepf/napari-script-editor#installation)
+- [X] Auto-completion
+- [ ] Break-points
