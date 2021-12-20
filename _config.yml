@@ -32,6 +32,7 @@ module_order:
 - local_background_correction
 - filter_objects
 - workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape
+- output_saving
 
 # Sites
 repository: <USERNAME>/<PROJECT>

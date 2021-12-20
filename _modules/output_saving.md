@@ -2,23 +2,19 @@
 title:     Output saving
 layout:    module
 prerequisites:
-  - "[Basic properties of images and pixels](../pixels)"
-  - "[Data types (unsigned 8-bit)](../datatypes)"
+  - "[Be able to generate a results table](../datatypes)"
+  - "[Be able to add ROIs to the ROI manager]"
 objectives:
-  - "Describe the relationship between an intensity image and a derived binary image."
-  - "Apply a threshold to distinguish foreground and background pixels"
+  - "Save measurements in a results table"
+  - "Save ROIs from the RoiManager as a .zip"
 motivation: |
-  One strategy to detect objects or specific regions in images is to first distinguish so-called background pixels,
-  which do not contain objects or interesting regions,  from foreground pixels, which mark the areas of interest.
-  This process is called **two class semantic segmentation** and is often referred to as **image binarization**.
-  The foreground regions can then be further processed, e.g to detect objects or perform intensity measurements.
+  There are multiple situations in which you need to save the different types of output you can generate with FIJI. For example, you may want to save your results tables for further analysis in other software (e.g. RStudio, MS EXCEL, ..). It can also be important to save the ROIs that were used for particular measurements, so that you can look back at them for reference, or to use them for visualization purposes. Finally, you may also want to save particular settings or parameters that you used in your scripts, so that you have them in case you need to re-run the script later and compare results.
 
 concept_map: >
   graph TD
-    PV("Pixel values") --> BA(Binarization algorithm)
-    BA --> BPV("Binarized pixel values")
-    BPV --> BG("Background (0)")
-    BPV --> FG("Foreground (1)")
+    PV("Output types") --> RS("Results table")
+    PV("Output types") --> ROI("ROIs")
+    PV("Output types") --> PM("Script Parameters")
 
 figure: /figures/binarization.png
 figure_legend: Image before and after binarization by applying a threshold.
