@@ -1,5 +1,5 @@
 ---
-title:     Script variables
+title:     Variables
 layout:    module
 prerequisites:
   - "[Basic properties of images and pixels](../pixels)"
