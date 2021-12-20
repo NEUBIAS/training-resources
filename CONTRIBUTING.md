@@ -171,7 +171,7 @@ and check whether you're happy to submit your changes to be merged into `master`
 You need to install several tools (`ruby` and then `jekyll`). Please follow the instructions
 [https://jekyllrb.com/docs/installation/windows/] follow step 1-4
 
-All commands are run from a standard/gitbash terminal as administrator
+All commands are run from a standard/gitbash terminal. It may be that the ``gem install`` commands must be run as administrator
 
 * Install ruby using the [https://rubyinstaller.org/] and then jekyll.
 ```bash
