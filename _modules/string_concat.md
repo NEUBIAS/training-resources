@@ -2,12 +2,13 @@
 title:     String concatenation
 layout:    module
 prerequisites:
-  - "[Basic properties of images and pixels](../pixels)"
-  - "[Data types (unsigned 8-bit)](../datatypes)"
+  - NEEDS TO BE ADDED "[Previous modules of this lesson](../)"
+
 objectives:
-  - "Describe the relationship between an intensity image and a derived binary image."
-  - "Apply a threshold to distinguish foreground and background pixels"
+  - "Concatenate strings"
+  - "Convert numbers into strings"
 motivation: |
+  String is a type of variable ...
   One strategy to detect objects or specific regions in images is to first distinguish so-called background pixels,
   which do not contain objects or interesting regions,  from foreground pixels, which mark the areas of interest. 
   This process is called **two class semantic segmentation** and is often referred to as **image binarization**. 
