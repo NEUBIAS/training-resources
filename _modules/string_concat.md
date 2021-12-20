@@ -9,10 +9,7 @@ objectives:
   - "Convert numbers into strings"
 motivation: |
   String is a type of variable ...
-  One strategy to detect objects or specific regions in images is to first distinguish so-called background pixels,
-  which do not contain objects or interesting regions,  from foreground pixels, which mark the areas of interest. 
-  This process is called **two class semantic segmentation** and is often referred to as **image binarization**. 
-  The foreground regions can then be further processed, e.g to detect objects or perform intensity measurements.
+
   
 concept_map: >
   graph TD
