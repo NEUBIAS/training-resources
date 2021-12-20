@@ -167,10 +167,11 @@ Now you can navigate around the locally-built version of the pages
 and check whether you're happy to submit your changes to be merged into `master` :+1:
 
 ## Building locally Windows (without make)
+
 You need to install several tools (`ruby` and then `jekyll`). Please follow the instructions
 [https://jekyllrb.com/docs/installation/windows/] follow step 1-4
 
-All commands are run from a standard/gitbash terminal
+All commands are run from a standard/gitbash terminal as administrator
 
 * Install ruby using the [https://rubyinstaller.org/] and then jekyll.
 ```bash
@@ -213,3 +214,27 @@ Configuration file: D:/Code/training-resources/_config.yml
 * Copy the URL provided in the output, should be http://127.0.0.1:4000/image-analysis-training-resources/)
 and paste it into your web browser. Now you can navigate around the locally-built version of the pages
 and check whether you're happy to submit your changes to be merged into `master` :+1:
+
+## See your new module
+To see a module edit the file *_config.yml*  and add your module (the file name in _modules with .md) to the 
+list and the appropriate location
+```markdown
+module_order:
+- pixels
+- spatial_calibration
+- lut
+- binarization
+- connected_components
+- datatypes
+- measure_shapes
+- workflow_segment_2d_nuclei_measure_shape
+- measure_intensities
+- global_background_correction
+- filter_neighbourhood
+- median_filter
+- local_background_correction
+- filter_objects
+- workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape
+- MY_MODULE
+
+```
