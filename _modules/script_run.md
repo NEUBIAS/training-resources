@@ -2,14 +2,16 @@
 title:     Running a script
 layout:    module
 prerequisites:
-  - "[TODO: Setting up your scripting environment](../script_env)"
+  - "[TODO: Setting up a scripting environment](../pixels)"
 objectives:
-  - "Understand that a script is a single text file that is written in a specific scripting language."
-  - "Roughly understand the basic building blocks of a script, i.e. what happens in each line."
-  - "Run a bioimage analysis script in your favorite platform."
+  - "Understand that a script is a single text file that is written in a specific scripting language"
+  - "Understand the basic building blocks of a script, i.e. what happens in each line"
+  - "Run a bioimage analysis script"
+  - "Modify a bioimage analysis script"
+
 motivation: |
-  Scripts are a very good (maybe the best) way of sharing and publishing bioimage analysis workflows.
-  It is thus very important to know how to use such scripts, e.g. when you find one in a publication or 
+  Scripts are a very good and common way of sharing and publishing bioimage analysis workflows.
+  It is thus very important to know how to run such scripts, e.g. when you find one in a publication or 
   when someone in your bioimage analysis support develops such a script for you.
   
 concept_map: >
@@ -25,13 +27,12 @@ concept_map: >
 figure: /figures/script_run.png
 figure_legend: Running a python script in the napari script editor plugin.
 
-
 activity_preface: |
   - Download a bioimage analysis script
   - Open the script
   - Run the script
-  - Roughly discuss the typical content of a programming script, such as:
-    - Language
+  - Discuss the typical content of a bioimage analysis script, such as:
+    - Programming language
     - Includes
     - Comments
     - Functions
