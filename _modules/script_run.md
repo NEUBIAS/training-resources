@@ -41,7 +41,9 @@ activity_preface: |
   - Discuss particularities for your platform
 
 activities:
-  - ["Napari console", "script_run/activities/script_run_napari_terminal.md", "markdown"]
+  - ["ImageJ macro in Fiji script editor", "script_run/activities/script_run_fiji_imagej_macro.md", "markdown"]
+  - ["Python script in napari console", "script_run/activities/script_run_napari_terminal.md", "markdown"]
+  - ["Python script in napari script editor plugin", "script_run/activities/script_run_napari_script_editor.md", "markdown"]
 
 exercises:
 
