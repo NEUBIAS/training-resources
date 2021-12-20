@@ -1,5 +1,5 @@
 - Open Fiji
-- Drag and drop the 
-[binarisation](https://github.com/NEUBIAS/training-resources/raw/master/scripts/binarization_fiji.ijm) ImageJ macro script onto Fiji
-- Fiji's script editor will open with the script in it
+- Open the 
+[binarisation](https://github.com/NEUBIAS/training-resources/raw/master/scripts/binarization_fiji.ijm) ImageJ macro script with Fiji
+- Fiji's script editor will open
 - Click <kbd>Run</kbd>
