@@ -147,7 +147,7 @@ Use the `module_order` field in `_config.yml` to specify which modules should ap
 
 If you have questions about the module layout, please contact image-analysis-support@embl.de.
 
-## Building locally
+## Building locally OSX
 
 To test your changes locally, install `jekyll` on your system. Instructions for Mac OSX are here: [https://jekyllrb.com/docs/installation/macos/](https://jekyllrb.com/docs/installation/macos/).
 
@@ -164,4 +164,52 @@ Copy the URL provided in the output
 (should be http://127.0.0.1:4000/image-analysis-training-resources/)
 and paste it into your web browser.
 Now you can navigate around the locally-built version of the pages
+and check whether you're happy to submit your changes to be merged into `master` :+1:
+
+## Building locally Windows (without make)
+You need to install several tools (`ruby` and then `jekyll`). Please follow the instructions
+[https://jekyllrb.com/docs/installation/windows/] follow step 1-4
+
+All commands are run from a standard/gitbash terminal
+
+* Install ruby using the [https://rubyinstaller.org/] and then jekyll.
+```bash
+gem install jekyll bundler
+```
+* Check your jekyll install
+```bash
+jekyll -v
+```
+* Try to compile the page
+```bash 
+bundle exec jekyll serve
+```
+* It will probably complain about missing gems. Install those, e.g.
+```bash 
+gem install github-pages
+gem install webrick
+```
+* Run again 
+```bash 
+bundle exec jekyll serve
+```
+
+* If everything works fine you will get something like
+```bash
+ bundle exec jekyll serve
+Configuration file: D:/Code/training-resources/_config.yml
+            Source: D:/Code/training-resources
+       Destination: D:/Code/training-resources/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating...
+                    done in 5.007 seconds.
+  Please add the following to your Gemfile to avoid polling for changes:
+    gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+ Auto-regeneration: enabled for 'D:/Code/training-resources'
+    Server address: http://127.0.0.1:4000
+  Server running... press ctrl-c to stop.
+```
+
+* Copy the URL provided in the output, should be http://127.0.0.1:4000/image-analysis-training-resources/)
+and paste it into your web browser. Now you can navigate around the locally-built version of the pages
 and check whether you're happy to submit your changes to be merged into `master` :+1:
