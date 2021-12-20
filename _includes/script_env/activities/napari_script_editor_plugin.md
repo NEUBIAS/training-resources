@@ -1,5 +1,1 @@
-- [Install Fiji](https://imagej.net/software/fiji/downloads)
-- Open Fiji
-- [File > New > Script...]
-- That's it! You have a script editor with a [Run] button that can execute the code.
-- You can even choose between different languages in the [Language] menu item
+- Install python, napari and the script editor; see [here](https://github.com/haesleinhuepf/napari-script-editor#installation)
