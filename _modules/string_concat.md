@@ -8,18 +8,19 @@ objectives:
   - "Concatenate strings"
   - "Convert numbers into strings"
 motivation: |
-  String is a type of variable ...
+  String is a type of variable that can cotain a combination of characters. 
+  String concatenation is the operation of joining multiple substrings together to make a bigger one. 
+  For example concatenating "Hello " and "world!" would result into "Hello world!". 
+  You can also combine a string and a number. For example concatenating "Image" and 1 would result into "image1"
 
   
 concept_map: >
   graph TD
-    PV("Pixel values") --> BA(Binarization algorithm)
-    BA --> BPV("Binarized pixel values")
-    BPV --> BG("Background (0)")
-    BPV --> FG("Foreground (1)")
+    A("Substring 1") --> X("Final string")
+    B("Substring 2") --> X
+	C("...") --> X
+	D("Substring n") --> X
 
-figure: /figures/binarization.png
-figure_legend: Image before and after binarization by applying a threshold.
 
 activity_preface: |
   - Open the binary image [xy_8bit_binary__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__nuclei.tif).
