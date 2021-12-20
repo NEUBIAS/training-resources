@@ -171,9 +171,10 @@ and check whether you're happy to submit your changes to be merged into `master`
 You need to install several tools (`ruby` and then `jekyll`). Please follow the instructions
 [https://jekyllrb.com/docs/installation/windows/] follow step 1-4
 
-All commands are run from a standard/gitbash terminal. It may be that the ``gem install`` commands must be run as administrator
+All commands are run from a standard/gitbash terminal. 
 
-* Install ruby using the [https://rubyinstaller.org/] and then jekyll.
+* Install ruby using the [https://rubyinstaller.org/] (tested with devkit rubyinstaller-devkit-3.0.3-1-x64 used default suggested path etc.  MSYS2 and MINGW development toolchain) 
+* Install jekyll
 ```bash
 gem install jekyll bundler
 ```
@@ -214,6 +215,8 @@ Configuration file: D:/Code/training-resources/_config.yml
 * Copy the URL provided in the output, should be http://127.0.0.1:4000/image-analysis-training-resources/)
 and paste it into your web browser. Now you can navigate around the locally-built version of the pages
 and check whether you're happy to submit your changes to be merged into `master` :+1:
+
+Caveat: Some users must run their ``gem install`` commands as administrator. We do not know exactly why, but it may depend on their respective Windows installation. 
 
 ## See your new module
 To see a module edit the file *_config.yml*  and add your module (the file name in _modules with .md) to the 
