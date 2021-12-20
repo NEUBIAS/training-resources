@@ -1,5 +1,5 @@
 ---
-title:     Running a script (Draft)
+title:     Running a script
 layout:    module
 prerequisites:
   - "[TODO: Setting up a scripting environment](../pixels)"
