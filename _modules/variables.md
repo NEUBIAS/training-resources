@@ -2,25 +2,27 @@
 title:     Variables
 layout:    module
 prerequisites:
-
+ - [TODO add links]
 objectives:
-  - "Describe the relationship between an intensity image and a derived binary image."
-  - "Apply a threshold to distinguish foreground and background pixels"
+  - "Explain concept of variable"
+  - "Run minimal example of computation using a variable"
 motivation: |
-  One strategy to detect objects or specific regions in images is to first distinguish so-called background pixels,
-  which do not contain objects or interesting regions,  from foreground pixels, which mark the areas of interest. 
-  This process is called **two class semantic segmentation** and is often referred to as **image binarization**. 
-  The foreground regions can then be further processed, e.g to detect objects or perform intensity measurements.
+  A variable is an essential concept in programming, it allows to structure and generalize a script/program.
+  A variable stores a value, e.g. a numeric value, that can be used and changed at several occasions in 
+  a script.
+  
   
 concept_map: >
   graph TD
-    PV("Pixel values") --> BA(Binarization algorithm)
-    BA --> BPV("Binarized pixel values")
-    BPV --> BG("Background (0)")
-    BPV --> FG("Foreground (1)")
+    V("Variable") --> |has|Name("Symbolic Name")
+    V --> |has|Type("Type")
+    V --> |has|Value("Value")
+    V --> |is| Stored("Stored in memory")
+    Value --> |can| Change
 
-figure: /figures/binarization.png
-figure_legend: Image before and after binarization by applying a threshold.
+figure: /figures/variables.png
+figure_legend: 
+   Variables are containers specific for a type of information. The name of the variable should  explain its purpose. Two main conventions are used for the name CamelCase (left side) or  under score (right side).
 
 activity_preface: |
   - Open the binary image [xy_8bit_binary__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__nuclei.tif).
