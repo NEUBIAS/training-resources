@@ -17,7 +17,7 @@ motivation: |
 concept_map: >
   graph TD
     A("Substring 1") --> X("Final string")
-    B("Substring 2") --> X
+	B("Substring 2") --> X
 	C("...") --> X
 	D("Substring n") --> X
 
