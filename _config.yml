@@ -33,6 +33,9 @@ module_order:
 - filter_objects
 - workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape
 - string_concat
+- output_saving
+- script_run
+
 
 # Sites
 repository: <USERNAME>/<PROJECT>
