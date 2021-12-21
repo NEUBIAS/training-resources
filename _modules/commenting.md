@@ -20,7 +20,7 @@ concept_map: >
     CM -->|ignored by| RC("computer")
 
 figure: /figures/code_comment.png
-figure_legend: single line comment, and multiple line (block) comment.
+figure_legend: Single line comment, and multiple line (block) comment.
 
 activity_preface: |
   - Expand the activity for different platforms.
