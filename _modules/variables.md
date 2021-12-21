@@ -22,7 +22,8 @@ concept_map: >
 
 figure: /figures/variables.png
 figure_legend: 
-   Variables are containers specific for a type of information. The name of the variable should  explain its purpose. Two main conventions are used for the name CamelCase (left side) or  under score (right side).
+   Variables are containers specific for an information type. The name of the variable should explain 
+   its purpose. Naming convention is CamelCase (left side) or under_score (right side).
 
 activity_preface: |
   - Open the binary image [xy_8bit_binary__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__nuclei.tif).
@@ -70,20 +71,6 @@ learn_next:
 
 external_links:
   - "[Wikipedia: Binary image](https://en.wikipedia.org/wiki/Binary_image)"
-  
----
-#### Image thresholding
-A common algorithm for binarization is thresholding. A threshold value `t` is chosen, either manually or automatically, 
-and all pixels with intensities below `t` are set to 0, whereas pixels with intensities `>= t` are set to the value for the foreground. 
-Depending on the software the foreground value can be different (e.g. 1 in MATLAB or 255 in ImageJ). At any pixel (x,y):
-
-`p_im(x,y) < t` -> `p_bin(x,y) = 0`
-
-`p_im(x,y) >= t` -> `p_bin(x,y) = 1`
-
-where, p_im and p_bin are the intensity and binary images respectively.
-
-It is also possible to define an interval of threshold values, i.e. a lower and upper threshold value. Pixels with intensity values 
-within this interval belong to the foreground and vice versa. 
  
-
+ 
+ 
