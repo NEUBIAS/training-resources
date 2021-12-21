@@ -1,70 +1,72 @@
 ---
 title:     Output saving
+
 layout:    module
+
 prerequisites:
-  - "[Be able to generate a results table](../datatypes)"
-  - "[Be able to add ROIs to the ROI manager]"
+  - "[Binarize an image](../binarization)"
+  - "[Connected components labeling](../connected_components)"
+  - "[Simple 2D object analysis](../workflow_segment_2d_nuclei_measure_shape)"
+  - "Generating results tables"
+  - "Defining regions of interest (ROIs)"
+
 objectives:
-  - "Save measurements in a results table"
-  - "Save ROIs from the RoiManager as a .zip"
+  - "Save measurements as a table"
+  - "Save ROIs"
+  - "Save output label mask"
+
 motivation: |
-  There are multiple situations in which you need to save the different types of output you can generate with FIJI. For example, you may want to save your results tables for further analysis in other software (e.g. RStudio, MS EXCEL, ..). It can also be important to save the ROIs that were used for particular measurements, so that you can look back at them for reference, or to use them for visualization purposes. Finally, you may also want to save particular settings or parameters that you used in your scripts, so that you have them in case you need to re-run the script later and compare results.
+  There are multiple situations in which you need to save the different types of output you can generate with FIJI. For example, you may want to save your results tables for further analysis in other software (e.g. RStudio, MS EXCEL, ..). It can also be important to save the ROIs that were used for particular measurements, so that you can look back at them for reference, or to use them for visualization purposes. In addition to ROIs, images can be saved as label masks to store the information about different regions. Finally, you may also want to save your entire script containing particular settings or parameters that you used, so that you have re-run the analysis with the exact same settings or compare it with the results obtained using different settings. When you save your output, try to think about the 'interoperability' of the file format: does it allow you to safely re-open the data afterwards or in different software?
 
 concept_map: >
   graph TD
-    PV("Output types") --> RS("Results table")
-    PV("Output types") --> ROI("ROIs")
-    PV("Output types") --> PM("Script Parameters")
+    II("Input image") --> IA("Image analysis process")
+    IA("Image analysis process") --> RS("Results table")
+    IA("Image analysis process") --> ROI("ROIs")
+    IA("Image analysis process") --> PM("Label mask")
 
-figure: /figures/binarization.png
-figure_legend: Image before and after binarization by applying a threshold.
+figure: /figures/output_saving.png
+figure_legend: Image analysis processes can yield several outputs, such as results tables, ROI sets and label masks.
 
 activity_preface: |
-  - Open the binary image [xy_8bit_binary__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__nuclei.tif).
-  - Discuss the image data type and the pixel values.
-  - Open the image [xy_8bit__two_cells.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__two_cells.tif) and binarize it by applying a manually defined threshold.
+  - Open the blobs image (File > Open Samples > Blobs).
+  - Binarize it and run the 'analyze particles' command to generate different kinds of output.
+  - Save the different output types.
 
 activities:
-  - ["ImageJ GUI", "binarization/activities/binarization_imagejgui.md", "markdown"]
-  - ["ImageJ Macro", "binarization/activities/binarization_imagejmacro.ijm", "java"]
-  - ["ImageJ Jython", "binarization/activities/binarization_jython.py", "python"]
-  - ["MATLAB", "binarization/activities/binarization_matlab.m", "matlab"]
-  - ["KNIME", "binarization/activities/binarization_knime.md", "markdown"]
-  - ["Python", "binarization/activities/binarization.py", "python"]
+  - ["ImageJ GUI/Macro", "output_saving/activities/output_saving_macro.ijm", "java"]
+  - ["ImageJ Jython", "output_saving/activities/output_saving_jython.py", "python"]
 
 exercises:
-  - ["ImageJ GUI", "binarization/exercises/binarization_imagejgui.md"]
-  - ["ImageJ Macro", "binarization/exercises/binarization_imagejmacro.md"]
-  - ["ImageJ Jython", "binarization/exercises/binarization_jython.md"]
+  - ["ImageJ Macro", "output_saving/exercises/output_saving_imagejmacro.md"]
+  - ["ImageJ Jython", "output_saving/exercises/output_saving_jython.md"]
 
 assessment: >
 
   ### Fill in the blanks
 
-    - Pixels in a binary image can have maximally ___ different values.
-    - If the threshold is larger than the maximal pixel value in the intensity image, all pixels in the binary image have a value of ___.
+    - Three commonly saved data output types include  ___ .
+    - In order to safely re-open your data or open it in different software, you need to save in an ____ file format.
 
     > ## Solution
-    >   - Pixels in a binary image can have maximally **2** different values.
-    >   - If the threshold is larger than the maximal pixel value in the intensity image,
-    > all pixels in the binary image have a value of **0**.
+    >   - Three commonly saved data output types include **results tables, ROI sets, and label masks**.
+    >   - In order to safely re-open your data or open it in different software, you need to save in an **interoperable** file format.
     {: .solution}
 
   ### True or False
-    - There is only one correct threshold value in order to convert an intensity image into a binary image.
-    - Binary images are always unsigned 8-bit where the foreground is 255.
+    - Label masks should be saved in JPEG format.
+    - The best default output format for results tables is tab-delimited text.
 
     > ## Solution
-    >   - There is only one correct threshold value in order to convert an intensity image into a binary image. **False**
-    >   -  Binary images are always unsigned 8-bit where the foreground is 255. **False**
+    >   - Label masks should be saved in JPEG format. **False** (JPEG compression results in loss of the unique label values in the image)
+    >   - The best default output format for results tables is tab-delimited text. **True** (this is generally more stable in other software than for example comma-delimited data)
     {: .solution}
 
 learn_next:
-  - "[Automatic threshold for binarization](../auto_threshold)"
-  - "[Finding objects in a binary image](../connected_components)"
+  - "[Opening pre-saved ROIs/Images/datasets and modify them (?)]"
 
 external_links:
-  - "[Wikipedia: Binary image](https://en.wikipedia.org/wiki/Binary_image)"
+  - "[MorpholibJ](https://imagej.net/plugins/morpholibj)"
 
 ---
 #### Image thresholding
