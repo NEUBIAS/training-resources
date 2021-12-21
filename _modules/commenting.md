@@ -1,25 +1,20 @@
 ---
-title:     Proper commenting and cleaning up
+title:     Commenting
 layout:    module
 prerequisites:
-  - "[Basic properties of images and pixels](../pixels)"
-  - "[Data types (unsigned 8-bit)](../datatypes)"
+  - "[Connected component labeling](../connected_components)"
 objectives:
-  - "Describe the relationship between an intensity image and a derived binary image."
-  - "Apply a threshold to distinguish foreground and background pixels"
+  - "Understand the concept and purpose of commenting."
+  - "Comment properly what certain section of code."
+  - "Apply a threshold to distinguish foreground and background pixels."
 motivation: |
-  One strategy to detect objects or specific regions in images is to first distinguish so-called background pixels,
-  which do not contain objects or interesting regions,  from foreground pixels, which mark the areas of interest. 
-  This process is called **two class semantic segmentation** and is often referred to as **image binarization**. 
-  The foreground regions can then be further processed, e.g to detect objects or perform intensity measurements.
+  When you read your code again in six months from now, you want to understand what your code does, and why. 
+ And  For this, you can add comments, i.e. text which is ignored by ImageJ when it executes the macro.
   
 concept_map: >
-  graph TD
-    PV("Pixel values") --> BA(Binarization algorithm)
-    BA --> BPV("Binarized pixel values")
-    BPV --> BG("Background (0)")
-    BPV --> FG("Foreground (1)")
-
+  graph LR
+    R("script") --> CM(commenting)
+    CM --> S("Image analysis script")
 figure: /figures/binarization.png
 figure_legend: Image before and after binarization by applying a threshold.
 
