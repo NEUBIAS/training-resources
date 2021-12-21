@@ -33,6 +33,8 @@ module_order:
 - filter_objects
 - workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape
 - variables
+- script_run
+
 # Sites
 repository: <USERNAME>/<PROJECT>
 cc_by_human: "https://creativecommons.org/licenses/by/4.0/"
