@@ -1,5 +1,5 @@
 Open a new script editor
-1. From imageJ GUI open File-New-Script...
+1. From ImageJ GUI open a script [ File > New > Script...]
 2. Choose the language IJ1 Macro
 3. Define variable 1 as "nuclei"
 4. Define variable 2 as 6
