@@ -16,7 +16,7 @@ objectives:
   - "Save output label mask"
 
 motivation: |
-  There are multiple situations in which you need to save the different types of output you can generate with FIJI. For example, you may want to save your results tables for further analysis in other software (e.g. RStudio, MS EXCEL, ..). It can also be important to save the ROIs that were used for particular measurements, so that you can look back at them for reference, or to use them for visualization purposes. In addition to ROIs, images can be saved as label masks to store the information about different regions. Finally, you may also want to save your entire script containing particular settings or parameters that you used, so that you have re-run the analysis with the exact same settings or compare it with the results obtained using different settings. When you save your output, try to think about the 'interoperability' of the file format: does it allow you to safely re-open the data afterwards or in different software?
+  There are multiple situations in which you need to save the different types of output you can generate with FIJI. For example, you may want to save your results tables for further analysis in other software (e.g. RStudio, MS EXCEL, ..). It can also be important to save the ROIs that were used for particular measurements, so that you can look back at them for reference, or to use them for visualization purposes. In addition to ROIs, images can be saved as label masks to store the information about different regions. Finally, you may also want to save your entire script containing particular settings or parameters that you used, so that you have re-run the analysis with the exact same settings or compare it with the results obtained using different settings.
 
 concept_map: >
   graph TD
@@ -63,9 +63,9 @@ assessment: >
     {: .solution}
 
 learn_next:
-  - "[Opening pre-saved ROIs/Images/datasets and modify them (?)]"
+[comment]: <> (Open a pre-saved data set, ROI set or label image and try to modify it)
 
 external_links:
-  - "[MorpholibJ](https://imagej.net/plugins/morpholibj)"
+
 
 ---
