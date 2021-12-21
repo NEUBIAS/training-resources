@@ -3,86 +3,47 @@ title:     Script functions
 layout:    module
 prerequisites:
   - "[Basic properties of images and pixels](../pixels)"
-  - "[Data types (unsigned 8-bit)](../datatypes)"
+
 objectives:
-  - "Describe the relationship between an intensity image and a derived binary image."
-  - "Apply a threshold to distinguish foreground and background pixels"
+  - "Describe the purpose of a function in a script."
+  - "Demonstrate the usage and flow of a function."
+  - "Make the script more efficient."
 motivation: |
-  One strategy to detect objects or specific regions in images is to first distinguish so-called background pixels,
-  which do not contain objects or interesting regions,  from foreground pixels, which mark the areas of interest. 
-  This process is called **two class semantic segmentation** and is often referred to as **image binarization**. 
-  The foreground regions can then be further processed, e.g to detect objects or perform intensity measurements.
-  
+  When a series of steps(i.e. algorithm) that has to be performed on an image or a set of images should be executed more than once, or when the script gets too long and repetitive, it is more efficient to write this series as modules called "functions".
+  This essentially means that you can reuse parts of code instead of rewriting it. A function is a block that can be called with inputs and can return values.
+
 concept_map: >
   graph TD
-    PV("Pixel values") --> BA(Binarization algorithm)
-    BA --> BPV("Binarized pixel values")
-    BPV --> BG("Background (0)")
-    BPV --> FG("Foreground (1)")
+    IV("Input values-None") --> F(Function (Set of operations))
+    F --> OV("Output values-None")
 
-figure: /figures/binarization.png
-figure_legend: Image before and after binarization by applying a threshold.
+figure: /figures/Function_demonstration.png
+figure_legend: Components and working of a function within a script.
 
 activity_preface: |
-  - Open the binary image [xy_8bit_binary__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__nuclei.tif).
-  - Discuss the image data type and the pixel values.
-  - Open the image [xy_8bit__two_cells.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__two_cells.tif) and binarize it by applying a manually defined threshold.
+  - Run the script and try to calculate mean intensity of 2 different slices.
 
 activities:
-  - ["ImageJ GUI", "binarization/activities/binarization_imagejgui.md", "markdown"]
-  - ["ImageJ Macro", "binarization/activities/binarization_imagejmacro.ijm", "java"]
-  - ["ImageJ Jython", "binarization/activities/binarization_jython.py", "python"]
-  - ["MATLAB", "binarization/activities/binarization_matlab.m", "matlab"]
-  - ["KNIME", "binarization/activities/binarization_knime.md", "markdown"]
-  - ["Python", "binarization/activities/binarization.py", "python"]
+  - ["ImageJ Macro", "script_functions/activities/Function_display_slice.ijm", "java"]
 
 exercises:
-  - ["ImageJ GUI", "binarization/exercises/binarization_imagejgui.md"]
-  - ["ImageJ Macro", "binarization/exercises/binarization_imagejmacro.md"]
-  - ["ImageJ Jython", "binarization/exercises/binarization_jython.md"]
+  - ["ImageJ Macro", "script_functions/exercises/functions_imagejmacro.md"]
 
 assessment: >
 
-  ### Fill in the blanks
-
-    - Pixels in a binary image can have maximally ___ different values.
-    - If the threshold is larger than the maximal pixel value in the intensity image, all pixels in the binary image have a value of ___.
-    
-    > ## Solution
-    >   - Pixels in a binary image can have maximally **2** different values.
-    >   - If the threshold is larger than the maximal pixel value in the intensity image, 
-    > all pixels in the binary image have a value of **0**.
-    {: .solution}
-    
   ### True or False
-    - There is only one correct threshold value in order to convert an intensity image into a binary image. 
-    - Binary images are always unsigned 8-bit where the foreground is 255.
-    
+    - The values returned by function cannot be used outside of the function.
+    - Function can be called multiple times within a script.
+
     > ## Solution
-    >   - There is only one correct threshold value in order to convert an intensity image into a binary image. **False**
-    >   -  Binary images are always unsigned 8-bit where the foreground is 255. **False**
+    >   - It can be used unless the variable returned is not overwritten. **False**
+    >   -  **True**
     {: .solution}
 
 learn_next:
-  - "[Automatic threshold for binarization](../auto_threshold)"
-  - "[Finding objects in a binary image](../connected_components)"
+  -
 
 external_links:
-  - "[Wikipedia: Binary image](https://en.wikipedia.org/wiki/Binary_image)"
-  
+  - "[Wikipedia: Subroutine](https://en.wikipedia.org/wiki/Subroutine)"
+
 ---
-#### Image thresholding
-A common algorithm for binarization is thresholding. A threshold value `t` is chosen, either manually or automatically, 
-and all pixels with intensities below `t` are set to 0, whereas pixels with intensities `>= t` are set to the value for the foreground. 
-Depending on the software the foreground value can be different (e.g. 1 in MATLAB or 255 in ImageJ). At any pixel (x,y):
-
-`p_im(x,y) < t` -> `p_bin(x,y) = 0`
-
-`p_im(x,y) >= t` -> `p_bin(x,y) = 1`
-
-where, p_im and p_bin are the intensity and binary images respectively.
-
-It is also possible to define an interval of threshold values, i.e. a lower and upper threshold value. Pixels with intensity values 
-within this interval belong to the foreground and vice versa. 
- 
-

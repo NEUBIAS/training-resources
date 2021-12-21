@@ -6,12 +6,14 @@ imageName = getTitle(); //get the image title
 //select first slice,calculate its mean intensity and display it
 selectWindow(imageName);
 sliceNumber = 1;	
-calculateSliceMeanIntensity(sliceNumber);
+meanIntensitySlice1 = calculateSliceMeanIntensity(sliceNumber);
+print("Slice#"+ sliceNumber + " has mean intensity: " + meanIntensitySlice1);
 
 //select last slice,calculate its mean intensity and display it
 selectWindow(imageName);
 sliceNumber = nSlices;
-calculateSliceMeanIntensity(sliceNumber);
+meanIntensitySlice2 = calculateSliceMeanIntensity(sliceNumber);
+print("Slice#"+ sliceNumber + " has mean intensity: " + meanIntensitySlice2);
 	
 
 // a function that calculates mean intensity of a specified slice in a stack and displays it
@@ -23,7 +25,8 @@ function calculateSliceMeanIntensity(sliceNumber)
 	selectWindow(sliceName);
 	run("8-bit");
 	getStatistics(area, mean);
-	print("Slice#"+ sliceNumber + " has mean intensity: " + mean);
+	return mean;
+	
 }
 
 
