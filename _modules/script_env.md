@@ -1,4 +1,3 @@
-<<<<<<< Local Changes
 ---
 title:     Setting up a scripting environment
 layout:    module
@@ -7,8 +6,7 @@ prerequisites:
 objectives:
   - "Set up a scripting environment for your platform"
 motivation: |
-  In order to run image analysis scripts you need a platform where you can actually excute those scripts. 
-  In this module there is a collection of installation instructions for some common platforms.
+  In order to run bioimage analysis scripts you need a platform where you can both run and develop those scripts. There is a range of solutions where especially the development of script ranges from a simple text editor to a full integrated development environment ([IDE](https://en.wikipedia.org/wiki/Integrated_development_environment)).
   
 concept_map: >
   graph TD
@@ -18,21 +16,19 @@ concept_map: >
     S("Script editor") -->|may have| A("Auto-completion")
     S("Script editor") -->|may have| B("Break-points")
 
-figure: 
+figure: /figures/script_env.png
+figure_legend: Fiji script editor with auto-completion and <kbd>Run</kbd> button
 
 activity_preface: |
-  - Install a scripting environment for your platform of choice.
+  Install a scripting environment for your bioimage analysis platform.
 
 activities:
-  - ["Napari python script editor plugin", "script_env/activities/binarization_imagejgui.md", "markdown"]
-  - ["Fiji script editor (IJ Macro, Groovy, Jython, ...)", "script_env/activities/binarization_imagejmacro.ijm", "java"]
-  - ["IntelliJ for Groovy", "script_env/activities/binarization_jython.py", "python"]
-  - ["Eclipse for Jython", "script_env/activities/binarization_matlab.m", "matlab"]
+  - ["Fiji script editor (IJ Macro, Groovy, Jython, ...)", "script_env/activities/fiji_script_editor.md", "markdown"]
+  - ["Napari python script editor plugin", "script_env/activities/napari_script_editor_plugin.md", "markdown"]
 
 exercises:
 
 assessment: >
-
 
 learn_next:
   - "[Running an image analysis script](../script_run)"
@@ -42,9 +38,3 @@ external_links:
   - "[What is an IDE](https://en.wikipedia.org/wiki/Integrated_development_environment)"
 ---
 
-#### IDE
-
-If you are writing a lot of code you should consider upgrading your current scripting environment to a full-fledged integrated development environment ([IDE](https://en.wikipedia.org/wiki/Integrated_development_environment)).
-
-=======
->>>>>>> External Changes
