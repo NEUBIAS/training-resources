@@ -21,8 +21,8 @@ concept_map: >
     D("...") --> X
     E("Substring n") --> X
 
-figure: /figures/String_concat.png
-figure_legend: string concatenation.
+figure: /figures/string_concat.png
+figure_legend: String concatenation.
 
 activity_preface: |
   - Open a script editor.
