@@ -2,82 +2,41 @@
 title:     Commenting
 layout:    module
 prerequisites:
+  - "[Binarization](../binarization)"
   - "[Connected component labeling](../connected_components)"
 objectives:
   - "Understand the concept and purpose of commenting."
   - "Comment properly what certain section of code."
-  - "Apply a threshold to distinguish foreground and background pixels."
 motivation: |
-  When you read your code again in six months from now, you want to understand what your code does, and why. 
- And  For this, you can add comments, i.e. text which is ignored by ImageJ when it executes the macro.
+  When you read your code again in six months from now, you want to understand what your code does, and why. Also if you would pass your code to another person, for them to use, modify, and/or extend it. For this, you can add **comments** to your code, i.e. text which can be read by human, and is ignored by computer when it executes your code.
+  In addition, you can use comment to skip certain part of the code. For example, when you wrote testing code and later no longer need those.
   
 concept_map: >
-  graph LR
-    R("script") --> CM(commenting)
-    CM --> S("Image analysis script")
-figure: /figures/binarization.png
-figure_legend: Image before and after binarization by applying a threshold.
+  graph TD
+    ST("script text") --> CD("code")
+    ST("script text") --> CM("comment")
+    CD -->|read by| RC("computer")
+    CM -->|read by| RH("human")
+    CM -->|ignored by| RC("computer")
+
+figure: /figures/code_comment.png
+figure_legend: single line comment, and multiple line (block) comment.
 
 activity_preface: |
-  - Open the binary image [xy_8bit_binary__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__nuclei.tif).
-  - Discuss the image data type and the pixel values.
-  - Open the image [xy_8bit__two_cells.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__two_cells.tif) and binarize it by applying a manually defined threshold.
+  - Expand the activity for different platforms.
+  - Identify comment part or where it's missing, and use that to understand the code.
+  - Try to run the codes and see if it does what you expected. If necessary, add proper comment to further explain what certain part of code does.
 
 activities:
-  - ["ImageJ GUI", "binarization/activities/binarization_imagejgui.md", "markdown"]
-  - ["ImageJ Macro", "binarization/activities/binarization_imagejmacro.ijm", "java"]
-  - ["ImageJ Jython", "binarization/activities/binarization_jython.py", "python"]
-  - ["MATLAB", "binarization/activities/binarization_matlab.m", "matlab"]
-  - ["KNIME", "binarization/activities/binarization_knime.md", "markdown"]
-  - ["Python", "binarization/activities/binarization.py", "python"]
+  - ["MATLAB", "commenting/activities/binarization_matlab.m", "matlab"]
+  - ["Python", "commenting/activities/binarization.py", "python"]
 
 exercises:
-  - ["ImageJ GUI", "binarization/exercises/binarization_imagejgui.md"]
-  - ["ImageJ Macro", "binarization/exercises/binarization_imagejmacro.md"]
-  - ["ImageJ Jython", "binarization/exercises/binarization_jython.md"]
 
-assessment: >
-
-  ### Fill in the blanks
-
-    - Pixels in a binary image can have maximally ___ different values.
-    - If the threshold is larger than the maximal pixel value in the intensity image, all pixels in the binary image have a value of ___.
-    
-    > ## Solution
-    >   - Pixels in a binary image can have maximally **2** different values.
-    >   - If the threshold is larger than the maximal pixel value in the intensity image, 
-    > all pixels in the binary image have a value of **0**.
-    {: .solution}
-    
-  ### True or False
-    - There is only one correct threshold value in order to convert an intensity image into a binary image. 
-    - Binary images are always unsigned 8-bit where the foreground is 255.
-    
-    > ## Solution
-    >   - There is only one correct threshold value in order to convert an intensity image into a binary image. **False**
-    >   -  Binary images are always unsigned 8-bit where the foreground is 255. **False**
-    {: .solution}
+assessment:
 
 learn_next:
-  - "[Automatic threshold for binarization](../auto_threshold)"
-  - "[Finding objects in a binary image](../connected_components)"
 
 external_links:
-  - "[Wikipedia: Binary image](https://en.wikipedia.org/wiki/Binary_image)"
-  
+
 ---
-#### Image thresholding
-A common algorithm for binarization is thresholding. A threshold value `t` is chosen, either manually or automatically, 
-and all pixels with intensities below `t` are set to 0, whereas pixels with intensities `>= t` are set to the value for the foreground. 
-Depending on the software the foreground value can be different (e.g. 1 in MATLAB or 255 in ImageJ). At any pixel (x,y):
-
-`p_im(x,y) < t` -> `p_bin(x,y) = 0`
-
-`p_im(x,y) >= t` -> `p_bin(x,y) = 1`
-
-where, p_im and p_bin are the intensity and binary images respectively.
-
-It is also possible to define an interval of threshold values, i.e. a lower and upper threshold value. Pixels with intensity values 
-within this interval belong to the foreground and vice versa. 
- 
-
