@@ -2,7 +2,7 @@
 title:     String concatenation
 layout:    module
 prerequisites:
-  - NEEDS TO BE ADDED "[Variables](../)"
+[comment]: <> (  - NEEDS TO BE ADDED "[Variables](../)")
 
 objectives:
   - "Concatenate strings"
@@ -51,7 +51,7 @@ assessment: >
     
 
 learn_next:
-  - NEEDS TO BE ADDED "[Saving tables, images, ROIs](../)"
+[comment]: <> ( - NEEDS TO BE ADDED "[Saving tables, images, ROIs](../)")
 
 external_links:
   - "[Wikipedia: String concatenation operator in different languages](https://en.wikipedia.org/wiki/Comparison_of_programming_languages_(strings))"
