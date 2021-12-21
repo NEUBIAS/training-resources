@@ -2,7 +2,7 @@
 title:     String concatenation
 layout:    module
 prerequisites:
-  - NEEDS TO BE ADDED "[Previous modules of this lesson](../)"
+  - NEEDS TO BE ADDED "[Variables](../)"
 
 objectives:
   - "Concatenate strings"
@@ -11,77 +11,57 @@ motivation: |
   String is a type of variable that can cotain a combination of characters. 
   String concatenation is the operation of joining multiple substrings together to make a bigger one. 
   For example concatenating "Hello " and "world!" would result into "Hello world!". 
-  You can also combine a string and a number. For example concatenating "Image" and 1 would result into "image1"
-
+  You can also combine a string and a number. For example concatenating the string "Displaying image ", number 50 and " out of 100" would result into "Displaying image 50 out of 100". Furthermore, you may concatenate strings to create paths to the images by concatenating path to the folder and file names.
   
 concept_map: >
   graph TD
-    A("Substring 1") --> X("Final string")
+    A("Substring 1") --> X("Concatenated string")
     B("Substring 2") --> X
-    C("...") --> X
-    D("Substring n") --> X
+    C(Number 1) --> X
+    D("...") --> X
+    E("Substring n") --> X
 
+figure: /figures/String_concat.png
+figure_legend: string concatenation.
 
 activity_preface: |
-  - Open the binary image [xy_8bit_binary__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__nuclei.tif).
-  - Discuss the image data type and the pixel values.
-  - Open the image [xy_8bit__two_cells.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__two_cells.tif) and binarize it by applying a manually defined threshold.
+  - Open a script editor.
+  - Define three variables with values "Hello ", "user number " and 50.
+  - Concatenate the three variables.
 
 activities:
-  - ["ImageJ GUI", "binarization/activities/binarization_imagejgui.md", "markdown"]
-  - ["ImageJ Macro", "binarization/activities/binarization_imagejmacro.ijm", "java"]
-  - ["ImageJ Jython", "binarization/activities/binarization_jython.py", "python"]
-  - ["MATLAB", "binarization/activities/binarization_matlab.m", "matlab"]
-  - ["KNIME", "binarization/activities/binarization_knime.md", "markdown"]
-  - ["Python", "binarization/activities/binarization.py", "python"]
+  - ["ImageJ Macro", "string_concat/activities/string_concat.ijm", "java"]
+  - ["ImageJ Jython", "string_concat/activities/string_concat.py", "python"]
 
 exercises:
-  - ["ImageJ GUI", "binarization/exercises/binarization_imagejgui.md"]
-  - ["ImageJ Macro", "binarization/exercises/binarization_imagejmacro.md"]
-  - ["ImageJ Jython", "binarization/exercises/binarization_jython.md"]
+
+  - ["ImageJ Macro", "string_concat/exercises/string_concat_imagejmacro.md"]
 
 assessment: >
 
   ### Fill in the blanks
 
-    - Pixels in a binary image can have maximally ___ different values.
-    - If the threshold is larger than the maximal pixel value in the intensity image, all pixels in the binary image have a value of ___.
+    - "Nuclei"+1+2 concatenation results in ___ string.
+    - "Nuclei"+"1"+2 concatenation results in ___ string.
     
     > ## Solution
-    >   - Pixels in a binary image can have maximally **2** different values.
-    >   - If the threshold is larger than the maximal pixel value in the intensity image, 
-    > all pixels in the binary image have a value of **0**.
+    >   - "Nuclei"+1+2 concatenation results in **"Nuclei3"** string.
+    >   - "Nuclei"+"1"+2 concatenation results in **"Nuclei12"** string.
     {: .solution}
     
-  ### True or False
-    - There is only one correct threshold value in order to convert an intensity image into a binary image. 
-    - Binary images are always unsigned 8-bit where the foreground is 255.
-    
-    > ## Solution
-    >   - There is only one correct threshold value in order to convert an intensity image into a binary image. **False**
-    >   -  Binary images are always unsigned 8-bit where the foreground is 255. **False**
-    {: .solution}
 
 learn_next:
-  - "[Automatic threshold for binarization](../auto_threshold)"
-  - "[Finding objects in a binary image](../connected_components)"
+  - NEEDS TO BE ADDED "[Saving tables, images, ROIs](../)"
 
 external_links:
-  - "[Wikipedia: Binary image](https://en.wikipedia.org/wiki/Binary_image)"
+  - "[Wikipedia: String concatenation operator in different languages](https://en.wikipedia.org/wiki/Comparison_of_programming_languages_(strings))"
   
 ---
-#### Image thresholding
-A common algorithm for binarization is thresholding. A threshold value `t` is chosen, either manually or automatically, 
-and all pixels with intensities below `t` are set to 0, whereas pixels with intensities `>= t` are set to the value for the foreground. 
-Depending on the software the foreground value can be different (e.g. 1 in MATLAB or 255 in ImageJ). At any pixel (x,y):
+#### String concatenation
+You concatenate strings by using specific operators, depending on the programming platform. Fo example, the + operator. Let's look at a few examples:
 
-`p_im(x,y) < t` -> `p_bin(x,y) = 0`
+`"Channel_"+1` -> `"Channel_1"`
 
-`p_im(x,y) >= t` -> `p_bin(x,y) = 1`
-
-where, p_im and p_bin are the intensity and binary images respectively.
-
-It is also possible to define an interval of threshold values, i.e. a lower and upper threshold value. Pixels with intensity values 
-within this interval belong to the foreground and vice versa. 
+`"image_"+"duplicate"` -> `"image_duplicate"`
  
 
