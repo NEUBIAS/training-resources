@@ -23,7 +23,7 @@ figure: /figures/variables.png
 figure_legend: Variables are containers specific for an information type. The name of the variable should explain its purpose. Naming convention is camelCase (left side) or under_score (right side).
 
 activity_preface: |
-  - Open a script editor, create numneric variables, add the two numbers in a new variable.
+  - Open a script editor, create two numeric variables, store results of addition in a new variable.
   - Show how a variable can be used in a simple function (e.g. print(variable)) and in a image processing function.
   
 activities:
