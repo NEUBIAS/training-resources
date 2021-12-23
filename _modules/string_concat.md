@@ -1,7 +1,8 @@
 ---
 title:     String concatenation
 layout:    module
-prerequisites:
+prerequisites: 
+  - "[Variables](../variables)"
 [comment]: <> (  - NEEDS TO BE ADDED "[Variables](../)")
 
 objectives:
