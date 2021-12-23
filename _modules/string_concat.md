@@ -3,7 +3,6 @@ title:     String concatenation
 layout:    module
 prerequisites: 
   - "[Variables](../variables)"
-[comment]: <> (  - NEEDS TO BE ADDED "[Variables](../)")
 
 objectives:
   - "Concatenate strings"
