@@ -16,7 +16,10 @@ concept_map: >
   graph LR
     IF("Image file") -->|contains| PD("Pixel data")
     IF -->|contains| MD("Metadata")
-    MD --> "Image calibration, Microscope setttings, ..."
+    MD --> "Image calibration"
+    MD --> "Microscope setttings"
+    MD --> "Display settings"
+    MD --> "..."
     IF -->|has| FF("File format")
     FF --> "TIFF, PNG, JPEG, CZI, ND2, LIF, ..."
 
