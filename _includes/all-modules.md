@@ -6,11 +6,14 @@ open an issue: https://github.com/carpentries/styles/issues/new
 
 {% include manual_episode_order.html %}
 
+<<<<<<< HEAD
+=======
 <style>
   h2 {text-align: center;}
 </style>
 
 <h2>Training Modules Overview</h2>
+>>>>>>> master
 
 <div class="container-fluid">
 <div class="row">

@@ -5,7 +5,7 @@ layout: module
 prerequisites:
 
 objectives:
-  - Understand that an image is composed of pixels.
+  - Understand that an image has dimensions and is composed of pixels.
   - Understand what pixels and voxels are.
   - Examine the values and indices of pixels in an image.
 
@@ -14,12 +14,22 @@ motivation: >
 
 concept_map: >
   graph TD
+<<<<<<< HEAD
+    Im("Image") --> P("Pixels/Voxels")
+    Im --> D("Dimensions")
+    P --> Va("Value")
+    P --> I("Indices")
+
+figure: /figures/pixels.png
+figure_legend: Image with two dimensions
+=======
     Im("Image") -->|has many| P("Pixel/Voxel")
     P -->|has| Va("Value")
     P -->|has| I("Indices")
 
 figure: /figures/pixels_2.png
 figure_legend:
+>>>>>>> master
 
 activity_preface: |
   - Open image: [xy_8bit__nuclei_noisy_different_intensity.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_different_intensity.tif)

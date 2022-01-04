@@ -56,7 +56,11 @@ assessment: >
      {: .solution}
 
 learn_next:
+<<<<<<< HEAD
+  - "[Workflow - Simple 2D object analysis](../workflow_segment_2d_nuclei_measure_shape)"
+=======
   - "[Workflow: Simple 2D object analysis](../workflow_segment_2d_nuclei_measure_shape)"
+>>>>>>> master
   - "[Object intensity meaurements](../measure_intensities)"
 
 

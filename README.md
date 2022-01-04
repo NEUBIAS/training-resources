@@ -2,9 +2,15 @@
 
 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/neubias/training-resources)
 
+<<<<<<< HEAD
+**[Module overview](https://neubias.github.io/training-resources/all-modules).**
+
+**[Home page](https://neubias.github.io/training-resources).**
+=======
 **[Module overview](https://neubias.github.io/training-resources/all-modules)**
 
 **[Home page](https://neubias.github.io/training-resources)**
+>>>>>>> master
 
 This project is intended to collect together various resources
 that can be useful when planning/delivering training in image analysis.
