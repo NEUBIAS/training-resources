@@ -14,6 +14,7 @@ motivation: >
 
 concept_map: >
   graph TD
+<<<<<<< HEAD
     Im("Image") --> P("Pixels/Voxels")
     Im --> D("Dimensions")
     P --> Va("Value")
@@ -21,6 +22,14 @@ concept_map: >
 
 figure: /figures/pixels.png
 figure_legend: Image with two dimensions
+=======
+    Im("Image") -->|has many| P("Pixel/Voxel")
+    P -->|has| Va("Value")
+    P -->|has| I("Indices")
+
+figure: /figures/pixels_2.png
+figure_legend:
+>>>>>>> master
 
 activity_preface: |
   - Open image: [xy_8bit__nuclei_noisy_different_intensity.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_different_intensity.tif)

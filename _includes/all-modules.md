@@ -6,6 +6,14 @@ open an issue: https://github.com/carpentries/styles/issues/new
 
 {% include manual_episode_order.html %}
 
+<<<<<<< HEAD
+=======
+<style>
+  h2 {text-align: center;}
+</style>
+
+<h2>Training Modules Overview</h2>
+>>>>>>> master
 
 <div class="container-fluid">
 <div class="row">
@@ -19,13 +27,17 @@ open an issue: https://github.com/carpentries/styles/issues/new
 {% endif %}
 
 <div class="col-xs-6">
-  <div style="border:1px solid white; margin: 20px; padding: 20px;">
-    <a href="{{ e.url | relative_url }}">
-      <h4>{{ e.title }}</h4>
-    </a>
-    <img src="{{ e.figure | relative_url }}" alt="">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <a href="{{ e.url | relative_url }}">
+        <h4>{{ e.title }}</h4>
+      </a>
+    </div>
+    <div class="panel-body">
+      <img src="{{ e.figure | relative_url }}" alt="">
+    </div>
   </div>
-</div>  
+</div>
 
 {% endfor %}
 
