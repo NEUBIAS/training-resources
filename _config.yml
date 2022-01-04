@@ -23,7 +23,6 @@ module_order:
 - binarization
 - connected_components
 - datatypes
-- image_file_formats
 - measure_shapes
 - workflow_segment_2d_nuclei_measure_shape
 - measure_intensities
@@ -38,6 +37,7 @@ module_order:
 - commenting
 - string_concat
 - output_saving
+
 
 
 # Sites
