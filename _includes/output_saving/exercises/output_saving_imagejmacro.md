@@ -1,7 +1,8 @@
 Adapt the below code to change the following:
-1. Save the results table as comma-separated data table instead of text-delimited data.
-2. Save the output label image in a different image format (e.g. PNG, JPEG)
-3. When running the code, try to specify different output directories
+1. Specify an output directory
+2. Save the results table as comma-separated data table instead of text-delimited data.
+3. Save the output label image in a different image format (e.g. PNG, JPEG).
+4. When running the code, try to specify different output directories.
 
 > ## Solution
 > ```
@@ -9,7 +10,7 @@ Adapt the below code to change the following:
 >// Different outputs are saved: ROIs, results table, and label mask.
 >
 >// specify an output directory
->#@String outputdir // opens menu to define outout directory
+>outputDir = FIXME # (e.g. r'C:\Users\UserName\Desktop' on Windows or '/Users/UserName/Desktop/' on MacOS)
 >
 >// specify settings
 >min_size = 100;
@@ -29,8 +30,8 @@ Adapt the below code to change the following:
 >run("Analyze Particles...", "size=&min_size-&max_size circularity=&min_circ-&max_circ show=[Count Masks] >display add") // run the particle analyzer
 >run("glasbey", "display=blob_labels_macro.tif view=net.imagej.display.DefaultDatasetView@541b120b")
 >roiManager("Select All") // select all rois
->roiManager("Save", outputdir + "/blob_ROIset_macro.zip"); // save rois to output directory
->saveAs("Results", outputdir + "/blob_results_macro.csv"); // save results file to output directory
->saveAs("Png", outputdir + "/blob_labels_macro.png"); // save label mask to output directory
+>roiManager("Save", outputDir + "/blob_ROIset_macro.zip"); // save rois to output directory
+>saveAs("Results", outputDir + "/blob_results_macro.csv"); // save results file to output directory
+>saveAs("Png", outputDir + "/blob_labels_macro.png"); // save label mask to output directory
 > ```
 {: .solution}
