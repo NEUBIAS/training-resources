@@ -3,13 +3,13 @@ run("Close All"); // close all opened windows
 run("MRI Stack"); // load the example MRI image stack
 imageName = getTitle(); //get the image title 
 
-//select first slice,calculate its mean intensity and display it
+//select first slice, calculate its mean intensity and display it
 selectWindow(imageName);
 sliceNumber = 1;	
 meanIntensitySlice1 = calculateSliceMeanIntensity(sliceNumber);
 print("Slice#"+ sliceNumber + " has mean intensity: " + meanIntensitySlice1);
 
-//select last slice,calculate its mean intensity and display it
+//select last slice, calculate its mean intensity and display it
 selectWindow(imageName);
 sliceNumber = nSlices;
 meanIntensitySlice2 = calculateSliceMeanIntensity(sliceNumber);
@@ -23,10 +23,10 @@ function calculateSliceMeanIntensity(sliceNumber)
 	run("Duplicate...", "title=slice"+sliceNumber);
 	sliceName = "slice"+sliceNumber;
 	selectWindow(sliceName);
-	run("8-bit");
 	getStatistics(area, mean);
-	return mean;
-	
+	return mean;	
 }
+
+
 
 
