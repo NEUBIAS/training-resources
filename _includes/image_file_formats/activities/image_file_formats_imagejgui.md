@@ -1,3 +1,9 @@
+### Image inspection
+
+- Open ...
+- Open ...
+
+### Image saving
 
 - Saving 8 bit single channel image as TIFF: 
   - Open [xy_8bit__nuclei_PLK1_control.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_PLK1_control.tif) 
