@@ -14,8 +14,8 @@ motivation: |
 
 concept_map: >
   graph TD
-    IV("Input argument(optional)") --> F("Function (Set of operations)")
-    F --> OV("Returned values(optional)")
+    IV("Input argument (optional)") --> F("Function (set of operations)")
+    F --> OV("Returned values (optional)")
 
 figure: /figures/script_functions.png
 figure_legend: Components and working of a function within a script.
