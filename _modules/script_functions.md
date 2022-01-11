@@ -30,8 +30,8 @@ activities:
   - ["ImageJ Macro", "script_functions/activities/function_display_slice.ijm", "java"]
 
 exercises:
-  - ["ImageJ Macro", "script_functions/exercises/functions_imagejmacro.md"]
-  - ["ImageJ Macro", "script_functions/exercises/functions_imagejmacro2.md"]
+  - ["Exercise1 - ImageJ Macro", "script_functions/exercises/functions_imagejmacro.md"]
+  - ["Exercise2 - ImageJ Macro", "script_functions/exercises/functions_imagejmacro2.md"]
 
 assessment: >
 
