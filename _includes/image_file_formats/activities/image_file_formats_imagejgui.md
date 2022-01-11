@@ -1,7 +1,6 @@
 ### Image inspection
 
-- Open ...
-- Open ...
+- See activity
 
 ### Image saving
 
