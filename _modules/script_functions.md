@@ -14,8 +14,8 @@ motivation: |
 
 concept_map: >
   graph TD
-    IV("Input values-None") --> F("Function (Set of operations)")
-    F --> OV("Output values-None")
+    IV("Input argument(optional)") --> F("Function (Set of operations)")
+    F --> OV("Returned values(optional)")
 
 figure: /figures/script_functions.png
 figure_legend: Components and working of a function within a script.
@@ -31,6 +31,7 @@ activities:
 
 exercises:
   - ["ImageJ Macro", "script_functions/exercises/functions_imagejmacro.md"]
+  - ["ImageJ Macro", "script_functions/exercises/functions_imagejmacro2.md"]
 
 assessment: >
 
