@@ -1,66 +1,53 @@
 ---
-title:     Binarization
-layout:    module
+title: Projections
+layout: module
 prerequisites:
   - "[Basic properties of images and pixels](../pixels)"
-  - "[Data types (unsigned 8-bit)](../datatypes)"
 objectives:
-  - "Describe the relationship between an intensity image and a derived binary image."
-  - "Apply a threshold to distinguish foreground and background pixels"
+  - "Project multi-dimensional image data into lower dimensions."
+  - "Understand the differences between projection modes such as max, sum, and mean.
 motivation: |
-  One strategy to detect objects or specific regions in images is to first distinguish so-called background pixels,
-  which do not contain objects or interesting regions,  from foreground pixels, which mark the areas of interest. 
-  This process is called **two class semantic segmentation** and is often referred to as **image binarization**. 
-  The foreground regions can then be further processed, e.g to detect objects or perform intensity measurements.
-  
+  Viewing image data that has more than two dimensions is difficult, because computer monitors are 2-D. Thus, it often is very useful to project the data into a 2-D representation. Of course, doing such a projection will loose information. Thus, performinig projections without compromising the scientific integrity of the data is not easy and should be only done with a sufficient understanding of the various methods.
 concept_map: >
-  graph TD
-    PV("Pixel values") --> BA(Binarization algorithm)
-    BA --> BPV("Binarized pixel values")
-    BPV --> BG("Background (0)")
-    BPV --> FG("Foreground (1)")
+  graph LR
+    ND("N dimensional image data") --> PM(Projection method)
+    PM --> LD("N-1 dimensional image data")
 
-figure: /figures/binarization.png
-figure_legend: Images before and after binarization
+figure: /figures/projection.png
+figure_legend: 
 
 activity_preface: |
-  - Open the binary image [xy_8bit_binary__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__nuclei.tif).
-  - Discuss the image data type and the pixel values.
-  - Open the image [xy_8bit__two_cells.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__two_cells.tif) and binarize it by applying a manually defined threshold.
+  - Open [xyz_16bit__spots.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_16bit__spots.tif).
+  - Project along the z axis
+  - Compare maximum and sum projection
+  - Project along the x axis
 
 activities:
-  - ["ImageJ GUI", "binarization/activities/binarization_imagejgui.md", "markdown"]
-  - ["ImageJ Macro", "binarization/activities/binarization_imagejmacro.ijm", "java"]
-  - ["ImageJ Jython", "binarization/activities/binarization_jython.py", "python"]
-  - ["MATLAB", "binarization/activities/binarization_matlab.m", "matlab"]
-  - ["KNIME", "binarization/activities/binarization_knime.md", "markdown"]
-  - ["Python", "binarization/activities/binarization.py", "python"]
+  - ["ImageJ GUI", "projections/activities/projections_imagejgui.md", "markdown"]
 
 exercises:
-  - ["ImageJ GUI", "binarization/exercises/binarization_imagejgui.md"]
-  - ["ImageJ Macro", "binarization/exercises/binarization_imagejmacro.md"]
-  - ["ImageJ Jython", "binarization/exercises/binarization_jython.md"]
+  - ["ImageJ GUI", "projections/exercises/projections_imagejgui.md"]
 
 assessment: >
 
   ### Fill in the blanks
 
-    - Pixels in a binary image can have maximally ___ different values.
-    - If the threshold is larger than the maximal pixel value in the intensity image, all pixels in the binary image have a value of ___.
+    - The pixels values in a sum projection will almost always be ___ than the original values.
+    - 
     
     > ## Solution
-    >   - Pixels in a binary image can have maximally **2** different values.
+    >   - The pixels values in a sum projection will alomst always be **larger** than the original values.
     >   - If the threshold is larger than the maximal pixel value in the intensity image, 
     > all pixels in the binary image have a value of **0**.
     {: .solution}
     
   ### True or False
-    - There is only one correct threshold value in order to convert an intensity image into a binary image. 
-    - Binary images are always unsigned 8-bit where the foreground is 255.
+    1. Image projections are always along the z-axis.
+    1. The data type of the projected image must be the same as the data type of the original image.
     
     > ## Solution
-    >   - There is only one correct threshold value in order to convert an intensity image into a binary image. **False**
-    >   -  Binary images are always unsigned 8-bit where the foreground is 255. **False**
+    >   1.There is only one correct threshold value in order to convert an intensity image into a binary image. **False*
+    >   1. The data type of the projected image must be the same as the data type of the original image. **False** In sum projections the pixel values are larger than in the original data and a different data type might be need to represent them. For maximum projections however the data type should not be changed. For mean projections it depends on which accuracy (decimal places) your science requires (e.g., decimal places need a floating point data type).
     {: .solution}
 
 learn_next:
