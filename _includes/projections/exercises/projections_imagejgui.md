@@ -1,3 +1,7 @@
+TODO
+
+WRONG STUFF FROM OTHER MODULE:
+
 Open image [xy_8bit__PCNA.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__PCNA.tif) and 
 1. Find a threshold value so that there are 2 foreground nuclei.
 2. Find a threshold value so that only the bright dots remain
