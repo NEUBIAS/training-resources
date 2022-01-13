@@ -17,7 +17,7 @@ figure: /figures/projection.png
 figure_legend: 
 
 activity_preface: |
-  - Open [xyz_16bit__spots.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_16bit__spots.tif).
+  - Open [xyz_16bit__spots.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_16bit__spots.tif)
   - Project along the z axis
   - Compare maximum and sum projection
   - Project along the x axis
