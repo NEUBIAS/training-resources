@@ -1,59 +1,86 @@
 ---
-title:     Volume slicing
+title:     Binarization
 layout:    module
 prerequisites:
-  - "edit this [Basic properties of images and pixels](../pixels)"
-  - "edit this [Data types (unsigned 8-bit)](../datatypes)"
+  - "[Basic properties of images and pixels](../pixels)"
+  - "[Data types (unsigned 8-bit)](../datatypes)"
 objectives:
-  - "Describe the different dimensions image data can have."
-  - "View and slice images in different dimensions."
+  - "Describe the relationship between an intensity image and a derived binary image."
+  - "Apply a threshold to distinguish foreground and background pixels"
 motivation: |
-  Apart from the X and Y dimensions, visible in the width and height of an image, image data can have additional dimensions. The most common additional dimensions include:
-  the Z dimension, providing depth to image data,
-  different channels, showing data recorded with different detectors or detector settings,
-  the time dimension.
-  When viewing the data, different dimensions can be included or excluded, to visualize different aspects of the data. Furthermore, multidimensional image data processes can be applied to one or more dimensions, depending on the needs. It is important to note that the different spatial dimensions are not necessarily isotropic. This means that the pixel sizes are different in X, Y, or Z. It is important to take this into account when viewing data or when applying image data analysis processes.
+  One strategy to detect objects or specific regions in images is to first distinguish so-called background pixels,
+  which do not contain objects or interesting regions,  from foreground pixels, which mark the areas of interest.
+  This process is called **two class semantic segmentation** and is often referred to as **image binarization**.
+  The foreground regions can then be further processed, e.g to detect objects or perform intensity measurements.
 
 concept_map: >
   graph TD
-    DM("Image data dimensions") --> S("Spatial dimensions")
-    S --> X("X (width)")
-    S --> Y("Y (height)")
-    S --> Z("Z (depth)")
-    DM --> T("Temporal dimension")
-    DM --> C("Image channels")
+    PV("Pixel values") --> BA(Binarization algorithm)
+    BA --> BPV("Binarized pixel values")
+    BPV --> BG("Background (0)")
+    BPV --> FG("Foreground (1)")
 
-figure: /figures/volume_slicing.png
-figure_legend: Schematic representation of 2D, 3D, and 5D image data. 2D images are made up of tiny squares called pixels, whereas 3D images are made up of cubes called voxels. Pixels and voxels are not necessarily isotropic, as shown here by squares versus rectangles.
+figure: /figures/binarization.png
+figure_legend: Images before and after binarization
 
 activity_preface: |
-  - Open the multidimensional image [xyzc_8bit_beads_p_open.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyzc_8bit_beads_p_open.tif).
-  - Use the sliders to inspect the different dimensions in this image. Which dimensions are present in this data? How can one turn on both channel simultaneously?
-  - View the image using the 'Orthogonal views' function. Are the XYZ dimensions isotropic or anisotropic in this image?
+  - Open the binary image [xy_8bit_binary__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__nuclei.tif).
+  - Discuss the image data type and the pixel values.
+  - Open the image [xy_8bit__two_cells.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__two_cells.tif) and binarize it by applying a manually defined threshold.
 
 activities:
-  - ["ImageJ GUI", "volume_slicing/activities/volume_slicing_gui.md", "markdown"]
-  - ["ImageJ Macro", "volume_slicing/activities/volume_slicing_macro.ijm", "IJ macro"]
-  - ["ImageJ Jython", "volume_slicing/activities/volume_slicing_jython.py", "Jython"]
+  - ["ImageJ GUI", "binarization/activities/binarization_imagejgui.md", "markdown"]
+  - ["ImageJ Macro", "binarization/activities/binarization_imagejmacro.ijm", "java"]
+  - ["ImageJ Jython", "binarization/activities/binarization_jython.py", "python"]
+  - ["MATLAB", "binarization/activities/binarization_matlab.m", "matlab"]
+  - ["KNIME", "binarization/activities/binarization_knime.md", "markdown"]
+  - ["Python", "binarization/activities/binarization.py", "python"]
 
 exercises:
-  - ["ImageJ GUI", "volume_slicing/exercises/volume_slicing_gui.md"]
-  - ["ImageJ Macro", "volume_slicing/exercises/volume_slicing_macro.md"]
-  - ["ImageJ Jython", "volume_slicing/exercises/volume_slicing_jython.md"]
+  - ["ImageJ GUI", "binarization/exercises/binarization_imagejgui.md"]
+  - ["ImageJ Macro", "binarization/exercises/binarization_imagejmacro.md"]
+  - ["ImageJ Jython", "binarization/exercises/binarization_jython.md"]
 
 assessment: >
-  ### True or False
-    - Isotropic image data has voxels of equal XYZ dimensions.
-    - Reslicing volumetric data is essentially similar to rotating a 3D object and viewing it from a different angle.
+
+  ### Fill in the blanks
+
+    - Pixels in a binary image can have maximally ___ different values.
+    - If the threshold is larger than the maximal pixel value in the intensity image, all pixels in the binary image have a value of ___.
 
     > ## Solution
-    >   - Isotropic image data has voxels of equal XYZ dimensions. **True**
-        - Reslicing volumetric data is essentially similar to rotating a 3D object and viewing it from a different angle. **True**
-        {: .solution}
+    >   - Pixels in a binary image can have maximally **2** different values.
+    >   - If the threshold is larger than the maximal pixel value in the intensity image,
+    > all pixels in the binary image have a value of **0**.
+    {: .solution}
+
+  ### True or False
+    - There is only one correct threshold value in order to convert an intensity image into a binary image.
+    - Binary images are always unsigned 8-bit where the foreground is 255.
+
+    > ## Solution
+    >   - There is only one correct threshold value in order to convert an intensity image into a binary image. **False**
+    >   -  Binary images are always unsigned 8-bit where the foreground is 255. **False**
+    {: .solution}
 
 learn_next:
-  - "[Projections of 3D data](../projections)"
-  - "[3D volume rendering]"
+  - "[Automatic threshold for binarization](../auto_threshold)"
+  - "[Finding objects in a binary image](../connected_components)"
 
 external_links:
   - "[Wikipedia: Binary image](https://en.wikipedia.org/wiki/Binary_image)"
+
+---
+#### Image thresholding
+A common algorithm for binarization is thresholding. A threshold value `t` is chosen, either manually or automatically,
+and all pixels with intensities below `t` are set to 0, whereas pixels with intensities `>= t` are set to the value for the foreground.
+Depending on the software the foreground value can be different (e.g. 1 in MATLAB or 255 in ImageJ). At any pixel (x,y):
+
+`p_im(x,y) < t` -> `p_bin(x,y) = 0`
+
+`p_im(x,y) >= t` -> `p_bin(x,y) = 1`
+
+where, p_im and p_bin are the intensity and binary images respectively.
+
+It is also possible to define an interval of threshold values, i.e. a lower and upper threshold value. Pixels with intensity values
+within this interval belong to the foreground and vice versa.
