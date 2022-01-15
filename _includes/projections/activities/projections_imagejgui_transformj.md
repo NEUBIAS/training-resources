@@ -8,6 +8,8 @@
 - `run("Z Project...", "projection=[Max Intensity]");`
 - `run("Z Project...", "projection=[Sum Slices]");`
 - Compare pixel values and image data types
+- Appreciate that the data type of the sum projection is different to the original image.
+- Discuss whether the data type change was necessary in this specific case.
 
 ### X and Y axis projection
 There is no easy way to project along the x or y axis in ImageJ.
