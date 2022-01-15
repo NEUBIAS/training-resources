@@ -3,15 +3,16 @@ title:     Volume slicing
 layout:    module
 prerequisites:
   - "[Basic properties of images and pixels](../pixels)"
-  - "[Data types (unsigned 8-bit)](../datatypes)"
+  - "[Spatial calibration](../spatial_calibration)"
 objectives:
 - "Describe the different dimensions image data can have."
 - "View and slice images in different dimensions."
 motivation: |
-  One strategy to detect objects or specific regions in images is to first distinguish so-called background pixels,
-  which do not contain objects or interesting regions,  from foreground pixels, which mark the areas of interest.
-  This process is called **two class semantic segmentation** and is often referred to as **image binarization**.
-  The foreground regions can then be further processed, e.g to detect objects or perform intensity measurements.
+  Apart from the X and Y dimensions, visible in the width and height of an image, image data can have additional dimensions. The most common additional dimensions include:
+  - the Z dimension, providing depth to image data,
+  - different channels, showing data recorded with different detectors or detector settings,
+  - the time dimension.
+  When viewing the data, different dimensions can be included or excluded, to visualize different aspects of the data. Furthermore, multidimensional image data processes can be applied to one or more dimensions, depending on the needs. It is important to note that the different spatial dimensions are not necessarily isotropic. This means that the pixel sizes are different in X, Y, or Z. It is important to take this into account when viewing data or when applying image data analysis processes.
 
 concept_map: >
   graph TD
