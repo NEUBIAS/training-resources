@@ -37,7 +37,7 @@ module_order:
 - commenting
 - string_concat
 - output_saving
-
+- volume_slicing
 
 
 # Sites

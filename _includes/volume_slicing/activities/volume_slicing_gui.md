@@ -1,0 +1,5 @@
+- Open the multidimensional image [xyzc_8bit_beads_p_open.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyzc_8bit_beads_p_open.tif).
+- Use the sliders to explore different dimensions in the data.
+- Use **[ Image > Color > Channels Tool... ]** or **[Ctrl-Shift-Z]** to toggle different channels.
+- Go to **[ Image > Properties... ]** or **[Ctrl-Shift-P]** to open the properties window to view the voxel dimensions. In this image the dimensions are anisotropic.
+- Go to **[ Image > Stacks > Orthogonal Views ]** or **[Ctrl-Shift-H]** to see the orthogonal views of the image. 
