@@ -21,14 +21,15 @@ motivation: |
 concept_map: >
   graph TD
     II("Input image") --> IA("Image analysis process")
-    IA("Image analysis process") --> RS("Results table")
-    IA("Image analysis process") --> ROI("ROIs")
-    IA("Image analysis process") --> PM("Label mask")
+    IA --> RS("Results table")
+    IA --> ROI("ROIs")
+    IA --> PM("Label mask")
 
 figure: /figures/output_saving.png
 figure_legend: Image analysis processes can yield several outputs, such as results tables, ROI sets and label masks.
 
 activity_preface: |
+  - In the IJ Macro or Jython script, specify your output directory by pasting a string containing the path to the directory (for example r'C:\Users\UserName\Desktop' on Windows or '/Users/UserName/Desktop/' on MacOS).
   - Open the blobs image (File > Open Samples > Blobs).
   - Binarize it and run the 'analyze particles' command to generate different kinds of output.
   - Save the different output types.
@@ -55,11 +56,11 @@ assessment: >
 
   ### True or False
     - Label masks should be saved in JPEG format.
-    - The best default output format for results tables is tab-delimited text.
+    - Tab-delimited text is a decent output format for results tables.
 
     > ## Solution
     >   - Label masks should be saved in JPEG format. **False** (JPEG compression results in loss of the unique label values in the image)
-    >   - The best default output format for results tables is tab-delimited text. **True** (this is generally more stable in other software than for example comma-delimited data)
+    >   - Tab-delimited text is a decent output format for results tables. **True** (this is generally more stable in other software than for example comma-delimited data)
     {: .solution}
 
 learn_next:

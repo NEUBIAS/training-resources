@@ -1,8 +1,8 @@
-// This macro opens and binarizes the Blobs image, and uses the particle analyzer to measure features of blobs of certain sizes and circularities. 
-// Different outputs are saved: ROIs, results table, and label mask. 
+// This macro opens and binarizes the Blobs image, and uses the particle analyzer to measure features of blobs of certain sizes and circularities.
+// Different outputs are saved: ROIs, results table, and label mask.
 
 // specify an output directory
-#@String outputdir // opens menu to define outout directory
+outputDir = FIXME
 
 // specify settings
 min_size = 100;
@@ -22,6 +22,6 @@ run("Convert to Mask"); // convert to mask using default settings
 run("Analyze Particles...", "size=&min_size-&max_size circularity=&min_circ-&max_circ show=[Count Masks] display add") // run the particle analyzer
 run("glasbey", "display=blob_labels_macro.tif view=net.imagej.display.DefaultDatasetView@541b120b")
 roiManager("Select All") // select all rois
-roiManager("Save", outputdir + "/blob_ROIset_macro.zip"); // save rois to output directory
-saveAs("Results", outputdir + "/blob_results_macro.txt"); // save results file to output directory
-saveAs("Tiff", outputdir + "/blob_labels_macro.tif"); // save label mask to output directory
+roiManager("Save", outputDir + "/blob_ROIset_macro.zip"); // save rois to output directory
+saveAs("Results", outputDir + "/blob_results_macro.txt"); // save results file to output directory
+saveAs("Tiff", outputDir + "/blob_labels_macro.tif"); // save label mask to output directory
