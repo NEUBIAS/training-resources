@@ -49,11 +49,10 @@ assessment: >
 
     > ## Solution
     > - Isotropic image data has voxels of equal XYZ dimensions. **True**
-      - Reslicing volumetric data is essentially similar to rotating a 3D object and viewing it from a different angle. **True**
-      {: .solution}
+    > - Reslicing volumetric data is essentially similar to rotating a 3D object and viewing it from a different angle. **True**
+    {: .solution}
 
 learn_next:
   - "[Projections of 3D data](../projections)"
   - "[3D volume rendering]"
-
 ---
