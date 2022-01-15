@@ -12,6 +12,7 @@ motivation: |
   - the Z dimension, providing depth to image data,
   - different channels, showing data recorded with different detectors or detector settings,
   - the time dimension.
+
   When viewing the data, different dimensions can be included or excluded, to visualize different aspects of the data. Furthermore, multidimensional image data processes can be applied to one or more dimensions, depending on the needs. It is important to note that the different spatial dimensions are not necessarily isotropic. This means that the pixel sizes are different in X, Y, or Z. It is important to take this into account when viewing data or when applying image data analysis processes.
 
 concept_map: >
@@ -47,9 +48,9 @@ assessment: >
     - Reslicing volumetric data is essentially similar to rotating a 3D object and viewing it from a different angle.
 
     > ## Solution
-    >   - Isotropic image data has voxels of equal XYZ dimensions. **True**
-        - Reslicing volumetric data is essentially similar to rotating a 3D object and viewing it from a different angle. **True**
-        {: .solution}
+    > - Isotropic image data has voxels of equal XYZ dimensions. **True**
+      - Reslicing volumetric data is essentially similar to rotating a 3D object and viewing it from a different angle. **True**
+      {: .solution}
 
 learn_next:
   - "[Projections of 3D data](../projections)"
