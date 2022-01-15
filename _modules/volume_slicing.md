@@ -16,13 +16,15 @@ motivation: |
 
 concept_map: >
   graph TD
-    PV("Pixel values") --> BA(Binarization algorithm)
-    BA --> BPV("Binarized pixel values")
-    BPV --> BG("Background (0)")
-    BPV --> FG("Foreground (1)")
+    DM("Image data dimensions") --> S("Spatial dimensions")
+    S --> X("X (width)")
+    S --> Y("Y (height)")
+    S --> Z("Z (depth)")
+    DM --> T("Temporal dimension")
+    DM --> C("Image channels")
 
-figure: /figures/binarization.png
-figure_legend: Images before and after binarization
+figure: /figures/volume_slicing.png
+figure_legend: Schematic representation of 2D, 3D, and 5D image data. 2D images are made up of tiny squares called pixels, whereas 3D images are made up of cubes called voxels. Pixels and voxels are not necessarily isotropic, as shown here by squares versus rectangles.
 
 activity_preface: |
   - Open the binary image [xy_8bit_binary__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__nuclei.tif).
