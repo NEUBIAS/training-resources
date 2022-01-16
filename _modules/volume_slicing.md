@@ -54,6 +54,6 @@ assessment: >
 
 learn_next:
   - "[Projections of 3D data](../projections)"
-  - [comment]: <> (3D volume rendering --> module still to be made)
+[comment]: <> (3D volume rendering --> module still to be made)
 
 ---
