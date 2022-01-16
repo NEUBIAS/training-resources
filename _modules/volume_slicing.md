@@ -22,7 +22,7 @@ concept_map: >
     S --> Y("Y (height)")
     S --> Z("Z (depth)")
     DM --> T("Temporal dimension")
-    DM --> C("Image channels")
+    DM --> C("Channel dimension")
 
 figure: /figures/volume_slicing.png
 figure_legend: Schematic representation of 2D, 3D, and 5D image data. 2D images are made up of tiny squares called pixels, whereas 3D images are made up of cubes called voxels. Pixels and voxels are not necessarily isotropic, as shown here by squares versus rectangles.
@@ -54,5 +54,6 @@ assessment: >
 
 learn_next:
   - "[Projections of 3D data](../projections)"
-  - "[3D volume rendering --> module still to be made]"
+  - [comment]: <> (3D volume rendering --> module still to be made)
+
 ---
