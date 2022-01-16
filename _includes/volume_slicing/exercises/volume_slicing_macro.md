@@ -1,6 +1,7 @@
 Open the multidimensional image [xyz_16bit_t1-head.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_16bit_t1-head.tif).
 - Reslice the image from different directions, such that you can view the image stack from -the side, from the top, and from the front.
 
+
 > ## Solution
 >""" Open the head image stack and reslice it to view it from different angles (side, top, >and front) """
 >
@@ -18,3 +19,4 @@ Open the multidimensional image [xyz_16bit_t1-head.tif](https://github.com/NEUBI
 >rename("Head viewed from the front");
 
 >run("Tile");
+{: .solution}
