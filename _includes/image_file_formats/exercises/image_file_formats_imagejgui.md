@@ -1,6 +1,6 @@
 ### Image inspection
 
-- Open [xyz__multiple_images.czi]((https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz__multiple_images.czi)
+- Open [xyz__multiple_images.czi](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz__multiple_images.czi)
   - How many images are contained?
   - What are the dimensions of the images?
   - What are the voxel sizes of the images? 
@@ -13,6 +13,13 @@
 
 ### Image saving
 
-- Open ...
-- Save as ...
-- Open the saved image: What has changed as compared to the original image? 
+- Open [xyzct_16bit__mitosis.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyzct_16bit__mitosis.tif) 
+- Enable the view of all channels by selecting `Composite` in [Image > Color > Channels Tools ...]
+- Save as PNG
+- Open the saved image: What has changed as compared to the original image?
+
+> ## Solution
+> - The original image looks like the image in the viewer when loaded in ImageJ or the OS viewer
+> - Pixel calibration and intensities have been lost. 
+{: .solution}
+
