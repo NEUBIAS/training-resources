@@ -1,5 +1,5 @@
 ---
-title:     Pixel processing
+title:     Pixel processing (DRAFT, topic is treated in global background)
 layout:    module
 ---
 
