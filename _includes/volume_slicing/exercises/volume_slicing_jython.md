@@ -3,7 +3,7 @@ Open the multidimensional image [xyz_16bit_t1-head.tif](https://github.com/NEUBI
 
 > ## Solution
 > ```
->""" Open the head image stack and reslice it to view it from different angles (side, top, and front) """
+># This jython script opens the head image stack and reslices it to view it from different angles (side, top, and front)
 >
 ># import classes
 >from ij import IJ
@@ -24,7 +24,7 @@ Open the multidimensional image [xyz_16bit_t1-head.tif](https://github.com/NEUBI
 >IJ.run(head, "Reslice [/]...", "output=1.500 start=Left rotate") # view head from the front
 >head_front = IJ.getImage()
 >head_front.setTitle("Head viewed from the front")
-
+>
 >IJ.run("Tile")
 > ```
 {: .solution}
