@@ -1,5 +1,5 @@
 ---
-title:     Morphological filters
+title:     Morphological filters (DRAFT)
 layout:    module
 ---
 
