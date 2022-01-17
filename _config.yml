@@ -20,6 +20,7 @@ module_order:
 - pixels
 - spatial_calibration
 - lut
+- projections
 - binarization
 - connected_components
 - datatypes
