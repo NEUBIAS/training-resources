@@ -1,6 +1,8 @@
 ### Image inspection
 
-- See activity
+- Open the files mentioned in the activity using [Plugins > Bio-Formats > Bio-Format Importer].- For ICS/IDS and XML/HDF5:
+  - The ICS and XML file are the entry points that should be opened (the respective other file will be read automatically).
+  - Also inspect the ICS and XML files in a simple text editor.
 
 ### Image saving
 
