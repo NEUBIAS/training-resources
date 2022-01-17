@@ -35,10 +35,12 @@ activity_preface: |
   ![](/figures/projections_activity.png)
 
 activities:
+  - ["ImageJ GUI Reslice", "projections/activities/projections_imagejgui_reslice.md", "markdown"]
   - ["ImageJ GUI CLIJ2", "projections/activities/projections_imagejgui_clij2.md", "markdown"]
   - ["ImageJ GUI TransformJ", "projections/activities/projections_imagejgui_transformj.md", "markdown"]
 
 exercises:
+  - ["ImageJ GUI Reslice", "projections/exercises/projections_imagejgui_reslice.md"]
   - ["ImageJ GUI CLIJ2", "projections/exercises/projections_imagejgui_clij2.md"]
 
 assessment: >
