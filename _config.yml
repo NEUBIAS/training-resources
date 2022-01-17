@@ -22,6 +22,7 @@ module_order:
 - spatial_calibration
 - datatypes
 - image_file_formats
+- projections
 - binarization
 - connected_components
 - measure_shapes
