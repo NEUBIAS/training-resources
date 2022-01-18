@@ -1,0 +1,14 @@
+	
+ics_version	1.0
+filename	/Users/tischer/Desktop/mitosis.ids
+layout	parameters	6
+layout	order	bits	x	y	z	t	ch	
+layout	sizes	16	171	196	5	11	2	
+representation	format	integer
+representation	sign	unsigned
+representation	compression	uncompressed
+representation	byte_order	2	1	
+parameter	scale	1.000000	0.08850000022125	0.08850000022125	1.0	0.14285714285714285	1.0	
+parameter	units	bits	micrometers	micrometers	micrometers	seconds	
+
+end
