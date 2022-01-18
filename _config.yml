@@ -18,12 +18,13 @@ kind: "lesson"
 
 module_order:
 - pixels
-- spatial_calibration
 - lut
+- spatial_calibration
+- datatypes
+- image_file_formats
 - projections
 - binarization
 - connected_components
-- datatypes
 - measure_shapes
 - workflow_segment_2d_nuclei_measure_shape
 - measure_intensities
