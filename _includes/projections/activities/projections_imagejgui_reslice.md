@@ -17,6 +17,9 @@ We need to rearrange the stack such that the new z axis is the one along which t
 
 - Maximum projection along x axis
   - `run("Reslice [/]...", "start=Left avoid");`
+    - `Left/Right/Top/Bottom` = as if looking from the left(east)/right(west)/top(north)/bottom(south) onto the stack **on your screen** (`Top` does **not** mean to look on the stack from the top as in along the z-direction).
+    - `[X] avoid interpolation` (otherwise it will create new pixels by interpolation)
+      - The `output spacing` argument will be ignored if we do not interpolate.
   - Note that the image has the same number of pixels, but rearranged.
   - Note that also the voxel sizes `run("Properties..)` have changed. 
   - `run("Z Project...", "projection=[Max Intensity]");`
