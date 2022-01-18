@@ -40,7 +40,7 @@ activity_preface: |
   - TIFF with minimal metadata: [xy_8bit__nuclei_PLK1_control.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_PLK1_control.tif)
   - LIF containing two images with extensive metadata: [xy_xyc__two_images.lif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_xyc__two_images.lif)
   - CZI containing several images: [xyz__multiple_images.czi](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz__multiple_images.czi)
-  - ICS/IDS: Text based metadata [xyzct_16bit__mitosis.ics](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyzct_16bit__mitosis.ics) with corresponding binary pixel data [xyzct_16bit__mitosis.ids](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyzct_16bit__mitosis.ids).  
+  - ICS/IDS: Text based metadata [xyzct_16bit__mitosis.ics](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyzct_16bit__mitosis.ics) with corresponding binary pixel data [xyzct_16bit__mitosis.ids](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyzct_16bit__mitosis.ids) 
   - XML/HDF5: XML based metadata [xyzct_16bit__mitosis.xml](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyzct_16bit__mitosis.xml) with corresponding HDF5 pixel data [xyzct_16bit__mitosis.h5](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyzct_16bit__mitosis.h5)
 
   ### Image saving
