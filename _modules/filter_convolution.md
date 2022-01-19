@@ -1,5 +1,5 @@
 ---
-title:     Image math
+title:     Filter convolution (DRAFT)
 layout:    module
 ---
 

@@ -18,11 +18,13 @@ kind: "lesson"
 
 module_order:
 - pixels
-- spatial_calibration
 - lut
+- spatial_calibration
+- datatypes
+- image_file_formats
+- projections
 - binarization
 - connected_components
-- datatypes
 - measure_shapes
 - workflow_segment_2d_nuclei_measure_shape
 - measure_intensities
@@ -33,6 +35,10 @@ module_order:
 - filter_objects
 - workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape
 - script_run
+- variables
+- commenting
+- string_concat
+- output_saving
 - script_functions
 
 # Sites
