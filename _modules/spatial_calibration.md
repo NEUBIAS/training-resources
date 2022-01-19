@@ -60,8 +60,8 @@ assessment: |
 learn_next:
 
 external_links:
-  - [Wikipedia: pixels](https://en.wikipedia.org/wiki/Pixel)
-  - [A pixel is not a little square](http://alvyray.com/Memos/CG/Microsoft/6_pixel.pdf)
+  - "[Wikipedia: pixels](https://en.wikipedia.org/wiki/Pixel)"
+  - "[A pixel is not a little square](http://alvyray.com/Memos/CG/Microsoft/6_pixel.pdf)"
 ---
 
 ## Isotropy
