@@ -39,8 +39,7 @@ module_order:
 - commenting
 - string_concat
 - output_saving
-
-
+- script_functions
 
 # Sites
 repository: <USERNAME>/<PROJECT>
