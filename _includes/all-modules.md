@@ -25,6 +25,14 @@ open an issue: https://github.com/carpentries/styles/issues/new
 {% if e.tags contains "scripting" %}
   {% assign title = "Scripting: " | append: title %}
 {% endif %}
+{% if e.tags contains "workflow" %}
+  {% assign title = "Workflow: " | append: title %}
+{% endif %}
+{% if e.tags contains "draft" %}
+  {% assign title = "(Draft) " | append: title %}
+{% endif %}
+
+
 
 <div class="col-xs-6">
   <div class="panel panel-default">
