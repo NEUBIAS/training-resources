@@ -46,7 +46,6 @@ assessment: >
 
     > ## Solution
     > - Isotropic image data has voxels of equal XYZ dimensions. **True**
-
     {: .solution}
 
 learn_next:
@@ -55,5 +54,5 @@ learn_next:
 
 ---
 
-  
+\n  
 The word 'slice' is often used in different ways. The different 'layers' in the z-dimension are referred to as z-slices. Slicing (or subsetting) image data means that part of the image data is selected and 'sliced out' to form a new image. This can include selecting one or more dimensions, or just part of a dimension, for example selecting slice 6-12 of the Z-dimension. You can also rotate the data in one of the spatial dimensions and resample the data set to see that data from a different angle, which is sometimes referred to as 'reslicing'.

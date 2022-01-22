@@ -1,4 +1,4 @@
-""" Open a multidimensional image and crop out the green bean. Then reslice it from the top """
+""" Open a multidimensional image and crop out the green bead. Then reslice it from the top """
 
 # import packages
 from ij import IJ
