@@ -17,6 +17,13 @@
 >run("Reslice [/]...", "output=1.500 start=Left"); // view head from the front
 >rename("Head viewed from the front");
 >
+>// Rotate the head stack that is viewed from the top and reslice to obtain 3/4 view
+>selectWindow("Head viewed from the top");
+>run("Duplicate...", "duplicate");
+>run("Rotate... ", "angle=45 grid=1 interpolation=Bilinear enlarge stack"); // rotate the stack
+>run("Reslice [/]...", "output=1.500 start=Top");
+>rename("Head in 3/4 view");
+>
 >run("Tile");
 > ```
 {: .solution}

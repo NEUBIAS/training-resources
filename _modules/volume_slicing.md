@@ -13,24 +13,22 @@ motivation: |
   - different channels, showing data recorded with different detectors or detector settings,
   - the time dimension.
 
-  When viewing the data, different dimensions can be included or excluded, to visualize different aspects of the data. Furthermore, multidimensional image data processes can be applied to one or more dimensions, depending on the needs. It is important to note that the different spatial dimensions are not necessarily isotropic. This means that the pixel sizes are different in X, Y, or Z. It is important to take this into account when viewing data or when applying image data analysis processes.
+  When viewing the data, different dimensions can be included or excluded, to visualize different aspects of the data. Furthermore, multidimensional image data processes can be applied to one or more dimensions. When doing so, it is important to keep in mind that the different spatial dimensions are not necessarily isotropic. This means that the pixel sizes can be different in X, Y, or Z.
 
 concept_map: >
   graph TD
-    DM("Image data dimensions") --> S("Spatial dimensions")
-    S --> X("X (width)")
-    S --> Y("Y (height)")
-    S --> Z("Z (depth)")
-    DM --> T("Temporal dimension")
-    DM --> C("Channel dimension")
+    ND("N-Dimensional image") --> S("Show on")
+    S --> M("2D monitor")
 
 figure: /figures/volume_slicing.png
-figure_legend: Schematic representation of 2D, 3D, and 5D image data. 2D images are made up of tiny squares called pixels, whereas 3D images are made up of cubes called voxels. Pixels and voxels are not necessarily isotropic, as shown here by squares versus rectangles.
+figure_legend: Schematic representation of 2D, 3D, and 5D image data. 2D images are made up of tiny squares called pixels, whereas 3D images are made up of cubes called voxels. In order to see a different part of the image data on a 2D monitor, the image has to be sliced and sometimes rotated. Pixels and voxels are not necessarily isotropic, as shown here by squares versus rectangles.
 
 activity_preface: |
   - Open the multidimensional image [xyzc_8bit_beads_p_open.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyzc_8bit_beads_p_open.tif).
   - Use the sliders to inspect the different dimensions in this image. Which dimensions are present in this data? How can one turn on both channel simultaneously?
   - View the image using the 'Orthogonal views' function. Are the XYZ dimensions isotropic or anisotropic in this image?
+  - Subset the data such, that a new image is created that contains only the green bead.
+  - Reslice the green bead, such that the bead is shown from the top. What happens when you tick or untick the 'avoid interpolation' box?
 
 activities:
   - ["ImageJ GUI", "volume_slicing/activities/volume_slicing_gui.md", "markdown"]
@@ -45,11 +43,10 @@ exercises:
 assessment: >
   ### True or False
     - Isotropic image data has voxels of equal XYZ dimensions.
-    - Reslicing volumetric data is essentially similar to rotating a 3D object and viewing it from a different angle.
 
     > ## Solution
     > - Isotropic image data has voxels of equal XYZ dimensions. **True**
-    > - Reslicing volumetric data is essentially similar to rotating a 3D object and viewing it from a different angle. **True**
+
     {: .solution}
 
 learn_next:
@@ -57,3 +54,5 @@ learn_next:
 [comment]: <> (3D volume rendering --> module still to be made)
 
 ---
+
+The word 'slice' is often used in different ways. The different 'layers' in the z-dimension are referred to as z-slices. Slicing (or subsetting) image data means that part of the image data is selected and 'sliced out' to form a new image. This can include selecting one or more dimensions, or just part of a dimension, for example selecting slice 6-12 of the Z-dimension. You can also rotate the data in one of the spatial dimensions and resample the data set to see that data from a different angle, which is sometimes referred to as 'reslicing'.

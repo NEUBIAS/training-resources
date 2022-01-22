@@ -24,6 +24,14 @@
 >IJ.run(head, "Reslice [/]...", "output=1.500 start=Left rotate") # view head from the front
 >head_front = IJ.getImage()
 >head_front.setTitle("Head viewed from the front")
+
+># Rotate the head stack that is viewed from the top and reslice to obtain 3/4 view
+>head_top2 = head_top.duplicate()
+>IJ.run(head_top2, "Rotate... ", "angle=45 grid=1 interpolation=None enlarge stack") # rotate the stack
+>IJ.run(head_top2, "Reslice [/]...", "output=1.500 start=Top")
+>head_three_quarter = IJ.getImage()
+>head_three_quarter.setTitle("Head in 3/4 view")
+>head_three_quarter.show()
 >
 >IJ.run("Tile")
 > ```
