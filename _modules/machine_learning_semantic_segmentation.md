@@ -1,5 +1,5 @@
 ---
-title:  Semantic image segmentation using machine learning
+title:  Semantic image segmentation using machine learning (DRAFT)
 layout: module
 ---
 

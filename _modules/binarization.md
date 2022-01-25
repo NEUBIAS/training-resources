@@ -21,7 +21,7 @@ concept_map: >
     BPV --> FG("Foreground (1)")
 
 figure: /figures/binarization.png
-figure_legend: Image before and after binarization by applying a threshold.
+figure_legend: Images before and after binarization
 
 activity_preface: |
   - Open the binary image [xy_8bit_binary__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__nuclei.tif).

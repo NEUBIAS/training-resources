@@ -1,6 +1,6 @@
 ---
-title:     Rank filters and rank filter sequences
-layout:    module
+title:     Rank filters and rank filter sequences (DRAFT)
+layout:    module 
 prerequisites:
   - "[Pixels](../pixels)"
   - "[Median filters](../median_filter)"
