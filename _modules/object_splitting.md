@@ -1,5 +1,5 @@
 ---
-title:     Object splitting
+title:     Object splitting, watershed (DRAFT)
 layout:    module
 ---
 

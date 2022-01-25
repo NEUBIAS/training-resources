@@ -13,7 +13,7 @@
   * 2D distance measurement between two pixels
     * One can use the Line tool
   * 3D distance measurement between two voxels
-    * One cannot use the Line tool but needs to measure manually: `sqrt( (x0-x1)^2 + (y0*-y1*)^2 + (z0-z1)^2 )`
+    * One cannot use the Line tool but needs to measure manually: `sqrt( (x0-x1)^2 + (y0-y1)^2 + (z0-z1)^2 )`
       * Note: It is critical to use the calibrated voxel positions and not the voxel indices in above formula!
 * Appreciate that image calibration can be confusing, e.g.
   * It is not consistently used in image filter parameter specification

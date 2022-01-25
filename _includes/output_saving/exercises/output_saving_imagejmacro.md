@@ -10,7 +10,7 @@ Adapt the below code to change the following:
 >// Different outputs are saved: ROIs, results table, and label mask.
 >
 >// specify an output directory
->outputDir = FIXME # (e.g. r'C:\Users\UserName\Desktop' on Windows or '/Users/UserName/Desktop/' on MacOS)
+>outputDir = FIXME # (e.g. r'C:\Users\UserName\Desktop' or  'C:\\Users\\UserName\\Desktop' on Windows, or '/Users/UserName/Desktop/' on MacOS)
 >
 >// specify settings
 >min_size = 100;
