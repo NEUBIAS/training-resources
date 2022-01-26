@@ -24,6 +24,7 @@ module_order:
 - image_file_formats
 - volume_slicing
 - projections
+- volume_viewer
 - binarization
 - connected_components
 - measure_shapes
