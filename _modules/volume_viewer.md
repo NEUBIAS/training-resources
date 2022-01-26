@@ -25,8 +25,12 @@ activity_preface: |
   - Open Plugins -> Volume Viewer.
   - Play with LUT transfer function and see its effect on the displayed data.
   - Rotate to see the front pose of the face.
-  - Make a snapshot.
-  - Create a custom animation from snapshots.
+  - Make a snapshot.  
+  - Create a custom animation making more snapshots and using Image -> Stacks -> Images to Stack.
+
+exercises:
+  - ["Exercise1 - ImageJ", "volume_viewer/exercises/volume_viewer_exercise.md"]
+  - ["Exercise2 - ImageJ", "volume_viewer/exercises/volume_viewer_exercise2.md"]
 
 
 assessment: >
