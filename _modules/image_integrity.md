@@ -1,5 +1,5 @@
 ---
-title:  Image data integrity
+title:  Image data integrity (DRAFT)
 layout: module
 ---
 

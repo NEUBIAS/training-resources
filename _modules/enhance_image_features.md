@@ -1,5 +1,5 @@
 ---
-title:  Image feature enhancement
+title:  Image feature enhancement (DRAFT)
 layout: module
 ---
 
