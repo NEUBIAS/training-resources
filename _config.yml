@@ -41,6 +41,7 @@ module_order:
 - string_concat
 - output_saving
 - script_functions
+- volume_viewer
 
 # Sites
 repository: <USERNAME>/<PROJECT>
