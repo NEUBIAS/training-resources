@@ -35,8 +35,8 @@ activities:
   - ["ImageJ Jython", "string_concat/activities/string_concat.py", "python"]
 
 exercises:
-    - ["Exercise 1 - ImageJ Macro", "string_concat/exercises/string_concat_imagejmacro.md"]
-    - ["Exercise 2 - ImageJ Macro", "string_concat/exercises/string_concat_imagejmacro2.md"]
+  - ["ImageJ Macro 1", "string_concat/exercises/string_concat_imagejmacro.md"]
+  - ["ImageJ Macro 2", "string_concat/exercises/string_concat_imagejmacro2.md"]
 
 assessment: >
 
