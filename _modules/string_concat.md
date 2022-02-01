@@ -34,11 +34,8 @@ activities:
   - ["ImageJ Jython", "string_concat/activities/string_concat.py", "python"]
 
 exercises:
-  ### Exercise 1
-    - ["ImageJ Macro", "string_concat/exercises/string_concat_imagejmacro.md"]
-
-  ### Exercise 2 (Gaussian blur)
-    - ["ImageJ Macro", "string_concat/exercises/string_concat_imagejmacro2.md"]
+    - ["Exercise 1 - ImageJ Macro", "string_concat/exercises/string_concat_imagejmacro.md"]
+    - ["Exercise 2 - ImageJ Macro", "string_concat/exercises/string_concat_imagejmacro2.md"]
 
 assessment: >
 
