@@ -1,0 +1,13 @@
+- [Install Fiji](https://imagej.net/software/fiji/downloads)
+- Open Fiji
+- <kdb>File > New > Script...</kbd>
+- <kbd>Run</kbd> button to execute the code.
+- Languages
+  - IJ-Macro
+  - Javascript
+  - Jython
+  - Groovy
+  - and some more...
+- Choose between different languages in the Language menu item
+- [X] Auto-completion for IJ-Macro language
+- [ ] Break-points 

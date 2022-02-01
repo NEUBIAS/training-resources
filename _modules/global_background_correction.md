@@ -23,7 +23,7 @@ concept_map: >
     I --> MB("Measure background")
     MB --> SB
 
-figure: figures/global_background_correction.png
+figure: /figures/global_background_correction.png
 figure_legend: Image before and after background correction
 
 activity_preface: |

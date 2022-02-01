@@ -1,13 +1,10 @@
 ---
 title: Filter objects 
 layout: module
-
 prerequisites:
   - "[Connected components labeling](../connected_components)"
-
 objectives:
   - Remove objects from a label mask image.
-
 motivation: >
   Once objects have been identified in an image, one often filters the objects based on certain measured criteria. For example, very small objects may be noise rather than real objects and could be removed.
 
