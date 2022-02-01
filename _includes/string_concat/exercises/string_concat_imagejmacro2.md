@@ -1,22 +1,21 @@
-Purpose is to creat a command line that does gaussian blur with a certain sigma value, for example 6 
-Open a sample image
-1. File > Open samples > Blobs
-Open a new script editor
-1. From ImageJ GUI open a script [ File > New > Script...]
-2. Choose the language IJ1 Macro
-3. Define variable1 as "sigma"
-4. Define variable2 as a number, in this case 6
-5. Concatenate the variables to get the final string (variable3), looking like this: "sigma=6"
-6. run("Gaussian Blur...", variable3);
-7. run the macro to see the effect on the image
-8. You can change the variable 2 value and compare the effects
+Create a macro that applies a gaussian blur with a certain sigma value to an image.
+
+1. Open a sample image: [ File > Open samples > Blobs ]
+1. Open the script editor: [ File > New > Script...]
+1. Choose the language IJ1 Macro
+1. Define `variable1` as the string `"sigma"`
+1. Define `variable2` as the number `6`
+1. Concatenate the variables to get a new string (`variable3`), looking like this: `"sigma=6"`
+1. Run("Gaussian Blur...", `variable3`);
+1. Run the macro to see the effect on the image
+1. Change the value of `variable2` (e.g. set it to `12`) and run the macro again to observe the effect
 
 > ## Solution
 > ```
-> //defining variables
+> // defining variables
 > variable1 = "sigma";
 > variable2 = 6;
-> //concatenating strings
+> // concatenating variables, adding the equal sign in the middle
 > variable3 = variable1 + "=" + variable2;
 > run("Gaussian Blur...", variable3);
 > ```
