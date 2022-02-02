@@ -1,6 +1,7 @@
 ---
-title:     String concatenation
-layout:    module
+title: String concatenation
+layout: module
+tags: ["scripting","draft"]
 prerequisites: 
   - "[Variables](../variables)"
 

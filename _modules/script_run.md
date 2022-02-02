@@ -1,6 +1,7 @@
 ---
-title:     Running a script
-layout:    module
+title: Running a script
+layout: module
+tags: ["scripting","draft"]
 prerequisites:
   - "[TODO: Setting up a scripting environment](../pixels)"
 objectives:

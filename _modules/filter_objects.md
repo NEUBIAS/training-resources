@@ -1,5 +1,5 @@
 ---
-title: Filter objects 
+title: Object filtering
 layout: module
 prerequisites:
   - "[Connected components labeling](../connected_components)"
