@@ -43,6 +43,7 @@ module_order:
 - output_saving
 - script_functions
 - volume_viewer
+- for_loop
 
 # Sites
 repository: <USERNAME>/<PROJECT>

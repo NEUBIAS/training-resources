@@ -1,17 +1,16 @@
 ---
-title:     String concatenation
+title:     For Loops
 layout:    module
 prerequisites: 
-  - "[Variables](../variables)"
+  - "ROIs"
+[comment]: <> ( - NEEDS TO BE ADDED "[ROIs](../)")
 
 objectives:
-  - "Concatenate strings"
-  - "Convert numbers into strings"
+  - "Repeating operations multiple times"
+  - "Running a script for multiple files"
 motivation: |
-  String is a type of variable that can cotain a combination of characters. 
-  String concatenation is the operation of joining multiple substrings together to make a bigger one. 
-  For example concatenating "Hello " and "world!" would result into "Hello world!". 
-  You can also combine a string and a number. For example concatenating the string "Displaying image ", number 50 and " out of 100" would result into "Displaying image 50 out of 100". Furthermore, you may concatenate strings to create paths to the images by concatenating path to the folder and file names.
+  Often you need to repeat operations multiple times or run the script for multiple images. One example is when you want to repeat applying a similar filter on the same image, to find the best radius value of that filter. In such cases you can simplify the code by creating a loop instead of writing the same lines of code multiple times. Loops are also very useful for batch processing, which you will learn later.
+
   
 concept_map: >
   graph TD
@@ -51,10 +50,11 @@ assessment: >
     
 
 learn_next:
-[comment]: <> ( - NEEDS TO BE ADDED "[Saving tables, images, ROIs](../)")
+[comment]: <> ( - NEEDS TO BE ADDED "[Batch processing](../)")
 
 external_links:
-  - "[Wikipedia: String concatenation operator in different languages](https://en.wikipedia.org/wiki/Comparison_of_programming_languages_(strings))"
+  - "[ImageJ macro loops](https://imagej.nih.gov/ij/developer/macro/macros.html#loops)"
+  - "[Image processing with python, search for loop keyword to see examples](https://datacarpentry.org/image-processing/aio/index.html)"
   
 ---
 #### String concatenation
