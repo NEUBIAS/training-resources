@@ -35,8 +35,9 @@ activities:
   - ["ImageJ Jython", "string_concat/activities/string_concat.py", "python"]
 
 exercises:
-  - ["ImageJ Macro 1", "string_concat/exercises/string_concat_imagejmacro.md"]
-  - ["ImageJ Macro 2", "string_concat/exercises/string_concat_imagejmacro2.md"]
+  - ["ImageJ Macro: Concatenate variables", "string_concat/exercises/string_concat_imagejmacro.md"]
+  - ["ImageJ Macro: Concatenate gaussian sigma values", "string_concat/exercises/string_concat_imagejmacro2.md"]
+  - ["ImageJ Macro: Concatenate paths", "string_concat/exercises/string_concat_imagejmacro3.md"]
 
 assessment: >
 
