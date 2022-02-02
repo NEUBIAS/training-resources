@@ -32,6 +32,12 @@ open an issue: https://github.com/carpentries/styles/issues/new
   {% assign title = "(Draft) " | append: title %}
 {% endif %}
 
+{% assign tags = "" | split: ", " %}
+{% for tag in e.tags %}
+  {% unless tag == "scripting" or tag == "draft" or tag == "workflow" %}
+    {% assign tags = tags | push: tag %}
+  {% endunless %}
+{% endfor %}
 
 
 <div class="col-xs-6">
@@ -39,6 +45,7 @@ open an issue: https://github.com/carpentries/styles/issues/new
     <div class="panel-heading">
       <a href="{{ e.url | relative_url }}">
         <h4>{{ title }}</h4>
+        <h5>{{ tags | array_to_sentence_string: ',' }}</h5>
       </a>
     </div>
     <div class="panel-body">
