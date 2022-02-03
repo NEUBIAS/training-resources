@@ -8,44 +8,38 @@ prerequisites:
 objectives:
 motivation: |
 concept_map: >
-  graph TD
-    B("Binary image") -->|distance transform| D("Distance map")
-    B --> ("Image with values: 0 or 1")
-    D --> ("Image with values: Distance to closest 0")
+  graph LR
+    B("Input image") -->|distance transform| D("Distance map image")
+    B -->|must contain| P("Pixels with value 0")
+    D -->|contains| DN("Distances to nearest 0 pixel")
 
-figure: /figures/binarization.png
-figure_legend: Images before and after binarization
+figure: /figures/distance_transform.png
+figure_legend: Upper panel - Label mask image and the corresponding distance map. The distance map has three local maxima, which are very useful for object splitting and defining object centers. Lower panel - The label mask image has been binarized and inverted in order to compute the distances to the objects.
 
 activity_preface: |
-  ### Distance transform basics
-    - Open the binary image [xy_8bit_binary__two_objects.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__two_objects.tif).
+  - Distance transform basics
+    - Open label mask [xy_8bit_labels__dist_trafo_a.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__dist_trafo_a.tif).
     - Perform a distance transform.
-      - Discuss that there are various algorithms.
-    - Observe that it matters what is foreground and what is background.
+    - From label mask create binary image where the objects are `0` and the background is `1`.
+    - Perform another distance transform on the new binary image.
     - Observe that the datatype of the distance transform image limits the distances.
     - Observe whether the image calibration is considered for the distances.
-  ### Distance measurements
-    - Open reference object image: [xy_8bit_binary__single_object.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__single_object.tif).
-    - Compute a distance map
-    - Open objects image: [xy_8bit_labels__two_spots.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__two_spots.tif).
-    - Measure intensity (= distance to reference object) of objects in distance map
-  ### Region selection
+  - Distance measurements
+    - Open label mask: [xy_8bit_labels__dist_trafo_b.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__dist_trafo_b.tif).
+    - Measure intensity (= distances to nearest other objects) of objects in the distance map of the binary image (s.a.)
+  - Region selection
     - Open reference object image: [xy_8bit_binary__single_object.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__single_object.tif).
     - Compute a distance map.
     - Perform an intensity gating to create a mask with all pixels of a certain distance to the reference object.
 
 activities:
-  - ["ImageJ GUI", "binarization/activities/binarization_imagejgui.md", "markdown"]
-  - ["ImageJ Macro", "binarization/activities/binarization_imagejmacro.ijm", "java"]
-  - ["ImageJ Jython", "binarization/activities/binarization_jython.py", "python"]
-  - ["MATLAB", "binarization/activities/binarization_matlab.m", "matlab"]
-  - ["KNIME", "binarization/activities/binarization_knime.md", "markdown"]
-  - ["Python", "binarization/activities/binarization.py", "python"]
+  - ["ImageJ GUI MorpholibJ", "distance_transform/activities/distance_transform_imagejgui.md", "markdown"]
+  - ["ImageJ Macro MorpholibJ", "distance_transform/activities/distance_transform_imagejmacro.ijm", "java"]
+  - ["Python Napari", "distance_transform/activities/distance_transform_napari_skimage.py", "python"]
 
 exercises:
   - ["ImageJ GUI", "binarization/exercises/binarization_imagejgui.md"]
   - ["ImageJ Macro", "binarization/exercises/binarization_imagejmacro.md"]
-  - ["ImageJ Jython", "binarization/exercises/binarization_jython.md"]
 
 assessment: >
 
@@ -70,25 +64,9 @@ assessment: >
     {: .solution}
 
 learn_next:
-  - "[Automatic threshold for binarization](../auto_threshold)"
-  - "[Finding objects in a binary image](../connected_components)"
+  - "[TODO](../auto_threshold)"
+  - "[TODO](../connected_components)"
 
 external_links:
-  - "[Wikipedia: Binary image](https://en.wikipedia.org/wiki/Binary_image)"
-  
+  - "[Wikipedia: Dist](https://en.wikipedia.org/wiki/Binary_image)"
 ---
-#### Image thresholding
-A common algorithm for binarization is thresholding. A threshold value `t` is chosen, either manually or automatically, 
-and all pixels with intensities below `t` are set to 0, whereas pixels with intensities `>= t` are set to the value for the foreground. 
-Depending on the software the foreground value can be different (e.g. 1 in MATLAB or 255 in ImageJ). At any pixel (x,y):
-
-`p_im(x,y) < t` -> `p_bin(x,y) = 0`
-
-`p_im(x,y) >= t` -> `p_bin(x,y) = 1`
-
-where, p_im and p_bin are the intensity and binary images respectively.
-
-It is also possible to define an interval of threshold values, i.e. a lower and upper threshold value. Pixels with intensity values 
-within this interval belong to the foreground and vice versa. 
- 
-
