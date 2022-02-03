@@ -9,18 +9,20 @@ objectives:
 motivation: |
 concept_map: >
   graph LR
-    B("Input image") -->|distance transform| D("Distance map image")
-    B -->|must contain| P("Pixels with value 0")
-    D -->|contains| DN("Distances to nearest 0 pixel")
+    B[Binary image] --> DT(Distance transform)
+    DT --> D["Distance map image"]
+    D -- contains ---DN("Distances to nearest foreground (or background) pixel")
+    DT -- has --- VI("Various implementations")
 
 figure: /figures/distance_transform.png
-figure_legend: Upper panel - Label mask image and the corresponding distance map. The distance map has three local maxima, which are very useful for object splitting and defining object centers. Lower panel - The label mask image has been binarized and inverted in order to compute the distances to the objects.
+figure_legend: Upper panel - Binary image and the corresponding distance map. The distance map has three local maxima, which are very useful for object splitting and defining object centers. Lower panel - Inverted binary image and corresponding distance map, which is useful to comute distances to closest objects.
 
 activity_preface: |
   - Distance transform basics
     - Open label mask [xy_8bit_labels__dist_trafo_a.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__dist_trafo_a.tif).
+    - Convert to binary image.
     - Perform a distance transform.
-    - From label mask create binary image where the objects are `0` and the background is `1`.
+    - Invert the binary input image.
     - Perform another distance transform on the new binary image.
     - Observe that the datatype of the distance transform image limits the distances.
     - Observe whether the image calibration is considered for the distances.
@@ -69,4 +71,19 @@ learn_next:
 
 external_links:
   - "[Wikipedia: Dist](https://en.wikipedia.org/wiki/Binary_image)"
+  - "[MorpholibJ manual v1.4.0](https://github.com/ijpb/MorphoLibJ/releases/download/v1.4.0/MorphoLibJ-manual-v1.4.0.pdf)"
+  - "[Borgefors 1984](https://www.sciencedirect.com/science/article/pii/0734189X84900355)"
+  - "[Borgefors 1986](https://www.sciencedirect.com/science/article/pii/S0734189X86800470)"
 ---
+
+#### Chamfer distance (from MorpholibJ Manual)
+
+Several methods exist for computing distance maps. The MorphoLibJ library implements
+distance transforms based on chamfer distances. Chamfer distances approximate Euclidean
+distances with integer weights, and are simpler to compute than exact Euclidean distance
+(Borgefors, 1984, 1986). As chamfer weights are only an approximation of the real Euclidean
+distance, some differences are expected compared to the actual Euclidean distance map.
+Several choices for chamfer weights are illustrated in above Figure (TODO). The “Borgefors” weights
+were claimed to be best approximation when considering the 3-by-3 neighborhood.
+The “Chess-knight” distance also takes into account the pixels located at a distance from
+(±1, ±2) in any direction. It is usually the best choice, as it considers a larger neighborhood.

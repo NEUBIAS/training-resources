@@ -5,20 +5,24 @@
  **/
 
 run("Close All");
-
-open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_lablels__dist_trafo_a.tif");
+open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__dist_trafo_a.tif");
 rename("input");
 
+// Binarize
+run("Manual Threshold...", "min=1 max=255");
+run("Convert to Mask");
+rename("binary");
+
 // ImageJ distance map
+selectWindow("binary");
 run("Options...", "black"); // Otherwise results not in line with standard conventions
 run("Duplicate...", "Distance Map");
 run("Distance Map"); // Within objects
 
 // Invert 
-selectWindow("input");
-run("Duplicate...", "invert");
-run("Manual Threshold...", "min=0 max=0");
-run("Convert to Mask");
+selectWindow("binary");
+run("Duplicate...", " ");
+run("Invert");
 rename("invert");
 
 // ImageJ distance map on inverted image
@@ -36,6 +40,6 @@ rename("Chessknight");
 print(getTitle() + ": " + getPixel(0, 761));
 
 // Distance measurements
-open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_lablels__dist_trafo_b.tif");
-
+open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__dist_trafo_b.tif");
+run("Intensity Measurements 2D/3D", "input=Chessknight labels=xy_8bit_labels__dist_trafo_b.tif mean stddev");
 
