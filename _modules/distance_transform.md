@@ -1,7 +1,7 @@
 ---
 title: Distance transform
 layout: module
-tags: []
+tags: ["draft"]
 prerequisites:
   - "[Basic properties of images and pixels](../pixels)"
   - "[Data types](../datatypes)"
