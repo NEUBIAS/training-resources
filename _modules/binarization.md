@@ -1,6 +1,7 @@
 ---
-title:     Binarization
-layout:    module
+title: Thresholding
+layout:  module
+tags: ["foreground background segmentation","binarization"]
 prerequisites:
   - "[Basic properties of images and pixels](../pixels)"
   - "[Data types (unsigned 8-bit)](../datatypes)"

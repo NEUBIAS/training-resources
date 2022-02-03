@@ -1,6 +1,7 @@
 ---
-title:     Commenting
-layout:    module
+title: Commenting
+layout: module
+tags: ["scripting","draft"]
 prerequisites:
   - "[Binarization](../binarization)"
   - "[Connected component labeling](../connected_components)"

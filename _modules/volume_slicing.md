@@ -1,5 +1,5 @@
 ---
-title:     Volume slicing
+title:     Slice viewing
 layout:    module
 prerequisites:
   - "[Basic properties of images and pixels](../pixels)"

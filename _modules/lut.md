@@ -1,6 +1,6 @@
 ---
-title:     Lookup table
-layout:    module
+title: Lookup tables
+layout: module
 
 prerequisites:
   - "[Basic properties of images and pixels](../pixels)"

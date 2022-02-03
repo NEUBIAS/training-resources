@@ -10,8 +10,6 @@ open an issue: https://github.com/carpentries/styles/issues/new
   h2 {text-align: center;}
 </style>
 
-<h2>Training Modules Overview</h2>
-
 <div class="container-fluid">
 <div class="row">
 
@@ -23,11 +21,31 @@ open an issue: https://github.com/carpentries/styles/issues/new
   {% assign e = lesson_episode %}
 {% endif %}
 
+{% assign title = e.title %}
+{% if e.tags contains "scripting" %}
+  {% assign title = "Scripting: " | append: title %}
+{% endif %}
+{% if e.tags contains "workflow" %}
+  {% assign title = "Workflow: " | append: title %}
+{% endif %}
+{% if e.tags contains "draft" %}
+  {% assign title = "(Draft) " | append: title %}
+{% endif %}
+
+{% assign tags = "" | split: ", " %}
+{% for tag in e.tags %}
+  {% unless tag == "scripting" or tag == "draft" or tag == "workflow" %}
+    {% assign tags = tags | push: tag %}
+  {% endunless %}
+{% endfor %}
+
+
 <div class="col-xs-6">
   <div class="panel panel-default">
     <div class="panel-heading">
       <a href="{{ e.url | relative_url }}">
-        <h4>{{ e.title }}</h4>
+        <h4>{{ title }}</h4>
+        <h5>{{ tags | array_to_sentence_string: ',' }}</h5>
       </a>
     </div>
     <div class="panel-body">

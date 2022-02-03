@@ -1,6 +1,7 @@
 ---
-title:     String concatenation
-layout:    module
+title: String concatenation
+layout: module
+tags: ["scripting","draft"]
 prerequisites: 
   - "[Variables](../variables)"
 
@@ -11,7 +12,8 @@ motivation: |
   String is a type of variable that can cotain a combination of characters. 
   String concatenation is the operation of joining multiple substrings together to make a bigger one. 
   For example concatenating "Hello " and "world!" would result into "Hello world!". 
-  You can also combine a string and a number. For example concatenating the string "Displaying image ", number 50 and " out of 100" would result into "Displaying image 50 out of 100". Furthermore, you may concatenate strings to create paths to the images by concatenating path to the folder and file names.
+  You can also combine a string and a number. For example concatenating the string "Displaying image ", number 50 and " out of 100" would result into "Displaying image 50 out of 100". Furthermore, you may concatenate strings to create paths to the images by concatenating path to the folder and file names. 
+  Please note that when concatenating file path and file name you might need to also concatenate a file separator such as / or \ between file path and dile name. Depending on the operating system and the programming language this file separator can be different. In the external links, you will find a generic way of adding a file separator in imageJ as an example.
   
 concept_map: >
   graph TD
@@ -34,8 +36,9 @@ activities:
   - ["ImageJ Jython", "string_concat/activities/string_concat.py", "python"]
 
 exercises:
-
-  - ["ImageJ Macro", "string_concat/exercises/string_concat_imagejmacro.md"]
+  - ["ImageJ Macro: Concatenate variables", "string_concat/exercises/string_concat_imagejmacro.md"]
+  - ["ImageJ Macro: Concatenate gaussian sigma values", "string_concat/exercises/string_concat_imagejmacro2.md"]
+  - ["ImageJ Macro: Concatenate paths", "string_concat/exercises/string_concat_imagejmacro3.md"]
 
 assessment: >
 
@@ -55,6 +58,7 @@ learn_next:
 
 external_links:
   - "[Wikipedia: String concatenation operator in different languages](https://en.wikipedia.org/wiki/Comparison_of_programming_languages_(strings))"
+  - "[File.separator function in imageJ](https://imagej.nih.gov/ij/developer/macro/functions.html#F)"
   
 ---
 #### String concatenation
