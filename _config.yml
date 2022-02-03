@@ -25,6 +25,7 @@ module_order:
 - volume_slicing
 - projections
 - volume_viewer
+- segmentation
 - binarization
 - connected_components
 - measure_shapes
