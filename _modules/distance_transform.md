@@ -87,3 +87,6 @@ Several choices for chamfer weights are illustrated in above Figure (TODO). The 
 were claimed to be best approximation when considering the 3-by-3 neighborhood.
 The “Chess-knight” distance also takes into account the pixels located at a distance from
 (±1, ±2) in any direction. It is usually the best choice, as it considers a larger neighborhood.
+
+<img src="../figures/chamfer_weights.png" align ="center" width="100%" >
+
