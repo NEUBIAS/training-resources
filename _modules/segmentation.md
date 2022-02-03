@@ -1,22 +1,22 @@
 ---
 title: Segmentation
 layout:  module
-tags: []
+tags: ["draft"]
 prerequisites:
   - "[Basic properties of images and pixels](../pixels)"
-  - "[Data types (unsigned 8-bit)](../datatypes)"
 objectives:
 motivation: |
 concept_map: >
-  graph TD
-    I("Image") --> IS("Image segments (Regions)")
-    IS --> O("Instance segmentation (Objects)")
-    IS --> S("Semantic segmentation (Pixel classes)"
-    O --> L("Label mask image")
-    S --> L
+  graph LR
+    I[Image] --> O(Instance segmentation)
+    I --> S(Semantic segmentation)
+    O -- often stored as--- L(Label mask image)
+    S -- often stored as--- L
+    O --- IO(Individual objects)
+    S --- R(Regions of same type)
 
-figure: /figures/binarization.png
-figure_legend: Images before and after binarization
+figure: /figures/segmentation.png
+figure_legend: Left - Semantic segmentation of nuclei, membranes and mitochondria; Right - Instance segmentation of cells (Data from Martinez, Pape et al., Whole body integration of gene expression and single-cell morphology, Cell 2021).
 
 activity_preface: |
 
