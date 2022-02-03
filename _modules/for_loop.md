@@ -3,6 +3,7 @@ title:     For Loops
 layout:    module
 prerequisites: 
   - "ROIs"
+  - "Input and output files"
 [comment]: <> ( - NEEDS TO BE ADDED "[ROIs](../)")
 
 objectives:
@@ -14,14 +15,17 @@ motivation: |
   
 concept_map: >
   graph TD
-    A("Substring 1") --> X("Concatenated string")
-    B("Substring 2") --> X
-    C(Number 1) --> X
-    D("...") --> X
-    E("Substring n") --> X
+    A("Previous code") --> B("For loop with a counter and a maximum")
+    B --> C("Statements to be repeated")
+    C --> D("Counter = Counter+1")
+    D --> E("Counter < maximum")
+    E --> B
+    D --> F("Counter >= maximum")
+    F --> G("Next code to run")
 
-figure: /figures/string_concat.png
-figure_legend: String concatenation.
+
+figure: /figures/for_loop.png
+figure_legend: For loop.
 
 activity_preface: |
   - Open a script editor.
@@ -57,11 +61,7 @@ external_links:
   - "[Image processing with python, search for loop keyword to see examples](https://datacarpentry.org/image-processing/aio/index.html)"
   
 ---
-#### String concatenation
-You concatenate strings by using specific operators, depending on the programming platform. Fo example, the + operator. Let's look at a few examples:
+#### For loop
+Loops are used for repeating a set of operations multiple times, for example on multiple images, multiple channels or multiple timepoints or Z-slices. 
 
-`"Channel_"+1` -> `"Channel_1"`
-
-`"image_"+"duplicate"` -> `"image_duplicate"`
- 
 
