@@ -1,8 +1,10 @@
+-  Open the 3D image [xyz_8bit_sphere_calibrated.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit_sphere_calibrated.tif).
+- Go to **[ Image > Stacks > Orthogonal Views ]** or **[Ctrl-Shift-H]** to see the orthogonal views of the image.
+- Go to **[ Image > Properties... ]** or **[Ctrl-Shift-P]** to open the properties window to view the voxel dimensions. If you change all dimensions to 1 pixel, you will see that the ball appears as an oval in the 'Orthogonal Views' option.
 - Open the multidimensional image [xyzc_8bit_beads_p_open.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyzc_8bit_beads_p_open.tif).
 - Use the sliders to explore different dimensions in the data.
 - Use **[ Image > Color > Channels Tool... ]** or **[Ctrl-Shift-Z]** to toggle different channels.
 - Go to **[ Image > Properties... ]** or **[Ctrl-Shift-P]** to open the properties window to view the voxel dimensions. In this image the voxel dimensions are anisotropic (voxel width and height are not equal to voxel depth).
-- Go to **[ Image > Stacks > Orthogonal Views ]** or **[Ctrl-Shift-H]** to see the orthogonal views of the image.
 - Select the rectangular selection tool and draw an ROI around the green bead.
 - Go to **[ Image > Duplicate ]** or **[Ctrl-Shift-D]**. Tick 'Duplicate hyperstack', select channel 1 and slice 15-25 to crop out the green bead.
 - With the cropped out green bead as the active image, go to **[ Image > Stacks > Reslice]** or press **/** to open the reslice menu. Select 'Top' and click OK.
