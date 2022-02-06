@@ -64,11 +64,13 @@ assessment: >
     - Isotropic image data has voxels of equal XYZ dimensions.
     - Slicing is the process in which an image is divided in smaller images.
     - Reslicing is a term used to indicate repeated slicing.
+    - Images are characterised by 2 dimensions or more
 
     > ## Solution
     > - Isotropic image data has voxels of equal XYZ dimensions. **True**
     > - Slicing is the process in which a multidimensional image is divided in smaller images. **True**
     > - Reslicing is a term used to indicate repeated slicing. **False. Typically, the term reslicing refers to resampling volumetric data from a different direction, such that the resulting image stack is a rotated version of the original stack.**
+    > - Images are characterised by 2 dimensions or more. **True, if we note width by x, height by y, depth by z, time by t and channel by c, we could have images characterised by [xy -> 2D] dimensions, or [xyz -> 3D/Z-stack, xyt -> a time-lapse, xyc -> multiple channels], or [xyzt -> 3D time-lapse, xyzc -> 3D with multiple channels], or [xyztc -> 3D time-lapse with multiple channels]**
     {: .solution}
 
 learn_next:
