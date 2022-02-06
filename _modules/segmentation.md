@@ -8,12 +8,10 @@ objectives:
 motivation: |
 concept_map: >
   graph LR
-    I[Image] --> O(Instance segmentation)
-    I --> S(Semantic segmentation)
+    I[Image] --> O(Instance/Object segmentation)
+    I --> S(Semantic/Region segmentation)
     O -- often stored as--- L(Label mask image)
     S -- often stored as--- L
-    O --- IO(Individual objects)
-    S --- R(Regions of same type)
 
 figure: /figures/segmentation.png
 figure_legend: Left - Semantic segmentation of nuclei, membranes and mitochondria; Right - Instance segmentation of cells (Data from Martinez, Pape et al., Whole body integration of gene expression and single-cell morphology, Cell 2021).
