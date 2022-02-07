@@ -3,7 +3,7 @@
 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/neubias/training-resources)
 
 
-**[Module overview](https://manerotoni.github.io/training-resources/all-modules.html).**
+**[Module overview](https://manerotoni.github.io/training-resources/).**
 
 **[Home page](https://neubias.github.io/training-resources)**
 
