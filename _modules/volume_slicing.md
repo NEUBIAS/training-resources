@@ -24,7 +24,7 @@ figure: /figures/volume_slicing.png
 figure_legend: Schematic representation of 2D, 3D, and 5D image data. 2D images are made up of tiny squares called pixels, whereas 3D images are made up of cubes called voxels. Pixels and voxels are not necessarily isotropic, as shown here by squares versus rectangles. In order to see a different part of the image data on a 2D monitor, the image has to be sliced and sometimes rotated.
 
 activity_preface: |
-  - GUI only: open the 3D image [xyz_8bit_sphere_calibrated.tif] (https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit_sphere_calibrated.tif). Use the 'orthogonal views' options to view the data in XY, YZ, and XZ. What happens to this way of viewing the data when you turn off the calibration?
+  - GUI only: open the 3D image [xyz_8bit_sphere_calibrated.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit_sphere_calibrated.tif). Use the 'orthogonal views' options to view the data in XY, YZ, and XZ. What happens to this way of viewing the data when you turn off the calibration?
   - Open the multidimensional image [xyzc_8bit_beads_p_open.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyzc_8bit_beads_p_open.tif).
   - Use the sliders to inspect the different dimensions in this image. Which dimensions are present in this data? How can one turn on both channel simultaneously?
   - View the properties of this image. Are the XYZ dimensions isotropic or anisotropic in this image?
