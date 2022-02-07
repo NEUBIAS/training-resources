@@ -1,18 +1,19 @@
 ---
-title:     "Workflow: Simple 2D object analysis"
-layout:    module
+title: "Basic 2D object analysis"
+layout: module
+tags: ["workflow"]
 prerequisites:
   - "[Binarization](../binarization)"
   - "[Connected component labeling](../connected_components)"
   - "[Object shape measurements](../measure_shapes)"
 objectives:
-  - "Create a simple image analysis workflow."
+  - "Create a basic image analysis workflow."
   - "Understand that bioimage analysis workflows consist of a sequence of image analysis components."
-  - "Segment nuclei in a 2D image and measure their shapes and understand the different components (concepts and methods) that are needed to accomplish this task."
+  - "Segment nuclei in a 2D image and measure their shapes and understand the components (concepts and methods) that are needed to accomplish this task."
   - "Draw a biophysically meaningful conclusion from applying an image analysis workflow to a set of images."
 
 motivation: |
-  Detecting a set of objects in an image, counting them and measuring certain characteristics about their morphology is probably the most frequently occurring task in bioimage analysis. Depending on the image, even this task could become quite challenging and the workflow could become quite complex. Here we start with a relatively simpler image where combining a minimal set of image analysis components into a simple workflow does the job.
+  Detecting a set of objects in an image, counting them and measuring certain characteristics about their morphology is probably the most frequently occurring task in bioimage analysis. Depending on the image, even this task could become quite challenging and the workflow could become quite complex. Here we start with a relatively simple image where combining a minimal set of image analysis components into a simple workflow does the job.
   
 concept_map: >
   graph TD
