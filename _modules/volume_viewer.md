@@ -14,8 +14,8 @@ motivation: |
 
 concept_map: >
   graph TD
-    Input 3D data("Already opened in Fiji") --> VV("Plugins -> Volume Viewer")
-    VV --> Snapshots/Animations
+    Input 3D data("Already opened in Fiji") --> Volume Viewer("Plugins -> Volume Viewer")
+    Volume Viewer --> Snapshots/Animations
 
 figure: /figures/volume_viewer.png
 figure_legend: Flowchart of volume viewer.
