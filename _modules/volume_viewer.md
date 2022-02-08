@@ -1,6 +1,6 @@
 ---
-title:     volume viewer
-layout:    module
+title: Volume viewer
+layout: module
 prerequisites:
   - "[Basic properties of images and pixels](../pixels)"
   - "[Look up tables](../lut)"

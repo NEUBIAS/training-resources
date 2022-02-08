@@ -1,5 +1,5 @@
 ---
-title:     Neighbourhood filters (introduction)
+title:     Neighbourhood filters
 layout:    module
 prerequisites:
   - "[Basic properties of images and pixels](../pixels)"

@@ -166,6 +166,7 @@ and paste it into your web browser.
 Now you can navigate around the locally-built version of the pages
 and check whether you're happy to submit your changes to be merged into `master` :+1:
 
+
 ## Building locally Windows (without make)
 
 You need to install several tools (`ruby` and then `jekyll`). Please follow the instructions
@@ -241,3 +242,5 @@ module_order:
 - MY_MODULE
 
 ```
+
+Note that when jekyll is serving your page, changes on existing files are automatically updated.
