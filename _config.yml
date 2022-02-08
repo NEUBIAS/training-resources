@@ -25,6 +25,7 @@ module_order:
 - volume_slicing
 - projections
 - volume_viewer
+- segmentation
 - binarization
 - connected_components
 - measure_shapes
@@ -44,7 +45,7 @@ module_order:
 - output_saving
 - script_functions
 - volume_viewer
-- for_loop
+- ome_zarr_s3
 
 # Sites
 repository: <USERNAME>/<PROJECT>

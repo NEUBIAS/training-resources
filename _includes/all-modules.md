@@ -10,6 +10,8 @@ open an issue: https://github.com/carpentries/styles/issues/new
   h2 {text-align: center;}
 </style>
 
+<h3> </h3>
+
 <div class="container-fluid">
 <div class="row">
 
@@ -40,7 +42,7 @@ open an issue: https://github.com/carpentries/styles/issues/new
 {% endfor %}
 
 
-<div class="col-xs-6">
+<div class="col-xs-4">
   <div class="panel panel-default">
     <div class="panel-heading">
       <a href="{{ e.url | relative_url }}">
