@@ -42,6 +42,7 @@ module_order:
 - variables
 - commenting
 - string_concat
+- for_loop
 - output_saving
 - script_functions
 - volume_viewer

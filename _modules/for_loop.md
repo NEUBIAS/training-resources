@@ -15,13 +15,12 @@ motivation: |
   
 concept_map: >
   graph TD
-    A("Previous code") --> B("For loop with a counter and a maximum")
-    B --> C("Statements to be repeated")
-    C --> D("Counter = Counter+1")
-    D --> E("Counter < maximum")
-    E --> B
-    D --> F("Counter >= maximum")
-    F --> G("Next code to run")
+    A("Previous code") --> B("Loop with a condition")
+    B --> C("Condition is valid")
+    C --> D("Statements to be repeated")
+    D --> B
+    B --> E("Condition is not valid")
+    E --> F("Next code to run")
 
 
 figure: /figures/for_loop.png
@@ -29,12 +28,12 @@ figure_legend: For loop.
 
 activity_preface: |
   - Open a script editor.
-  - Define three variables with values "Hello ", "user number " and 50.
-  - Concatenate the three variables.
+  - Print "Starting the process"
+  - For images 1 to 10 print: "processing image number:" and the image number.
+  - Print "Process completed"
 
 activities:
-  - ["ImageJ Macro", "string_concat/activities/string_concat.ijm", "java"]
-  - ["ImageJ Jython", "string_concat/activities/string_concat.py", "python"]
+  - ["ImageJ Macro", "for_loop/activities/for_loop.ijm", "java"]
 
 exercises:
 
@@ -54,6 +53,7 @@ assessment: >
     
 
 learn_next:
+  -"Batch processing"
 [comment]: <> ( - NEEDS TO BE ADDED "[Batch processing](../)")
 
 external_links:
