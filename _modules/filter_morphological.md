@@ -1,7 +1,7 @@
 ---
 title:  Morpholigical filters on binary images
 layout: module 
-tags: ["draft","Rank filter series", "Dilation", "Erosion", "Opening..."]
+tags: ["draft","Rank filter series","Dilation","Erosion","Opening"]
 prerequisites:
   - "[Pixels](../pixels)"
   - "[Median filter](../median_filter)"
