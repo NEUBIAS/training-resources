@@ -1,32 +1,36 @@
 ---
-title: Volume viewer
+title: Volume rendering
 layout: module
 prerequisites:
   - "[Basic properties of images and pixels](../pixels)"
   - "[Look up tables](../lut)"
 
 objectives:
-  - "Visualize data in 3D."
+  - "Visualize image data in 3D."
   - "Explore the data using different visualization settings."
   - "Creating animations."
 motivation: |
-  When the structures that one wants to in 3D image datasets are obscured in the 2D visualization, exploring and understanding the data in 3D can be much intuitive and easier. "Volume Viewer" plugin in Fiji can be used for this purpose. It also allows to use intensity settings to highlight regions of interest and save snapshots that can be used to create a custom animation.
+  TODO
 
 concept_map: >
   graph TD
-    Input 3D data("Already opened in Fiji") --> Volume Viewer("Plugins -> Volume Viewer")
-    Volume Viewer --> Snapshots/Animations
+    D("3-D image data") --> VR("Volume rendering")
+    VR --> A("One 2-D image")
+    VR -->|VR| AA("Two 2-D images (one pe eye)")
+    A ---|has| P(Perspective and camera position)
+    VR --- IS("Iso-surface")
+    VR --- MP("Maximum projection")
 
 figure: /figures/volume_viewer.png
-figure_legend: Flowchart of volume viewer.
+figure_legend: Volume rendering.
 
 activity_preface: |
-  - Open an 3D image stack (File -> Open Samples -> T1 Head(16-bits)) in Fiji.
-  - Open Plugins -> Volume Viewer.
-  - Play with LUT transfer function and see its effect on the displayed data.
-  - Rotate to see the front pose of the face.
-  - Make a snapshot.  
-  - Create a custom animation making more snapshots and using Image -> Stacks -> Images to Stack.
+  - Open a [calibrated 3-D MRI image](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit_calibrated__mri_full_head.tif)
+  - Open a volume viewer.
+  - Explore the LUT transfer function and see its effect on the displayed data.
+  - Change camera position to explore different views.
+  - Save a snapshot.
+  - Create and save a custom animation, e.g. rotating the image.
 
 exercises:
   - ["Exercise1 - ImageJ", "volume_viewer/exercises/volume_viewer_exercise.md"]
@@ -48,6 +52,7 @@ learn_next:
   -
 
 external_links:
+  - "[Wikipedia: Volume rendering](https://en.wikipedia.org/wiki/Volume_rendering)"
   - "[Fiji Volume Viewer plugin](https://imagej.nih.gov/ij/plugins/volume-viewer.html)"
-
+-
 ---
