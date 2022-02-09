@@ -18,26 +18,7 @@ motivation: |
 We use morphological filters to further process a binary image. They allow, for example, to correct the segmentation results by removing pixels that do not belong to foreground objects or to change the shape of the objects shape to better separate them in the subsequent connected component analysis. Morphological filters make it also possible to to find specific areas of an object, for example, its edge. 
 
 concept_map: >
-  graph TD
-    pixel --> NE("neighbourhood pixel values")
-    NE --> sorted("sorted pixel values")
-    sorted --> min
-    sorted --> max
-    sorted --> median
-    sorted --> ...
-    subgraph rank value
-    min
-    max
-    median
-    ...
-    end
-    subgraph replace pixel value
-    fpixel1
-    end
-    median --> fpixel1[rank filtered pixel]
-    min -.-> fpixel1
-    max -.-> fpixel1
-    ... -.-> fpixel1
+
 
 figure: /figures/rank_filter.png
 figure_legend: Scheme of how a rank filter acts on an image
@@ -79,33 +60,7 @@ This module explains how filters can be used to change size and shape of objects
 - Execute morpholofical filters on binary or grayscale images and explain the output
 
 ## Concept map
-```mermaid
-graph TD
-    image --> max1[max]
-    image --> min1[min]
-    image --> max2[max]
-    image --> min2[min]
-    image --> d
-subgraph rank filter sequence
-    max2 --> min3[min]
-    min2 --> max3[max]
-    max1
-    min1
-    d[max - min]
-    end
-    max1 --> dilation
-    min1 --> erosion
-    max3 --> opening
-    min3 --> closing
-    d --> gradient
-    subgraph morphological filter name
-    dilation
-    erosion
-    opening
-    closing
-    gradient
-    end
-```
+
 
 [*] Concept map above assumes bright objects on dark background. For dark objects on bright background effect of min and max filters inverses
 
