@@ -27,14 +27,21 @@ figure_legend: Volume rendering.
 activity_preface: |
   - Open a [calibrated 3-D MRI image](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit_calibrated__mri_full_head.tif)
   - Open a volume viewer.
-  - Explore the LUT transfer function and see its effect on the displayed data.
+  - Explore different rendering modes:
+    - Maximum projection
+    - Iso-surface rendering
+      - Explore the surface threshold value.
+  - Change transfer function and see explore effect on the displayed data.
   - Change camera position to explore different views.
   - Save a snapshot.
   - Create and save a custom animation, e.g. rotating the image.
 
+acitivities:
+  - ["ImageJ 3D Viewer", "volume_viewer/activities/3d_viewer.md", "markdown"]
+
 exercises:
-  - ["Exercise1 - ImageJ", "volume_viewer/exercises/volume_viewer_exercise.md"]
-  - ["Exercise2 - ImageJ", "volume_viewer/exercises/volume_viewer_exercise2.md"]
+  - ["ImageJ Volume Viewer: 1", "volume_viewer/exercises/volume_viewer_exercise.md"]
+  - ["ImageJ Volume Viewer: 2", "volume_viewer/exercises/volume_viewer_exercise2.md"]
 
 
 assessment: >
