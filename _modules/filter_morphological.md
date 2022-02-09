@@ -1,7 +1,7 @@
 ---
-title:     (Draft) Morpholigical filters on binary images
-layout:    module 
-tags: ["Rank filter series", "Dilation", "Erosion", "Opening..."]
+title:  Morpholigical filters on binary images
+layout: module 
+tags: ["draft","Rank filter series", "Dilation", "Erosion", "Opening..."]
 prerequisites:
   - "[Pixels](../pixels)"
   - "[Median filter](../median_filter)"
@@ -14,7 +14,7 @@ objectives:
   - "Asses how the filters can be used to clean-up binary images."
 
 
-motivation: >
+motivation: |
 We use morphological filters to further process a binary image. They allow, for example, to correct the segmentation results by removing pixels that do not belong to foreground objects or to change the shape of the objects shape to better separate them in the subsequent connected component analysis. Morphological filters make it also possible to to find specific areas of an object, for example, its edge. 
 
 concept_map: >
