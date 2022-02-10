@@ -1,6 +1,8 @@
 - Open Fiji
-- Select a 3D image of choice in Fiji (see above for a list of example images)
+- Open a 3D image of choice in Fiji (see above for a list of example images)
 - [ Plugins > 3D Viewer ]
-- ...
-
-
+- Rendering modes [Edit > Display as]:
+  - Volume: Volume rendering
+  - Iso-Surface: Surface
+    - [ Edit > Adjust threshold ]
+    - [ Edit > Change color ]
