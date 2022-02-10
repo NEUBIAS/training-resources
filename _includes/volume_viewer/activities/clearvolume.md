@@ -1,0 +1,5 @@
+- Open Fiji
+- Install the ClearVolume update site
+- Restart Fiji
+- Open a 3D image of choice in Fiji (see above for a list of example images)
+- [ Plugins > ClearVolume ]
