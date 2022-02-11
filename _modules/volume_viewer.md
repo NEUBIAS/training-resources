@@ -28,6 +28,7 @@ figure_legend: Volume rendering examples.
 
 activity_preface: |
   - Example data:
+    - [3-D+t Chromosome congression](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyzt_8bit__starfish_chromosomes.tif)
     - [3-D MRI head](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit_calibrated__mri_full_head.tif)
     - [3-D Organoid nuclei](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit_calibrated__organoid_nuclei.tif)
       - Challenge: Outer nuclei occulde inner nuclei
@@ -73,13 +74,11 @@ external_links:
 
 ## Volume rendering software
 
-| Software  | Max-Projection  | Volume | Iso-Surface  | ...  | ...  | ...  | ...  |
+| Software  | Multi-Channel | Time-lapse |  Max-Projection  | Volume | Iso-Surface  | ...  | ...  | ...  | ...  |
 |---|---|---|---|---|---|---|---|
-| [Blender](https://docs.blender.org)   |   |   |   |   |   |   |   |
-| [Drishti](https://github.com/nci/drishti)  |   |   |   |   |   |   |   |
-| [ImageJ 3D viewer](https://imagej.net/plugins/3d-viewer/)   | N  | Y  | Y |   |   |   |   |
-| [Napari](https://napari.org/)    |  |   |   |   |   |   |   |
-| [ImageJ Volume Viewer](https://imagej.nih.gov/ij/plugins/volume-viewer.html)  | Y | Y  | N  |   |   |   |   |
-| [ImageJ ClearVolume (Upate Site)](https://imagej.net/plugins/clearvolume)   | Y  | N  | N  |   |   |   |   |
-|   |   |   |   |   |   |   |   |
-|   |   |   |   |   |   |   |   |
+| [Blender](https://docs.blender.org)  | | |   |   |   |   |   |   |   |
+| [Drishti](https://github.com/nci/drishti) | | |   |   |   |   |   |   |   |
+| [ImageJ 3D viewer](https://imagej.net/plugins/3d-viewer/) | N | N | N  | Y  | Y |   |   |   |   |
+| [Napari](https://napari.org/)    |  |   |   |   |  |  |  |   |   |
+| [ImageJ Volume Viewer](https://imagej.nih.gov/ij/plugins/volume-viewer.html) | N | N  | Y | Y  | N  |   |   |   |   |
+| [ImageJ ClearVolume (Upate Site)](https://imagej.net/plugins/clearvolume)  | Y  | Y | Y  | N  | N  |   |   |   |   |
