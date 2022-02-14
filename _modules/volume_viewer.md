@@ -78,11 +78,11 @@ external_links:
 
 ## Volume rendering software
 
-| Software  | Multi-Channel | Time-lapse |  Max-Projection  | Volume | Iso-Surface  | ...  | ...  | ...  | ...  |
+| Software | Multi-Channel | Time-lapse |  Max-Projection  | Volume | Iso-Surface  | ...  | ...  | ...  | ...  |
 |---|---|---|---|---|---|---|---|
 | [Blender](https://docs.blender.org)  | | |   |   |   |   |   |   |   |
 | [Drishti](https://github.com/nci/drishti) | | |   |   |   |   |   |   |   |
 | [ImageJ 3D viewer](https://imagej.net/plugins/3d-viewer/) | N | N | N  | Y  | Y |   |   |   |   |
+| [ImageJ ClearVolume (Upate Site)](https://imagej.net/plugins/clearvolume)  | Y  | Y | Y  | N  | N  |   |   |   | | [ImageJ Volume Viewer](https://imagej.nih.gov/ij/plugins/volume-viewer.html) | N | N  | Y | Y  | N  |   |   |   |   |
+  |
 | [Napari](https://napari.org/)    |  |   |   |   |  |  |  |   |   |
-| [ImageJ Volume Viewer](https://imagej.nih.gov/ij/plugins/volume-viewer.html) | N | N  | Y | Y  | N  |   |   |   |   |
-| [ImageJ ClearVolume (Upate Site)](https://imagej.net/plugins/clearvolume)  | Y  | Y | Y  | N  | N  |   |   |   |   |
