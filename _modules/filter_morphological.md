@@ -2,24 +2,40 @@
 title:  Morpholigical filters on binary images
 layout: module 
 tags: ["draft","Rank filter series","Dilation","Erosion","Opening"]
+
 prerequisites:
-  - "[Pixels](../pixels)"
-  - "[Median filter](../median_filter)"
-  - "[Neighbourhood image filters](../filter_neighbourhood)"
   - "[Segmentation](../segmentation)"
   - "[Connected component labeling](../connected_components)"
+  - "[Neighbourhood image filters](../filter_neighbourhood)"
+  
 objectives: 
-  - "Understand different rank filters function."
-  - "Execute and compare several rank filters on binary images."
-  - "Asses how the filters can be used to clean-up binary images."
+  - "Understand different rank/morpholigical filters."
+  - "Asses how filters and filter sequences can be used to clean-up binary images."
 
-
-motivation: |
-We use morphological filters to further process a binary image. They allow, for example, to correct the segmentation results by removing pixels that do not belong to foreground objects or to change the shape of the objects shape to better separate them in the subsequent connected component analysis. Morphological filters make it also possible to to find specific areas of an object, for example, its edge. 
+motivation: >
+ We use morphological filters to further process a binary image. They allow, for example, to correct the segmentation results by removing pixels that do not belong to foreground objects or to change the shape of the objects to better separate those in the  subsequent connected component analysis. Morphological filters make it also possible to find specific areas of an object, for example, its edge. 
 
 concept_map: >
-
-
+ graph TD
+    subgraph opening
+        erode("Erode (min)") --> dilate("Dilate (max)")
+    end
+    
+    subgraph closing
+            dilate2("Dilate (max)") --> erode2("Erode (min)")
+    end
+    subgraph rank operations
+            any("...")
+    end
+    BI("Binary image") --> SE("structuring element")
+    SE .-> erode 
+    SE .-> dilate2 
+    SE .-> any 
+    dilate .-> BIM
+    erode2 .-> BIM
+    any .->  BIM("Modified binary image")
+     
+    
 figure: /figures/median_filter_and_ranking.png
 figure_legend: Scheme of how a rank filter acts on an image
 activity_preface: |
@@ -37,6 +53,8 @@ exercises:
 learn_next:
    
 ---
+images: [xy_8bit_binary__for_open_and_close.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__for_open_and_close.tif)
+
 # Rank filter sequences
 
 Often rank filters are applied in a sequence. We refer to an opening operation as a max-filter followed by a min-filter of the same size. 
@@ -99,3 +117,22 @@ True of false? Discuss with your neighbour!
 - https://imagej.net/MorphoLibJ#Grayscale_morphological_filters
 
 
+  BI("Binary image") --?
+    rank --> BIM
+    sorted --> min
+    sorted --> max
+    sorted --> median
+    sorted --> ...
+    subgraph rank value
+    min
+    max
+    median
+    ...
+    end
+    subgraph replace pixel value
+    fpixel1
+    end
+    median --> fpixel1[rank filtered pixel]
+    min -.-> fpixel1
+    max -.-> fpixel1
+    ... -.-> fpixel1
