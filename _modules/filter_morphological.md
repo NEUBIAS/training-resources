@@ -36,7 +36,7 @@ concept_map: >
     any .->  BIM("Modified binary image")
      
     
-figure: /figures/median_filter_and_ranking.png
+figure: /figures/filter_morphological.png
 figure_legend: Scheme of how a rank filter acts on an image
 activity_preface: |
   Open an image and investigate the action of a min filter and max filter. Use a binary as an example. 
