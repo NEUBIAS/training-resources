@@ -42,8 +42,3 @@ learn_next:
 
 external_links:
 ---
-
-It is also possible to define an interval of threshold values, i.e. a lower and upper threshold value. Pixels with intensity values 
-within this interval belong to the foreground and vice versa. 
- 
-
