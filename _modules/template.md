@@ -22,10 +22,8 @@ activity_preface: |
   - TODO
 
 activities:
-  - ["TODO", "PATH", "markdown"]
 
 exercises:
-  - ["TODO", "PATH"]
 
 assessment: >
 
