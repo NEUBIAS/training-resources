@@ -1,7 +1,7 @@
 run("Close All");
 //Make sure black background in Process > Binary > Options is set to true
 setOption("black background", true);
-open("/Users/apoliti/Code/training-resources/image_data/xy_8bit_binary__for_open_and_close2.tif")
+open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__for_open_and_close.tif")
 rename("binary");
 
 // Opening, use default binary IJ binary operations in sequence

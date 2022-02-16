@@ -2,7 +2,7 @@ run("Close All");
 //Make sure black background in Process > Binary > Options is set to true
 setOption("black background", true);
 
-open("https://raw.githubusercontent.com/NEUBIAS/training-resources/master/image_data/xy_8bit_binary__two_spots_different_size.tif");
+open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__two_spots_different_size.tif");
 rename("binary");
 
 // Erosion, use default binary IJ binary operations
