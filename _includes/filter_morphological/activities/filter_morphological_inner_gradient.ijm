@@ -10,9 +10,9 @@ run("Morphological Filters", "operation=Erosion element=Square radius=1");
 imageCalculator("Subtract create", "xy_8bit_binary__h2b_bg_corr.tif","xy_8bit_binary__h2b_bg_corr-Erosion");
 rename("Internal_gradient");
 
-run("Binary Overlay", "reference=xy_8bit_binary__h2b_bg_corr.tif binary=Internal_gradient overlay=Yellow");
+run("Merge Channels...", "c2=xy_8bit_binary__h2b_bg_corr.tif c6=Internal_gradient create keep");
 
-//External gradient integrated
+//Internal gradient
 selectWindow("xy_8bit_binary__h2b_bg_corr.tif");
 run("Morphological Filters", "operation=[Internal Gradient]  element=Square radius=1");
 
