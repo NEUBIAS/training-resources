@@ -20,9 +20,11 @@ run("Convert to Mask");
 run("Chamfer Distance Map", "distances=[Chessknight (5,7,11)] output=[16 bits] normalize");
 rename("dist");
 run("Invert");
+// remove spurious minima in distance map (choose sigma smaller than object radii)
+run("Gaussian Blur...", "sigma=20");
 
 // watershed without mask
 run("Classic Watershed", "input=dist mask=None use min=0 max=255");
 
-// watershed mask
+// watershed with mask
 run("Classic Watershed", "input=dist mask=mask use min=0 max=255");
