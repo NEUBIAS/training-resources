@@ -55,5 +55,6 @@ assessment: >
 learn_next:
 
 external_links:
+  - "[Wikipedia: Watershed image processing](https://en.wikipedia.org/wiki/Watershed_(image_processing))"
 ---
 
