@@ -42,3 +42,12 @@ learn_next:
 
 external_links:
 ---
+
+## Manual segmentation considerations
+
+### How to deal with objects that are not fully in the image?
+
+### Should objects be separated by background pixels?
+
+
+
