@@ -4,10 +4,14 @@
 - Restart Fiji
 - <kdb>File > New > Script...</kbd>
 - <kbd>Run</kbd> button to execute the code.
-- <kbd>Language</kbd>
+- [ Script Editor > Language ]
   - IJ1 Macro
   - Javascript
   - Jython
   - Groovy
   - and some more...
-- Choose a language and you are ready to go!
+- Choose a language
+- Test autocompletion
+  - IJ1 Macro
+    - Type `IJ.` (you should see completion options)
+      - Select `freeMemory();` and press TAB
