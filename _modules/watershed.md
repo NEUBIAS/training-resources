@@ -1,5 +1,5 @@
 ---
-title: Watershed 
+title: Watershed
 layout: module
 tags: ["draft"]
 prerequisites:
@@ -14,10 +14,13 @@ motivation: |
 concept_map: >
   graph TD
     T("Image") --> W("Watershed algorithm")
-    W --> B("Image with boundaries between objects")
+    W --> S("Segmented image")
+    S --- B("Boundaries/Watersheds: Intensity ridges")
+    S --- R("Regions/Basins: Local intensity minima")
 
-figure: /figures/template.png
-figure_legend: TODO
+
+figure: /figures/watershed.png
+figure_legend: Examples of watersheds, including distance transform.
 
 activity_preface: |
   - Basic watershed
@@ -38,9 +41,16 @@ activities:
 - ["ImageJ Macro: MorpholibJ basic watershed", "watershed/activities/morpholibj_basic_watershed.ijm", "java"]
 - ["ImageJ Macro: MorpholibJ shape watershed", "watershed/activities/morpholibj_shape_watershed.ijm", "java"]
 
+exercise_preface: |
+  - Dealing with noise
+    - Open [xy_8bit__few_separate_nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__few_separate_nuclei.tif)
+    - There are 6 (partially visible) nuclei.
+    - Apply the watershed algorithm to segment the image into 6 regions.
+    - Hint: You will need to preprocess (invert and smooth) the image.
+
 exercises:
-- ["ImageJ Macro: MorpholibJ basic watershed", "watershed/activities/morpholibj_basic_watershed.ijm", "java"]
--
+  - ["ImageJ Macro: MorpholibJ: Dealing with noise", "watershed/exercises/morpholibj_watershed_noise.md"]
+
 assessment: >
 
   ### Fill in the blanks
