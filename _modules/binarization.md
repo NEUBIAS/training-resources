@@ -37,6 +37,9 @@ activities:
   - ["KNIME", "binarization/activities/binarization_knime.md", "markdown"]
   - ["Python", "binarization/activities/binarization.py", "python"]
 
+exercise_preface: |
+  Perform one of the following exercises.
+ 
 exercises:
   - ["ImageJ GUI", "binarization/exercises/binarization_imagejgui.md"]
   - ["ImageJ Macro", "binarization/exercises/binarization_imagejmacro.md"]
