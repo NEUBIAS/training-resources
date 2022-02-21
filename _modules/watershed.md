@@ -39,7 +39,8 @@ activities:
 - ["ImageJ Macro: MorpholibJ shape watershed", "watershed/activities/morpholibj_shape_watershed.ijm", "java"]
 
 exercises:
-
+- ["ImageJ Macro: MorpholibJ basic watershed", "watershed/activities/morpholibj_basic_watershed.ijm", "java"]
+-
 assessment: >
 
   ### Fill in the blanks
