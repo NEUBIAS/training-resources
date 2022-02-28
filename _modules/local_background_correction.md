@@ -22,7 +22,7 @@ concept_map: >
     s --> fgi[Foreground image]
 
 figure: /figures/local_background_correction.png
-figure_legend: Local background correction using a median filter. Left - Raw data. Middle - Median filtered image (background). Right: Difference image (foreground).
+figure_legend: Local background correction using a median filter. Left - Raw data. Middle - Median filtered image (background). Right - Difference image (foreground).
 
 activity_preface: |
   - Open image [xy_8bit__some_spots_with_uneven_bg](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__some_spots_with_uneven_bg.tif)
