@@ -1,28 +1,29 @@
 ---
 title: Thresholding
-layout:  module
-tags: ["foreground background segmentation","binarization"]
+layout: module
+tags: ["segmentation", "binarization"]
 prerequisites:
+  - "[Image segmentation](../segmentation)"
   - "[Basic properties of images and pixels](../pixels)"
   - "[Data types (unsigned 8-bit)](../datatypes)"
 objectives:
   - "Describe the relationship between an intensity image and a derived binary image."
-  - "Apply a threshold to distinguish foreground and background pixels"
+  - "Apply a threshold to segment an image into foreground and background regions"
 motivation: |
   One strategy to detect objects or specific regions in images is to first distinguish so-called background pixels,
-  which do not contain objects or interesting regions, from foreground pixels, which mark the areas of interest.
+  which do not contain objects or interesting regions from foreground pixels, which mark the areas of interest.
   This process is called **two class semantic segmentation** and is often referred to as **image binarization**.
   The foreground regions can then be further processed, e.g. to detect objects or perform intensity measurements.
 
 concept_map: >
   graph TD
-    PV("Pixel values") --> BA(Binarization algorithm)
-    BA --> BPV("Binarized pixel values")
-    BPV --> BG("Background (0)")
-    BPV --> FG("Foreground (1)")
+    I("Image") --> T("Threshold")
+    T --> BI("Binary image / Binary mask")
+    BI --- BG("Background pixels (false, 0)")
+    BI --- FG("Foreground pixels (true, 1, 255)")
 
 figure: /figures/binarization.png
-figure_legend: Images before and after binarization
+figure_legend: Image before and after binarization
 
 activity_preface: |
   - Open the binary image [xy_8bit_binary__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__nuclei.tif).
