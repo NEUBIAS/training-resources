@@ -3,6 +3,7 @@ title: Object filtering
 layout: module
 prerequisites:
   - "[Connected components labeling](../connected_components)"
+  - "[Object shape measurement](../measure_shapes)"
 objectives:
   - Remove objects from a label mask image.
 motivation: >
@@ -37,11 +38,10 @@ assessment: >
     1. In bioimage analysis, one should always remove all labels that touch the image boundary.
     1. The largest object has the highest label index.
     1. If you remove one object, the number of distinct labels decreases by one.
-    1. How many objects could you have and how many could you remove by considering it noise?
 
 
     > ## Solution
-    >   1. Very often, but not always. Sometimes it also is an option to normalise downstream measurements by the visible size of objects.
+    >   1. Very often, but not always. Sometimes it also is an option to normalize downstream measurements by the visible size of objects.
     >   1. No, the label index usually has no meaning.
     >   1. Yes.
     {: .solution}
@@ -49,8 +49,7 @@ assessment: >
   ###  Discuss with your neighbor
 
     1. Is it a good idea to manually remove objects (labels) from an image or should this rather be an automated procedure?
-    1. Is
-    1. What are the pros and cons of removing labels from the image as opposed to keeping all of them and removing the corresponding object measurements later during statisitical analysis of the measurement results?
+    1. What are the pros and cons of removing labels from the image as opposed to keeping all of them and removing the corresponding object measurements later during statistical analysis of the measurement results?
 
     > ## Solution
     > 1. Automated typically is better as it forces you to define objective and reproducible criteria for which objects to remove.

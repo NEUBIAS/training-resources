@@ -6,7 +6,7 @@
 - **[ Image > Lookup Tables > Glasbey on dark ]** to visualize the objects in a better way
 - **[ Plugins > MorpholibJ > Label Images > Remove Border Labels ]** to get rid of the labels at the border
 - **[ Plugins > MorpholibJ > Analyze > Analyze Regions ]** to see area of all objects. See the total number of objects
-- **[ Plugins > MorpholibJ > Label Images > Label Size Filtering ]** to remove smaller objects using [X] Area. One can uncheck the rest of measurements
+- **[ Plugins > MorpholibJ > Label Images > Label Size Filtering ]** to remove smaller objects using [X] Pixel Count. One can uncheck the rest of measurements
   - `Operation "Greater_than"`
     - This will keep all objects greater than `Size Limit (pixels)`
   - `Size Limit (pixels) 100
