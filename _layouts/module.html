@@ -136,6 +136,7 @@ window.onload = set_view_defaults;
 {% endif %}
 
 {% if page.activities %}
+<br>
 Show activity for: <select id="id_activity_platform" name="activityplatformlist" onchange="change_activity_content_by_platform('id_activity_platform');return false;">
 {% if site.default-platform == "NONE" %}
 <option value="null-activity" id="default-activity-option" selected="selected"> Select a platform... </option>
