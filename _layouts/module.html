@@ -105,15 +105,20 @@ window.onload = set_view_defaults;
 {{ page.motivation | markdownify }}
 
 <h2>Concept map</h2>
+<font size="+1">
 <div class="mermaid">
 {{ page.concept_map }}
 </div>
+</font>
 
 <h2>Figure</h2>
 <figure>
 <img src="{{ page.figure | relative_url }}" class="example_figure">
 {% if page.figure_legend %}
+<br>
+<font size="+1">
 <figcaption>{{ page.figure_legend }}</figcaption>
+</font>
 {% endif %}
 </figure>
 
@@ -125,13 +130,13 @@ window.onload = set_view_defaults;
 {{ content }}
 </div>
 
-<h2>Activities</h2>
-
 {% if page.activity_preface %}
+<h2>Activities</h2>
 {{ page.activity_preface | markdownify }}
 {% endif %}
 
 {% if page.activities %}
+<br>
 Show activity for: <select id="id_activity_platform" name="activityplatformlist" onchange="change_activity_content_by_platform('id_activity_platform');return false;">
 {% if site.default-platform == "NONE" %}
 <option value="null-activity" id="default-activity-option" selected="selected"> Select a platform... </option>
