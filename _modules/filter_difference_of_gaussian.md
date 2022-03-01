@@ -1,5 +1,5 @@
 ---
-title:     Difference of Gaussian
+title:     Difference of Gaussian (DRAFT)
 layout:    module
 ---
 

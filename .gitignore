@@ -6,3 +6,6 @@ _site*
 .travis.yml
 .bundle/
 .vendor/
+.idea
+Thumbs.db
+~$*

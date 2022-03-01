@@ -1,0 +1,5 @@
+- [Install ITK-SNAP](http://www.itksnap.org/pmwiki/pmwiki.php?n=Downloads.SNAP3)
+- Check out a tutorial
+  - [Slides from Romain Guiet](https://docs.google.com/presentation/d/1ff6T2KhrSm1NSI3LQCn5IWcE41GKevNmvlES4KBnfXk/edit#slide=id.p)
+  - [Video tutorial](https://www.youtube.com/watch?v=OpYJiY_GoeY)
+- Open an image and perform a manual segmentation task (see above).

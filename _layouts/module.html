@@ -28,7 +28,7 @@ function change_activity_content_by_platform(form_control){
 document.getElementById("{{ platform[0] | slugify }}-activity-div").style.display = 'none';
 {% endfor %}
 {% if page.activities %}
-if (!form_control || document.getElementById(form_control).value == "default-activity") {
+if (!form_control || document.getElementById(form_control).value == "null-activity") {
 set_activity_view_defaults();
 {% endif %}
 {% for platform in page.activities %}
@@ -58,7 +58,7 @@ function change_exercises_content_by_platform(form_control){
 document.getElementById("{{ platform[0] | slugify }}-exercises-div").style.display = 'none';
 {% endfor %}
 {% if page.exercises %}
-if (!form_control || document.getElementById(form_control).value == "default-exercises") {
+if (!form_control || document.getElementById(form_control).value == "null-exercises") {
 set_exercises_view_defaults();
 {% endif %}
 {% for platform in page.exercises %}
@@ -104,28 +104,28 @@ window.onload = set_view_defaults;
 
 {{ page.motivation | markdownify }}
 
-<h2>Concept</h2>
-<div class="row">
-<div class="col-md-5">
+<h2>Concept map</h2>
 <div class="mermaid">
 {{ page.concept_map }}
 </div>
-</div>
-<div class="col-md-5">
+
+<h2>Figure</h2>
 <figure>
 <img src="{{ page.figure | relative_url }}" class="example_figure">
 {% if page.figure_legend %}
 <figcaption>{{ page.figure_legend }}</figcaption>
 {% endif %}
 </figure>
-</div>
-</div>
+
+<br>
+<br>
+<br>
 
 <div class="module-content">
 {{ content }}
 </div>
 
-<h2>Activity</h2>
+<h2>Activities</h2>
 
 {% if page.activity_preface %}
 {{ page.activity_preface | markdownify }}
@@ -134,7 +134,7 @@ window.onload = set_view_defaults;
 {% if page.activities %}
 Show activity for: <select id="id_activity_platform" name="activityplatformlist" onchange="change_activity_content_by_platform('id_activity_platform');return false;">
 {% if site.default-platform == "NONE" %}
-<option value="default-activity" id="default-activity-option" selected="selected"> Select a platform... </option>
+<option value="null-activity" id="default-activity-option" selected="selected"> Select a platform... </option>
 {% else %}
 <option value="{{ site.default-platform | slugify }}-activity" id="{{ site.default-platform | slugify }}-option" selected="selected"> {{ site.default-platform }} </option>
 {% endif %}
@@ -152,22 +152,33 @@ Show activity for: <select id="id_activity_platform" name="activityplatformlist"
 <blockquote class="discussion" id="{{ platform[0] | slugify }}-activity-div">
 <h2>{{ platform[0] }}</h2>
 {% assign includefile = platform[1] %}
+{% assign language = platform[2] %}
 {% capture activity %}{% include {{ includefile }} %}{% endcapture %}
+{% if platform[2] == "markdown" %}
 {{ activity | markdownify }}
+{% else %}
+{% capture codeblock %}
+~~~
+{{ activity }}
+~~~
+{: .language-{{language}} }
+{% endcapture %}
+{{ codeblock | markdownify }}
+{% endif %}
 </blockquote>
 {% endfor %}
 
-{% if page.exercises_preface or page.exercises %}
 
-<h2>Formative assessment</h2>
+{% if page.exercises %}
+<h2>Exercises</h2>
 {% endif %}
 
-{% if page.exercises_preface %}
-{{ page.exercises_preface | markdownify }}
+{% if page.exercise_preface %}
+{{ page.exercise_preface | markdownify }}
 {% endif %}
 
 {% if page.exercises %}
-Perform additional exercises for: <select id="id_exercises_platform" name="exercisesplatformlist" onchange="change_exercises_content_by_platform('id_exercises_platform');return false;">
+Show exercises for: <select id="id_exercises_platform" name="exercisesplatformlist" onchange="change_exercises_content_by_platform('id_exercises_platform');return false;">
 {% if site.default-platform == "NONE" %}
 <option value="null-exercises" id="null-exercises-option" selected="selected"> Select a platform... </option>
 {% else %}
@@ -182,6 +193,7 @@ Perform additional exercises for: <select id="id_exercises_platform" name="exerc
 {% if page.exercises %}
 </select>
 {% endif %}
+
 {% for platform in page.exercises %}
 <blockquote class="challenge" id="{{ platform[0] | slugify }}-exercises-div">
 <h2>{{ platform[0] }}</h2>
@@ -190,7 +202,14 @@ Perform additional exercises for: <select id="id_exercises_platform" name="exerc
 {{ exercise | markdownify }}
 </blockquote>
 {% endfor %}
+
+{% if page.assessment %}
+<h2>Assessment</h2>
+{{ page.assessment | markdownify }}
+{% endif %}
+
 <br/>
+
 <blockquote class="keypoints">
 <h2>Follow-up material</h2>
 <p>We recommend reading these modules next:</p>

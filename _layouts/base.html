@@ -16,6 +16,7 @@
     <link rel="stylesheet" type="text/css" href="{{ relative_root_path }}/assets/css/bootstrap-theme.css" />
     <link rel="stylesheet" type="text/css" href="{{ relative_root_path }}/assets/css/lesson.css" />
     <link rel="stylesheet" type="text/css" href="{{ relative_root_path }}/assets/css/syntax.css" />
+    <link rel="license" href="#license-info" />
 
     {% include favicons.html %}
 
@@ -28,14 +29,13 @@
   <script src="https://unpkg.com/mermaid@8.0.0/dist/mermaid.min.js"></script>
   <script>var config = {
             startOnLoad:true,
-            flowchart:{
-                    useMaxWidth:true,
-            }
+            htmlLabels:true,
+            container:{display:flex; justify-content: center;},
+            flowchart:{width:'400%' !important, useMaxWidth:false}
         };mermaid.initialize(config);</script>
   <title>
   {% if page.title %}{{ page.title }}{% endif %}{% if page.title and site.title %} &ndash; {% endif %}{% if site.title %}{{ site.title }}{% endif %}
   </title>
-
   </head>
   <body>
 
