@@ -1,13 +1,8 @@
 run("Close All")
 
 // File > Open
-open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__nuclei_touchborder.tif")
+open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__noisy_nuclei.tif")
 
-// Do connected components labeling
-run("Connected Components Labeling", "connectivity=4 type=[16 bits]");
-
-// Change lookup table to glasbey on dark
-run("glasbey on dark");
 
 //  Plugins › MorphoLibJ › Label Images › Remove Border Labels
 run("Remove Border Labels", "left right top bottom");
