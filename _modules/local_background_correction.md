@@ -5,6 +5,7 @@ layout:    module
 prerequisites:
   - "[Median filter](median_filter)"
   - "[Image math](image_math)"
+  - "[Projections](../projections)"
 
 objectives:
   - Understand how to use image filters for creating a local background image
@@ -25,17 +26,17 @@ figure: /figures/local_background_correction.png
 figure_legend: Local background correction using a median filter. Left - Raw data. Middle - Median filtered image (background). Right - Difference image (foreground).
 
 activity_preface: |
-  - Activity 1:
-  - Open image [xy_8bit__some_spots_with_uneven_bg](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__some_spots_with_uneven_bg.tif)
-  - Compute a background image using a median filter
-  - Create a foreground image by subtracting the background image from the input image
-  - Check how well the background correction worked and whether any artefacts were introduced
-  - Optional: discuss how one could automatically segment the two spots in the resulting foreground image (mean filter and object size filter)
+  - Activity 1: background subtraction using a median filter.
+    - Open image [xy_8bit__some_spots_with_uneven_bg](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__some_spots_with_uneven_bg.tif)
+    - Compute a background image using a median filter
+    - Create a foreground image by subtracting the background image from the input image
+    - Check how well the background correction worked and whether any artefacts were introduced
+    - Optional: discuss how one could automatically segment the two spots in the resulting foreground image (mean filter and object size filter)
 
-  - Activity 2:
-  - Open image [xyt_8bit_polyp](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyt_8bit_polyp.tif)
-  - Make a maximum intensity projection of this image. This will essentially create a background image, without the moving polyp.
-  - Use the image calculator to subtract the maximum intensity projection from the original image.
+  - Activity 2: background subtraction using a maximum intensity projection.
+    - Open image [xyt_8bit_polyp](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyt_8bit_polyp.tif)
+    - Make a maximum intensity projection of this image. This will essentially create a background image, without the moving polyp.
+    - Use the image calculator to subtract the maximum intensity projection from the original image.
 
 activities:
   - ["Activity 1 ImageJ GUI & Macro", "local_background_correction/activities/local_background_correction.ijm", "java"]
