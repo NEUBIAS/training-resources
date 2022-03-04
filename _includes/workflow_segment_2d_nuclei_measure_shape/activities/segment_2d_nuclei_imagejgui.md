@@ -5,7 +5,7 @@
   - Title = binary
 - Draw a line profile to find a good threshold
   - Use the straight line tool in the Fiji menu bar
-  - Analyze › Plot Profile
+  - [ Analyze › Plot Profile ]
     - [ Live ] and move the line around, including nuclei and background pixels
 - [ Image › Adjust › Manual Threshold... ]
   - Min = 25
