@@ -7,7 +7,7 @@ prerequisites:
 
 objectives:
   - Understand the basic principle of a neighborhood filter.
-  - Apply a mean filter to an image.
+  - Apply basic neighborhood filters to an image.
 
 motivation: >
   Images are quite often noisy or have other issues that make them hard to segment, e.g. by means of a simple intensity threshold. Neighborhood filters are often used to enhance the images in order to facilitate better performance of segmentation algorithms.
@@ -21,33 +21,28 @@ concept_map: >
 
 figure: /figures/filter_neighbourhood.png
 
-figure_legend: Image filtering with a pixel neighborhood. (a)  Raw intensity image with an overlaid neighborhood (aka structuring element (SE)) in red. Blue box indicates the pixel on which the filtering operation will be performed. (b) Green window indicates pixel values in neighborhood used in filtering operation and in red is the pixel value that would be affected consequently. (c) X is the value that would be replaced after operation (indicated as op). Here, max, mean and variance operations are used. Note - One has to carefully look at the data type of the image as some operations can produce large/floating point values. (d) Different SEs (neighborhood in green and affected pixel in orange) top left - SE  completely inside image boundaries, top right - SE at image boundaries (concept of padding!), bottom left - SE with different shape, and bottom right - Line SE.
+figure_legend: Image filtering with a pixel neighborhood. (a) Raw intensity image with pixel neighborhood (structuring element (SE), red outline) and central pixel (blue outline) on which the filtering operation will be performed. (b) Pixel values in the neighborhood; red is the pixel value that would be affected consequently. (c) X is the value that would be replaced after operation (indicated as op). Here, max, mean and variance operations are used. Note - One has to carefully look at the data type of the image as some operations can produce large/floating point values. (d) Different SEs (neighborhood in green and affected pixel in orange) top left - SE  completely inside image boundaries; top right - SE at image boundaries (padding needed); bottom left - SE with different shape; bottom right - Line SE.
 
 activity_preface: |
-  - Activity 1
+  - Mean filter
     - Open [xy_8bit__nuclei_very_noisy.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_very_noisy.tif)
     - Explore the effect of a mean filter with different radius values.
-
-  - Activity 2
+  - Structuring element investigation
     - Sometimes you would like to find out how the SE (the neighborhood) of a filter looks like. One way to do this is to apply a filter to a single white pixel and look at the resulting form.
     - Open [xy_8bit_binary__one_foreground_pixel.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__one_foreground_pixel.tif)
     - Find a filter that can help you visualize your SE
 
-
-
 activities:
 - ["ImageJ Macro & GUI", "filter_neighbourhood/activities/filter_mean_imagejmacrogui.md", "markdown"]
 
-# "KNIME": "filter_neighbourhood/activities/mean_filter_knime.md"
-#  "ImageJ Macro":
-#  "Jython":
-#  "MATLAB":
 exercise_preface: |
-  - Exercise 1 (Application of mean filter on objects close to each other)
+  - Mean filter for noisy fluorescence microscopy
     - Open image [xy_8bit__noisy_two_nuclei_close.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_very_noisy_close.tif)
-
-  - Exercise 2 (Application of variance filter on EM images)
+    - Apply a mean filter to segment the nuclei
+  - Variance filter for electron microscopy
     - Open image [xy_8bit__em_mitochondria_er.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__em_mitochondria_er.tif)
+    - Apply a variance (or standard deviation) filter to segment the regions contain the sample from the background
+
 exercises:
 - ["ImageJ Macro & GUI", "filter_neighbourhood/exercises/filter_mean_variance_imagejguimacro.md", "markdown"]
 

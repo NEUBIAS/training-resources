@@ -1,53 +1,31 @@
-## Exercise 1
-- Choose a radius for the SE of mean filter that would give good segmentation
-- Discuss the effect of choosing different radius for SE on objects close to each other
+## Exercise mean filter
 
+- Apply mean filters with radii: 1, 2, 3, 5
+- For each radius find the lowest threshold that yields exactly four connected components (the nuclei).
+- For radius 5, what happens to the size of the segmented nuclei?
 
 > ## Solution
-> ```
-> // File > Close All
-> run("Close All");
->
-> // Image › Rename...
-> rename("input");
->
-> // Image › Duplicate...
-> run("Duplicate...", "title=mean_1" );
->
-> // Process › Filters › Mean...
-> run("Mean...", "radius=1");
->
-> selectWindow("input");
-> // Image > Duplicate...
-> run("Duplicate...", "title=mean_2" );
->
-> // Process › Filters › Mean...
-> run("Mean...", "radius=2");
->
-> selectWindow("input");
-> // Image > Duplicate...
-> run("Duplicate...", "title=mean_5" );
->
-> // Process › Filters › Mean...
-> run("Mean...", "radius=5");
->
-> selectWindow("input");
-> // Image > Duplicate...
-> run("Duplicate...", "title=mean_7" );
->
-> // Process › Filters › Mean...
-> run("Mean...", "radius=7");
->
-> // Window > Tile
-> run("Tile");
-> ```
+> 
+> - [ Image › Duplicate... ]
+>   - title = mean_1
+> - [ Process › Filters › Mean... ]
+>   - radius = 1
+> - Repeat the above with the other radii
+> - Radius 1: Threshold = 
+> - Radius 2: Threshold = 
+> - Radius 3: Threshold = 
+> - Radius 5: Threshold = 
+> 
+> For radius 5 the segmented nuclei are smaller.
 {: .solution}
 
-## Exercise 2
-- Choose a radius for the SE of variance filter that would give good segmentation
-- Discuss about the resulting pixel values and the image data type
-- Discuss the effect of choosing different radius for SE on segmentation
+## Exercise variance filter
 
+- Apply a variance filter that segments the cell regions from the background
+  - Hints: 
+    - Convert image to float, because the filter may yield high values [ Image > Type > 32-bit ]
+    - [ Process > Filter > Variance... ]
+- What is the minimal radius to yields a good segmentation?
 
 > ## Solution
 > ```

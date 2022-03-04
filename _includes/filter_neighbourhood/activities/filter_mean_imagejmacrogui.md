@@ -1,11 +1,12 @@
-## Activity 1
-- Apply a mean filter (**[Process > Filters > Mean...]**) to the image such that you can binarise
-the image into exactly three disjoint foreground regions (the three nuclei). It is helpful to first duplicate the image
-**[Image > Duplicate ...]** or **[Ctrl-Shift-D]**
+- Mean filter
+  - OPEN IMAGE
+  - Apply a mean filter (**[Process > Filters > Mean...]**) to the image such that you can binarise
+the image into exactly three disjoint foreground regions (the three nuclei). 
+  - It is helpful to first duplicate the image: **[Image > Duplicate ...]** or **[Ctrl-Shift-D]**
   - What is the smallest size for the mean filter that does the job?
   - What happens if the filter size increases?
 
-
+REMOVE SOLUTION!
 > ## Solution
 > ```
 > run("Close All");
@@ -19,12 +20,15 @@ the image into exactly three disjoint foreground regions (the three nuclei). It 
 > setOption("BlackBackground", true);
 > run("Convert to Mask");
 > ```
+> - The smallest filter size is: radius 2
+> - For larger filter size
 {: .solution}
 
-## Activity 2
+## Variance filter
+- WHICH IMAGE?
 - Hint: Select a filter that would yield equal pixel values i.e. brighter than background
 
-
+REMOVE SOLUTION!
 > ## Solution
 > ```
 > run("Close All");
