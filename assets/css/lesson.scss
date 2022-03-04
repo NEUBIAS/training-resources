@@ -343,3 +343,23 @@ kbd {
     white-space: nowrap;
     font-style: normal;
 }
+
+div.mermaid {
+    max-width: 400%;
+    display: inline-block;
+    margin-left: 2%;
+    margin-right: 4%;
+    vertical-align: top;
+}
+figure {
+    max-width: 100%;
+    display: inline-block;
+    margin-left: 2%;
+}
+figure img {
+    max-width: 100%;
+    margin: auto;
+}
+figcaption {
+    text-align: center;
+}

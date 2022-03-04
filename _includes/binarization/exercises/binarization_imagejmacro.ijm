@@ -1,3 +1,4 @@
+open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__PCNA.tif")
 selectWindow("xy_8bit__PCNA.tif");
 run("Duplicate...", "title=[2 nuclei]");
 selectWindow("xy_8bit__PCNA.tif");

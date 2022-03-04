@@ -104,34 +104,39 @@ window.onload = set_view_defaults;
 
 {{ page.motivation | markdownify }}
 
-<h2>Concept</h2>
-<div class="row">
-<div class="col-md-5">
+<h2>Concept map</h2>
+<font size="+1">
 <div class="mermaid">
 {{ page.concept_map }}
 </div>
-</div>
-<div class="col-md-5">
+</font>
+
+<h2>Figure</h2>
 <figure>
 <img src="{{ page.figure | relative_url }}" class="example_figure">
 {% if page.figure_legend %}
+<br>
+<font size="+1">
 <figcaption>{{ page.figure_legend }}</figcaption>
+</font>
 {% endif %}
 </figure>
-</div>
-</div>
+
+<br>
+<br>
+<br>
 
 <div class="module-content">
 {{ content }}
 </div>
 
-<h2>Activity</h2>
-
 {% if page.activity_preface %}
+<h2>Activities</h2>
 {{ page.activity_preface | markdownify }}
 {% endif %}
 
 {% if page.activities %}
+<br>
 Show activity for: <select id="id_activity_platform" name="activityplatformlist" onchange="change_activity_content_by_platform('id_activity_platform');return false;">
 {% if site.default-platform == "NONE" %}
 <option value="null-activity" id="default-activity-option" selected="selected"> Select a platform... </option>
@@ -168,8 +173,16 @@ Show activity for: <select id="id_activity_platform" name="activityplatformlist"
 </blockquote>
 {% endfor %}
 
+
 {% if page.exercises %}
 <h2>Exercises</h2>
+{% endif %}
+
+{% if page.exercise_preface %}
+{{ page.exercise_preface | markdownify }}
+{% endif %}
+
+{% if page.exercises %}
 Show exercises for: <select id="id_exercises_platform" name="exercisesplatformlist" onchange="change_exercises_content_by_platform('id_exercises_platform');return false;">
 {% if site.default-platform == "NONE" %}
 <option value="null-exercises" id="null-exercises-option" selected="selected"> Select a platform... </option>
