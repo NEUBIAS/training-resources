@@ -7,8 +7,7 @@
 - For radius 5, what happens to the size of the segmented nuclei?
 
 > ## Solution
-> No applying manual thresholding on raw images gives a large number of undesired connected components
->
+> - Applying thresholding on the raw image does not work, as it yields a large number of undesired connected components
 > - [ Image › Duplicate... ]
 >   - title = mean_1
 > - [ Process › Filters › Mean... ]
@@ -24,11 +23,10 @@
 
 ## Exercise variance filter
 
-- Apply a variance filter that segments the cell regions from the background
+- Apply a variance filter [ Process > Filter > Variance... ] to segment the cell regions from the background
   - Hints:
     - Convert image to float, because the filter may yield high values [ Image > Type > 32-bit ]
-    - [ Process > Filter > Variance... ]
-- What is the minimal radius to yields a good segmentation?
+- What is the minimal filter radius that yields a good segmentation?
 
 > ## Solution
 >
@@ -36,7 +34,8 @@
 >   - Title = input
 > - [ Image › Duplicate... ]
 >   - Title = variance_5
-> - [ Image > Type > 32-bit ] (since in variance calculation, pixel values can exceed 255 which is current bit depth of input image)
+> - [ Image > Type > 32-bit ]
+>   - In variance calculation, pixel values can exceed 255 which is current bit depth of input image.
 > - [ Process › Filters › Variance... ]
 >   - radius = 5
 > - [ Image › Adjust › Threshold... ]  
@@ -48,5 +47,5 @@
 >      - Press `Convert to Mask`
 > - [ Image › Lookup Tables › Invert LUT ] (Optional: if highest values are darker and lowest brighter)
 >
-> 5, lesser radii would tend to produce more holes in the segmented region
+> The mininal radius is 5, smaller radii yield holes in the foreground region.
 {: .solution}
