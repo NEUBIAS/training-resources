@@ -21,7 +21,7 @@ concept_map: >
 
 figure: /figures/filter_neighbourhood.png
 
-figure_legend: Image filtering with a pixel neighborhood. (a) Raw intensity image with pixel neighborhood (structuring element (SE), red outline) and central pixel (blue outline) on which the filtering operation will be performed. (b) Pixel values in the neighborhood; red is the pixel value that would be affected consequently. (c) X is the value that would be replaced after operation (indicated as op). Here, max, mean and variance operations are used. Note - One has to carefully look at the data type of the image as some operations can produce large/floating point values. (d) Different SEs (neighborhood in green and affected pixel in orange) top left - SE  completely inside image boundaries; top right - SE at image boundaries (padding needed); bottom left - SE with different shape; bottom right - Line SE.
+figure_legend: Image filtering with a pixel neighborhood. (a) Raw intensity image with pixel neighborhood (structuring element (SE), outer green box) and central pixel (inner orange box) on which the filtering operation will be performed. (b) Pixel values in the neighborhood. (c) X is the value that would be replaced after operation (indicated as op). Here, max, mean and variance operations are used. Note - One has to carefully look at the data type of the image as some operations can produce large/floating point values. (d) Different SEs (neighborhood in green and affected pixel in orange) top left - SE  completely inside image boundaries; top right - SE at image boundaries (padding needed); bottom left - SE with different shape; bottom right - Line SE.
 
 activity_preface: |
   - Mean filter
@@ -80,7 +80,7 @@ There are tons of different neighborhood filters, and you can also invent one!
 
 #### The neighborhoods
 
-The neighborhood of a pixel is also called a structuring element and can have various sizes and shapes.
+The neighborhood of a pixel is also called a structuring element (SE) and can have various sizes and shapes.
 Here, we use one of the simplest and most widely used neighborhoods, namely a circular neighborhood, which is defined by a certain radius. We will explore other shapes of SEs in more detail in a dedicated module.
 
 #### Padding
@@ -89,7 +89,7 @@ Since the filtering operation takes into account all the directions of extent of
 
 #### The math
 
-There are many ways how to cleverly compute on a pixel neighborhood. For example, one class of computations is called convolutional filters, another is called rank filters. Here, we focus on the relatively simple mean filter.
+There are many ways how to cleverly compute on a pixel neighborhood. For example, one class of computations is called convolutional filters, another is called rank filters. Here, we focus on the relatively simple mean and variance filters.
 
 #### Best practice
 
