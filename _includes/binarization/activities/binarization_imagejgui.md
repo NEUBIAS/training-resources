@@ -1,7 +1,7 @@
 - Inspect ImageJ binary image
   - Open
 [xy_8bit_binary__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__nuclei.tif)
-  - Discuss data-type and inspect pixel values 
+  - Discuss data-type and inspect pixel values
   - Data-type: unsigned 8-bit, values: 0 and 255
 - Inspect MATLAB binary image
   - Open [xy_8bit_binary__two_cells_matlabstyle.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__two_cells_matlabstyle.tif)
@@ -16,8 +16,15 @@
     - **[ Image > Adjust > Manual Threshold... ]**
       - `Lower threshold level` which is the value that you observed in the aforementioned step that would separate foreground and background
       - `Upper threshold level` can be set to the maximum bit depth (in this case 255)
-      - Press **OK**, this will produce an overlaid image where you can see the regions above the threshold in red. 
-        - Note: The image is not binary yet (check the pixel values)! 
+      - Press **OK**, this will produce an overlaid image where you can see the regions above the threshold in red.
+        - Note: The image is not binary yet (check the pixel values)!
+        - Important:     Alternatively one can do
+          - **[Image > Adjust > Threshold...]**
+              - `**[X]** Dark Background`
+              - `Lower threshold level = 31`
+              - `Higher threshold level = 255`
+              - Press `Set`
+              - Press `Apply`
   - Set binary options: **[Process > Binary > Options ..]** [X] Black background
   - **[Process > Binary > Convert to Mask]**, now the image is binary.
 - Open [xy_8bit__two_cells.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__two_cells.tif)
