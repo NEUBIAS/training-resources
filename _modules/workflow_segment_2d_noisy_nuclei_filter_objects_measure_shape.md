@@ -1,6 +1,7 @@
 ---
-title:     Workflow - 2D noisy object segmentation and filtering
-layout:    module
+title: "2D noisy object segmentation and filtering"
+layout: module
+tags: ["workflow"]
 prerequisites:
   - "[Neighbourhood filters](../filter_neighbourhood)"
   - "[Binarization](../binarization)"

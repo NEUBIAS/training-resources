@@ -1,5 +1,5 @@
 ---
-title:     Automatic threshold for binarization
+title:     Automatic threshold for binarization (DRAFT)
 layout:    module
 prerequisites:
   - "[Binarization](../binarization)"

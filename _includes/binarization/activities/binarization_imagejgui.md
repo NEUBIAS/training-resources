@@ -1,14 +1,24 @@
-- Open a binary image 
-[xy_8bit_binary__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__nuclei.tif) and discuss data-type (data-type is unsigned 8-bit values, 
-minimal value is 0, maximal value is 255)
-- Open binary file from MATLAB 
-[xy_8bit_binary__two_cells_matlabstyle.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__two_cells_matlabstyle.tif) lower and highest value (data-type is unsigned 8-bit values, 
-minimal value is 0, maximal value is 255)
-- Verify that binary options are set up correctly. 
-    - **[Process > Binary > Options ..]** [x] Black background
-- **[ File > Open... ]** [xy_8bit__two_cells.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__two_cells.tif)
-- **[ Image > Adjust > Threshold... ]** or **[Ctrl-Shift-T]**, vary lower threshold and discuss what happens to preview image
-- Choose a value so that both cells are foreground, e.g. 49-255 
-- Press **[Apply]** discuss resulting image
-- **[ File > Open... ]** [xy_8bit__two_cells.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__two_cells.tif)
-- Apply a higher threshold so that only the high intensity level nuclei remains 
+- Inspect ImageJ binary image
+  - Open
+[xy_8bit_binary__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__nuclei.tif)
+  - Discuss data-type and inspect pixel values 
+  - Data-type: unsigned 8-bit, values: 0 and 255
+- Inspect MATLAB binary image
+  - Open [xy_8bit_binary__two_cells_matlabstyle.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__two_cells_matlabstyle.tif)
+  - Discuss data-type and inspect pixel values
+  - Data-type: unsigned 8-bit, values: 0 and 1
+- Find/apply a threshold
+  - Open [xy_8bit__two_cells.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__two_cells.tif)
+    - Inspect pixel values to find a threshold separating fore- and background
+      - Hover over the image and observe the pixel values in ImageJ status bar
+      - Draw line profile and **[Analyze > Plot Profile ]** or **[Ctrl-K]**
+      - Inspect histogram using **[Analyze > Histogram]** or **[Ctrl-H]**
+    - **[ Image > Adjust > Manual Threshold... ]**
+      - `Lower threshold level` which is the value that you observed in the aforementioned step that would separate foreground and background
+      - `Upper threshold level` can be set to the maximum bit depth (in this case 255)
+      - Press **OK**, this will produce an overlaid image where you can see the regions above the threshold in red. 
+        - Note: The image is not binary yet (check the pixel values)! 
+  - Set binary options: **[Process > Binary > Options ..]** [X] Black background
+  - **[Process > Binary > Convert to Mask]**, now the image is binary.
+- Open [xy_8bit__two_cells.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__two_cells.tif)
+  - Repeat above applying a higher threshold so that only the high intensity level nucleus becomes foreground

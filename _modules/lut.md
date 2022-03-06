@@ -1,6 +1,6 @@
 ---
-title:     Lookup table
-layout:    module
+title: Lookup tables
+layout: module
 
 prerequisites:
   - "[Basic properties of images and pixels](../pixels)"
@@ -42,6 +42,8 @@ exercises:
 assessment: |
 
   ## Calculate the brightness:
+
+  Use the formula and explanations given in above section on "single color lookup tables".
 
   1. `value =  49, min = 10,  max = 50, brightness = ?`
   2. `value = 100, min =  0,  max = 65, brightness = ?`
