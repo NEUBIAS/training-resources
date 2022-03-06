@@ -17,7 +17,7 @@ concept_map: >
     G -->|generates| E("Executable code (text)")
     E -->|executes| A  
 
-figure: /figures/script_record_v2.png
+figure: /figures/script_record.png
 figure_legend: Concept of script recording.
 
 activity_preface: |
