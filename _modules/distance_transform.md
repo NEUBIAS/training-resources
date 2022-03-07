@@ -8,7 +8,7 @@ prerequisites:
 objectives:
 motivation: |
 concept_map: >
-  graph LR
+  graph TD
     B("Input image") -->|distance transform| D("Distance map image")
     B -->|must contain| P("Pixels with value 0")
     D -->|contains| DN("Distances to nearest 0 pixel")
