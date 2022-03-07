@@ -43,6 +43,7 @@ module_order:
 - manual_segmentation
 - script_env
 - script_run
+- script_record
 - variables
 - commenting
 - string_concat
