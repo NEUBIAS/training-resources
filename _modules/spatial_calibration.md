@@ -43,7 +43,7 @@ exercises:
     - ["ImageJ GUI", "spatial_calibration/exercises/spatial_calibration_imagejgui.md"]
     
 assessment: |
-    ### Fill in the blanks
+    ### Answer these questions
 
     - Given a 2D image with `pixel height` = `pixel width` = `dxy` = `0.13 micrometer`, what distance do the pixels at the (x,y) indices (10,10) and (9,21) have in micrometer units?
     - Given a 3D image with `dx` = `dy` = `0.13 micrometer` and `dz` = `1 micrometer`, what is the calibrated (micrometer units) distance of two pixels at the indices `(10,10,0)` and `(9,21,3)`?
