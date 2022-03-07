@@ -7,8 +7,8 @@
   - Solidity = Convexity = Area / Area-Convex-Hull
   - Ellipse fit
 - Explore results visualisation **[Plugins > MorphoLibJ > Label Images > Assign Measure to Label]**
-- Add a calibration to the image and check which shape measurements are affected.
-- Perform a shape analysis for 3D image [xyz_16bit_labels__spindle_spots.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_16bit_labels__spindle_spots.tif) and **[Plugins > MorphoLibJ > Analyze > Analyze Regions]**
+- Add a calibration of 2 micrometer to the image and check which shape measurements are affected.
+- Perform a shape analysis for 3D image [xyz_16bit_labels__spindle_spots.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_16bit_labels__spindle_spots.tif) and **[Plugins > MorphoLibJ > Analyze > Analyze Regions 3D]**
 - (Optional) Draw a square (=circle) of different size 2x2 pixels (paper, whiteboard, ...)
   - Measure area, perimeter and circularity
   - Discuss the results
