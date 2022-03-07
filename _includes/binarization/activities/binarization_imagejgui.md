@@ -13,16 +13,19 @@
       - Hover over the image and observe the pixel values in ImageJ status bar
       - Draw line profile and **[Analyze > Plot Profile ]** or **[Ctrl-K]**
       - Inspect histogram using **[Analyze > Histogram]** or **[Ctrl-H]**
+      - For interactive display one can do
+        - **[Image > Adjust > Threshold...]** and play with bar sliders
+            - `**[X]** Dark Background`
     - **[ Image > Adjust > Manual Threshold... ]**
       - `Lower threshold level` which is the value that you observed in the aforementioned step that would separate foreground and background
-      - `Upper threshold level` can be set to the maximum bit depth (in this case 255)
+      - `Upper threshold level` can be set to the maximum bit depth (in this case 8 so we can have a maximum pixel value of 255)
       - Press **OK**, this will produce an overlaid image where you can see the regions above the threshold in red.
         - Note: The image is not binary yet (check the pixel values)!
         - Important:     Alternatively one can do
           - **[Image > Adjust > Threshold...]**
               - `**[X]** Dark Background`
-              - `Lower threshold level = 31`
-              - `Higher threshold level = 255`
+              - `Lower threshold level = t1`
+              - `Higher threshold level = t2`
               - Press `Set`
               - Press `Apply`
   - Set binary options: **[Process > Binary > Options ..]** [X] Black background
