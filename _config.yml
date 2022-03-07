@@ -27,6 +27,7 @@ module_order:
 - volume_viewer
 - segmentation
 - binarization
+- auto_threshold
 - connected_components
 - measure_shapes
 - workflow_segment_2d_nuclei_measure_shape
