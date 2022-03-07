@@ -20,7 +20,7 @@ motivation: >
 concept_map: >
   graph TD
     li[Label Image] --> sa("Shape Analysis")
-    li -.-> |"example <br> shape features"| ex["area (volume) <br> perimeter (surface)<br>circularity = 4 Pi A/P^2"]
+    feature_columns -.- |"e.g."| ex["area (volume) <br> perimeter (surface)<br>circularity = 4 Pi A/P^2"]
     sa --> table("Results table")
     table --> object_rows["Rows are objects"]
     table --> feature_columns["Columns are shape features"]
