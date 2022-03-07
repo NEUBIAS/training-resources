@@ -1,6 +1,10 @@
 ### Image inspection
 
-- Open the files mentioned in the activity using [Plugins > Bio-Formats > Bio-Format Importer]. 
+- Open the files mentioned in the activity:
+  - [Plugins > Bio-Formats > Bio-Format Importer]. 
+    - [X] Display metadata
+    - [X] Display OME-XML Metadata
+      - Should be the same information as above but in XML (sometimes it is more correct than the above)
 - For ICS/IDS and XML/HDF5:
   - The ICS and XML file are the entry points that should be opened (the respective other file will be read automatically).
   - Also inspect the ICS and XML files in a simple text editor.

@@ -18,7 +18,7 @@ motivation: >
  defines a set of objects in 2D/3D. 
 
 concept_map: >
-  graph LR
+  graph TD
     li[Label Image] --> sa("Shape Analysis")
     li -.-> |"example <br> shape features"| ex["area (volume) <br> perimeter (surface)<br>circularity = 4 Pi A/P^2"]
     sa --> table("Results table")
