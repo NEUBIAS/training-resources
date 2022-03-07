@@ -7,5 +7,5 @@ Using MorpholibJ:
 > ## Solution
 > 1. **[Plugins > MorphoLibJ > Analyze > Analyze Regions]** the upper right nuclei.
 > 2. Some features are the ratio of dimensional features and so are independent of the spatial calibration.
-{: .solution}
 > 3. **[Plugins > MorphoLibJ > Label Regions > Assign Measure to Label]**.
+{: .solution}
