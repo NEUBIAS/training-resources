@@ -23,7 +23,7 @@ concept_map: >
     BI --- FG("Foreground pixels (true, 1, 255)")
 
 figure: /figures/binarization.png
-figure_legend: Image before and after binarization
+figure_legend: Image before and after applying a threshold of 75 gray values.
 
 activity_preface: |
   - Open the binary image [xy_8bit_binary__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__nuclei.tif).
