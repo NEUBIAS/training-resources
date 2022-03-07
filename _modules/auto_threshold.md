@@ -1,5 +1,5 @@
 ---
-title: Automatic threshold
+title: Automatic thresholding
 layout: module
 tags: ["draft","component"]
 prerequisites:
@@ -9,8 +9,8 @@ objectives:
   - "Apply automatic threshold to distinguish foreground and background pixels"
  
 motivation: |
-  The manual fixing of a threshold value is user dependent and may require adjustments for every images.
-  This is problematic as it reduces the reproducibility of the results and precludes from applying the binarization to many different images. It is therefore important to have a mathematical approach to automatically find a threshold values for segmentation.
+  The manual determination of a threshold value is tedious and subjective.
+  This is problematic as it reduces the reproducibility of the results and may preclude determining threshold values for many different images. It is therefore important to know about reproducible mathematical approaches to automatically determine threshold values for image segmentation.
   
 concept_map: >
   graph TD
@@ -18,7 +18,7 @@ concept_map: >
     H --> T("Threshold value")
 
 figure: /figures/auto_threshold.png
-figure_legend: Input images, histograms, binary images (Otsu threshold), binary images (Huang threshold)
+figure_legend: Input images, histograms (Otsu threshold - orange, Huang threshold - blue), binary images (Otsu), binary images (Huang).
 
 activity_preface: >
 
