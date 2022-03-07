@@ -1,0 +1,24 @@
+- Requirements
+  - Update site: IJPB-Plugins (MorpholibJ)
+- Set binary options: [ Process > Binary > Options.. ]
+  - iterations=1, count=1, black, do=Nothing
+- Open the images mentioned in the activity
+  - Rename the intensity image: [ Image > Rename... ]: "intensity"
+  - Rename the label image: [ Image > Rename... ]: "labels"
+- Measure object intensities: [ Plugins › MorphoLibJ › Analyze › Intensity Measurements 2D/3D ]
+  - input=intensity
+  - labels=labels
+  - [X] mean
+  - [X] max
+  - [X] numberofvoxels
+- Manually measure the background intensity
+  - Change LUT to see the background: [ Ctrl/Cmd + C ]
+  - `makeRectangle(4, 26, 15, 12);`
+  - [ Analyze › Set Measurements... ]
+    - [X] Mean gray value
+    - [X] Median
+  - [ Analyze › Measure ]
+- Open the object intensity measurements table in a spreadsheet software (e.g. Excel or R)
+- Add the manual background measurment as a new column
+- Add new columns for background corrected sum and mean intensity
+

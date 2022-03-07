@@ -1,24 +1,26 @@
 ## Exercise mean filter
 - Open image [xy_8bit__noisy_two_nuclei_close.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_very_noisy_close.tif)
-- Segment image into foreground/background in order to get a similar result (see this binary image - [xy_8bit_binary__noisy_two_nuclei_close.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__nuclei_very_noisy_close.tif))
-- Is applying manual thresholding operation possible directly on raw image?
-- Apply mean filters with radii: 1, 2, 3, 5
-- For each radius find the lowest threshold that yields exactly four connected components (the nuclei).
-- For radius 5, what happens to the size of the segmented nuclei?
+- The aim is to segment the image into foreground/background in order to get a similar result to [xy_8bit_binary__noisy_two_nuclei_close.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__nuclei_very_noisy_close.tif)
+- To achive this aim, try thresholding the image after applying a mean filter with different radii.
+  - Try thresholding
+    - Without a mean filter
+    - After applying a mean filter of radius: 1, 2, 3, or 5
+  - For each filter setting find the lowest threshold that yields exactly four connected components (the nuclei).
+    - Is this even possible without applying a mean filter?
+    - For radius 5, what happens to the size of the segmented nuclei?
 
 > ## Solution
-> - Applying thresholding on the raw image does not work, as it yields a large number of undesired connected components
 > - [ Image › Duplicate... ]
->   - `Title = mean_1`
 > - [ Process › Filters › Mean... ]
->   -` Radius = 1 pixel`
-> - Repeat the steps above with the other radii
-> - Radius 1: lowest threshold level = 38
-> - Radius 2: lowest threshold level = 43
-> - Radius 3: lowest threshold level = 48
-> - Radius 5: lowest threshold level = 57
->
-> For radius 5 the segmented nuclei are smaller.
+>   - Radius = 1,2,3,5 pixel
+> - [ Image > Adjust > Threshold... ]
+>   - Radius 1: threshold = 38
+>   - Radius 2: threshold = 43
+>   - Radius 3: threshold = 48
+>   - Radius 5: threshold = 57
+ - Only segmenting the four nuclei in unfiltered image does not work, as it yields a large number of undesired connected components (noise).
+> - Radius 1 yields a reasonable segmentation.
+> - For radius 5 one has to choose a rather high threshold to still separate some of the nuclei and thus the segmented nuclei become very small.
 {: .solution}
 
 ## Exercise variance filter
@@ -29,7 +31,6 @@
 - What is the minimal filter radius that yields a good segmentation?
 
 > ## Solution
->
 > - [ Image › Rename...]
 >   - Title = input
 > - [ Image › Duplicate... ]
@@ -46,6 +47,5 @@
 >   - Press `Apply`
 >      - Press `Convert to Mask`
 > - [ Image › Lookup Tables › Invert LUT ] (Optional: if highest values are darker and lowest brighter)
->
-> The minimal radius is 5, smaller radii yield holes in the foreground region.
+> - The minimal radius is 5, smaller radii yield holes in the foreground region.
 {: .solution}
