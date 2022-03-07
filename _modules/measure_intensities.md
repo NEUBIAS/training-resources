@@ -13,7 +13,7 @@ motivation: >
   The measurement of intensities in biological images is very common, e.g. to quantify expression levels of certain proteins by means of immuno-histochemistry. However, performing correct intensity measurements is very tricky and there are a lot of pitfalls. It is thus of utmost important to understand very well what one is doing. Without in-depth understanding the chance to publish wrong results based on intensity measurements is rather high.
 
 concept_map: >
-  graph LR
+  graph TD
     li[Label image] --> im("Intensity measurement")
     ii[Intensity image] --> bc("Background corrected image")
     bc --> im

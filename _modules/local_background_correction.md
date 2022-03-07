@@ -15,7 +15,7 @@ motivation: >
   Very often, biological images contain locally varying background intensities. This hampers both segmentation and intensity quantification. However, given a sufficient separation of length scales in terms of variation in background intensities vs. variation in intensities in the foreground, image filters can be employed to measure and correct for the background.
 
 concept_map: >
-  graph LR
+  graph TD
     i(Input image) --> bgf(Large size filter)
     bgf --> bgi[Background image]
     bgi --> s[Subtract]

@@ -14,7 +14,7 @@ motivation: >
 
 
 concept_map: >
-  graph LR
+  graph TD
     Im("Digital image") --- A("N-D array")
     A --- E("Elements/Pixels/Voxels")
     A --- DT("Data type")
