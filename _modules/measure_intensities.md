@@ -26,7 +26,7 @@ figure_legend: Object intensity measurements.
 
 activity_preface: |
   - Open image [xy_16bit__h2b.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit__h2b.tif)
-  - Open label mask [xy_8bit_labels__h2b_bg](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__h2b.tif)
+  - Open label mask [xy_8bit_labels__h2b.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__h2b.tif)
   - Using the label mask, measure the mean and max intensities as well as the objects' pixel area.
     - Exports the results as a table (and open in a spreadsheet software)
   - Manually measure the mean intensity in the background.
@@ -45,11 +45,9 @@ activity_preface: |
 
 activities:
   - ["ImageJ GUI", "measure_intensities/activities/measure_intensities_imagejgui.md", "markdown"]
-  - ["ImageJ Macro", "measure_intensities/activities/measure_intensities_imagejmacro.ijm", "java"]
 
 exercises:
   - ["ImageJ GUI", "measure_intensities/exercises/measure_intensities_imagejgui.md"]
-  - ["ImageJ macro", "measure_intensities/exercises/measure_intensities_imagejmacro.md"]
 
 assessment: |
 
@@ -63,7 +61,7 @@ assessment: |
     1. In an unsigned integer image, increasing the size of the measurement region can only _____ the sum intensity.
     1. In an unsigned integer image, decreasing the size of the measurement region can \_\_\_\_ or \_\_\_\_ the mean intensity.
     1. In a floating point image, increasing the size of the measurement region could \_\_\_\_ the sum intensity.
-    
+
      > ## Solution
      > 1. mean
      > 1. integrated
@@ -80,7 +78,7 @@ external_links:
 
 
 ---
-## Nomenclature
+### Nomenclature
 
 
 mean = average != median
@@ -91,21 +89,21 @@ bg = background
 
 n_pixels = num_pixels = nPixels = numPixels = number of pixels
 
-## Formula
+### Formula
 
 ```
 mean_corr = mean - bg
 sum_corr = mean_corr * num_pixels = ( mean - bg ) * num_pixels = sum - ( bg * num_pixels )
 ```
 
-## Biophysical interpretation
+### Biophysical interpretation
 
 - `mean` often resembles the concentration of a protein
 - `sum` often represents the total expression level of a protein
 
-## Key points
+### Key points
 
 - Intensity measurements are generally very tricky and most likely the source of many scientific mistakes. Please always consider **consulting a bioimage analysis expert**!
-- Intensity measurements need a background correction. This can be achieved in several ways.
+- Intensity measurements need a background correction. Finding the correct background value can be very difficult!
 - At least, think carefully about whether the mean or sum intensity is the right readout for your biological question.
-- If you publish or present something label your measurement properly, e.g. “Sum Intensity”. Just “Intensity” is not enough!
+- If you publish or present something, label your measurement properly, e.g. “Sum Intensity”. Just “Intensity” is not enough!
