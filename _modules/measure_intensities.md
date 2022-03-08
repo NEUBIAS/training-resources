@@ -1,6 +1,7 @@
 ---
 title:  Object intensity measurements
 layout: module
+tags: ["Component"]
 
 prerequisites:
   - "[Connected component analysis](../connected_components)"
@@ -22,7 +23,7 @@ concept_map: >
     bgm --> table
 
 figure: /figures/measure_intensities.png
-figure_legend: Object intensity measurements.
+figure_legend: Common object intensity measurements, using a label mask and a manual background measurement.
 
 activity_preface: |
   - Open image [xy_16bit__h2b.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit__h2b.tif)
@@ -37,9 +38,8 @@ activity_preface: |
     - Importantly, this was acquired with a widefield microscope!
       - The interpretation for a confocal microscope would be different!
   - Repeat measurements with larger labels
-    - Discuss that it is not really clear how large exactly the label regions have to be
     - Open label mask [xy_8bit_labels__h2b_dilate_labels.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__h2b_dilate_labels.tif)
-    - Display the label mask on top of the raw image **[Image > Overlay > Add Image...]**
+    - Appreciate that it is not always clear how large exactly the label regions have to be
     - Measure the intensities again, now with the larger label mask
     - Discuss which values changed and by how much percent
 
@@ -80,14 +80,10 @@ external_links:
 ---
 ### Nomenclature
 
-
-mean = average != median
-
-sum = total = integrated
-
-bg = background
-
-n_pixels = num_pixels = nPixels = numPixels = number of pixels
+- median
+- mean = average
+- sum = total = integrated
+- bg = background
 
 ### Formula
 
@@ -100,10 +96,15 @@ sum_corr = mean_corr * num_pixels = ( mean - bg ) * num_pixels = sum - ( bg * nu
 
 - `mean` often resembles the concentration of a protein
 - `sum` often represents the total expression level of a protein
+- For the correct biophysical interpretation you need to know the PSF of your microscope.
+  - More specifically, you need to know how the 3D extend of the PSF relates to 3D extend of your biological structures of interest. Essentially, you need to exactly know __where__ your microscope system is measuring the intensities.
+  - It is thus critical whether you used a confocal or a widefield microscope, because widefield microscope have an unbounded PSF along the z-axis.
 
 ### Key points
 
-- Intensity measurements are generally very tricky and most likely the source of many scientific mistakes. Please always consider **consulting a bioimage analysis expert**!
-- Intensity measurements need a background correction. Finding the correct background value can be very difficult!
+- Intensity measurements are generally very tricky and most likely the source of many scientific mistakes. 
+  - Please consider consulting a bioimage analysis expert.
+- Intensity measurements need a background correction. 
+  - Finding the correct background value can be very difficult and sometimes even impossible and, maybe, the project just cannot be done like this!
 - At least, think carefully about whether the mean or sum intensity is the right readout for your biological question.
-- If you publish or present something, label your measurement properly, e.g. “Sum Intensity”. Just “Intensity” is not enough!
+- If you publish or present something, label your measurement properly, e.g. “Sum Intensity” (just “Intensity” is not enough)!
