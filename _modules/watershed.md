@@ -16,11 +16,11 @@ concept_map: >
     T("Image") --> W("Watershed algorithm")
     W --> S("Segmented image")
     S --- B("Boundaries/Watersheds: Intensity ridges")
-    S --- R("Regions/Basins: Local intensity minima")
+    S --- R("Regions/Basins")
 
 
 figure: /figures/watershed.png
-figure_legend: Examples of watersheds, including distance transform.
+figure_legend: Illustration of the watershed transform. a) Image with three objects that cannot be separated by a simple threshold. b) Foreground background segmentation of (a). c) Watershed transform of (e). d) (c) masked with (d). e) Inverse of (a). f) Intensity line profile along the line depicted in (e) with illustration of filling up the basins up to a the level where the yellow and blue regions meet and a watershed is build. g) as (f) but filling up the basins to a higher level.
 
 activity_preface: |
   - Basic watershed
