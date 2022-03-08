@@ -37,10 +37,11 @@ activity_preface: |
     - Subtract the maximum intensity projection from the original image.
 
 activities:
-  - ["Activity 1 ImageJ GUI & Macro", "local_background_correction/activities/local_background_correction.ijm", "java"]
-  - ["Activity 2 GUI", "local_background_correction/activities/local_background_correction_activity2_gui.md", "markdown"]
-  - ["Activity 2 Macro", "local_background_correction/activities/local_background_correction_activity2_macro.ijm", "java"]
-  - ["Activity 2 Jython", "local_background_correction/activities/local_background_correction_activity2_jython.py", "python"]
+  - ["Activity 1 ImageJ GUI", "local_background_correction/activities/local_background_correction_imagejgui.md", "markdown"]
+  - ["Activity 1 ImageJ Macro", "local_background_correction/activities/local_background_correction_imagejmacro.ijm", "java"]
+  - ["Activity 2 ImageJ GUI", "local_background_correction/activities/local_background_correction_activity2_gui.md", "markdown"]
+  - ["Activity 2 ImageJ Macro", "local_background_correction/activities/local_background_correction_activity2_macro.ijm", "java"]
+  - ["Activity 2 ImageJ Jython", "local_background_correction/activities/local_background_correction_activity2_jython.py", "python"]
 
 exercises:
   - ["ImageJ GUI & Macro", "local_background_correction/exercises/local_background_correction_imagejmacro.md"]

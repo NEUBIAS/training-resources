@@ -1,0 +1,14 @@
+- Open [xy_8bit__spots_local_background_with_noise.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__spots_local_background_with_noise.tif)
+- Create background image
+  - [ Image > Duplicate...] 
+    - title = background
+  - [ Process > Filters > Median... ] 
+    - radius = 30
+  - [ Image › Rename... ] 
+    - "background"
+- Create foreground image
+  - [ Process › Image Calculator... ]
+    - Image 1 = input
+    - Subtract
+    - Image 2 = background
+    - create 32-bit
