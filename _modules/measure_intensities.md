@@ -23,7 +23,7 @@ concept_map: >
     bgm --> table
 
 figure: /figures/measure_intensities.png
-figure_legend: Common object intensity measurements, using a label mask and a manual background measurement.
+figure_legend: H2b-mCherry widefield image of two cells. Common object intensity measurements, using a label mask and a manual background measurement.
 
 activity_preface: |
   - Open image [xy_16bit__h2b.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit__h2b.tif)
