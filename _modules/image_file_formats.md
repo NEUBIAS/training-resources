@@ -14,7 +14,7 @@ motivation: |
   There are numerous ways how to save image data on disk. Virtually every microscope vendor has their own file format. It is thus very important to understand how to open those files and inspect their content. Moreover, some software will open only specific image file formats and thus it is sometime necessary to re-save the data. During such image file format conversions information can be lost; it is important to be aware of this and avoid such information loss as much as possible.
 
 concept_map: >
-  graph LR
+  graph TD
     F("TIFF, JPEG, XML/HDF5, CZI, LIF, ...")
     F --> PD("Pixel data")
     PD --> Values
