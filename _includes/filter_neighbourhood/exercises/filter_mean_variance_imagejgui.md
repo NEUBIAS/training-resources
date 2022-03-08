@@ -24,11 +24,11 @@
 {: .solution}
 
 ## Exercise variance filter
-- Open image [xy_8bit__em_mitochondria_er.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__em_mitochondria_er.tif)
+- Open image [xy_16bit__embryo_transmission.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit__embryo_transmission.tif)
 - Apply a variance filter [ Process > Filter > Variance... ] to segment the cell regions from the background
   - Hints:
     - Convert image to float, because the filter may yield high values [ Image > Type > 32-bit ]
-- What is the minimal filter radius that yields a good segmentation?
+- What filter radius and threshold yield a good segmentation?
 
 > ## Solution
 > - [ Image › Rename...]
@@ -38,14 +38,12 @@
 > - [ Image > Type > 32-bit ]
 >   - In variance calculation, pixel values can exceed 255 which is the maximum value that can be achieved in current bit depth (unsigned 8-bit) of input image.
 > - [ Process › Filters › Variance... ]
->   - `Radius = 5 pixels`
+>   - `Radius = 15 pixels`
 > - [ Image › Adjust › Threshold... ]  
 >   - `([x] Dark Background)`
->   - `Lower threshold level = 80` (other values can also be chosen)
+>   - `Lower threshold level = 1.5`
 >   - `Higher threshold level = 1e30`
 >   -  Press `Set`
 >   - Press `Apply`
 >      - Press `Convert to Mask`
-> - [ Image › Lookup Tables › Invert LUT ] (Optional: if highest values are darker and lowest brighter)
-> - The minimal radius is 5, smaller radii yield holes in the foreground region.
 {: .solution}
