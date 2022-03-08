@@ -3,8 +3,8 @@ title: Local background correction
 layout: module
 
 prerequisites:
-  - "[Median filter](median_filter)"
-  - "[Image math](image_math)"
+  - "[Median filter](../median_filter)"
+  - "[Image math](../image_math)"
   - "[Projections](../projections)"
 
 objectives:
@@ -26,13 +26,12 @@ figure: /figures/local_background_correction.png
 figure_legend: Local background correction using a median filter. Left - Raw data. Middle - Median filtered image (background). Right - Difference image (foreground).
 
 activity_preface: |
-  - Activity 1: background subtraction using a median filter.
+  - Activity 1 - Background subtraction using a median filter.
     - Open image [xy_8bit__some_spots_with_uneven_bg](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__some_spots_with_uneven_bg.tif)
     - Compute a background image using a median filter
     - Create a foreground image by subtracting the background image from the input image
-    - Optional: Segment the spots in the foreground image.
-
-  - Activity 2: background subtraction using a maximum intensity projection.
+    - (Optional) Segment the spots in the foreground image.
+  - Activity 2 - Background subtraction using a maximum intensity projection.
     - Open image [xyt_8bit_polyp](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyt_8bit_polyp.tif)
     - Create a maximum intensity projection of this image. This will essentially create a background image, without the moving polyp.
     - Subtract the maximum intensity projection from the original image.
@@ -63,4 +62,4 @@ assessment: |
 learn_next:
 
 external_links:
---
+---
