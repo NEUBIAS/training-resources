@@ -68,7 +68,7 @@ assessment: |
      > 1. sum, number of pixels
      > 1. increase
      > 1. decrease, increase
-     > 1. decrease
+     > 1. decrease, increase
      {: .solution}
 
 learn_next:
