@@ -26,28 +26,28 @@ figure_legend: Object intensity measurements.
 
 activity_preface: |
   - Open image [xy_16bit__h2b.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit__h2b.tif)
-  - Open label mask [xy_8bit_labels__h2b_bg](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__h2b.tif)
+  - Open label mask [xy_8bit_labels__h2b.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__h2b.tif)
   - Using the label mask, measure the mean and max intensities as well as the objects' pixel area.
-  - Manually measure the mean and median intensity in the background.
-    - Appreciate that there is a hot pixel in the background and that median handles this better than mean.
-  - Add the background measurement as a new column to the table
+    - Exports the results as a table (and open in a spreadsheet software)
+  - Manually measure the mean intensity in the background.
+    - Add the background measurement as a new column to the table
   - Create new columns for background corrected mean, max, and sum intensity.
   - Discuss the measurements' biophysical interpretation
     - The signal is H2B in a dividing and in an interphase cell.
     - Importantly, this was acquired with a widefield microscope!
       - The interpretation for a confocal microscope would be different!
-  - Discuss that it is not really clear how large exactly the label regions have to be
-  - Open label mask [xy_8bit_labels__h2b_dilate_labels.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__h2b_dilate_labels.tif)
-  - Display the label mask on top of the raw image **[Image > Overlay > Add Image...]**
-  - Measure the intensities again, now with the larger label mask
-  - Discuss which values changed and by how much percent
+  - Repeat measurements with larger labels
+    - Discuss that it is not really clear how large exactly the label regions have to be
+    - Open label mask [xy_8bit_labels__h2b_dilate_labels.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__h2b_dilate_labels.tif)
+    - Display the label mask on top of the raw image **[Image > Overlay > Add Image...]**
+    - Measure the intensities again, now with the larger label mask
+    - Discuss which values changed and by how much percent
 
 activities:
   - ["ImageJ GUI", "measure_intensities/activities/measure_intensities_imagejgui.md", "markdown"]
-  - ["ImageJ Macro", "measure_intensities/activities/measure_intensities_imagejmacro.ijm", "java"]
 
-exercises: 
-  - ["ImageJ Macro & GUI", "measure_intensities/exercises/measure_intensities_imagejguimacro.md"]
+exercises:
+  - ["ImageJ GUI", "measure_intensities/exercises/measure_intensities_imagejgui.md"]
 
 assessment: |
 
@@ -61,7 +61,7 @@ assessment: |
     1. In an unsigned integer image, increasing the size of the measurement region can only _____ the sum intensity.
     1. In an unsigned integer image, decreasing the size of the measurement region can \_\_\_\_ or \_\_\_\_ the mean intensity.
     1. In a floating point image, increasing the size of the measurement region could \_\_\_\_ the sum intensity.
-    
+
      > ## Solution
      > 1. mean
      > 1. integrated
@@ -78,10 +78,32 @@ external_links:
 
 
 ---
+### Nomenclature
+
+
+mean = average != median
+
+sum = total = integrated
+
+bg = background
+
+n_pixels = num_pixels = nPixels = numPixels = number of pixels
+
+### Formula
+
+```
+mean_corr = mean - bg
+sum_corr = mean_corr * num_pixels = ( mean - bg ) * num_pixels = sum - ( bg * num_pixels )
+```
+
+### Biophysical interpretation
+
+- `mean` often resembles the concentration of a protein
+- `sum` often represents the total expression level of a protein
+
 ### Key points
 
 - Intensity measurements are generally very tricky and most likely the source of many scientific mistakes. Please always consider **consulting a bioimage analysis expert**!
-- Intensity measurements need a background correction. This can be achieved in several ways.
+- Intensity measurements need a background correction. Finding the correct background value can be very difficult!
 - At least, think carefully about whether the mean or sum intensity is the right readout for your biological question.
-- If you publish or present something label your measurement properly, e.g. “Sum Intensity”. Just “Intensity” is not enough!
-- Objects based intensity measurements require two input images: the (background corrected) intensity image and a label mask image.
+- If you publish or present something, label your measurement properly, e.g. “Sum Intensity”. Just “Intensity” is not enough!
