@@ -7,28 +7,26 @@ prerequisites:
 
 objectives:
   - "Concatenate strings"
-  - "Convert numbers into strings"
 motivation: |
   String is a type of variable that can cotain a combination of characters. 
   String concatenation is the operation of joining multiple substrings together to make a bigger one. 
   For example concatenating "Hello " and "world!" would result into "Hello world!". 
-  You can also combine a string and a number. For example concatenating the string "Displaying image ", number 50 and " out of 100" would result into "Displaying image 50 out of 100". Furthermore, you may concatenate strings to create paths to the images by concatenating path to the folder and file names. 
-  Please note that when concatenating file path and file name you might need to also concatenate a file separator such as / or \ between file path and dile name. Depending on the operating system and the programming language this file separator can be different. In the external links, you will find a generic way of adding a file separator in imageJ as an example.
+  You can also concatenate strings to create paths to the images by concatenating path to the folder and file names. 
+  Please note that when concatenating file path and file name you might need to also concatenate a file separator such as / or \ between file path and file name. Depending on the operating system and the programming language this file separator can be different. In the external links, you will find a generic way of adding a file separator in imageJ as an example.
   
 concept_map: >
   graph TD
     A("Substring 1") --> X("Concatenated string")
     B("Substring 2") --> X
-    C(Number 1) --> X
-    D("...") --> X
-    E("Substring n") --> X
+    C("...") --> X
+    D("Substring n") --> X
 
 figure: /figures/string_concat.png
 figure_legend: String concatenation.
 
 activity_preface: |
   - Open a script editor.
-  - Define three variables with values "Hello ", "user number " and 50.
+  - Define three variables with values "Hello ", "user number " and "50".
   - Concatenate the three variables.
 
 activities:
@@ -44,12 +42,12 @@ assessment: >
 
   ### Fill in the blanks
 
-    - "Nuclei"+1+2 concatenation results in ___ string.
-    - "Nuclei"+"1"+2 concatenation results in ___ string.
+    - In imageJ macro language, "Nuclei"+1+2 concatenation results in ___ string.
+    - "Nuclei"+"1"+"2" concatenation results in ___ string.
     
     > ## Solution
-    >   - "Nuclei"+1+2 concatenation results in **"Nuclei3"** string.
-    >   - "Nuclei"+"1"+2 concatenation results in **"Nuclei12"** string.
+    >   - In imageJ macro language "Nuclei"+1+2 concatenation results in **"Nuclei3"** string.
+    >   - "Nuclei"+"1"+"2" concatenation results in **"Nuclei12"** string.
     {: .solution}
     
 
@@ -64,7 +62,7 @@ external_links:
 #### String concatenation
 You concatenate strings by using specific operators, depending on the programming platform. Fo example, the + operator. Let's look at a few examples:
 
-`"Channel_"+1` -> `"Channel_1"`
+`"Channel_"+"1"` -> `"Channel_1"`
 
 `"image_"+"duplicate"` -> `"image_duplicate"`
  
