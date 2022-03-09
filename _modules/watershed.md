@@ -19,7 +19,6 @@ concept_map: >
     S --- B("Boundaries/Watersheds: Intensity ridges")
     S --- R("Regions/Basins")
 
-
 figure: /figures/watershed.png
 figure_legend: Illustration of the watershed transform. a) Image with three objects that cannot be separated by a simple threshold. b) Foreground background segmentation of (a). c) Watershed transform of (e). d) (c) masked with (d). e) Inverse of (a). f) Intensity line profile along the line depicted in (e) with illustration of filling up the basins up to a the level where the yellow and blue regions meet and a watershed is build. g) as (f) but filling up the basins to a higher level.
 
@@ -58,13 +57,14 @@ activities:
 - ["ImageJ Macro: MorpholibJ seeded watershed", "watershed/activities/morpholibj_seeded_watershed.ijm", "java"]
 
 exercise_preface: |
-  - Open [xy_8bit__few_separate_nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__few_separate_nuclei.tif)
-  - There are 6 (partially visible) nuclei.
-  - Apply the watershed algorithm to segment the image into 6 regions.
-  - Hint: You will need to preprocess (invert and smooth) the image.
+  - Open [xy_8bit__several_touching_nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__several_touching_nuclei.tif)
+  - Using the watershed transform try to segment the nuclei.
+    - Hints:
+      - Directly applying a watershed on the inverted image will likely fail as there are too many intensity maxima even within one nucleus.
+      - Thus, one will need to binarise the image and perform a watershed on the distance transform.
 
 exercises:
-  - ["ImageJ Macro: MorpholibJ: ???", "watershed/exercises/morpholibj_watershed_noise.md"]
+  - ["ImageJ Macro: MorpholibJ shape watershed", "watershed/exercises/morpholibj_shape_watershed_exercise.md"]
 
 assessment: >
 
