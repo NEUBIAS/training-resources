@@ -39,8 +39,11 @@ module_order:
 - filter_objects
 - workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape
 - distance_transform
+- watershed
 - manual_segmentation
+- script_env
 - script_run
+- script_record
 - variables
 - commenting
 - string_concat
