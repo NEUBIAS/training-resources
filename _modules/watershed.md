@@ -27,30 +27,34 @@ activity_preface: |
   - Basic watershed
     - Open [xy_8bit__touching_objects.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__touching_objects.tif).
     - Appreciate that you cannot segment the three objects using a simple threshold.
-    - Anyway find a threshold that segments the image into foreground (objects) and background (keep this binary image).
-    - Invert the original image and perform a watershed algorithm.
-    - Appreciate that the image is now split into three regions (watershed image).
-    - Use the binary mask (s.a.) and the watershed image to segment the three objects.
+    - Anyway find a threshold that segments the image into foreground (objects) and background
+      - Keep this binary mask, we will need it later.
+    - Invert the original image and apply the watershed transform.
+    - Appreciate that the image is now split into three regions.
+    - Combine the binary mask and the watershed image to segment the three objects.
   - Shape watershed
      - Open [xy_8bit__touching_objects_same_intensity.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__touching_objects_same_intensity.tif).
     - Appreciate that you cannot segment the three objects using a simple threshold.
     - Appreciate that also a watershed algorithm does not help here, because there is no "intensity ridge" bewteen the two touching objects.
     - Create a binary mask
     - Create a distance map within objects
+    - Invert the distance map
+    - Slightly blur the distance map to avoid spurious minima (water basins)
+    - Apply a watershed transform
+    - Combine the binary mask and the watershed image to segment the two objects
 
 activities:
 - ["ImageJ Macro: MorpholibJ basic watershed", "watershed/activities/morpholibj_basic_watershed.ijm", "java"]
 - ["ImageJ Macro: MorpholibJ shape watershed", "watershed/activities/morpholibj_shape_watershed.ijm", "java"]
 
 exercise_preface: |
-  - Dealing with noise
-    - Open [xy_8bit__few_separate_nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__few_separate_nuclei.tif)
-    - There are 6 (partially visible) nuclei.
-    - Apply the watershed algorithm to segment the image into 6 regions.
-    - Hint: You will need to preprocess (invert and smooth) the image.
+  - Open [xy_8bit__few_separate_nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__few_separate_nuclei.tif)
+  - There are 6 (partially visible) nuclei.
+  - Apply the watershed algorithm to segment the image into 6 regions.
+  - Hint: You will need to preprocess (invert and smooth) the image.
 
 exercises:
-  - ["ImageJ Macro: MorpholibJ: Dealing with noise", "watershed/exercises/morpholibj_watershed_noise.md"]
+  - ["ImageJ Macro: MorpholibJ: ???", "watershed/exercises/morpholibj_watershed_noise.md"]
 
 assessment: >
 
