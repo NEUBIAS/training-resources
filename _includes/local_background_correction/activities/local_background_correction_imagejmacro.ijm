@@ -32,6 +32,3 @@ selectWindow("foreground");
 makeLine(30, 201, 272, 34);
 run("Plot Profile");
 Plot.setLimits(0,290,-30.0,250);
-
-
-

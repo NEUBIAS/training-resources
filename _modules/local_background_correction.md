@@ -1,10 +1,10 @@
 ---
-title:     Local background correction
-layout:    module
+title: Local background correction
+layout: module
 
 prerequisites:
-  - "[Median filter](median_filter)"
-  - "[Image math](image_math)"
+  - "[Median filter](../median_filter)"
+  - "[Image math](../image_math)"
   - "[Projections](../projections)"
 
 objectives:
@@ -26,23 +26,22 @@ figure: /figures/local_background_correction.png
 figure_legend: Local background correction using a median filter. Left - Raw data. Middle - Median filtered image (background). Right - Difference image (foreground).
 
 activity_preface: |
-  - Activity 1: background subtraction using a median filter.
+  - Activity 1 - Background subtraction using a median filter.
     - Open image [xy_8bit__some_spots_with_uneven_bg](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__some_spots_with_uneven_bg.tif)
     - Compute a background image using a median filter
     - Create a foreground image by subtracting the background image from the input image
-    - Check how well the background correction worked and whether any artefacts were introduced
-    - Optional: discuss how one could automatically segment the two spots in the resulting foreground image (mean filter and object size filter)
-
-  - Activity 2: background subtraction using a maximum intensity projection.
+    - (Optional) Segment the spots in the foreground image.
+  - Activity 2 - Background subtraction using a maximum intensity projection.
     - Open image [xyt_8bit_polyp](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyt_8bit_polyp.tif)
-    - Make a maximum intensity projection of this image. This will essentially create a background image, without the moving polyp.
-    - Use the image calculator to subtract the maximum intensity projection from the original image.
+    - Create a maximum intensity projection of this image. This will essentially create a background image, without the moving polyp.
+    - Subtract the maximum intensity projection from the original image.
 
 activities:
-  - ["Activity 1 ImageJ GUI & Macro", "local_background_correction/activities/local_background_correction.ijm", "java"]
-  - ["Activity 2 GUI", "local_background_correction/activities/local_background_correction_activity2_gui.md", "markdown"]
-  - ["Activity 2 Macro", "local_background_correction/activities/local_background_correction_activity2_macro.ijm", "java"]
-  - ["Activity 2 Jython", "local_background_correction/activities/local_background_correction_activity2_jython.py", "python"]
+  - ["Activity 1 ImageJ GUI", "local_background_correction/activities/local_background_correction_imagejgui.md", "markdown"]
+  - ["Activity 1 ImageJ Macro", "local_background_correction/activities/local_background_correction_imagejmacro.ijm", "java"]
+  - ["Activity 2 ImageJ GUI", "local_background_correction/activities/local_background_correction_activity2_gui.md", "markdown"]
+  - ["Activity 2 ImageJ Macro", "local_background_correction/activities/local_background_correction_activity2_macro.ijm", "java"]
+  - ["Activity 2 ImageJ Jython", "local_background_correction/activities/local_background_correction_activity2_jython.py", "python"]
 
 exercises:
   - ["ImageJ GUI & Macro", "local_background_correction/exercises/local_background_correction_imagejmacro.md"]
@@ -64,21 +63,4 @@ assessment: |
 learn_next:
 
 external_links:
-
 ---
-
-### Common filters for creating background images
-
-- Median filter
-- "Rolling ball" background
-  - ImageJ's "Subtract Background"
-    - Missing: explanation how it works, exactly
-- Morphological opening filter
-  - The result of background subtraction using a grayscale opening is called top-hat filter
-
-#### Advanced and powerful filters for creating background images
-
-- Morphological opening using reconstruction
-  - How do the work?
-  - MATLAB has this option... `imreconstruct`
-  - ImageJ MorpholibJ has a Grayscale Attribute Filtering, which seems similar (the same)?

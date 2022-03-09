@@ -23,25 +23,29 @@ concept_map: >
     bgm --> table
 
 figure: /figures/measure_intensities.png
-figure_legend: Common object intensity measurements, using a label mask and a manual background measurement.
+figure_legend: H2b-mCherry widefield image of two cells. Common object intensity measurements, using a label mask and a manual background measurement.
 
 activity_preface: |
-  - Open image [xy_16bit__h2b.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit__h2b.tif)
-  - Open label mask [xy_8bit_labels__h2b.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__h2b.tif)
-  - Using the label mask, measure the mean and max intensities as well as the objects' pixel area.
-    - Exports the results as a table (and open in a spreadsheet software)
-  - Manually measure the mean intensity in the background.
-    - Add the background measurement as a new column to the table
-  - Create new columns for background corrected mean, max, and sum intensity.
-  - Discuss the measurements' biophysical interpretation
-    - The signal is H2B in a dividing and in an interphase cell.
-    - Importantly, this was acquired with a widefield microscope!
-      - The interpretation for a confocal microscope would be different!
-  - Repeat measurements with larger labels
-    - Open label mask [xy_8bit_labels__h2b_dilate_labels.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__h2b_dilate_labels.tif)
-    - Appreciate that it is not always clear how large exactly the label regions have to be
-    - Measure the intensities again, now with the larger label mask
-    - Discuss which values changed and by how much percent
+  - Measure intensities (with background subtraction)
+    - Open image [xy_16bit__h2b.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit__h2b.tif)
+      - H2B-mCherry staining acquired with a widefield microscope
+    - Open label mask [xy_8bit_labels__h2b.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__h2b.tif)
+    - Using the label mask, measure the mean and max intensities as well as the objects' pixel area.
+      - Exports the results as a table (and open in a spreadsheet software)
+    - Manually measure the mean intensity in the background.
+      - Add the background measurement as a new column to the table
+    - Create new columns for background corrected mean, max, and sum intensity.
+    - Discuss the measurements' biophysical interpretation
+    - Optional: Repeat measurements with larger labels
+      - Open label mask [xy_8bit_labels__h2b_dilate_labels.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__h2b_dilate_labels.tif)
+      - Appreciate that it is not always clear how large exactly the label regions have to be
+      - Measure the intensities again, now with the larger label mask
+      - Discuss which values changed and by how much percent
+  - Inspect images where intensity quantificaion may not be possible
+    - [xyc_16bit__embryo_transmission_fluorescence.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__embryo_transmission_fluorescence.tif)
+      - Channel 1: Transmission image showing the object location
+      - Channel 2: Fluorescence image that should be quantified within the object
+        - Appreciate that the signal to noise is very low (CCD noise) and it is hard to decide which background to subtract.
 
 activities:
   - ["ImageJ GUI", "measure_intensities/activities/measure_intensities_imagejgui.md", "markdown"]
@@ -68,7 +72,7 @@ assessment: |
      > 1. sum, number of pixels
      > 1. increase
      > 1. decrease, increase
-     > 1. decrease
+     > 1. decrease, increase
      {: .solution}
 
 learn_next:
