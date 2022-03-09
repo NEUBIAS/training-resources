@@ -64,7 +64,8 @@ exercise_preface: |
       - Thus, one will need to binarise the image and perform a watershed on the distance transform.
 
 exercises:
-  - ["ImageJ Macro: MorpholibJ shape watershed", "watershed/exercises/morpholibj_shape_watershed_exercise.md"]
+  - ["watershed/exercises/shape_preface.md",[["ImageJ Macro","watershed/exercises/morpholibj_shape_watershed_exercise.md"],["asadsd","watershed/exercises/morpholibj_shape_watershed_exercise.md"]]]
+  - ["watershed/exercises/shape_preface.md",[["ImageJ Macro", "watershed/exercises/morpholibj_shape_watershed_exercise.md"],["asadsd","watershed/exercises/morpholibj_shape_watershed_exercise.md"]]]
 
 assessment: >
 

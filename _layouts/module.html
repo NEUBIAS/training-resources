@@ -183,30 +183,15 @@ Show activity for: <select id="id_activity_platform" name="activityplatformlist"
 {% endif %}
 
 {% if page.exercises %}
-Show exercises for: <select id="id_exercises_platform" name="exercisesplatformlist" onchange="change_exercises_content_by_platform('id_exercises_platform');return false;">
-{% if site.default-platform == "NONE" %}
-<option value="null-exercises" id="null-exercises-option" selected="selected"> Select a platform... </option>
-{% else %}
-<option value="{{ site.default-platform | slugify }}-exercises" id="{{ site.default-platform | slugify }}-exercises-option" selected="selected"> {{ site.default-platform }} </option>
+  {% for exercise in page.exercises %}
+    {% assign includefile = exercise[0] %}
+    {{ includefile }}
+    {% capture ex_include %}{% include {{ includefile }} %}{% endcapture %}
+    {% comment %}
+    {{ my_include | markdownify }}
+    {% endcomment %}
+  {% endfor %}
 {% endif %}
-{% endif %}
-{% for platform in page.exercises %}
-{% unless platform[0] == site.default-platform %}
-<option value="{{ platform[0] | slugify }}-exercises" id="{{ platform[0] | slugify }}-exercises-option"> {{ platform[0] }} </option>
-{% endunless %}
-{% endfor %}
-{% if page.exercises %}
-</select>
-{% endif %}
-
-{% for platform in page.exercises %}
-<blockquote class="challenge" id="{{ platform[0] | slugify }}-exercises-div">
-<h2>{{ platform[0] }}</h2>
-{% assign includefile = platform[1] %}
-{% capture exercise %}{% include {{ includefile }} %}{% endcapture %}
-{{ exercise | markdownify }}
-</blockquote>
-{% endfor %}
 
 {% if page.assessment %}
 <h2>Assessment</h2>
