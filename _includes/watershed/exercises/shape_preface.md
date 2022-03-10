@@ -1,3 +1,5 @@
+### Watershed shape
+
 - Open [xy_8bit__several_touching_nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__several_touching_nuclei.tif)
   - Using the watershed transform try to segment the nuclei.
     - Hints:

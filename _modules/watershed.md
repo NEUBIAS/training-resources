@@ -55,14 +55,6 @@ activities:
 - ["ImageJ Macro: MorpholibJ basic watershed", "watershed/activities/morpholibj_basic_watershed.ijm", "java"]
 - ["ImageJ Macro: MorpholibJ shape watershed", "watershed/activities/morpholibj_shape_watershed.ijm", "java"]
 - ["ImageJ Macro: MorpholibJ seeded watershed", "watershed/activities/morpholibj_seeded_watershed.ijm", "java"]
-
-exercise_preface: |
-  - Open [xy_8bit__several_touching_nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__several_touching_nuclei.tif)
-  - Using the watershed transform try to segment the nuclei.
-    - Hints:
-      - Directly applying a watershed on the inverted image will likely fail as there are too many intensity maxima even within one nucleus.
-      - Thus, one will need to binarise the image and perform a watershed on the distance transform.
-
 exercises:
   - ["watershed/exercises/shape_preface.md",[["ImageJ Macro","watershed/exercises/morpholibj_shape_watershed_exercise.md"],["asadsd","watershed/exercises/morpholibj_shape_watershed_exercise.md"]]]
   - ["watershed/exercises/shape_preface.md",[["ImageJ Macro", "watershed/exercises/morpholibj_shape_watershed_exercise.md"],["asadsd","watershed/exercises/morpholibj_shape_watershed_exercise.md"]]]
