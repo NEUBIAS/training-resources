@@ -57,25 +57,35 @@ activities:
 - ["ImageJ Macro: MorpholibJ seeded watershed", "watershed/activities/morpholibj_seeded_watershed.ijm", "java"]
 
 exercise_preface: |
-  - Open [xy_8bit__several_touching_nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__several_touching_nuclei.tif)
-  - Using the watershed transform try to segment the nuclei.
-    - Hints:
-      - Directly applying a watershed on the inverted image will likely fail as there are too many intensity maxima even within one nucleus.
-      - Thus, one will need to binarise the image and perform a watershed on the distance transform.
+  - Shape watershed
+    - Open [xy_8bit__several_touching_nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__several_touching_nuclei.tif)
+    - Using the watershed transform try to segment the nuclei.
+      - Hints:
+        - Directly applying a watershed on the inverted image will likely fail as there are too many intensity maxima even within one nucleus. Thus, one will need to binarise the image and perform a watershed on the distance transform.
+  - Seeded watershed
+    - The full challenge would be to segment the cells and nuclei in this image: [xyc_16bit__nuclei_tubulin.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__nuclei_tubulin.tif)
+    - However, to make it easier we will start from preprocessed data:
+      - Open tubulin mask: [xy_8bit_binary__tubulin.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__tubulin.tif)
+      - Open nuclei mask: [xy_8bit_binary__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master    /image_data/xy_8bit_binary__nuclei.tif)
+      - Open smooth tubulin: [xy_16bit__tubulin_smooth.tif](https://github.com/NEUBIAS/training-resources/raw/master    /image_data/xy_16bit__tubulin_smooth.tif)
+    - Using the three preprocessed images perform a seeded watershed to segment the cells.
 
 exercises:
-  - ["ImageJ Macro: MorpholibJ shape watershed", "watershed/exercises/morpholibj_shape_watershed_exercise.md"]
+  - ["ImageJ Macro: MorpholibJ shape watershed", "watershed/exercises/morpholibj_shape_watershed_exercise.ijm"]
+  - ["ImageJ Macro: MorpholibJ seeded watershed", "watershed/exercises/morpholibj_seeded_watershed_exercise.ijm"]
+
 
 assessment: >
 
   ### Fill in the blanks
 
-    1. TODO ___ .
-    1. TODO ___ .
-    
+    1. The output of watershed transform is a  ___ .
+    1. Before applying the watershed transform on a flurorescence image, one often ___ and ___ the image.
+    1. When providing the watershed basins one speaks of a ___ watershed transform.
     > ## Solution
-    >   1. TODO
-    >   1. TODO
+    >   1. label mask image
+    >   1. inverts and smoothes
+    >   1. seeded (or marker controlled)
     {: .solution}
 
 learn_next:
