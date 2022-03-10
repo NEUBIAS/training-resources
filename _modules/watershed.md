@@ -33,8 +33,8 @@ activity_preface: |
     - Combine the binary mask and the watershed image to segment the three objects.
   - Shape watershed
      - Open [xy_8bit__touching_objects_same_intensity.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__touching_objects_same_intensity.tif).
-    - Appreciate that you cannot segment the three objects using a simple threshold.
-    - Appreciate that also a watershed algorithm does not help here, because there is no "intensity ridge" bewteen the two touching objects.
+    - Appreciate that you cannot segment the objects using a simple threshold.
+    - Appreciate that a watershed transform on the intensity signal does not help here, because there is no "intensity ridge" bewteen the two touching objects.
     - Create a binary mask
     - Create a distance map within objects
     - Invert the distance map
@@ -89,6 +89,10 @@ assessment: >
     >   - inverts and smoothes
     >   - seeded (or marker controlled)
     {: .solution}
+
+keypoints:
+  - A watershed transform can separate touching objects if there are intensity valleys (or ridges) between touching objects. In case of intensity ridges the image needs to be inverted before being subjected to the watershed transform.
+  - To separate object by their shape, use a distance transform on the binary image and inject this into the watershed transform. It is often good to smooth the distance transform to remove spurious minima, which could serve as wrong seed points and thus lead to an over-segmentation.
 
 learn_next:
 
