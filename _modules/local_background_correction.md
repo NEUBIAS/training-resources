@@ -16,10 +16,10 @@ motivation: >
 
 concept_map: >
   graph TD
-    i(Input image) --> bgf(Large size filter)
-    bgf --> bgi[Background image]
+    ii(Input image)
+    ii --> bgi[Background image]
     bgi --> s[Subtract]
-    i --> s
+    ii --> s
     s --> fgi[Foreground image]
 
 figure: /figures/local_background_correction.png
@@ -33,8 +33,9 @@ activity_preface: |
     - (Optional) Segment the spots in the foreground image.
   - Activity 2 - Background subtraction using a maximum intensity projection.
     - Open image [xyt_8bit_polyp](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyt_8bit_polyp.tif)
-    - Create a maximum intensity projection of this image. This will essentially create a background image, without the moving polyp.
-    - Subtract the maximum intensity projection from the original image.
+    - Create a maximum intensity projection of this image.
+      - Because the polyp is moving around and is darker than the background this will create a background image.
+    - Create a foreground image by subtracting the maximum intensity projection from the original image.
 
 activities:
   - ["Activity 1 ImageJ GUI", "local_background_correction/activities/local_background_correction_imagejgui.md", "markdown"]
@@ -44,20 +45,20 @@ activities:
   - ["Activity 2 ImageJ Jython", "local_background_correction/activities/local_background_correction_activity2_jython.py", "python"]
 
 exercises:
-  - ["ImageJ GUI & Macro", "local_background_correction/exercises/local_background_correction_imagejmacro.md"]
+  - ["ImageJ Macro", "local_background_correction/exercises/local_background_correction_imagejmacro.md"]
 
 assessment: |
 
-  ### True or false (discuss with your neighbour)
+  ### True or false?
 
-    1. Mean filter is better than the median filter to generate background image.
+    1. Mean filter is better than the median filter to generate a background image.
     1. On the generated background image the objects of interest should not be visible.
-    1. The size of the filter's structuring element for generating the background image should be much smaller than the size of the objects.
+    1. When creating a background image by means of filtering: The size of the filter's structuring element should be much smaller than the size of the objects.
 
     > ## Solution
     > 1. False (mean filter is really quite poor in terms of removing foreground information)
     > 1. True (because this is the background image, so it should not contain any foreground information)
-    > 1. False (it should be much (maybe ~3 times) larger)
+    > 1. False (it should be much (maybe ~3 times) larger in order to remove the objects from the image)
     {: .solution}
 
 learn_next:
