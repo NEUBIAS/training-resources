@@ -8,13 +8,13 @@
 run("Close All");
 setOption("BlackBackground", true);
 
-open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__tubulin.tif");
+open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/watershed/xy_8bit_binary__tubulin.tif");
 rename("tubulin_mask");
 
-open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__nuclei.tif");
+open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/watershed/xy_8bit_binary__nuclei.tif");
 rename("nuclei_mask");
 
-open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit__tubulin_smooth.tif");
+open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/watershed/xy_16bit__tubulin_smooth.tif");
 rename("tubulin_smooth");
 run("Invert"); // invert for watershed
 
