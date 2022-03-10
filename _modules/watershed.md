@@ -79,13 +79,14 @@ assessment: >
 
   ### Fill in the blanks
 
-    1. The output of watershed transform is a  ___ .
-    1. Before applying the watershed transform on a flurorescence image, one often ___ and ___ the image.
-    1. When providing the watershed basins one speaks of a ___ watershed transform.
+    - The output of watershed transform is a  ___ .
+    - Before applying the watershed transform on a flurorescence image, one often ___ and ___ the image.
+    - When providing the watershed basins one speaks of a ___ watershed transform.
+
     > ## Solution
-    >   1. label mask image
-    >   1. inverts and smoothes
-    >   1. seeded (or marker controlled)
+    >   - label mask image
+    >   - inverts and smoothes
+    >   - seeded (or marker controlled)
     {: .solution}
 
 learn_next:
