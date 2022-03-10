@@ -14,10 +14,10 @@ motivation: |
 
 concept_map: >
   graph TD
-    T("Image") --> W("Watershed algorithm")
+    T("Image") --> W("Watershed transform")
+    SP("Seed points (at local intensity minima)") --> W
     W --> S("Segmented image")
-    S --- B("Boundaries/Watersheds: Intensity ridges")
-    S --- R("Regions/Basins")
+    S --- B("Boundaries / Watersheds (at intensity ridges)")
 
 figure: /figures/watershed.png
 figure_legend: Illustration of the watershed transform. a) Image with three objects that cannot be separated by a simple threshold. b) Foreground background segmentation of (a). c) Watershed transform of (e). d) (c) masked with (d). e) Inverse of (a). f) Intensity line profile along the line depicted in (e) with illustration of filling up the basins up to a the level where the yellow and blue regions meet and a watershed is build. g) as (f) but filling up the basins to a higher level.
