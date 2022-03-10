@@ -12,8 +12,8 @@
   - [X] max
   - [X] numberofvoxels
 - Manually measure the background intensity
-  - Change LUT to see the background: [ Ctrl/Cmd + C ]
-  - `makeRectangle(4, 26, 15, 12);`
+  - Change LUT to see the noise in the background: [ Ctrl/Cmd + C ]
+  - Draw a ROI in the background
   - [ Analyze › Set Measurements... ]
     - [X] Mean gray value
     - [X] Median
@@ -21,4 +21,3 @@
 - Open the object intensity measurements table in a spreadsheet software (e.g. Excel or R)
 - Add the manual background measurment as a new column
 - Add new columns for background corrected sum and mean intensity
-
