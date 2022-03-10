@@ -16,14 +16,15 @@ concept_map: >
     NM -->|seeds| W
     W --> S("Cells label mask")
 
-figure: /figures/template.png
-figure_legend: TODO
+figure: /figures/workflow_nuclei_and_cell_segmentation.png
+figure_legend: Workflow for nuclei and cell segmentation (magenta - H2B-mCherry; green - GFP-tubulin).
 
 activity_preface: |
-  - Open the image [xy_8bit_binary__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__nuclei.tif).
-  - TODO
+  - Open image [xyc_16bit__nuclei_tubulin_crop.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__nuclei_tubulin_crop.tif).
+  - Segment nuclei and cells following the workflow depicted in the module figure.
 
 activities:
+  - ["ImageJ Macro", "workflow_nuclei_and_cells_segmentation/activities/workflow_nuclei_and_cells_segmentation_imagejmacro.ijm", "java"]
 
 exercises:
 

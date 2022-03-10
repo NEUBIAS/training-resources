@@ -10,9 +10,7 @@ setOption("BlackBackground", true);
 
 
 // open the images
-open("/Users/tischer/Documents/training-resources/image_data/cell_segmentation_workflow/xyc_16bit__nuclei_tubulin_full_image.tif");
-makeRectangle(626, 272, 163, 156);
-run("Crop");
+open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/watershed/xyc_16bit__nuclei_tubulin_crop.tif");
 run("Duplicate...", "duplicate title=input");
 run("Split Channels", "keep");
 run("Grays");
@@ -23,12 +21,15 @@ selectWindow("C2-input");
 rename("nuclei");
 run("Grays");
 
-// create nuclei binary mask
+// segment nuclei
 selectWindow("nuclei");
 run("Duplicate...", "title=nuclei-binary");
 run("Median...", "radius=5");
 setThreshold(33089, 65535);
 run("Convert to Mask");
+run("Connected Components Labeling", "connectivity=4 type=[8 bits]");
+run("glasbey_on_dark");
+rename("nuclei-labels");
 
 // smooth cells
 selectWindow("cells");
@@ -49,12 +50,12 @@ rename("watershed-segmentation");
 
 // remove border cells and change LUT
 run("Remove Border Labels", "left right top bottom");
-rename("cell-segmentation")
+rename("cell-labels")
 run("glasbey_on_dark");
 
 // overlay on input image
 selectWindow("cells");
 run("Enhance Contrast", "saturated=0.35");
-run("Add Image...", "image=cell-segmentation x=0 y=0 opacity=40");;
+run("Add Image...", "image=cell-labels x=0 y=0 opacity=40");;
 
 run("Tile");
