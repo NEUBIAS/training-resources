@@ -53,6 +53,7 @@ activity_preface: |
 
 activities:
 - ["ImageJ Macro: MorpholibJ basic watershed", "watershed/activities/morpholibj_basic_watershed.ijm", "java"]
+- ["ImageJ GUI: MorpholibJ basic watershed", "watershed/activities/morpholibj_basic_watershed_imagejgui.md", "markdown"]
 - ["ImageJ Macro: MorpholibJ shape watershed", "watershed/activities/morpholibj_shape_watershed.ijm", "java"]
 - ["ImageJ Macro: MorpholibJ seeded watershed", "watershed/activities/morpholibj_seeded_watershed.ijm", "java"]
 
