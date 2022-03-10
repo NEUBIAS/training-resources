@@ -66,7 +66,7 @@ exercise_preface: |
     - The full challenge would be to segment the cells and nuclei in this image: [xyc_16bit__nuclei_tubulin.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/watershed/xyc_16bit__nuclei_tubulin.tif)
     - However, to make it easier we will start from preprocessed data:
       - Open tubulin mask: [xy_8bit_binary__tubulin.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/watershed/xy_8bit_binary__tubulin.tif)
-      - Open nuclei mask: [xy_8bit_binary__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master    /image_data/watershed/xy_8bit_binary__nuclei.tif)
+      - Open nuclei mask: [xy_8bit_binary__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/watershed/xy_8bit_binary__nuclei.tif)
       - Open smooth tubulin: [xy_16bit__tubulin_smooth.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/watershed/xy_16bit__tubulin_smooth.tif)
     - Using the three preprocessed images perform a seeded watershed to segment the cells.
 
