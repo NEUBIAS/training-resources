@@ -215,9 +215,20 @@ Show exercises for: <select id="id_exercises_platform" name="exercisesplatformli
 
 <br/>
 
+{% if page.keypoints %}
+<blockquote class="keypoints">
+<h2>Key points</h2>
+<ul>
+{% for keypoint in page.keypoints %}
+<li>{{ keypoint | markdownify }}</li>
+{% endfor %}
+</ul>
+</blockquote>
+{% endif %}
+
 <blockquote class="keypoints">
 <h2>Follow-up material</h2>
-<p>We recommend reading these modules next:</p>
+<p>Recommended follow-up modules:</p>
 <ul>
 {% for follow_up in page.learn_next %}
 <li>{{ follow_up | markdownify }}</li>

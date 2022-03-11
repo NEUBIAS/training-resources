@@ -41,9 +41,11 @@ module_order:
 - distance_transform
 - watershed
 - skeletonization
+- workflow_nuclei_and_cells_segmentation
 - manual_segmentation
 - script_env
 - script_run
+- script_record
 - variables
 - commenting
 - string_concat
