@@ -23,7 +23,6 @@ setThreshold(threshold2, 65535);
 setOption("BlackBackground", true);
 run("Convert to Mask");
 
-
 // apply threshold 3
 selectWindow("input");
 run("Duplicate...", "title=threshold3");
