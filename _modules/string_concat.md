@@ -42,11 +42,9 @@ assessment: >
 
   ### Fill in the blanks
 
-    - In imageJ macro language, "Nuclei"+1+2 concatenation results in ___ string.
     - "Nuclei"+"1"+"2" concatenation results in ___ string.
     
     > ## Solution
-    >   - In imageJ macro language "Nuclei"+1+2 concatenation results in **"Nuclei3"** string.
     >   - "Nuclei"+"1"+"2" concatenation results in **"Nuclei12"** string.
     {: .solution}
     
