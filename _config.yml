@@ -27,6 +27,7 @@ module_order:
 - volume_viewer
 - segmentation
 - binarization
+- auto_threshold
 - connected_components
 - measure_shapes
 - workflow_segment_2d_nuclei_measure_shape
@@ -38,6 +39,7 @@ module_order:
 - local_background_correction
 - filter_objects
 - workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape
+- auto_threshold
 - distance_transform
 - watershed
 - workflow_nuclei_and_cells_segmentation
