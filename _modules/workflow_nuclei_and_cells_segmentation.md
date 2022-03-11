@@ -7,7 +7,7 @@ prerequisites:
 objectives:
   - "Segment cells and nuclei, using nuclei as seeds for watershed segmentation of the cells."
 motivation: |
-  It is quite common to have fluorescence microscopy images with stainings for both the nuclei and cytoplasm. While nuclei are typically separate and thus easy to segment, the cells are often touching each other, which makes their segmentation much more challening. The workflow presented in this module is a common approach to tackle this challenge and thus very useful to know.
+  It is quite common to have fluorescence microscopy images with stainings for both nuclei and cytoplasm. While nuclei are typically separate and thus easy to segment, cells are often touching each other, which makes their segmentation much more challenging. The workflow presented in this module is a common approach to tackle this challenge and thus very useful to know.
 
 concept_map: >
   graph TD
@@ -17,7 +17,7 @@ concept_map: >
     W --> S("Cells label mask")
 
 figure: /figures/workflow_nuclei_and_cell_segmentation.png
-figure_legend: Workflow for nuclei and cell segmentation (magenta - H2B-mCherry; green - GFP-tubulin).
+figure_legend: Workflow for nuclei and cell segmentation using marker-controlled watershed (magenta - H2B-mCherry; green - GFP-tubulin). The nuclei mask is used to define the seeds/markers, the tubulin-channel is used to define the overall cells boundaries, finally the inverted intensity image is used for the watershed transform (i.e. flooding).
 
 activity_preface: |
   - Open image [xyc_16bit__nuclei_tubulin_crop.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__nuclei_tubulin_crop.tif).
@@ -30,14 +30,14 @@ exercises:
 
 assessment: >
 
-  ### Fill in the blanks
+  ### Discuss with your neighbour
 
-    1. TODO ___ .
-    1. TODO ___ .
+    1. For a marker controlled watershed what will happen if you remove seeds touching the boundary before the watershed transform?
+    2. Can you use the cell-mask, instead of the intensity image, for the watershed transform? 
     
     > ## Solution
-    >   1. TODO
-    >   1. TODO
+    >   1. This is not a good idea as you may not be able to find all cells and properly separate those. For instance merged cells may still touch the boundary.  
+    >   2. Apply a distance transform to the cell-mask and apply the watershed transform on its inverse.
     {: .solution}
 
 learn_next:
