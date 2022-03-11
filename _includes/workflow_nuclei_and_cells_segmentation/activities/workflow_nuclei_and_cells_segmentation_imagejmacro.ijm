@@ -10,7 +10,7 @@ setOption("BlackBackground", true);
 
 
 // open the images
-open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/watershed/xyc_16bit__nuclei_tubulin_crop.tif");
+open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__nuclei_tubulin_crop.tif");
 run("Duplicate...", "duplicate title=input");
 run("Split Channels", "keep");
 run("Grays");
