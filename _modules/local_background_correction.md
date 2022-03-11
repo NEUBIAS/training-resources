@@ -4,7 +4,6 @@ layout: module
 
 prerequisites:
   - "[Median filter](../median_filter)"
-  - "[Image math](../image_math)"
   - "[Projections](../projections)"
 
 objectives:
@@ -12,7 +11,7 @@ objectives:
   - Use the generated local background image to compute a foreground image
 
 motivation: >
-  Very often, biological images contain locally varying background intensities. This hampers both segmentation and intensity quantification. However, given a sufficient separation of length scales in terms of variation in background intensities vs. variation in intensities in the foreground, image filters can be employed to measure and correct for the background.
+  Very often, biological images contain locally varying background intensities. This hampers both segmentation and intensity quantification. However, often it is possible to generate a background image that can be subtracted in order to yield a foreground image with zero background. It is very important to know about this, because removing spatially varying background is a prevalent task in bioimage analysis.
 
 concept_map: >
   graph TD

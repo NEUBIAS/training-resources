@@ -11,7 +11,7 @@ motivation: |
 
 concept_map: >
   graph TD
-    N("Nuclei") --> NM("Nuclei mask")
+    N("Nuclei") --> NM("Nuclei label mask")
     C("Cells") --> W("Watershed transform")
     NM -->|seeds| W
     W --> S("Cells label mask")
@@ -38,6 +38,17 @@ assessment: >
     > ## Solution
     >   1. This is not a good idea as you may not be able to find all cells and properly separate those. For instance merged cells may still touch the boundary.  
     >   2. Apply a distance transform to the cell-mask and apply the watershed transform on its inverse.
+     {: .solution}
+
+  ### True or false?
+    1. For cell segmentation with a watershed transform one always needs nuclei as seeds.
+    1. Nuclei are less likely to touch each other than cells.
+    1. For a watershed transform, it is very important to image the cytoplasmic signal at the highest resolution.
+    
+    > ## Solution
+    >   1. False; if the cellular signal happens to, e.g., be very dim in the cell center and bright at the cell boundaries one may try directly using it as an input to a watershed transform.
+    >   1. True; nuclei have the cytoplasm around them, which often creates a spatial gap between neighbouring nuclei, making them easier to segment
+    >   1. False; in fact, typically, the blurrier this signal is the better it is suited for separating cells using the watershed transform.
     {: .solution}
 
 learn_next:
