@@ -67,36 +67,32 @@ external_links:
 
 #### Programming script content
 
-A programming script is a text file where each line is code that can be executed by the platform (the compiler) in which you are running the script. There are different types of content that a line can represent. Sometimes one line can even contain multiple of such contents. In the following sections some of the very common types of content are briefly discussed.
+A programming script is a text file where each line is code that can be executed by the platform (the compiler) in which you are running the script. There are different types of content that a line can represent. Sometimes one line can even contain multiple of such contents. In the following sections some of the very common types of content are very briefly discussed (check out the follow-up modules for much more details).
 
 ##### Comments
 
 It is good practice to add some human readable comments to explain what the code is doing. To tell the compiler that a part of a script is a comment, one prepends the comment section special symbol, such as `//` or `#`.
 
 Examples:
-- IJ-Macro: `// binarise image`
-- IJ-Groovy: `// binarise image`
+- ImageJ-Macro, Java, Groovy: `// binarise image`
 - Python: `# binarise image`
 - Python: `binary_image = image > 49 # binarise image`
   - In this example the comment is on the same line as the actual code
-
-Learn more in module TODO.
 
 ##### Import statements
 
 In some cases one needs to tell the executing environment which libraries are needed to run the code. This is done via so-called import statements.
 
 Examples:
-- IJ-Macro: N/A
-- IJ-Groovy: `import ij.plugin.Scaler`
+- Groovy: `import ij.plugin.Scaler`
 - Python: `from os import open`
-
-Learn more in module TODO.
 
 ##### Functions and parameter
 
+Functions are the heart of a program, they do stuff, depending on the paramteres that you give.
+
 Examples:
-- IJ-Macro: `IJ.run(...)`
+- IJ-Macro: `run("Duplicate...", "title=duplicateImage");`
 - Python: `viewer.add_image(image)`
 
 ##### Variables
@@ -106,5 +102,3 @@ Very often you want to store the results of some computation. In most languages 
 Examples:
 - IJ-Macro: `lengthOfString = getStringWidth("hello world");`
 - Python: `binary_image = threshold(image, 10)`
-
-Learn more in module TODO.
