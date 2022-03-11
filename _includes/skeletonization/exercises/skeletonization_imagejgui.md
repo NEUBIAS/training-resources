@@ -1,4 +1,4 @@
-- Open [xy_8bit_glialcells.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_glialcells2.tif)
+- Open [xy_8bit_glialcells2.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_glialcells2.tif)
 - Perform skeletonization: **[ Process › Binary › Skeletonize]**
 - Obtain branch information by analyzing the skeleton: **[Analyze › Skeleton › Analyze Skeleton (2D/3D)]**
     - [ ] 'Prune ends'
