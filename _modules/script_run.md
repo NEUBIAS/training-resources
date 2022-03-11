@@ -1,7 +1,7 @@
 ---
 title: Running a script
 layout: module
-tags: ["scripting","draft"]
+tags: ["scripting"]
 prerequisites:
 objectives:
   - "Understand that a script is a single text file that is written in a specific scripting language"
@@ -36,16 +36,17 @@ activity_preface: |
   - You may discuss particularities for your platform
 
 activities:
-  - ["Run ImageJ Macro in Fiji script editor", "script_run/activities/script_run_fiji_imagej_macro.md", "markdown"]
+  - ["ImageJ Macro in Fiji", "script_run/activities/script_run_fiji_imagej_macro.md", "markdown"]
   - ["Python script in napari console", "script_run/activities/script_run_napari_terminal.md", "markdown"]
   - ["Python script in napari script editor plugin", "script_run/activities/script_run_napari_script_editor.md", "markdown"]
 
 exercises:
+  - ["ImageJ Macro in Fiji", "script_run/exercises/script_run_fiji_imagej_macro.md"]
 
 assessment: >
 
   ### True or False
-    - Python is a scripting language. 
+    - Python is a scripting language.
     - A comment is a line of code that will be executed.
     - You can run scripts in Excel and Word.
     - You can run scripts in Fiji.
@@ -53,7 +54,7 @@ assessment: >
     > ## Solution
     >   - **True**
     >   - **False** Comments are just for humans to read.
-    >   - **True** Excel and Word in fact do have their own [scripting capabilities}(https://support.microsoft.com/en-us/office/introduction-to-office-scripts-in-excel-9fbe283d-adb8-4f13-a75b-a81c6baf163a)
+    >   - **True** Excel and Word in fact do have their own [scripting capabilities](https://support.microsoft.com/en-us/office/introduction-to-office-scripts-in-excel-9fbe283d-adb8-4f13-a75b-a81c6baf163a)
     >   - **True**
     {: .solution}
 
@@ -64,7 +65,7 @@ external_links:
   - "[Scripting QuPath](https://qupath.readthedocs.io/en/stable/docs/scripting/overview.html)"
 ---
 
-#### Programming ccript content
+#### Programming script content
 
 A programming script is a text file where each line is code that can be executed by the platform (the compiler) in which you are running the script. There are different types of content that a line can represent. Sometimes one line can even contain multiple of such contents. In the following sections some of the very common types of content are briefly discussed.
 
@@ -97,8 +98,6 @@ Learn more in module TODO.
 Examples:
 - IJ-Macro: `IJ.run(...)`
 - Python: `viewer.add_image(image)`
-
-Learn more in module TODO.
 
 ##### Variables
 
