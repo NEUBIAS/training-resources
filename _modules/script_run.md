@@ -3,7 +3,6 @@ title: Running a script
 layout: module
 tags: ["scripting","draft"]
 prerequisites:
-  - "[TODO: Setting up a scripting environment](../pixels)"
 objectives:
   - "Understand that a script is a single text file that is written in a specific scripting language"
   - "Understand the basic building blocks of a script, i.e. what happens in each line"
@@ -11,10 +10,7 @@ objectives:
   - "Modify a bioimage analysis script"
 
 motivation: |
-  Scripts are a very good and common way of sharing and publishing bioimage analysis workflows.
-  It is thus very important to know how to run such scripts, e.g. when you find one in a publication or 
-  when someone in your bioimage analysis support develops such a script for you.
-  Many of the common bioimage analysis platforms support scripting, e.g. Fiji, QuPath, napari.
+  Scripts are a very good and common way of sharing and publishing bioimage analysis workflows. It is thus very important to know how to run such scripts, e.g. when you find one in a publication or when someone in your bioimage analysis support develops such a script for you. Many of the common bioimage analysis platforms support scripting, e.g. Fiji, QuPath, napari.
   
 concept_map: >
   graph TD
@@ -40,7 +36,7 @@ activity_preface: |
   - You may discuss particularities for your platform
 
 activities:
-  - ["ImageJ macro in Fiji script editor", "script_run/activities/script_run_fiji_imagej_macro.md", "markdown"]
+  - ["Run ImageJ Macro in Fiji script editor", "script_run/activities/script_run_fiji_imagej_macro.md", "markdown"]
   - ["Python script in napari console", "script_run/activities/script_run_napari_terminal.md", "markdown"]
   - ["Python script in napari script editor plugin", "script_run/activities/script_run_napari_script_editor.md", "markdown"]
 
