@@ -1,30 +1,18 @@
-Perform skeletonization and skeleton analysis on this image: [xy_8bit_glialcells2.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_glialcells2.tif).
+```java
+// Open binary image and perform skeletonization
 
-Try to answer the following questions:
+// Open image
+open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_glialcells2.tif");
 
-1. which cell has the largest number of branches?
+// Duplicate the image
+run("Duplicate...", " ");
 
-2. which cells has the longest "longest shortest path"?
+// Perform skeletonization
+run("Skeletonize");
 
-3. which cells has the highest average branch length?
+// Obtain branch properties
+run("Analyze Skeleton (2D/3D)", "prune=none calculate show display");
 
-> ## Solution
-> ```
->// Open binary image and perform skeletonization
->
->// Open image
->open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_glialcells2.tif");
->
->// Duplicate the image
->run("Duplicate...", " ");
->
->// Perform skeletonization
->run("Skeletonize");
->
->// Obtain branch properties
->run("Analyze Skeleton (2D/3D)", "prune=none calculate show display");
->
->run("Tile")
->// check the data in the results window to answer the questions.
-> ```
-{: .solution}
+run("Tile")
+// check the data in the results window to answer the questions.
+```

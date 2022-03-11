@@ -17,12 +17,14 @@ motivation: |
 
 concept_map: >
   graph TD
-    BI("Binary image") --> S("Skeletonize")
-    S --> SI("Skeleton image")
-    SI --> M("Measure branch properties")
+       BI("Binary image") --> S("Skeletonize")
+       S --> SI("Skeleton image")
+       SI --- B("Slab pixels")
+       SI --- J("Junction pixels")
+       SI --- E("End-point pixels")
 
 figure: /figures/skeletonization.png
-figure_legend: Image before and after skeletonization.
+figure_legend: Image before and after skeletonization. a) raw image, b) binary image, c) skeleton image, d) tagged skeleton showing slab pixels (dark purple), junction pixels (cyan), and end-point pixels (pink). Examples of different skeleton pixels are indicated by arrows in the corresponding colors.
 
 activity_preface: |
   - Open the binary image [xy_8bit_glialcells.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_glialcells.tif).
@@ -35,7 +37,15 @@ activities:
   - ["ImageJ Jython", "skeletonization/activities/skeletonization_imagej-jython.py", "python"]
 
 exercise_preface: |
-  Perform skeletonization and skeleton analysis in one of the following exercises:
+  Perform skeletonization and skeleton analysis on this image: [xy_8bit_glialcells2.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_glialcells2.tif).
+
+  Try to answer the following questions:
+
+  1. Which cell has the largest number of branches?
+
+  2. Which cell has the longest "longest shortest path"?
+
+  3. Which cell has the highest average branch length?
 
 exercises:
   - ["ImageJ GUI", "skeletonization/exercises/skeletonization_imagejgui.md", "markdown"]

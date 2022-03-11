@@ -1,33 +1,21 @@
-Perform skeletonization and skeleton analysis on this image: [xy_8bit_glialcells2.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_glialcells2.tif).
+```python
+# Open image and perform skeletonization
 
-Try to answer the following questions:
+# import classes
+from ij import IJ
 
-1. which cell has the largest number of branches?
+# open image
+imp = IJ.openImage("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_glialcells2.tif")
+imp.show()
 
-2. which cells has the longest "longest shortest path"?
+# perform skeletonization
+skeleton = imp.duplicate()
+IJ.run(skeleton, "Skeletonize", "")
+skeleton.show()
 
-3. which cells has the highest average branch length?
+# analyze the skeleton
+IJ.run(skeleton, "Analyze Skeleton (2D/3D)", "prune=none calculate show display")
 
-> ## Solution
-> ```python
-># Open image and perform skeletonization
->
-># import classes
->from ij import IJ
->
-># open image
->imp = IJ.openImage("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_glialcells2.tif")
->imp.show()
->
-># perform skeletonization
->skeleton = imp.duplicate()
->IJ.run(skeleton, "Skeletonize", "")
->skeleton.show()
->
-># analyze the skeleton
->IJ.run(skeleton, "Analyze Skeleton (2D/3D)", "prune=none calculate show display");
->
->IJ.run("Tile")
-># check the data in the results window to answer the questions. 
-> ```
-{: .solution}
+IJ.run("Tile")
+# check the data in the results window to answer the questions.
+```
