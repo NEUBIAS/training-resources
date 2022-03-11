@@ -1,7 +1,7 @@
 ---
 title: Watershed
 layout: module
-tags: ["draft"]
+
 prerequisites:
   - "[Connected-component analysis](../connected_components)"
   - "[Distance transform](../distance_transform)"

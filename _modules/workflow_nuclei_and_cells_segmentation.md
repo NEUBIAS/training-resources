@@ -1,7 +1,7 @@
 ---
 title: Nuclei and cells segmentation
 layout: module
-tags: ["draft","workflow"]
+tags: ["workflow"]
 prerequisites:
   - "[Watershed transform](../watershed)"
 objectives:
