@@ -1,3 +1,4 @@
+```java
 /*
  * Shape watershed (with distance transform)  in Fiji
  * 
@@ -24,3 +25,4 @@ run("Gaussian Blur...", "sigma=2");
 
 // watershed with mask
 run("Classic Watershed", "input=dist mask=mask use min=0 max=255");
+```
