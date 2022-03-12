@@ -42,6 +42,7 @@ module_order:
 - auto_threshold
 - distance_transform
 - watershed
+- skeletonization
 - workflow_nuclei_and_cells_segmentation
 - manual_segmentation
 - script_env
