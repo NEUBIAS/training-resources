@@ -1,3 +1,4 @@
+```java
 /*
  * Seeded watershed in Fiji
  * 
@@ -20,3 +21,4 @@ run("Invert"); // invert for watershed
 
 // watershed on inverted tubulin with nuclei as seeds and binary tubulin as mask
 run("Marker-controlled Watershed", "input=tubulin_smooth marker=nuclei_mask mask=tubulin_mask compactness=0 binary");
+```
