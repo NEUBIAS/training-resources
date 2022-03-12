@@ -8,6 +8,8 @@ prerequisites:
 objectives:
   - "Combine (concatenate) strings, paths and numbers into a bigger string"
 motivation: |
+  Combing several strings into a a larger string is a prevalent operation in scripting. This is useful, e.g., to create file paths and create log messages. Such concatenation of strings is surprisingly error prone and it is thus important to learn it properly and be aware of all the pitfalls.
+
  concept_map: >
   graph TD
     A("Substring 1") --> X("Concatenated string")
@@ -20,12 +22,11 @@ figure_legend: String concatenation.
 
 activity_preface: |
   - Open a script editor.
-  - Define three variables with values "Hello ", "user number " and "50".
-  - Concatenate the three variables.
+  - Define three variables with values `"Analyzing image"`, `11` and `"..."`.
+  - Concatenate the three variables to create the string: `"Analyzing image 11..."`.
 
 activities:
   - ["ImageJ Macro", "string_concat/activities/string_concat.ijm", "java"]
-  - ["ImageJ Jython", "string_concat/activities/string_concat.py", "python"]
 
 exercises:
   - ["ImageJ Macro: Concatenate variables", "string_concat/exercises/string_concat_imagejmacro.md"]
