@@ -1,7 +1,7 @@
 ---
 title: Batch processing
 layout: module
-tags: ["draft","scripting"]
+tags: ["scripting"]
 prerequisites:
 objectives:
   - "Automatically process a number of images"
@@ -22,11 +22,10 @@ figure_legend: Batch processing of many images, yielding many tables.
 
 activity_preface: |
   - Batch process several images containing nuclei.
+  - Example images can be found in [image_data/batch_process](https://github.com/NEUBIAS/training-resources/tree/master/image_data/batch_process).
     - For each image
       - Segment the nuclei and save the label mask.
       - Measure the nuclei area and save the results in a table.
-  - Example images can be found in [image_data/batch_process](https://github.com/NEUBIAS/training-resources/tree/master/image_data/batch_process).
-
 activities:
   - ["ImageJ Macro Scijava","batch_processing/activities/nuclei_measure_shape_scijava_imagejmacro.ijm", "Java"]
 
@@ -37,15 +36,15 @@ assessment: >
   ### Fill in the blanks
 
     1. If you have thousands of images to process you should consider using a ___ .
-    1.  ___ .
+    1. Batch processing refers to ____ processing many data sets.
     
     > ## Solution
     >   1. computer cluster (HPC)
-    >   1. TODO
+    >   1. automatically
     {: .solution}
 
 learn_next:
 
 external_links:
+  - "[Batch processing in ImageJ](https://imagej.net/scripting/batch)"
 ---
-
