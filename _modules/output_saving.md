@@ -35,7 +35,7 @@ activity_preface: |
   - Save the measurements table, ROI set and label image to the specified output directory.
 
 activities:
-  - ["ImageJ GUI/Macro", "output_saving/activities/output_saving_macro.ijm", "java"]
+  - ["ImageJ Macro", "output_saving/activities/output_saving_macro.ijm", "java"]
   - ["ImageJ Jython", "output_saving/activities/output_saving_jython.py", "python"]
 
 exercises:
