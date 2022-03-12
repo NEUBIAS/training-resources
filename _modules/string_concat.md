@@ -10,7 +10,7 @@ objectives:
 motivation: |
   Combing several strings into a a larger string is a prevalent operation in scripting. This is useful, e.g., to create file paths and create log messages. Such concatenation of strings is surprisingly error prone and it is thus important to learn it properly and be aware of all the pitfalls.
 
- concept_map: >
+concept_map: >
   graph TD
     A("Substring 1") --> X("Concatenated string")
     B("Substring 2") --> X
@@ -37,14 +37,14 @@ assessment: >
 
   ### Fill in the blanks
 
-    1. In MacOS and Linux sub-folders are separated by the ___ string, whereas on Windows they are separated by the ___ string.
-    1. Concatenating "Hello" and "world" one obtains ___.
-    1. Concatenation the variables `folder = "/Users/Images"` and `file = "MyImage.tif"` one obtains ___.
+    1. In MacOS and Linux sub-folders are separated by the `___` string, whereas on Windows they are separated by the `___` string.
+    1. Concatenating `"Hello"` and `"world"` one obtains `___`.
+    1. Concatenation the variables `folder = "/Users/Images"` and `file = "MyImage.tif"` one obtains `___`.
 
     > ## Solution
-    >   1. MacOs "/", Windows "\"
-    >   1. One would get "Helloworld"; to fix this one needs to add a third " " string in the middle to get "Hello world". 
-    >   1. One would obetain "/Users/ImagesMyImage.tif". There are several ways to fix this, depending on the scripting language. A good way is to use functions such as, e.g., `os.path.join( folder, file )` in python, because this will work for both cases: `folder = "/Users/Images"` and `folder = "/Users/Images/"`.
+    >   1. MacOs `"/"`, Windows `"\"`
+    >   1. One would get `"Helloworld"`; to fix this one needs to add a third `" "` string in the middle to get `"Hello world"`. 
+    >   1. One would obetain `"/Users/ImagesMyImage.tif"`. There are several ways to fix this, depending on the scripting language. A good way is to use functions such as, e.g., `os.path.join( folder, file )` in python, because this will work for both cases: `folder = "/Users/Images"` and `folder = "/Users/Images/"`.
     {: .solution}
     
 
