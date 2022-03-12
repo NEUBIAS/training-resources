@@ -51,6 +51,7 @@ module_order:
 - commenting
 - string_concat
 - output_saving
+- batch_processing
 - script_functions
 - volume_viewer
 - ome_zarr_s3
