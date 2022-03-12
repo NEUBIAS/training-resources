@@ -1,20 +1,14 @@
 ---
 title: String concatenation
 layout: module
-tags: ["scripting","draft"]
+tags: ["scripting"]
 prerequisites: 
   - "[Variables](../variables)"
 
 objectives:
-  - "Concatenate strings"
+  - "Combine (concatenate) strings, paths and numbers into a bigger string"
 motivation: |
-  String is a type of variable that can cotain a combination of characters. 
-  String concatenation is the operation of joining multiple substrings together to make a bigger one. 
-  For example concatenating "Hello " and "world!" would result into "Hello world!". 
-  You can also concatenate strings to create paths to the images by concatenating path to the folder and file names. 
-  Please note that when concatenating file path and file name you might need to also concatenate a file separator such as / or \ between file path and file name. Depending on the operating system and the programming language this file separator can be different. In the external links, you will find a generic way of adding a file separator in imageJ as an example.
-  
-concept_map: >
+ concept_map: >
   graph TD
     A("Substring 1") --> X("Concatenated string")
     B("Substring 2") --> X
@@ -35,33 +29,37 @@ activities:
 
 exercises:
   - ["ImageJ Macro: Concatenate variables", "string_concat/exercises/string_concat_imagejmacro.md"]
-  - ["ImageJ Macro: Concatenate gaussian sigma values", "string_concat/exercises/string_concat_imagejmacro2.md"]
-  - ["ImageJ Macro: Concatenate paths", "string_concat/exercises/string_concat_imagejmacro3.md"]
+  - ["ImageJ Macro: Create function arguments", "string_concat/exercises/string_concat_imagejmacro2.md"]
+  - ["ImageJ Macro: Create paths", "string_concat/exercises/string_concat_imagejmacro3.md"]
 
 assessment: >
 
   ### Fill in the blanks
 
-    - "Nuclei"+"1"+"2" concatenation results in ___ string.
-    
+    1. In MacOS and Linux sub-folders are separated by the ___ string, whereas on Windows they are separated by the ___ string.
+    1. Concatenating "Hello" and "world" one obtains ___.
+    1. Concatenation the variables `folder = "/Users/Images"` and `file = "MyImage.tif"` one obtains ___.
+
     > ## Solution
-    >   - "Nuclei"+"1"+"2" concatenation results in **"Nuclei12"** string.
+    >   1. MacOs "/", Windows "\"
+    >   1. One would get "Helloworld"; to fix this one needs to add a third " " string in the middle to get "Hello world". 
+    >   1. One would obetain "/Users/ImagesMyImage.tif". There are several ways to fix this, depending on the scripting language. A good way is to use functions such as, e.g., `os.path.join( folder, file )` in python, because this will work for both cases: `folder = "/Users/Images"` and `folder = "/Users/Images/"`.
     {: .solution}
     
 
 learn_next:
-[comment]: <> ( - NEEDS TO BE ADDED "[Saving tables, images, ROIs](../)")
 
 external_links:
   - "[Wikipedia: String concatenation operator in different languages](https://en.wikipedia.org/wiki/Comparison_of_programming_languages_(strings))"
-  - "[File.separator function in imageJ](https://imagej.nih.gov/ij/developer/macro/functions.html#F)"
+  - "[File.separator in ImageJ](https://imagej.nih.gov/ij/developer/macro/functions.html#F)"
   
 ---
+#### Strings
+
+Strings are objects (variables) containing a sequence of characters such as "a" and "b".
+
 #### String concatenation
-You concatenate strings by using specific operators, depending on the programming platform. Fo example, the + operator. Let's look at a few examples:
 
-`"Channel_"+"1"` -> `"Channel_1"`
+String concatenation is the operation of joining multiple substrings together to make a bigger one. For example concatenating "Hello " and "world!" would result into "Hello world!". 
 
-`"image_"+"duplicate"` -> `"image_duplicate"`
- 
-
+A frequent operation in bioimage analysis is to create paths to images by concatenating a folder and file name to a full path. Please note that when concatenating a folder and a file name you might need to add a "/" or "\" between the folder and the file name. Which of the two depends on the operating system and and thus all scripting languages offer special functions to help you write code that will run on all operating systems.
