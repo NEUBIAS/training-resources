@@ -14,14 +14,17 @@ motivation: >
   The measurement of intensities in biological images is very common, e.g. to quantify expression levels of certain proteins by means of immuno-histochemistry. However, performing correct intensity measurements is very tricky and there are a lot of pitfalls. It is thus of utmost important to understand very well what one is doing. Without in-depth understanding the chance to publish wrong results based on intensity measurements is rather high.
 
 concept_map: >
-  graph LR
+  graph TD
     li[Label image] --> im("Object intensity measurements")
     ii[Intensity image] --> im
     im --> table["Results table"]
-    table --> object_rows["Rows: Objects<br><br>Columns: Mean, Sum, Max, ..., Background"]
     ii --> bgm("Background measurement")
     bgm --> table
-
+    table --> object_column["Columns are intensity features"]
+    object_column -.- |"e.g."| ex["Mean, Sum, Max, ..., Background"] 
+    table --> object_row["Rows are objects"]
+   
+        
 figure: /figures/measure_intensities.png
 figure_legend: H2b-mCherry widefield image of two cells. Common object intensity measurements, using a label mask and a manual background measurement.
 
