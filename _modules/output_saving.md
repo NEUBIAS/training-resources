@@ -29,9 +29,9 @@ figure: /figures/output_saving.png
 figure_legend: Image analysis processes can yield several outputs, such as measurement tables, ROI sets and label masks.
 
 activity_preface: |
-  - Open the image [blob.gif](http://imagej.net/images/blobs.gif) and binarize it.
+  - Open the image [xy_8bit_binary_randomshapes.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary_randomshapes.tif).
   - Perform measurements on the different foreground objects, generating a ROI set, label image, and measurements table.
-  - Specify an output directory (for example 'C:\\Users\\username\\Desktop' on Windows (note double "\" because a single "\" is interpreted as an escape character) or '/Users/username/Desktop/' on MacOS).
+  - Specify an output directory (for example 'C:\\Users\\username\\Desktop' on Windows (note double "\\" because a single "\\" is interpreted as an escape character) or '/Users/username/Desktop/' on MacOS).
   - Save the measurements table, ROI set and label image to the specified output directory.
 
 activities:
