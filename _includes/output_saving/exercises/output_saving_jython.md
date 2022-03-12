@@ -5,7 +5,7 @@ Adapt the below code to change the following:
 4. When running the code, try to specify different output directories.
 
 > ## Solution
-> ```
+> ```python
 ># import classes
 >from ij import IJ, ImagePlus, WindowManager
 >from ij.io import FileSaver
@@ -15,7 +15,7 @@ Adapt the below code to change the following:
 >from ij.process import ImageProcessor
 >import os
 >
->outputDir = FIXME # (e.g. r'C:\Users\UserName\Desktop' on Windows or '/Users/UserName/Desktop/' on MacOS)
+>outputDir = FIXME # (e.g. r'C:\Users\username\Desktop', 'C:\\Users\\username\\Desktop' or 'C:/Users/username/Desktop' on Windows or '/Users/username/Desktop/' on MacOS)
 >
 ># specify settings
 >min_size = 100
@@ -36,18 +36,18 @@ Adapt the below code to change the following:
 >
 ># Configure and run particle analyzer
 >results = ResultsTable() # construct empty resultstable
->pa = ParticleAnalyzer((ParticleAnalyzer.ADD_TO_MANAGER + ParticleAnalyzer.SHOW_ROI_MASKS),(Measurements.AREA >+ Measurements.CENTROID + Measurements.CENTER_OF_MASS + Measurements.PERIMETER + Measurements.RECT), >results, min_size, max_size, 0.5, 1)
+>pa = ParticleAnalyzer((ParticleAnalyzer.ADD_TO_MANAGER + ParticleAnalyzer.SHOW_ROI_MASKS),(Measurements.AREA + Measurements.CENTROID + Measurements.CENTER_OF_MASS + Measurements.PERIMETER + Measurements.RECT), results, min_size, max_size, 0.5, 1)
 >pa.analyze(blobsMask) # run the particle analyzer on the image
 >results.show("Results")
 >
 ># Save results, label mask, and ROIs
->results.save(os.path.join(outputdir, "blob_results_jython.csv")) # save results table
+>results.save(os.path.join(outputDir, "blob_results_jython.csv")) # save results table
 >
 >labelMask = WindowManager.getImage("Count Masks of blobs mask")
 >IJ.run(labelMask, "Glasbey", "") # set glasbey LUT
->FileSaver(labelMask).saveAsPng(os.path.join(outputdir, "blob_labels_jython.png")) # save the label mask
+>FileSaver(labelMask).saveAsPng(os.path.join(outputDir, "blob_labels_jython.png")) # save the label mask
 >
 >rm.runCommand("Select All")
->rm.runCommand("Save", os.path.join(outputdir, "blob_ROIset_jython.zip")) # save the ROIs
+>rm.runCommand("Save", os.path.join(outputDir, "blob_ROIset_jython.zip")) # save the ROIs
 > ```
 {: .solution}
