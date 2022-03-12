@@ -20,7 +20,7 @@ run("Set Measurements...", "area centroid center perimeter bounding redirect=Non
 open("http://imagej.net/images/blobs.gif"); // open blobs
 run("Convert to Mask"); // convert to mask using default settings
 run("Analyze Particles...", "size=&min_size-&max_size circularity=&min_circ-&max_circ show=[Count Masks] display add") // run the particle analyzer
-run("glasbey", "display=blob_labels_macro.tif")
+run("glasbey")
 roiManager("Select All") // select all rois
 roiManager("Save", outputDir + File.separator + "blob_ROIset_macro.zip"); // save rois to output directory
 saveAs("Results", outputDir + File.separator + "blob_results_macro.txt"); // save results file to output directory
