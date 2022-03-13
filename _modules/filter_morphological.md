@@ -7,11 +7,11 @@ prerequisites:
   - "[Segmentation](../segmentation)"
   - "[Median filter](../median_filter)"
   - "[Connected component labeling](../connected_components)"
-  - "[Neighbourhood image filters](../filter_neighbourhood)"
+  - "[Neighbourhood filters](../filter_neighbourhood)"
   
 objectives: 
   - "Understand how to design morphological filters using rank filters"
-  - "Execute morphological filters on binary or label images and explain the output"
+  - "Execute morphological filters on binary or label images and understand the output"
 
 motivation: >
  Morphological filters (MFs) are used to clean up segmentation masks and achieve a change in morphology and/or size of the objects. For example, MFs are used to remove wrongly assigned foreground pixels, separate touching objects, or identify objects boundaries. 
@@ -55,7 +55,7 @@ activity_preface: |
     * Perform dilation followed by erosion - closing. Explains it effects on filling small holes, connecting gaps. If applicable show that opening runs as single command.
   
  * Morphological internal gradient of binary
-    * Open [xy_8bit_binary__h2b_bg_corr.tif]("https://raw.githubusercontent.com/NEUBIAS/training-resources/master/image_data/xy_8bit_binary__h2b_bg_corr.tif")
+    * Open [xy_8bit_binary__h2b.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__h2b.tif)
     * Perform an erosion
     * Subtract eroded image from binary image and discuss the results (Internal Gradient)
     * If applicable show where the morphological gradient runs as a single command
@@ -142,7 +142,7 @@ Image subtraction using eroded/dilated images allows to identify the boundary of
 
 
 ## Morphological filters on label images
-Morphological filters work also on label images. If the objects are not touching this will achieve the expected result for each label. However, when objects touch each other operation as dilations can lead to unwanted results. 
+Morphological filters work also on label images. If the objects are not touching this will achieve the expected result for each label. However, when objects touch each other, operations such as dilations can lead to unwanted results. 
 
 
 ## Morphological filters on grey level images
