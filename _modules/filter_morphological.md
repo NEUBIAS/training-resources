@@ -66,6 +66,26 @@ activities:
  - ["ImageJ Macro & GUI: Closing and opening", "filter_morphological/activities/filter_morphological_opening_closing.ijm", "java"]
  - ["ImageJ Macro & GUI: Internal Gradient", "filter_morphological/activities/filter_morphological_inner_gradient.ijm", "java"]
   
+exercise_preface: |
+  ### Measure intensity on the nuclear membrane
+  In image [xyc_16bit__nup__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__nup_nuclei.tif) we would like to measure the intensity along the nuclear membrane (channel 1) using the information from the DNA (channel 2). We designed two exercises that provide a workflow using morphological filters. 
+  
+  #### Clean up segmentation
+  
+  * Use a combination of opening and closing operations to improve the segmentation of the DNA channel  [xy_8bit_binary__nuclei_noisy.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__nup_nuclei/xy_8bit_binary__nuclei_noisy.tif). 
+  *  The goal is to achieve something like [xy_8bit_binary__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__nup_nuclei/xy_8bit_binary__nuclei.tif) that can be used for further processing and identification of membrane regions. 
+  
+  #### Define nuclear rim 
+  * Use morphological filtering to define an inner rim of width 3 pixels using the label mask:  [xy_8bit_labels__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__nup_nuclei/xy_8bit_labels__nuclei.tif)
+  * (Optional) Measure the mean and total intensity in the first channel of  [xyc_16bit__nup__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__nup_nuclei.tif) using the modified labels masks.
+
+exercises: 
+ - ["ImageJ GUI: Clean up segmentation", "filter_morphological/exercises/filter_morphological_binary.md"]
+ - ["ImageJ GUI: Define nuclear rim",  "filter_morphological/exercises/filter_morphological_label.md"]
+ - ["ImageJ Macro: Clean up segmentation", "filter_morphological/exercises/filter_morphological_binary.ijm"]
+ - ["ImageJ Macro: Define nuclear rim",  "filter_morphological/exercises/filter_morphological_label.ijm"]
+ 
+
 
 assessment: | 
  
@@ -96,7 +116,7 @@ assessment: |
       1. Morphological openings on binary images never decrease the number of foreground pixels.
       2. Morphological closings on binary images never decreases the number of foreground pixels.
       3. Performing a morphological closing twice in a row does not make sense, because the second closing does not further change the image.
-      4. Performing a morphological closing with radius 2 (5x5) element is equivalent to two subsequent closing operation with radius 1.
+      4. Performing a morphological closing with radius 2 element is equivalent to two subsequent closing operation with radius 1.
     
       > ## Solution
       > 1. False
@@ -104,11 +124,8 @@ assessment: |
       > 3. True
       > 4. False
       {: .solution}
-    
-exercises: 
- - ["ImageJ Macro & GUI: Clean up segmentation", "filter_morphological/exercises/filter_morphological_binary.md"]
- - ["ImageJ Macro & GUI: Label edges",  "filter_morphological/exercises/filter_morphological_label.md"]
  
+
 
 learn_next:
 
@@ -138,7 +155,7 @@ Image subtraction using eroded/dilated images allows to identify the boundary of
  * External gradient: dilated - original
  * (Symmetric) gradient: dilated - eroded 
 
-**Fill holes** operation is a slightly more complex morphological operation. It is used to identify background pixels surrounded by foreground pixels and change their value to foreground. Algorithmically there are several ways to achieve this. In this module we only show an application. 
+**Fill holes** operation is a slightly more complex morphological operation. It is used to identify background pixels surrounded by foreground pixels and change their value to foreground. Algorithmically there are several ways to achieve this.
 
 
 ## Morphological filters on label images
