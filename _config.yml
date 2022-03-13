@@ -42,6 +42,7 @@ module_order:
 - auto_threshold
 - distance_transform
 - watershed
+- skeletonization
 - workflow_nuclei_and_cells_segmentation
 - manual_segmentation
 - script_env
@@ -51,6 +52,7 @@ module_order:
 - commenting
 - string_concat
 - output_saving
+- batch_processing
 - script_functions
 - volume_viewer
 - ome_zarr_s3

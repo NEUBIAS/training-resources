@@ -1,11 +1,10 @@
-//defining variables
-text1 = "Hello ";
-text2 = "user number ";
-num1 = 50
+// define variables
+logPrefix = "Analyzing image";
+imageNumber = 11;
+logSuffix = "...";
 
+// concatenate the strings and number
+logMessage = logPrefix + " " +imageNumber + logSuffix;
 
-//concatenating strings
-text3 = text1 + text2 + num1;
-
-//printing the results
-print(text3);
+//print the message
+print(logMessage);
