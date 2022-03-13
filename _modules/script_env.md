@@ -1,6 +1,7 @@
 ---
 title:     Setting up a scripting environment
 layout:    module
+tags: ["draft","scripting"]
 prerequisites:
 
 objectives:
