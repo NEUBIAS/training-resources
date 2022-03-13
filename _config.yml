@@ -25,7 +25,9 @@ module_order:
 - volume_slicing
 - projections
 - volume_viewer
+- segmentation
 - binarization
+- auto_threshold
 - connected_components
 - measure_shapes
 - workflow_segment_2d_nuclei_measure_shape
@@ -33,17 +35,25 @@ module_order:
 - global_background_correction
 - filter_neighbourhood
 - median_filter
+- filter_morphological
 - local_background_correction
 - filter_objects
 - workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape
+- auto_threshold
 - distance_transform
+- watershed
+- workflow_nuclei_and_cells_segmentation
+- manual_segmentation
+- script_env
 - script_run
+- script_record
 - variables
 - commenting
 - string_concat
 - output_saving
 - script_functions
 - volume_viewer
+- ome_zarr_s3
 
 # Sites
 repository: <USERNAME>/<PROJECT>

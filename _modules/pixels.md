@@ -1,25 +1,29 @@
 ---
-title: Basic properties of images and pixels
+title: Digital image basics
 layout: module
 
 prerequisites:
 
 objectives:
-  - Understand that an image is composed of pixels.
-  - Understand what pixels and voxels are.
-  - Examine the values and indices of pixels in an image.
+  - Understand that a digital image is typically stored as an N-dimensional array.
+  - Understand that the array elements are called pixels (2D) or voxels (3D).
+  - Examine the values and locations of pixels/voxels in an image.
 
 motivation: >
-  Although the technical [definition](https://mathworld.wolfram.com/Image.html) of an image is more general, in practice images are very often represented as an array of pixels (voxels). Pixel stands for "picture element". In 3-D, a pixel is sometimes also called a voxel, which stands for "volume element". For image analysis, it is crucial to know how to examine the pixels (voxels) in an image.
+  Digital images are a very important subset of the more general [mathematical definition](https://mathworld.wolfram.com/Image.html) of an image. The vast majority of available algorithms and visualisation tools operate on digital images and all (as far as we know) scientific microscopes output digital images. Thus, for microscopy based science, it is crucial to understand the basic properties of digitial images and how to effectively inspect their content.
+
 
 concept_map: >
   graph TD
-    Im("Image") -->|has many| P("Pixel/Voxel")
-    P -->|has| Va("Value")
-    P -->|has| I("Indices")
+    Im("Digital image") --- A("N-D array")
+    A --- E("Elements/Pixels/Voxels")
+    A --- DT("Data type")
+    A --- D("Dimensions")
+    E --- V("Value")
+    E --- I("Indices")
 
-figure: /figures/pixels_2.png
-figure_legend:
+figure: /figures/pixels.jpg
+figure_legend:  Digital image pixel array and gray-scale rendering. This array (image) has two dimensions with 21 x 21 elements (pixels). The pixel values (black numbers) can be addressed by their respective pixel indices (green numbers).
 
 activity_preface: |
   - Open image: [xy_8bit__nuclei_noisy_different_intensity.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_different_intensity.tif)
@@ -67,7 +71,6 @@ assessment: >
     > 1. 255
     {: .solution}
 
-
 exercises:
 
 learn_next:
@@ -76,5 +79,8 @@ learn_next:
    - "[Data types](../datatypes)"
 
 external_links:
-
+   - "[Wikipedia: Digital images](https://en.wikipedia.org/wiki/Digital_image)"
+   - "[Images in ImageJ: ImagePlus](https://imagej.nih.gov/ij/developer/api/ij/ij/ImagePlus.html)"
+   - "[Images in ImgLib2: Accessible](https://imagej.net/libs/imglib2/accessibles)"
+   - "[Images in skimage: numpy arrays](https://scikit-image.org/docs/dev/user_guide/numpy_images.html)"
 ---

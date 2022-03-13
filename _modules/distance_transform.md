@@ -8,14 +8,15 @@ prerequisites:
 objectives:
 motivation: |
 concept_map: >
-  graph LR
+  graph TD
     B[Binary image] --> DT(Distance transform)
     DT --> D["Distance map image"]
-    D -- contains ---DN("Distances to nearest foreground (or background) pixel")
+    D -- contains ---DN("Distances to nearest background pixel")
     DT -- has --- VI("Various implementations")
 
+
 figure: /figures/distance_transform.png
-figure_legend: Upper panel - Binary image and the corresponding distance map. The distance map has three local maxima, which are very useful for object splitting and defining object centers. Lower panel - Inverted binary image and corresponding distance map, which is useful to comute distances to closest objects.
+figure_legend: Upper panel - Binary image and the corresponding distance map. The distance map has three local maxima, which are very useful for object splitting and defining object centers. Lower panel - Inverted binary image and corresponding distance map, which is useful to compute distances to closest objects.
 
 activity_preface: |
   - Distance transform basics
