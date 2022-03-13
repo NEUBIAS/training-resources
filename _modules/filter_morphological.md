@@ -1,7 +1,7 @@
 ---
-title:  Morpholigical filters
+title:  Morphological filters
 layout: module 
-tags: ["draft","Rank filters","Dilation","Erosion","Opening"]
+tags: ["Rank filters","Dilation","Erosion","Opening"]
 
 prerequisites:
   - "[Segmentation](../segmentation)"
