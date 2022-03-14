@@ -54,7 +54,7 @@ exercise_preface: |
 
 exercises:
   - ["ImageJ GUI", "local_background_correction/exercises/local_background_correction_imagejgui.md"]
-  - ["ImageJ Macro", "local_background_correction/exercises/local_background_correction_imagejmacro.md"]
+  - ["ImageJ Macro", "local_background_correction/exercises/local_background_correction_imagejmacro.ijm"]
 
 assessment: |
 
