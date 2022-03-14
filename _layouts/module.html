@@ -206,7 +206,7 @@ Show exercise/solution for: <select id="id_exercises_platform" name="exercisespl
 {% capture exercise %}{% include {{ includefile }} %}{% endcapture %}
 {% assign ext = includefile | split: "." | last %}
 {% if ext == "ijm" %}
-{% highlight java %}
+{% highlight javascript %}
 {{ exercise }}
 {% endhighlight %}
 {% elsif ext == "py" %}
