@@ -200,7 +200,7 @@ Show exercise/solution for: <select id="id_exercises_platform" name="exercisespl
 {% endif %}
 
 {% for platform in page.exercises %}
-<blockquote class="challenge" id="{{ platform[0] | slugify }}-exercises-div">
+<blockquote class="challenge" style="background-color:white;" id="{{ platform[0] | slugify }}-exercises-div">
 <h2>{{ platform[0] }}</h2>
 {% assign includefile = platform[1] %}
 {% capture exercise %}{% include {{ includefile }} %}{% endcapture %}

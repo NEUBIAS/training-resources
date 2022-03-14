@@ -1,3 +1,4 @@
+a = 1;
 run("Close All");
 open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit__autophagosomes_crop.tif");
 rename("input");
