@@ -55,7 +55,7 @@ open an issue: https://github.com/carpentries/styles/issues/new
     <div class="panel-heading">
       <a href="{{ e.url | relative_url }}">
         <h4>{{ e.title }}</h4>
-        <h5>{{ tags | array_to_sentence_string: ',' }}</h5>
+        <h5>{{ tags | array_to_sentence_string }}</h5>
       </a>
     </div>
     <div class="panel-body">
