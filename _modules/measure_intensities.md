@@ -1,7 +1,6 @@
 ---
 title:  Object intensity measurements
 layout: module
-tags: ["Component"]
 
 prerequisites:
   - "[Connected component analysis](../connected_components)"

@@ -1,7 +1,7 @@
 ---
 title:     Variables
 layout:    module
-tags: ["scripting", "Draft"]
+tags: ["scripting", "draft"]
 prerequisites:
  - "[Running a script](../script_run)"
 objectives:
