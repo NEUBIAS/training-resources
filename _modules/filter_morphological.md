@@ -1,17 +1,17 @@
 ---
-title:  Morpholigical filters
+title:  Morphological filters
 layout: module 
-tags: ["draft","Rank filters","Dilation","Erosion","Opening"]
+tags: ["Rank filters","Dilation","Erosion","Opening"]
 
 prerequisites:
   - "[Segmentation](../segmentation)"
   - "[Median filter](../median_filter)"
   - "[Connected component labeling](../connected_components)"
-  - "[Neighbourhood image filters](../filter_neighbourhood)"
+  - "[Neighbourhood filters](../filter_neighbourhood)"
   
 objectives: 
   - "Understand how to design morphological filters using rank filters"
-  - "Execute morphological filters on binary or label images and explain the output"
+  - "Execute morphological filters on binary or label images and understand the output"
 
 motivation: >
  Morphological filters (MFs) are used to clean up segmentation masks and achieve a change in morphology and/or size of the objects. For example, MFs are used to remove wrongly assigned foreground pixels, separate touching objects, or identify objects boundaries. 
@@ -55,7 +55,7 @@ activity_preface: |
     * Perform dilation followed by erosion - closing. Explains it effects on filling small holes, connecting gaps. If applicable show that opening runs as single command.
   
  * Morphological internal gradient of binary
-    * Open [xy_8bit_binary__h2b_bg_corr.tif]("https://raw.githubusercontent.com/NEUBIAS/training-resources/master/image_data/xy_8bit_binary__h2b_bg_corr.tif")
+    * Open [xy_8bit_binary__h2b.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__h2b.tif)
     * Perform an erosion
     * Subtract eroded image from binary image and discuss the results (Internal Gradient)
     * If applicable show where the morphological gradient runs as a single command
@@ -66,6 +66,26 @@ activities:
  - ["ImageJ Macro & GUI: Closing and opening", "filter_morphological/activities/filter_morphological_opening_closing.ijm", "java"]
  - ["ImageJ Macro & GUI: Internal Gradient", "filter_morphological/activities/filter_morphological_inner_gradient.ijm", "java"]
   
+exercise_preface: |
+  ### Measure intensity on the nuclear membrane
+  In image [xyc_16bit__nup__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__nup_nuclei.tif) we would like to measure the intensity along the nuclear membrane (channel 1) using the information from the DNA (channel 2). We designed two exercises that provide a workflow using morphological filters. 
+  
+  #### Clean up segmentation
+  
+  * Use a combination of opening and closing operations to improve the segmentation of the DNA channel  [xy_8bit_binary__nuclei_noisy.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__nup_nuclei/xy_8bit_binary__nuclei_noisy.tif). 
+  *  The goal is to achieve something like [xy_8bit_binary__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__nup_nuclei/xy_8bit_binary__nuclei.tif) that can be used for further processing and identification of membrane regions. 
+  
+  #### Define nuclear rim 
+  * Use morphological filtering to define an inner rim of width 3 pixels using the label mask:  [xy_8bit_labels__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__nup_nuclei/xy_8bit_labels__nuclei.tif)
+  * (Optional) Measure the mean and total intensity in the first channel of  [xyc_16bit__nup__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__nup_nuclei.tif) using the modified labels masks.
+
+exercises: 
+ - ["ImageJ GUI: Clean up segmentation", "filter_morphological/exercises/filter_morphological_binary.md"]
+ - ["ImageJ GUI: Define nuclear rim",  "filter_morphological/exercises/filter_morphological_label.md"]
+ - ["ImageJ Macro: Clean up segmentation", "filter_morphological/exercises/filter_morphological_binary.ijm"]
+ - ["ImageJ Macro: Define nuclear rim",  "filter_morphological/exercises/filter_morphological_label.ijm"]
+ 
+
 
 assessment: | 
  
@@ -96,7 +116,7 @@ assessment: |
       1. Morphological openings on binary images never decrease the number of foreground pixels.
       2. Morphological closings on binary images never decreases the number of foreground pixels.
       3. Performing a morphological closing twice in a row does not make sense, because the second closing does not further change the image.
-      4. Performing a morphological closing with radius 2 (5x5) element is equivalent to two subsequent closing operation with radius 1.
+      4. Performing a morphological closing with radius 2 element is equivalent to two subsequent closing operation with radius 1.
     
       > ## Solution
       > 1. False
@@ -104,11 +124,8 @@ assessment: |
       > 3. True
       > 4. False
       {: .solution}
-    
-exercises: 
- - ["ImageJ Macro & GUI: Clean up segmentation", "filter_morphological/exercises/filter_morphological_binary.md"]
- - ["ImageJ Macro & GUI: Label edges",  "filter_morphological/exercises/filter_morphological_label.md"]
  
+
 
 learn_next:
 
@@ -138,11 +155,11 @@ Image subtraction using eroded/dilated images allows to identify the boundary of
  * External gradient: dilated - original
  * (Symmetric) gradient: dilated - eroded 
 
-**Fill holes** operation is a slightly more complex morphological operation. It is used to identify background pixels surrounded by foreground pixels and change their value to foreground. Algorithmically there are several ways to achieve this. In this module we only show an application. 
+**Fill holes** operation is a slightly more complex morphological operation. It is used to identify background pixels surrounded by foreground pixels and change their value to foreground. Algorithmically there are several ways to achieve this.
 
 
 ## Morphological filters on label images
-Morphological filters work also on label images. If the objects are not touching this will achieve the expected result for each label. However, when objects touch each other operation as dilations can lead to unwanted results. 
+Morphological filters work also on label images. If the objects are not touching this will achieve the expected result for each label. However, when objects touch each other, operations such as dilations can lead to unwanted results. 
 
 
 ## Morphological filters on grey level images
