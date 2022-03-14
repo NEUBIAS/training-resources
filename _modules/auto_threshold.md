@@ -18,7 +18,7 @@ concept_map: >
     H --> T("Threshold value")
 
 figure: /figures/auto_threshold.png
-figure_legend: Input images, histograms (Otsu threshold - orange, Huang threshold - blue), binary images (Otsu), binary images (Huang).
+figure_legend: Input images, histograms (Huang threshold - blue, Otsu threshold - orange),  binary images (Huang), binary images (Otsu).
 
 activity_preface: |
   - Manual vs. auto thresholding
@@ -31,7 +31,7 @@ activities:
 
 exercise_preface: |
   - Auto thresholding on image stack
-    - Open [xy_8bit__nuclei_autothresh.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_autothresh.tif)
+    - Open [xyz_8bit__nuclei_autothresh.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit__nuclei_autothresh.tif)
     - Select any threshold method and observe the differences in segmentation with and without using stack histogram       
 
 exercises:
@@ -58,4 +58,4 @@ external_links:
 ### Key points
 - Most auto thresholding methods do two class clustering.
 - If the histogram is bimodal, most automated methods will perform well.
-- If the histogram has more than two peaks i.e., automated methods would produce random results.
+- If the histogram has more than two peaks, automated methods could produce noisy results.

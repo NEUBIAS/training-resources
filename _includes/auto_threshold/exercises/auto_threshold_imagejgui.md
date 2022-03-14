@@ -1,5 +1,5 @@
 - Auto thresholding on stack
-  - Open [xy_8bit__nuclei_autothresh.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_autothresh.tif)
+  - Open [xyz_8bit__nuclei_autothresh.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit__nuclei_autothresh.tif)
   - **[ Image > Duplicate... ]**
     - `Title = nohist`
     - **[X]** `Duplicate stack`
@@ -9,16 +9,19 @@
     - **[X]** `White objects on black background`
     - **[X]** `Stack`
     - Press `OK`
-  - It can be seen that for many methods, background is also segmented. This is due to the fact that in this case auto threshold algorithms is treating each slice differently (segmentation is done based on slice histogram)
-  - Select a method e.g. Otsu and repeat the above process using `Method = Otsu`
+  - It can be seen that for many methods, background is also segmented. This is due to the fact that in this case auto threshold algorithms is treating each slice separately (segmentation is done based on slice histogram)
+  - Select a method e.g. Otsu and repeat the above process using
+    - `Method = Otsu`
     - **[X]** `Show threshold values in log window`
     - Press `OK`
-  - It can be seen that Ostu's method is calculating threshold for each individual slice
-  - Select window [xy_8bit__nuclei_autothresh.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_autothresh.tif)
+  - It can be seen that Otsu's method is calculating threshold for each individual slice
+  - Select window `xyz_8bit__nuclei_autothresh.tif`
   - **[ Image > Duplicate... ]**
     - `Title = hist`
     - **[X]** `Duplicate stack`
   - Select window `hist` and repeat the procedure above using
+    - `Method = Otsu`
     - **[X]** `Use stack histogram`
+    - **[X]** `Show threshold values in log window`
     - Press `OK`
-  - It can be observed that now one threshold value (i.e. 91) is used for binarization and background is not segmented
+  - It can be observed that now one threshold value (i.e. 91, see log window) is used for binarization and background is not segmented
