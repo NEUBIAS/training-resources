@@ -1,4 +1,3 @@
-```java
 /*
  * Shape watershed (with distance transform)  in Fiji
  * 
@@ -21,8 +20,7 @@ run("Chamfer Distance Map", "distances=[Chessknight (5,7,11)] output=[16 bits] n
 rename("dist");
 run("Invert");
 // remove spurious minima in distance map (choose sigma smaller than object radii)
-run("Gaussian Blur...", "sigma=2");
+run("Mean...", "sigma=2");
 
 // watershed with mask
 run("Classic Watershed", "input=dist mask=mask use min=0 max=255");
-```

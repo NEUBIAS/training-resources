@@ -2,11 +2,11 @@
  * Syntax highlighting styles
  */
 .highlight {
-    background: #fff;
+    background: #ffffff;
     @extend %vertical-rhythm;
 
     .highlighter-rouge & {
-      background: #eef;
+      background: #ffffff;
     }
 
     .c     { color: #998; font-style: italic } // Comment
@@ -35,7 +35,7 @@
     .kr    { font-weight: bold } // Keyword.Reserved
     .kt    { color: #458; font-weight: bold } // Keyword.Type
     .m     { color: #099 } // Literal.Number
-    .s     { color: #d14 } // Literal.String
+    .s     { color: #d1d } // Literal.String
     .na    { color: #008080 } // Name.Attribute
     .nb    { color: #0086B3 } // Name.Builtin
     .nc    { color: #458; font-weight: bold } // Name.Class
@@ -52,16 +52,16 @@
     .mh    { color: #099 } // Literal.Number.Hex
     .mi    { color: #099 } // Literal.Number.Integer
     .mo    { color: #099 } // Literal.Number.Oct
-    .sb    { color: #d14 } // Literal.String.Backtick
-    .sc    { color: #d14 } // Literal.String.Char
-    .sd    { color: #d14 } // Literal.String.Doc
-    .s2    { color: #d14 } // Literal.String.Double
-    .se    { color: #d14 } // Literal.String.Escape
-    .sh    { color: #d14 } // Literal.String.Heredoc
-    .si    { color: #d14 } // Literal.String.Interpol
-    .sx    { color: #d14 } // Literal.String.Other
+    .sb    { color: #d1d } // Literal.String.Backtick
+    .sc    { color: #d1d } // Literal.String.Char
+    .sd    { color: #d1d } // Literal.String.Doc
+    .s2    { color: #d1d } // Literal.String.Double
+    .se    { color: #d1d } // Literal.String.Escape
+    .sh    { color: #d1d } // Literal.String.Heredoc
+    .si    { color: #d1d } // Literal.String.Interpol
+    .sx    { color: #d1d } // Literal.String.Other
     .sr    { color: #009926 } // Literal.String.Regex
-    .s1    { color: #d14 } // Literal.String.Single
+    .s1    { color: #d1d } // Literal.String.Single
     .ss    { color: #990073 } // Literal.String.Symbol
     .bp    { color: #999 } // Name.Builtin.Pseudo
     .vc    { color: #008080 } // Name.Variable.Class

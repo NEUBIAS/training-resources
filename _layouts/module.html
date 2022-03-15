@@ -183,7 +183,7 @@ Show activity for: <select id="id_activity_platform" name="activityplatformlist"
 {% endif %}
 
 {% if page.exercises %}
-Show exercises for: <select id="id_exercises_platform" name="exercisesplatformlist" onchange="change_exercises_content_by_platform('id_exercises_platform');return false;">
+Show exercise/solution for: <select id="id_exercises_platform" name="exercisesplatformlist" onchange="change_exercises_content_by_platform('id_exercises_platform');return false;">
 {% if site.default-platform == "NONE" %}
 <option value="null-exercises" id="null-exercises-option" selected="selected"> Select a platform... </option>
 {% else %}
@@ -200,11 +200,25 @@ Show exercises for: <select id="id_exercises_platform" name="exercisesplatformli
 {% endif %}
 
 {% for platform in page.exercises %}
-<blockquote class="challenge" id="{{ platform[0] | slugify }}-exercises-div">
+<blockquote class="challenge" style="background-color:white;" id="{{ platform[0] | slugify }}-exercises-div">
 <h2>{{ platform[0] }}</h2>
 {% assign includefile = platform[1] %}
 {% capture exercise %}{% include {{ includefile }} %}{% endcapture %}
+{% assign ext = includefile | split: "." | last %}
+{% if ext == "ijm" %}
+{% highlight javascript %}
+{{ exercise }}
+{% endhighlight %}
+{% elsif ext == "py" %}
+{% highlight python %}
+{{ exercise }}
+{% endhighlight %}
+{% elsif ext == "md" %}
 {{ exercise | markdownify }}
+{% else %}
+{{ exercise }}
+{% endif %}
+
 </blockquote>
 {% endfor %}
 
