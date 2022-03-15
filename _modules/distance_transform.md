@@ -68,7 +68,7 @@ exercise_preface: |
    The goal is to combine skeletonization and distance map computation to measure skeleton branch length and thickness. For this exercise you need the binary image [xy_8bit_binary__glialcell.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__glialcell/xy_8bit_binary__glialcell.tif) and the skeletonized and normalized version [xy_8bit_binary__glialcell_skeleton.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__glialcell/xy_8bit_binary__glialcell_skeleton.tif)
     
    - Compute the distance transform of the binary
-   - Normalize the skeleton image and multiply it with the distance map
+   - Multiply the skeleton image with the distance map
    - Perform an analyze of the skeleton
 
 exercises:
