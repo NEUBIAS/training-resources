@@ -1,7 +1,6 @@
 ---
 title: Automatic thresholding (histogram-based)
 layout: module
-tags: ["draft","component"]
 prerequisites:
   - "[Thresholding](../binarization)"
 objectives:

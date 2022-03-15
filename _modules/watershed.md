@@ -1,7 +1,7 @@
 ---
 title: Watershed
 layout: module
-tags: ["draft"]
+
 prerequisites:
   - "[Connected-component analysis](../connected_components)"
   - "[Distance transform](../distance_transform)"
@@ -14,33 +14,33 @@ motivation: |
 
 concept_map: >
   graph TD
-    T("Image") --> W("Watershed algorithm")
+    T("Image") --> W("Watershed transform")
+    SP("Seed points (at local intensity minima)") --> W
     W --> S("Segmented image")
-    S --- B("Boundaries/Watersheds: Intensity ridges")
-    S --- R("Regions/Basins")
+    S --- B("Boundaries / Watersheds (at intensity ridges)")
 
 figure: /figures/watershed.png
-figure_legend: Illustration of the watershed transform. a) Image with three objects that cannot be separated by a simple threshold. b) Foreground background segmentation of (a). c) Watershed transform of (e). d) (c) masked with (d). e) Inverse of (a). f) Intensity line profile along the line depicted in (e) with illustration of filling up the basins up to a the level where the yellow and blue regions meet and a watershed is build. g) as (f) but filling up the basins to a higher level.
+figure_legend: Illustration of the watershed transform. a) Image with three objects that cannot be separated by a simple threshold. b) Foreground/background segmentation of (a). c) Inverse of (a). d) Intensity line profile along the line depicted in (c) with illustration of filling up the basins up to a the level where the yellow and blue regions meet and a first watershed is build. e) As (d) but filling up the basins to a higher level where a second watershed is build between the blue and red region. f) Watershed transform of (c). g) (f) masked with (b). 
 
 activity_preface: |
   - Basic watershed
     - Open [xy_8bit__touching_objects.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__touching_objects.tif).
     - Appreciate that you cannot segment the three objects using a simple threshold.
-    - Anyway find a threshold that segments the image into foreground (objects) and background
+    - Anyway find a threshold that segments the image into foreground (objects) and background.
       - Keep this binary mask, we will need it later.
     - Invert the original image and apply the watershed transform.
     - Appreciate that the image is now split into three regions.
     - Combine the binary mask and the watershed image to segment the three objects.
   - Shape watershed
      - Open [xy_8bit__touching_objects_same_intensity.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__touching_objects_same_intensity.tif).
-    - Appreciate that you cannot segment the three objects using a simple threshold.
-    - Appreciate that also a watershed algorithm does not help here, because there is no "intensity ridge" bewteen the two touching objects.
-    - Create a binary mask
-    - Create a distance map within objects
-    - Invert the distance map
-    - Slightly blur the distance map to avoid spurious minima (water basins)
-    - Apply a watershed transform
-    - Combine the binary mask and the watershed image to segment the two objects
+    - Appreciate that you cannot segment the objects using a simple threshold.
+    - Appreciate that a watershed transform on the intensity signal does not help here, because there is no "intensity ridge" bewteen the two touching objects.
+    - Create a binary mask.
+    - Create a distance map within objects.
+    - Invert the distance map.
+    - Slightly blur the distance map to avoid spurious minima (water basins).
+    - Apply a watershed transform.
+    - Combine the binary mask and the watershed image to segment the two objects.
   - Seeded watershed for noisy data
     - Open [xy_8bit__noisy_touching_objects.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__noisy_touching_objects.tif).
     - Invert the image and apply the watershed transform.
@@ -53,6 +53,7 @@ activity_preface: |
 
 activities:
 - ["ImageJ Macro: MorpholibJ basic watershed", "watershed/activities/morpholibj_basic_watershed.ijm", "java"]
+- ["ImageJ GUI: MorpholibJ basic watershed", "watershed/activities/morpholibj_basic_watershed_imagejgui.md", "markdown"]
 - ["ImageJ Macro: MorpholibJ shape watershed", "watershed/activities/morpholibj_shape_watershed.ijm", "java"]
 - ["ImageJ Macro: MorpholibJ seeded watershed", "watershed/activities/morpholibj_seeded_watershed.ijm", "java"]
 
@@ -88,6 +89,10 @@ assessment: >
     >   - inverts and smoothes
     >   - seeded (or marker controlled)
     {: .solution}
+
+keypoints:
+  - A watershed transform can separate touching objects if there are intensity valleys (or ridges) between touching objects. In case of intensity ridges the image needs to be inverted before being subjected to the watershed transform.
+  - To separate object by their shape, use a distance transform on the binary image and inject this into the watershed transform. It is often good to smooth the distance transform to remove spurious minima, which could serve as wrong seed points and thus lead to an over-segmentation.
 
 learn_next:
 

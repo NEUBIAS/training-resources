@@ -4,7 +4,6 @@ layout: module
 
 prerequisites:
   - "[Median filter](../median_filter)"
-  - "[Image math](../image_math)"
   - "[Projections](../projections)"
 
 objectives:
@@ -12,7 +11,7 @@ objectives:
   - Use the generated local background image to compute a foreground image
 
 motivation: >
-  Very often, biological images contain locally varying background intensities. This hampers both segmentation and intensity quantification. However, given a sufficient separation of length scales in terms of variation in background intensities vs. variation in intensities in the foreground, image filters can be employed to measure and correct for the background.
+  Very often, biological images contain locally varying background intensities. This hampers both segmentation and intensity quantification. However, often it is possible to generate a background image that can be subtracted in order to yield a foreground image with zero background. It is very important to know about this, because removing spatially varying background is a prevalent task in bioimage analysis.
 
 concept_map: >
   graph TD
@@ -44,8 +43,18 @@ activities:
   - ["Activity 2 ImageJ Macro", "local_background_correction/activities/local_background_correction_activity2_macro.ijm", "java"]
   - ["Activity 2 ImageJ Jython", "local_background_correction/activities/local_background_correction_activity2_jython.py", "python"]
 
+exercise_preface: |
+
+  - Spots in a cell
+    - Open [xy_16bit__autophagosomes_crop.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit__autophagosomes_crop.tif)
+    - Create a background image by duplicating the input image and applying a median filter to it.
+      - Choose the radius of the median filter just large enough such that the bright spots dissappear.
+    - Create the foreground image by subtracting the background image from the input image.
+      - You should see an image with the bright spots, now without the uneven background.
+
 exercises:
-  - ["ImageJ Macro", "local_background_correction/exercises/local_background_correction_imagejmacro.md"]
+  - ["ImageJ GUI", "local_background_correction/exercises/local_background_correction_imagejgui.md"]
+  - ["ImageJ Macro", "local_background_correction/exercises/local_background_correction_imagejmacro.ijm"]
 
 assessment: |
 
