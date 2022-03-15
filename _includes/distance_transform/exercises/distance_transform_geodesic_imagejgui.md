@@ -4,3 +4,4 @@
   * `Distances: Chessknight (5,7,11)`
   * `Output Type: 32 bits`
   * `[x] Normalize weights`
+- The image values correspond to the distance to the reference point within the binary mask.
