@@ -12,6 +12,7 @@
   - It can be seen that for many methods, background is also segmented. This is due to the fact that in this case auto threshold algorithms is treating each slice separately (segmentation is done based on slice histogram)
   - Select a method e.g. Otsu and repeat the above process using
     - `Method = Otsu`
+    - **[X]** `Stack`
     - **[X]** `Show threshold values in log window`
     - Press `OK`
   - It can be seen that Otsu's method is calculating threshold for each individual slice
@@ -21,6 +22,7 @@
     - **[X]** `Duplicate stack`
   - Select window `hist` and repeat the procedure above using
     - `Method = Otsu`
+    - **[X]** `Stack`
     - **[X]** `Use stack histogram`
     - **[X]** `Show threshold values in log window`
     - Press `OK`
