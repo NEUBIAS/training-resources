@@ -38,7 +38,7 @@ activity_preface: |
     - Observe whether the image calibration is considered for the distances.
   
   ### Distance measurements
-    - Open label mask: [xy_8bit_binary__dist_trafo_b.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__dist_trafo_b/xy_8bit_binary__dist_trafo_b.tif).
+    - Open label mask: [xy_8bit_labels__dist_trafo_b.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__dist_trafo_b.tif).
     - Create an inverted binary mask for one of the labels (e.g. label 1)
     - Compute the distance transform
     - Measure intensity (= distances to nearest other objects) of objects in the distance map
@@ -65,7 +65,7 @@ exercise_preface: |
     * Compute the geodesic distance map of the binary image with respect to a reference point close to the soma of the cell (approx x_pixel = 88, y_pixel = 74)
     
   ### Measure thickness of glial branches
-   The goal is to combine skeletonization and distance map computation to measure skeleton branch length and thickness. For this exercise you need the binary image [xy_8bit_binary__glialcell.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__glialcell/xy_8bit_binary__glialcell.tif) and the skeletonized version [xy_8bit_binary__glialcell_skeleton.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__glialcell/xy_8bit_binary__glialcell_skeleton.tif)
+   The goal is to combine skeletonization and distance map computation to measure skeleton branch length and thickness. For this exercise you need the binary image [xy_8bit_binary__glialcell.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__glialcell/xy_8bit_binary__glialcell.tif) and the skeletonized and normalized version [xy_8bit_binary__glialcell_skeleton.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__glialcell/xy_8bit_binary__glialcell_skeleton.tif)
     
    - Compute the distance transform of the binary
    - Normalize the skeleton image and multiply it with the distance map

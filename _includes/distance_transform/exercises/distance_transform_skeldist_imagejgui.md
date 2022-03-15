@@ -6,9 +6,6 @@
 - **[File > Open...]** [xy_8bit_binary__glialcell_skeleton.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__glialcell/xy_8bit_binary__glialcell_skeleton.tif)
 - **[ Image › Rename...]**
   - "Skeleton"
-- Make this image take the value 1 so that we can use it as a multiplicative mask
- - **[ Process › Math › Divide...]**
- - `255`
 - Use the image calculator function **[ Process › Image Calculator...]** to multiply the skeleton image by the distance map:
   - Image1: Skeleton
   - Operation: Multiply
