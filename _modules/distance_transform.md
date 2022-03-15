@@ -27,56 +27,48 @@ figure: /figures/distance_transform.png
 figure_legend: Upper panel - Binary image and the corresponding distance map. The distance map has three local maxima, which are very useful for object splitting and defining object centers. Lower panel - Inverted binary image and corresponding distance map, which is useful to compute distances to closest objects.
 
 activity_preface: |
-  - Distance transform basics
+  ### Distance transform basics
     - Open label mask [xy_8bit_binary__dist_trafo_a.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__dist_trafo_a/xy_8bit_binary__dist_trafo_a.tif).
     - Perform a distance transform.
     - Invert the binary input image.
     - Perform another distance transform on the new binary image.
     - Observe that the datatype (in particular 8-bit) of the distance transform image limits the distances.
+    - Discuss different metrics.
+    - Add a calibration to the inverted image and recompute the distance transform.
     - Observe whether the image calibration is considered for the distances.
-  - Distance measurements
+  
+  ### Distance measurements
     - Open label mask: [xy_8bit_binary__dist_trafo_b.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__dist_trafo_b/xy_8bit_binary__dist_trafo_b.tif).
-    - Measure intensity (= distances to nearest other objects) of objects in the distance map of the binary image (s.a.)
-  - Region selection
+    - Create an inverted binary mask for one of the labels (e.g. label 1)
+    - Compute the distance transform
+    - Measure intensity (= distances to nearest other objects) of objects in the distance map
+    - Show that the measured values correspond to the distance of label 2 and 3 to label 1. 
+    
+  ### Region selection by distance gating
     - Open reference object image: [xy_8bit_binary__single_object.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__single_object.tif).
-    - Compute a distance map.
-    - Perform an intensity gating to create a mask with all pixels of a certain distance to the reference object.
-  - Different 
+    - Invert the binary
+    - Compute the distance transform
+    - Perform an intensity gating on the distance map, e.g. by thresholding, to create a mask with all pixels of a certain distance, e.g. between 100-120, to the reference object.
   
 activities:
-  - ["ImageJ GUI MorpholibJ", "distance_transform/activities/distance_transform_imagejgui.md", "markdown"]
-  - ["ImageJ Macro MorpholibJ", "distance_transform/activities/distance_transform_imagejmacro.ijm", "java"]
+  - ["Basics, ImageJ GUI MorpholibJ", "distance_transform/activities/distance_transform_basics_imagejgui.md", "markdown"]
+  - ["Basics, ImageJ Macro MorpholibJ", "distance_transform/activities/distance_transform_basics_imagejmacro.ijm", "java"]
+  - ["Measure, ImageJ Macro MorpholibJ", "distance_transform/activities/distance_transform_measure_imagejmacro.ijm", "java"]
+  - ["Region selection, ImageJ Macro MorpholibJ", "distance_transform/activities/distance_transform_region_selection_imagejmacro.ijm", "java"]
   - ["Python Napari", "distance_transform/activities/distance_transform_napari_skimage.py", "python"]
 
+exercise_preface: |
+ ### Measure thickness of glial branches
+ The goal is to combine skeletonization and distance map computation to measure skeleton branch length and thickness. To do this, we need to multiply the skeleton image with the distance map. This generates a skeleton image in which the pixel intensities correspond to the pixel intensities in the distance map. How do you think this could be useful for estimating branch thickness?
+ For this exercise, you can use the following images:
+   - [xy_8bit_skeleton_glialcell.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_glialcell/xy_8bit_skeleton_glialcell.tif)
+   - [xy_8bit_distmap_glialcell.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_glialcell/xy_8bit_distmap_glialcell.tif)
 exercises:
-  - ["ImageJ GUI", "binarization/exercises/binarization_imagejgui.md"]
-  - ["ImageJ Macro", "binarization/exercises/binarization_imagejmacro.md"]
+  - ["Glial thickness, ImageJ GUI", "distance_transform/exercises/distance_transform_skeldist_imagejgui.md"]
 
 assessment: >
 
-  ### Fill in the blanks
-
-    - Pixels in a binary image can have maximally ___ different values.
-    - If the threshold is larger than the maximal pixel value in the intensity image, all pixels in the binary image have a value of ___.
-    
-    > ## Solution
-    >   - Pixels in a binary image can have maximally **2** different values.
-    >   - If the threshold is larger than the maximal pixel value in the intensity image, 
-    > all pixels in the binary image have a value of **0**.
-    {: .solution}
-    
-  ### True or False
-    - There is only one correct threshold value in order to convert an intensity image into a binary image. 
-    - Binary images are always unsigned 8-bit where the foreground is 255.
-    
-    > ## Solution
-    >   - There is only one correct threshold value in order to convert an intensity image into a binary image. **False**
-    >   -  Binary images are always unsigned 8-bit where the foreground is 255. **False**
-    {: .solution}
-
-learn_next:
-  - "[TODO](../auto_threshold)"
-  - "[TODO](../connected_components)"
+learn_next: >
 
 external_links:
   - "[Wikipedia: Dist](https://en.wikipedia.org/wiki/Binary_image)"
