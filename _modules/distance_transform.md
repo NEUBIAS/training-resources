@@ -58,16 +58,30 @@ activities:
   - ["Python Napari", "distance_transform/activities/distance_transform_napari_skimage.py", "python"]
 
 exercise_preface: |
- ### Measure thickness of glial branches
- The goal is to combine skeletonization and distance map computation to measure skeleton branch length and thickness. To do this, we need to multiply the skeleton image with the distance map. This generates a skeleton image in which the pixel intensities correspond to the pixel intensities in the distance map. How do you think this could be useful for estimating branch thickness?
- For this exercise, you can use the following images:
-   - [xy_8bit_skeleton_glialcell.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_glialcell/xy_8bit_skeleton_glialcell.tif)
-   - [xy_8bit_distmap_glialcell.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_glialcell/xy_8bit_distmap_glialcell.tif)
+  ### Measure distance to center of cell
+   We would like to measure the distance within a binary mask to a specific point in the cell. This is called Geodesic distance. 
+   
+    * Use [xy_8bit_glialcell.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__glialcell.tif) and the corresponding binary image [xy_8bit_binary__glialcell.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__glialcell/xy_8bit_binary__glialcell.tif)
+    * Compute the geodesic distance map of the binary image with respect to a reference point close to the soma of the cell (approx x_pixel = 88, y_pixel = 74)
+    
+  ### Measure thickness of glial branches
+   The goal is to combine skeletonization and distance map computation to measure skeleton branch length and thickness. For this exercise you need the binary image [xy_8bit_binary__glialcell.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__glialcell/xy_8bit_binary__glialcell.tif) and the skeletonized version [xy_8bit_binary__glialcell_skeleton.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__glialcell/xy_8bit_binary__glialcell_skeleton.tif)
+    
+   - Compute the distance transform of the binary
+   - Normalize the skeleton image and multiply it with the distance map
+   - Perform an analyze of the skeleton
+
 exercises:
+  - ["Distance to center, ImageJ GUI", "distance_transform/exercises/distance_transform_geodesic_imagejgui.md"]
   - ["Glial thickness, ImageJ GUI", "distance_transform/exercises/distance_transform_skeldist_imagejgui.md"]
 
 assessment: >
+ ### Discuss with your neighbor 
 
+  1. Knowing the image calibration, how could we convert a 2D distance map to physical values?
+  2. Knowing the image calibration, how could we convert a 3D distance map to physical values? Is it important if the image is isotropic sampled or not?
+
+   
 learn_next: >
 
 external_links:
