@@ -5,13 +5,21 @@ tags: ["draft"]
 prerequisites:
   - "[Basic properties of images and pixels](../pixels)"
   - "[Data types](../datatypes)"
+  - "[Segmentation](../segmentation)"
 objectives:
+  - Understand how to use distance transform to quantify morphology of objects 
+  - Understand how to use distance transform to quantify distance between objects
+  - Understand approximate nature of distance transform
+  
 motivation: |
+  We use distance transform to quantify how a structure of interest is away from object boundaries or other structures. The distance transform is also use to characterize the morphology of an object in 2D and 3D, find its center, dimensions, etc.. Finally distance transform can be used as a pre-processing step to improve the segmentation results and split touching objects. 
+ 
 concept_map: >
   graph TD
     B[Binary image] --> DT(Distance transform)
     DT --> D["Distance map image"]
-    D -- contains ---DN("Distances to nearest background pixel")
+    D -- contains --- DN("Distances to nearest background pixel")
+    D -- is --- A("Approximation of euclidian distance")
     DT -- has --- VI("Various implementations")
 
 
@@ -20,21 +28,21 @@ figure_legend: Upper panel - Binary image and the corresponding distance map. Th
 
 activity_preface: |
   - Distance transform basics
-    - Open label mask [xy_8bit_labels__dist_trafo_a.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__dist_trafo_a.tif).
-    - Convert to binary image.
+    - Open label mask [xy_8bit_binary__dist_trafo_a.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__dist_trafo_a/xy_8bit_binary__dist_trafo_a.tif).
     - Perform a distance transform.
     - Invert the binary input image.
     - Perform another distance transform on the new binary image.
-    - Observe that the datatype of the distance transform image limits the distances.
+    - Observe that the datatype (in particular 8-bit) of the distance transform image limits the distances.
     - Observe whether the image calibration is considered for the distances.
   - Distance measurements
-    - Open label mask: [xy_8bit_labels__dist_trafo_b.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__dist_trafo_b.tif).
+    - Open label mask: [xy_8bit_binary__dist_trafo_b.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__dist_trafo_b/xy_8bit_binary__dist_trafo_b.tif).
     - Measure intensity (= distances to nearest other objects) of objects in the distance map of the binary image (s.a.)
   - Region selection
     - Open reference object image: [xy_8bit_binary__single_object.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__single_object.tif).
     - Compute a distance map.
     - Perform an intensity gating to create a mask with all pixels of a certain distance to the reference object.
-
+  - Different 
+  
 activities:
   - ["ImageJ GUI MorpholibJ", "distance_transform/activities/distance_transform_imagejgui.md", "markdown"]
   - ["ImageJ Macro MorpholibJ", "distance_transform/activities/distance_transform_imagejmacro.ijm", "java"]
@@ -77,17 +85,24 @@ external_links:
   - "[Borgefors 1986](https://www.sciencedirect.com/science/article/pii/S0734189X86800470)"
 ---
 
-#### Chamfer distance (from MorpholibJ Manual)
+#### Chamfer distance (modified from MorpholibJ Manual)
 
-Several methods exist for computing distance maps. The MorphoLibJ library implements
+<img src="../figures/chamfer_weights.png" align ="center" width="100%" >
+
+Several methods (metrics) exist for computing distance maps. The MorphoLibJ library implements
 distance transforms based on chamfer distances. Chamfer distances approximate Euclidean
 distances with integer weights, and are simpler to compute than exact Euclidean distance
 (Borgefors, 1984, 1986). As chamfer weights are only an approximation of the real Euclidean
 distance, some differences are expected compared to the actual Euclidean distance map.
-Several choices for chamfer weights are illustrated in above Figure (TODO). The “Borgefors” weights
-were claimed to be best approximation when considering the 3-by-3 neighborhood.
-The “Chess-knight” distance also takes into account the pixels located at a distance from
+
+Several choices for chamfer weights are illustrated in above Figure (showing the not normalized distance). 
+
+ - The "Chessboard" distance, also named Chebyshev distance, gives the number of moves that an imaginary Chess-king needs to reach a specific pixel. A king can move one pixel in each direction. 
+ - The "City-block" distance, also named Manhattan metric, weights diagonal moves differently. 
+ - The “Borgefors” weights were claimed to be best approximation when considering the 3-by-3 neighborhood.
+ - The “Chess knight” distance also takes into account the pixels located at a distance from
 (±1, ±2) in any direction. It is usually the best choice, as it considers a larger neighborhood.
 
-<img src="../figures/chamfer_weights.png" align ="center" width="100%" >
+To remove the scaling effect due to weights > 1, it is necessary to perform a normalization step. In MorphoLibJ this is performed by dividing the resulting image by the first weight (option `Normalize weights`).
+
 
