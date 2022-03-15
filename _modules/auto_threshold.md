@@ -14,7 +14,7 @@ motivation: |
 concept_map: >
   graph TD
     I("Image") --> H("Histogram")
-    H --> T("Threshold value")
+    H -- algorithm --> T("Threshold value")
 
 figure: /figures/auto_threshold.png
 figure_legend: Input images, histograms (Huang threshold - blue, Otsu threshold - orange),  binary images (Huang), binary images (Otsu).
@@ -22,7 +22,7 @@ figure_legend: Input images, histograms (Huang threshold - blue, Otsu threshold 
 activity_preface: |
   - Manual vs. auto thresholding
     - Open [xy_8bit__nuclei_without_offset.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_without_offset.tif) and [xy_8bit__nuclei_with_offset.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_with_offset.tif)
-    - Explore the differences in doing manual and auto thresholding.
+    - Explore the differences in doing manual and auto thresholding
 
 
 activities:
@@ -31,7 +31,7 @@ activities:
 exercise_preface: |
   - Auto thresholding on image stack
     - Open [xyz_8bit__nuclei_autothresh.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit__nuclei_autothresh.tif)
-    - Select any threshold method and observe the differences in segmentation with and without using stack histogram       
+    - Select any threshold method and observe the differences in segmentation when you use the histogram computed from all images in 3D stack      
 
 exercises:
 - ["ImageJ GUI", "auto_threshold/exercises/auto_threshold_imagejgui.md", "markdown"]
@@ -39,8 +39,8 @@ exercises:
 assessment: >
 
   ### True or False
-    - Using stack histogram yields only one threshold value for binarization when applying auto thresholding.
-    - Auto thresholding gives better segmentation results than manual thresholding in the presence of noise.
+    - Using stack histogram yields only one threshold value for binarization when applying auto thresholding
+    - Auto thresholding gives better segmentation results than manual thresholding in the presence of noise
 
     > ## Solution
     >   - **True**
@@ -50,11 +50,11 @@ assessment: >
 learn_next:
 
 external_links:
-- Some common automatic thresholding methods can be studied [here](https://imagej.net/plugins/auto-threshold)
+- Some common automatic thresholding methods can be studied here [Imagej.net Auto-threshold](https://imagej.net/plugins/auto-threshold)
 
 ---
 
 ### Key points
-- Most auto thresholding methods do two class clustering.
-- If the histogram is bimodal, most automated methods will perform well.
-- If the histogram has more than two peaks, automated methods could produce noisy results.
+- Most auto thresholding methods do two class clustering
+- If the histogram is bimodal, most automated methods will perform well
+- If the histogram has more than two peaks, automated methods could produce noisy results
