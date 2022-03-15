@@ -1,12 +1,14 @@
-- **[File > Open...]** [xy_8bit_skeleton_glialcell.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_glialcell/xy_8bit_skeleton_glialcell.tif)
+- **[File > Open...]** [xy_8bit_binary__glialcell.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__glialcell/xy_8bit_binary__glialcell.tif)
+- Compute the distance map using the default plugin (we need a 8 bit image for the analyze skeleton step)
+ - **[Process > Binary > Distance Map**]
+- **[ Image › Rename...]**
+  - "Distance Map"
+- **[File > Open...]** [xy_8bit_binary__glialcell_skeleton.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__glialcell/xy_8bit_binary__glialcell_skeleton.tif)
 - **[ Image › Rename...]**
   - "Skeleton"
 - Make this image take the value 1 so that we can use it as a multiplicative mask
  - **[ Process › Math › Divide...]**
  - `255`
-- **[File > Open...]** [xy_8bit_distmap_glialcell.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_glialcell/xy_8bit_distmap_glialcell.tif)
-- **[ Image › Rename...]**
-    - "Distance map"
 - Use the image calculator function **[ Process › Image Calculator...]** to multiply the skeleton image by the distance map:
   - Image1: Skeleton
   - Operation: Multiply
