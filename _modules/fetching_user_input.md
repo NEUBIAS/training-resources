@@ -1,6 +1,7 @@
 ---
 title: Fetching user input (script parameters)
 layout: module
+tags: ["scripting"]
 prerequisites:
   - "[Running a script](../script_run)"
   - "[Setting a scripting environment](../script_env)"
@@ -8,14 +9,15 @@ objectives:
   - "To create graphical user interface/ dialog box for fetching inputs through script"
   - "Understand how and which parameters can be fetched through graphical user interface"
 
-motivation: Sometimes when your script has lot of input parameters and you want to apply steps related to these input parameters with different values/settings, changing them within a script with each run makes your script more error-prone. Moreover, when steps to be performed on your data are not sequential, one can reduce the manual intervention steps by creating a custom GUI or dialog box with all the predefined parameters at the beginning of a script run. Script parameter notation is a very efficient way to declare all your input parameters through a dialog.
+motivation: |
+  Sometimes when your script has lot of input parameters and you want to apply steps related to these input parameters with different values/settings, changing them within a script with each run makes your script more error-prone. Moreover, when steps to be performed on your data are not sequential, one can reduce the manual intervention steps by creating a custom GUI or dialog box with all the predefined parameters at the beginning of a script run. Script parameter notation is a very efficient way to declare all your input parameters through a dialog.
 
 concept_map: >
-    graph TD
-      P("#@ parameter") -- declares user inputs --> S("Script")
-      P("#@ parameter") -- has --> T("Type")
-      T("Type") -- has --> PP("Properties")
-      S --> G("Pop-up dialog (to fetch inputs interactively)")
+  graph TD
+    P("#@ parameter") -- declares user inputs --> S("Script")
+    P("#@ parameter") -- has --> T("Type")
+    T("Type") -- has --> PP("Properties")
+    S --> G("Pop-up dialog (to fetch inputs interactively)")
 
 figure: /figures/fetching_user_input.png
 figure_legend: Fetching user parameters in a script using notation "#@ parameter". Running this script would produce a pop-up dialog shown in the figure. The variables for storing these inputs are defined at the end of each "#@ parameter" declaration. Pressing "OK" will store set values in variable which are used in the rest of the code.
@@ -25,14 +27,14 @@ activity_preface: |
     - try try bitte
 
 activities:
-- ["ImageJ GUI", "fetching_user_input/activities/createImage.ijm", "java"]
+  - ["ImageJ GUI", "fetching_user_input/activities/createImage.ijm", "java"]
 
 exercise_preface: |
   - Create input parameters from the steps written in macro
     - Open
 
 exercises:
-- ["ImageJ GUI", "fetching_user_input/activities/createImage.ijm", "java"]
+  - ["ImageJ GUI", "fetching_user_input/activities/createImage.ijm", "java"]
 
 assessment: >
 
