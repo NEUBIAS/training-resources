@@ -19,7 +19,7 @@ open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/waters
 rename("tubulin_smooth");
 
 // invert tubulin image for watershed
-selectWindoe("tubulin_smooth");
+selectWindow("tubulin_smooth");
 run("Invert");
 
 // watershed on inverted tubulin with nuclei as seeds and binary tubulin as mask
