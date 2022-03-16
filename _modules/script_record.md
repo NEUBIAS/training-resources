@@ -1,6 +1,7 @@
 ---
-title:     Recording a script
-layout:    module
+title: Recording a script
+layout: module
+tags: ["scripting"]
 
 prerequisites:
   - "[Running a script](../script_run)"
