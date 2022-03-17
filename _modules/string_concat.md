@@ -8,14 +8,14 @@ prerequisites:
 objectives:
   - "Combine (concatenate) strings, paths and numbers into a bigger string"
 motivation: |
-  Combing several strings into a a larger string is a prevalent operation in scripting. This is useful, e.g., to create file paths and create log messages. Such concatenation of strings is surprisingly error prone and it is thus important to learn it properly and be aware of all the pitfalls.
+  Combining several strings into a larger string is a prevalent operation in scripting. This is useful, e.g., to create file paths and create log messages. Such concatenation of strings is surprisingly error prone and it is thus important to learn it properly and be aware of all the pitfalls.
 
 concept_map: >
   graph TD
-    A("Substring 1") --> X("Concatenated string")
-    B("Substring 2") --> X
+    A("String 1") --> X("Concatenated string")
+    B("String 2") --> X
     C("...") --> X
-    D("Substring n") --> X
+    D("String N") --> X
 
 figure: /figures/string_concat.png
 figure_legend: String concatenation.
@@ -55,12 +55,17 @@ external_links:
   - "[File.separator in ImageJ](https://imagej.nih.gov/ij/developer/macro/functions.html#F)"
   
 ---
-#### Strings
-
-Strings are objects (variables) containing a sequence of characters such as "a" and "b".
 
 #### String concatenation
 
 String concatenation is the operation of joining multiple substrings together to make a bigger one. For example concatenating "Hello " and "world!" would result into "Hello world!". 
 
-A frequent operation in bioimage analysis is to create paths to images by concatenating a folder and file name to a full path. Please note that when concatenating a folder and a file name you might need to add a "/" or "\" between the folder and the file name. Which of the two depends on the operating system and and thus all scripting languages offer special functions to help you write code that will run on all operating systems.
+#### Creating paths
+
+A frequent operation in bioimage analysis is to create paths to images by concatenating a folder and file name to a full path. Please note that when concatenating a folder and a file name into a full path, you might need to add a so-called file separator between the folder and the file name. This is a character that separates directory names within a path to a particular location on your computer. Different operating systems use different file separators: on Linux and MacOS, this is `/`, while Windows uses `\`. To make it worse, when you store a directory you are typically never sure whether the contained string ends on `/` or `\` or does not have the separator in the end, e.g. `C:\Users\Data`, in which case you have to add it when concatenating a file name). To make it even worse, in some programming langauges the `\` character have a special meaning within strings and is thus not simply interpreted as a character and to actually get a backslash you may have to write `\\`.
+
+If you want to have some "fun" you can read those discussions:
+- [forward slash in java](https://stackoverflow.com/questions/9575116/forward-slash-in-java-regex)
+- [string replace a backslash in java](https://stackoverflow.com/questions/5596458/string-replace-a-backslash)
+
+As all of this can quickly become a huge mess, fortunately, scripting languages typically offer special functions to help you write code to create file paths that will run on all operating systems. 
