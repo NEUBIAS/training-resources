@@ -39,7 +39,6 @@ activities:
   - ["ImageJ Macro in Fiji", "script_run/activities/script_run_fiji_imagej_macro.md", "markdown"]
   - ["(Draft) Python script in napari console", "script_run/activities/script_run_napari_terminal.md", "markdown"]
   - ["(Draft) Python script in napari script editor plugin", "script_run/activities/script_run_napari_script_editor.md", "markdown"]
-
 exercises:
   - ["ImageJ Macro in Fiji", "script_run/exercises/script_run_fiji_imagej_macro.md"]
 
