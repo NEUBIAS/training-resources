@@ -23,7 +23,14 @@ figure_legend: String concatenation.
 activity_preface: |
   - Open a script editor.
   - Define three variables with values `"Analyzing image"`, `11` and `"..."`.
-  - Concatenate the three variables to create the string: `"Analyzing image 11..."`.
+  - Concatenate the variables to create the string: `"Analyzing image 11..."`.
+    - Tip: You'll need another space character
+  - Print the string that separates folders on your operating system
+    - Tip: Use an in-built function for this
+  - Print the string `\`
+    - Depending on the scripting language that may be a little challenge.
+    - Print the string `"\"` (it should actually print the quotation marks!)
+  - Create a string with two sentences and a line break.
 
 activities:
   - ["ImageJ Macro", "string_concat/activities/string_concat.ijm", "java"]
