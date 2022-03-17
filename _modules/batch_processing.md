@@ -22,14 +22,21 @@ figure_legend: Batch processing of many images, yielding many tables.
 
 activity_preface: |
   - Batch process several images containing nuclei.
-  - Example images can be found in [image_data/batch_process](https://github.com/NEUBIAS/training-resources/tree/master/image_data/batch_process).
+  - Download the images in [image_data/batch_process](https://github.com/NEUBIAS/training-resources/tree/master/image_data/batch_process).
     - For each image
       - Segment the nuclei and save the label mask.
       - Measure the nuclei area and save the results in a table.
 activities:
   - ["ImageJ Macro Scijava","batch_processing/activities/nuclei_measure_shape_scijava_imagejmacro.ijm", "Java"]
 
+exercises_preface: |
+  - Download those two images
+    - [xy_8bit__nuclei_noisy_small.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_small.tif)
+    - [xy_8bit__nuclei_noisy_large.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_large.tif)
+  - Modify the script given in the exercise to enable the batch processing of those two images.
+
 exercises:
+  - ["ImageJ Macro Scijava","batch_processing/exercises/imagejmacro.md"]
 
 assessment: >
 
