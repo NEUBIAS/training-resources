@@ -1,11 +1,14 @@
 // Parameters
-threshold1 = 49;
-threshold2 = 100;
-threshold3 = 255;
-
-run("Close All");
+//
+threshold1 = 49; // two cells
+threshold2 = 100; // only the bright cells
+threshold3 = 5; // cells merge and some noise become segmented
 
 // Code
+//
+
+// open
+run("Close All");
 open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__two_cells.tif");
 rename("input");
 

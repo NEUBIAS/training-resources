@@ -33,7 +33,7 @@ activity_preface: |
     - Functions
     - Parameters
     - Objects/Variables
-  - You may discuss particularities for your platform
+  - Do some slight modification, e.g. changing some processing parameter, and run the script again
 
 activities:
   - ["ImageJ Macro in Fiji", "script_run/activities/script_run_fiji_imagej_macro.md", "markdown"]
