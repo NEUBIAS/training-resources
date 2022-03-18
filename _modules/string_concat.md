@@ -1,24 +1,20 @@
 ---
-title: String concatenation
+title: Working with strings
 layout: module
 tags: ["scripting"]
 prerequisites: 
   - "[Variables](../variables)"
 
 objectives:
-  - "Combine (concatenate) strings, paths and numbers into a bigger string"
+  - "Construct complex strings, e.g. to produce log messages and create file paths"
+
 motivation: |
   Combing several strings into a a larger string is a prevalent operation in scripting. This is useful, e.g., to create file paths and create log messages. Such concatenation of strings is surprisingly error prone and it is thus important to learn it properly and be aware of all the pitfalls.
 
 concept_map: >
-  graph TD
-    A("Substring 1") --> X("Concatenated string")
-    B("Substring 2") --> X
-    C("...") --> X
-    D("Substring n") --> X
 
 figure: /figures/string_concat.png
-figure_legend: String concatenation.
+figure_legend: Examples of somewhat advanced string expressions (as it they may roughly look in some hypothetical scripting language).
 
 activity_preface: |
   - Open a script editor.
