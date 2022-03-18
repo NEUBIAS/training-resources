@@ -12,7 +12,7 @@ run("Close All");
 run("Options...", "iterations=1 count=1 black do=Nothing");
 
 analyseNuclei( "Ctrl", "https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_small.tif" );
-//analyseNuclei( "Treat", "https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_large.tif" );
+analyseNuclei( "Treat", "https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_large.tif" );
 run("Tile");
 
 function analyseNuclei( name, filePath )

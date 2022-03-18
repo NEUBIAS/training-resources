@@ -1,14 +1,13 @@
 /**
  * Fiji script for local background subtraction 
- *
- * Maintainer: christian.tischer@embl.de
- * 
  */
 
-// Parameters
+// Parameters (please modify)
+//
 medianFilterRadius = 15;
 
-// Code
+// Code (rather not modify)
+//
 run("Close All");
 
 // Open data
@@ -35,7 +34,3 @@ run("Plot Profile");
 selectWindow("input");
 run("Restore Selection");
 run("Plot Profile");
-
-
-
-
