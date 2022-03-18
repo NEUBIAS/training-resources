@@ -1,11 +1,13 @@
-logPrefix = "Analyzing image";
-imageNumber = 11;
-logSuffix = "...";
-logMessage = logPrefix + " " +imageNumber + logSuffix;
-print(logMessage);
-
-print(File.separator); 
-
+// log message
+i = 11;
+n = 100;
+print("Analyzing image "+i+"/"+n+"...");
+// paths
+tmpFolder = getDirectory("temp");
+fileName = "nuclei.tif";
+path = tmpFolder + File.separator + fileName;
+print(path);
+// exploring the escape character
 print("\\"); // print("\"); will throw an error
 
 print("\"\\\"");
