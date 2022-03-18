@@ -25,7 +25,7 @@ concept_map: >
     IA --> PM("Label mask")
 
 figure: /figures/output_saving.png
-figure_legend: Image analysis processes can yield several outputs, such as measurement tables, ROI sets and label masks.
+figure_legend: Image analysis processes can yield several outputs, such as a) label masks, b) measurement tables, or c) ROI sets.
 
 activity_preface: |
   - Open the image [xy_8bit_binary_randomshapes.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary_randomshapes.tif).
