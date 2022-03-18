@@ -1,7 +1,7 @@
 ---
-title:     Connected component labeling  
-layout:    module
-
+title: Connected component labeling
+layout:  module
+tags: ["label mask","instance segmentation"]
 prerequisites:
   - "[Binarization](../binarization)"
   - "[Lookup tables](../lut)"

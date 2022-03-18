@@ -1,11 +1,13 @@
-//defining variables
-text1 = "Hello ";
-text2 = "user number ";
-num1 = 50
+logPrefix = "Analyzing image";
+imageNumber = 11;
+logSuffix = "...";
+logMessage = logPrefix + " " +imageNumber + logSuffix;
+print(logMessage);
 
+print(File.separator); 
 
-//concatenating strings
-text3 = text1 + text2 + num1;
+print("\\"); // print("\"); will throw an error
 
-//printing the results
-print(text3);
+print("\"\\\"");
+
+print("Line 1.\nLine 2.");

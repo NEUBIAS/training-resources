@@ -1,8 +1,7 @@
 ---
 title:     Output saving
-
 layout:    module
-
+tags: ["scripting"]
 prerequisites:
   - "[Binarize an image](../binarization)"
   - "[Connected components labeling](../connected_components)"

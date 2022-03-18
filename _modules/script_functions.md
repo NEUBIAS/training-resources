@@ -1,8 +1,9 @@
 ---
-title:     Script functions
-layout:    module
+title: Functions
+layout: module
+tags: ["scripting"]
 prerequisites:
-  - "[Basic properties of images and pixels](../pixels)"
+  - "[Variables](../script_variables)"
 
 objectives:
   - "Avoid code duplication using functions."
@@ -14,8 +15,9 @@ motivation: |
 
 concept_map: >
   graph TD
-    IV("Input argument (optional)") --> F("Function (set of operations)")
-    F --> OV("Returned values (optional)")
+    IV("Input values") --> F("Function")
+    F -->|generates| OV("Output values")
+    F -->|contains| RC("Reusable code")
 
 figure: /figures/script_functions.png
 figure_legend: Components and working of a function within a script.
