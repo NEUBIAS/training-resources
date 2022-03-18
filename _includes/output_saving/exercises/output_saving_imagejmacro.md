@@ -10,7 +10,7 @@ Adapt the below code to change the following:
 >// Different outputs are saved: ROIs, results table, and label mask.
 >
 >// specify an output directory
->outputDir = FIXME # (e.g. 'C:\\Users\\username\\Desktop' or 'C:/Users/username/Desktop' on Windows, or '/Users/username/Desktop/' on MacOS)
+>outputDir = FIXME // (e.g. 'C:\\Users\\username\\Desktop' or 'C:/Users/username/Desktop' on Windows, or '/Users/username/Desktop/' on MacOS)
 >
 >
 >// close any pre-existing output you do not want in your saving results
