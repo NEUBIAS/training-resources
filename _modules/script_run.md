@@ -1,5 +1,5 @@
 ---
-title: Running a script
+string_concat/activities/string_concat.ijmtitle: Running a script
 layout: module
 tags: ["scripting"]
 prerequisites:
@@ -46,20 +46,23 @@ assessment: >
 
   ### True or False
     - Python is a scripting language.
+    - Anaconda is a scripting language.
     - A comment is a line of code that will be executed.
     - You can run scripts in Excel and Word.
-    - You can run scripts in Fiji.
+    - You can run Python scripts in Fiji.
     
     > ## Solution
-    >   - **True**
+    >   - **True** In fact, python has very powerful image analysis capabilities.
+    >   - **False** Anaconda is something that will help you with dependency management (e.g., of the things you need to run a script).
     >   - **False** Comments are just for humans to read.
     >   - **True** Excel and Word in fact do have their own [scripting capabilities](https://support.microsoft.com/en-us/office/introduction-to-office-scripts-in-excel-9fbe283d-adb8-4f13-a75b-a81c6baf163a)
-    >   - **True**
+    >   - **True** and also **False** In fact, you can run Jython scripts in Fiji. Jython is a scripting language that looks like python but it actually runs Java code.
     {: .solution}
 
 learn_next:
 
 external_links:
+  - "[ImageJ Macro Functions](https://imagej.nih.gov/ij/developer/macro/functions.html)"
   - "[Scripting Fiji](https://imagej.net/scripting/)"
   - "[Scripting QuPath](https://qupath.readthedocs.io/en/stable/docs/scripting/overview.html)"
 ---
