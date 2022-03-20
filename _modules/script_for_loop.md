@@ -1,9 +1,7 @@
 ---
 title:     For loops
 layout:    module
-tags: ["scripting", "draft]
-prerequisites: 
-
+tags: ["scripting", "draft"]
 objectives:
   - "Use for loops to repeat operations multiple times"
   - "Running a script for multiple files"
@@ -32,7 +30,7 @@ activity_preface: |
   - Print "Process completed"
 
 activities:
-  - ["ImageJ Macro", "for_loop/activities/for_loop.ijm", "java"]
+  - ["ImageJ Macro", "script_for_loop/activities/script_for_loop.ijm"]
 
 exercises:
 
