@@ -1,16 +1,15 @@
 ---
-title:     For Loops
+title:     For loops
 layout:    module
+tags: ["scripting", "draft]
 prerequisites: 
-  - "ROIs"
-  - "Input and output files"
-[comment]: <> ( - NEEDS TO BE ADDED "[ROIs](../)")
 
 objectives:
-  - "Repeating operations multiple times"
+  - "Use for loops to repeat operations multiple times"
   - "Running a script for multiple files"
+  
 motivation: |
-  Often you need to repeat operations multiple times or run the script for multiple images. One example is when you want to repeat applying a similar filter on the same image, to find the best radius value of that filter. In such cases you can simplify the code by creating a loop instead of writing the same lines of code multiple times. Loops are also very useful for batch processing, which you will learn later.
+  In imaging processing workflow you often apply the same operation to several images, several labels, etc. In order to avoid repeating the same code several times we can use control flow statements such as a `for` loop. The `for` loop together with `if` clauses represent extremely useful tools when  programming. 
 
   
 concept_map: >
