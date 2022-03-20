@@ -1,4 +1,4 @@
-//Identify parameters to be fetched and write code to implement them
+//Identify parameters to be fetched and write code to implement a user input
 
 // close all opened windows
 run("Close All");

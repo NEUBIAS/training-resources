@@ -1,4 +1,4 @@
-Open macro  [fetch_user_input_median_sizeFilter](https://raw.githubusercontent.com/NEUBIAS/training-resources/master/_includes/fetching_user_input/exercises/fetch_user_input_median_sizeFilter.ijm)
+Open macro  [fetch_user_input_median_sizeFilter.ijm](https://github.com/NEUBIAS/training-resources/raw/master/_includes/fetching_user_input/activities/fetch_user_input_median_sizeFilter.ijm)
 
 1. Identify the input parameters to be fetched
 2. Write code to create a GUI to fetch these parameters
