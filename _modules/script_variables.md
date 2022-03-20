@@ -20,7 +20,7 @@ concept_map: >
     V --> |is| Stored("Stored in memory")
     Value --> |can| Change
 
-figure: /figures/variables.png
+figure: /figures/script_variables.png
 figure_legend: Variables are containers specific for an information type. The name of the variable should explain its purpose. Naming convention is camelCase (left side) or under_score (right side).
 
 activity_preface: |
@@ -28,10 +28,10 @@ activity_preface: |
   - Show how a variable can be used in a simple function (e.g. print(variable)) and in a image processing function.
   
 activities:
-  - ["ImageJ Macro", "variables/activities/variables_imagejmacro.ijm", "java"]
+  - ["ImageJ Macro", "script_variables/activities/script_variables_imagejmacro.ijm", "java"]
 
 exercises:
-  - ["ImageJ Macro", "variables/exercises/variables_imagejmacro.md"]
+  - ["ImageJ Macro", "script_variables/exercises/script_variables_imagejmacro.md"]
 
 assessment: >
   
