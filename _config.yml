@@ -27,6 +27,7 @@ module_order:
 - volume_viewer
 - segmentation
 - binarization
+- auto_threshold
 - connected_components
 - measure_shapes
 - workflow_segment_2d_nuclei_measure_shape
@@ -34,17 +35,26 @@ module_order:
 - global_background_correction
 - filter_neighbourhood
 - median_filter
+- filter_morphological
 - local_background_correction
 - filter_objects
 - workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape
 - distance_transform
+- watershed
+- skeletonization
+- workflow_nuclei_and_cells_segmentation
+- manual_segmentation
+- script_env
 - script_run
+- script_record
 - variables
 - commenting
 - string_concat
 - for_loop
 - output_saving
+- batch_processing
 - script_functions
+- fetching_user_input
 - volume_viewer
 - ome_zarr_s3
 

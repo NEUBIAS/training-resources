@@ -14,7 +14,7 @@ motivation: >
 
 
 concept_map: >
-  graph LR
+  graph TD
     Im("Digital image") --- A("N-D array")
     A --- E("Elements/Pixels/Voxels")
     A --- DT("Data type")
@@ -39,7 +39,7 @@ exercises:
 
 assessment: >
 
-  ### 2D image inspection
+  ### 2-D image inspection
     Open image
     [xy_8bit__nuclei_noisy_different_intensity.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_different_intensity.tif).
     Hint: For certain exercises the inspection of the histogram will help
@@ -61,7 +61,7 @@ assessment: >
     > 1. No, the gray value histogram is independent of the pixel locations
   {: .solution}
 
-  ### 3D image inspection
+  ### 3-D image inspection
     Open image: [xyz_8bit__mri_head.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit__mri_head.tif)
     1. What is the value of the voxel at the indices (x=93,y=124,z=13)?
     1. Which is the highest value in the image?
@@ -84,3 +84,15 @@ external_links:
    - "[Images in ImgLib2: Accessible](https://imagej.net/libs/imglib2/accessibles)"
    - "[Images in skimage: numpy arrays](https://scikit-image.org/docs/dev/user_guide/numpy_images.html)"
 ---
+
+### Digital image dimensions
+
+There are several ways to describe the size of a digital image. For example, the following sentences describe the same image.
+
+- The image has 2 dimensions, the length of dimension 0 is 200 and the length of dimension 1 is 100.
+- The image has 2 dimensions, the length of dimension 1 is 200 and the length of dimension 2 is 100.
+- The image has a shape of (200, 100).
+- The image has 200 x 100 pixels.
+
+Note that "images" in bioimaging can also have more than two dimensions and one typically specifies how to map those dimensions to the physical space (x,y,z, and t). For example, if you acquire a 2-D movie with 100 time points and each movie frame consisting of 256 x 256 pixels it is quite common to represent this as a 3-D array with a shape of ( 256, 256, 100 ) accompanied with metadata such as ( ("x", 100 nm), ("y", 100 nm), ("t", 1 s) ); check out the module on [spatial calibration](../spatial_calibration) for more details on this.
+
