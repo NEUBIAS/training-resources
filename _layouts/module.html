@@ -168,6 +168,10 @@ Show activity for: <select id="id_activity_platform" name="activityplatformlist"
 {% highlight python %}
 {{ activity }}
 {% endhighlight %}
+{% elsif ext == "groovy" %}
+{% highlight groovy %}
+{{ activity }}
+{% endhighlight %}
 {% elsif ext == "md" %}
 {{ activity | markdownify }}
 {% else %}

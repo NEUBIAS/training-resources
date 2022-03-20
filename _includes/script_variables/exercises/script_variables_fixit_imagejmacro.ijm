@@ -1,0 +1,11 @@
+run("Close All");
+fn = "https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit__autophagosomes.tif";
+a = 1;
+b = 2;
+open(f);
+rename("input");
+run("Duplicate...", "title=tophat");
+run("Top Hat...", "radius=&b");
+selectWindow("input");
+run("Duplicate...", "title=");
+run("Variance...", "radius=&a");
