@@ -21,15 +21,26 @@ concept_map: >
     Value --> |can| Change
 
 figure: /figures/script_variables.png
-figure_legend: Variables are containers specific for an information type. The name of the variable should explain its purpose. Naming convention is camelCase (left side) or under_score (right side).
+figure_legend: Variables are containers specific for an information type. Variable names do not contain spaces, should explain their purpose, should be consistent throughout your code, and should adhere to a naming convention. 
 
 activity_preface: |
-  - Open a script editor, create two numeric variables, store results of addition in a new variable.
-  - Show how a variable can be used in a simple function (e.g. print(variable)) and in a image processing function.
+  Use a script editor for all these activities.
+  ### General usage of variables
+  - Show how variables need to be assigned/declared before usage
+  - Create two numeric variables and store results of addition in a new variable
+  - Use a numeric variable in a simple function (e.g. print(variable)) and in an image processing function
+  
+  ### String variables
+  - Show an example of a string variable and how to declare it
+  
+  ### Variable type
+  - Discuss variable type and, for some languages, type declaration
+  - Discuss possibility of type mismatch
   
 activities:
   - ["ImageJ Macro", "script_variables/activities/script_variables_imagejmacro.ijm", "java"]
 
+exercises_preface: 
 exercises:
   - ["ImageJ Macro", "script_variables/exercises/script_variables_imagejmacro.md"]
 
