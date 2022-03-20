@@ -24,7 +24,6 @@ Adapt the code from the activity such that you:
 ># Open binary shapes image
 >shapes = IJ.openImage("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary_randomshapes.tif")
 >
->
 ># Configure and run particle analyzer
 >results = ResultsTable() # construct empty resultstable
 >pa = ParticleAnalyzer((ParticleAnalyzer.ADD_TO_MANAGER + ParticleAnalyzer.SHOW_ROI_MASKS),(Measurements.AREA + Measurements.CENTROID + Measurements.CENTER_OF_MASS + Measurements.PERIMETER + Measurements.RECT), results, 0, 2000, 0, 1)
