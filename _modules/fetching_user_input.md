@@ -17,7 +17,7 @@ concept_map: >
       S("Script") ---|has| P("Parameters")
       S ---|may have| CB
       S ---|may generate| UI
-      CB("Special code block") --> P
+      CB("Code block") --> P
       UI("UI elements") --> P
       CF("Config file") --> P
       A("Script arguments") --> P
