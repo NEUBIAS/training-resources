@@ -1,4 +1,4 @@
-Hint: You need to modify the code in line 5 and 6 and for example use the `&` operator.
+**Hint**: You need to modify the code in line 5 and 7 and for example use the `&` operator to include the variables.
 
 ```javascript
 run("Close All")
