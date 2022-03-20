@@ -47,7 +47,7 @@ module_order:
 - script_env
 - script_run
 - script_record
-- variables
+- script_variables
 - commenting
 - string_concat
 - output_saving
