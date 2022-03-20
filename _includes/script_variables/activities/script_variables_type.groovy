@@ -7,7 +7,7 @@ print("\n");
 aVariable = "Hello World!";
 print(aVariable);
 
-// If you you use type it does not allow for type change as per default
+// If you you use typed variables, type change is not allowed
 int aVariable = 1;
 print(aVariable);
 print("\n");

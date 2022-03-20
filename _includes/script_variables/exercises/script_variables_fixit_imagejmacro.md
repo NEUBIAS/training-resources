@@ -1,4 +1,4 @@
-Fix the variable naming errors and inconsistencies, i.e. change to `camelCase` in the following code
+Fix the variable naming errors and inconsistencies, i.e. change to `camelCase`
 
 ```javascript
 run("Close All");
