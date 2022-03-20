@@ -1,6 +1,7 @@
 ---
 title: Handling script parameters
 layout: module
+tags: ["scripting"]
 prerequisites:
   - "[Running a script](../script_run)"
   - "[Setting a scripting environment](../script_env)"
@@ -25,18 +26,22 @@ figure: /figures/fetching_user_input.png
 figure_legend: Schematic code examples for how parameters may be stored inside or passed from outside to a script.
 
 activity_preface: |
-  - Open a script and identify whether it contain parameters
-  - Modify the script to implement different options for exposing these parameters (e.g., as show in above figure)
+  - Exposing script parameters
+    - Open a script and carefully examine whether it contains parameters.
+    - Modify the script to implement different options for exposing these parameters (e.g, show in above figure and concept map).
+  - Fetching script parameters from command line
+    - TODO
 
 activities:
-- ["ImageJ Macro", "fetching_user_input/activities/fetch_user_input_imagejmacro.md", "markdown"]
+- ["Exposing script parameters: ImageJ Macro", "fetching_user_input/activities/fetch_user_input_imagejmacro.md", "markdown"]
 
 exercise_preface: |
-  - Open a script and identify whether it contain parameters
-  - Modify the script to implement different options for exposing these parameters (e.g., as show in above figure)
+  - Exposing script parameters
+    - Open a script and carefully examine whether it contains parameters.
+    - Modify the script to implement different options for exposing these parameters (e.g., as show in above figure and concept map).
 
 exercises:
-- ["ImageJ Macro", "fetching_user_input/activities/createImage.ijm", "java"]
+- ["Exposing script parameters: ImageJ Macro", "fetching_user_input/exercises/fetch_user_input_imagejmacro.md", "markdown"]
 
 assessment: >
 
