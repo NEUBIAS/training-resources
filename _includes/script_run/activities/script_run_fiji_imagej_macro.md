@@ -3,6 +3,7 @@
 - Drag and drop the script onto Fiji; Fiji's script editor will open.
 - Click <kbd>Run</kbd>
 - Try to roughly understand what is happening in each line of the code
+  - Note the you can type the command and see the **help** of the **autocompletion**.
 - Consult the [ImageJ Macro Functions](https://imagej.nih.gov/ij/developer/macro/functions.html) website to find out what certain commands do.
 - Appreciate that `run(command, options)` is very important.
   - `command`: Fjij menu entry
