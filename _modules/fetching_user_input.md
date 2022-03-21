@@ -4,13 +4,13 @@ layout: module
 tags: ["scripting"]
 prerequisites:
   - "[Running a script](../script_run)"
-  - "[Setting a scripting environment](../script_env)"
+  - "[Using variables](../variables)"
 objectives:
   - "Organise script parameters in the code such that can be easliy adapted"
-  - "Create dialog boxes for fetching scripting parameter"
+  - "Create dialog boxes for fetching script parameters"
 
 motivation: |
-  Scripts typically have parameters that one would like to change while leaving the core of the code untouched. Examples for such changable parameteres are the input image file and some image processing parameters such as filter sizes and thresholds. It is very important to learn how to "expose" such parameters in ways that do not require digging into and modifying the actual code too much.
+  Scripts typically have parameters that one would like to change while leaving the core of the code untouched. Examples for such changable parameteres are the input image file and image processing parameters such as filter sizes and thresholds. It is very important to learn how to "expose" such parameters in ways that do not require digging into and modifying the actual code too much.
 
 concept_map: >
     graph TD
