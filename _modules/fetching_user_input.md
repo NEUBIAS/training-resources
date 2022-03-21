@@ -22,14 +22,17 @@ concept_map: >
 
 figure: /figures/fetching_user_input.png
 figure_legend: Schematic code examples for how parameters may be stored inside or passed from outside to a script.
-ls
+
 activity_preface: |
   - Exposing script parameters
     - Open a script and carefully examine whether it contains parameters.
     - Modify the script to implement different options for exposing these parameters (e.g, show in above figure and concept map).
+  - Interactive ROI placement
+    - Develop a script to interactively fetch a ROI drawn by the user and use it for a measurement.
 
 activities:
-- ["Exposing script parameters: ImageJ Macro", "fetching_user_input/activities/fetch_user_input_imagejmacro.md", "markdown"]
+  - ["Exposing script parameters: ImageJ Macro", "fetching_user_input/activities/fetch_user_input_imagejmacro.md", "markdown"]
+  - ["Interactive ROIs: ImageJ Macro", "fetching_user_input/activities/interactive_roi.ijm", "java"]
 
 exercise_preface: |
   - Exposing script parameters
