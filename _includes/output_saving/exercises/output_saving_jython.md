@@ -14,7 +14,12 @@ Adapt the code from the activity such that you:
 >from ij.process import ImageProcessor
 >import os
 >
+># Specify an output directory
 >outputDir = FIXME # (e.g. r'C:\Users\username\Desktop', 'C:\\Users\\username\\Desktop' or 'C:/Users/username/Desktop' on Windows or '/Users/username/Desktop/' on MacOS)
+>
+># Specify size parameters for object selection
+>min_size = 0
+>max_size = 2000
 >
 ># Initialize Roi Manager and empty results table, close other open images
 >rm = RoiManager().getInstance()
@@ -26,7 +31,7 @@ Adapt the code from the activity such that you:
 >
 ># Configure and run particle analyzer
 >results = ResultsTable() # construct empty resultstable
->pa = ParticleAnalyzer((ParticleAnalyzer.ADD_TO_MANAGER + ParticleAnalyzer.SHOW_ROI_MASKS),(Measurements.AREA + Measurements.CENTROID + Measurements.CENTER_OF_MASS + Measurements.PERIMETER + Measurements.RECT), results, 0, 2000, 0, 1)
+>pa = ParticleAnalyzer((ParticleAnalyzer.ADD_TO_MANAGER + ParticleAnalyzer.SHOW_ROI_MASKS),(Measurements.AREA + Measurements.CENTROID + Measurements.CENTER_OF_MASS + Measurements.PERIMETER + Measurements.RECT), results, min_size, max_size, 0, 1)
 >pa.analyze(shapes) # run the particle analyzer on the image
 >results.show("Results")
 >
@@ -37,7 +42,6 @@ Adapt the code from the activity such that you:
 >IJ.run(labelMask, "Glasbey", "") # set glasbey LUT
 >FileSaver(labelMask).saveAsTiff(os.path.join(outputDir, "shapes_labels_jython.png")) # save the label mask
 >
->rm.runCommand("Select All")
 >rm.runCommand("Save", os.path.join(outputDir, "shapes_ROIset_jython.zip")) # save the ROIs
 > ```
 {: .solution}
