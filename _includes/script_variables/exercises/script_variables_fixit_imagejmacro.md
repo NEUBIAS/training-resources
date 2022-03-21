@@ -1,4 +1,4 @@
-Copy the macro code to the FiJi editor and press `run`. This will create an error.
+Copy the macro code to the FiJi editor and press `Run`. This will create an error.
 1. Fix the variable naming for the file path. Use  the `camelCase` naming convention.
 2. Change the name of the variables `a` and `b` so that it their names are meaningful and reflect their content. Use the `camelCase` naming convention.
 
