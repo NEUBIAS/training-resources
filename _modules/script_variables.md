@@ -55,7 +55,7 @@ exercise_preface: |
    
    ### Fix it
    
-   Try to run the code and fix the error(s). Modify the variable names to `camelCase` in a way that they their content is clear to the reader. 
+   Try to run the code and fix the error(s). Modify the variable names to `camelCase` in a way that their content/meaning is clear to the reader. 
 
 exercises:
   - ["ImageJ Macro, difference of gaussians", "script_variables/exercises/script_variables_DoG_imagejmacro.md"]
