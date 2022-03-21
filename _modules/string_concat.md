@@ -7,6 +7,7 @@ prerequisites:
 
 objectives:
   - "Construct complex strings, e.g. to produce log messages and create file paths"
+  - "Master the backward slash \\."
 
 motivation: |
   Combining several strings into a larger string is a prevalent operation in scripting. This is useful, e.g., to create file paths and create log messages. Such concatenation of strings is surprisingly error prone and it is thus important to learn it properly and be aware of all the pitfalls.
