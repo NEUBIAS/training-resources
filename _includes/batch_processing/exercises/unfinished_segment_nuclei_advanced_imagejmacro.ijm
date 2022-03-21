@@ -9,8 +9,8 @@
  */
 
 // Fetch input image file and output directory using Scijava script parameters
-// TODO
-// TODO
+// TODO Fetch input image
+// TODO Fetch output directory
 
 run("Close All");
 run("Options...", "iterations=1 count=1 black do=Nothing");
