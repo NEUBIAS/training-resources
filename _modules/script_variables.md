@@ -55,7 +55,7 @@ exercise_preface: |
    
    ### Fix it
    
-   Try to run the code and fix the error(s). Modify the variable names to `camelCase` in a way that they their function is clear to the reader. 
+   Try to run the code and fix the error(s). Modify the variable names to `camelCase` in a way that they their content is clear to the reader. 
 
 exercises:
   - ["ImageJ Macro, difference of gaussians", "script_variables/exercises/script_variables_DoG_imagejmacro.md"]
@@ -68,7 +68,7 @@ assessment: >
     - A variable can only be a number
     - Variables have a symbolic name that can be referenced to
     - The value of a variable can't change
-    - The name of the variable should indicate its function
+    - The name of a variable should indicate its content
     
     > ## Solution
     >   -  False
