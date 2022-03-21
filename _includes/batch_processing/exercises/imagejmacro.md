@@ -6,5 +6,5 @@
   - Tip: to make it work you may also have to add code to some lines where it does not say `TODO`.
 
 > ## Solution
->   - Download [solution.ijm](https://raw.githubusercontent.com/NEUBIAS/training-resources/master/_includes/binarization/exercises/solution_segment_nuclei_advanced.ijm).
+>   - Download [solution.ijm](https://raw.githubusercontent.com/NEUBIAS/training-resources/master/_includes/batch_processing/exercises/solution_segment_nuclei_advanced.ijm).
 {: .solution}
