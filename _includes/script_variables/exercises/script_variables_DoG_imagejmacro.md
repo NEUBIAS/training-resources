@@ -1,3 +1,5 @@
+Copy the code to the FiJi script editor and solve the exercise.
+
 **Hint**: You need to modify the code in line 5 and 7 and for example use the `&` operator to include the variables.
 
 ```javascript
