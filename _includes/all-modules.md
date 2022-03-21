@@ -70,7 +70,7 @@ open an issue: https://github.com/carpentries/styles/issues/new
 
 
 
-<h2> Workflows </h2>
+<h2 id="workflows"><a href="#workflows">Workflows</a></h2>
 <div class="container-fluid">
 <div class="row">
 {% for e in workflows %}
@@ -106,7 +106,7 @@ open an issue: https://github.com/carpentries/styles/issues/new
 
 
 
-<h2> Scripting </h2>
+<h2 id="scripting"><a href="#scripting">Scripting</a></h2>
 <div class="container-fluid">
 <div class="row">
 {% for e in scriptings %}
@@ -143,7 +143,7 @@ open an issue: https://github.com/carpentries/styles/issues/new
 
 
 
-<h2> Drafts </h2>
+<h2 id="drafts"><a href="#drafts">Drafts</a></h2>
 <div class="container-fluid">
 <div class="row">
 {% for e in drafts %}
