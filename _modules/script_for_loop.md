@@ -1,5 +1,5 @@
 ---
-title:     For loops
+title:     Loops
 layout:    module
 tags: ["scripting", "draft"]
 objectives:
@@ -12,16 +12,15 @@ motivation: |
   
 concept_map: >
   graph TD
-    A("Previous code") --> B("Loop with a condition")
-    B --> C("Condition is valid")
-    C --> D("Statements to be repeated")
-    D --> B
-    B --> E("Condition is not valid")
-    E --> F("Next code to run")
+    A["Previous code"] --> Loop{"Check condition"}
+    Loop --> |Condition is valid| RepeatChunk("Code chunk to be repeated")
+    RepeatChunk --> Loop
+    Loop --> |Condition is not valid| NextChunk("Next code to run")
 
 
 figure: /figures/for_loop.png
-figure_legend: For loop.
+figure_legend: In a control flow statement a piece of code is repeated (loop) as long as a specific condition is valid. 
+
 
 activity_preface: |
   - Open a script editor.
@@ -50,8 +49,6 @@ assessment: >
     
 
 learn_next:
-  -"Batch processing"
-[comment]: <> ( - NEEDS TO BE ADDED "[Batch processing](../)")
 
 external_links:
   - "[ImageJ macro loops](https://imagej.nih.gov/ij/developer/macro/macros.html#loops)"
@@ -59,6 +56,9 @@ external_links:
   
 ---
 #### For loop
-Loops are used for repeating a set of operations multiple times, for example on multiple images, multiple channels or multiple timepoints or Z-slices. 
+A `for` loop occurs by iterating over a loop variable defined in a loop header. You use `for` loops when you know the number of iterations to execute.
 
+
+#### While loop
+As a `for` loop a `while` loop repeats 
 
