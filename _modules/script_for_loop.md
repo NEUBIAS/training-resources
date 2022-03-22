@@ -40,7 +40,7 @@ activities:
     
 exercise_preface: |
  ### Multiple erosion
-  * Open the binary image [xy_8bit_binary__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__nup_nuclei/xy_8bit_binary__nuclei.tif")
+  * Open the binary image [xy_8bit_binary__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__nup_nuclei/xy_8bit_binary__nuclei.tif)
   * Create a macro (or use a pre-defined one)  to erode and find boundary of the binary object
   * Modify the macro so that you can perform an arbitrary number of erosions and find their boundary
 exercises:
@@ -63,5 +63,6 @@ A `for` loop occurs by iterating over a loop variable defined in a loop header. 
 
 
 #### While loop
-As a `for` loop a `while` loop repeats 
+While loop does not have a fixed number of iterations. Typically the header contains a condition that is computed within the body of the loop.
+TODO.
 
