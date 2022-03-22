@@ -1,4 +1,10 @@
-// Macro to measure closest, furthest and mean distance of labels to each other
+/*
+ * Measure distance of all labels to the first label 
+ * 
+ * Requirements: 
+ * - IJPB-plugins update site
+ */
+ 
 // This is what we would do when recording a macro
 
 run("Close All");
