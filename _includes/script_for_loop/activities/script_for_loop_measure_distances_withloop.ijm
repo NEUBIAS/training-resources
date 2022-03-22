@@ -1,3 +1,9 @@
+/*
+ * Measure distance of all labels to the all labels
+ * 
+ * Requirements: 
+ * - IJPB-plugins update site
+ */
 // Macro to measure closest, furthest and mean distance of labels to each other
 // This is a version with a loop
 run("Close All");
