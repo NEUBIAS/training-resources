@@ -7,7 +7,7 @@ Open a new script editor
 6. Print the final string
 
 > ## Solution
-> ```
+> ```javascript
 > // define variables
 > str = "nucleus";
 > num = 6;

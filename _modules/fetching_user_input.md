@@ -1,22 +1,21 @@
 ---
 title: Handling script parameters
 layout: module
+tags: ["scripting"]
 prerequisites:
   - "[Running a script](../script_run)"
-  - "[Setting a scripting environment](../script_env)"
+  - "[Using variables](../variables)"
 objectives:
   - "Organise script parameters in the code such that can be easliy adapted"
-  - "Create dialog boxes for fetching scripting parameter"
+  - "Create dialog boxes for fetching script parameters"
 
 motivation: |
-  Scripts typically have parameters that one would like to change while leaving the core of the code untouched. Examples for such changable parameteres are the input image file and some image processing parameters such as filter sizes and thresholds. It is very important to learn how to "expose" such parameters in ways that do not require digging into and modifying the actual code too much.
+  Scripts typically have parameters that one would like to change while leaving the core of the code untouched. Examples for such changable parameteres are the input image file and image processing parameters such as filter sizes and thresholds. It is very important to learn how to "expose" such parameters in ways that do not require digging into and modifying the actual code too much.
 
 concept_map: >
     graph TD
       S("Script") ---|has| P("Parameters")
-      S ---|may have| CB
-      S ---|may generate| UI
-      CB("Special code block") --> P
+      CB("Code block") --> P
       UI("UI elements") --> P
       CF("Config file") --> P
       A("Script arguments") --> P
@@ -25,18 +24,23 @@ figure: /figures/fetching_user_input.png
 figure_legend: Schematic code examples for how parameters may be stored inside or passed from outside to a script.
 
 activity_preface: |
-  - Open a script and identify whether it contain parameters
-  - Modify the script to implement different options for exposing these parameters (e.g., as show in above figure)
+  - Exposing script parameters
+    - Open a script and carefully examine whether it contains parameters.
+    - Modify the script to implement different options for exposing these parameters (e.g, show in above figure and concept map).
+  - Interactive ROI placement
+    - Develop a script to interactively fetch a ROI drawn by the user and use it for a measurement.
 
 activities:
-- ["ImageJ Macro", "fetching_user_input/activities/fetch_user_input_imagejmacro.md", "markdown"]
+  - ["Exposing script parameters: ImageJ Macro", "fetching_user_input/activities/fetch_user_input_imagejmacro.md", "markdown"]
+  - ["Interactive ROIs: ImageJ Macro", "fetching_user_input/activities/interactive_roi.ijm", "java"]
 
 exercise_preface: |
-  - Open a script and identify whether it contain parameters
-  - Modify the script to implement different options for exposing these parameters (e.g., as show in above figure)
+  - Exposing script parameters
+    - Open a script and carefully examine whether it contains parameters.
+    - Modify the script to implement different options for exposing these parameters (e.g., as show in above figure and concept map).
 
 exercises:
-- ["ImageJ Macro", "fetching_user_input/activities/createImage.ijm", "java"]
+- ["Exposing script parameters: ImageJ Macro", "fetching_user_input/exercises/fetch_user_input_imagejmacro.md", "markdown"]
 
 assessment: >
 
