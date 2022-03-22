@@ -13,16 +13,19 @@
 // Processing parameters
 threshold = 25;
 
-// Code
+// Clean up and avoid popping up of image windows during run
 run("Close All");
-
-// avoid showing of image windows (unf. table windows are still popping up)
+run("Clear Results);
 setBatchMode(true);
 
-// black background
+// init options
 run("Options...", "iterations=1 count=1 black do=Nothing");
 
+// open and process
+//
 open(inputImageFile);
+
+// extract image name to create output file names (s.b.)
 imageName = File.getNameWithoutExtension(inputImageFile);
 
 // segment

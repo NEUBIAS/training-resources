@@ -12,8 +12,13 @@
 // TODO Fetch input image
 // TODO Fetch output directory
 
-run("Close All");
+// Configure options
 run("Options...", "iterations=1 count=1 black do=Nothing");
+
+// Clear up previous images and results
+// TODO
+// Avoid popping up of images during run
+// TODO
 
 // open
 open(file);

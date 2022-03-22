@@ -12,9 +12,10 @@
 #@ File (label="Input image") inputImageFile
 #@ File (label="Output directory", style="directory") outputDir
 
-setBatchMode(true);
-
+// Clean up, prevent popping up of image windows and initialise options
 run("Close All");
+run("Clear Results");
+setBatchMode(true);
 run("Options...", "iterations=1 count=1 black do=Nothing");
 
 // open
