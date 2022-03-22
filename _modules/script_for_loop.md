@@ -34,17 +34,18 @@ activity_preface: |
   - Take the starting script and modify it using a `for` loop
 
 activities:
-- ["ImageJ Macro, loop structure", "script_for_loop/activities/script_for_loop_loopstructure.ijm"]
-- ["ImageJ Macro, example no loop", "script_for_loop/activities/script_for_loop_measure_distances_noloop.ijm"]
-- ["ImageJ Macro, example with loop", "script_for_loop/activities/script_for_loop_measure_distances_withloop.ijm"]
+ - ["ImageJ Macro, loop structure", "script_for_loop/activities/script_for_loop_loopstructure.ijm"]
+ - ["ImageJ Macro, example no loop", "script_for_loop/activities/script_for_loop_measure_distances_noloop.ijm"]
+ - ["ImageJ Macro, example with loop", "script_for_loop/activities/script_for_loop_measure_distances_withloop.ijm"]
     
 exercise_preface: |
  ### Multiple erosion
   * Open the binary image [xy_8bit_binary__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__nup_nuclei/xy_8bit_binary__nuclei.tif)
   * Create a macro (or use a pre-defined one) to erode and find boundary of the binary objects
   * Modify the macro so that you can perform an arbitrary number of erosions and find their boundary
+
 exercises:
-- ["ImageJ Macro, Multiple erosion", "script_for_loop/exercises/script_for_loop_erodeband.md"]
+ - ["ImageJ Macro, Multiple erosion", "script_for_loop/exercises/script_for_loop_erodeband.md"]
 
 assessment: >
     
