@@ -10,9 +10,9 @@ import os
 # Specify an output directory
 outputDir = FIXME
 
-# Specify size parameters for object selection 
+# Specify size parameters for object selection
 min_size = 0
-max_size = 2000
+max_size = 1000
 
 # Initialize Roi Manager and empty results table, close other open images
 rm = RoiManager().getInstance()
