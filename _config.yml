@@ -48,6 +48,7 @@ module_order:
 - script_run
 - script_record
 - script_variables
+- script_for_loop
 - commenting
 - string_concat
 - output_saving

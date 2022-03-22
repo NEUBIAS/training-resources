@@ -13,7 +13,7 @@ Adapt the code from the activity such that you:
 >
 >// specify size parameters for object selection
 >minSize = 0
->maxSize = 2000
+>maxSize = 1000
 >
 >// close any pre-existing output you do not want in your saving results
 >roiManager("reset"); // clear any pre-existing ROIs
