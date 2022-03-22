@@ -1,6 +1,4 @@
 
-
-
 // Before the loop
 print ("Starting the process");
 
