@@ -25,21 +25,22 @@ concept_map: >
     IA --> PM("Label mask")
 
 figure: /figures/output_saving.png
-figure_legend: Image analysis processes can yield several outputs, such as a) label masks, b) measurement tables, or c) ROI sets.
+figure_legend: Image analysis processes can yield several outputs, such as a) label masks, b) measurement tables, or c) regions of interest (ROIs), which may include different types, such as polygon outlines, lines or points.
 
 activity_preface: |
-  - Open the image [xy_8bit_binary_randomshapes.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary_randomshapes.tif).
-  - Perform measurements on the different foreground objects, generating a ROI set, label image, and measurements table.
-  - Specify an output directory (for example 'C:\\\Users\\\username\\\Desktop' on Windows (note double "\\" because a single "\\" is interpreted as an escape character) or '/Users/username/Desktop/' on MacOS).
-  - Save the measurements table, ROI set and label image to the specified output directory.
+  - Use a template script and run it.
+  - Understand what the commands do.
+  - Record yourself saving the output.
+  - Edit the script using the recorded commands.
+  - Optional: define an output directory as a parameter and use string concatenation to specify where to save the file and with what name. An example output directory could be 'C:\\\Users\\\username\\\Desktop' on Windows (note double "\\" because a single "\\" is interpreted as an escape character) or '/Users/username/Desktop/' on MacOS.
 
 activities:
-  - ["ImageJ Macro", "output_saving/activities/output_saving_macro.ijm", "java"]
-  - ["ImageJ Jython", "output_saving/activities/output_saving_jython.py", "python"]
+  - ["ImageJ Macro", "output_saving/activities/output_saving_imagej-macro.md"]
+  - ["ImageJ Jython", "output_saving/activities/output_saving_imagej-jython.md"]
 
 exercises:
-  - ["ImageJ Macro", "output_saving/exercises/output_saving_imagejmacro.md"]
-  - ["ImageJ Jython", "output_saving/exercises/output_saving_jython.md"]
+  - ["ImageJ Macro", "output_saving/exercises/output_saving_imagej-macro.md"]
+  - ["ImageJ Jython", "output_saving/exercises/output_saving_imagej-jython.md"]
 
 assessment: >
 
