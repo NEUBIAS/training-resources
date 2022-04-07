@@ -43,6 +43,7 @@ module_order:
 - watershed
 - skeletonization
 - workflow_nuclei_and_cells_segmentation
+- workflow_golgi_per_cell
 - manual_segmentation
 - script_env
 - script_run
