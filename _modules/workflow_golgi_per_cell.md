@@ -7,7 +7,7 @@ prerequisites:
 objectives:
   - "Segment intracellular objects and assign them to their parent cell"
 motivation: |
-  Very often in bioimage analysis one wants to measure the properties of certain intracellular objects (e.g. vesicles) per cell. For example, those objects might be more frequent or larger in one cell than another. To perform such measurements it is very important to know how to assign ("child") objects that are contained in larger ("parent") objects to another.
+  Very often in bioimage analysis one wants to measure the properties of certain intracellular objects (e.g. vesicles) per cell. For example, one may like to measure whether those objects are more frequent or larger in one cell than another. To perform such measurements it is very important to know how to assign ("child") objects (e.g. vesicles) to ("parent") objects (e.g. cells).
 
 concept_map: >
   graph TD
@@ -32,7 +32,7 @@ activity_preface: |
       - `min = max`: the child object is within one parent object
       - `min != max`: the child object overlaps with multiple parent objects
         - `mode`: the label of the parent object that the child object overlaps most with
-      - `min = 0`: the child object is (partically) located outside of any parent cell
+      - `min = 0`: the child object is (partially) located outside of any parent cell
 
 
 activities:
