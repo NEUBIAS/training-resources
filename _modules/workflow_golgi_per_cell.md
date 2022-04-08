@@ -11,12 +11,10 @@ motivation: |
 
 concept_map: >
   graph TD
-    N["Nuclei"] --> TN("Threshold")
-    G["Golgi"] --> TG("Threshold")
-    TN --> CN("Connected components labeling")
-    TG --> CG("Connected components labeling")
-    CG --> GL["Golgi label mask"]
-    CN --> NL["Nuclei label mask"]
+    N["Nuclei"] --> SN("Segment")
+    G["Golgi"] --> SG("Segment")
+    SG --> GL["Golgi (child) label mask"]
+    SN --> NL["Nuclei (parent) label mask"]
     GL -->|assign| NL
 
 figure: /figures/workflow_golgi_per_cell.png
