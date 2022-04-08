@@ -11,22 +11,29 @@ motivation: |
 
 concept_map: >
   graph TD
-    N["Nuclei"] --> T("Threshold")
-    N["Golgi"] --> T("Threshold")
-    T --> C("Connected components labeling")
-    C --> GL["Golgi label mask"]
-    C --> NL["Nuclei label mask"]
-    GL -->|intensity in| NL
+    N["Nuclei"] --> TN("Threshold")
+    G["Golgi"] --> TG("Threshold")
+    TN --> CN("Connected components labeling")
+    TG --> CG("Connected components labeling")
+    CG --> GL["Golgi label mask"]
+    CN --> NL["Nuclei label mask"]
+    GL -->|assign| NL
 
-figure: /figures/template.png
-figure_legend: TODO
+figure: /figures/workflow_golgi_per_cell.png
+figure_legend: Nuclei/cell and Golgi segmentation with assignment of Golgi labels to cell labels.
 
 activity_preface: |
   - Open the image [xyc_16bit__nuclei_golgi.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__nuclei_golgi.tif).
   - Segment nuclei and Golgi
   - Dilate nuclei to approximate cells
   - Assign the Golgi fragments to their parent cell
-    - Technically: Measure the intensity of the Golgi objects in the cell label mask 
+    - Measure the intensity of the child (Golgi) objects in the parent (cell) label mask
+    - You could, e.g., measure the `min`, `max` and `mode` intensity
+      - `min = max`: the child object is within one parent object
+      - `min != max`: the child object overlaps with multiple parent objects
+        - `mode`: the label of the parent object that the child object overlaps most with
+      - `min = 0`: the child object is (partically) located outside of any parent cell
+
 
 activities:
   - ["ImageJ Macro", "workflow_golgi_per_cell/activities/workflow_golgi_per_cell.ijm", "java"]
