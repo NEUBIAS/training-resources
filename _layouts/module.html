@@ -181,28 +181,28 @@ Show activity for: <select id="id_activity_platform" name="activityplatformlist"
 {% endif %}
 
 {% if page.exercises %}
-  {% for exercise in page.exercises %}
-    {% assign includefile = exercise[0] %}
-    {% capture preface %}{% include {{ includefile }} %}{% endcapture %}
-    {{ preface | markdownify }}
-    {% assign platforms = exercise[1] %}
-    <br>
-    Show implementation: <select id="id_exercises_platform" name="exercisesplatformlist" onchange="change_exercises_content_by_platform('id_exercises_platform');return false;">
-    <option value="null-exercises" id="null-exercises-option" selected="selected"> Select... </option>
-    {% for platform in platforms %}
-      <option value="{{ platform[0] | slugify }}-exercises" id="{{ platform[0] | slugify }}-exercises-option"> {{ platform[0] }} </option>
-    {% endfor %}
-    </select>
-    <br>
-    {% for platform in platforms %}
-      <blockquote class="challenge" id="{{ platform[0] | slugify }}-exercises-div">
-      <h2>{{ platform[0] }}</h2>
-      {% assign includefile = platform[1] %}
-      {% capture implementation %}{% include {{ includefile }} %}{% endcapture %}
-      {{ implementation | markdownify }}
-      </blockquote>
-    {% endfor %}
-  {% endfor %}
+{% for exercise in page.exercises %}
+{% assign includefile = exercise[0] %}
+{% capture preface %}{% include {{ includefile }} %}{% endcapture %}
+{{ preface | markdownify }}
+{% assign platforms = exercise[1] %}
+<br>
+Show implementation: <select id="id_exercises_platform" name="exercisesplatformlist" onchange="change_exercises_content_by_platform('id_exercises_platform');return false;">
+<option value="null-exercises" id="null-exercises-option" selected="selected"> Select... </option>
+{% for platform in platforms %}
+<option value="{{ platform[0] | slugify }}-exercises" id="{{ platform[0] | slugify }}-exercises-option"> {{ platform[0] }} </option>
+{% endfor %}
+</select>
+<br>
+{% for platform in platforms %}
+<blockquote class="challenge" id="{{ platform[0] | slugify }}-exercises-div">
+<h2>{{ platform[0] }}</h2>
+{% assign includefile = platform[1] %}
+{% capture implementation %}{% include {{ includefile }} %}{% endcapture %}
+{{ implementation | markdownify }}
+</blockquote>
+{% endfor %}
+{% endfor %}
 {% endif %}
 
 {% if page.assessment %}
