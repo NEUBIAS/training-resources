@@ -7,10 +7,16 @@ prerequisites:
 objectives:
   - "Install the required software for the workshop"
 
-motivation:
+motivation: |
+  Provide instructions for installing the software required for this workshop.
 
-concept_map:
-
+concept_map: >
+  graph TD
+    I("Tool installation") --> F("ImageJ/Fiji")
+    I --> N("Napari")
+    I --> P("Python")
+    I --> M("MATLAB/GNU Octave")
+  
 figure: /figures/tool_installation.png
 figure_legend:
 
