@@ -8,7 +8,7 @@ objectives:
   - "Install the required software for the workshop"
 
 motivation: |
-  Provide instructions for installing the software required for this workshop.
+  Provide instructions for installing the software required for this workshop. Please follow the instructions given by your trainer regarding which software you will need!
 
 concept_map: >
   graph TD
@@ -16,7 +16,7 @@ concept_map: >
     I --> N("Napari")
     I --> P("Python")
     I --> M("MATLAB/GNU Octave")
-  
+
 figure: /figures/tool_installation.png
 figure_legend:
 
