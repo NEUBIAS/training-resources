@@ -2,10 +2,29 @@
 title:     Tool installation
 layout:    module
 
+prerequisites:
+
 objectives:
   - "Install the required software for the workshop"
 
+motivation:
+
+concept_map:
+
 figure: /figures/tool_installation.png
+figure_legend:
+
+activity_preface:
+
+activities:
+
+exercises:
+
+assessment:
+
+learn_next:
+
+external_links:
 
 ---
 ### ImageJ/Fiji
