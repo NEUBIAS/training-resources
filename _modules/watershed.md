@@ -55,9 +55,10 @@ activities:
 - ["ImageJ Macro: MorpholibJ basic watershed", "watershed/activities/morpholibj_basic_watershed.ijm", "java"]
 - ["ImageJ Macro: MorpholibJ shape watershed", "watershed/activities/morpholibj_shape_watershed.ijm", "java"]
 - ["ImageJ Macro: MorpholibJ seeded watershed", "watershed/activities/morpholibj_seeded_watershed.ijm", "java"]
+
 exercises:
   - ["watershed/exercises/shape_preface.md",[["ImageJ Macro","watershed/exercises/morpholibj_shape_watershed_exercise.md"],["asadsd","watershed/exercises/morpholibj_shape_watershed_exercise.md"]]]
-  - ["watershed/exercises/shape_preface.md",[["ImageJ Macro", "watershed/exercises/morpholibj_shape_watershed_exercise.md"],["asadsd","watershed/exercises/morpholibj_shape_watershed_exercise.md"]]]
+  - ["watershed/exercises/shape2_preface.md",[["ImageJ Macro", "watershed/exercises/morpholibj_shape_watershed_exercise.md"],["asadsd","watershed/exercises/morpholibj_shape_watershed_exercise.md"]]]
 
 assessment: >
 

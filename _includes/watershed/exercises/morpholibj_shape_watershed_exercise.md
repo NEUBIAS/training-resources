@@ -1,4 +1,4 @@
-```
+```java
 /*
  * Shape watershed (with distance transform) in Fiji
  * 
