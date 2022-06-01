@@ -7,7 +7,7 @@
 
 ```java
 open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__small_noisy_nuclei.tif");
-selectWindow("xy_8bit__small_noisy_nuclei-1.tif");
+selectWindow("xy_8bit__small_noisy_nuclei.tif");
 run("Duplicate...", " ");
 run("Gaussian Blur...", "sigma=2");
 ```

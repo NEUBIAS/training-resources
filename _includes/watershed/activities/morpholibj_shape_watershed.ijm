@@ -8,6 +8,7 @@
 run("Close All");
 setOption("BlackBackground", true);
 
+// open image
 open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__touching_objects_same_intensity.tif");
 rename("input");
 
@@ -16,15 +17,12 @@ run("Duplicate...", "title=mask");
 setThreshold(83, 255);
 run("Convert to Mask");
 
-
+// create distance map
 run("Chamfer Distance Map", "distances=[Chessknight (5,7,11)] output=[16 bits] normalize");
 rename("dist");
 run("Invert");
 // remove spurious minima in distance map (choose sigma smaller than object radii)
-run("Gaussian Blur...", "sigma=20");
+run("Mean...", "sigma=20");
 
-// watershed without mask
-run("Classic Watershed", "input=dist mask=None use min=0 max=255");
-
-// watershed with mask
+// watershed on distance map with mask
 run("Classic Watershed", "input=dist mask=mask use min=0 max=255");

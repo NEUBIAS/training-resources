@@ -1,0 +1,21 @@
+- **[File > Open...]** [xy_8bit_binary__glialcell.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__glialcell/xy_8bit_binary__glialcell.tif)
+- Compute the distance map using the default plugin (we need a 8 bit image for the analyze skeleton step)
+ - **[Process > Binary > Distance Map**]
+- **[ Image › Rename...]**
+  - "Distance Map"
+- **[File > Open...]** [xy_8bit_binary__glialcell_skeleton.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__glialcell/xy_8bit_binary__glialcell_skeleton.tif)
+- **[ Image › Rename...]**
+  - "Skeleton"
+- Use the image calculator function **[ Process › Image Calculator...]** to multiply the skeleton image by the distance map:
+  - Image1: Skeleton
+  - Operation: Multiply
+  - Image2: Distance map
+  - [X] 'create new window'
+  - [ ] '32-bit float result'
+- **[ Image › Lookup Tables › Fire]**
+- Obtain branch information by analyzing the skeleton: **[Analyze › Skeleton › Analyze Skeleton (2D/3D)]**
+  - [ ] 'Prune ends'
+  - [X] 'Calculate largest shortest path'
+  - [X] 'Show detailed info'
+  - [x] 'Display labeled skeletons'.
+- In the 'Branch information' table, you can find information on branch length, as well as average intensity. Since the distance map tells you the distance a pixel is away from the boundary, you can estimate the average branch thickness by multiplying this value by 2.

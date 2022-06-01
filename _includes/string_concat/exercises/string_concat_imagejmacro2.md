@@ -3,20 +3,17 @@ Create a macro that applies a gaussian blur with a certain sigma value to an ima
 1. Open a sample image: [ File > Open samples > Blobs ]
 1. Open the script editor: [ File > New > Script...]
 1. Choose the language IJ1 Macro
-1. Define `variable1` as the string `"sigma"`
-1. Define `variable2` as the number `6`
-1. Concatenate the variables to get a new string (`variable3`), looking like this: `"sigma=6"`
-1. Run("Gaussian Blur...", `variable3`);
+1. Add the line `run("Gaussian Blur...", "sigma=6");`
+  - Tip: In programming copy and paste as much as possible!
 1. Run the macro to see the effect on the image
-1. Change the value of `variable2` (e.g. set it to `12`) and run the macro again to observe the effect
+1. Define a variable `blurSigma` with the value `6`
+1. Replace the `6` in the `run(...)` command with this variable.
 
 > ## Solution
-> ```
-> // defining variables
-> variable1 = "sigma";
-> variable2 = 6;
-> // concatenating variables, adding the equal sign in the middle
-> variable3 = variable1 + "=" + variable2;
-> run("Gaussian Blur...", variable3);
+> ```javascript
+> blurSigma = 6;
+> run("Gaussian Blur...", "sigma="+blurSigma );
+> // Below would also work and is very convenient, but a bit non-standard...
+> // run("Gaussian Blur...", "sigma=&blurSigma");
 > ```
 {: .solution}

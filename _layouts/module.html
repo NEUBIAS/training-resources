@@ -154,31 +154,31 @@ Show activity for: <select id="id_activity_platform" name="activityplatformlist"
 {% endif %}
 
 {% for platform in page.activities %}
-<blockquote class="discussion" id="{{ platform[0] | slugify }}-activity-div">
+<blockquote class="challenge" style="background-color:white;" id="{{ platform[0] | slugify }}-activity-div">
 <h2>{{ platform[0] }}</h2>
 {% assign includefile = platform[1] %}
 {% assign language = platform[2] %}
 {% capture activity %}{% include {{ includefile }} %}{% endcapture %}
-{% if platform[2] == "markdown" %}
+{% assign ext = includefile | split: "." | last %}
+{% if ext == "ijm" %}
+{% highlight javascript %}
+{{ activity }}
+{% endhighlight %}
+{% elsif ext == "py" %}
+{% highlight python %}
+{{ activity }}
+{% endhighlight %}
+{% elsif ext == "groovy" %}
+{% highlight groovy %}
+{{ activity }}
+{% endhighlight %}
+{% elsif ext == "md" %}
 {{ activity | markdownify }}
 {% else %}
-{% capture codeblock %}
-~~~
 {{ activity }}
-~~~
-{: .language-{{language}} }
-{% endcapture %}
-{{ codeblock | markdownify }}
 {% endif %}
 </blockquote>
 {% endfor %}
-
-{% if page.exercises %}
-{% endif %}
-
-{% if page.exercise_preface %}
-{{ page.exercise_preface | markdownify }}
-{% endif %}
 
 {% if page.exercises %}
 {% for exercise in page.exercises %}
@@ -189,10 +189,6 @@ Show activity for: <select id="id_activity_platform" name="activityplatformlist"
 <br>
 Show implementation: <select id="id_exercises_platform" name="exercisesplatformlist" onchange="change_exercises_content_by_platform('id_exercises_platform');return false;">
 <option value="null-exercises" id="null-exercises-option" selected="selected"> Select... </option>
-{% for platform in platforms %}
-<option value="{{ platform[0] | slugify }}-exercises" id="{{ platform[0] | slugify }}-exercises-option"> {{ platform[0] }} </option>
-{% endfor %}
-</select>
 <br>
 {% for platform in platforms %}
 <blockquote class="challenge" id="{{ platform[0] | slugify }}-exercises-div">
@@ -200,6 +196,27 @@ Show implementation: <select id="id_exercises_platform" name="exercisesplatforml
 {% assign includefile = platform[1] %}
 {% capture implementation %}{% include {{ includefile }} %}{% endcapture %}
 {{ implementation | markdownify }}
+{% endif %}
+
+{% for platform in page.exercises %}
+<blockquote class="challenge" style="background-color:white;" id="{{ platform[0] | slugify }}-exercises-div">
+<h2>{{ platform[0] }}</h2>
+{% assign includefile = platform[1] %}
+{% capture exercise %}{% include {{ includefile }} %}{% endcapture %}
+{% assign ext = includefile | split: "." | last %}
+{% if ext == "ijm" %}
+{% highlight javascript %}
+{{ exercise }}
+{% endhighlight %}
+{% elsif ext == "py" %}
+{% highlight python %}
+{{ exercise }}
+{% endhighlight %}
+{% elsif ext == "md" %}
+{{ exercise | markdownify }}
+{% else %}
+{{ exercise }}
+{% endif %}
 </blockquote>
 {% endfor %}
 {% endfor %}
@@ -212,9 +229,20 @@ Show implementation: <select id="id_exercises_platform" name="exercisesplatforml
 
 <br/>
 
+{% if page.keypoints %}
+<blockquote class="keypoints">
+<h2>Key points</h2>
+<ul>
+{% for keypoint in page.keypoints %}
+<li>{{ keypoint | markdownify }}</li>
+{% endfor %}
+</ul>
+</blockquote>
+{% endif %}
+
 <blockquote class="keypoints">
 <h2>Follow-up material</h2>
-<p>We recommend reading these modules next:</p>
+<p>Recommended follow-up modules:</p>
 <ul>
 {% for follow_up in page.learn_next %}
 <li>{{ follow_up | markdownify }}</li>

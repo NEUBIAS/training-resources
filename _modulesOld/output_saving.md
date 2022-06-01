@@ -15,26 +15,26 @@ objectives:
   - "Save output label mask"
 
 motivation: |
-  There are multiple situations in which you need to save the different types of output you can generate with FIJI. For example, you may want to save your results tables for further analysis in other software (e.g. RStudio, MS EXCEL, ..). It can also be important to save the ROIs that were used for particular measurements, so that you can look back at them for reference, or to use them for visualization purposes. In addition to ROIs, images can be saved as label masks to store the information about different regions. Finally, you may also want to save your entire script containing particular settings or parameters that you used, so that you have re-run the analysis with the exact same settings or compare it with the results obtained using different settings.
+  There are multiple situations in which you need to save the different types of output you can generate with your image analysis pipelines. For example, you may want to save your results as measurement tables for further analysis in other software (e.g. RStudio, MS EXCEL, ..). It can also be important to save the regions of interest (ROIs) that were used for particular measurements, so that you can look back at them for reference, or to use them for visualization purposes. In addition to ROIs, images can be saved as label masks to store the information on different regions. Finally, you may also want to save your entire script containing particular settings or parameters that you used, so that you can re-run the analysis with the exact same settings or compare it with the results obtained using different settings.
 
 concept_map: >
   graph TD
     II("Input image") --> IA("Image analysis process")
-    IA --> RS("Results table")
+    IA --> RS("Measurements table")
     IA --> ROI("ROIs")
     IA --> PM("Label mask")
 
 figure: /figures/output_saving.png
-figure_legend: Image analysis processes can yield several outputs, such as results tables, ROI sets and label masks.
+figure_legend: Image analysis processes can yield several outputs, such as a) label masks, b) measurement tables, or c) ROI sets.
 
 activity_preface: |
-  - In the IJ Macro or Jython script, specify your output directory by pasting a string containing the path to the directory (for example r'C:\Users\UserName\Desktop' on Windows or '/Users/UserName/Desktop/' on MacOS).
-  - Open the blobs image (File > Open Samples > Blobs).
-  - Binarize it and run the 'analyze particles' command to generate different kinds of output.
-  - Save the different output types.
+  - Open the image [xy_8bit_binary_randomshapes.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary_randomshapes.tif).
+  - Perform measurements on the different foreground objects, generating a ROI set, label image, and measurements table.
+  - Specify an output directory (for example 'C:\\\Users\\\username\\\Desktop' on Windows (note double "\\" because a single "\\" is interpreted as an escape character) or '/Users/username/Desktop/' on MacOS).
+  - Save the measurements table, ROI set and label image to the specified output directory.
 
 activities:
-  - ["ImageJ GUI/Macro", "output_saving/activities/output_saving_macro.ijm", "java"]
+  - ["ImageJ Macro", "output_saving/activities/output_saving_macro.ijm", "java"]
   - ["ImageJ Jython", "output_saving/activities/output_saving_jython.py", "python"]
 
 exercises:

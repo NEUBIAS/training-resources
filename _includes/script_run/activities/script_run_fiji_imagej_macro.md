@@ -1,5 +1,11 @@
-- Open Fiji
-- Open the 
-[binarisation](https://github.com/NEUBIAS/training-resources/raw/master/scripts/binarization_fiji.ijm) ImageJ macro script with Fiji
-- Fiji's script editor will open
+- Download the 
+[local background correction](https://raw.githubusercontent.com/NEUBIAS/training-resources/master/_includes/local_background_correction/activities/local_background_correction_imagejmacro.ijm) ImageJ macro script.
+- Drag and drop the script onto Fiji; Fiji's script editor will open.
 - Click <kbd>Run</kbd>
+- Try to roughly understand what is happening in each line of the code
+  - Note the you can type the command and see the **help** of the **autocompletion**.
+- Consult the [ImageJ Macro Functions](https://imagej.nih.gov/ij/developer/macro/functions.html) website to find out what certain commands do.
+- Appreciate that `run(command, options)` is very important.
+  - `command`: Fjij menu entry
+  - `options`: the options of the commands as key value pairs
+- Set the `medianFilterRadius` to `1` and run the script again
