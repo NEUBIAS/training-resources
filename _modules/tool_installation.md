@@ -12,10 +12,9 @@ motivation: |
 
 concept_map: >
   graph TD
-    I("Tool installation") --> F("ImageJ/Fiji")
-    I --> N("Napari")
-    I --> P("Python")
-    I --> M("MATLAB/GNU Octave")
+    I("Image Analysis") -->|is done with a| C("Computer")
+    C -->|using a| T("Tool")
+    T -->|that requires| S("Installation")
 
 figure: /figures/tool_installation.png
 figure_legend:
