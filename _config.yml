@@ -17,6 +17,7 @@ life_cycle: "stable"
 kind: "lesson"
 
 module_order:
+- tool_installation
 - pixels
 - lut
 - spatial_calibration
