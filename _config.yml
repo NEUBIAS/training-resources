@@ -22,6 +22,7 @@ module_order:
 - spatial_calibration
 - datatypes
 - image_file_formats
+- big_image_file_formats
 - volume_slicing
 - projections
 - volume_viewer
