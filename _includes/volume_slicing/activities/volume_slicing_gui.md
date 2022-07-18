@@ -1,13 +1,34 @@
--  Open the 3D image [xyz_8bit_sphere_calibrated.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit_sphere_calibrated.tif).
-- Go to **[ Image > Stacks > Orthogonal Views ]** or **[Ctrl-Shift-H]** to see the orthogonal views of the image.
-- Go to **[ Image > Properties... ]** or **[Ctrl-Shift-P]** to open the properties window to view the voxel dimensions. If you change all dimensions to 1 pixel, you will see that the ball appears as an oval in the 'Orthogonal Views' option.
-- Open the multidimensional image [xyzc_8bit_beads_p_open.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyzc_8bit_beads_p_open.tif).
-- Use the sliders to explore different dimensions in the data.
-- Use **[ Image > Color > Channels Tool... ]** or **[Ctrl-Shift-Z]** to toggle different channels.
-- Go to **[ Image > Properties... ]** or **[Ctrl-Shift-P]** to open the properties window to view the voxel dimensions. In this image the voxel dimensions are anisotropic (voxel width and height are not equal to voxel depth).
-- Select the rectangular selection tool and draw an ROI around the green bead.
-- Go to **[ Image > Duplicate ]** or **[Ctrl-Shift-D]**. Tick 'Duplicate hyperstack', select channel 1 and slice 15-25 to crop out the green bead.
-- With the cropped out green bead as the active image, go to **[ Image > Stacks > Reslice]** or press **/** to open the reslice menu. Select 'Top' and click OK.
+- Open the 3D image [xyz_8bit__chromosomes.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit__chromosomes.tif).
+  - Slice the data in XY, XZ, and YZ using `Orthogonal views`: **[ Image > Stacks > Orthogonal Views ]** or **[Ctrl-Shift-H]**.
+  - Go to **[ Image > Properties... ]** or **[Ctrl-Shift-P]** to open the properties window to view the voxel dimensions. 
+    - Change all dimensions to 1 pixel.
+    - Observe that the cell appears as an oval in the `Orthogonal Views`.
+- Open the 3D multi-channel image [xyzc_8bit_beads_p_open.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyzc_8bit_beads_p_open.tif).
+  - Use the sliders to explore different dimensions in the data.
+  - Use **[ Image > Adjust > Brightness/Contrast...]** to adjust the display settings of the individual channels.
+  - Explore different viewing modes, using **[ Image > Color > Channels Tool... ]**.
+  - Explore the voxel dimensions, using **[ Image > Properties... ]** or **[Ctrl-Shift-P]**.
+    - Observe that the voxel dimensions are anisotropic. 
+  - Crop out the green bead (i.e. "subset" the data).
+    - Select the rectangular selection tool and draw an ROI around the green bead.
+    - Duplicate the selection, using **[ Image > Duplicate ]** or **[Ctrl-Shift-D]**.
+      - [X] `Duplicate hyperstack`
+      - `Channels: 1`
+      - `Slices: 15-25`
+    - Create a side view of the green bead:
+      - **[ Image > Stacks > Reslice]** or press **/** to open the reslice menu.
+        - Select `Top`
+        - Click `OK`.
+      - Explore and understand the different parameters:
+        - `Left/Right/Top/Bottom`... as if looking from that direction onto the stack **on your screen** (e.g., `Top` does **not** mean to look on the stack from the top as in along the z-direction).
+        - `Output spacing`: the spacing of the pixels along the slicing direction.
+        - `avoid interpolation`
+          - uncheck this in order to apply the `output spacing` and create new pixel by interpolation.
+          - check this to ignore the output spacing argument and keep the original pixels.
+
+------
+
+### Additional information (move to main text?)
 
 Since the voxels dimensions are anisotropic in this data set, reslicing it would yield rectangular pixels. However, on your screen pixels always appear as squares. Therefore there are two options:
 - new pixels are added by interpolation to keep the proportions such that they follow the calibration of the image.
