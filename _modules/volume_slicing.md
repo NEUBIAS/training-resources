@@ -12,24 +12,28 @@ motivation: |
   - the Z dimension, providing depth to image data,
   - different channels, showing data recorded with different detectors or detector settings,
   - the time dimension.
-
-  When viewing the data, different dimensions can be included or excluded, to visualize different aspects of the data. Furthermore, multidimensional image data processes can be applied to one or more dimensions. When doing so, it is important to keep in mind that the different spatial dimensions are not necessarily isotropic. This means that the pixel sizes can be different in X, Y, or Z.
+  Viewing such multi-dimensional data is challenging, because a computer monitor can only render a (multi-color) 2D representation of such data. Thus it is important to learn how to efficiently visualise subsets ("slices") of such high-dimensional data.
 
 concept_map: >
   graph TD
-    ND("N-Dimensional image") --> S("Show on")
-    S --> M("2D monitor")
+    ND("N-dimensional image") --> S("Slice")
+    S --> M("2D image")
 
 figure: /figures/volume_slicing.png
 figure_legend: Schematic representation of 2D, 3D, and 5D image data. 2D images are made up of tiny squares called pixels, whereas 3D images are made up of cubes called voxels. Pixels and voxels are not necessarily isotropic, as shown here by squares versus rectangles. In order to see a different part of the image data on a 2D monitor, the image has to be sliced and sometimes rotated.
 
 activity_preface: |
-  - GUI only: open the 3D image [xyz_8bit_sphere_calibrated.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit_sphere_calibrated.tif). Use the 'orthogonal views' options to view the data in XY, YZ, and XZ. What happens to this way of viewing the data when you turn off the calibration?
-  - Open the multidimensional image [xyzc_8bit_beads_p_open.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyzc_8bit_beads_p_open.tif).
-  - Use the sliders to inspect the different dimensions in this image. Which dimensions are present in this data? How can one turn on both channel simultaneously?
-  - View the properties of this image. Are the XYZ dimensions isotropic or anisotropic in this image?
-  - Subset the data such, that a new image is created that contains only the green bead.
-  - Reslice the green bead, such that the bead is shown from the top. What happens when you tick or untick the 'avoid interpolation' box?
+  - Open the 3D image [xyz_8bit__chromsomes.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit__chromosomes.tif). 
+    - The data shows chromosomes wrapped around a spherical(!) nucleus; i.e. the data should look similar from all directions.
+    - View (slice) the data in XY, YZ, and XZ.
+    - Observe that the image is calibrated.
+    - Observe that the rendering in XZ and YZ is deformed with without taking the calibration into account.
+  - Open the 3D multi-channel image [xyzc_8bit_beads_p_open.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyzc_8bit_beads_p_open.tif).
+    - Explore different options for rendering the channel dimension (e.g. gray-scale, color, composite).
+    - View the properties of this image. Are the XYZ dimensions isotropic or anisotropic?
+    - Subset the data such that a new image is created that contains only the green channel.
+    - Reslice the green channel, such that the bead is shown from the side.
+      - Explore different options of dealing with the anisotropy.
 
 activities:
   - ["ImageJ GUI", "volume_slicing/activities/volume_slicing_gui.md", "markdown"]
@@ -45,32 +49,25 @@ assessment: >
 
   ### Fill in the blanks
 
-    - 2D ______ placed on top of each other form a 3D _____.
+    1. A set of 2D \_\_\_\_ placed on top of each other form a 3D \_\_\_\_.
+    2. An \_\_\_\_ voxel size can cause the image to appear \_\_\_\_ when viewing it at an angle. 
 
     > ## Solution
-    >   - 2D **slices** placed on top of each other from a 3D **stack**.
-    {: .solution}
-
-  ### Choose the correct answer
-    - In a non-calibrated image, a spherical object will appear **compressed/round/stretched** in the z-dimension when the sampling in Z is lower than in XY.
-    - In a calibrated image, a spherical object will appear **compressed/round/stretched** in the z-dimension when the sampling in Z is lower than in XY.
-
-    > ## Solution
-    > - In a non-calibrated image, a spherical object will appear **compressed** in the z-dimension when the sampling in Z is lower than in XY.
-    > - In a calibrated image, a spherical object will appear **round** in the z-dimension when the sampling in Z is lower than in XY. However, keep in mind that this may depend on the settings of the software that you are using to view the data. In ImageJ, using the 'orthogonal views' command will scale and interpolate the data according to the calibration, thereby stretching the z-dimension to match with the true proportions of the object.
+    >   1. 2D **slices** placed on top of each other from a 3D **stack**.
+    >   2. An **anisotropic** voxel size can cause the image to appear **deformed** when viewing it at an angle.
     {: .solution}
 
   ### True or False
-    - Isotropic image data has voxels of equal XYZ dimensions.
-    - Slicing is the process in which an image is divided in smaller images.
-    - Reslicing is a term used to indicate repeated slicing.
-    - Images are characterised by 2 dimensions or more
+    1. Isotropic image data has voxels of equal XYZ dimensions.
+    2. Slicing is the process in which an image is divided in smaller images.
+    3. Reslicing is a term used to indicate repeated slicing.
+    4. Images can have 5 dimensions.
 
     > ## Solution
-    > - Isotropic image data has voxels of equal XYZ dimensions. **True**
-    > - Slicing is the process in which a multidimensional image is divided in smaller images. **True**
-    > - Reslicing is a term used to indicate repeated slicing. **False. Typically, the term reslicing refers to resampling volumetric data from a different direction, such that the resulting image stack is a rotated version of the original stack.**
-    > - Images are characterised by 2 dimensions or more. **True, if we note width by x, height by y, depth by z, time by t and channel by c, we could have images characterised by [xy -> 2D] dimensions, or [xyz -> 3D/Z-stack, xyt -> a time-lapse, xyc -> multiple channels], or [xyzt -> 3D time-lapse, xyzc -> 3D with multiple channels], or [xyztc -> 3D time-lapse with multiple channels]**
+    > 1. **True**
+    > 2. **True**
+    > 3. **False** - Typically, the term reslicing refers to resampling volumetric data from a different direction, such that the resulting image stack is a rotated version of the original stack.
+    > 4. **True** - If we note width by `x`, height by `y`, depth by `z`, time by `t` and channel by `c`, we could have images with dimensions such as: [`xy` -> 2D], [`xyz` -> 3D, `xyt` -> 3D: 2D time-lapse, `xyc` -> 3D: 2D multi-channel], or [`xyzt` -> 4D: 3D time-lapse, `xyzc` -> 4D: 3D multi-channel], or [`xyztc` -> 5D: 3D time-lapse  multi-channel]
     {: .solution}
 
 learn_next:
