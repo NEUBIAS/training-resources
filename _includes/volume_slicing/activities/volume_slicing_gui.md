@@ -1,8 +1,14 @@
 - Open the 3D image [xyz_8bit__chromosomes.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit__chromosomes.tif).
-  - Slice the data in XY, XZ, and YZ using `Orthogonal views`: **[ Image > Stacks > Orthogonal Views ]** or **[Ctrl-Shift-H]**.
-  - Go to **[ Image > Properties... ]** or **[Ctrl-Shift-P]** to open the properties window to view the voxel dimensions. 
-    - Change all dimensions to 1 pixel.
-    - Observe that the cell appears as an oval in the `Orthogonal Views`.
+  - Slice the data in along x, y or z using **[ Image > Stacks > Orthogonal Views ]** or **[Ctrl-Shift-H]**.
+  - Explore the effect of wrong calibration:
+    - Open image properties: **[ Image > Properties... ]** or **[Ctrl-Shift-P]**.
+    - Change all dimensions to `1 pixel`.
+    - Observe that the cell now appears as an oval in the `Orthogonal Views`.
+  - Reopen the image in order to have the correct calibration.
+  - Slice the data at arbitrary angles using **[Plugins > BigDataViewer > Open Current Image]**
+    - `Shift-X/Y/Z`: slice along x,y,z.
+    - `Left button drag`: slice along arbitray plane
+    - `I`: toggle interpolation
 - Open the 3D multi-channel image [xyzc_8bit_beads_p_open.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyzc_8bit_beads_p_open.tif).
   - Use the sliders to explore different dimensions in the data.
   - Use **[ Image > Adjust > Brightness/Contrast...]** to adjust the display settings of the individual channels.

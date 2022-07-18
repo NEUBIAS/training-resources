@@ -6,7 +6,7 @@ prerequisites:
 
 objectives:
   - Understand that a digital image is typically stored as an N-dimensional array.
-  - Understand that the array elements are called pixels (2D) or voxels (3D).
+  - Learn that the image array elements are called pixels (2D) or voxels (3D).
   - Examine the values and locations of pixels/voxels in an image.
 
 motivation: >
@@ -18,7 +18,7 @@ concept_map: >
     Im("Digital image") --- A("N-D array")
     A --- E("Elements/Pixels/Voxels")
     A --- DT("Data type")
-    A --- D("Dimensions")
+    A --- D("Shape/Size/Dimensions")
     E --- V("Value")
     E --- I("Indices")
 
@@ -91,7 +91,7 @@ There are several ways to describe the size of a digital image. For example, the
 
 - The image has 2 dimensions, the length of dimension 0 is 200 and the length of dimension 1 is 100.
 - The image has 2 dimensions, the length of dimension 1 is 200 and the length of dimension 2 is 100.
-- The image has a shape of (200, 100).
+- The image has a size/shape of (200, 100).
 - The image has 200 x 100 pixels.
 
 Note that "images" in bioimaging can also have more than two dimensions and one typically specifies how to map those dimensions to the physical space (x,y,z, and t). For example, if you acquire a 2-D movie with 100 time points and each movie frame consisting of 256 x 256 pixels it is quite common to represent this as a 3-D array with a shape of ( 256, 256, 100 ) accompanied with metadata such as ( ("x", 100 nm), ("y", 100 nm), ("t", 1 s) ); check out the module on [spatial calibration](../spatial_calibration) for more details on this.
