@@ -8,19 +8,25 @@ objectives:
   - "Understand the concepts of lazy loading, chunking and resolution pyramids"
   - "Know how to read and write big image data"
 motivation: |
-  Modern microscopy frequently generates image data sets in the GB-TB range. Such data cannot be naviley opened. First, the data may not fit into the RAM of your computer. Second, it would take a lot of time to load the whole data set. Thus, it is important to know about dedicated concepts and implemenations that enable swift interaction with such big image data sets.
+  Modern microscopy frequently generates image data in the GB-TB range. Such data cannot be naviley opened. First, the data may not fit into the working memory (RAM) of your computer. Second, it would take a lot of time to load the data into the memory. Thus, it is important to know about dedicated concepts and implemenations that enable swift interaction with such big image data.
 
 concept_map: >
   graph TD
     BIG("Big image data") -->|saved as| RP("Resolution pyramid")
-    RP -->|saved as| C("Chunks")
-    C -->|lazy-load| PC("Computer")
+    RP -->|saved as| C("Chunks on disk")
+    C -->|lazy-load| PC("Computer memory")
 
 figure: /figures/big_image_data_file_formats.jpg
-figure_legend: Chunked loading from resolution pyramids. Thick lines depict chunks, thin lines depict pixels.
+figure_legend: "Chunked loading from resolution pyramids. Left and middle panel: low resolution (big pixels). Right panel: higher resolution (smaller pixels). Thick lines depict chunks, thin lines depict pixels. Yellow colored chunks have been loaded."
 
 activity_preface: |
-  - Lazy-load a big image (several GB) saved in standard TIFF format.
+  - Inspect the size of a (big) several GB TIFF file on disk.
+  - Compare the file size to the size of your computer's memory.
+  - Open this file in an image viewer.
+    - Observe that this takes some time.
+    - Observe that your memory fills up.
+  - Open a big image (several GB) from a TIFF file.
+  - Lazy-load a big image (several GB) from a TIFF file.
     - Observe that TIFF chunking is plane-wise.
       - Observe that slicing "at an angle" requires loading everything.
   - Lazy-load from a file format with resolution pyramid and 3-D chunking (e.g. OME-Zarr, BDV/XML/HDF5)
@@ -41,7 +47,7 @@ assessment: >
 
     1. Opening data piece-wise on demand is also called ___ .
     1. Storing data piece-wise is also called ___ .
-    1. In order to enable fast inspection of spatial data at different scales (like on Google maps) on can use ___ .
+    1. In order to enable fast inspection of spatial data at different scales (like on Google maps) one can use ___ .
 
     > ## Solution
     >   1. lazy-loading
