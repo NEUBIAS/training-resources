@@ -5,7 +5,7 @@ tags: ["segmentation", "binarization"]
 prerequisites:
   - "[Image segmentation](../segmentation)"
   - "[Basic properties of images and pixels](../pixels)"
-  - "[Data types (unsigned 8-bit)](../datatypes)"
+  - "[Data types](../datatypes)"
 objectives:
   - "Describe the relationship between an intensity image and a derived binary image."
   - "Apply a threshold to segment an image into foreground and background regions"
@@ -26,18 +26,21 @@ figure: /figures/binarization.png
 figure_legend: Image before and after binarization
 
 activity_preface: |
-  - Open the binary image [xy_8bit_binary__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__nuclei.tif).
-  - Discuss the image data type and the pixel values.
-  - Open the image [xy_8bit__two_cells.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__two_cells.tif) and binarize it by applying a manually defined threshold.
+  - Open the image [xy_8bit__two_cells.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__two_cells.tif)
+  - Visualise the image and inspect its data type and value content
+  - Threshold the image
+    - Identify a threshold value that segments both cells
+    - Apply that threshold, generating a binary image
+    - Visualise the binary image and inspect its data type and value content
+   - Threshold again, now choosing a threshold such that only the brighter cell is segmented
 
 activities:
   - ["ImageJ GUI", "binarization/activities/binarization_imagejgui.md", "markdown"]
   - ["ImageJ Macro", "binarization/activities/binarization_imagejmacro.ijm", "java"]
+  - ["skimage napari", "binarization/activities/binarization_skimage_napari.py", "python"]
   - ["ImageJ Jython", "binarization/activities/binarization_jython.py", "python"]
   - ["MATLAB", "binarization/activities/binarization_matlab.m", "matlab"]
   - ["KNIME", "binarization/activities/binarization_knime.md", "markdown"]
-  - ["Python", "binarization/activities/binarization.py", "python"]
-  - ["Python Napari", "binarization/activities/binarization_napari.py", "python"]
 
 exercise_preface: |
   Perform one of the following exercises.
