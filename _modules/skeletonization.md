@@ -55,12 +55,12 @@ exercises:
 assessment: >
 
   ### True or False
-    - Skeleton pixels never overlap with boundary pixels in the original binary image.
+    - Slab pixels never overlap with boundary pixels in the original binary image.
     - Branches in the skeleton can be more than 1 pixel thick.
     - The longest shortest path is the longest branch in the skeleton.
 
     > ## Solution
-    >   - Skeleton pixels never overlap with boundary pixels in the original binary image. **True**
+    >   - Slab pixels never overlap with boundary pixels in the original binary image. **True**
     >   - Branches in the skeleton can be more than 1 pixel thick. **False. They can be longer than 1 pixel, but the branch thickness is always 1 pixel.**
     - The longest shortest path is the longest branch in the skeleton. **False**
     {: .solution}
