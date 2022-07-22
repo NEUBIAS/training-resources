@@ -8,6 +8,9 @@ Adapt the code from the activity such that you:
 >// This macro uses the particle analyzer to measure features of shapes.
 >// Different outputs are saved: ROIs, results table, and label mask.
 >
+>// make sure the background is set to black in Process>Binary>Options
+>run("Options...", "iterations=1 count=1 black do=Nothing");
+>
 >// specify an output directory
 >outputDir = FIXME // (e.g. 'C:\\Users\\username\\Desktop' or 'C:/Users/username/Desktop' on Windows, or '/Users/username/Desktop/' on MacOS)
 >
@@ -26,8 +29,8 @@ Adapt the code from the activity such that you:
 >run("Analyze Particles...", "size=&minSize-&maxSize show=[Count Masks] display add") // run the particle analyzer>run("glasbey")
 >
 >// Save the results
->roiManager("Save", outputDir + "/shapes_ROIset_macro.zip"); // save rois to output directory
->saveAs("Results", outputDir + "/shapes_results_macro.csv"); // save results file to output directory
->saveAs("Png", outputDir + "/shapes_labels_macro.png"); // save label mask to output directory
+>saveAs("Png", outputDir + File.separator + "/shapes_labels_macro.png"); // save label mask to output directory
+>saveAs("Results", outputDir + File.separator + "/shapes_results_macro.csv"); // save results file to output directory
+>roiManager("Save", outputDir + File.separator + "/shapes_ROIset_macro.zip"); // save ROIs to output directory
 > ```
 {: .solution}

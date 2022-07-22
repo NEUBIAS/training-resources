@@ -7,8 +7,8 @@ from ij.measure import ResultsTable, Measurements
 from ij.process import ImageProcessor
 import os
 
-# Specify an output directory
-outputDir = FIXME
+# make sure the background is set to black in Process>Binary>Options
+IJ.run("Options...", "iterations=1 count=1 black")
 
 # Specify size parameters for object selection
 min_size = 0
@@ -28,11 +28,4 @@ pa = ParticleAnalyzer((ParticleAnalyzer.ADD_TO_MANAGER + ParticleAnalyzer.SHOW_R
 pa.analyze(shapes) # run the particle analyzer on the image
 results.show("Results")
 
-# Save results, label mask, and ROIs
-results.save(os.path.join(outputDir, "shapes_results_jython.txt")) # save results table
-
-labelMask = WindowManager.getImage("Count Masks of xy_8bit_binary_randomshapes.tif")
-IJ.run(labelMask, "Glasbey", "") # set glasbey LUT
-FileSaver(labelMask).saveAsTiff(os.path.join(outputDir, "shapes_labels_jython.tif")) # save the label mask
-
-rm.runCommand("Save", os.path.join(outputDir, "shapes_ROIset_jython.zip")) # save the ROIs
+# Save results, label mask, and ROIs --> edit this!
