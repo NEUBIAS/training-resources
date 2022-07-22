@@ -2,7 +2,6 @@
 title:     Object shape measurements
 layout:    module
 
-
 prerequisites:
   - "[Connected component analysis](../connected_components)"
     
@@ -19,14 +18,14 @@ motivation: >
  defines a set of objects in 2D/3D. 
 
 concept_map: >
-  graph LR
+  graph TD
     li[Label Image] --> sa("Shape Analysis")
-    li -.-> |"example <br> shape features"| ex["area (volume) <br> perimeter (surface)<br>circularity = 4 Pi A/P^2"]
+    feature_columns -.- |"e.g."| ex["area (volume) <br> perimeter (surface)<br>circularity = 4 Pi A/P^2"]
     sa --> table("Results table")
     table --> object_rows["Rows are objects"]
     table --> feature_columns["Columns are shape features"]
 
-figure: /figures/Feature_calculation.JPG
+figure: /figures/measure_shapes.jpg
 figure_legend: 
 
 activity_preface: |
@@ -57,16 +56,12 @@ assessment: >
      {: .solution}
 
 learn_next:
-  - "[Workflow - Simple 2D object analysis](../workflow_segment_2d_nuclei_measure_shape)"
+  - "[Workflow: Simple 2D object analysis](../workflow_segment_2d_nuclei_measure_shape)"
   - "[Object intensity meaurements](../measure_intensities)"
 
-
 external_links:
-    
-    - "[Segmentation Annotator](https://github.com/tischi/segmentation-annotator#segmentation-annotator). Label mask and measurements exploration and annotation in ImageJ"
-    - "[Wikipedia coastal line paradox](https://en.wikipedia.org/wiki/Coastline_paradox). Effect of Sampling and resolution on the measurements"
-    - "[Results visualisation](https://imagej.net/MorphoLibJ#Grayscale_morphological_filters). Label visualization in 3D viewer"
-
+  - "[Segmentation Annotator](https://github.com/tischi/segmentation-annotator#segmentation-annotator). Label mask and measurements exploration and annotation in ImageJ"
+  - "[Wikipedia coastal line paradox](https://en.wikipedia.org/wiki/Coastline_paradox). Effect of Sampling and resolution on the measurements"
+  - "[Results visualisation](https://imagej.net/MorphoLibJ#Grayscale_morphological_filters). Label visualization in 3D viewer"
+  - "[Overlay label IDs in ImageJ](https://forum.image.sc/t/overlay-numbers-on-image/35604/6)"
 ---
-
-

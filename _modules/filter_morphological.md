@@ -1,84 +1,177 @@
 ---
-title:     Morphological filters
-layout:    module
+title:  Morphological filters
+layout: module 
+tags: ["Rank filters","Dilation","Erosion","Opening"]
+
+prerequisites:
+  - "[Segmentation](../segmentation)"
+  - "[Median filter](../median_filter)"
+  - "[Connected component labeling](../connected_components)"
+  - "[Neighbourhood filters](../filter_neighbourhood)"
+  
+objectives: 
+  - "Understand how to design morphological filters using rank filters"
+  - "Execute morphological filters on binary or label images and understand the output"
+
+motivation: >
+ Morphological filters (MFs) are used to clean up segmentation masks and achieve a change in morphology and/or size of the objects. For example, MFs are used to remove wrongly assigned foreground pixels, separate touching objects, or identify objects boundaries. 
+
+concept_map: >
+ graph TD
+    subgraph opening
+        erode("Erode (min)") --> dilate("Dilate (max)")
+    end
+    
+    subgraph closing
+            dilate2("Dilate (max)") --> erode2("Erode (min)")
+    end
+    subgraph rank operations
+            any("...")
+    end
+    BI("Binary/label image") --> SE("structuring element")
+    SE .-> erode 
+    SE .-> dilate2 
+    SE .-> any 
+    dilate .-> BIM
+    erode2 .-> BIM
+    any .->  BIM("Modified binary/label image")
+     
+    
+figure: /figures/filter_morphological.png
+figure_legend: A dilation and erosion using a 3x3 structuring element (left side). Morphological filters applied in series, e.g. opening and closing, can achieve very useful results (right side). 
+
+activity_preface: |
+
+ Perform some or all of the activities below
+
+ * Dilation and Erosion of binary
+    * Open [xy_8bit_binary__two_spots_different_size.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__two_spots_different_size.tif) 
+    * explore erosion and dilation 
+    * explore how structures grow and shrink depending on the size of the structuring element
+ 
+ * Opening and closing of binary
+    * Open [xy_8bit_binary__for_open_and_close.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__for_open_and_close.tif)
+    * Perform erosion followed by dilation - opening. Explains it effects in removing thin structures, smoothing borders. If applicable show that opening runs as single command.
+    * Perform dilation followed by erosion - closing. Explains it effects on filling small holes, connecting gaps. If applicable show that opening runs as single command.
+  
+ * Morphological internal gradient of binary
+    * Open [xy_8bit_binary__h2b.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__h2b.tif)
+    * Perform an erosion
+    * Subtract eroded image from binary image and discuss the results (Internal Gradient)
+    * If applicable show where the morphological gradient runs as a single command
+ 
+  
+activities: 
+ - ["ImageJ Macro & GUI: Dilation and erosion", "filter_morphological/activities/filter_morphological_dilation_erosion.ijm", "java"]
+ - ["ImageJ Macro & GUI: Closing and opening", "filter_morphological/activities/filter_morphological_opening_closing.ijm", "java"]
+ - ["ImageJ Macro & GUI: Internal Gradient", "filter_morphological/activities/filter_morphological_inner_gradient.ijm", "java"]
+  
+exercise_preface: |
+  ### Measure intensity on the nuclear membrane
+  In image [xyc_16bit__nup__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__nup_nuclei.tif) we would like to measure the intensity along the nuclear membrane (channel 1) using the information from the DNA (channel 2). We designed two exercises that provide a workflow using morphological filters. 
+  
+  #### Clean up segmentation
+  
+  * Use a combination of opening and closing operations to improve the segmentation of the DNA channel  [xy_8bit_binary__nuclei_noisy.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__nup_nuclei/xy_8bit_binary__nuclei_noisy.tif). 
+  *  The goal is to achieve something like [xy_8bit_binary__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__nup_nuclei/xy_8bit_binary__nuclei.tif) that can be used for further processing and identification of membrane regions. 
+  
+  #### Define nuclear rim 
+  * Use morphological filtering to define an inner rim of width 3 pixels using the label mask:  [xy_8bit_labels__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__nup_nuclei/xy_8bit_labels__nuclei.tif)
+  * (Optional) Measure the mean and total intensity in the first channel of  [xyc_16bit__nup__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__nup_nuclei.tif) using the modified labels masks.
+
+exercises: 
+ - ["ImageJ GUI: Clean up segmentation", "filter_morphological/exercises/filter_morphological_binary.md"]
+ - ["ImageJ GUI: Define nuclear rim",  "filter_morphological/exercises/filter_morphological_label.md"]
+ - ["ImageJ Macro: Clean up segmentation", "filter_morphological/exercises/filter_morphological_binary.ijm"]
+ - ["ImageJ Macro: Define nuclear rim",  "filter_morphological/exercises/filter_morphological_label.ijm"]
+ 
+
+
+assessment: | 
+ 
+    ### Fill in the blanks
+    Using those words fill in the blanks: closing, opening,  min, shrinks, decreases, enlarges, max.
+
+      1. An erosion _____ objects in a binary image.
+      2. An erosion in a binary image _____ the number of foreground pixels.
+      3. A dilation _____ objects in a binary image.
+      4. An erosion of a binary image correspods to a ___ rank operation.
+      5. An dilation of a binary image correspods to a ___ rank operation.
+      6. A dilation followed by an erosion is called ___.
+      7. An erosion followed by a dilation is called ___ .
+      
+      > ## Solution
+      > 1. shrinks
+      > 2. decreases
+      > 3. enlarges
+      > 4. min
+      > 5. max
+      > 6. closing
+      > 7. opening
+      {: .solution}
+    
+    ### True of false? 
+    Discuss with your neighbour!
+    
+      1. Morphological openings on binary images never decrease the number of foreground pixels.
+      2. Morphological closings on binary images never decreases the number of foreground pixels.
+      3. Performing a morphological closing twice in a row does not make sense, because the second closing does not further change the image.
+      4. Performing a morphological closing with radius 2 element is equivalent to two subsequent closing operation with radius 1.
+    
+      > ## Solution
+      > 1. False
+      > 2. True
+      > 3. True
+      > 4. False
+      {: .solution}
+ 
+
+
+learn_next:
+
+external_links:
+    - "[Morphological gradient (Wikimedia)](https://en.wikipedia.org/wiki/Morphological_gradient)"
+    - "[Lecture on filters and segmentation - Refining masks (R. Haase)](https://www.youtube.com/watch?v=LT8L3vSLQ2Q&t=1871s)"
+    - "[Morphological filters on grayscale images (MorphoLibJ)](https://imagej.net/plugins/morpholibj#grayscale-morphological-filters)"
+   
 ---
 
-# Morphological filters
+## Rank filters
+In the region defined by the structuring element, pixel elements are ranked/sorted according to their values. The pixel in the filtered image is replaced with the corresponding sorted pixel (smallest = min, greatest = max, median ). See also [Median filter](../median_filter). Morphological filters corresponds to one or several rank filters applied to an image. 
 
-## Requirements
+## Morphological filters on binary images
+A typical application of these filters is to refine segmentation results. A max-filter is called **dilation** whereas a min-filter is called **erosion**. Often rank filters are applied in a sequence. We refer to a **closing** operation as a max-filter followed by a min-filter of the same size. An **opening** operation is the inverse, a min-filter followed by a max-filter. 
 
-- Neighbourhood filters
-- Rank filters
+Opening operations will:
+ * Remove small/thin objects which extent is below the size of the structuring element
+ * Smooth border of an object
+ 
+Closing operations:
+ * Fill small holes below the size of the structuring element
+ * Can connect gaps
 
-## Motivation
+Image subtraction using eroded/dilated images allows to identify the boundary of objects and is referred to **morphological gradients**:
+ * Internal gradient: original - eroded 
+ * External gradient: dilated - original
+ * (Symmetric) gradient: dilated - eroded 
 
-This module explains how filters can be used to change size and shape of objects in the image.
-
-## Learning objectives
-- Understand how to design morphological filters using rank filters
-- Execute morpholofical filters on binary or grayscale images and explain the output
-
-## Concept map
-```mermaid
-graph TD
-    image --> max1[max]
-    image --> min1[min]
-    image --> max2[max]
-    image --> min2[min]
-    image --> d
-subgraph rank filter sequence
-    max2 --> min3[min]
-    min2 --> max3[max]
-    max1
-    min1
-    d[max - min]
-    end
-    max1 --> dilation
-    min1 --> erosion
-    max3 --> opening
-    min3 --> closing
-    d --> gradient
-    subgraph morphological filter name
-    dilation
-    erosion
-    opening
-    closing
-    gradient
-    end
-```
-
-[*] Concept map above assumes bright objects on dark background. For dark objects on bright background effect of min and max filters inverses
-
-### Activity: Explore erosion and dilation on binary images
-
-- Open image: xy_8bit_binary__two_spots_different_size.tif
-- Explore how structures grow and shrink, using erosion and dilation
-
-### Activity: Explore opening and closing on binary images
-
-- Open image: xy_8bit_binary__for_open_and_close.tif
-- Explore effects of morphological closing and opening:
-	- closing can fill holes
-	- closing can connect gaps
-	- opening can remove thin structures
-
-### Formative assessment
-
-Fill in the blanks, using those words: shrinks, increases, decreases, enlarges.
-
-1. An erosion _____ objects in a binary image.
-2. An erosion in a binary image _____ the number of foreground pixels.
-3. A dilation in a grayscale image _____ the average intensity in the image.
-4. A dilation _____ objects in a binary image.
+**Fill holes** operation is a slightly more complex morphological operation. It is used to identify background pixels surrounded by foreground pixels and change their value to foreground. Algorithmically there are several ways to achieve this.
 
 
-True of false? Discuss with your neighbour!
+## Morphological filters on label images
+Morphological filters work also on label images. If the objects are not touching this will achieve the expected result for each label. However, when objects touch each other, operations such as dilations can lead to unwanted results. 
 
-1. Morphological openings on binary images can decrease the number of foreground pixels.
-2. Morphological closings on binary images never decreases the number of foreground pixels.
-3. Performing a morphological closing a twice in a row does not make sense, because the second closing does not further change the image.
 
-## Learn more
+## Morphological filters on grey level images
+Min and max operations can be applied to grey level images. Applications are for example contrast enhancement, edge detection, feature description, or pre-processing for segmentation.
 
-- https://en.wikipedia.org/wiki/Morphological_gradient
-- https://imagej.net/MorphoLibJ#Grayscale_morphological_filters
+
+
+
+
+
+
+
+
+
+

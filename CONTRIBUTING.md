@@ -147,7 +147,7 @@ Use the `module_order` field in `_config.yml` to specify which modules should ap
 
 If you have questions about the module layout, please contact image-analysis-support@embl.de.
 
-## Building locally
+## Building locally OSX
 
 To test your changes locally, install `jekyll` on your system. Instructions for Mac OSX are here: [https://jekyllrb.com/docs/installation/macos/](https://jekyllrb.com/docs/installation/macos/).
 
@@ -165,3 +165,82 @@ Copy the URL provided in the output
 and paste it into your web browser.
 Now you can navigate around the locally-built version of the pages
 and check whether you're happy to submit your changes to be merged into `master` :+1:
+
+
+## Building locally Windows (without make)
+
+You need to install several tools (`ruby` and then `jekyll`). Please follow the instructions
+[https://jekyllrb.com/docs/installation/windows/] follow step 1-4
+
+All commands are run from a standard/gitbash terminal. 
+
+* Install ruby using the [https://rubyinstaller.org/] (tested with devkit rubyinstaller-devkit-3.0.3-1-x64 used default suggested path etc.  MSYS2 and MINGW development toolchain) 
+* Install jekyll
+```bash
+gem install jekyll bundler
+```
+* Check your jekyll install
+```bash
+jekyll -v
+```
+* Try to compile the page
+```bash 
+bundle exec jekyll serve
+```
+* It will probably complain about missing gems. Install those, e.g.
+```bash 
+gem install github-pages
+gem install webrick
+```
+* Run again 
+```bash 
+bundle exec jekyll serve
+```
+
+* If everything works fine you will get something like
+```bash
+ bundle exec jekyll serve
+Configuration file: D:/Code/training-resources/_config.yml
+            Source: D:/Code/training-resources
+       Destination: D:/Code/training-resources/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating...
+                    done in 5.007 seconds.
+  Please add the following to your Gemfile to avoid polling for changes:
+    gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+ Auto-regeneration: enabled for 'D:/Code/training-resources'
+    Server address: http://127.0.0.1:4000
+  Server running... press ctrl-c to stop.
+```
+
+* Copy the URL provided in the output, should be http://127.0.0.1:4000/image-analysis-training-resources/)
+and paste it into your web browser. Now you can navigate around the locally-built version of the pages
+and check whether you're happy to submit your changes to be merged into `master` :+1:
+
+Caveat: Some users must run their ``gem install`` commands as administrator. We do not know exactly why, but it may depend on their respective Windows installation. 
+
+## See your new module
+To see a module edit the file *_config.yml*  and add your module (the file name in _modules with .md) to the 
+list and the appropriate location
+```markdown
+module_order:
+- pixels
+- spatial_calibration
+- lut
+- binarization
+- connected_components
+- datatypes
+- measure_shapes
+- workflow_segment_2d_nuclei_measure_shape
+- measure_intensities
+- global_background_correction
+- filter_neighbourhood
+- median_filter
+- local_background_correction
+- filter_objects
+- workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape
+- MY_MODULE
+
+```
+
+Note that when jekyll is serving your page, changes on existing files are automatically updated.
