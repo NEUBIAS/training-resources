@@ -33,19 +33,6 @@ external_links:
 
 ---
 
-## Activities
-
-- ImageJ GUI
-  - Install Fiji
-- ImageJ Macro
-  - Install Fiji
-- ImageJ Jython
-  - Install Fiji
-- skimage napari
-  - ???
-- MATLAB
-  - Install MATLAB or GNU Octave
-
 ## Installation instructions
 
 ### Install Fiji
@@ -56,7 +43,7 @@ external_links:
 
 ### Install skimage napari
 
-Essentially, follow these instructions: https://alisterburt.github.io/napari-workshops/SciPy-0722/scipy_installation.html
+Below is an adapted version of these instructions: https://alisterburt.github.io/napari-workshops/SciPy-0722/scipy_installation.html
 
 #### Installation (only once)
 
@@ -65,7 +52,6 @@ Essentially, follow these instructions: https://alisterburt.github.io/napari-wor
 1. `conda activate skimage-napari-tutorial`
 1. `conda install -c conda-forge notebook`
 1. `pip install "napari[all]"`
-1. `pip install napari-brightness-contrast`
 1. `pip install napari-plot-profile`
 
 #### Test installation (only once)
