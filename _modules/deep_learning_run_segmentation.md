@@ -1,5 +1,5 @@
 ---
-title: Run deep learning instance segmentation
+title: Deep learning instance segmentation
 layout: module
 tags: ["draft"]
 prerequisites:
