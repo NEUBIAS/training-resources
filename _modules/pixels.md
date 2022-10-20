@@ -35,6 +35,8 @@ activity_preface: |
 activities:
   - ["ImageJ GUI", "pixels/activities/pixels_imagejgui.md", "markdown"]
   - ["MATLAB", "pixels/activities/pixels2D_matlab.m", "matlab"]
+  - ["skimage napari", "pixels/activities/pixels_skimage_napari.py", "python"]
+
 exercises:
 
 assessment: >

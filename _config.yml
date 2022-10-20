@@ -47,6 +47,7 @@ module_order:
 - workflow_nuclei_and_cells_segmentation
 - workflow_golgi_per_cell
 - manual_segmentation
+- deep_learning_run_segmentation
 - script_env
 - script_run
 - script_record
