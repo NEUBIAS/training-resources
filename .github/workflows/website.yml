@@ -1,7 +1,9 @@
 name: Website
 on:
   push:
-    branches: gh-pages
+    branches:
+      - gh-pages
+      - master
   pull_request: []
 jobs:
   build-website:
