@@ -1,26 +1,19 @@
-- Download [this two-channel image](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_8bit__membranes_nuclei.tif).
-- Open the image in Fiji and measure the typical diameter of one cell.
-- Open the image in Cellpose
+- Download [this two-channel image](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_8bit__membranes_nuclei_big.tif).
+- Open the image in `Cellpose`
   - `cell diameter: 60`
-  - `chan to segment: red` (membranes)
-  - `chan2 (optional): green` (nuclei)
+  - `chan to segment: 1 red` (membranes)
+  - `chan2 (optional): 0 none`
   - Run the `cyto` model
-    - Appreciate that the cell segmentation works well
-  - Decrease the `cell diameter` to 1/5 of its correct value
-  - Run the `cyto` model again
-    - Appreciate that the segmentation does not work well
-  - Put the `cell diameter` back to `60`
-  - Run the `nuclei` model
-    - Appreciate that also this does not work well
-  - Appreciate that only the correct parameters and model yield a good result
 
-### Debug a tricky case (optional)
+Do you have a different opinion on the segmentation, if yes, can you locate regions where you think `cellpose` may have segmented differently?
 
-- Download a [similar two-channel image](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__membranes_nuclei_outliers.tif).
-- Try to segment it in `CellPose`
-- Appreciate that some cells are not segmented
-- Try to find out why that could be the case
+> ## Solution
+> Hint: Use `MASKS ON [x]` and `outlines on [Z]` to view the problematic areas in much intuitive way. Use arrow keys up and down to switch between channels and different display modes. Increase contrast if necessary.
+>     The problematic segmented areas are shown here: ![problematic areas](/figures/cellpose_exercise_problematic_areas.png)
+{: .solution}
 
-### Explore additional parameters (optional)
+Play with `Cell diameter`, `chan to segment` and `chan2(optional)` and find parameter values to improve the segmentation from the preceding step
 
-Explore the `flow_threshold`, `cell_threshold` and `stitch_threshold` parameters
+> ## Solution
+> One way to do this is to use nuclear channel information by setting `chan2 (optional): 2 green` and run `cyto` model again. Another way to make results better is to use a lower `Cell diameter = 40`
+{: .solution}
