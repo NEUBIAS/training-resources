@@ -16,7 +16,7 @@
 
 ### Debug a tricky case (optional)
 
-- Download a [similar two-channel image](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__membranes_nuclei_outliers.tif).
+- Download a [similar two-channel image](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__membranes_nuclei_hot_pixel.tif).
 - Try to segment it in CellPose
 - Appreciate that some cells are not segmented
 - Try to find out why that could be the casd
