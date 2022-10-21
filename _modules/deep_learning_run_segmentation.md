@@ -16,23 +16,24 @@ motivation: |
 
 concept_map: >
   graph TD
-    I("Intensity image") --> DL("Deep learning segementation tool")
+    I("Intensity image") --> DL("Deep learning segmentation tool")
     DL --> L("Label mask image")
     M("Trained model") --- DL
     P("Parameters") --- DL
 
-figure: /figures/template.png
-figure_legend: TODO
+figure: /figures/deep_learning_run_segmentation.png
+figure_legend: From left to right - _input intensity image_ (could be multichannel, multidimensional),  _UNET architecture_ that is mostly used a base for modern deep learning methods (such as cellpose/stardist/mesmer) for bioimage segmentation, _network output_ varies based on the model used i.e., xy-gradients/binary mask in case of cellpose and distances to object boundaries/object probabilities in case of stardist, _label mask_ generated using different methods depending upon preceeding steps.
 
 activity_preface: |
   - Use a deep learning tool to segment the cells in this image: [xyc_8bit__membranes_nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_8bit__membranes_nuclei.tif).
   - If the tool allows you to run different models, try them and compare the results
-  - If the tool has parameters, exploer them and compare the results
+  - If the tool has parameters, explore them and compare the results
 
 activities:
 - ["CellPose GUI", "deep_learning_run_segmentation/activities/cellpose_gui.md", "markdown"]
 
 exercises:
+- ["CellPose GUI", "deep_learning_run_segmentation/exercises/cellpose_gui.md", "markdown"]
 
 assessment: >
 
@@ -40,7 +41,7 @@ assessment: >
 
     1. TODO ___ .
     1. TODO ___ .
-    
+
     > ## Solution
     >   1. TODO
     >   1. TODO
@@ -50,4 +51,3 @@ learn_next:
 
 external_links:
 ---
-
