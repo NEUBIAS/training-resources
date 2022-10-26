@@ -16,14 +16,14 @@ motivation: |
   Deep learning based nuclei and cell segmentation can be much faster and more accurate than conventional segmentation methods. In addition, there may be less parameter tuning required than for conventional methods. However, one can still make mistakes, such as applying the wrong deep learning model for the given input data. Both the usefulness and potential pitfalls make it very important to learn how to properly use and judge deep learning based image segmentation.
 
 concept_map: >
-  graph TD
-    I("Intensity image") --> DL("Deep learning segmentation tool")
-    DL --> L("Label mask image")
-    M("Trained model") --- DL
-    P("Parameters") --- DL
+    graph TD
+      I("Intensity image") --> DL("Deep learning segmentation tool")
+      DL --> L("Label mask image")
+      M("Trained model") --- DL
+      P("Parameters") --- DL
 
 figure: /figures/deep_learning_run_segmentation.png
-figure_legend: From left to right - _input intensity image_ (could be multichannel, multidimensional),  _UNET architecture_ that is mostly used a base for modern deep learning methods (such as cellpose/stardist/mesmer) for bioimage segmentation, _network output_ varies based on the model used i.e., xy-gradients/binary mask in case of cellpose and distances to object boundaries/object probabilities in case of stardist, _label mask_ generated using different methods depending upon preceeding steps.
+figure_legend: From left to right - _input intensity image_ (could be multichannel, multidimensional),  _UNET architecture_ that is mostly used a base for modern deep learning methods (such as cellpose/stardist/mesmer) for bioimage segmentation, _network output_ varies based on the model used i.e., xy-gradients/binary mask in case of cellpose and distances to object boundaries/object probabilities in case of stardist, _label mask_ generated using different methods depending upon preceding steps.
 
 activity_preface: |
   - Use a deep learning tool to segment the cells in this image: [xyc_8bit__membranes_nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_8bit__membranes_nuclei.tif).
@@ -31,7 +31,7 @@ activity_preface: |
   - If the tool has parameters, explore them and compare the results
 
 activities:
-- ["CellPose GUI", "deep_learning_run_segmentation/activities/cellpose_gui.md", "markdown"]
+  - ["CellPose GUI", "deep_learning_run_segmentation/activities/cellpose_gui.md", "markdown"]
 
 exercises:
 - ["CellPose GUI", "deep_learning_run_segmentation/exercises/cellpose_gui.md", "markdown"]
@@ -40,7 +40,7 @@ assessment: >
 
   ### Fill in the blanks
 
-    1. The typical ouput of a (deep learning based) instance segmentation is a ___ .
+    1. The typical output of a (deep learning based) instance segmentation is a ___ .
     1. If the segmentation is faulty you could consider to ___ or ___ .
     1. If you wonder which deep learning tool to use to segment your data you could ___ or ____.
     1. To run a deep learning model efficiently you should have a computer with ___ .
@@ -53,19 +53,10 @@ assessment: >
     {: .solution}
 
 learn_next:
-
-- Train a model (TODO)
+  - Train a model (TODO)
 
 external_links:
-
-- [BioImage Model Zoo](https://bioimage.io/#/)
-- [ZeroCostDL4Mic](https://github.com/HenriquesLab/ZeroCostDL4Mic)
-
+  - "[BioImage Model Zoo](https://bioimage.io/#/)"
+  - "[ZeroCostDL4Mic](https://github.com/HenriquesLab/ZeroCostDL4Mic)"
 
 ---
-
-### Resources for deep learning tools for bioimage segmentation
-
-1. Check the [BioImage Model Zoo](https://bioimage.io/#/)
-1. Check [ZeroCostDL4Mic](https://github.com/HenriquesLab/ZeroCostDL4Mic)
-1. Ask on [the forum](https://forum.image.sc/)
