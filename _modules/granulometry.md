@@ -1,5 +1,5 @@
 ---
-title: Template
+title: Granulometry
 layout: module
 tags: ["draft"]
 prerequisites:
@@ -7,12 +7,12 @@ prerequisites:
 objectives:
   - "TODO"
 motivation: |
-  TODO
+  It is quite common that biological phenotypes manifest in texture differences in microscopy images. An example is the chromosome condensation prior to mitosis. To quantify such texture changes granulometry is one of the most common and interpretable measurements and as such an important concept to master.
 
 concept_map: >
   graph TD
-    T1("TODO1") --> T2("TODO2")
-    T2 --> T3("TODO3")
+    I("Image region") --> G("Granulomtery")
+    G --> GS("Granulometry spectrum")
 
 figure: /figures/template.png
 figure_legend: TODO
