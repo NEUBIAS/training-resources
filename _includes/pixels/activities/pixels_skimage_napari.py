@@ -33,6 +33,8 @@ napari_viewer = Viewer()
 # Add an image to the napari_viewer.
 napari_viewer.add_image(image)
 
+# Explore the napari-plot-profile plugin.
+
 import numpy as np
 # Compute min and max.
 print(image.min(), image.max())
