@@ -4,7 +4,7 @@ viewer = napari.Viewer()
 
 # Read the image
 from skimage.io import imread
-image = imread('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_calibrated_16bit__nuclear_protein_control.tif')
+image = imread('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_high_dynamic_range.tif')
 
 # Check image type and values
 import numpy as np
@@ -15,17 +15,19 @@ viewer.add_image(image, name='image_grayscale', colormap='gray')
 
 # Change brightness and contrast
 viewer.layers['image_grayscale'].contrast_limits=(100, 175)
+# Napari GUI: explore different contrast limits
 
-# chaneg colormap
+# Check available colormap
 print(list(napari.utils.colormaps.AVAILABLE_COLORMAPS))
-viewer.add_image(image, name='image_cyan', colormap='cyan')
+# Change colormap
+viewer.add_image(image, name='image_turbo', colormap='turbo')
+# Napari GUI: visualize images in grid mode and explore the LUTs
 
 # Extract image data from the layers
-image_grayscale = viewer.layers['image_grayscale']
-image_cyan = viewer.layers['image_cyan']
+image_grayscale = viewer.layers['image_grayscale'].data
+image_turbo = viewer.layers['image_turbo'].data
 
 # Compare raw data
-print(image_grayscale.data[:5,:5])
-print(image_cyan.data[:5,:5])
-print((image_grayscale.data == image_cyan.data).all())
-
+print(image_grayscale[0:5,0:5])
+print(image_turbo[0:5,0:5])
+print((image_grayscale == image_turbo).all())
