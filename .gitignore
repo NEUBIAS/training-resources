@@ -10,3 +10,4 @@ _site*
 .idea
 Thumbs.db
 ~$*
+.ipynb_checkpoints
