@@ -17,17 +17,22 @@ viewer.add_image(image, name='image_grayscale', colormap='gray')
 viewer.layers['image_grayscale'].contrast_limits=(100, 175)
 # Napari GUI: explore different contrast limits
 
+# View the intensity image as grayscale
+viewer.add_image(image, name='image_grayscale2', colormap='gray')
+# Napari GUI: visualize images side by side
+# Napari GUI: change brightness and contrast to visualize dim nuclei
+
 # Check available colormap
 print(list(napari.utils.colormaps.AVAILABLE_COLORMAPS))
 # Change colormap
 viewer.add_image(image, name='image_turbo', colormap='turbo')
-# Napari GUI: visualize images in grid mode and explore the LUTs
+# Napari GUI: explore the LUTs
 
 # Extract image data from the layers
 image_grayscale = viewer.layers['image_grayscale'].data
-image_turbo = viewer.layers['image_turbo'].data
+image_grayscale2 = viewer.layers['image_grayscale2'].data
 
 # Compare raw data
 print(image_grayscale[0:5,0:5])
-print(image_turbo[0:5,0:5])
-print((image_grayscale == image_turbo).all())
+print(image_grayscale2[0:5,0:5])
+print((image_grayscale == image_grayscale2).all())
