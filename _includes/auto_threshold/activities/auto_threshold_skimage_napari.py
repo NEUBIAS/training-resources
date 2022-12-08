@@ -10,11 +10,12 @@ image2 = imread('https://github.com/NEUBIAS/training-resources/raw/master/image_
 print(image1.dtype, image1.shape, np.min(image1), np.max(image1))
 print(image2.dtype, image2.shape, np.min(image2), np.max(image2))
 
+# Instantiate the napari viewer
+viewer = napari.Viewer()
+
 # Visualize images using matplotlib
-import matplotlib.pyplot as plt
-fig, ax = plt.subplots(1,2)
-ax[0].imshow(image1)
-ax[1].imshow(image2)
+viewer.add_image(image1, name='image1')
+viewer.add_image(image2, name='image2')
 
 # Explore the histograms
 info_type = np.iinfo(image1.dtype)
@@ -22,29 +23,38 @@ print('\n', info_type)
 min_val = info_type.min
 max_val = info_type.max
 
-fig, ax = plt.subplots(2,1)
-h = ax[0].hist(image1.flatten(), bins=np.arange(max_val+1), log=True)
-h = ax[1].hist(image2.flatten(), bins=np.arange(max_val+1), log=True)
+import matplotlib.pyplot as plt
+plt.hist(image1.flatten(), bins=np.arange(max_val+1), log=True);
+
+plt.hist(image2.flatten(), bins=np.arange(max_val+1), log=True);
 
 # Try manual thresholding
 thr1 = 25
 thr2 = 75
 
-fig, ax = plt.subplots(2,2)
-ax[0,0].imshow(image1)
-ax[0,1].imshow(image2)
-ax[1,0].imshow(image1>thr1)
-ax[1,1].imshow(image2>thr2)
+manual1 = image1>thr1
+manual2 = image2>thr2
 
-# Explore the automatic thresholds available in skimage
-from skimage.filters import try_all_threshold
-fig, ax = try_all_threshold(image1, verbose=True)
-fig, ax = try_all_threshold(image2, verbose=False)
+viewer.add_labels(manual1, name='manual_threshold1')
+viewer.add_labels(manual2, name='manual_threshold2')
+# Identify possible problems with this solution
+
+# Explore auto-thresholding options on:
+# https://scikit-image.org/docs/stable/api/skimage.filters.html
 
 # Obtain the thresholding values
 from skimage.filters import threshold_mean
+
 thr1 = threshold_mean(image1)
+thresholded1 = image1>thr1
 print(thr1)
+
 thr2 = threshold_mean(image2)
+thresholded2 = image2>thr2
 print(thr2)
 
+# Visualize auto-thresholded images
+viewer.add_labels(thresholded1, name='threshold_mean1')
+viewer.add_labels(thresholded2, name='threshold_mean2')
+
+# Explore other throsholding options

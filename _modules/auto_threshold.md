@@ -52,6 +52,7 @@ learn_next:
 
 external_links:
 - Some common automatic thresholding methods can be studied here [Imagej.net Auto-threshold](https://imagej.net/plugins/auto-threshold)
+- Advanced material can be found in [Introduction to Bioimage Analysis by Pete Bankhead](https://bioimagebook.github.io/chapters/2-processing/3-thresholding/thresholding.html)
 
 ---
 
