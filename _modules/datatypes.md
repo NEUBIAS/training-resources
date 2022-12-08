@@ -33,6 +33,7 @@ activity_preface: |
   - [xy_16bit__scanR_datatype_issue.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit__scanR_datatype_issue.tif)
 
 activities:
+  - ["skimage napari", "datatypes/activities/datatypes_skimage_napari.py", "python"]
 
 exercises:
 
