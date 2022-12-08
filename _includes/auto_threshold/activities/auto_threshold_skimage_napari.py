@@ -1,38 +1,50 @@
-# Instantiate the napari viewer
-import napari
-viewer = napari.Viewer()
-
-# Read the image
-from skimage.io import imread
-image = imread('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_high_dynamic_range.tif')
-
-# Check image type and values
 import numpy as np
-print(image.dtype, np.min(image), np.max(image))
+from skimage.io import imread
+import napari
 
-# View the intensity image as grayscale
-viewer.add_image(image, name='image_grayscale', colormap='gray')
+# Read the images
+image1 = imread('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_without_offset.tif')
+image2 = imread('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_with_offset.tif')
 
-# Change brightness and contrast
-viewer.layers['image_grayscale'].contrast_limits=(100, 175)
-# Napari GUI: explore different contrast limits
+# Inspect image data type and values
+print(image1.dtype, image1.shape, np.min(image1), np.max(image1))
+print(image2.dtype, image2.shape, np.min(image2), np.max(image2))
 
-# View the intensity image as grayscale
-viewer.add_image(image, name='image_grayscale2', colormap='gray')
-# Napari GUI: visualize images side by side
-# Napari GUI: change brightness and contrast to visualize dim nuclei
+# Visualize images using matplotlib
+import matplotlib.pyplot as plt
+fig, ax = plt.subplots(1,2)
+ax[0].imshow(image1)
+ax[1].imshow(image2)
 
-# Check available colormap
-print(list(napari.utils.colormaps.AVAILABLE_COLORMAPS))
-# Change colormap
-viewer.add_image(image, name='image_turbo', colormap='turbo')
-# Napari GUI: explore the LUTs
+# Explore the histograms
+info_type = np.iinfo(image1.dtype)
+print('\n', info_type)
+min_val = info_type.min
+max_val = info_type.max
 
-# Extract image data from the layers
-image_grayscale = viewer.layers['image_grayscale'].data
-image_grayscale2 = viewer.layers['image_grayscale2'].data
+fig, ax = plt.subplots(2,1)
+h = ax[0].hist(image1.flatten(), bins=np.arange(max_val+1), log=True)
+h = ax[1].hist(image2.flatten(), bins=np.arange(max_val+1), log=True)
 
-# Compare raw data
-print(image_grayscale[0:5,0:5])
-print(image_grayscale2[0:5,0:5])
-print((image_grayscale == image_grayscale2).all())
+# Try manual thresholding
+thr1 = 25
+thr2 = 75
+
+fig, ax = plt.subplots(2,2)
+ax[0,0].imshow(image1)
+ax[0,1].imshow(image2)
+ax[1,0].imshow(image1>thr1)
+ax[1,1].imshow(image2>thr2)
+
+# Explore the automatic thresholds available in skimage
+from skimage.filters import try_all_threshold
+fig, ax = try_all_threshold(image1, verbose=True)
+fig, ax = try_all_threshold(image2, verbose=False)
+
+# Obtain the thresholding values
+from skimage.filters import threshold_mean
+thr1 = threshold_mean(image1)
+print(thr1)
+thr2 = threshold_mean(image2)
+print(thr2)
+
