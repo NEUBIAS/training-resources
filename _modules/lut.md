@@ -35,7 +35,7 @@ activity_preface: |
 
 activities:
   - ["ImageJ Macro & GUI", "lut/activities/explore_luts_imagejmacro.ijm", "java"]
-  - ["skimage napari", "lut/activities/explore_luts.py", "python"]
+  - ["skimage napari", "lut/activities/explore_luts_skimage_napari.py", "python"]
 
 exercises:
   - ["ImageJ Macro & GUI", "lut/exercises/configure_luts_imagejmacro.md"]

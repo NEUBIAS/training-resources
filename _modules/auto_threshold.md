@@ -27,6 +27,7 @@ activity_preface: |
 
 activities:
 - ["ImageJ GUI", "auto_threshold/activities/auto_threshold_imagejgui.md", "markdown"]
+- ["skimage napari", "auto_threshold/activities/auto_threshold_skimage_napari.py", "python"]
 
 exercise_preface: |
   - Auto thresholding on image stack
