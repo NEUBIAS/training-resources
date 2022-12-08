@@ -57,4 +57,5 @@ print(thr2)
 viewer.add_labels(thresholded1, name='threshold_mean1')
 viewer.add_labels(thresholded2, name='threshold_mean2')
 
-# Explore other throsholding options
+# Explore other thresholding options
+# Note that there exists a threshold_multiotsu function to handle cases with multi-peaks histograms
