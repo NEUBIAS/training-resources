@@ -27,6 +27,7 @@ activity_preface: |
 
 activities:
 - ["ImageJ GUI", "auto_threshold/activities/auto_threshold_imagejgui.md", "markdown"]
+- ["skimage napari", "auto_threshold/activities/auto_threshold_skimage_napari.py", "python"]
 
 exercise_preface: |
   - Auto thresholding on image stack
@@ -51,6 +52,7 @@ learn_next:
 
 external_links:
 - Some common automatic thresholding methods can be studied here [Imagej.net Auto-threshold](https://imagej.net/plugins/auto-threshold)
+- Advanced material can be found in [Introduction to Bioimage Analysis by Pete Bankhead](https://bioimagebook.github.io/chapters/2-processing/3-thresholding/thresholding.html)
 
 ---
 
