@@ -39,11 +39,11 @@ activity_preface: >
     - Repeat with 8-connected labeling and discuss the difference.
   2. 3D connected component labeling:
     - Open image [xyz_8bit_binary__spots.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit_binary__spots.tif) 
-    - Inspect the histogram of the label image and discuss what you can learn from it.
+    - Inspect the pixel values of the label image and see what you can learn about the objects that are encoded in this image.
 
 activities:
   - ["ImageJ MorpholibJ Macro & GUI", "connected_components/activities/connected_components_imagejmacro.ijm", java]
-#  "KNIME": "connected_components/activities/connected_components_knime.md"
+  - ["skimage napari", "connected_components/activities/connected_components_skimage_napari.py", python]
 
 exercises:
   - ["ImageJ MorpholibJ Macro & GUI", "connected_components/exercises/connected_components_imagejmacro.md"]
@@ -83,15 +83,20 @@ A typical workflow is to first categorise an image into background and foregroun
 
 # Connectivity
 
-In an image, pixels are ordered in a squared configuration. For performing a connected component analysis, 
-it is important to define which pixels are considered direct neighbors of a pixel. This is called connectivity and defines which 
-pixels are considered connected to each other. Unfortunately, there is not only one way to define connectivity. Depending upon the inclusion of corner pixels,
-one can have a 4 or 8--connectivity in 2D and  a 6 or 26-connectivity in 3D respectively. The chosen connectivity 
-type may affect the object size.
+In an image, pixels are ordered in a squared configuration. 
+
+For performing a connected component analysis, it is important to define which pixels are considered direct neighbors of a pixel. This is called connectivity and defines which pixels are considered connected to each other.
+
+Essentially the choice is whether or not to include diagonal connections.
+
+Or, in other words, how many orthogonal jumps to you need to make to reach a neighboring pixel; this is 1 or an orthogonal neighbor and 2 for a diagonal neighbor.
+
+This leads to the following equivalent nomenclatures:
+
+- 2D: 1 connectivity = 4 connectivity
+- 2D: 2 connectivity = 8 connectivity
+- 3D: 1 connectivity = 6 connectivity
+- 3D: 2 connectivity = 26 connectivity
+
 <img src="../figures/connected_components_connectivity2D.png"  align ="left" width="50%" >
 <img src="../figures/connected_components_connectivity3D.png"  align ="right" width="50%">
-
-
-
-
-
