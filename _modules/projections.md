@@ -38,6 +38,7 @@ activities:
   - ["ImageJ GUI Reslice", "projections/activities/projections_imagejgui_reslice.md", "markdown"]
   - ["ImageJ GUI CLIJ2", "projections/activities/projections_imagejgui_clij2.md", "markdown"]
   - ["ImageJ GUI TransformJ", "projections/activities/projections_imagejgui_transformj.md", "markdown"]
+  - ["skimage napari", "projections/activities/projections_skimage_napari.py", "python"] 
 
 exercises:
   - ["ImageJ GUI Reslice", "projections/exercises/projections_imagejgui_reslice.md"]
