@@ -39,11 +39,11 @@ activity_preface: >
     - Repeat with 8-connected labeling and discuss the difference.
   2. 3D connected component labeling:
     - Open image [xyz_8bit_binary__spots.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit_binary__spots.tif) 
-    - Inspect the histogram of the label image and discuss what you can learn from it.
+    - Inspect the pixel values of the label image and see what you can learn about the objects that are encoded in this image.
 
 activities:
   - ["ImageJ MorpholibJ Macro & GUI", "connected_components/activities/connected_components_imagejmacro.ijm", java]
-#  "KNIME": "connected_components/activities/connected_components_knime.md"
+  - ["skimage napari", "connected_components/activities/connected_components_skimage_napari.py", python]
 
 exercises:
   - ["ImageJ MorpholibJ Macro & GUI", "connected_components/exercises/connected_components_imagejmacro.md"]
