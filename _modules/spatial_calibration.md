@@ -38,6 +38,7 @@ activity_preface: |
 
 activities:
     - ["ImageJ GUI", "spatial_calibration/activities/spatial_calibration_imagejgui.md", "markdown"]
+    - ["skimage napari", "spatial_calibration/activities/spatial_calibration_skimage_napari.py", "python"]
 
 exercises:
     - ["ImageJ GUI", "spatial_calibration/exercises/spatial_calibration_imagejgui.md"]
