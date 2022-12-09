@@ -59,7 +59,6 @@ module_order:
 - batch_processing
 - script_functions
 - fetching_user_input
-- volume_viewer
 - ome_zarr_s3
 
 # Sites

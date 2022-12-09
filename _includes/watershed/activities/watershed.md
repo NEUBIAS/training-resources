@@ -1,0 +1,28 @@
+## Watershed
+- Basic watershed
+  - Open [xy_8bit__touching_objects.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__touching_objects.tif).
+  - Appreciate that you cannot segment the three objects using a simple threshold.
+  - Anyway find a threshold that segments the image into foreground (objects) and background.
+    - Keep this binary mask, we will need it later.
+  - Invert the original image and apply the watershed transform.
+  - Appreciate that the image is now split into three regions.
+  - Combine the binary mask and the watershed image to segment the three objects.
+- Shape watershed
+    - Open [xy_8bit__touching_objects_same_intensity.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__touching_objects_same_intensity.tif).
+  - Appreciate that you cannot segment the objects using a simple threshold.
+  - Appreciate that a watershed transform on the intensity signal does not help here, because there is no "intensity ridge" bewteen the two touching objects.
+  - Create a binary mask.
+  - Create a distance map within objects.
+  - Invert the distance map.
+  - Slightly blur the distance map to avoid spurious minima (water basins).
+  - Apply a watershed transform.
+  - Combine the binary mask and the watershed image to segment the two objects.
+- Seeded watershed for noisy data
+  - Open [xy_8bit__noisy_touching_objects.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__noisy_touching_objects.tif).
+  - Invert the image and apply the watershed transform.
+  - Appreciate that this does not work because there are too many basin due to the noise.
+    - Note that one could tackle this by applying a smoothing filter, but we want to explore another route now.
+  - Open [xy_8bit_binary__touching_objects_markers.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__touching_objects_markers.tif).
+    - This image marks the centers of the three objects.
+  - Combing the two images run a seeded watershed transform to split the image into three regions.
+    - For segmenting the three objects one would have to apply a mask to the resulting image (see activities above).
