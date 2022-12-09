@@ -42,6 +42,11 @@ exercise_preface: |
   - Open the image [xy_calibrated_16bit__nuclear_protein_treated.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_calibrated_16bit__nuclear_protein_treated.tif)
   - Display both images next to each other with the same LUT settings (this is what one typically should do for a presentation or publication).
 
+exercise_preface: |
+  - Open the image [xy_calibrated_16bit__nuclear_protein_control.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_calibrated_16bit__nuclear_protein_control.tif)
+  - Open the image [xy_calibrated_16bit__nuclear_protein_treated.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_calibrated_16bit__nuclear_protein_treated.tif)
+  - Display both images next to each other with the same LUT settings (this is what one typically should do for a presentation or publication).
+
 exercises:
   - ["ImageJ Macro & GUI", "lut/exercises/configure_luts_imagejmacro.md"]
 
