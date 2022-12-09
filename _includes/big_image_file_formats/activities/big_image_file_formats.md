@@ -1,4 +1,4 @@
-## Inspect big image files
+### Inspect big image files
 - Inspect the size of a (big) several GB TIFF file on disk.
 - Compare the file size to the size of your computer's memory.
 - Open this file in an image viewer.

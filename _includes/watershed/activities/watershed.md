@@ -1,4 +1,4 @@
-## Watershed
+### Watershed
 - Basic watershed
   - Open [xy_8bit__touching_objects.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__touching_objects.tif).
   - Appreciate that you cannot segment the three objects using a simple threshold.

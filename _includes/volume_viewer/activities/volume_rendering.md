@@ -1,4 +1,4 @@
-## Volume rendering
+### Volume rendering
 - Example data:
   - [3-D+t Chromosome congression](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyzt_8bit__starfish_chromosomes.tif)
     - Useful to see in 3-D rendering (as it is very hard to see what is going on in 2-D slices)

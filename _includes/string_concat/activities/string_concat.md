@@ -1,4 +1,4 @@
-## String concatenation
+### String concatenation
 - Open a script editor.
 - Create a log message
   - Define two variables: `i` with value `11` and `n` with value `100`.

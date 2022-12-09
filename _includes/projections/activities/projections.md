@@ -1,4 +1,4 @@
-## Explore max and sum projections
+### Explore max and sum projections
 - Open [xyz_16bit__spots.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_16bit__spots.tif)
 - Project along the z axis
 - Compare maximum and sum projection

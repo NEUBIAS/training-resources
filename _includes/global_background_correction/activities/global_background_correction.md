@@ -1,4 +1,4 @@
-## Subtract the background from an image
+### Subtract the background from an image
   - Open image [xy_16bit__nuclei_high_dynamic_range_with_offset](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit__nuclei_high_dynamic_range_with_offset.tif)
   - Measure the background using a manually defined region
   - Measure the mean intensities inside of two nuclei using manually defined regions

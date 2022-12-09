@@ -1,4 +1,4 @@
-## Explore LUTs
+### Explore LUTs
   - Open the image [xy_8bit__nuclei_high_dynamic_range.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_high_dynamic_range.tif)
   - Explore different single color LUTs and LUT settings
   - Visualise the LUT, e.g. as an inset in the image as in above figure.

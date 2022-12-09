@@ -1,4 +1,4 @@
-## Explore image data types and value ranges
+### Explore image data types and value ranges
 Open the following images and discuss (a) their data type, and (b) whether there are any signs of intensity clipping.
 - [xy_8bit__nuclei_noisy_different_intensity.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_different_intensity.tif)
 - [xy_8bit__nuclei_intensity_clipping_issue_a.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_intensity_clipping_issue_a.tif)

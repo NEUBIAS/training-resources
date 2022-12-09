@@ -1,4 +1,4 @@
-## Apply a mean filter and explore different structuring elements
+### Apply a mean filter and explore different structuring elements
   - Mean filter
     - Open [xy_8bit__nuclei_very_noisy.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_very_noisy.tif)
     - Explore the effect of a mean filter with different radius values.

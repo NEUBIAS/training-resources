@@ -1,4 +1,4 @@
-## Threshold an image
+### Threshold an image
   - Open the image [xy_8bit__two_cells.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__two_cells.tif)
   - Visualise the image and inspect its data type and value content
   - Threshold the image

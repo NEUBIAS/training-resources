@@ -1,4 +1,4 @@
-## Workflow Golgi per cell
+### Workflow Golgi per cell
 - Open the image [xyc_16bit__nuclei_golgi.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__nuclei_golgi.tif).
 - Segment nuclei and Golgi
 - Dilate nuclei to approximate cells

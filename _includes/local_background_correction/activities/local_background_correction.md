@@ -1,4 +1,4 @@
-## Various activities (SPLITME)
+### Various activities (SPLITME)
 
   - Activity 1 - Background subtraction using a median filter.
     - Open image [xy_8bit__some_spots_with_uneven_bg](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__some_spots_with_uneven_bg.tif)

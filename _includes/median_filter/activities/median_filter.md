@@ -1,4 +1,4 @@
-## Explore the effect of a median filter on various images
+### Explore the effect of a median filter on various images
 
   Use example images that are relevant to your science and explore in detail what happens when applying a median filter.
   On purpose, increase the neighbourhood to an extend where your structures of interest become clearly compromised. Do some of all of these activities.

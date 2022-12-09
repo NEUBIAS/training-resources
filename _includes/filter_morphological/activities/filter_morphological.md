@@ -1,4 +1,4 @@
-## Explore various morphological filters
+### Explore various morphological filters
 
  Perform some or all of the activities below
 
