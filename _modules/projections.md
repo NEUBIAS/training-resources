@@ -41,6 +41,15 @@ activities:
   - ["ImageJ GUI TransformJ", "projections/activities/projections_imagejgui_transformj.md", "markdown"]
   - ["skimage napari", "projections/activities/projections_skimage_napari.py", "python"] 
 
+exercise_preface: |
+  - Open [xyz_calibrated_16bit__golgi_bfa.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_calibrated_16bit__golgi_bfa.tif)
+  - Perform a sum projection along the z-axis
+    - Determine the highest pixel value in the resulting image
+  - Perform a sum projection along the y-axis
+    - Determine the highest pixel value in the resulting image
+  - You should find that the value for the y-axis is higher, explain how this could make sense given the input image.
+  - Discuss what you would expect for doing above exercise with maximum instead of sum projections? Again two different values or two times the same value?
+
 exercises:
   - ["ImageJ GUI Reslice", "projections/exercises/projections_imagejgui_reslice.md"]
   - ["ImageJ GUI CLIJ2", "projections/exercises/projections_imagejgui_clij2.md"]
