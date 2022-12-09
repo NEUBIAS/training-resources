@@ -21,6 +21,7 @@ napari_viewer = Viewer()
 
 # Add image with scaling to the viewer.
 napari_viewer.add_image(image.data, scale=image.physical_pixel_sizes)
+# Napari GUI: Change order of visible axes.
 # Napari GUI: Explor 3D visualization.
 
 # Note: As of now napari lacks funcitonality to easily measure distances between points in an open image.
