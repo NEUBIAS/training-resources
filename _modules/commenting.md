@@ -30,7 +30,7 @@ activity_preface: |
 
 activities:
   - ["MATLAB", "commenting/activities/binarization_matlab.m", "matlab"]
-  - ["Python", "commenting/activities/binarization.py", "python"]
+  - ["skimage napari", "commenting/activities/binarization_skimage_napari.py", "python"]
 
 exercises:
 
