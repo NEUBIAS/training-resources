@@ -25,7 +25,8 @@ napari_viewer.add_image(image, name='image_grayscale2', colormap='gray')
 # Napari GUI: change brightness and contrast to visualize dim nuclei
 
 # Check available colormap
-print(list(napari.utils.colormaps.AVAILABLE_COLORMAPS))
+from napari.utils import colormaps
+print(list(colormaps.AVAILABLE_COLORMAPS))
 # Change colormap
 napari_viewer.add_image(image, name='image_turbo', colormap='turbo')
 # Napari GUI: explore the LUTs
