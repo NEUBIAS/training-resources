@@ -24,8 +24,8 @@ activity_preface: |
   Install a scripting environment for your bioimage analysis platform.
 
 activities:
-  - ["Fiji script editor (IJ Macro, Groovy, Jython, ...)", "script_env/activities/fiji_script_editor.md", "markdown"]
-  - ["Napari python script editor plugin", "script_env/activities/napari_script_editor_plugin.md", "markdown"]
+  - ["Fiji script editor (IJ Macro, Groovy, Jython, ...)", "script_env/activities/script_editor_imagej.md", "markdown"]
+  - ["Napari python script editor plugin", "script_env/activities/script_editor_plugin_napari.md", "markdown"]
 
 exercises:
 

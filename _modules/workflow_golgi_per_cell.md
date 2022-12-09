@@ -34,7 +34,7 @@ activity_preface: |
 
 
 activities:
-  - ["ImageJ Macro", "workflow_golgi_per_cell/activities/workflow_golgi_per_cell.ijm", "java"]
+  - ["ImageJ Macro", "workflow_golgi_per_cell/activities/workflow_golgi_per_cell_imagejmacro.ijm", "java"]
 
 exercises:
 
