@@ -37,7 +37,7 @@ activity_preface: |
     - Print tab separated values.
 
 activities:
-  - ["ImageJ Macro", "string_concat/activities/string_concat.ijm", "java"]
+  - ["ImageJ Macro", "string_concat/activities/string_concat_imagejmacro.ijm", "java"]
 
 exercises:
   - ["ImageJ Macro: Concatenate variables", "string_concat/exercises/string_concat_imagejmacro.md"]

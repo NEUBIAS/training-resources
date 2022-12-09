@@ -22,6 +22,14 @@ To contribute to this project, please follow those steps:
 1. On gitlab, there will now be button at the top of the page. Click this button to stage a "merge request" of your contribution (in your branch) to the master branch. There will also a possibility to assign a project maintainer to review your contribution and to merge it. Please select someone appropriate here.
 1. Thank you for your contribution!
 
+### Editor
+[Visual Studio Code](https://code.visualstudio.com/) supports code formating and highlighting with the [Liquid](https://marketplace.visualstudio.com/items?itemName=sissel.shopify-liquid) and [Jekyll Syntax Support](https://marketplace.visualstudio.com/items?itemName=ginfuru.ginfuru-vscode-jekyll-syntax) extensions (available via VSCode marketplace).
+
+After the extensions are installed the document type can be changed to "Liquid" in the bottom right corner.
+![Set document type to liquid.](image_data/contribute/doc_type_liquid.png)
+
+This should enable syntax highlighting. By pressing `Ctrl + Shift + p` you can search for `Liquid: Enable Formatting` and `Liquid: Format Document`.
+
 ## Adding a new module
 
 Each module page is built from a template (`_layouts/module.html`),
