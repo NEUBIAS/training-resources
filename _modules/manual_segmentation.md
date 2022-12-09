@@ -23,7 +23,7 @@ activity_preface: |
   - Perform a manual instance segmentation of FIXME
 
 activities:
-  - ["ITK-SNAP", "manual_segmentation/activities/itk_snap.md", "markdown"]
+  - ["ITK-SNAP", "manual_segmentation/activities/manual_segmentation_itk_snap.md", "markdown"]
 
 exercises:
 

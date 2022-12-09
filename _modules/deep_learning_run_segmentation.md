@@ -31,10 +31,10 @@ activity_preface: |
   - If the tool has parameters, explore them and compare the results
 
 activities:
-  - ["CellPose GUI", "deep_learning_run_segmentation/activities/cellpose_gui.md", "markdown"]
+  - ["CellPose GUI", "deep_learning_run_segmentation/activities/deep_learning_cellpose_gui.md", "markdown"]
 
 exercises:
-- ["CellPose GUI", "deep_learning_run_segmentation/exercises/cellpose_gui.md", "markdown"]
+- ["CellPose GUI", "deep_learning_run_segmentation/exercises/deep_learning_cellpose_gui.md", "markdown"]
 
 assessment: >
 
