@@ -9,7 +9,7 @@ Essentially, follow these instructions: https://alisterburt.github.io/napari-wor
 1. `conda activate skimage-napari-tutorial`
 1. `conda install -c conda-forge notebook matplotlib`
 1. `pip install aicsimageio`
-1. `conda install bioformats_jar`
+1. `conda install -c conda-forge bioformats_jar`
 1. `pip install "napari[all]"`
 1. `pip install napari-brightness-contrast`
 1. `pip install napari-plot-profile`
