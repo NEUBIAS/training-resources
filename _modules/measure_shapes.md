@@ -35,6 +35,11 @@ activity_preface: |
 activities:
     - ["ImageJ GUI", "measure_shapes/activities/measure_shapes_imagejgui.md", "markdown"]
 
+exercise_preface: |
+  - Measure object shapes and find the label index of the nucleus with the largest perimeter
+  - Investigate whether the measurements are in pixel or in calibrated units and how to switch from one to the other
+  - Create an image where each object is coloured according to the measured circularity
+
 exercises:
     - ["ImageJ GUI", "measure_shapes/exercises/measure_shapes_imagejgui.md"]
 
