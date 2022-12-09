@@ -217,25 +217,25 @@ window.onload = set_view_defaults;
           <h2>{{ platform[0] }}</h2>
           {%- assign includefile = platform[1] -%}
           {%- assign language = platform[2] -%}
-          {%- capture activity -%}
+          {%- capture activity_content -%}
             {%- include {{ includefile }} -%}{%- endcapture -%}
           {%- assign ext = includefile | split: "." | last -%}
           {%- if ext == "ijm" -%}
             {%- highlight javascript -%}
-              {{ activity }}
+              {{ activity_content }}
             {%- endhighlight -%}
           {%- elsif ext == "py" -%}
             {%- highlight python -%}
-              {{ activity }}
+              {{ activity_content }}
             {%- endhighlight -%}
           {%- elsif ext == "groovy" -%}
             {%- highlight groovy -%}
-              {{ activity }}
+              {{ activity_content }}
             {%- endhighlight -%}
           {%- elsif ext == "md" -%}
-            {{ activity | markdownify }}
+            {{ activity_content | markdownify }}
           {%- else -%}
-            {{ activity }}
+            {{ activity_content }}
           {%- endif -%}
         </blockquote>
       {%- endfor -%}
