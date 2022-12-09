@@ -1,19 +1,21 @@
 # Import modules
-import napari
+from load_from_url import load_from_url
+from napari.viewer import Viewer
 import numpy as np
 
 # Open napari
-viewer = napari.Viewer()
+viewer = Viewer()
 
 # Open the image
 # - Uncomment the image that you want to read
-from skimage.io import imread
-image = imread('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_different_intensity.tif')
-#image = imread('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_intensity_clipping_issue_a.tif')
-#image = imread('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_intensity_clipping_issue_b.tif')
-#image = imread('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__two_objects.tif')
-#image = imread('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit__autophagosomes.tif')
-#image = imread('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit__scanR_datatype_issue.tif')
+image_url = load_from_url('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_different_intensity.tif')
+#image_url = imread('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_intensity_clipping_issue_a.tif')
+#image_url = imread('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_intensity_clipping_issue_b.tif')
+#image_url = imread('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__two_objects.tif')
+#image_url = imread('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit__autophagosomes.tif')
+#image_url = imread('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit__scanR_datatype_issue.tif')
+print(image_url.dims)
+image = image_url.data
 
 # View the image
 viewer.add_image(image)
