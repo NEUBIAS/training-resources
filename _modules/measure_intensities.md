@@ -51,7 +51,7 @@ activity_preface: |
 activities:
   - ["ImageJ GUI", "measure_intensities/activities/measure_intensities_imagejgui.md", "markdown"]
 
-exercise_preface:
+exercise_preface: |
   - Open the intensity image
   [xy_8bit__nup.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nup.tif).
     - The image contains the signal of a single confocal slice of a nuclear pore protein on the nuclear membrane

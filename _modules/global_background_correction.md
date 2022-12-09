@@ -43,13 +43,13 @@ activities:
     - ["ImageJ Macro & GUI", "global_background_correction/activities/global_background_correction.ijm", "java"]
 
 exercise_preface: |
-- Open the intensity image 
-[xy_16bit__nuclei_with_background.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit__nuclei_with_background.tif)
-  1. Measure the background.
-  2. Subtract the background from the image.
-  3. Is the mean intensity in the background region close to 0 (<<1)? If not, which image data type conversion have you forgotten?
-  4. Verify that the histogram has not been clipped by the background subtraction operation.
-  5. Conceive (and implement) a way of automatically computing a global background.
+  - Open the intensity image 
+  [xy_16bit__nuclei_with_background.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit__nuclei_with_background.tif)
+    1. Measure the background.
+    2. Subtract the background from the image.
+    3. Is the mean intensity in the background region close to 0 (<<1)? If not, which image data type conversion have you forgotten?
+    4. Verify that the histogram has not been clipped by the background subtraction operation.
+    5. Conceive (and implement) a way of automatically computing a global background.
 
 exercises:
     - ["ImageJ Macro & GUI", "global_background_correction/exercises/global_background_correction.md"]
