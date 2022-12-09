@@ -45,6 +45,11 @@ activities:
   - ["ImageJ MorpholibJ Macro & GUI", "connected_components/activities/connected_components_imagejmacro.ijm", java]
   - ["skimage napari", "connected_components/activities/connected_components_skimage_napari.py", python]
 
+exercise_preface: |
+  - Open [xy_8bit_binary__many_vesicles.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__many_vesicles.tif)
+  - Create a label mask image (beware the output data type, because there are quite many objects).
+  - Count the number of objects in the label mask image.
+
 exercises:
   - ["ImageJ MorpholibJ Macro & GUI", "connected_components/exercises/connected_components_imagejmacro.md"]
 

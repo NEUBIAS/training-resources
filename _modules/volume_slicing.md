@@ -40,6 +40,11 @@ activities:
   - ["ImageJ Macro", "volume_slicing/activities/volume_slicing_macro.ijm", "IJ macro"]
   - ["ImageJ Jython", "volume_slicing/activities/volume_slicing_jython.py", "Jython"]
 
+exercise_preface: |
+- Open the 3D image [xyz_16bit_t1-head.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_16bit_t1-head.tif).
+- Are the voxels in this data isotropic or anisotropic?
+- Reslice the image from different directions, such that you can view the image stack from the side, from the top, and from the front.
+
 exercises:
   - ["ImageJ GUI", "volume_slicing/exercises/volume_slicing_gui.md"]
   - ["ImageJ Macro", "volume_slicing/exercises/volume_slicing_macro.md"]

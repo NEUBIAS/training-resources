@@ -43,7 +43,10 @@ activities:
   - ["KNIME", "binarization/activities/binarization_knime.md", "markdown"]
 
 exercise_preface: |
-  Perform one of the following exercises.
+  - Open image [xy_8bit__PCNA.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__PCNA.tif) and
+  - Apply a threshold value so that there are 2 foreground nuclei.
+  - Apply a threshold value so that only the bright dots remain
+  - Apply a threshold interval so that only the boundary of the nuclei remains.
 
 exercises:
   - ["ImageJ GUI", "binarization/exercises/binarization_imagejgui.md"]
