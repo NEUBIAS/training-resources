@@ -26,6 +26,13 @@ activities:
     - ["ImageJ GUI", "filter_objects/activities/filter_objects_imagejgui.md", "markdown"]
     - ["ImageJ Macro", "filter_objects/activities/filter_objects_imagejmacro.ijm", "java"]
 
+exercise_preface: |
+  - Open [xyz_16bit_labels_nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_16bit_labels_nuclei.tif)
+  - See if you have objects touching the borders, if yes, count them manually
+  - Automatically remove these border objects
+  - Check how many objects have been removed
+    - Hint: generate measurement tables before and after border removal operation
+
 exercises:
     - ["ImageJ GUI", "filter_objects/exercises/filter_objects_imagejgui.md"]
 

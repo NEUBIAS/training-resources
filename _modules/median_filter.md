@@ -45,6 +45,9 @@ activities:
     - ["ImageJ GUI & Macro median", "median_filter/activities/median_filter_imagejmacrogui.ijm", "java"]
     - ["ImageJ GUI & Macro mean", "median_filter/activities/mean_filter_imagejmacrogui.ijm", "java"]
 
+exercise_preface: |
+  TODO (There are multiple exercises)
+
 exercises:
     - ["ImageJ GUI", "median_filter/exercises/median_filter_imagejgui.md"]
 
