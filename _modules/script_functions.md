@@ -29,7 +29,7 @@ activity_preface: |
   - Display the mean intensity value for each specified slice.
 
 activities:
-  - ["ImageJ Macro", "script_functions/activities/function_display_slice.ijm", "java"]
+  - ["ImageJ Macro", "script_functions/activities/function_display_slice_imagejmacro.ijm", "java"]
 
 exercises:
   - ["Exercise1 - ImageJ Macro", "script_functions/exercises/functions_imagejmacro.md"]
