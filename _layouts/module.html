@@ -4,48 +4,122 @@ layout: base
 <article class="module">
 
   {% assign first = false %}
-  {% if page.activities or page.exercise %}
+  {%- if page.multiactivities -%}
     <script language="javascript" type="text/javascript">
       function set_view_defaults() {
-        set_activity_view_defaults();
+        {%- assign idx_0 = 0 -%}
+        {%- assign close = "();" -%}
+        {% for activity in page.multiactivities %}
+          {%- assign fun = "set_activity_view_defaults_" | append: idx_0 | append: close -%}
+          {{ fun }}
+          {%- assign idx_0 = idx_0 | plus:1 -%}
+        {% endfor %}
         set_exercises_view_defaults();
       }
-
-      function set_activity_view_defaults() {
-        {% for platform in page.activities %}
-          document.getElementById("{{ platform[0] | slugify }}-activity-div").style.display = 'none';{% endfor %}{% unless site.default-platform == "NONE" %}document.getElementById("{{ site.default-platform | slugify }}-activity-div").style.display = 'block';{% endunless %}
+      {%- assign idx_0 = 0 -%}
+      {%- assign close = "() {" -%}
+      {%- for activity in page.multiactivities -%}
+        {%- assign platforms = activity[1] -%}
+        {%- assign fun = "function set_activity_view_defaults_" | append: idx_0 | append: close -%}
+        {{ fun }}
+        {% for platform in platforms %}
+          {%- assign id = platform[0] | slugify -%}
+          {%- assign activity_div = "-activity-div-" -%}
+          {%- assign activity_div_i = id | append: activity_div | append: idx_0 -%}
+          document.getElementById("{{ activity_div_i | slugify }}").style.display = 'none';{% endfor %}{% unless site.default-platform == "NONE" %}document.getElementById("{{ site.default-platform | slugify }}-activity-div").style.display = 'block';{% endunless %}
       }
 
-      function change_activity_content_by_platform(form_control) {
-        {% for platform in page.activities %}
-          document.getElementById("{{ platform[0] | slugify }}-activity-div").style.display = 'none';{% endfor %}if (! form_control || document.getElementById(form_control).value == "null-activity") {
-          set_activity_view_defaults();{% for platform in page.activities %}
-          } else if (document.getElementById(form_control).value == "{{ platform[0] | slugify }}-activity") {
-            document.getElementById("{{ platform[0] | slugify }}-activity-div").style.display = 'block';{% endfor %}
+
+      {%- assign close_call = "();" -%}
+      {%- assign fun = "set_activity_view_defaults_" | append: idx_0 | append: close_call -%}
+      {%- assign close_args = "(form_control) {" -%}
+      {%- assign content_fun = "function change_activity_content_by_platform_" | append: idx_0 | append: close_args -%}
+
+
+      {{ content_fun }}
+      {% for platform in platforms %}
+        {%- assign id = platform[0] | slugify -%}
+        {%- assign activity_div = "-activity-div-" -%}
+        {%- assign activity_div_i = id | append: activity_div | append: idx_0 -%}
+        {%- assign default_val = "null-activity-" | append: idx_0 -%}
+        document.getElementById("{{ activity_div_i | slugify }}").style.display = 'none';{% endfor %}if (!form_control || document.getElementById(form_control).value == "{{ default_val }}") {
+        {{ fun }}
+        {% for platform in platforms %}
+          {%- assign id = platform[0] | slugify -%}
+          {%- assign activity_div = "-activity-div-" -%}
+          {%- assign activity_div_i = id | append: activity_div | append: idx_0 -%}
+          {%- assign val = id | append: "-activity-" | append: idx_0  -%}
+        } else if (document.getElementById(form_control).value == "{{ val }}") {
+          document.getElementById("{{ activity_div_i | slugify }}").style.display = 'block';{% endfor %}
       } else {
         alert("Error: Missing platform value for 'change_activity_content_by_platform()' script!");
       }
     }
+    {% assign idx_0 = idx_0 | plus:1 %}
+  {%- endfor -%}
 
-    function set_exercises_view_defaults() {
-      {% for platform in page.exercises %}
-        document.getElementById("{{ platform[0] | slugify }}-exercises-div").style.display = 'none';{% endfor %}{% unless site.default-platform == "NONE" %}document.getElementById("{{ site.default-platform | slugify }}-exercises-div").style.display = 'block';{% endunless %}
-    }
-
-    function change_exercises_content_by_platform(form_control) {
-      {% for platform in page.exercises %}
-        document.getElementById("{{ platform[0] | slugify }}-exercises-div").style.display = 'none';{% endfor %}if (! form_control || document.getElementById(form_control).value == "null-exercises") {
-        set_exercises_view_defaults();{% for platform in page.exercises %}
-        } else if (document.getElementById(form_control).value == "{{ platform[0] | slugify }}-exercises") {
-          document.getElementById("{{ platform[0] | slugify }}-exercises-div").style.display = 'block';{% endfor %}
-    } else {
-      alert("Error: Missing platform value for 'change_exercises_content_by_platform()' script!");
-    }
+  function set_exercises_view_defaults () {
+    {% for platform in page.exercises %}
+      document.getElementById("{{ platform[0] | slugify }}-exercises-div").style.display = 'none';{% endfor %}{% unless site.default-platform == "NONE" %}document.getElementById("{{ site.default-platform | slugify }}-exercises-div").style.display = 'block';{% endunless %}
   }
 
-  window.onload = set_view_defaults;
+  function change_exercises_content_by_platform (form_control) {
+    {% for platform in page.exercises %}
+      document.getElementById("{{ platform[0] | slugify }}-exercises-div").style.display = 'none';{% endfor %}if (! form_control || document.getElementById(form_control).value == "null-exercises") {
+      set_exercises_view_defaults();{% for platform in page.exercises %}
+      } else if (document.getElementById(form_control).value == "{{ platform[0] | slugify }}-exercises") {
+        document.getElementById("{{ platform[0] | slugify }}-exercises-div").style.display = 'block';{% endfor %}
+  } else {
+    alert("Error: Missing platform value for 'change_exercises_content_by_platform()' script!");
+  }
+}
+
+window.onload = set_view_defaults;
     </script>
-  {% endif %}
+  {%- else -%}
+    {% if page.activities or page.exercise %}
+      <script language="javascript" type="text/javascript">
+        function set_view_defaults () {
+          set_activity_view_defaults();
+          set_exercises_view_defaults();
+        }
+
+        function set_activity_view_defaults () {
+          {% for platform in page.activities %}
+            document.getElementById("{{ platform[0] | slugify }}-activity-div").style.display = 'none';{% endfor %}{% unless site.default-platform == "NONE" %}document.getElementById("{{ site.default-platform | slugify }}-activity-div").style.display = 'block';{% endunless %}
+        }
+
+        function change_activity_content_by_platform (form_control) {
+          {% for platform in page.activities %}
+            document.getElementById("{{ platform[0] | slugify }}-activity-div").style.display = 'none';{% endfor %}if (! form_control || document.getElementById(form_control).value == "null-activity") {
+            set_activity_view_defaults();{% for platform in page.activities %}
+            } else if (document.getElementById(form_control).value == "{{ platform[0] | slugify }}-activity") {
+              document.getElementById("{{ platform[0] | slugify }}-activity-div").style.display = 'block';{% endfor %}
+        } else {
+          alert("Error: Missing platform value for 'change_activity_content_by_platform()' script!");
+        }
+      }
+
+      function set_exercises_view_defaults () {
+        {% for platform in page.exercises %}
+          document.getElementById("{{ platform[0] | slugify }}-exercises-div").style.display = 'none';{% endfor %}{% unless site.default-platform == "NONE" %}document.getElementById("{{ site.default-platform | slugify }}-exercises-div").style.display = 'block';{% endunless %}
+      }
+
+      function change_exercises_content_by_platform (form_control) {
+        {% for platform in page.exercises %}
+          document.getElementById("{{ platform[0] | slugify }}-exercises-div").style.display = 'none';{% endfor %}if (! form_control || document.getElementById(form_control).value == "null-exercises") {
+          set_exercises_view_defaults();{% for platform in page.exercises %}
+          } else if (document.getElementById(form_control).value == "{{ platform[0] | slugify }}-exercises") {
+            document.getElementById("{{ platform[0] | slugify }}-exercises-div").style.display = 'block';{% endfor %}
+      } else {
+        alert("Error: Missing platform value for 'change_exercises_content_by_platform()' script!");
+      }
+    }
+
+    window.onload = set_view_defaults;
+      </script>
+    {% endif %}
+  {%- endif -%}
 
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
@@ -102,63 +176,128 @@ layout: base
     {{ content }}
   </div>
 
-  {% if page.activity_preface %}
+  {% if page.multiactivities %}
     <h2>Activities</h2>
-    {{ page.activity_preface | markdownify }}
-  {% endif %}
-
-  {% if page.activities %}
-    <br>
-    Show activity for:
-    <select id="id_activity_platform" name="activityplatformlist" onchange="change_activity_content_by_platform('id_activity_platform');return false;">
-      {% if site.default-platform == "NONE" %}
-        <option value="null-activity" id="default-activity-option" selected="selected">
-          Select a platform...
-        </option>
-      {% else %}
-        <option value="{{ site.default-platform | slugify }}-activity" id="{{ site.default-platform | slugify }}-option" selected="selected">
-          {{ site.default-platform }}
-        </option>
-      {% endif %}
-
-      {% for platform in page.activities %}
-        {% unless platform[0] == site.default-platform %}
-          <option value="{{ platform[0] | slugify }}-activity" id="{{ platform[0] | slugify }}-activity-option">
-            {{ platform[0] }}
+    {%- assign idx_0 = 0 -%}
+    {%- for activity in page.multiactivities -%}
+      {%- assign preface_md = activity[0] -%}
+      {%- capture preface -%}
+        {%- include {{ preface_md }} -%}
+      {%- endcapture -%}
+      {{ preface | markdownify }}
+      <br>
+      Show activity for:
+      {%- assign close_call = "('id_activity_platform-" | append: idx_0 | append: "');return false;" -%}
+      {%- assign fun = "change_activity_content_by_platform_" | append: idx_0 | append: close_call -%}
+      {%- assign iap = "id_activity_platform-" | append: idx_0 -%}
+      <select id="{{ iap }}" name="activityplatformlist" onchange="{{ fun }}">
+        {% if site.default-platform == "NONE" %}
+          <option value="null-activity-{{ idx_0 }}" id="default-activity-option-{{ idx_0 }}" selected="selected">
+            Select a platform...
           </option>
-        {% endunless %}
-      {% endfor %}
-    </select>
+        {% else %}
+          <option value="{{ site.default-platform | slugify }}-activity-{{ idx_0 }}" id="{{ site.default-platform | slugify }}-option-{{ idx_0 }}" selected="selected">
+            {{ site.default-platform }}
+          </option>
+        {% endif %}
+        {%- assign platforms = activity[1] -%}
+        {%- for platform in platforms -%}
+          {% unless platform[0] == site.default-platform %}
+            <option value="{{ platform[0] | slugify }}-activity-{{ idx_0 }}" id="{{ platform[0] | slugify }}-activity-option-{{ idx_0 }}">
+              {{ platform[0] }}
+            </option>
+          {% endunless %}
+        {% endfor %}
+      </select>
+      {%- for platform in platforms -%}
+        {%- assign id = platform[0] | slugify -%}
+        {%- assign activity_div = "-activity-div-" -%}
+        {%- assign activity_div_i = id | append: activity_div | append: idx_0 -%}
+        <blockquote class="challenge" style="background-color:white;" id="{{ activity_div_i }}">
+          <h2>{{ platform[0] }}</h2>
+          {%- assign includefile = platform[1] -%}
+          {%- assign language = platform[2] -%}
+          {%- capture activity -%}
+            {%- include {{ includefile }} -%}{%- endcapture -%}
+          {%- assign ext = includefile | split: "." | last -%}
+          {%- if ext == "ijm" -%}
+            {%- highlight javascript -%}
+              {{ activity }}
+            {%- endhighlight -%}
+          {%- elsif ext == "py" -%}
+            {%- highlight python -%}
+              {{ activity }}
+            {%- endhighlight -%}
+          {%- elsif ext == "groovy" -%}
+            {%- highlight groovy -%}
+              {{ activity }}
+            {%- endhighlight -%}
+          {%- elsif ext == "md" -%}
+            {{ activity | markdownify }}
+          {%- else -%}
+            {{ activity }}
+          {%- endif -%}
+        </blockquote>
+      {%- endfor -%}
+      {% assign idx_0 = idx_0 | plus:1 %}
+    {%- endfor -%}
+  {% else %}
+    {% if page.activity_preface %}
+      <h2>Activities</h2>
+      {{ page.activity_preface | markdownify }}
+    {% endif %}
+
+    {% if page.activities %}
+      <br>
+      Show activity for:
+      <select id="id_activity_platform" name="activityplatformlist" onchange="change_activity_content_by_platform('id_activity_platform');return false;">
+        {% if site.default-platform == "NONE" %}
+          <option value="null-activity" id="default-activity-option" selected="selected">
+            Select a platform...
+          </option>
+        {% else %}
+          <option value="{{ site.default-platform | slugify }}-activity" id="{{ site.default-platform | slugify }}-option" selected="selected">
+            {{ site.default-platform }}
+          </option>
+        {% endif %}
+
+        {% for platform in page.activities %}
+          {% unless platform[0] == site.default-platform %}
+            <option value="{{ platform[0] | slugify }}-activity" id="{{ platform[0] | slugify }}-activity-option">
+              {{ platform[0] }}
+            </option>
+          {% endunless %}
+        {% endfor %}
+      </select>
+      {%- for platform in page.activities -%}
+        <blockquote class="challenge" style="background-color:white;" id="{{ platform[0] | slugify }}-activity-div">
+          <h2>{{ platform[0] }}</h2>
+          {%- assign includefile = platform[1] -%}
+          {%- assign language = platform[2] -%}
+          {%- capture activity -%}
+            {%- include {{ includefile }} -%}{%- endcapture -%}
+          {%- assign ext = includefile | split: "." | last -%}
+          {%- if ext == "ijm" -%}
+            {%- highlight javascript -%}
+              {{ activity }}
+            {%- endhighlight -%}
+          {%- elsif ext == "py" -%}
+            {%- highlight python -%}
+              {{ activity }}
+            {%- endhighlight -%}
+          {%- elsif ext == "groovy" -%}
+            {%- highlight groovy -%}
+              {{ activity }}
+            {%- endhighlight -%}
+          {%- elsif ext == "md" -%}
+            {{ activity | markdownify }}
+          {%- else -%}
+            {{ activity }}
+          {%- endif -%}
+        </blockquote>
+      {%- endfor -%}
+    {% endif %}
   {% endif %}
-
-  {%- for platform in page.activities -%}
-    <blockquote class="challenge" style="background-color:white;" id="{{ platform[0] | slugify }}-activity-div">
-      <h2>{{ platform[0] }}</h2>
-      {%- assign includefile = platform[1] -%}
-      {%- assign language = platform[2] -%}
-      {%- capture activity -%}
-        {%- include {{ includefile }} -%}{%- endcapture -%}
-      {%- assign ext = includefile | split: "." | last -%}
-      {%- if ext == "ijm" -%}
-        {%- highlight javascript -%}
-          {{ activity }}
-        {%- endhighlight -%}
-      {%- elsif ext == "py" -%}
-        {%- highlight python -%}
-          {{ activity }}
-        {%- endhighlight -%}
-      {%- elsif ext == "groovy" -%}
-        {%- highlight groovy -%}
-          {{ activity }}
-        {%- endhighlight -%}
-      {%- elsif ext == "md" -%}
-        {{ activity | markdownify }}
-      {%- else -%}
-        {{ activity }}
-      {%- endif -%}
-    </blockquote>
-  {%- endfor -%}
-
 
   {% if page.exercises %}
     <h2>Exercises</h2>
