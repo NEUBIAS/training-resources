@@ -22,8 +22,7 @@ concept_map: >
     table --> object_column["Columns are intensity features"]
     object_column -.- |"e.g."| ex["Mean, Sum, Max, ..., Background"] 
     table --> object_row["Rows are objects"]
-   
-        
+
 figure: /figures/measure_intensities.png
 figure_legend: H2b-mCherry widefield image of two cells. Common object intensity measurements, using a label mask and a manual background measurement.
 
@@ -51,6 +50,17 @@ activity_preface: |
 
 activities:
   - ["ImageJ GUI", "measure_intensities/activities/measure_intensities_imagejgui.md", "markdown"]
+
+exercise_preface:
+  - Open the intensity image
+  [xy_8bit__nup.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nup.tif).
+    - The image contains the signal of a single confocal slice of a nuclear pore protein on the nuclear membrane
+  - Open the binary image [xy_8bit_binary__nup.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__nup.tif)
+    - The binary image contains a foreground background segmentation of the nuclear pores
+  - Generate a label mask image from the binary image
+  - Measure both the mean and sum intensity of the NUP for each nucleus
+    - Don't forget to measure and take into account the image background
+  - Discuss the biophysical meaning of the mean and sum intensity
 
 exercises:
   - ["ImageJ GUI", "measure_intensities/exercises/measure_intensities_imagejgui.md"]
