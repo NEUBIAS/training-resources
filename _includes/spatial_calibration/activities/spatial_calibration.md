@@ -3,4 +3,3 @@
   - Emphasize where to find spatial calibration image metadata and why it can be important. 
   - Explain how to edit spatial calibration and perform consistency checks. 
   - Show how to measure the Euclidian calibrated distances of pixels in 2D and 3D.
-
