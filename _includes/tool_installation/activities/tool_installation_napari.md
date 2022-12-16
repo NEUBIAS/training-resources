@@ -9,13 +9,14 @@ Essentially, follow these instructions: https://alisterburt.github.io/napari-wor
 1. `conda activate skimage-napari-tutorial`
 1. `conda install -c conda-forge notebook matplotlib`
 1. `pip install aicsimageio`
-1. `conda install -c conda-forge bioformats_jar`
-1. `pip install "napari[all]"`
-1. `pip install napari-brightness-contrast`
-1. `pip install napari-plot-profile`
-1. create a directory called `skimage-napari-tutorial` (e.g. on your Desktop)
-1. download [load_from_url.py](https://neubias.github.io/training-resources/functions/load_from_url.py) 
-1. move `load_from_url.py` in `skimage-napari-tutorial` directory
+2. `conda install -c conda-forge openjdk=11.0.8`
+3. `conda install -c conda-forge bioformats_jar`
+3. `pip install "napari[all]"`
+4. `pip install napari-brightness-contrast`
+5. `pip install napari-plot-profile`
+6. create a directory called `skimage-napari-tutorial` (e.g. on your Desktop)
+7. download [load_from_url.py](https://neubias.github.io/training-resources/functions/load_from_url.py) 
+8. move `load_from_url.py` in `skimage-napari-tutorial` directory
 
 #### Test installation (only once)
 
