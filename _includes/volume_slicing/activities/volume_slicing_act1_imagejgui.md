@@ -14,7 +14,7 @@
   - Use **[ Image > Adjust > Brightness/Contrast...]** to adjust the display settings of the individual channels.
   - Explore different viewing modes, using **[ Image > Color > Channels Tool... ]**.
   - Explore the voxel dimensions, using **[ Image > Properties... ]** or **[Ctrl-Shift-P]**.
-    - Observe that the voxel dimensions are anisotropic. 
+    - Observe that the voxel dimensions are anisotropic.
   - Crop out the green bead (i.e. "subset" the data).
     - Select the rectangular selection tool and draw an ROI around the green bead.
     - Duplicate the selection, using **[ Image > Duplicate ]** or **[Ctrl-Shift-D]**.
@@ -32,9 +32,7 @@
           - uncheck this in order to apply the `output spacing` and create new pixel by interpolation.
           - check this to ignore the output spacing argument and keep the original pixels.
 
-------
-
-### Additional information (move to main text?)
+Further explanation
 
 Since the voxels dimensions are anisotropic in this data set, reslicing it would yield rectangular pixels. However, on your screen pixels always appear as squares. Therefore there are two options:
 - new pixels are added by interpolation to keep the proportions such that they follow the calibration of the image.
