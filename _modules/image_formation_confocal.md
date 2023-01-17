@@ -1,18 +1,21 @@
 ---
-title: Template
+title: Confocal microscopy image formation
 layout: module
-tags: ["draft"]
+tags: ["image formation"]
 prerequisites:
   - "[TODO](../template)"
 objectives:
-  - "TODO"
+  - Understand how the intensities in a digital image that was acquired with a confocal microscope are formed
+  - Understand that the geometry of your biological specimen can have a large influence on these intensities
 motivation: |
-  TODO
+  In bioimage analysis one often wants to quantify the intensities in an image. To do this properly one needs to be aware that these intensities are influenced by many factors, making intensity quantification in general very difficult. Sometimes the measured intensities can be affected so much that even object shape measurements can become difficult. For all those reasons it is very important to understand the reasons for signal distortion! Not knowing those effects can easily lead to wrong measurements.
 
 concept_map: >
   graph TD
-    T1("TODO1") --> T2("TODO2")
-    T2 --> T3("TODO3")
+    F("Fluorophore") --> S("Signal")
+    Ex("Excitation") --> F
+    F --> Em("Emission")
+    Em --> Detector
 
 figure: /figures/template.png
 figure_legend: TODO
