@@ -1,7 +1,7 @@
 ---
 title: Confocal microscopy image formation
 layout: module
-tags: ["image formation"]
+tags: ["image formation","draft"]
 prerequisites:
   - "[TODO](../template)"
 objectives:
@@ -19,12 +19,15 @@ concept_map: >
     Ex --- PSF("Spatial distribution: PSF")
     F --- SD("Spatial distribution: Sample shape")
 
-figure: /figures/template.png
-figure_legend: TODO
+figure: /figures/image_formation_confocal.png
+figure_legend: Membranes in a zebrafish embryo, imaged with a confocal microscope. The optical axis runs from bottom to top. One sees that membranes appear more contrasty if they run along the optical axis. One also sees that the signal gets dimmer further inside the specimen. In fact, here only the outer-most cell layer is clearly visible.
 
 activity_preface: |
-  - Open the image [xy_8bit_binary__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__nuclei.tif).
-  - TODO
+  - Open the [zebrafish embryo image](https://oc.embl.de/index.php/s/gRckFAfkkbrRGQh)
+  - Inspect the image and appreciate that 
+    - membranes appear with more contrast if they run along the optical axis
+    - signal decays within the specimen, due to scattering and absorption
+  - To do so, it is useful to slice the data along the x-z or y-z axis
 
 activities:
 
