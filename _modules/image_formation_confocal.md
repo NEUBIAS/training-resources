@@ -12,10 +12,12 @@ motivation: |
 
 concept_map: >
   graph TD
-    F("Fluorophore") --> S("Signal")
-    Ex("Excitation") --> F
+    Ex("Excitation") -->|Sample| F("Fluorophore")
     F --> Em("Emission")
-    Em --> Detector
+    Em -->|Sample| D("Detector")
+    D --> I("Digital image")
+    Ex --- PSF("Spatial distribution: PSF")
+    F --- SD("Spatial distribution: Sample shape")
 
 figure: /figures/template.png
 figure_legend: TODO
