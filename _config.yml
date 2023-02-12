@@ -61,6 +61,7 @@ module_order:
 - script_functions
 - fetching_user_input
 - ome_zarr_s3
+- correlative_image_rendering
 
 # Sites
 repository: <USERNAME>/<PROJECT>
