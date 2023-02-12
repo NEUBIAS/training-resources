@@ -2,34 +2,47 @@
 - Add the MoBIE update site and restart
 - Open a MoBIE project containing correlative data:
   - `[ Plugins › MoBIE › Open › Open MoBIE Project... ]`
-    - `Project Location` https://github.com/mobie/clem-example-project/
+    - `Project Location` `https://github.com/mobie/clem-example-project/`
 - Explore the transformation from viewer to global space:
   - Log the current transform from the global to the viewer space (g2v):
-    - BDV: `Right click` and choose `Log Current View`
+    - BDV context menu: `Log Current View`
   - Add another image:
-    - MoBIE UI: `tomogram` `tomo_37_hm` click `[ view ]`
-  - Appreciate that is is hard to know where the new image is and that some navigation tools are handy.
-  - Focus on the added image:
+    - MoBIE UI: From the `tomogram` drop-down choose `tomo_37_hm` and click `[ view ]`
+  - Appreciate that navigation (i.e. finding the `tomo_37_hm` image) in large correlative data sets is challenging.
+  - Focus on the `tomo_37_hm` image:
     - MoBIE UI: `tomo_37_hm` click `[ F ]`
   - Again log the g2v transform (s.a.)
   - Appreciate that the first component is bigger, corresponding to the higher zoom level.
-- Explore the different voxel sizes of the image data:
+- Explore heterogeneous voxel sizes:
   - Toggle off interpolation:
-    - BDV: Keyboard `I`
-    - It should say "nearest neighbor interpolation"
+    - BDV: Keyboard `i` (it should say "nearest neighbor interpolation")
   - Zoom in a bit more:
     - BDV: Keyboard `Arrow up`
   - Move to the edge of the `tomo_37_hm`
     - BDV: Mouse `right button drag`
-  - As an alternative to the above two steps:
-    - Copy and paste `{"normalizedAffine":[0.4963397000728218,0.0,0.0,-108.59369157880992,0.0,0.4963397000728218,0.0,-152.83843100300004,0.0,0.0,0.4963397000728218,3.865989923867204E-4],"timepoint":0}` into the `location` field and click `[ move ]`
-  - Appreciate that the voxels of the `em-overview` are visible (and are much larger the voxels of `tomo_37_hm`)
-  - This information is encoded in the transformations from data space to global space (d2g), it can be found here:
-    - [em-overview calibration](https://s3.embl.de/yeast-clem/hela/images/ome-zarr/em-overview.ome.zarr/.zattrs)
-    - [tomo_37_nm calibration](https://github.com/mobie/clem-example-project/blob/66064176fa39b9f7d0e94f855f1c4b7d226812d4/data/hela/images/bdv-n5-s3/tomo_37_hm.xml#L38)
-
-
-
-
-
-
+  - Alternatively copy below g2v transform into the `location` field and click `[ move ]`
+    - `{"normalizedAffine":[0.4963397000728218,0.0,0.0,-108.59369157880992,0.0,0.4963397000728218,0.0,-152.83843100300004,0.0,0.0,0.4963397000728218,3.865989923867204E-4],"timepoint":0}`
+  - Appreciate that the voxels of the `em-overview` are visible (and are larger than the voxels of `tomo_37_hm`)
+  - This information is encoded in the transformations from data space to global space (d2g):
+    - [em-overview d2g transformation](https://s3.embl.de/yeast-clem/hela/images/ome-zarr/em-overview.ome.zarr/.zattrs)
+    - [tomo_37_nm d2g transformation](https://github.com/mobie/clem-example-project/blob/66064176fa39b9f7d0e94f855f1c4b7d226812d4/data/hela/images/bdv-n5-s3/tomo_37_hm.xml#L38)
+- Explore heterodimensional (2D & 3D) rendering:
+  - Look at the data from the side:
+    - BDV: Keyboard `Shift Y`
+  - Zoom out until you see the edges of `em-overview` along the z-axis:
+    - BDV: Keyboard `Arrow down`
+  - Alternatively copy below g2v transform into the `location` field and click `[ move ]`
+    - `{"normalizedAffine":[-0.0020015317086036193,-0.01932460609735281,-5.114194702548178E-19,6.3944917447396445,-5.114194702548184E-19,-7.789826789933008E-19,0.019427983168573904,-0.0015838942648179167,-0.01932460609735281,0.0020015317086036193,-7.789826789933008E-19,3.638083567375694],"timepoint":0}`
+  - Appreciate that the voxels of `em-overview` are rendered 30 micrometer along the z-axis.
+  - This is specified [here](https://github.com/mobie/clem-example-project/blob/66064176fa39b9f7d0e94f855f1c4b7d226812d4/data/hela/dataset.json#L752)
+- Change the d2g transformation of one image:
+  - Focus on `tomo_37_hm`:
+    - MoBIE UI: `tomo_37_hm` click `[ F ]`
+  - Save the current d2g on your computer:
+    - BDV context menu: `Save current view`
+      - TODO: add detailed explanation
+      - TODO: add to context menu: Log current transformations
+  - Change the d2g of `tomo_37_hm`:
+    - BDV context menu: `Registration - Manual Transform`
+    - Follow the instructions to change the location of `tomo_37_hm`
+  - 
