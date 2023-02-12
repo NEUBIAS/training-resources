@@ -35,14 +35,13 @@
     - `{"normalizedAffine":[-0.0020015317086036193,-0.01932460609735281,-5.114194702548178E-19,6.3944917447396445,-5.114194702548184E-19,-7.789826789933008E-19,0.019427983168573904,-0.0015838942648179167,-0.01932460609735281,0.0020015317086036193,-7.789826789933008E-19,3.638083567375694],"timepoint":0}`
   - Appreciate that the voxels of `em-overview` are rendered 30 micrometer along the z-axis.
   - This is specified [here](https://github.com/mobie/clem-example-project/blob/66064176fa39b9f7d0e94f855f1c4b7d226812d4/data/hela/dataset.json#L752)
-- Change the dgt transformation of one image:
+- Change the data space to global space transformation (dgt) of one image:
   - Focus on `tomo_37_hm`:
     - MoBIE UI: `tomo_37_hm` click `[ F ]`
-  - Save the current dgt on your computer:
-    - BDV context menu: `Save current view`
-      - TODO: add detailed explanation
-      - TODO: add to context menu: Log current transformations
+  - Print the current dgt:
+    - BDV context menu: `Log Current Source Transformations`
   - Change the dgt of `tomo_37_hm`:
     - BDV context menu: `Registration - Manual Transform`
     - Follow the instructions to change the location of `tomo_37_hm`
-  - 
+  - Again, print the dgt (s.a.)
+  - Appreciate that the dgt of `tomo_37_hm` has changed.
