@@ -32,17 +32,6 @@ figure_legend: Spatial calibration and size measurements
 
 multiactivities:
   - ["spatial_calibration/activities/spatial_calibration.md", [["ImageJ GUI", "spatial_calibration/activities/spatial_calibration_imagejgui.md", "markdown"], ["skimage napari", "spatial_calibration/activities/spatial_calibration_skimage_napari.py", "python"]]]
-  - ["spatial_calibration/activities/spatial_calibration.md", [["ImageJ GUI", "spatial_calibration/activities/spatial_calibration_imagejgui.md", "markdown"], ["skimage napari", "spatial_calibration/activities/spatial_calibration_skimage_napari.py", "python"]]]
-
-activity_preface: |
-    - Open image: [xyz_8bit__mitotic_plate_calibrated.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit__mitotic_plate_calibrated.tif)
-    - Emphasize where to find spatial calibration image metadata and why it can be important. 
-    - Explain how to edit spatial calibration and perform consistency checks. 
-    - Show how to measure the Euclidian calibrated distances of pixels in 2D and 3D.
-
-activities:
-    - ["ImageJ GUI", "spatial_calibration/activities/spatial_calibration_imagejgui.md", "markdown"]
-    - ["skimage napari", "spatial_calibration/activities/spatial_calibration_skimage_napari.py", "python"]
 
 exercises:
     - ["ImageJ GUI", "spatial_calibration/exercises/spatial_calibration_imagejgui.md"]

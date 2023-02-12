@@ -1,5 +1,3 @@
-## Explore pixel sizes 
-
 * Open image:  [xyz_8bit__mitotic_plate_calibrated.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit__mitotic_plate_calibrated.tif)
 * Check the pixel sizes (calibration) of this image
 * Where to see the calibration?

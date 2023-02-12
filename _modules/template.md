@@ -21,9 +21,8 @@ activity_preface: |
   - Open the image [xy_8bit_binary__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__nuclei.tif).
   - TODO
 
-activities:
-
-exercises:
+multiactivities:
+  - ["spatial_calibration/activities/spatial_calibration.md", [["ImageJ GUI", "spatial_calibration/activities/spatial_calibration_imagejgui.md", "markdown"], ["skimage napari", "spatial_calibration/activities/spatial_calibration_skimage_napari.py", "python"]]]
 
 assessment: >
 
