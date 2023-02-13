@@ -1,8 +1,9 @@
 ---
 title: Access S3 hosted OME-Zarr
 layout: module
-tags: ["draft","format","ome-zarr","cloud","big image data"]
+tags: ["draft","format"]
 prerequisites:
+  - "[Big image data file formats](../big_image_file_formats)"
 objectives:
   - Render cloud (S3 object store) hosted OME-Zarr image data.
   - Access the pixel values of cloud hosted OME-Zarr image data.
