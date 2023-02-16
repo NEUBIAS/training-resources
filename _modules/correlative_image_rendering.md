@@ -18,7 +18,7 @@ concept_map: >
     GC -->|"transform (gvt)"| VC("Viewer (screen) coordinates")
 
 figure: /figures/correlative_image_rendering.png
-figure_legend: Depiction of how the data spaces of two hetero-dimensional images are mapped onto a computer screen. Note that even though the first image is 2-D, it is depicted 3-D in data space by means of adding a "singleton" dimension. In practice, the computer can loop through all screen pixels (viewer space) and use the given formula to fetch the corresponding values from the data spaces. If there are several values (in this example there are two), then a blending and coloring scheme must be applied to produce the final RGB value that is displayed on the computer screen (this will be discussed in other teaching modules).
+figure_legend: Depiction of how the data (array) spaces of two hetero-dimensional images are mapped onto a computer screen. Note that even though the first image is 2-D, it is depicted 3-D in data space by means of adding a "singleton" dimension. In practice, the computer can loop through all screen pixels (viewer space) and use the given formula to fetch the corresponding values from the data spaces. If there are several values (in this example there are two), then a blending and coloring scheme must be applied to produce the final RGB value that is displayed on the computer screen (this will be discussed in other teaching modules).
 
 multiactivities:
   - ["correlative_image_rendering/activities/correlative_image_rendering.md", [["MoBIE", "correlative_image_rendering/activities/mobie.md", "markdown"]]]
@@ -38,5 +38,7 @@ assessment: >
 learn_next:
 
 external_links:
+  - "[BigDataViewer publication](https://www.nature.com/articles/nmeth.3392/)"
+  - "[Model View Projection](https://jsantell.com/model-view-projection/)"
 ---
 
