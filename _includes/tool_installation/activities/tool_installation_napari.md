@@ -4,7 +4,9 @@
 
 1. [install mamba](https://github.com/conda-forge/miniforge#mambaforge)
 1. open a terminal window
-1. `mamba create -c conda-forge -n napari-0.4.17 python=3.10 napari=0.4.17 notebook`
+1. `mamba create -n skimage-napari-tutorial -c conda-forge python=3.10 napari=0.4.17 notebook`
+
+
 1. `conda install -c conda-forge notebook matplotlib`
 1. `pip install aicsimageio`
 1. `conda install -c conda-forge openjdk=11.0.8`
@@ -25,7 +27,7 @@
 #### Start (every time)
 
 1. open a terminal
-1. go to `skimage-napari-tutorial`
-1. `conda activate skimage-napari-tutorial`
+1. `cd skimage-napari-tutorial`
+1. `mamba activate skimage-napari-tutorial`
 1. `jupyter notebook`
   - `New > Python 3`
