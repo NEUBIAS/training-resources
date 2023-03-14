@@ -79,14 +79,14 @@ TODO
 	- TODO exercise (AP)
 	- TODO migrate to new multiactivity (AP)
 1. [Object shape measurements](https://neubias.github.io/training-resources/measure_shapes/index.html)
-	- TODO create skimage part
-	- TODO migrate to new multiactivity
+	- TODO create skimage part (DK)
+	- TODO migrate to new multiactivity (DK)
 1. Workflow: [Basic 2D object analysis](https://neubias.github.io/training-resources/workflow_segment_2d_nuclei_measure_shape/index.html)
 	- TODO create skimage part
 1. [Image neighborhood filtering ](https://neubias.github.io/training-resources/filter_neighbourhood/index.html)
-	- TODO create skimage part
+	- TODO create skimage part (DK)
 1. [Median filter](https://neubias.github.io/training-resources/median_filter/index.html)
-	- TODO create skimage part
+	- TODO create skimage part (DK)
 1. [Object intensity measurements](https://neubias.github.io/training-resources/measure_intensities/index.html)
 	- TODO create skimage-image  part
 1. [Local background subtraction](https://neubias.github.io/training-resources/local_background_correction/index.html)
