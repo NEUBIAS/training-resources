@@ -27,8 +27,8 @@ We can discuss it on Monday
 ### Monday, 1. February 2021, 14:00 – 17:00 CET
  * [Nuclei segmentation and shape measurements](https://neubias.github.io/training-resources/workflow_segment_2d_nuclei_measure_shape/index.html) Discuss if there has been problems 
  * [Object intensity measurements](https://neubias.github.io/training-resources/measure_intensities/index.html)
- * Global background correction](https://neubias.github.io/training-resources/global_background_correction/index.html)
- * Neighbourhood filters (introduction) ](https://neubias.github.io/training-resources/filter_neighbourhood/index.html)
+ * [Global background correction](https://neubias.github.io/training-resources/global_background_correction/index.html)
+ * [Neighbourhood filters (introduction)](https://neubias.github.io/training-resources/filter_neighbourhood/index.html)
 
 ### Tuesday, 2. February 2021, 14:00 – 17:00 CET
  * Self introduction (please paste name in chat)
@@ -40,13 +40,14 @@ We can discuss it on Monday
  
  
  ### Follow-up material
- Analysis of fluorescence data in ImageJ:  https://petebankhead.gitbooks.io/imagej-intro/content/
-ImageJ Macro: https://www.youtube.com/watch?v=o8tfkdcd3DA
-Colocalisation: https://www.youtube.com/watch?v=P2JvFe0hB_M
-Advanced MorpholibJ: https://www.youtube.com/watch?v=_SiM33C3KcE
-NEUBIAS youtube channel (more specialized topics): https://www.youtube.com/channel/UC-oy7UpEhRfHQ-5ePCviKFg
-How to ask for help (active and responsive): https://forum.image.sc/
-Python: 
-https://www.youtube.com/watch?v=2KF8vBrp3Zw
-https://scikit-image.org/docs/dev/api/skimage.html
-R: https://www.bioconductor.org/packages/release/bioc/html/EBImage.html
+* Analysis of fluorescence data in ImageJ:  https://petebankhead.gitbooks.io/imagej-intro/content/
+* ImageJ Macro: https://www.youtube.com/watch?v=o8tfkdcd3DA
+* Colocalisation: https://www.youtube.com/watch?v=P2JvFe0hB_M
+* Advanced MorpholibJ: https://www.youtube.com/watch?v=_SiM33C3KcE
+* NEUBIAS youtube channel (more specialized topics): https://www.youtube.com/channel/UC-oy7UpEhRfHQ-5ePCviKFg
+* How to ask for help (active and responsive): https://forum.image.sc/
+**Python:**
+* https://www.youtube.com/watch?v=2KF8vBrp3Zw
+* https://scikit-image.org/docs/dev/api/skimage.html
+**R**
+* https://www.bioconductor.org/packages/release/bioc/html/EBImage.html
