@@ -64,8 +64,35 @@ TODO
 
 ### Image analysis basics
 
-TODO
-
-
-
-
+1. [Segmentation](https://neubias.github.io/training-resources/segmentation/index.html) DONE. Just generic concept.
+1. [Manual segmentation](https://neubias.github.io/training-resources/manual_segmentation/index.html)
+	a. TODO work on Napari 2D/3D manual segmentation from scratch (AP) 
+	b. Add exercise for correction of labels (AP)
+1. [Thresholding (Foreground background segmentation)](https://neubias.github.io/training-resources/binarization/index.html)
+	a. TODO test activity (AP)
+	b. Add more exercises (AP)
+	c. Migrate to new format multi activity (AP)
+1. [Automatic thresholding (histogram-based)](https://neubias.github.io/training-resources/auto_threshold/index.html)
+	a. TODO create skiimage part. 
+1. [Connected component labeling](https://neubias.github.io/training-resources/connected_components/index.html)
+	a. TODO test activity (AP)
+	b. TODO exercise (AP)
+	c. TODO migrate to new multiactivity (AP)
+1. [Object shape measurements](https://neubias.github.io/training-resources/measure_shapes/index.html)
+	a. TODO create scikit-image part. 
+	b. TODO migrate to new multiactivity
+1. Workflow: [Basic 2D object analysis](https://neubias.github.io/training-resources/workflow_segment_2d_nuclei_measure_shape/index.html)
+	a. TODO create scikit-image  part
+1. [Image neighborhood filtering ](https://neubias.github.io/training-resources/filter_neighbourhood/index.html)
+	a. TODO create scikit-image  part
+1. [Median filter](https://neubias.github.io/training-resources/median_filter/index.html)
+	a. TODO create scikit-image  part
+1. [Object intensity measurements](https://neubias.github.io/training-resources/measure_intensities/index.html)
+	a. TODO create scikit-image  part
+1. [Local background subtraction](https://neubias.github.io/training-resources/local_background_correction/index.html)
+	a. TODO create skiimage part
+1. [Morphological filters](https://neubias.github.io/training-resources/filter_morphological/index.html)
+	a. TODO create scikit-image  
+May be
+1. Workflow: [2D noisy object segmentation and filtering](https://neubias.github.io/training-resources/workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape/index.html)
+	a. TODO skiimage part
