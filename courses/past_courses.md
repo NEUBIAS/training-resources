@@ -1,12 +1,13 @@
 # List of past courses performed using this material
 
-Please note that some links may be outdated
+Please note that some links may be outdated. Each module/topic takes about 30-45 min to teach, it starts with an activity and finishes with hands-on by students. 
 
 ## January-February 2021
-Each module abbout 30-45 min, the course had a 30 min break.
-Teachers: 
-Antonio Politi, MPI-NAT Göttingen
-Christian Tischer, EMBL, Heidelberg
+A course with 4 afternoons a 3 hours each.  Each day had a 30 min break. 
+
+**Teachers** 
+ * Antonio Politi, MPI-NAT Göttingen
+ * Christian Tischer, EMBL, Heidelberg
 
 ### Monday, 25. January 2021, 14:00 – 17:00 CET
  * [Digital image Basics](https://neubias.github.io/training-resources/pixels/index.html) 
