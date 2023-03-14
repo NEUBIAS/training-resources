@@ -111,7 +111,7 @@ If you need to train models this requires a more involved software installation 
 
 
 
-## June 2021
+# June 2021, Basics of Bioimage Analysis
 A course with 4 afternoons a 3 hours each.  Each day had a 30 min break. 
 **Teachers** 
  * Antonio Politi, MPI-NAT Göttingen
@@ -150,7 +150,7 @@ Self introduction
 * https://forum.image.sc/ Very useful to post questions and browse through. 
 * https://imagej.net/ The main site for imageJ
 
-## January-February 2021
+# January-February 2021,  Basics of Bioimage Analysis
 
 **Title: Basics of Bioimage Analysis**
 
