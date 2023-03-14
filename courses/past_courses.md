@@ -1,10 +1,49 @@
 # List of past courses performed using this material
 
-Please note that some links may be outdated. Each module/topic takes about 30-45 min to teach, it starts with an activity and finishes with hands-on by students. 
+Please note that some links may be outdated as they are from the date of the course. Each module/topic takes about 30-45 min to teach, it starts with an activity and finishes with hands-on by students. 
 
-# March 2022 
+# March 2022, ImageJ macro scripting for bioimage analysis
 
-**Title: Basics of Image Analysis using the ImageJ GUI**
+A course with 2 afternoons a 4 hours each.  Each day had a 30 min break. 
+**Teachers** 
+ 
+ * Arif Kahn, EMBL, Heidelberg
+ * Anniiek Stoekkermans, EMBL, Heidelberg
+ * Christian Tischer, EMBL, Heidelberg
+ * Antonio Politi, MPI-NAT, Göttingen
+ 
+### Pre-requisites
+Essential: Practical experience using the graphical user interface of Fiji.
+
+Helpful: Knowledge of basic concepts of bioimage analysis. 
+
+Topics covered in Basics of Image Analysis using the ImageJ GUI course, March 2022 (see below)
+
+### Monday, 21. March 2022, 13:00 – 17:00 CET
+ * [Running, understanding and modifying an ImageJ macro](https://neubias.github.io/training-resources/script_run/index.html)
+ * [Recording a script](https://neubias.github.io/training-resources/script_record/index.html)
+ * [Variables](https://neubias.github.io/training-resources/script_variables/index.html)
+ * [String concatenation](https://neubias.github.io/training-resources/string_concat/index.html)
+
+### Monday, 22. March 2022, 13:00 – 17:00 CET
+ * [Automated output saving (label mask images, ROIs, and tables)](https://neubias.github.io/training-resources/output_saving/index.html)
+ * [Handling script parameters](https://neubias.github.io/training-resources/fetching_user_input/index.html)
+ * [Loops](https://neubias.github.io/training-resources/script_for_loop/index.html)
+ * [Batch processing](https://neubias.github.io/training-resources/batch_processing/index.html)
+
+Some commands manipulating strings in IJMacro
+```
+imageDir = File.getDirectory(inputImageFile);
+print(imageDir);
+print(File.getParent(imageDir));
+indexOf(imageDir, File.separator);
+split(imageDir, File.separator); // gets you an array
+```
+Also see https://imagej.net/scripting/parameters
+
+
+# March 2022, Basics of Image Analysis using the ImageJ GUI
+
 
 A course with 4 afternoons a 4 hours each.  Each day had a 2x30 min break. 
 **Teachers** 
