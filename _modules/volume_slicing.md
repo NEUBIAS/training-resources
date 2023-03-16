@@ -23,8 +23,8 @@ figure: /figures/volume_slicing.png
 figure_legend: Schematic representation of 2D, 3D, and 5D image data. 2D images are made up of tiny squares called pixels, whereas 3D images are made up of cubes called voxels. Pixels and voxels are not necessarily isotropic, as shown here by squares versus rectangles. In order to see a different part of the image data on a 2D monitor, the image has to be sliced and sometimes rotated.
 
 multiactivities:
-  - ["volume_slicing/volume_slicing_act1.md", [["ImageJ GUI", "volume_slicing/volume_slicing_act1_imagejgui.md", "markdown"], ["ImageJ Macro", "volume_slicing/volume_slicing_act1_imagejmacro.ijm", "java"], ["ImageJ Python", "volume_slicing/volume_slicing_act1_imagejpython.py", "python"]]]
-  - ["volume_slicing/volume_slicing_act2.md", [["ImageJ GUI", "volume_slicing/volume_slicing_act2_imagejgui.md", "markdown"], ["ImageJ Macro", "volume_slicing/volume_slicing_act2_imagejmacro.ijm", "java"], ["ImageJ Python", "volume_slicing/volume_slicing_act2_imagejpython.py", "python"]]]
+  - ["volume_slicing/volume_slicing_act1.md", [["ImageJ GUI", "volume_slicing/volume_slicing_act1_imagejgui.md", "markdown"], ["ImageJ Macro", "volume_slicing/volume_slicing_act1_imagejmacro.ijm", "java"], ["ImageJ Jython", "volume_slicing/volume_slicing_act1_imagejpython.py", "python"]]]
+  - ["volume_slicing/volume_slicing_act2.md", [["ImageJ GUI", "volume_slicing/volume_slicing_act2_imagejgui.md", "markdown"], ["ImageJ Macro", "volume_slicing/volume_slicing_act2_imagejmacro.ijm", "java"], ["ImageJ Jython", "volume_slicing/volume_slicing_act2_imagejpython.py", "python"]]]
 
 assessment: >
 
