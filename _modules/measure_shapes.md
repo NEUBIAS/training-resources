@@ -29,8 +29,8 @@ figure: /figures/measure_shapes.jpg
 figure_legend: 
 
 multiactivities:
-  - ["measure_shapes/measure_shapes.md", [["ImageJ GUI", "measure_shapes/measure_shapes_imagejgui.md", "markdown"]]]
-  - ["measure_shapes/measure_shapes_exercise.md", [["ImageJ GUI", "measure_shapes/measure_shapes_exercise_imagejgui.md", "markdown"]]]
+  - ["measure_shapes/measure_shapes.md", [["ImageJ GUI", "measure_shapes/measure_shapes_imagejgui.md", "markdown"], ["skimage napari", "measure_shapes/measure_shapes_skimage_napari.py", "python"]]]
+  - ["measure_shapes/measure_shapes_exercise.md", [["ImageJ GUI", "measure_shapes/measure_shapes_exercise_imagejgui.md", "markdown"], ["skimage napari", "measure_shapes/measure_shapes_exercise_skimage_napari.py", "python"]]]
 
 
 
