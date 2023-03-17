@@ -28,15 +28,11 @@ concept_map: >
 figure: /figures/measure_shapes.jpg
 figure_legend: 
 
-activity_preface: |
-    Open an image and perform shape measurements. Explain simple shape features (area, volume, perimeter) and some more complexes
-    like circularity, elongation. Show that results can also be represented as an image.
- 
-activities:
-    - ["ImageJ GUI", "measure_shapes/activities/measure_shapes_imagejgui.md", "markdown"]
+multiactivities:
+  - ["measure_shapes/measure_shapes.md", [["ImageJ GUI", "measure_shapes/measure_shapes_imagejgui.md", "markdown"]]]
+  - ["measure_shapes/measure_shapes_exercise.md", [["ImageJ GUI", "measure_shapes/measure_shapes_exercise_imagejgui.md", "markdown"]]]
 
-exercises:
-    - ["ImageJ GUI", "measure_shapes/exercises/measure_shapes_imagejgui.md"]
+
 
 assessment: >
 
