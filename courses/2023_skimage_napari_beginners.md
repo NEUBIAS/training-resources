@@ -50,15 +50,15 @@ TODO
 ### Image inspection basics
 
 1. [Digital image basics](https://neubias.github.io/training-resources/pixels/index.html)
-  a. [issue](https://github.com/NEUBIAS/training-resources/issues/453)
+	- [issue](https://github.com/NEUBIAS/training-resources/issues/453)
 1. [Lookup tables](https://neubias.github.io/training-resources/lut/index.html)
 1. [Spatial image calibration](https://neubias.github.io/training-resources/spatial_calibration/index.html)
 1. [Image data types](https://neubias.github.io/training-resources/datatypes/index.html)
 1. [Image file formats](https://neubias.github.io/training-resources/image_file_formats/index.html)
-  a. [PR](https://github.com/NEUBIAS/training-resources/pull/462)
+	- [PR](https://github.com/NEUBIAS/training-resources/pull/462)
 1. [Volume slicing](https://neubias.github.io/training-resources/volume_slicing/index.html)
-  a. [issue](https://github.com/NEUBIAS/training-resources/issues/409)
-  b. we could move some of this content to the `digital image basics`
+	- [issue](https://github.com/NEUBIAS/training-resources/issues/409)
+	- we could move some of this content to the `digital image basics`
 1. [Image projections](https://neubias.github.io/training-resources/projections/index.html)
 1. [Volume rendering](https://neubias.github.io/training-resources/volume_viewer/index.html)
 
@@ -66,33 +66,35 @@ TODO
 
 1. [Segmentation](https://neubias.github.io/training-resources/segmentation/index.html) DONE. Just generic concept.
 1. [Manual segmentation](https://neubias.github.io/training-resources/manual_segmentation/index.html)
-	a. TODO work on Napari 2D/3D manual segmentation from scratch (AP) 
-	b. Add exercise for correction of labels (AP)
+	- TODO work on Napari 2D/3D manual segmentation from scratch (AP) 
+	- Add exercise for correction of labels (AP)
 1. [Thresholding (Foreground background segmentation)](https://neubias.github.io/training-resources/binarization/index.html)
-	a. TODO test activity (AP)
-	b. Add more exercises (AP)
-	c. Migrate to new format multi activity (AP)
+	- TODO test activity (AP)
+	- Add more exercises (AP)
+	- Migrate to new format multi activity (AP)
 1. [Automatic thresholding (histogram-based)](https://neubias.github.io/training-resources/auto_threshold/index.html)
-	a. TODO create skiimage part. 
+	- TODO create skimage part. 
 1. [Connected component labeling](https://neubias.github.io/training-resources/connected_components/index.html)
-	a. TODO test activity (AP)
-	b. TODO exercise (AP)
-	c. TODO migrate to new multiactivity (AP)
+	- TODO test activity (AP)
+	- TODO exercise (AP)
+	- TODO migrate to new multiactivity (AP)
 1. [Object shape measurements](https://neubias.github.io/training-resources/measure_shapes/index.html)
-	a. TODO create scikit-image part. 
-	b. TODO migrate to new multiactivity
+	- TODO create skimage part
+	- TODO migrate to new multiactivity
 1. Workflow: [Basic 2D object analysis](https://neubias.github.io/training-resources/workflow_segment_2d_nuclei_measure_shape/index.html)
-	a. TODO create scikit-image  part
+	- TODO create skimage part
 1. [Image neighborhood filtering ](https://neubias.github.io/training-resources/filter_neighbourhood/index.html)
-	a. TODO create scikit-image  part
+	- TODO create skimage part
 1. [Median filter](https://neubias.github.io/training-resources/median_filter/index.html)
-	a. TODO create scikit-image  part
+	- TODO create skimage part
 1. [Object intensity measurements](https://neubias.github.io/training-resources/measure_intensities/index.html)
-	a. TODO create scikit-image  part
+	- TODO create skimage-image  part
 1. [Local background subtraction](https://neubias.github.io/training-resources/local_background_correction/index.html)
-	a. TODO create skiimage part
+	- TODO create skimage part
 1. [Morphological filters](https://neubias.github.io/training-resources/filter_morphological/index.html)
-	a. TODO create scikit-image  
-May be
+	- TODO create skimage-image  
+
+### Maybe
+
 1. Workflow: [2D noisy object segmentation and filtering](https://neubias.github.io/training-resources/workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape/index.html)
-	a. TODO skiimage part
+	- TODO skimage part
