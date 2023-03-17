@@ -53,11 +53,11 @@ assessment: >
 
 learn_next:
   - "[Workflow: Simple 2D object analysis](../workflow_segment_2d_nuclei_measure_shape)"
-  - "[Object intensity meaurements](../measure_intensities)"
+  - "[Object intensity measurements](../measure_intensities)"
 
 external_links:
-  - "[Segmentation Annotator](https://github.com/tischi/segmentation-annotator#segmentation-annotator). Label mask and measurements exploration and annotation in ImageJ"
   - "[Wikipedia coastal line paradox](https://en.wikipedia.org/wiki/Coastline_paradox). Effect of Sampling and resolution on the measurements"
-  - "[Results visualisation](https://imagej.net/MorphoLibJ#Grayscale_morphological_filters). Label visualization in 3D viewer"
+  - "[Results visualisation in ImageJ](https://imagej.net/MorphoLibJ#Grayscale_morphological_filters). Label visualization in 3D viewer"
   - "[Overlay label IDs in ImageJ](https://forum.image.sc/t/overlay-numbers-on-image/35604/6)"
+  - "[Python segmentation and regionprops tutorial](https://jni.github.io/i2k-skimage-napari/lectures/2_segmentation_and_regionprops.html)"
 ---
