@@ -22,6 +22,7 @@ module_order:
 - image_formation_confocal
 - lut
 - spatial_calibration
+- multidimensional_image_basics
 - datatypes
 - image_file_formats
 - big_image_file_formats
