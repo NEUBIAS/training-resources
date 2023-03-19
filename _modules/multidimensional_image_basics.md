@@ -19,8 +19,8 @@ concept_map: >
     C("Channels") --> ND("N-dimensional image")
     T("Time Points") --> ND("N-dimensional image")
 
-figure: /figures/volume_slicing.png
-figure_legend: Schematic representation of 2D, 3D, and 5D image data. 2D images are made up of tiny squares called pixels, whereas 3D images are made up of cubes called voxels. Pixels and voxels are not necessarily isotropic, as shown here by squares versus rectangles. In order to see a different part of the image data on a 2D monitor, the image has to be sliced and sometimes rotated.
+figure: /figures/multi_dimensional_image.png
+figure_legend: Schematic representation of 2D, 3D, and 5D image data. 2D images are made up of tiny squares called pixels, whereas 3D images are made up of cubes called voxels. Pixels and voxels are not necessarily isotropic, as shown here by squares versus rectangles. 
 
 activity_preface: |
   - Open the 3D image [xyz_8bit__chromsomes.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit__chromosomes.tif).
