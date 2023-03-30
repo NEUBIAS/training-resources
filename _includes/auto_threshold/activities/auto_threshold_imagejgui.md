@@ -23,4 +23,4 @@
     - **[X]** `White objects on black background`
     - Keep all other options unchecked
     - Press `OK`
-  - In auto thresholding several methods produce acceptable results and one can get rid of selecting manual threshold values for each different image
+  - In auto thresholding several methods produce acceptable results and one can get rid of selecting manual threshold values for each different image.
