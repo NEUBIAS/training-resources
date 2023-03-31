@@ -53,14 +53,15 @@ TODO
 	- [issue](https://github.com/NEUBIAS/training-resources/issues/453)
 1. [Lookup tables](https://neubias.github.io/training-resources/lut/index.html)
 1. [Spatial image calibration](https://neubias.github.io/training-resources/spatial_calibration/index.html)
-1. [Image data types](https://neubias.github.io/training-resources/datatypes/index.html)
-1. [Image file formats](https://neubias.github.io/training-resources/image_file_formats/index.html)
+	- TODO implement activity with new loading function (NG)
+3. [Image data types](https://neubias.github.io/training-resources/datatypes/index.html)
+4. [Image file formats](https://neubias.github.io/training-resources/image_file_formats/index.html)
 	- [PR](https://github.com/NEUBIAS/training-resources/pull/462)
-1. [Volume slicing](https://neubias.github.io/training-resources/volume_slicing/index.html)
+5. [Volume slicing](https://neubias.github.io/training-resources/volume_slicing/index.html)
 	- [issue](https://github.com/NEUBIAS/training-resources/issues/409)
 	- we could move some of this content to the `digital image basics`
-1. [Image projections](https://neubias.github.io/training-resources/projections/index.html)
-1. [Volume rendering](https://neubias.github.io/training-resources/volume_viewer/index.html)
+6. [Image projections](https://neubias.github.io/training-resources/projections/index.html)
+7. [Volume rendering](https://neubias.github.io/training-resources/volume_viewer/index.html)
 
 ### Image analysis basics
 
