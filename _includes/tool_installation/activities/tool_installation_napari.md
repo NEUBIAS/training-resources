@@ -16,7 +16,7 @@
 1. `conda activate skimage-napari-tutorial`
 1. `jupyter notebook`
   - `New > Python 3`
-1. type following commands in a cell and run. You should get the napari GUI and showing an image
+1. type following commands in a cell and run. You should get the napari GUI showing an image
 
 ``` python
 # Instantiate the napari viewer
