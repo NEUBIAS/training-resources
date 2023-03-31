@@ -1,7 +1,17 @@
-- [Install Fiji with MoBIE](https://github.com/mobie/mobie-viewer-fiji#install)
-- Start Fiji
+- [Run Fiji with MoBIE](https://github.com/mobie/mobie-viewer-fiji#install)
 - Open OME-Zarr from S3 in BigDataViewer:
-  - **[ Plugins › BigDataViewer › OME ZARR › Open OME ZARR From S3... ]**
-    - S3 URL: Choose one of the above example URLs
-    - [X]  Log chunk loading
-
+  - `[ Plugins › BigDataViewer › OME ZARR › Open OME ZARR From S3... ]`
+    - `S3 URL`: Choose one of the above example URLs
+    - [X] Log chunk loading
+- Examine the IJ Log window to see:
+  - image scale levels
+  - transformations from data space to global space
+- One OME-Zarr URL may contain multiple images, you can toggle them on and off:
+  - BDV: Press `P` and use the `active` checkbox
+- Examine multi-scale chunk loading:
+  - `[ Fiji > Window > Console ]`
+  - Move around to load different chunks, e.g.:
+    - BDV: `Mouse scroll` to move along the current viewing axis
+    - BDV: `Shift x` to view along the x-axis.
+  - Zoom in to load higher resolution data:
+    - BDV: `Arrow up`

@@ -186,7 +186,7 @@ window.onload = set_view_defaults;
       {%- endcapture -%}
       {{ preface | markdownify }}
       <br>
-      Show activity for:
+      Show activity for:&nbsp;&nbsp;
       {%- assign close_call = "('id_activity_platform-" | append: idx_0 | append: "');return false;" -%}
       {%- assign fun = "change_activity_content_by_platform_" | append: idx_0 | append: close_call -%}
       {%- assign iap = "id_activity_platform-" | append: idx_0 -%}
@@ -249,7 +249,7 @@ window.onload = set_view_defaults;
 
     {% if page.activities %}
       <br>
-      Show activity for:
+      Show activity for:&nbsp;&nbsp;
       <select id="id_activity_platform" name="activityplatformlist" onchange="change_activity_content_by_platform('id_activity_platform');return false;">
         {% if site.default-platform == "NONE" %}
           <option value="null-activity" id="default-activity-option" selected="selected">

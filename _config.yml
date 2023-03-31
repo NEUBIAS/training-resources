@@ -19,6 +19,7 @@ kind: "lesson"
 module_order:
 - tool_installation
 - pixels
+- image_formation_confocal
 - lut
 - spatial_calibration
 - datatypes
@@ -60,6 +61,7 @@ module_order:
 - script_functions
 - fetching_user_input
 - ome_zarr_s3
+- correlative_image_rendering
 
 # Sites
 repository: <USERNAME>/<PROJECT>
