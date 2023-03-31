@@ -73,7 +73,6 @@ TODO
 1. [Thresholding (Foreground background segmentation)](https://neubias.github.io/training-resources/binarization/index.html)
  	- Need merge into master of [PR #313](https://github.com/NEUBIAS/training-resources/pull/313) 
 3. [Automatic thresholding (histogram-based)](https://neubias.github.io/training-resources/auto_threshold/index.html)
-	- TODO create skimage part. (SG) #477
 4. [Connected component labeling](https://neubias.github.io/training-resources/connected_components/index.html)
 	- TODO test activity (AP)
 	- TODO exercise (AP)
@@ -83,7 +82,6 @@ TODO
 	- TODO create skimage part (DK)
 	- TODO migrate to new multiactivity (DK)
 6. Workflow: [Basic 2D object analysis](https://neubias.github.io/training-resources/workflow_segment_2d_nuclei_measure_shape/index.html)
-	- TODO create skimage part (SG)
 7. [Image neighborhood filtering ](https://neubias.github.io/training-resources/filter_neighbourhood/index.html)
 	- TODO create skimage part (DK)
 8. [Median filter](https://neubias.github.io/training-resources/median_filter/index.html)
