@@ -22,7 +22,7 @@ concept_map: >
 
 figure: /figures/lut.png
 figure_legend:
-  Image displayed with a grey LUT and the color mapping as an inset. In addition, another image shown with several different LUTs and settings.
+  "Left: Image displayed with a grey LUT and the color mapping as an inset. Right: Image shown with several different LUTs."
 
 activity_preface: |
   - Open the image [xy_8bit__nuclei_high_dynamic_range.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_high_dynamic_range.tif)
