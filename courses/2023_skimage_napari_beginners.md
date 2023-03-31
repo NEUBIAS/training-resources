@@ -52,17 +52,19 @@ TODO
 1. [Digital image basics](https://neubias.github.io/training-resources/pixels/index.html)
 	- [issue](https://github.com/NEUBIAS/training-resources/issues/453)
 1. [Lookup tables](https://neubias.github.io/training-resources/lut/index.html)
-1. [Spatial image calibration](https://neubias.github.io/training-resources/spatial_calibration/index.html)
+    - TODO Multiactivity
+    - TODO Exercise skimage napari
+3. [Spatial image calibration](https://neubias.github.io/training-resources/spatial_calibration/index.html)
 	- TODO implement activity with new loading function (NG)
-3. [Image data types](https://neubias.github.io/training-resources/datatypes/index.html)
-4. [Image file formats](https://neubias.github.io/training-resources/image_file_formats/index.html)
-	- [PR](https://github.com/NEUBIAS/training-resources/pull/462)
+4. [Image data types](https://neubias.github.io/training-resources/datatypes/index.html) DONE
+5. [Image file formats](https://neubias.github.io/training-resources/image_file_formats/index.html)
+	- [PR #462](https://github.com/NEUBIAS/training-resources/pull/462)
 	- TODO add activity that explains our `open_tiff` function (BO)
-5. [Volume slicing](https://neubias.github.io/training-resources/volume_slicing/index.html)
+6. [Volume slicing](https://neubias.github.io/training-resources/volume_slicing/index.html)
 	- [issue](https://github.com/NEUBIAS/training-resources/issues/409)
 	- we could move some of this content to the `digital image basics`
-6. [Image projections](https://neubias.github.io/training-resources/projections/index.html)
-7. [Volume rendering](https://neubias.github.io/training-resources/volume_viewer/index.html)
+7. [Image projections](https://neubias.github.io/training-resources/projections/index.html)
+8. [Volume rendering](https://neubias.github.io/training-resources/volume_viewer/index.html)
 
 ### Image analysis basics
 
@@ -70,9 +72,9 @@ TODO
 1. [Manual segmentation](https://neubias.github.io/training-resources/manual_segmentation/index.html)
 	- TODO work on Napari 2D/3D manual segmentation from scratch (AP) 
 	- Add exercise for correction of labels (AP)
-1. [Thresholding (Foreground background segmentation)](https://neubias.github.io/training-resources/binarization/index.html)
- 	- Need merge into master of [PR #313](https://github.com/NEUBIAS/training-resources/pull/313) 
-3. [Automatic thresholding (histogram-based)](https://neubias.github.io/training-resources/auto_threshold/index.html)
+1. [Thresholding (Foreground background segmentation)](https://neubias.github.io/training-resources/binarization/index.html) DONE
+ 	- Needs merge into master of [PR #313](https://github.com/NEUBIAS/training-resources/pull/313) 
+3. [Automatic thresholding (histogram-based)](https://neubias.github.io/training-resources/auto_threshold/index.html) DONE
 4. [Connected component labeling](https://neubias.github.io/training-resources/connected_components/index.html)
 	- TODO test activity (AP)
 	- TODO exercise (AP)
@@ -81,7 +83,7 @@ TODO
 5. [Object shape measurements](https://neubias.github.io/training-resources/measure_shapes/index.html)
 	- TODO create skimage part (DK)
 	- TODO migrate to new multiactivity (DK)
-6. Workflow: [Basic 2D object analysis](https://neubias.github.io/training-resources/workflow_segment_2d_nuclei_measure_shape/index.html)
+6. Workflow: [Basic 2D object analysis](https://neubias.github.io/training-resources/workflow_segment_2d_nuclei_measure_shape/index.html) DONE
 7. [Image neighborhood filtering ](https://neubias.github.io/training-resources/filter_neighbourhood/index.html)
 	- TODO create skimage part (DK)
 8. [Median filter](https://neubias.github.io/training-resources/median_filter/index.html)
