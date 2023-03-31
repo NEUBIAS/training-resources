@@ -71,7 +71,7 @@ TODO
 	- TODO work on Napari 2D/3D manual segmentation from scratch (AP) 
 	- Add exercise for correction of labels (AP)
 1. [Thresholding (Foreground background segmentation)](https://neubias.github.io/training-resources/binarization/index.html)
- 	- [PR 313](https://github.com/NEUBIAS/training-resources/pull/313) 
+ 	- Need merge of [PR 313](https://github.com/NEUBIAS/training-resources/pull/313) 
 3. [Automatic thresholding (histogram-based)](https://neubias.github.io/training-resources/auto_threshold/index.html)
 	- TODO create skimage part. (SG) #477
 4. [Connected component labeling](https://neubias.github.io/training-resources/connected_components/index.html)
