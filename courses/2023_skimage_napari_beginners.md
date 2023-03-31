@@ -73,7 +73,7 @@ TODO
 	- Add more exercises (AP)
 	- Migrate to new format multi activity (AP)
 1. [Automatic thresholding (histogram-based)](https://neubias.github.io/training-resources/auto_threshold/index.html)
-	- TODO create skimage part. 
+	- TODO create skimage part. (SG) #477
 1. [Connected component labeling](https://neubias.github.io/training-resources/connected_components/index.html)
 	- TODO test activity (AP)
 	- TODO exercise (AP)
