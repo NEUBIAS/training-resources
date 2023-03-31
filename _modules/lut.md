@@ -81,7 +81,7 @@ external_links:
 
 Lookup tables do the mapping from a numeric pixel value to a color. This is the main mechanism how we visualise microscopy image data. In case of doubt, it is always a good idea to show the mapping as an inset in the image (or next to the image).
 
-### Single color lookup tables
+#### Single color lookup tables
 
 Single color lookup tables are typically configured by chosing one color such as, e.g., grey or green, and choosing a `min` and `max` value that determine the brightness of this color depending on the `value` of the respective pixel in the following way:
 
@@ -91,7 +91,7 @@ In this formula, 1 corresponds to the maximal brightness and 0 corresponds to th
 
 Depending on the values of `value`, `min` and `max` it can be that the formula yields values that are less than 0 or larger than 1. This is handled by assinging a brightness of 0 even if the formula yields values < 0 and assigning a brightness of 1 even if the forumla yield values larger than `1`. In such cases one speaks of "clipping", because one looses ("clips") information about the pixel value (see below for an example).
 
-#### Clipping example
+##### Clipping example
 
 `min = 20, max = 100, v1 = 100, v2 = 200`
 
@@ -101,7 +101,7 @@ Depending on the values of `value`, `min` and `max` it can be that the formula y
 
 Both pixel values will be painted with the same brightness as a brightness larger than `1` is not possible (see above).
 
-### Multi color lookup tables
+#### Multi color lookup tables
 
 As the name suggestes multi color lookup tables map pixel gray values to different colors.
 
