@@ -71,17 +71,16 @@ assessment: >
     {: .solution}
 
 learn_next:
-#  - "[Split touching objects](object_splitting)"
-#  - "[Measure object shapes](measure_shapes)"
+   - "[Measure object shapes](measure_shapes)"
 external_links:
   - "[Wikipedia: Connected components labeling](https://en.wikipedia.org/wiki/Connected-component_labeling)"
 ---
 
-# Connected components
 
-A typical workflow is to first categorise an image into background and foreground regions, which can be represented as a binary image. If there are more than one object of interest, cluster of pixels which are spatially connected to each other can be assigned a same pixel value. Such clusters in the segmented image can be called as connected components. The relation between two or more pixels is described by its connectivity. The next step is a connected components labeling, where spatially connected regions of foreground pixels are assigned (labeled) as being part of one region (object).
+Typically, one first categorise an image into background and foreground regions, which can be represented as a binary image. Such clusters in the segmented image are called connected components. The relation between two or more pixels is described by its connectivity. The next step is a connected components labeling, where spatially connected regions of foreground pixels are assigned (labeled) as being part of one region (object).
 
-# Connectivity
+<img src="../figures/connected_components_connectivity2D.png"  align ="left" width="50%" >
+<img src="../figures/connected_components_connectivity3D.png"  align ="right" width="50%">
 
 In an image, pixels are ordered in a squared configuration. 
 
@@ -98,5 +97,4 @@ This leads to the following equivalent nomenclatures:
 - 3D: 1 connectivity = 6 connectivity
 - 3D: 2 connectivity = 26 connectivity
 
-<img src="../figures/connected_components_connectivity2D.png"  align ="left" width="50%" >
-<img src="../figures/connected_components_connectivity3D.png"  align ="right" width="50%">
+

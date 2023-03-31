@@ -157,6 +157,10 @@ window.onload = set_view_defaults;
     </div>
   </font>
 
+  <br>
+  <br>
+  <br>
+
   <h2>Figure</h2>
   <figure>
     <img src="{{ page.figure | relative_url }}" class="example_figure">
@@ -171,10 +175,6 @@ window.onload = set_view_defaults;
   <br>
   <br>
   <br>
-
-  <div class="module-content">
-    {{ content }}
-  </div>
 
   {% if page.multiactivities %}
     <h2>Activities</h2>
@@ -355,6 +355,10 @@ window.onload = set_view_defaults;
     </blockquote>
   {%- endfor -%}
 
+  <br>
+  <br>
+  <br>
+
   {% if page.assessment %}
     <h2>Assessment</h2>
     {{ page.assessment | markdownify }}
@@ -372,6 +376,16 @@ window.onload = set_view_defaults;
       </ul>
     </blockquote>
   {% endif %}
+
+
+  <h2>Explanations</h2>
+  <div class="module-content">
+    {{ content }}
+  </div>
+
+  <br>
+  <br>
+  <br>
 
   <blockquote class="keypoints">
     <h2>Follow-up material</h2>

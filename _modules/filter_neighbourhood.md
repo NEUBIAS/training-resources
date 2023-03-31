@@ -69,8 +69,6 @@ external_links:
 
 ---
 
-### Neighborhood filters
-
 Neighborhood filters comprise two ingredients: a definition of the pixel neighborhood (size and shape) and a mathematical recipe what to compute on this neighborhood.
 The result of this computation will be used to replace the value of the central pixel in the neighborhood. This procedure can be applied to several (all) pixels of an image to obtain a filtered image. The animation shows a square neighborhood (3x3) applied to the inner pixels of the image.
 
