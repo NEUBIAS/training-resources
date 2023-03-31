@@ -16,9 +16,9 @@ viewer.add_image(image, name='image')
 
 # Obtain threshold value using Otsu's algorithm
 from skimage.filters import threshold_otsu
-threshold_otsu = image > threshold_otsu(image)
+thresholded_otsu = image > threshold_otsu(image)
 
-viewer.add_labels(thresholded, name='otsu', num_colors=1, color={0: 'green'})
+viewer.add_labels(thresholded_otsu, name='otsu', num_colors=1, color={0: 'green'})
 # Explore the results in the napari viewer. For 3D data one can change the order 
 # of visible axes (bottom left in napari viewer window). If not satisfied by the
 # results, we can explore other threshold algorithms:
