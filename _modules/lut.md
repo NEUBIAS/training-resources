@@ -22,23 +22,29 @@ concept_map: >
 
 figure: /figures/lut.png
 figure_legend:
-  Image displayed with a grey LUT and the color mapping as an inset. In addition, another image shown with several different LUTs and settings.
+  "Left: Image displayed with a grey LUT and the color mapping as an inset. Right: Image shown with several different LUTs."
 
 activity_preface: |
   - Open the image [xy_8bit__nuclei_high_dynamic_range.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_high_dynamic_range.tif)
-  - Explore different single color LUTs and LUT settings
-  - Visualise the LUT, e.g. as an inset in the image as in above figure.
-  - Appreciate that LUT settings do not change the pixel values
-  - Appreciate that a single color LUT will not allow you to see all nuclei without clipping
-  - Appreciate that certain colors like blue are not so good for seeing different intensities (grey values are probably the best).
-  - Explore multi color LUTs for visualisation of such a "high dynamic range" (big difference of intensities) image.
+  - Explore different contrast settings
+    - Observe that there are very dim nuclei
+  - Observe that LUT settings do not change pixel values
+  - Explore various single color LUTs (e.g., gray, green, red, blue)
+    - Understand that gray is the recommended default
+    - Understand that certain LUTs such as red and blue should be avoided
+  - Explore various multi color LUTs, which can be helpful to 
+    - highlight extreme values
+    - render high dynamic range data without "clipping information"
+  - Visualise the LUT itself, e.g. as an inset in the image
+    - Understand that this is especially important for multi-color LUTs where the mapping from the displayed color to the numeric data is not obivous
 
 activities:
-  - ["ImageJ Macro & GUI", "lut/activities/explore_luts_imagejmacro.ijm", "java"]
+  - ["ImageJ GUI", "lut/activities/explore_luts_imagejgui.md", "markdown"]
+  - ["ImageJ Macro", "lut/activities/explore_luts_imagejmacro.ijm", "java"]
   - ["skimage napari", "lut/activities/explore_luts_skimage_napari.py", "python"]
 
 exercises:
-  - ["ImageJ Macro & GUI", "lut/exercises/configure_luts_imagejmacro.md"]
+  - ["ImageJ Macro (GUI)", "lut/exercises/configure_luts_imagejmacro.md"]
 
 assessment: |
 
@@ -72,11 +78,10 @@ learn_next:
 external_links:
 
 ---
-### Lookup tables
 
 Lookup tables do the mapping from a numeric pixel value to a color. This is the main mechanism how we visualise microscopy image data. In case of doubt, it is always a good idea to show the mapping as an inset in the image (or next to the image).
 
-### Single color lookup tables
+#### Single color lookup tables
 
 Single color lookup tables are typically configured by chosing one color such as, e.g., grey or green, and choosing a `min` and `max` value that determine the brightness of this color depending on the `value` of the respective pixel in the following way:
 
@@ -86,7 +91,7 @@ In this formula, 1 corresponds to the maximal brightness and 0 corresponds to th
 
 Depending on the values of `value`, `min` and `max` it can be that the formula yields values that are less than 0 or larger than 1. This is handled by assinging a brightness of 0 even if the formula yields values < 0 and assigning a brightness of 1 even if the forumla yield values larger than `1`. In such cases one speaks of "clipping", because one looses ("clips") information about the pixel value (see below for an example).
 
-#### Clipping example
+##### Clipping example
 
 `min = 20, max = 100, v1 = 100, v2 = 200`
 
@@ -96,7 +101,7 @@ Depending on the values of `value`, `min` and `max` it can be that the formula y
 
 Both pixel values will be painted with the same brightness as a brightness larger than `1` is not possible (see above).
 
-### Multi color lookup tables
+#### Multi color lookup tables
 
 As the name suggestes multi color lookup tables map pixel gray values to different colors.
 
@@ -109,5 +114,4 @@ For example:
 
 Typical use cases for multi color LUTs are images of a high dynamic range (large differences in gray values) and label mask images (where the pixel values encode object IDs).
 
-Sometimes, also multi color LUTs can be configured in terms of a `min` and `max` value. The reason is that multi colors LUTs only have a limited amount of colors, e.g. 256 different colors. For instance, if you have an image that contains a pixel with a value of 300 it is not immediately obvious which color it should get; the `min` and `max` settings allow you to configure how to map your larger value range into a limited amount of colors. 
-
+Sometimes, also multi color LUTs can be configured in terms of a `min` and `max` value. The reason is that multi colors LUTs only have a limited amount of colors, e.g. 256 different colors. For instance, if you have an image that contains a pixel with a value of 300 it is not immediately obvious which color it should get; the `min` and `max` settings allow you to configure how to map your larger value range into a limited amount of colors.

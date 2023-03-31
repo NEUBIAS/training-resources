@@ -1,33 +1,41 @@
-### Install skimage napari
+## Install skimage napari
 
-Essentially, follow these instructions: https://alisterburt.github.io/napari-workshops/SciPy-0722/scipy_installation.html
+### Installation (only once)
 
-#### Installation (only once)
-
-1. install miniconda (TODO)
-1. `conda create -n skimage-napari-tutorial python=3.9`
-1. `conda activate skimage-napari-tutorial`
-1. `conda install -c conda-forge notebook matplotlib`
-1. `pip install aicsimageio`
-2. `conda install -c conda-forge openjdk=11.0.8`
-3. `conda install -c conda-forge bioformats_jar`
-3. `pip install "napari[all]"`
-4. `pip install napari-brightness-contrast`
-5. `pip install napari-plot-profile`
-6. create a directory called `skimage-napari-tutorial` (e.g. on your Desktop)
-7. download [load_from_url.py](https://neubias.github.io/training-resources/functions/load_from_url.py) 
-8. move `load_from_url.py` in `skimage-napari-tutorial` directory
+1. install [miniconda](https://docs.conda.io/en/latest/miniconda.html)
+1. open a terminal window
+	* Windows: *Anaconda Prompt (Miniconda3)*, e.g. type `Anaconda` in the search bar
+1. `conda create -n skimage-napari-tutorial -c conda-forge python=3.10 napari=0.4.17 notebook matplotlib`
+1. create a directory called `skimage-napari-tutorial` (e.g. on your Desktop)
+1. download [open_tiff.py](https://neubias.github.io/training-resources/functions/open_tiff.py)
+1. move `open_tiff.py` in the `skimage-napari-tutorial` directory
 
 #### Test installation (only once)
-
+1. open a terminal
+1. `cd skimage-napari-tutorial`
 1. `conda activate skimage-napari-tutorial`
 1. `jupyter notebook`
-1. `napari`
+  - `New > Python 3`
+1. type following commands in a cell and run. You should get the napari GUI showing an image
+
+``` python
+# Instantiate the napari viewer
+import napari
+viewer = napari.Viewer()
+
+# Read the intensity image
+from skimage.io import imread
+image = imread('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__two_cells.tif')
+
+# View the intensity image
+viewer.add_image(image)
+```
+
 
 #### Start (every time)
 
 1. open a terminal
-1. go to `skimage-napari-tutorial`
+1. `cd skimage-napari-tutorial`
 1. `conda activate skimage-napari-tutorial`
 1. `jupyter notebook`
   - `New > Python 3`
