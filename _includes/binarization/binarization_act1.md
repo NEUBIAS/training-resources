@@ -1,4 +1,4 @@
-#### Activity 1 
+#### Bright and dim cell
  - Open the image [xy_8bit__two_cells.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__two_cells.tif)
   - Visualise the image and inspect its data type and value content, for instance using an histogram
   - Threshold the image

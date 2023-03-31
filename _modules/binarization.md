@@ -33,6 +33,8 @@ multiactivities:
   - ["binarization/binarization_act2.md", [["ImageJ GUI", "binarization/binarization_act2_imagejgui.md", "markdown"], ["ImageJ Macro", "binarization/binarization_act2_imagejmacro.ijm", "java"], 
   ["ImageJ Jython", "binarization/binarization_act2_jython.py", "python"],["ImageJ Jython + input parameters", "binarization/binarization_act2_jython_inputparameters.py", "python"], 
   ["skimage napari", "binarization/binarization_act2_skimage_napari.py"]]]
+  - ["binarization/binarization_act3.md", [["ImageJ GUI", "binarization/binarization_act3_imagejgui.md", "markdown"]]]
+
 
 assessment: >
 
