@@ -28,7 +28,9 @@ figure: /figures/workflow_segment_2d_nuclei_measure_shape.png
 figure_legend: Workflow for nuclei segmentation and area measurement.
 
 multiactivities:
-  - ["workflow_segment_2d_nuclei_measure_shape/segment_2d_nuclei.md", [["ImageJ GUI", "workflow_segment_2d_nuclei_measure_shape/segment_2d_nuclei_imagejgui.md", "markdown"], ["ImageJ Macro", "workflow_segment_2d_nuclei_measure_shape/segment_2d_nuclei_imagejmacro.ijm", "java"], ["ImageJ Jython", "workflow_segment_2d_nuclei_measure_shape/segment_2d_nuclei_skimage_napari.py", "python"]]]
+  - ["workflow_segment_2d_nuclei_measure_shape/segment_2d_nuclei.md", [["ImageJ GUI", "workflow_segment_2d_nuclei_measure_shape/segment_2d_nuclei_imagejgui.md", "markdown"], 
+  ["ImageJ Macro", "workflow_segment_2d_nuclei_measure_shape/segment_2d_nuclei_imagejmacro.ijm", "java"], 
+  ["skimage and napari", "workflow_segment_2d_nuclei_measure_shape/segment_2d_nuclei_skimage_napari.py", "python"]]]
   
 assessment: >
 

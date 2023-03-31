@@ -22,7 +22,7 @@ def nuclei_quantification(image):
     # Obtain cell properties:
     properties = regionprops(img_labels)
     # Print areas for each cell:
-    for cellid, region in enumerate(r):
+    for cellid, region in enumerate(properties):
         print(f"Cell nr. {cellid}, area: {region.area}")
     
 # Run workflow on each image:
