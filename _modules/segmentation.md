@@ -6,7 +6,7 @@ prerequisites:
 objectives:
   - "Understand the difference between instance and semantic segmentation"
 motivation: |
-  Bioimage analysis very often is concerned with the measurement of features (intensity, shape, ...) of individual objects (cells, nuclei, ...) or regions (mesoderm, inter-cellular space, ...) in images. The process of partitioning an image into objects and regions is called "image segmentation" and due to its prevalence is of central importance to bioimage anlaysis.
+  Bioimage analysis very often is concerned with the measurement of features (intensity, shape, ...) of individual objects (cells, nuclei, ...) or regions (mesoderm, inter-cellular space, ...) in images. The process of partitioning an image into objects and regions is called "image segmentation" and due to its prevalence is of central importance to bioimage analysis.
 
 concept_map: >
   graph TD

@@ -1,5 +1,5 @@
 ---
-title: "Basic 2D object analysis"
+title: "Nuclei segmentation and shape measurement"
 layout: module
 tags: ["workflow"]
 prerequisites:
@@ -25,7 +25,7 @@ concept_map: >
     S --> SFT["Object feature table"]
 
 figure: /figures/workflow_segment_2d_nuclei_measure_shape.png
-figure_legend: Nuclei segmentation and area measurement
+figure_legend: Workflow for nuclei segmentation and area measurement.
 
 activity_preface: |
   

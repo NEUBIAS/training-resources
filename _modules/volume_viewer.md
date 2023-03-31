@@ -54,8 +54,8 @@ activity_preface: |
   - Save a snapshot.
   - Create and save a custom animation, e.g. rotating the image.
 
-acitivities:
-  - ["ImageJ 3D Viewer", "volume_viewer/activities/3d_viewer.md", "markdown"]
+activities:
+  - ["skimage napari", "volume_viewer/activities/volume_rendering_skimage_napari.py", "python"]
 
 exercises:
 

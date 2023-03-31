@@ -29,6 +29,7 @@ activity_preface: |
   - Open [xyz_16bit__spots.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_16bit__spots.tif)
   - Project along the z axis
   - Compare maximum and sum projection
+    - Understand that the data type of the sum projection may need to be adapted
   - Project along the x and y axis
   - Resample the x and y projections for correct appearance in physical space
 
@@ -38,6 +39,7 @@ activities:
   - ["ImageJ GUI Reslice", "projections/activities/projections_imagejgui_reslice.md", "markdown"]
   - ["ImageJ GUI CLIJ2", "projections/activities/projections_imagejgui_clij2.md", "markdown"]
   - ["ImageJ GUI TransformJ", "projections/activities/projections_imagejgui_transformj.md", "markdown"]
+  - ["skimage napari", "projections/activities/projections_skimage_napari.py", "python"] 
 
 exercises:
   - ["ImageJ GUI Reslice", "projections/exercises/projections_imagejgui_reslice.md"]

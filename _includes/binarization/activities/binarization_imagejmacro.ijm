@@ -1,9 +1,23 @@
+// Parameters
+threshold1 = 49;
+threshold2 = 100;
+
+run("Close All");
+
+// Code
 open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__two_cells.tif");
-setThreshold(49, 255);
+rename("input");
+
+// apply threshold 1
+selectWindow("input");
+run("Duplicate...", "title=threshold1");
+setThreshold(threshold1, 65535);
 setOption("BlackBackground", true);
 run("Convert to Mask");
 
-open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__two_cells.tif");
-setThreshold(88, 255);
+// apply threshold 2
+selectWindow("input");
+run("Duplicate...", "title=threshold2");
+setThreshold(threshold2, 65535);
 setOption("BlackBackground", true);
 run("Convert to Mask");

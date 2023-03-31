@@ -30,20 +30,14 @@ concept_map: >
 figure: /figures/spatial_calibration.png
 figure_legend: Spatial calibration and size measurements
 
-activity_preface: |
-    - Open image: [xyz_8bit__mitotic_plate_calibrated.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit__mitotic_plate_calibrated.tif)
-    - Emphasize where to find spatial calibration image metadata and why it can be important. 
-    - Explain how to edit spatial calibration and perform consistency checks. 
-    - Show how to measure the Euclidian calibrated distances of pixels in 2D and 3D.
-
-activities:
-    - ["ImageJ GUI", "spatial_calibration/activities/spatial_calibration_imagejgui.md", "markdown"]
+multiactivities:
+  - ["spatial_calibration/activities/spatial_calibration.md", [["ImageJ GUI", "spatial_calibration/activities/spatial_calibration_imagejgui.md", "markdown"], ["skimage napari", "spatial_calibration/activities/spatial_calibration_skimage_napari.py", "python"]]]
 
 exercises:
     - ["ImageJ GUI", "spatial_calibration/exercises/spatial_calibration_imagejgui.md"]
     
 assessment: |
-    ### Fill in the blanks
+    ### Answer these questions
 
     - Given a 2D image with `pixel height` = `pixel width` = `dxy` = `0.13 micrometer`, what distance do the pixels at the (x,y) indices (10,10) and (9,21) have in micrometer units?
     - Given a 3D image with `dx` = `dy` = `0.13 micrometer` and `dz` = `1 micrometer`, what is the calibrated (micrometer units) distance of two pixels at the indices `(10,10,0)` and `(9,21,3)`?

@@ -17,16 +17,20 @@ life_cycle: "stable"
 kind: "lesson"
 
 module_order:
+- tool_installation
 - pixels
+- image_formation_confocal
 - lut
 - spatial_calibration
 - datatypes
 - image_file_formats
+- big_image_file_formats
 - volume_slicing
 - projections
 - volume_viewer
 - segmentation
 - binarization
+- auto_threshold
 - connected_components
 - measure_shapes
 - workflow_segment_2d_nuclei_measure_shape
@@ -40,16 +44,24 @@ module_order:
 - workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape
 - distance_transform
 - watershed
+- skeletonization
+- workflow_nuclei_and_cells_segmentation
+- workflow_golgi_per_cell
 - manual_segmentation
+- deep_learning_run_segmentation
 - script_env
 - script_run
-- variables
+- script_record
+- script_variables
+- script_for_loop
 - commenting
 - string_concat
 - output_saving
+- batch_processing
 - script_functions
-- volume_viewer
+- fetching_user_input
 - ome_zarr_s3
+- correlative_image_rendering
 
 # Sites
 repository: <USERNAME>/<PROJECT>
