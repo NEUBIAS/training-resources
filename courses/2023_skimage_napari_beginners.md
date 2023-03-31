@@ -90,7 +90,7 @@ TODO
 1. [Object intensity measurements](https://neubias.github.io/training-resources/measure_intensities/index.html)
 	- TODO create skimage-image  part
 1. [Local background subtraction](https://neubias.github.io/training-resources/local_background_correction/index.html)
-	- TODO create skimage part
+	- TODO create skimage part (NV)
 1. [Morphological filters](https://neubias.github.io/training-resources/filter_morphological/index.html)
 	- TODO create skimage-image  
 
