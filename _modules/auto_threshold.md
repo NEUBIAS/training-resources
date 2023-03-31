@@ -20,8 +20,8 @@ figure: /figures/auto_threshold.png
 figure_legend: Input images, histograms (Huang threshold - blue, Otsu threshold - orange),  binary images (Huang), binary images (Otsu).
 
 multiactivities:
-  - ["auto_threshold/auto_threshold_act1.md", [["ImageJ GUI", "auto_threshold/auto_threshold_act1_imagejgui.md", "markdown"], ["ImageJ Jython", "auto_threshold/auto_threshold_act1_skimage_napari.py", "python"]]]
-  - ["auto_threshold/auto_threshold_act2.md", [["ImageJ GUI", "auto_threshold/auto_threshold_act2_imagejgui.md", "markdown"], ["ImageJ Jython", "auto_threshold/auto_threshold_act2_skimage_napari.py", "python"]]]
+  - ["auto_threshold/auto_threshold_act1.md", [["ImageJ GUI", "auto_threshold/auto_threshold_act1_imagejgui.md", "markdown"], ["skimage napari", "auto_threshold/auto_threshold_act1_skimage_napari.py", "python"]]]
+  - ["auto_threshold/auto_threshold_act2.md", [["ImageJ GUI", "auto_threshold/auto_threshold_act2_imagejgui.md", "markdown"], ["skimage napari", "auto_threshold/auto_threshold_act2_skimage_napari.py", "python"]]]
 
 assessment: >
 
