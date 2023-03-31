@@ -224,6 +224,10 @@ window.onload = set_view_defaults;
             {%- highlight javascript -%}
               {{ activity_content }}
             {%- endhighlight -%}
+          {%- elsif ext == "mat" -%}
+            {%- highlight javascript -%}
+              {{ activity_content }}
+            {%- endhighlight -%}
           {%- elsif ext == "py" -%}
             {%- highlight python -%}
               {{ activity_content }}
@@ -240,6 +244,9 @@ window.onload = set_view_defaults;
         </blockquote>
       {%- endfor -%}
       {% assign idx_0 = idx_0 | plus:1 %}
+      <br>
+      <br>
+      <br>
     {%- endfor -%}
   {% else %}
     {% if page.activity_preface %}
