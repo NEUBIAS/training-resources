@@ -78,7 +78,6 @@ learn_next:
 external_links:
 
 ---
-### Lookup tables
 
 Lookup tables do the mapping from a numeric pixel value to a color. This is the main mechanism how we visualise microscopy image data. In case of doubt, it is always a good idea to show the mapping as an inset in the image (or next to the image).
 
@@ -115,5 +114,4 @@ For example:
 
 Typical use cases for multi color LUTs are images of a high dynamic range (large differences in gray values) and label mask images (where the pixel values encode object IDs).
 
-Sometimes, also multi color LUTs can be configured in terms of a `min` and `max` value. The reason is that multi colors LUTs only have a limited amount of colors, e.g. 256 different colors. For instance, if you have an image that contains a pixel with a value of 300 it is not immediately obvious which color it should get; the `min` and `max` settings allow you to configure how to map your larger value range into a limited amount of colors. 
-
+Sometimes, also multi color LUTs can be configured in terms of a `min` and `max` value. The reason is that multi colors LUTs only have a limited amount of colors, e.g. 256 different colors. For instance, if you have an image that contains a pixel with a value of 300 it is not immediately obvious which color it should get; the `min` and `max` settings allow you to configure how to map your larger value range into a limited amount of colors.
