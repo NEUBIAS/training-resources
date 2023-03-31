@@ -57,6 +57,7 @@ TODO
 3. [Image data types](https://neubias.github.io/training-resources/datatypes/index.html)
 4. [Image file formats](https://neubias.github.io/training-resources/image_file_formats/index.html)
 	- [PR](https://github.com/NEUBIAS/training-resources/pull/462)
+	- TODO add activity that explains our `open_tiff` function (BO)
 5. [Volume slicing](https://neubias.github.io/training-resources/volume_slicing/index.html)
 	- [issue](https://github.com/NEUBIAS/training-resources/issues/409)
 	- we could move some of this content to the `digital image basics`
