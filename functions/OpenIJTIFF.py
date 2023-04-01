@@ -118,4 +118,3 @@ class IJTIFF:
         self.array, self.axes, self.scales, self.units = open_ij_tiff(fpath)
 
 
-
