@@ -1,21 +1,26 @@
 import tifffile, requests, os, tempfile
 
+from pathlib import Path
+
 def get_ijtiff(fpath):
     """ Return a tifffile.TiffFile object from a tiff file.
         If fpath is a url, first download the file to a local temporary path.
         Throw an error if the file is not an ImageJ-created tiff.
-    """
-    
+    """    
     fname = fpath.rsplit('/')[-1]
-    if fpath.startswith('https:') or fpath.startswith('http:'): # then fpath is a url, download it to the current directory
-        with tempfile.TemporaryDirectory() as tempdir:
-            localpath = os.path.join(tempdir, fname)
-            r = requests.get(fpath)
-            with open(os.path.join(localpath), "wb") as f:
-                f.write(r.content)
-            tiff = tifffile.TiffFile(localpath)
-    else:
-        tiff = tifffile.TiffFile(fpath)
+    try:
+        if fpath.startswith('https:') or fpath.startswith('http:'): # then fpath is a url, download it to the current directory
+            with tempfile.TemporaryDirectory() as tempdir:
+                localpath = Path(os.path.join(tempdir, fname))
+                r = requests.get(fpath)
+                with open(os.path.join(localpath), "wb") as f:
+                    f.write(r.content)
+                tiff = tifffile.TiffFile(localpath)
+        else:
+            tiff = tifffile.TiffFile(fpath)
+    except:
+        ### In Windows, reading from the tempfile might produce a false error. 
+        pass
     if not tiff.is_imagej:
         raise TypeError("This module is intended to parse from ImageJ-created tiff files.\n"
                         "This tiff file was apparently not created by ImageJ.")
