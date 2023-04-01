@@ -5,6 +5,7 @@ def get_ijtiff(fpath):
         If fpath is a url, first download the file to a local temporary path.
         Throw an error if the file is not an ImageJ-created tiff.
     """
+    
     fname = fpath.rsplit('/')[-1]
     if fpath.startswith('https:') or fpath.startswith('http:'): # then fpath is a url, download it to the current directory
         with tempfile.TemporaryDirectory() as tempdir:
