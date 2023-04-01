@@ -7,8 +7,9 @@ def get_ijtiff(fpath):
     """ Return a tifffile.TiffFile object from a tiff file.
         If fpath is a url, first download the file to a local temporary path.
         Throw an error if the file is not an ImageJ-created tiff.
-    """    
+    """
     fname = fpath.rsplit('/')[-1]
+    tiff = None
     try:
         if fpath.startswith('https:') or fpath.startswith('http:'): # then fpath is a url, download it to the current directory
             with tempfile.TemporaryDirectory() as tempdir:
@@ -20,11 +21,12 @@ def get_ijtiff(fpath):
         else:
             tiff = tifffile.TiffFile(fpath)
     except:
-        ### In Windows, reading from the tempfile might produce a false error. 
-        pass
+        if tiff is None:
+            raise ValueError("tiff file could not be found in the given path:\n{}".format(fpath))
+        else:
+            print('Warning: reading the tiff file from tempdir sometimes produces an error (especially in Windows), which can be ignored.')
     if not tiff.is_imagej:
-        raise TypeError("This module is intended to parse from ImageJ-created tiff files.\n"
-                        "This tiff file was apparently not created by ImageJ.")
+        raise TypeError("This module is intended to parse from ImageJ-created tiff files. This tiff file was apparently not created by ImageJ.")
     return tiff
 
 def open_ij_tiff(fpath):
@@ -116,5 +118,3 @@ def open_ij_tiff(fpath):
 class IJTIFF:
     def __init__(self, fpath):
         self.array, self.axes, self.scales, self.units = open_ij_tiff(fpath)
-
-
