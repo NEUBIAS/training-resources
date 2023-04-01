@@ -1,6 +1,7 @@
 import tifffile, requests, os, tempfile
-
 from pathlib import Path
+
+
 
 def get_ijtiff(fpath):
     """ Return a tifffile.TiffFile object from a tiff file.
