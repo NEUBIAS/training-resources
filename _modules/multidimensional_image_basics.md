@@ -1,5 +1,5 @@
 ---
-title:     Multidimensional image basics
+title:     N-dimensional images
 layout:    module
 prerequisites:
   - "[Basic properties of images and pixels](../pixels)"
@@ -15,35 +15,18 @@ motivation: |
 
 concept_map: >
   graph TD
+    XY("2D(XY)-image") --> ND("N-dimensional image")
     S("Z-slices") --> ND("N-dimensional image")
     C("Channels") --> ND("N-dimensional image")
     T("Time Points") --> ND("N-dimensional image")
 
 figure: /figures/multi_dimensional_image.png
-figure_legend: Schematic representation of 2D, 3D, and 5D image data. 2D images are made up of tiny squares called pixels, whereas 3D images are made up of cubes called voxels. Pixels and voxels are not necessarily isotropic, as shown here by squares versus rectangles. 
+figure_legend: Schematic representation of 2D, 3D, and 5D image data. 2D images are made up of tiny squares called pixels, whereas 3D images are made up of cubes called voxels.
 
-activity_preface: |
-  - Open the 3D image [xyz_8bit__chromsomes.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit__chromosomes.tif).
-    - The data shows chromosomes wrapped around a spherical(!) nucleus; i.e. the data should look similar from all directions.
-    - View (slice) the data in XY, YZ, and XZ.
-    - Observe that the image is calibrated.
-    - Observe that the rendering in XZ and YZ is deformed with without taking the calibration into account.
-  - Open the 3D multi-channel image [xyzc_8bit_beads_p_open.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyzc_8bit_beads_p_open.tif).
-    - Explore different options for rendering the channel dimension (e.g. gray-scale, color, composite).
-    - View the properties of this image. Are the XYZ dimensions isotropic or anisotropic?
-    - Subset the data such that a new image is created that contains only the green channel.
-    - Reslice the green channel, such that the bead is shown from the side.
-      - Explore different options of dealing with the anisotropy.
-
-activities:
-  - ["ImageJ GUI", "volume_slicing/activities/volume_slicing_gui.md", "markdown"]
-  - ["ImageJ Macro", "volume_slicing/activities/volume_slicing_macro.ijm", "IJ macro"]
-  - ["ImageJ Jython", "volume_slicing/activities/volume_slicing_jython.py", "Jython"]
-
-exercises:
-  - ["ImageJ GUI", "volume_slicing/exercises/volume_slicing_gui.md"]
-  - ["ImageJ Macro", "volume_slicing/exercises/volume_slicing_macro.md"]
-  - ["ImageJ Jython", "volume_slicing/exercises/volume_slicing_jython.md"]
+multiactivities:
+  - ["multidimensional_images/multidimensional_images_act1.md", [["ImageJ GUI", "multidimensional_images/multidimensional_images_act1_imagejgui.md", "markdown"], ['Napari GUI/Python', multidimensional_images/multidimensional_images_act1_napari.md]]]
+  - ["multidimensional_images/multidimensional_images_act2.md", [["ImageJ GUI", "multidimensional_images/multidimensional_images_act2_imagejgui.md", "markdown"], ['Napari GUI/Python', multidimensional_images/multidimensional_images_act2_napari.md]]]
+  - ["multidimensional_images/multidimensional_images_act3.md", [["ImageJ GUI", "multidimensional_images/multidimensional_images_act3_imagejgui.md", "markdown"], ['Napari GUI/Python', multidimensional_images/multidimensional_images_act3_napari.md]]]
 
 assessment: >
 
@@ -59,24 +42,15 @@ assessment: >
 
   ### True or False
     1. Isotropic image data has voxels of equal XYZ dimensions.
-    2. Slicing is the process of sectioning the data, that has more than two dimensions, along defined axes and dimensions.
-    3. Reslicing is a term used to indicate repeated slicing.
-    4. Images can have 5 dimensions.
+    2. Image data can have up to 5 dimensions.
 
     > ## Solution
     > 1. **True**
-    > 2. **True**
-    > 3. **False** - Typically, the term reslicing refers to resampling volumetric data from a different direction, such that the resulting image stack is a rotated version of the original stack.
-    > 4. **True** - If we denote width by `x`, height by `y`, depth by `z`, time by `t` and channel by `c`, we could have images with dimensions such as: [`xy` -> 2D], [`xyz` -> 3D, `xyt` -> 3D: 2D time-lapse, `xyc` -> 3D: 2D multi-channel], or [`xyzt` -> 4D: 3D time-lapse, `xyzc` -> 4D: 3D multi-channel], or [`xyztc` -> 5D: 3D time-lapse  multi-channel]
+    > 4. **False** - While the dimensions X, Y, Z, channel and time are the most common dimensions, there is nothing that prevents an image from having additional dimensions. In medical imaging, additional dimensions can be used to hold information such as the age of a patient, or physiological parameters like heart rate. In astronomy, images of the universe may also have additional dimensions, such as light polarization.
     {: .solution}
 
 learn_next:
   - "[Projections of 3D data](../projections)"
+  - "[3D slicing](../volume_slicing)"
   - "[Volume viewer](../volume_viewer)"
-
-external_links:
-  - "[ImageJ z-functions](https://imagej.net/imaging/z-functions)"
 ---
-
-
-The word 'slice' is often used in different ways. The different 'layers' in the z-dimension are referred to as z-slices. Slicing (or subsetting) image data means that part of the image data is selected and 'sliced out' to form a new image. This can include selecting one or more dimensions, or just part of a dimension, for example selecting slice 6-12 of the Z-dimension. You can also rotate the data in one of the spatial dimensions and resample the data set to see that data from a different angle, which is sometimes referred to as 'reslicing'.
