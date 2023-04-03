@@ -114,6 +114,7 @@ def open_ij_tiff(fpath):
     return image_array, ax_names, ax_scales, ax_units
 
 class IJTIFF:
+    # TODO: extend this class with update and write methods.
     def __init__(self, read_path = None):
         if read_path is not None:
             self.read(read_path)
