@@ -105,12 +105,6 @@ def open_ij_tiff(fpath):
         voxel_units['x'] = 'Pixel'
     ax_scales = [voxel_sizes[i] for i in ax_names.lower()]
     ax_units = [voxel_units[i] for i in ax_names.lower()]
-    out = {
-        'array': image_array,
-        'axes': ax_names,
-        'scales': ax_scales,
-        'units': ax_units
-    }
     return image_array, ax_names, ax_scales, ax_units
 
 class IJTIFF:
