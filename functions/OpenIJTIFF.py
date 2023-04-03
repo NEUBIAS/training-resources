@@ -23,8 +23,6 @@ def get_ijtiff(fpath):
     except:
         if tiff is None:
             raise ValueError("tiff file could not be found in the given path:\n{}".format(fpath))
-        else:
-            print('Warning: reading the tiff file from tempdir sometimes produces an error (especially in Windows), which can be ignored.')
     if not tiff.is_imagej:
         raise TypeError("This module is intended to parse from ImageJ-created tiff files. This tiff file was apparently not created by ImageJ.")
     return tiff
@@ -116,5 +114,11 @@ def open_ij_tiff(fpath):
     return image_array, ax_names, ax_scales, ax_units
 
 class IJTIFF:
-    def __init__(self, fpath):
-        self.array, self.axes, self.scales, self.units = open_ij_tiff(fpath)
+    # TODO: extend this class with update and write methods.
+    def __init__(self, read_path = None):
+        if read_path is not None:
+            self.read(read_path)
+    def read(self, read_path):
+        self.array, self.axes, self.scales, self.units = open_ij_tiff(read_path)
+        self.scales_dict = {key: self.scales[i] for i, key in enumerate(self.axes)}
+        self.units_dict = {key: self.units[i] for i, key in enumerate(self.axes)}
