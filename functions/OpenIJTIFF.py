@@ -121,4 +121,4 @@ class IJTIFF:
     def read(self, read_path):
         self.array, self.axes, self.scales, self.units = open_ij_tiff(read_path)
         self.scales_dict = {key: self.scales[i] for i, key in enumerate(self.axes)}
-        self.units_dict = {key: self.units[i] for i, key in enumerate(self.units)}
+        self.units_dict = {key: self.units[i] for i, key in enumerate(self.axes)}
