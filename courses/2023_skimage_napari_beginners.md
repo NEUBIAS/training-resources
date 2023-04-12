@@ -45,6 +45,13 @@ TODO
 - MPI-NAT
 - FMI-Basel??
 
+## Teaching tips
+
+Spent more time on motivating why one learns something. 
+
+- Each module contains a "Motivation" section. Make sure to go through this and ask for questions!
+- For image analysis, consider starting by giving an overview by means of a workflow [such as this one](https://neubias.github.io/training-resources/workflow_segment_2d_nuclei_measure_shape/index.html); explain the biological context.
+
 ## Content
 
 ### Image inspection basics
