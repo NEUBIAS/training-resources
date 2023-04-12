@@ -50,7 +50,8 @@ TODO
 Spent more time on motivating why one learns something. 
 
 - Each module contains a "Motivation" section. Make sure to go through this and ask for questions!
-- For image analysis, consider starting by giving an overview by means of a workflow [such as this one](https://neubias.github.io/training-resources/workflow_segment_2d_nuclei_measure_shape/index.html); explain the biological context.
+- For Image Analysis, consider starting by giving an overview by means of a workflow [such as this one](https://neubias.github.io/training-resources/workflow_segment_2d_nuclei_measure_shape/index.html); explain the biological context, and then teach the individual steps, the complete workflow could be homework.
+- Maybe we also have such an idea for the Image Inspection teaching? A biologically motivated workflow that would require a sequence of image inspection skills to ve executed?! Maybe starting from some raw data and creating a visualisation to quantitatively compare some images, along with a folder of TIFF images with proper metadata and file and folder names?
 
 ## Content
 
