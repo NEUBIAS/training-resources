@@ -1,10 +1,11 @@
+import numpy as np
 import tifffile, requests, os, tempfile
 from pathlib import Path
 
 
 
-def get_ijtiff(fpath):
-    """ Return a tifffile.TiffFile object from a tiff file.
+def get_ijtiff(fpath: str):
+    """ Returns a tifffile.TiffFile object from a tiff file.
         If fpath is a url, first download the file to a local temporary path.
         Throw an error if the file is not an ImageJ-created tiff.
     """
@@ -27,17 +28,22 @@ def get_ijtiff(fpath):
         raise TypeError("This module is intended to parse from ImageJ-created tiff files. This tiff file was apparently not created by ImageJ.")
     return tiff
 
-def open_ij_tiff(fpath):
+def open_ij_tiff(fpath: [str, Path],
+                 fetch_extra_metadata: bool = False # Should be true to extract any ImageJ display metadata from the tiff file.
+                 ):
     """
     What it does:
         Imports the binary data and the metadata from an ImageJ-created tiff file.
     Takes:
-        fpath: either a local path or url to a tiff file.
+        fpath: Either a local path or url to a tiff file.
+        fetch_extra_metadata: Whether to extract any ImageJ display metadata from the input tiff file.
+                              If False, only the pixel calibration metadata are extracted.
     Returns
         image_array: A numpy array with the binary image data
         ax_names: The available axes, can be any combination of t, c, z, y, x
         ax_scales: Voxel scales along each dimension. Float for t, z, y and x and 'na' for channel.
         ax_units: Voxel scale units along each dimension ('na' for channel)
+        extra_metadata (returned only if fetch_extra_metadata is True): Extra ImageJ-specific metadata, such as LUTs, brightness-contrast adjustments, etc.
     """
     ############################# download the image if path is a url ###############################
     tiff = get_ijtiff(fpath)
@@ -105,14 +111,66 @@ def open_ij_tiff(fpath):
         voxel_units['x'] = 'Pixel'
     ax_scales = [voxel_sizes[i] for i in ax_names.lower()]
     ax_units = [voxel_units[i] for i in ax_names.lower()]
-    return image_array, ax_names, ax_scales, ax_units
+    ################### Return either with or without extra metadata #################################
+    if fetch_extra_metadata:
+        extra_metadata = {}
+        extra_metadata['dtype'] = tiff.pages[0].dtype
+        extra_metadata['bitspersample'] = tiff.pages[0].bitspersample
+        for key in image_metadata:
+            if key not in ['spacing', 'unit', 'finterval', 'fps']:
+                extra_metadata[key] = image_metadata[key]
+        return image_array, ax_names, ax_scales, ax_units, extra_metadata
+    else:
+        return image_array, ax_names, ax_scales, ax_units
 
-class IJTIFF:
-    # TODO: extend this class with update and write methods.
-    def __init__(self, read_path = None):
-        if read_path is not None:
-            self.read(read_path)
-    def read(self, read_path):
-        self.array, self.axes, self.scales, self.units = open_ij_tiff(read_path)
-        self.scales_dict = {key: self.scales[i] for i, key in enumerate(self.axes)}
-        self.units_dict = {key: self.units[i] for i, key in enumerate(self.axes)}
+
+def save_ij_tiff(tiffdest: [str, Path],  ### make sure it doesn't save nonexistent frame intervals
+                 image_array: np.ndarray,
+                 ax_names: list,
+                 ax_scales: list,
+                 ax_units: list,
+                 extra_metadata: dict = None # Contains further metadata, such as display metadata. This can be used, for instance, to update, or keep the existing display information in the tiff metadata.
+                 ):
+
+    metadata = {
+        'axes': ax_names,
+        }
+
+    if 'Y' in ax_names:
+        y_idx = ax_names.index('Y')
+    if 'X' in ax_names:
+        x_idx = ax_names.index('X')
+        metadata['unit'] = ax_units[x_idx]
+    if 'Z' in ax_names:
+        z_idx = ax_names.index('Z')
+        if ax_units[z_idx] != 'Slice': ### TODO: This checkpoint might be improved
+            metadata['spacing'] = ax_scales[z_idx]
+    if 'T' in ax_names:
+        t_idx = ax_names.index('T')
+        if ax_units[t_idx] != 'Frame': ## TODO: This checkpoint might be improved
+            metadata['finterval'] = ax_scales[t_idx]
+        if (ax_units[t_idx] == 'sec') | (ax_units[t_idx] == 's'):
+            metadata['fps'] = image_array.shape[t_idx] / ax_scales[t_idx]
+
+    if extra_metadata is not None:
+        assert isinstance(extra_metadata, type({})), " 'extra_metadata' must be of type 'dict' "
+        for key in extra_metadata:
+            if key not in [ 'images', 'slices', 'frames', 'hyperstack', 'bitspersample' ]:
+                metadata[key] = extra_metadata[key]
+        image_array = image_array.astype(metadata['dtype'])
+        bitspersample = ''.join(tuple([i for i in str(metadata['dtype']) if i.isnumeric()]))
+        if len(bitspersample) > 0:
+            metadata['bitspersample'] = int(bitspersample)
+
+    tifffile.imwrite(
+        tiffdest,
+        image_array,
+        imagej = True,
+        dtype = metadata['dtype'],
+        resolution = (1 / ax_scales[x_idx], 1 / ax_scales[y_idx]),
+        metadata = metadata
+        )
+    return metadata
+
+
+
