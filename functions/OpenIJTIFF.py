@@ -4,7 +4,7 @@ from pathlib import Path
 
 
 
-def get_ijtiff(fpath: str):
+def get_ijtiff(fpath: [str, Path]):
     """ Returns a tifffile.TiffFile object from a tiff file.
         If fpath is a url, first download the file to a local temporary path.
         Throw an error if the file is not an ImageJ-created tiff.
