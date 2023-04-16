@@ -161,6 +161,8 @@ def save_ij_tiff(tiffdest: [str, Path],
         bitspersample = ''.join(tuple([i for i in str(metadata['dtype']) if i.isnumeric()])) ### TODO: This can be improved
         if len(bitspersample) > 0:
             metadata['bitspersample'] = int(bitspersample)
+    else:
+        metadata['dtype'] = image_array.dtype
 
     tifffile.imwrite(
         tiffdest,
