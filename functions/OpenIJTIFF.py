@@ -124,7 +124,7 @@ def open_ij_tiff(fpath: [str, Path],
         return image_array, ax_names, ax_scales, ax_units
 
 
-def save_ij_tiff(tiffdest: [str, Path],  ### make sure it doesn't save nonexistent frame intervals
+def save_ij_tiff(tiffdest: [str, Path],
                  image_array: np.ndarray,
                  ax_names: list,
                  ax_scales: list,
@@ -158,7 +158,7 @@ def save_ij_tiff(tiffdest: [str, Path],  ### make sure it doesn't save nonexiste
             if key not in [ 'images', 'slices', 'frames', 'hyperstack', 'bitspersample' ]:
                 metadata[key] = extra_metadata[key]
         image_array = image_array.astype(metadata['dtype'])
-        bitspersample = ''.join(tuple([i for i in str(metadata['dtype']) if i.isnumeric()]))
+        bitspersample = ''.join(tuple([i for i in str(metadata['dtype']) if i.isnumeric()])) ### TODO: This can be improved
         if len(bitspersample) > 0:
             metadata['bitspersample'] = int(bitspersample)
 
