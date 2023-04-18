@@ -2,7 +2,6 @@
 
 ## Why take this course
 
-
 Fiji and the ImageJ macro language have served the life sciences for many years very well in terms of bioimage data inspection and analysis. However, there are some downsides to this ecosystem. One issue being that the ImageJ macro language is very specific to ImageJ and will not help you anywhere else. In addition, the ImageJ macro language misses many features of standard programming languages. Another issue is that many new image analysis algorithms, especially deep-learning based, are implemented in python, which is outside the Java based Fiji eco-system.
 
 Taking this course will introduce you to using python for image analysis. This is useful because there is an already large and still growing number of python libraries for image analysis that you will get access to. In addition, learning python is useful in general as it currently is the most popular language for scientific computing. Moreover, since a few years a python based image visualisation tool, namely napari, exists that allows powerful and flexible n-dimensional image data visualisation, including overlay of segmentation and annotation layers.
@@ -25,11 +24,28 @@ Such knowledge could be acquired for example here:
 
 ## Dates
 
-2023 June 14, 15, 21, 22
+#### Installation day
 
-## Location
+Each institute decides on their own.
 
-TODO
+#### Course days
+
+2023 June 6, 7, 13
+
+## Schedule
+
+Mornings:
+- 10:00 - 11:00 Lecture and demo
+- 11:00 - 11:15 Break
+- 11:15 - 12:00 Lecture and demo
+
+Afternoons:
+- 14:00 - 16:00 Hands-on
+
+## Locations
+
+Mornings: Zoom
+Afternoons: Room at respective institute
 
 ## Trainers
 
@@ -38,12 +54,20 @@ TODO
 - Antonio Politi
 - Tim-Oliver Buchholz
 
-
 ## Audience
 
-- EMBL internal (all sites)
-- MPI-NAT
-- FMI-Basel??
+Number of participants: Each institute decides for themselves.
+
+- EMBL internal (Heidelberg (Tischi) and Spain (Nicola) and Ask other sites)
+- MPI-NAT 
+- FMI-Basel
+
+## Compute resources
+
+Own computer or:
+
+- EMBL: Jupyter Desktop (download all course material before) or own computer
+- EMBL: BAND ??!! 
 
 ## Teaching tips
 
@@ -59,25 +83,25 @@ Spent more time on motivating why one learns something.
 
 1. [Digital image basics](https://neubias.github.io/training-resources/pixels/index.html)
 	- [issue](https://github.com/NEUBIAS/training-resources/issues/453)
-1. [Lookup tables](https://neubias.github.io/training-resources/lut/index.html)
+2. [Lookup tables](https://neubias.github.io/training-resources/lut/index.html)
     - TODO Multiactivity
     - TODO Exercise skimage napari
 3. [Spatial image calibration](https://neubias.github.io/training-resources/spatial_calibration/index.html)
 	- TODO implement activity with new loading function (NG)
 4. [Image data types](https://neubias.github.io/training-resources/datatypes/index.html) DONE
-5. [Image file formats](https://neubias.github.io/training-resources/image_file_formats/index.html)
+5. REMOVE? [Image file formats](https://neubias.github.io/training-resources/image_file_formats/index.html)
 	- [PR #462](https://github.com/NEUBIAS/training-resources/pull/462)
 	- TODO add activity that explains our `open_tiff` function (BO)
-6. [Volume slicing](https://neubias.github.io/training-resources/volume_slicing/index.html)
+6. REMOVE? [Volume slicing](https://neubias.github.io/training-resources/volume_slicing/index.html)
 	- [issue](https://github.com/NEUBIAS/training-resources/issues/409)
 	- we could move some of this content to the `digital image basics`
-7. [Image projections](https://neubias.github.io/training-resources/projections/index.html)
-8. [Volume rendering](https://neubias.github.io/training-resources/volume_viewer/index.html)
+7. KEEP? [Image projections](https://neubias.github.io/training-resources/projections/index.html)
+8. REMOVE? [Volume rendering](https://neubias.github.io/training-resources/volume_viewer/index.html)
 
 ### Image analysis basics
 
-1. [Segmentation](https://neubias.github.io/training-resources/segmentation/index.html) DONE. Just generic concept.
-1. [Manual segmentation](https://neubias.github.io/training-resources/manual_segmentation/index.html)
+1. EXPLANATION ONLY:[Segmentation](https://neubias.github.io/training-resources/segmentation/index.html) DONE. Just generic concept.
+1. REMOVE? [Manual segmentation](https://neubias.github.io/training-resources/manual_segmentation/index.html)
 	- TODO work on Napari 2D/3D manual segmentation from scratch (AP) 
 	- Add exercise for correction of labels (AP)
 1. [Thresholding (Foreground background segmentation)](https://neubias.github.io/training-resources/binarization/index.html) DONE
