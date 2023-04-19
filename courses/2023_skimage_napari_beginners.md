@@ -37,17 +37,14 @@ Each institute decides on their own.
 ## Schedule
 
 Mornings:
+- Location: Zoom
 - 10:00 - 11:00 Lecture and demo
 - 11:00 - 11:15 Break
 - 11:15 - 12:00 Lecture and demo
 
 Afternoons:
+- Location: In person at all participating institutes
 - 14:00 - 16:00 Hands-on
-
-## Locations
-
-Mornings: Zoom
-Afternoons: Room at respective institute
 
 ## Trainers
 
