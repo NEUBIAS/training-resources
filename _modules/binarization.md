@@ -23,7 +23,7 @@ concept_map: >
     BI --- FG("Foreground pixels (true, 1, 255)")
 
 figure: /figures/binarization.png
-figure_legend: Image before and after applying a threshold of 75 gray values.
+figure_legend: Image before and after applying a threshold of 73 gray values.
 
 multiactivities:
   - ["binarization/binarization_act1.md", [["ImageJ GUI", "binarization/binarization_act1_imagejgui.md", "markdown"], 
