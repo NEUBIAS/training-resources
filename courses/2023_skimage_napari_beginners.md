@@ -53,6 +53,12 @@ Afternoons:
 - Antonio Politi
 - Tim-Oliver Buchholz
 
+In person helpers EMBL Heidelberg:
+
+- Arif Khan
+- Sebastian Gonzalez
+- Nima Vakili
+
 ## Audience
 
 Number of participants: Each institute decides for themselves.
