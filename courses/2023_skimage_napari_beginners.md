@@ -11,11 +11,11 @@ Taking this course will introduce you to using python for image analysis. This i
 Basic knowledge of the python programming language.
 
 For example you should know how to
-- use conda environments
+- use conda environments ???
 - assign variables
 - call functions
-- use arrays
-- use a Jupyter Notebook to run some code
+- allocate and index simple numpy arrays
+- use a Jupyter Notebook to run some python code
 
 Such knowledge could be acquired for example here:
 
@@ -23,6 +23,8 @@ Such knowledge could be acquired for example here:
 - https://wiki.python.org/moin/BeginnersGuide/Programmers, this is an extensive list of sites for learning python
 
 If you want to use your own computer for the course you need to perform the [tool installation](https://neubias.github.io/training-resources/tool_installation/index.html). Go to the `Show Activity` drop down menu and follow the instructions in `install skimage napari`. Test your installation. 
+
+In addition, we are working on providing you with cloud computers where all software is preinstalled.
 
 ## Dates
 
@@ -36,15 +38,13 @@ Each institute decides on their own.
 
 ## Schedule
 
-Mornings:
-- Location: Zoom
+Morning sessions (zoom lectures, zoom link will be announced)
 - 10:00 - 11:00 Lecture and demo
 - 11:00 - 11:15 Break
 - 11:15 - 12:00 Lecture and demo
 
-Afternoons:
-- Location: In person at all participating institutes
-- 14:00 - 16:00 Hands-on
+Afternoon sessions (in person at your institute, rooms will be announced)
+- 14:00 - 16:00 Hands-on practicals
 
 ## Trainers
 
@@ -52,20 +52,9 @@ Afternoons:
 - Christian Tischer
 - Antonio Politi
 - Tim-Oliver Buchholz
-
-In person helpers EMBL Heidelberg:
-
 - Arif Khan
 - Sebastian Gonzalez
 - Nima Vakili
-
-## Audience
-
-Number of participants: Each institute decides for themselves.
-
-- EMBL internal (Heidelberg (Tischi) and Spain (Nicola) and Ask other sites)
-- MPI-NAT 
-- FMI-Basel
 
 ## Compute resources
 
@@ -75,7 +64,7 @@ Own computer or:
 - EMBL: BAND ??!!
 - MPI-NAT: VMs 
 
-## Teaching tips
+## Teaching tips ??? REMOVE
 
 Spent more time on motivating why one learns something. 
 
