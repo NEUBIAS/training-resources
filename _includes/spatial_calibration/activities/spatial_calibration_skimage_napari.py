@@ -5,8 +5,7 @@
 
 #%%
 # Import python packages.
-import os, re, requests
-from OpenIJTIFF import open_ij_tiff
+from OpenIJTIFF import open_ij_tiff, save_ij_tiff
 from skimage.io import imsave
 import numpy as np
 from napari.viewer import Viewer
@@ -26,23 +25,22 @@ print(units)
 napari_viewer = Viewer()
 napari_viewer.add_image(image, scale=voxel_size_input)
 
+# using the horthogonal views button (change order of visible axis), 
+# inspect the volume and observe that the voxel size makes sense.
+# use 3D viewer button to inspect data in 3D.
+
 #%%
 # update voxel size to some other values
 # change voxel size
 voxel_size_output = [s*2. for s in voxel_size_input]
 print('Output voxel size:', voxel_size_output)
 
-# resave the image including all metadata
-imsave(
+save_ij_tiff(
     'resaved_image.tif',
-    image,
-    imagej=True,
-    metadata={
-        'spacing':voxel_size_output[0],
-        'unit':'um',
-        'axes':'ZYX',
-    },
-    resolution=(1./voxel_size_output[1], 1./voxel_size_output[2])
+     image,
+     axes,
+     voxel_size_output,
+     units
 )
 
 #%%
@@ -50,9 +48,9 @@ imsave(
 napari_viewer = Viewer()
 napari_viewer.add_image(image, scale=voxel_size_output)
 
-# using the horthogonal views button (change order of visible axis), 
-# inspect the volume and observe that the voxel size makes sense.
-# use 3D viewer button to inspect data in 3D.
+# use the "New points layer button" to create a new point layer and name it 'points2D'
+# use "Add points" to create 2 points in the 2D slice
+# do the same for points in 3D in a separate layer called 'points3D'
 
 #%%
 # extract point coordinates
@@ -61,7 +59,7 @@ points2d = napari_viewer.layers[layer_names.index('points2D')].data
 points3d = napari_viewer.layers[layer_names.index('points3D')].data
 
 #%%
-# compute distance between points in voxel indices
+# compute distance between 2D points in voxel indices
 dist_2d_pxl = np.sqrt(((points2d[1]-points2d[0])**2).sum())
 print('Distance in pixels:',dist_2d_pxl)
 
@@ -76,11 +74,11 @@ print('Distance in um:',dist_2d_cal)
 print('Distance in um:',dist_2d_pxl * voxel_size_input[1])
 
 #%%
-# compute distance between points in voxel indices
+# compute distance between 3D points in voxel indices
 dist_3d_pxl = np.sqrt(((points3d[1]-points3d[0])**2).sum())
 print('Distance in pixels:',dist_3d_pxl)
 
-# Appreciate that this distance doesn't make any physical sense!
+# Appreciate that this distance doesn't make any physical sense due to the anisotropy of the image!
 # Instead, one should always measure distances between points using calibration!
 points3d_cal = np.stack([p*voxel_size_input for p in points3d])
 
