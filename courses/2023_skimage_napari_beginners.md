@@ -118,11 +118,11 @@ Spent more time on motivating why one learns something.
 8. [Median filter](https://neubias.github.io/training-resources/median_filter/index.html)
 	- TODO create skimage part (DK)
 9. [Object intensity measurements](https://neubias.github.io/training-resources/measure_intensities/index.html)
-	- TODO create skimage-image part
+	- TODO create skimage-image part (NG)
 10. [Local background subtraction](https://neubias.github.io/training-resources/local_background_correction/index.html)
 	- TODO create skimage part (NV)
 11. [Morphological filters](https://neubias.github.io/training-resources/filter_morphological/index.html)
-	- TODO create skimage-image  
+	- TODO create skimage-image (NG)
 
 ### Maybe
 
