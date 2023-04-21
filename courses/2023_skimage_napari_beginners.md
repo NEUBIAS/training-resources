@@ -57,6 +57,7 @@ Afternoon sessions (in person at your institute, rooms will be announced)
 - Arif Khan
 - Sebastian Gonzalez
 - Nima Vakili
+- Luca Rappez
 
 ## Compute resources
 
