@@ -84,8 +84,7 @@ Spent more time on motivating why one learns something.
 2. [Lookup tables](https://neubias.github.io/training-resources/lut/index.html)
     - TODO Multiactivity
     - TODO Exercise skimage napari
-3. [Spatial image calibration](https://neubias.github.io/training-resources/spatial_calibration/index.html)
-	- TODO implement activity with new loading function (NG)
+3. [Spatial image calibration](https://neubias.github.io/training-resources/spatial_calibration/index.html) DONE
 4. [Image data types](https://neubias.github.io/training-resources/datatypes/index.html) DONE
 5. REMOVE? [Image file formats](https://neubias.github.io/training-resources/image_file_formats/index.html)
 	- [PR #462](https://github.com/NEUBIAS/training-resources/pull/462)
