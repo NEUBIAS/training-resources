@@ -17,6 +17,8 @@ For example you should know how to
 - allocate and index simple numpy arrays
 - use a Jupyter Notebook to run some python code
 
+Concretely, you should be able to run and understand this script: TODO
+
 Such knowledge could be acquired for example here:
 
 - [Software carpentry](https://swcarpentry.github.io/python-novice-inflammation/)
