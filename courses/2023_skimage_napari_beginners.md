@@ -82,8 +82,9 @@ Spent more time on motivating why one learns something.
 1. [Digital image basics](https://neubias.github.io/training-resources/pixels/index.html)
 	- [issue](https://github.com/NEUBIAS/training-resources/issues/453)
 2. [Lookup tables](https://neubias.github.io/training-resources/lut/index.html)
-    - TODO Multiactivity
-    - TODO Exercise skimage napari
+    - Ready to merge  [PR #493](https://github.com/NEUBIAS/training-resources/pull/493)
+    - Done Multiactivity PR 493
+    - Done Exercise skimage napari PR 493
 3. [Spatial image calibration](https://neubias.github.io/training-resources/spatial_calibration/index.html) DONE
 4. [Image data types](https://neubias.github.io/training-resources/datatypes/index.html) DONE
 5. REMOVE? [Image file formats](https://neubias.github.io/training-resources/image_file_formats/index.html)
