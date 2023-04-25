@@ -24,6 +24,10 @@ figure: /figures/lut.png
 figure_legend:
   "Left: Image displayed with a grey LUT and the color mapping as an inset. Right: Image shown with several different LUTs."
 
+multiactivities:
+	- ["lut/lut_act1.md", [["ImageJ GUI", "lut/activities/explore_luts_imagejgui.md", "markdown"], 
+	["ImageJ Macro", "lut/activities/explore_luts_imagejmacro.ijm", "java"], ["skimage napari", "lut/activities/explore_luts_skimage_napari.py", "python"]]
+	
 activity_preface: |
   - Open the image [xy_8bit__nuclei_high_dynamic_range.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_high_dynamic_range.tif)
   - Explore different contrast settings
