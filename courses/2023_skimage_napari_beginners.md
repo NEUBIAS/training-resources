@@ -105,27 +105,28 @@ Spent more time on motivating why one learns something.
 1. REMOVE? [Manual segmentation](https://neubias.github.io/training-resources/manual_segmentation/index.html)
 	- TODO work on Napari 2D/3D manual segmentation from scratch (AP) 
 	- Add exercise for correction of labels (AP)
-1. [Thresholding (Foreground background segmentation)](https://neubias.github.io/training-resources/binarization/index.html) DONE
- 	- Needs merge into master of [PR #313](https://github.com/NEUBIAS/training-resources/pull/313) 
-3. [Automatic thresholding (histogram-based)](https://neubias.github.io/training-resources/auto_threshold/index.html) DONE
-4. [Connected component labeling](https://neubias.github.io/training-resources/connected_components/index.html)
+1. [Thresholding (Foreground background segmentation)](https://neubias.github.io/training-resources/binarization/index.html)
+        - TODO image loading
+3. [Automatic thresholding (histogram-based)](https://neubias.github.io/training-resources/auto_threshold/index.html) 
+        - TODO image loading
+5. [Connected component labeling](https://neubias.github.io/training-resources/connected_components/index.html)
 	- TODO test activity (AP)
 	- TODO exercise (AP)
 	- TODO migrate to new multiactivity (AP)
 	- WIP [PR #485](https://github.com/NEUBIAS/training-resources/pull/485)
-5. [Object shape measurements](https://neubias.github.io/training-resources/measure_shapes/index.html)
+6. [Object shape measurements](https://neubias.github.io/training-resources/measure_shapes/index.html)
 	- TODO create skimage part (DK)
 	- TODO migrate to new multiactivity (DK)
-6. Workflow: [Basic 2D object analysis](https://neubias.github.io/training-resources/workflow_segment_2d_nuclei_measure_shape/index.html) DONE
-7. [Image neighborhood filtering ](https://neubias.github.io/training-resources/filter_neighbourhood/index.html)
+7. Workflow: [Basic 2D object analysis](https://neubias.github.io/training-resources/workflow_segment_2d_nuclei_measure_shape/index.html) DONE
+8. [Image neighborhood filtering ](https://neubias.github.io/training-resources/filter_neighbourhood/index.html)
 	- TODO create skimage part (DK)
-8. [Median filter](https://neubias.github.io/training-resources/median_filter/index.html)
+9. [Median filter](https://neubias.github.io/training-resources/median_filter/index.html)
 	- TODO create skimage part (DK)
-9. [Object intensity measurements](https://neubias.github.io/training-resources/measure_intensities/index.html)
+10. [Object intensity measurements](https://neubias.github.io/training-resources/measure_intensities/index.html)
 	- TODO create skimage-image part (NG)
-10. [Local background subtraction](https://neubias.github.io/training-resources/local_background_correction/index.html)
+11. [Local background subtraction](https://neubias.github.io/training-resources/local_background_correction/index.html)
 	- TODO create skimage part (NV)
-11. [Morphological filters](https://neubias.github.io/training-resources/filter_morphological/index.html)
+12. [Morphological filters](https://neubias.github.io/training-resources/filter_morphological/index.html)
 	- TODO create skimage-image (NG)
 
 ### Maybe
