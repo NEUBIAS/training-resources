@@ -3,13 +3,16 @@
 ## Install them into your activated conda environment.
 ## conda activate skimage-napari-tutorial
 ## pip install napari-plot-profile
-## pip install matplotlib
 #######################################################
 
-from skimage.io import imread
+from load_from_url import load_from_url
+
 # Load the image.
 # You can also load a local image by providing the path to the file.
-image = imread("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_different_intensity.tif")
+image_url = load_from_url("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_different_intensity.tif")
+print(image_url.dims)
+
+image = image_url.data
 
 # Print image shape
 print(image.shape)
@@ -18,13 +21,13 @@ print(image.shape)
 print(image)
 
 # Top left corner is [y, x] = [r, c] = [0, 0]
-print(image[0, 0])
+print(image[0, 0, 0, 0, 0])
 
 # [y, x] = [r, c] = [1, 0]
-print(image[1, 0])
+print(image[0, 0, 0, 1, 0])
 
 # [y, x] = [r, c] = [0, 2]
-print(image[0, 2])
+print(image[0, 0, 0, 0, 2])
 
 from napari.viewer import Viewer
 # Create a new napari viewer.
