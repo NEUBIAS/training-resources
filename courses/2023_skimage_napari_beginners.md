@@ -82,19 +82,22 @@ Spent more time on motivating why one learns something.
 1. [Digital image basics](https://neubias.github.io/training-resources/pixels/index.html)
 	- [issue](https://github.com/NEUBIAS/training-resources/issues/453)
 2. [Lookup tables](https://neubias.github.io/training-resources/lut/index.html)
-    - Ready to merge  [PR #493](https://github.com/NEUBIAS/training-resources/pull/493)
+    - Ready to merge [PR #493](https://github.com/NEUBIAS/training-resources/pull/493)
     - Done Multiactivity PR 493
     - Done Exercise skimage napari PR 493
-3. [Spatial image calibration](https://neubias.github.io/training-resources/spatial_calibration/index.html) DONE
-4. [Image data types](https://neubias.github.io/training-resources/datatypes/index.html) DONE
-5. REMOVE? [Image file formats](https://neubias.github.io/training-resources/image_file_formats/index.html)
+3. [Spatial image calibration](https://neubias.github.io/training-resources/spatial_calibration/index.html) 
+	- TODO Multiactivity
+ 	- TODO Use open_tif function
+6. [Image data types](https://neubias.github.io/training-resources/datatypes/index.html) 
+    - TODO Loading function
+8. REMOVE? [Image file formats](https://neubias.github.io/training-resources/image_file_formats/index.html)
 	- [PR #462](https://github.com/NEUBIAS/training-resources/pull/462)
 	- TODO add activity that explains our `open_tiff` function (BO)
-6. REMOVE? [Volume slicing](https://neubias.github.io/training-resources/volume_slicing/index.html)
+9. REMOVE? [Volume slicing](https://neubias.github.io/training-resources/volume_slicing/index.html)
 	- [issue](https://github.com/NEUBIAS/training-resources/issues/409)
 	- we could move some of this content to the `digital image basics`
-7. KEEP? [Image projections](https://neubias.github.io/training-resources/projections/index.html)
-8. REMOVE? [Volume rendering](https://neubias.github.io/training-resources/volume_viewer/index.html)
+10. KEEP? [Image projections](https://neubias.github.io/training-resources/projections/index.html)
+11. REMOVE? [Volume rendering](https://neubias.github.io/training-resources/volume_viewer/index.html)
 
 ### Image analysis basics
 
