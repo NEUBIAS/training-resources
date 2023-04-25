@@ -12,3 +12,4 @@ figure; imagesc(in_image);
 bin_image = uint8(in_image>= thres_val);
 % Display binary image
 figure; imagesc(bin_image); 
+

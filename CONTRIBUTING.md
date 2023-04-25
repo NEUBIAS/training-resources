@@ -114,7 +114,7 @@ Notes:
 5. The points in "Learn Next" are Markdown links, which should be formed as `[Module Title](modulefilename)`, where the extension has been removed from the filename.
 
 ### Associated files
-
+**THIS HAS NOW CHANGED 2023.04.25 AP. TODO: Review this section** 
 Below is a list of all the other files that you should provide
 to accompany a new module,
 as well as the appropriate location for each

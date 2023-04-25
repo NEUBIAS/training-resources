@@ -1,16 +1,3 @@
-### Image inspection
-
-- Open the files mentioned in the activity:
-  - [Plugins > Bio-Formats > Bio-Format Importer]. 
-    - [X] Display metadata
-    - [X] Display OME-XML Metadata
-      - Should be the same information as above but in XML (sometimes it is more correct than the above)
-- For ICS/IDS and XML/HDF5:
-  - The ICS and XML file are the entry points that should be opened (the respective other file will be read automatically).
-  - Also inspect the ICS and XML files in a simple text editor.
-
-### Image saving
-
 - Saving 8 bit single channel image as TIFF: 
   - Open [xy_8bit__nuclei_PLK1_control.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_PLK1_control.tif) 
   - [Image > Adjust > Brightness/Contrast] such that cells appear saturated
@@ -42,6 +29,4 @@
     - Open with Fiji
       - Pixel values have changed
     - Open with a web browser
-      - Movie plays and looks as when you saved it 
- 
-
+      - Movie plays and looks as when you saved it
