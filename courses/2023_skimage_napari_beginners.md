@@ -86,8 +86,7 @@ Spent more time on motivating why one learns something.
     - Done Multiactivity PR 493
     - Done Exercise skimage napari PR 493
 3. [Spatial image calibration](https://neubias.github.io/training-resources/spatial_calibration/index.html) 
-	- TODO Multiactivity
- 	- TODO Use open_tif function
+	- Ready to review [PR #482](https://github.com/NEUBIAS/training-resources/pull/482)
 6. [Image data types](https://neubias.github.io/training-resources/datatypes/index.html) 
     - TODO Loading function
 8. REMOVE? [Image file formats](https://neubias.github.io/training-resources/image_file_formats/index.html)
