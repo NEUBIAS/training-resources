@@ -103,5 +103,3 @@ fluo_measures_dilated['sum_corr'] = fluo_measures_dilated.mean_corr * fluo_measu
 # Export the data
 fluo_measures_dilated.to_csv("object_measurements_dilated.csv")
 print(fluo_measures_dilated)
-
-# %%
