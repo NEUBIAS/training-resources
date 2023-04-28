@@ -3,8 +3,12 @@ import napari
 viewer = napari.Viewer()
 
 # Read the image
-from skimage.io import imread
-image = imread('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_high_dynamic_range.tif')
+from OpenIJTIFF import open_ij_tiff
+image, axes, scales, units = open_ij_tiff('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_high_dynamic_range.tif')
+
+# Napari GUI:  drag and drop and rename the layer (alternative for loading data)
+# viewer.layers[0].name = 'image_grayscale' #Change name of layer
+# image = viewer.layers['image_grayscale'].data #Get the data as numpy array
 
 # Check image type and values
 import numpy as np
@@ -36,3 +40,4 @@ image_grayscale2 = viewer.layers['image_grayscale2'].data
 print(image_grayscale[0:5,0:5])
 print(image_grayscale2[0:5,0:5])
 print((image_grayscale == image_grayscale2).all())
+
