@@ -25,7 +25,7 @@ print(units)
 napari_viewer = Viewer()
 napari_viewer.add_image(image, scale=voxel_size_input)
 
-# using the horthogonal views button (change order of visible axis), 
+# using the orthogonal views button (change order of visible axis), 
 # inspect the volume and observe that the voxel size makes sense.
 # use 3D viewer button to inspect data in 3D.
 
@@ -48,7 +48,7 @@ save_ij_tiff(
 napari_viewer = Viewer()
 napari_viewer.add_image(image, scale=voxel_size_output)
 
-# use the "New points layer button" to create a new point layer and name it 'points2D'
+# use the "New points layer button" to create a new point layer and name it 'points2D' (double click on the name to rename a layer)
 # use "Add points" to create 2 points in the 2D slice
 # do the same for points in 3D in a separate layer called 'points3D'
 
@@ -66,7 +66,7 @@ print('Distance in pixels:',dist_2d_pxl)
 # calibrate point position
 points2d_cal = np.stack([p*voxel_size_input for p in points2d])
 
-# compute distance between points in um using calibrated, appreciate that these are different values!
+# compute distance between points in um using calibrated point positions, appreciate that these are different values!
 dist_2d_cal = np.sqrt(((points2d_cal[1]-points2d_cal[0])**2).sum())
 print('Distance in um:',dist_2d_cal)
 
@@ -82,6 +82,6 @@ print('Distance in pixels:',dist_3d_pxl)
 # Instead, one should always measure distances between points using calibration!
 points3d_cal = np.stack([p*voxel_size_input for p in points3d])
 
-# compute distance between points in um using calibrated, appreciate that in this case it is important to do the calibration!
+# compute distance between points in um using calibrated point positions, appreciate that in this case it is important to do the calibration!
 dist_3d_cal = np.sqrt(((points3d_cal[1]-points3d_cal[0])**2).sum())
 print('Distance in um:',dist_3d_cal)
