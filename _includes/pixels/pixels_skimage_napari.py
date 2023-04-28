@@ -42,3 +42,7 @@ print(image.min(), image.max())
 import matplotlib.pyplot as plt
 # Use matplotlib to quickly plot a histogram.
 plt.hist(image.flatten(), bins=np.arange(image.min(), image.max() + 1));
+
+# Most frequent pixel value (the mode)
+from scipy.stats import mode
+mode(image, axis = None, keepdims = True)
