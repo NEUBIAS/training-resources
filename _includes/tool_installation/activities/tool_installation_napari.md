@@ -7,7 +7,7 @@
 	* Windows: *Anaconda Prompt (Miniconda3)*, e.g. type `Anaconda` in the search bar
 1. `conda create -n skimage-napari-tutorial -c conda-forge python=3.10 napari=0.4.17 notebook matplotlib`
 1. create a directory called `skimage-napari-tutorial` (e.g. on your Desktop)
-1. download [open_tiff.py](https://neubias.github.io/training-resources/functions/open_tiff.py)
+1. download [open_tiff.py](https://neubias.github.io/training-resources/functions/OpenIJTIFF.py)
 1. move `open_tiff.py` in the `skimage-napari-tutorial` directory
 
 #### Test installation (only once)
