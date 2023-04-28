@@ -6,7 +6,6 @@ from OpenIJTIFF import open_ij_tiff
 image1, axes1, scales1, units1 = open_ij_tiff('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_without_offset.tif')
 image2, axes2, scales2, units2 = open_ij_tiff('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_with_offset.tif')
 
-
 # Inspect image data type and values
 print(image1.dtype, image1.shape, np.min(image1), np.max(image1))
 print(image2.dtype, image2.shape, np.min(image2), np.max(image2))
