@@ -1,10 +1,10 @@
-import numpy as np
-from skimage.io import imread
 import napari
+import numpy as np
+from OpenIJTIFF import open_ij_tiff
 
 # Read the images
-image1 = imread('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_without_offset.tif')
-image2 = imread('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_with_offset.tif')
+image1, axes1, scales1, units1 = open_ij_tiff('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_without_offset.tif')
+image2, axes2, scales2, units2 = open_ij_tiff('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_with_offset.tif')
 
 # Inspect image data type and values
 print(image1.dtype, image1.shape, np.min(image1), np.max(image1))
@@ -25,7 +25,6 @@ max_val = info_type.max
 
 import matplotlib.pyplot as plt
 plt.hist(image1.flatten(), bins=np.arange(max_val+1), log=True);
-
 plt.hist(image2.flatten(), bins=np.arange(max_val+1), log=True);
 
 # Try manual thresholding
@@ -46,16 +45,16 @@ viewer.add_labels(manual2, name='manual_threshold2')
 from skimage.filters import threshold_mean
 
 thr1 = threshold_mean(image1)
-thresholded1 = image1>thr1
 print(thr1)
+auto1 = image1>thr1
 
 thr2 = threshold_mean(image2)
-thresholded2 = image2>thr2
 print(thr2)
+auto2 = image2>thr2
 
 # Visualize auto-thresholded images
-viewer.add_labels(thresholded1, name='threshold_mean1')
-viewer.add_labels(thresholded2, name='threshold_mean2')
+viewer.add_labels(auto1, name='mean_threshold1')
+viewer.add_labels(auto2, name='mean_threshold2')
 
 # Explore other thresholding options
 # Note that there exists a threshold_multiotsu function to handle cases with multi-peaks histograms
