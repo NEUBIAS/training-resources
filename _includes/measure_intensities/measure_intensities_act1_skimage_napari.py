@@ -1,5 +1,5 @@
 # %% [markdown]
-# ### Imports and Napari start up
+# ### Measure intensities (with background subtraction)
 
 # %%
 # Import python packages.
@@ -26,8 +26,8 @@ napari_viewer.add_labels(labels, name='objects')
 # %% [markdown]
 # ## Compute the intensities 
 # ### Background label  
-# We can have an estimation of background intensity with the "0" label
-# We can also manually create in the Viewer an additional label ("3" in this case)
+# We can have an estimation of background intensity with the "0" label.\
+# Here, manually create in the Viewer an additional label ("3" in this case)
 
 # %%
 objects_labels = np.unique(labels.flatten())
@@ -56,6 +56,7 @@ print(fluo_measures)
 # %%
 # Compute background value
 background = fluo_measures[fluo_measures.label==3].intensity_mean.values[0]
+print(background)
 
 # %%
 # Append the background-corrected values to the table
@@ -63,18 +64,24 @@ fluo_measures['intensity_sum'] = fluo_measures.intensity_mean * fluo_measures.ar
 fluo_measures['mean_corr'] = fluo_measures.intensity_mean - background
 fluo_measures['max_corr'] = fluo_measures.intensity_max - background
 fluo_measures['sum_corr'] = fluo_measures.mean_corr * fluo_measures.area
+print(fluo_measures)
 
 # %%
-fluo_measures
+# Save as table
+fluo_measures.to_csv("object_measurements.csv")
+
+# %% [markdown]
+# ### Larger labels for intensitiy measures  
 
 # %%
+# Load the data
 fpath = "https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__h2b_dilate_labels.tif"
 dilated_labels, axes_labels, voxel_labels, units_labels = open_ij_tiff(fpath)
-
 objects_labels = np.unique(dilated_labels.flatten())
 print(objects_labels)
 
 # %%
+# Display the labels 
 napari_viewer.add_labels(dilated_labels, name='dilated_objects')
 
 # %%
@@ -86,27 +93,15 @@ fluo_measures_dilated = pd.DataFrame(
         properties = ('label','area','intensity_mean','intensity_max')
     )
 )
-    
-# Append the background-corrected values to the table using the same background value as before.
+
+# %%
+# Append the background-corrected values to the table using the same background
 fluo_measures_dilated['intensity_sum'] = fluo_measures_dilated.intensity_mean * fluo_measures_dilated.area
 fluo_measures_dilated['mean_corr'] = fluo_measures_dilated.intensity_mean - background
 fluo_measures_dilated['max_corr'] = fluo_measures_dilated.intensity_max - background
 fluo_measures_dilated['sum_corr'] = fluo_measures_dilated.mean_corr * fluo_measures_dilated.area
-
+# Export the data
 fluo_measures_dilated.to_csv("object_measurements_dilated.csv")
+print(fluo_measures_dilated)
 
 # %%
-fluo_measures_dilated
-
-# %%
-# load image from url
-fpath = "https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__embryo_transmission_fluorescence.tif"
-image, axes_image, voxel_image, units_image = open_ij_tiff(fpath)
-print(axes_image)
-print(voxel_image)
-
-# Create a napari_viewer and visualize image and labels
-napari_viewer1 = Viewer()
-napari_viewer1.add_image(image[0], name='brightfield')
-napari_viewer1.add_image(image[1], name='fluo', colormap='magenta', opacity=0.5)
-
