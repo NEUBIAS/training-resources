@@ -51,85 +51,46 @@ Afternoon sessions (in person at your institute, rooms will be announced)
 
 ## Trainers
 
-- Nicola Gritti
-- Christian Tischer
-- Antonio Politi
-- Tim-Oliver Buchholz
-- Arif Khan
-- Sebastian Gonzalez
-- Nima Vakili
-- Luca Rappez
+- Antonio Politi (MPI Multidisciplinary Sciences)
+- Tim-Oliver Buchholz (FMI Basel)
+- Nicola Gritti (EMBL Barcelona)
+- Luca Rappez (EMBL Barcelona)
+- Jonas Albers (EMBL Hamburg)
+- Alvaro Crevenna (EMBL Rome)
+- Daniele Ancora (EMBL Rome)
+- Christian Tischer (EMBL Heidelberg)
+- Arif Khan (EMBL Heidelberg)
+- Sebastian Gonzalez (EMBL Heidelberg)
+- Nima Vakili (EMBL Heidelberg)
 
 ## Compute resources
 
-Own computer or:
+You can use your own computer but we will also try to provide cloud computing with preinstalled software (TBA).
 
-- EMBL: Jupyter Desktop (download all course material before) or own computer
-- EMBL: BAND ??!!
-- MPI-NAT: VMs 
+## Teaching content
 
-## Teaching tips ??? REMOVE
-
-Spent more time on motivating why one learns something. 
-
-- Each module contains a "Motivation" section. Make sure to go through this and ask for questions!
-- For Image Analysis, consider starting by giving an overview by means of a workflow [such as this one](https://neubias.github.io/training-resources/workflow_segment_2d_nuclei_measure_shape/index.html); explain the biological context, and then teach the individual steps, the complete workflow could be homework.
-- Maybe we also have such an idea for the Image Inspection teaching? A biologically motivated workflow that would require a sequence of image inspection skills to ve executed?! Maybe starting from some raw data and creating a visualisation to quantitatively compare some images, along with a folder of TIFF images with proper metadata and file and folder names?
-
-## Content
-
-### Image inspection basics
+### Image inspection basics (day 1)
 
 1. [Digital image basics](https://neubias.github.io/training-resources/pixels/index.html)
-	- [issue](https://github.com/NEUBIAS/training-resources/issues/453)
-2. [Lookup tables](https://neubias.github.io/training-resources/lut/index.html)
-    - Ready to merge [PR #493](https://github.com/NEUBIAS/training-resources/pull/493)
-    - Done Multiactivity PR 493
-    - Done Exercise skimage napari PR 493
-3. [Spatial image calibration](https://neubias.github.io/training-resources/spatial_calibration/index.html) 
-	- Ready to review [PR #482](https://github.com/NEUBIAS/training-resources/pull/482)
-6. [Image data types](https://neubias.github.io/training-resources/datatypes/index.html) 
-    - TODO Loading function
-8. REMOVE? [Image file formats](https://neubias.github.io/training-resources/image_file_formats/index.html)
-	- [PR #462](https://github.com/NEUBIAS/training-resources/pull/462)
-	- TODO add activity that explains our `open_tiff` function (BO)
-9. REMOVE? [Volume slicing](https://neubias.github.io/training-resources/volume_slicing/index.html)
-	- [issue](https://github.com/NEUBIAS/training-resources/issues/409)
-	- we could move some of this content to the `digital image basics`
-10. KEEP? [Image projections](https://neubias.github.io/training-resources/projections/index.html)
-11. REMOVE? [Volume rendering](https://neubias.github.io/training-resources/volume_viewer/index.html)
+1. [Lookup tables](https://neubias.github.io/training-resources/lut/index.html)
+1. [Spatial image calibration](https://neubias.github.io/training-resources/spatial_calibration/index.html) 
+1. [Image data types](https://neubias.github.io/training-resources/datatypes/index.html) 
+1. [Image projections](https://neubias.github.io/training-resources/projections/index.html)
 
-### Image analysis basics
+### Image analysis basics (day 2)
 
-1. EXPLANATION ONLY:[Segmentation](https://neubias.github.io/training-resources/segmentation/index.html) DONE. Just generic concept.
-1. REMOVE? [Manual segmentation](https://neubias.github.io/training-resources/manual_segmentation/index.html)
-	- TODO work on Napari 2D/3D manual segmentation from scratch (AP) 
-	- Add exercise for correction of labels (AP)
-1. [Thresholding (Foreground background segmentation)](https://neubias.github.io/training-resources/binarization/index.html)
-        - TODO image loading
-3. [Automatic thresholding (histogram-based)](https://neubias.github.io/training-resources/auto_threshold/index.html) 
-        - TODO image loading
-5. [Connected component labeling](https://neubias.github.io/training-resources/connected_components/index.html)
-	- TODO test activity (AP)
-	- TODO exercise (AP)
-	- TODO migrate to new multiactivity (AP)
-	- WIP [PR #485](https://github.com/NEUBIAS/training-resources/pull/485)
-6. [Object shape measurements](https://neubias.github.io/training-resources/measure_shapes/index.html)
-	- TODO create skimage part (DK)
-	- TODO migrate to new multiactivity (DK)
-7. Workflow: [Basic 2D object analysis](https://neubias.github.io/training-resources/workflow_segment_2d_nuclei_measure_shape/index.html) DONE
-8. [Image neighborhood filtering ](https://neubias.github.io/training-resources/filter_neighbourhood/index.html)
-	- TODO create skimage part (DK)
-9. [Median filter](https://neubias.github.io/training-resources/median_filter/index.html)
-	- TODO create skimage part (NV)
-10. [Object intensity measurements](https://neubias.github.io/training-resources/measure_intensities/index.html)
-	- TODO create skimage-image part (NG)
-11. [Local background subtraction](https://neubias.github.io/training-resources/local_background_correction/index.html)
-	- TODO create skimage part (NV)
-12. [Morphological filters](https://neubias.github.io/training-resources/filter_morphological/index.html)
-	- TODO create skimage-image (NG)
+1. [Segmentation](https://neubias.github.io/training-resources/segmentation/index.html)
+1. [Manual thresholding](https://neubias.github.io/training-resources/binarization/index.html)
+1. [Automated thresholding](https://neubias.github.io/training-resources/auto_threshold/index.html) 
+1. [Connected component labeling](https://neubias.github.io/training-resources/connected_components/index.html)
+1. [Object shape measurements](https://neubias.github.io/training-resources/measure_shapes/index.html)
+1. [Workflow: Basic 2D object analysis](https://neubias.github.io/training-resources/workflow_segment_2d_nuclei_measure_shape/index.html)
 
-### Maybe
+### Image analysis basics (day 3)
 
-1. Workflow: [2D noisy object segmentation and filtering](https://neubias.github.io/training-resources/workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape/index.html)
-	- TODO skimage part
+1. [Image neighborhood filtering](https://neubias.github.io/training-resources/filter_neighbourhood/index.html)
+1. [Median filter](https://neubias.github.io/training-resources/median_filter/index.html)
+1. [Object intensity measurements](https://neubias.github.io/training-resources/measure_intensities/index.html)
+1. [Local background subtraction](https://neubias.github.io/training-resources/local_background_correction/index.html)
+1. [Morphological filters](https://neubias.github.io/training-resources/filter_morphological/index.html)
+1. [Workflow: 2D noisy object segmentation and filtering](https://neubias.github.io/training-resources/workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape/index.html)
