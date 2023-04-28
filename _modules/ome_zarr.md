@@ -1,10 +1,12 @@
 ---
-title: Access S3 hosted OME-Zarr
+title: OME-Zarr
 layout: module
 tags: ["draft","format"]
 prerequisites:
   - "[Big image data file formats](../big_image_file_formats)"
 objectives:
+  - Understand the OME-Zarr image file format
+  - Read and write OME-Zarr
   - Render cloud (S3 object store) hosted OME-Zarr image data.
   - Access the pixel values of cloud hosted OME-Zarr image data.
 motivation: |
@@ -15,20 +17,11 @@ concept_map: >
     S3("S3 object store") ---|publicly hosts| C("Multi-scale image data chunks")
     C -->|read into| IV("Image viewer")
 
-figure: /figures/ome-zarr-s3.jpg 
-figure_legend: 
+figure: /figures/ome-zarr.png
+figure_legend: The OME-Zarr format consists of a folder structure where image chunks are stored as binary files
 
-activity_preface: |
-  - Visualise S3 hosted OME-Zarr images
-  - Appreciate that the data can be multi-scale and chunked
-  - Example data:
-    - URL: `https://s3.embl.de/i2k-2020/em-raw.ome.zarr`
-      - Content: 3-D EM with label mask
-      - Metadata: [https://s3.embl.de/i2k-2020/platy-raw.ome.zarr/.zattrs](https://s3.embl.de/i2k-2020/platy-raw.ome.zarr/.zattrs)
-
-activities:
-  - ["MoBIE", "ome_zarr_s3/activities/ome_zarr_s3_mobie.md", "markdown"]
-  - ["Neuroglancer", "ome_zarr_s3/activities/ome_zarr_neuroglancer.md", "markdown"]
+multiactivities:
+  - ["ome_zarr/render_ome_zarr_s3.md", [ ["Fiji/MoBIE", "ome_zarr/ome_zarr_s3_mobie.md"], ["Neuroglancer", "ome_zarr/ome_zarr_neuroglancer.md"]]]
 
 exercises:
 
