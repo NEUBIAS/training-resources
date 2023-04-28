@@ -1,4 +1,4 @@
-###  Measure intensities (with background subtraction)
+### Measure intensities (with background subtraction)
     - Open image [xy_16bit__h2b.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit__h2b.tif)
       - H2B-mCherry staining acquired with a widefield microscope
     - Open label mask [xy_8bit_labels__h2b.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__h2b.tif)
