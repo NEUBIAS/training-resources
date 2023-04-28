@@ -41,7 +41,7 @@ figure: /figures/filter_morphological.png
 figure_legend: A dilation and erosion using a 3x3 structuring element (left side). Morphological filters applied in series, e.g. opening and closing, can achieve very useful results (right side).  
   
 multiactivities: 
- - ["filter_morphological/activities/filter_morphological.md", [["ImageJ Macro & GUI: Dilation and erosion", "filter_morphological/activities/filter_morphological_dilation_erosion.ijm", "java"],["ImageJ Macro & GUI: Closing and opening", "filter_morphological/activities/filter_morphological_opening_closing.ijm", "java"], ["ImageJ Macro & GUI: Internal Gradient", "filter_morphological/activities/filter_morphological_inner_gradient.ijm", "java"]] ]
+ - ["filter_morphological/activities/filter_morphological.md", [["ImageJ Macro & GUI: Dilation and erosion", "filter_morphological/activities/filter_morphological_dilation_erosion.ijm", "java"],["ImageJ Macro & GUI: Closing and opening", "filter_morphological/activities/filter_morphological_opening_closing.ijm", "java"], ["ImageJ Macro & GUI: Internal Gradient", "filter_morphological/activities/filter_morphological_inner_gradient.ijm", "java"]]]
   
 exercise_preface: |
   ### Measure intensity on the nuclear membrane
