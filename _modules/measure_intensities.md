@@ -28,7 +28,9 @@ figure: /figures/measure_intensities.png
 figure_legend: H2b-mCherry widefield image of two cells. Common object intensity measurements, using a label mask and a manual background measurement.
 
 multiactivities:
-  - ["measure_intensities/activities/measure_intensities.md", [["ImageJ GUI", "measure_intensities/activities/measure_intensities_imagejgui.md", "markdown"], ["skimage napari", "measure_intensities/activities/measure_intensities_skimage_napari.py", "python"]]]
+  - ["measure_intensities/measure_intensities_act1.md", [["ImageJ GUI", "measure_intensities/measure_intensities_act1_imagejgui.md", "markdown"], 
+  ["skimage napari", "measure_intensities/measure_intensities_act1_skimage_napari.py", "python"]]]
+  - ["measure_intensities/measure_intensities_act2.md", [["skimage napari", "measure_intensities/measure_intensities_act2_skimage_napari.py", "python"]]]
 
 exercises:
   - ["ImageJ GUI", "measure_intensities/exercises/measure_intensities_imagejgui.md"]
