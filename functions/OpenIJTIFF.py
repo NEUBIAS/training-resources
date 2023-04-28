@@ -28,6 +28,9 @@ def get_ijtiff(fpath: [str, Path]):
         raise TypeError("This module is intended to parse from ImageJ-created tiff files. This tiff file was apparently not created by ImageJ.")
     return tiff
 
+def escape_unicode(text: str):
+    return bytes(text, 'utf-8').decode('unicode_escape')
+
 def open_ij_tiff(fpath: [str, Path],
                  fetch_extra_metadata: bool = False # Should be true to extract any ImageJ display metadata from the tiff file.
                  ):
@@ -110,7 +113,7 @@ def open_ij_tiff(fpath: [str, Path],
         voxel_sizes['x'] = 1
         voxel_units['x'] = 'Pixel'
     ax_scales = [voxel_sizes[i] for i in ax_names.lower()]
-    ax_units = [voxel_units[i] for i in ax_names.lower()]
+    ax_units = [escape_unicode(voxel_units[i]) for i in ax_names.lower()]
     ################### Return either with or without extra metadata #################################
     if fetch_extra_metadata:
         extra_metadata = {}
