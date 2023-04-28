@@ -70,7 +70,7 @@ points2d_cal = np.stack([p*voxel_size_input for p in points2d])
 dist_2d_cal = np.sqrt(((points2d_cal[1]-points2d_cal[0])**2).sum())
 print('Distance in um:',dist_2d_cal)
 
-# appreciate that, in this special case, one case use voxel index distance multiplied y XY pxl size:
+# appreciate that, in this special case, one can use voxel-distance multiplied by XY pixel size:
 print('Distance in um:',dist_2d_pxl * voxel_size_input[1])
 
 #%%
