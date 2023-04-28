@@ -34,9 +34,9 @@ activity_preface: |
     - Compute and plot pixel value histograms
 
 activities:
-  - ["ImageJ GUI", "pixels/activities/pixels_imagejgui.md", "markdown"]
-  - ["MATLAB", "pixels/activities/pixels2D_matlab.m", "matlab"]
-  - ["skimage napari", "pixels/activities/pixels_skimage_napari.py", "python"]
+  - ["ImageJ GUI", "pixels/pixels_imagejgui.md", "markdown"]
+  - ["MATLAB", "pixels/pixels2D_matlab.m", "matlab"]
+  - ["skimage napari", "pixels/pixels_skimage_napari.py", "python"]
 
 exercises:
 

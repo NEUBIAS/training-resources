@@ -1,15 +1,15 @@
 #######################################################
-## To follow along you require additional packages.
-## Install them into your activated conda environment.
+## To follow along you require a napari plugin.
+## Install napari-plot-profile in your course activated conda environment.
 ## conda activate skimage-napari-tutorial
 ## pip install napari-plot-profile
-## pip install matplotlib
 #######################################################
 
-from skimage.io import imread
+from OpenIJTIFF import open_ij_tiff
+
 # Load the image.
 # You can also load a local image by providing the path to the file.
-image = imread("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_different_intensity.tif")
+image, axes, scales, units  = open_ij_tiff("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_different_intensity.tif")
 
 # Print image shape
 print(image.shape)
@@ -33,7 +33,7 @@ napari_viewer = Viewer()
 # Add an image to the napari_viewer.
 napari_viewer.add_image(image)
 
-# Explore the napari-plot-profile plugin.
+# Explore the napari-plot-profile plugin (optional).
 
 import numpy as np
 # Compute min and max.
