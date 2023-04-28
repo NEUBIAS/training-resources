@@ -24,27 +24,14 @@ figure: /figures/lut.png
 figure_legend:
   "Left: Image displayed with a grey LUT and the color mapping as an inset. Right: Image shown with several different LUTs."
 
-activity_preface: |
-  - Open the image [xy_8bit__nuclei_high_dynamic_range.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_high_dynamic_range.tif)
-  - Explore different contrast settings
-    - Observe that there are very dim nuclei
-  - Observe that LUT settings do not change pixel values
-  - Explore various single color LUTs (e.g., gray, green, red, blue)
-    - Understand that gray is the recommended default
-    - Understand that certain LUTs such as red and blue should be avoided
-  - Explore various multi color LUTs, which can be helpful to 
-    - highlight extreme values
-    - render high dynamic range data without "clipping information"
-  - Visualise the LUT itself, e.g. as an inset in the image
-    - Understand that this is especially important for multi-color LUTs where the mapping from the displayed color to the numeric data is not obivous
+multiactivities:
+  - ["lut/lut_act1.md", [["ImageJ GUI", "lut/lut_act1_imagejgui.md", "markdown"], 
+	["ImageJ Macro", "lut/lut_act1_imagejmacro.ijm", "java"], 
+	["skimage napari", "lut/lut_act1_skimage_napari.py", "python"]]]
+  - ["lut/lut_act2.md", [["ImageJ GUI", "lut/lut_act2_imagejgui.md"], 
+  ["ImageJ Macro", "lut/lut_act2_imagejmacro.ijm", "java"], 
+	["skimage napari", "lut/lut_act2_skimage_napari.py", "python"]]]
 
-activities:
-  - ["ImageJ GUI", "lut/activities/explore_luts_imagejgui.md", "markdown"]
-  - ["ImageJ Macro", "lut/activities/explore_luts_imagejmacro.ijm", "java"]
-  - ["skimage napari", "lut/activities/explore_luts_skimage_napari.py", "python"]
-
-exercises:
-  - ["ImageJ Macro (GUI)", "lut/exercises/configure_luts_imagejmacro.md"]
 
 assessment: |
 
@@ -89,7 +76,9 @@ Single color lookup tables are typically configured by chosing one color such as
 
 In this formula, 1 corresponds to the maximal brightness and 0 corresponds to the minimal brightness that, e.g., your computer monitor can produce.
 
-Depending on the values of `value`, `min` and `max` it can be that the formula yields values that are less than 0 or larger than 1. This is handled by assinging a brightness of 0 even if the formula yields values < 0 and assigning a brightness of 1 even if the forumla yield values larger than `1`. In such cases one speaks of "clipping", because one looses ("clips") information about the pixel value (see below for an example).
+Depending on the values of `value`, `min` and `max` it can be that the formula yields values that are less than 0 or larger than 1. 
+This is handled by assinging a brightness of 0 even if the formula yields values < 0 and assigning a brightness of 1 even if the formula yields values 
+larger than `1`. In such cases one speaks of "clipping", because one looses ("clips") information about the pixel value (see below for an example).
 
 ##### Clipping example
 
@@ -108,8 +97,11 @@ As the name suggestes multi color lookup tables map pixel gray values to differe
 For example:
 
 `0 -> black`
+
 `1 -> green`
+
 `2 -> blue`
+
 `3 -> ...`
 
 Typical use cases for multi color LUTs are images of a high dynamic range (large differences in gray values) and label mask images (where the pixel values encode object IDs).
