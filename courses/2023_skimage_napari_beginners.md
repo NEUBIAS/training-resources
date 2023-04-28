@@ -21,6 +21,7 @@ Concretely, you should be able to run and understand this script: TODO
 
 Such knowledge could be acquired for example here:
 
+- [Learn Python](https://www.learnpython.org/en/Welcome)
 - [Software carpentry](https://swcarpentry.github.io/python-novice-inflammation/)
 - https://wiki.python.org/moin/BeginnersGuide/Programmers, this is an extensive list of sites for learning python
 
