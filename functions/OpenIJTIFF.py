@@ -66,8 +66,7 @@ def open_ij_tiff(fpath: [str, Path],
             voxel_sizes['z'] = image_metadata['spacing']
             voxel_units['z'] = image_metadata['unit']
         else:
-            print('Z scale is missing from the ImageDescription metadata !!!!!')
-            print("Z scale was assigned '1' and Z scale unit was assigned 'Slice'")
+        print("Scaling missing; Setting to 1 pixel.")
             voxel_sizes['z'] = 1
             voxel_units['z'] = 'Slice'
     # get time information
@@ -77,15 +76,13 @@ def open_ij_tiff(fpath: [str, Path],
             if 'fps' in image_metadata:
                 timeunit = 'sec'
             else:
-                print('Time unit is missing from the ImageDescription metadata !!!!!')
-                print("Time unit was assigned 'Frame'")
+                print("Time unit missing; Setting to 'Frame'.")
                 timeunit = 'Frame'
         elif 'fps' in image_metadata:
             finterval = 1 / image_metadata['fps']
             timeunit = 'sec'
         else:
-            print('Time scale is missing from the ImageDescription metadata !!!!!')
-            print("Time scale was assigned '1' and time scale unit was assigned 'Frame'")
+            print("Time scale missing; Setting to '1 Frame'.")
             finterval = 1
             timeunit = 'Frame'
         voxel_sizes['t'] = finterval
@@ -102,8 +99,7 @@ def open_ij_tiff(fpath: [str, Path],
         voxel_sizes['y'] = units / num_pixels
         voxel_units['y'] = image_metadata['unit']
     else:
-        print("Y scale is missing from the tiff file !!!!!")
-        print("Y scale was assigned '1' and y scale unit was assigned 'Pixel'")
+        print("Scaling missing; Setting to 1 pixel.")
         voxel_sizes['y'] = 1
         voxel_units['y'] = 'Pixel'
     if 'XResolution' in tags:
@@ -111,8 +107,7 @@ def open_ij_tiff(fpath: [str, Path],
         voxel_sizes['x'] = units / num_pixels
         voxel_units['x'] = image_metadata['unit']
     else:
-        print("X scale is missing from the tiff file !!!!!")
-        print("X scale was assigned '1' and x scale unit was assigned 'Pixel'")
+        print("Scaling missing; Setting to 1 pixel.")
         voxel_sizes['x'] = 1
         voxel_units['x'] = 'Pixel'
     ax_scales = [voxel_sizes[i] for i in ax_names.lower()]
