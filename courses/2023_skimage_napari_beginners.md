@@ -10,20 +10,9 @@ Taking this course will introduce you to using python for image analysis. This i
 
 Basic knowledge of the python programming language.
 
-For example you should know how to
-- use conda environments ???
-- assign variables
-- call functions
-- allocate and index simple numpy arrays
-- use a Jupyter Notebook to run some python code
+Concretely, please go through all the topics mentioned in the **Learn the Basics** section of the [Learn Python](https://www.learnpython.org/en/Welcome) website (you may skip "Classes and Objects" and "Modules and Packages").
 
-Concretely, you should be able to run and understand this script: TODO
-
-Such knowledge could be acquired for example here:
-
-- [Learn Python](https://www.learnpython.org/en/Welcome)
-- [Software carpentry](https://swcarpentry.github.io/python-novice-inflammation/)
-- https://wiki.python.org/moin/BeginnersGuide/Programmers, this is an extensive list of sites for learning python
+In addition, please practice running code in a Jupyter Notebook: 
 
 If you want to use your own computer for the course you need to perform the [tool installation](https://neubias.github.io/training-resources/tool_installation/index.html). Go to the `Show Activity` drop down menu and follow the instructions in `install skimage napari`. Test your installation. 
 
