@@ -3,7 +3,7 @@
  * 
  * Requirements:
  *   - Update site: IJPB-Plugins (MorpholibJ)
- * 
+ * Todo: Modify macro to account for changes
  */
 
 run("Close All");
