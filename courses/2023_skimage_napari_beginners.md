@@ -12,17 +12,13 @@ Basic knowledge of the python programming language.
 
 Concretely, please go through all the topics mentioned in the **Learn the Basics** section of the [Learn Python](https://www.learnpython.org/en/Welcome) website (you may skip "Classes and Objects" and "Modules and Packages").
 
-In addition, please practice running code in a Jupyter Notebook: 
+In addition, please practice running code in a Jupyter Notebook. You can follow this [guide](https://jupyter.org/try-jupyter/retro/notebooks/?path=notebooks/Intro.ipynb).
 
-If you want to use your own computer for the course you need to perform the [tool installation](https://neubias.github.io/training-resources/tool_installation/index.html). Go to the `Show Activity` drop down menu and follow the instructions in `install skimage napari`. Test your installation. 
+If you want to use your own computer for the course you need to perform the [tool installation](https://neubias.github.io/training-resources/tool_installation/index.html). Go to the `Show Activity` drop down menu and follow the instructions in `install skimage napari`. Test your installation. If you need help reach out to the corresponding trainer from your institute (see below).
 
-In addition, we are working on providing you with cloud computers where all software is preinstalled.
+You can use your own computer but we will also try to provide cloud computing with preinstalled software (TBA). 
 
 ## Dates
-
-#### Installation day
-
-Each institute decides on their own.
 
 #### Course days
 
@@ -51,10 +47,6 @@ Afternoon sessions (in person at your institute, rooms will be announced)
 - Arif Khan (EMBL Heidelberg)
 - Sebastian Gonzalez (EMBL Heidelberg)
 - Nima Vakili (EMBL Heidelberg)
-
-## Compute resources
-
-You can use your own computer but we will also try to provide cloud computing with preinstalled software (TBA).
 
 ## Teaching content
 
