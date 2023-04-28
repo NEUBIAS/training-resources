@@ -25,15 +25,18 @@ napari_viewer = Viewer()
 napari_viewer.add_image(image, name='image')
 napari_viewer.add_labels(labels, name='objects')
 
+# Even though we could have an estimation of background intensity with the "0" label,
+# use the napari viewer to manually create an additional label ("3" in this case)
+
 #%%
-# Measure the mean fluorescence intensity and the object pixel area manually
 objects_labels = np.unique(labels.flatten())
 objects_labels.sort()
 print(objects_labels)
-# Observe that there are 3 values, 0 being the label of the background, 1,2 are the cells
+# Observe that there are 3 values, 0 being the label of the background, 
+# 1,2 are the cells and 3 is the labeled background.
 
 #%%
-# use the intensity_image
+# Use the intensity_image option to measure fluorescence intensity of objects
 fluo_measures = pd.DataFrame(
     regionprops_table(
         labels,
@@ -48,10 +51,6 @@ fluo_measures.to_csv("object_measurements.csv")
 fluo_measures
 
 #%%
-# Even though we could have an estimation of background intensity with the "0" label,
-# use the napari viewer to manually create an additional label (3 in this case)
-# and the following code to measure the mean intensity inside.
-
 background = fluo_measures[fluo_measures.label==3].intensity_mean.values[0]
 
 # Append the background-corrected values to the table
@@ -74,7 +73,7 @@ print(objects_labels)
 napari_viewer.add_labels(dilated_labels, name='dilated_objects')
 
 #%%
-# use the intensity_image to compute the fluorescence parameters
+# Use the intensity_image to compute the fluorescence parameters
 fluo_measures_dilated = pd.DataFrame(
     regionprops_table(
         dilated_labels,
@@ -83,7 +82,7 @@ fluo_measures_dilated = pd.DataFrame(
     )
 )
     
-# Append the background-corrected values to the table
+# Append the background-corrected values to the table using the same background value as before.
 fluo_measures_dilated['intensity_sum'] = fluo_measures_dilated.intensity_mean * fluo_measures_dilated.area
 fluo_measures_dilated['mean_corr'] = fluo_measures_dilated.intensity_mean - background
 fluo_measures_dilated['max_corr'] = fluo_measures_dilated.intensity_max - background
