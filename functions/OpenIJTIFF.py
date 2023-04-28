@@ -30,6 +30,9 @@ def get_ijtiff(fpath: [str, Path]):
 
 def escape_unicode(text: str):
     return bytes(text, 'utf-8').decode('unicode_escape')
+    
+def encode_unicode(text: str):
+    return text.encode('unicode_escape').decode('utf-8')
 
 def open_ij_tiff(fpath: [str, Path],
                  fetch_extra_metadata: bool = False # Should be true to extract any ImageJ display metadata from the tiff file.
@@ -143,7 +146,7 @@ def save_ij_tiff(tiffdest: [str, Path],
         y_idx = ax_names.index('Y')
     if 'X' in ax_names:
         x_idx = ax_names.index('X')
-        metadata['unit'] = ax_units[x_idx]
+        metadata['unit'] = encode_unicode(ax_units[x_idx])
     if 'Z' in ax_names:
         z_idx = ax_names.index('Z')
         if ax_units[z_idx] != 'Slice': ### TODO: This checkpoint might be improved
