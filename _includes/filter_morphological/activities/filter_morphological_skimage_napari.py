@@ -6,7 +6,6 @@
 #%%
 # Import python packages.
 from OpenIJTIFF import open_ij_tiff
-import numpy as np
 from napari.viewer import Viewer
 from skimage.morphology import square, disk
 from skimage.morphology import erosion, dilation
@@ -91,5 +90,5 @@ napari_viewer = Viewer()
 napari_viewer.add_image(image, name='image')
 napari_viewer.add_image(internal_gradient, name='internal_gradient')
 
-# The internal gradient represent the edge of the object.
+# The internal gradient represents the edge of the object.
 # Discuss when and how this can be useful.
