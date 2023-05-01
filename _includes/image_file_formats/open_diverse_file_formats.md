@@ -1,4 +1,4 @@
-#### Open various file formats
+<h4 id="open"><a href="#open">Open various file formats</a></h4>
 
 - Open different image file formats and inspect their pixel data and metadata
 - Appreciate that some image file formats

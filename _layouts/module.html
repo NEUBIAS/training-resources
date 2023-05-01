@@ -177,7 +177,7 @@ window.onload = set_view_defaults;
   <br>
 
   {% if page.multiactivities %}
-    <h2>Activities</h2>
+    <h2 id="activities"><a href="#activities">Activities</a></h2>
     {%- assign idx_0 = 0 -%}
     {%- for activity in page.multiactivities -%}
       {%- assign preface_md = activity[0] -%}
