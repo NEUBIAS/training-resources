@@ -25,4 +25,3 @@ viewer.add_labels(labels_2D_conn1_image)
 # Connected components with connectivity 2 (aka 2D 8 connectivity) 
 labels_2D_conn2_image = measure.label(binary_2D_image, connectivity=2)
 viewer.add_labels(labels_2D_conn2_image)
-
