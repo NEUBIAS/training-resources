@@ -9,7 +9,7 @@
 1. move `OpenIJTIFF.py` in the `skimage-napari-tutorial` directory
 
 #### Test installation (only once) 
-1. download [test_installation_skimage_napari.py](https://neubias.github.io/training-resources/_includes/tool_installation/test_installation_skimage_napari.py) and move the file to 
+1. download [test_installation_skimage_napari.py](https://neubias.github.io/training-resources/functions/test_installation_skimage_napari.py) and move the file to 
 the `skimage-napari-tutorial` directory.
 1. open a terminal window (see above)
 1. `cd skimage-napari-tutorial`
