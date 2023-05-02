@@ -1,3 +1,7 @@
+# %%[markdown]
+# # Explore LUTs
+
+# %%
 # Instantiate the napari viewer
 import napari
 viewer = napari.Viewer()
