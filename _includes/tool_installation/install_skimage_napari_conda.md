@@ -5,11 +5,10 @@
 	* Windows: *Anaconda Prompt (Miniconda3)*, e.g. type `Anaconda` in the search bar
 1. write `conda create -n skimage-napari-tutorial -c conda-forge python=3.10 napari=0.4.17 notebook matplotlib jupytext` and press enter
 1. create a directory called `skimage-napari-tutorial` (e.g. on your Desktop)
-1. download [OpenIJTIFF.py](https://neubias.github.io/training-resources/functions/OpenIJTIFF.py)
-1. move `OpenIJTIFF.py` in the `skimage-napari-tutorial` directory
+1. download [OpenIJTIFF.py](https://neubias.github.io/training-resources/functions/OpenIJTIFF.py) to the `skimage-napari-tutorial` directory
 
 #### Test installation (only once) 
-1. download [test_installation_skimage_napari.py](https://neubias.github.io/training-resources/functions/test_installation_skimage_napari.py) and move the file to 
+1. download [test_installation_skimage_napari.py](https://neubias.github.io/training-resources/functions/test_installation_skimage_napari.py) to 
 the `skimage-napari-tutorial` directory.
 1. open a terminal window (see above)
 1. `cd skimage-napari-tutorial`
