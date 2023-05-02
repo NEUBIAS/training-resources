@@ -26,6 +26,7 @@ activities:
   - ["ImageJ Macro", "tool_installation/activities/tool_installation_imagej.md", "markdown"]
   - ["ImageJ Jython", "tool_installation/activities/tool_installation_imagej.md", "markdown"]
   - ["skimage napari", "tool_installation/activities/tool_installation_napari.md", "markdown"]
+  - ["OME-Zarr BAND", "tool_installation/activities/tool_installation_OMEZarrBAND.md", "markdown"]
   - ["MATLAB", "tool_installation/activities/tool_installation_MATLAB.md", "markdown"]
 
 exercises:
