@@ -36,7 +36,8 @@ multiactivities:
 	["skimage napari", "connected_components/connected_components_act1_skimage_napari.py", python], ["Knime", "connected_components/connected_components_act1_knime.md"]]]
   - ["connected_components/connected_components_act2.md", [["ImageJ MorpholibJ Macro & GUI", "connected_components/connected_components_act2_imagejmacro.ijm", java], 
 	["skimage napari", "connected_components/connected_components_act2_skimage_napari.py", python]]]
-  - ["connected_components/connected_components_act3.md",  [["ImageJ MorpholibJ Macro & GUI", "connected_components/connected_components_act3_imagejmacro.ijm"]]]
+  - ["connected_components/connected_components_act3.md",  [["ImageJ MorpholibJ Macro & GUI", "connected_components/connected_components_act3_imagejmacro.ijm"], 
+  ["skimage napari", "connected_components/connected_components_act3_skimage_napari.py", python]]]
 
 
 
