@@ -25,6 +25,6 @@ viewer.add_image(image)
 # %% 
 # Read via OpenIJTIFF (OpenIJTiff.py must be in the same folder as the notebook path)
 from OpenIJTIFF import open_ij_tiff
-image2, axes_image, voxel_image, units_image = open_ij_tiff(fpath)
+image_opentiff, axes, scales, units = open_ij_tiff(fpath)
 # View the intensity image
-viewer.add_image(image2)
+viewer.add_image(image_opentiff)
