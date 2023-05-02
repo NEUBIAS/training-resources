@@ -3,7 +3,8 @@ from skimage.io import imread
 import napari
 
 # Read the image
-image = imread('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit__nuclei_autothresh.tif')
+# Read the images
+image, axes, scales, units = open_ij_tiff('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit__nuclei_autothresh.tif')
 
 # Inspect image data type and values
 print(f'Type: {image.dtype} \nShape: {image.shape} \nMin: {np.min(image)} \nMax: {np.max(image)}')

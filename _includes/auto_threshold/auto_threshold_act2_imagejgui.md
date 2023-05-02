@@ -1,29 +1,20 @@
-- Auto thresholding on stack
-  - Open [xyz_8bit__nuclei_autothresh.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit__nuclei_autothresh.tif)
-  - **[ Image > Duplicate... ]**
-    - `Title = nohist`
-    - **[X]** `Duplicate stack`
-  - Select window `nohist`
+- Open [xyz_8bit__nuclei_autothresh.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit__nuclei_autothresh.tif)
+- Try all available methods
   - **[ Image > Adjust > Auto Threshold ]**
     - `Method = Try all`
     - **[X]** `White objects on black background`
     - **[X]** `Stack`
+    - **[X]** `Use stack histogram`
     - Press `OK`
-  - It can be seen that for many methods, background is also segmented. This is due to the fact that in this case auto threshold algorithms is treating each slice separately (segmentation is done based on slice histogram)
-  - Select a method e.g. Otsu and repeat the above process using
-    - `Method = Otsu`
-    - **[X]** `Stack`
-    - **[X]** `Show threshold values in log window`
-    - Press `OK`
-  - It can be seen that Otsu's method is calculating threshold for each individual slice
-  - Select window `xyz_8bit__nuclei_autothresh.tif`
+  - Observe that the different methods give different outputs
+  - Appreciate that this montage view is not suited for further analysis of the binary output 
+- Apply one method to properly segment the stack, e.g. Otsu
   - **[ Image > Duplicate... ]**
-    - `Title = hist`
+    - `Title = Otsu`
     - **[X]** `Duplicate stack`
-  - Select window `hist` and repeat the procedure above using
+  - **[ Image > Adjust > Auto Threshold ]** 
     - `Method = Otsu`
     - **[X]** `Stack`
     - **[X]** `Use stack histogram`
     - **[X]** `Show threshold values in log window`
     - Press `OK`
-  - It can be observed that now one threshold value (i.e. 91, see log window) is used for binarization and background is not segmented
