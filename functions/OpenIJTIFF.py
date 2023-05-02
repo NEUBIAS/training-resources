@@ -32,6 +32,8 @@ def escape_unicode(text: str):
     return bytes(text, 'utf-8').decode('unicode_escape')
     
 def encode_unicode(text: str):
+    # TODO: On windows this does not encode properly in IJ. 
+    # The returned value for micron is \xb5 and IJ does not read it as micron.
     return text.encode('unicode_escape').decode('utf-8')
 
 def open_ij_tiff(fpath: [str, Path],
@@ -66,7 +68,7 @@ def open_ij_tiff(fpath: [str, Path],
             voxel_sizes['z'] = image_metadata['spacing']
             voxel_units['z'] = image_metadata['unit']
         else:
-        print("Scaling missing; Setting to 1 pixel.")
+            print("Z scaling missing; Setting to 1 pixel.")
             voxel_sizes['z'] = 1
             voxel_units['z'] = 'Slice'
     # get time information
@@ -99,7 +101,7 @@ def open_ij_tiff(fpath: [str, Path],
         voxel_sizes['y'] = units / num_pixels
         voxel_units['y'] = image_metadata['unit']
     else:
-        print("Scaling missing; Setting to 1 pixel.")
+        print("Y scaling missing; Setting to 1 pixel.")
         voxel_sizes['y'] = 1
         voxel_units['y'] = 'Pixel'
     if 'XResolution' in tags:
@@ -107,7 +109,7 @@ def open_ij_tiff(fpath: [str, Path],
         voxel_sizes['x'] = units / num_pixels
         voxel_units['x'] = image_metadata['unit']
     else:
-        print("Scaling missing; Setting to 1 pixel.")
+        print("X scaling missing; Setting to 1 pixel.")
         voxel_sizes['x'] = 1
         voxel_units['x'] = 'Pixel'
     ax_scales = [voxel_sizes[i] for i in ax_names.lower()]
