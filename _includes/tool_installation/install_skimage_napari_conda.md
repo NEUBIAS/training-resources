@@ -1,5 +1,3 @@
-## Install skimage napari
-
 ### Installation (only once)
 
 1. install [miniconda](https://docs.conda.io/en/latest/miniconda.html)
