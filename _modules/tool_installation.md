@@ -21,7 +21,7 @@ figure_legend: Screenshot of the community partners of https://forum.image.sc, c
 
 multiactivities:
   - ["tool_installation/imagej.md", [["Fiji", "tool_installation/install_fiji.md"], ["IntelliJ", "tool_installation/install_intellij.md"] ]]
-  - ["tool_installation/skimage_napari.md", [["Own computer using conda", "tool_installation/install_skimage_napari_conda.md"], ["BAND", "tool_installation/install_skimage_napari_BAND.md"] ]]
+  - ["tool_installation/skimage_napari.md", [["conda", "tool_installation/install_skimage_napari_conda.md"], ["BAND", "tool_installation/install_skimage_napari_BAND.md"] ]]
 
 assessment:
 
