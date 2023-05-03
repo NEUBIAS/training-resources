@@ -1,4 +1,5 @@
-<h4 id="activity-heading"><a href="#explore-luts">Explore LUTs</a></h4>
+<h4 id="explore"><a href="#explore">Explore LUTs</a></h4>
+
   - Open the image [xy_8bit__nuclei_high_dynamic_range.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_high_dynamic_range.tif)
   - Explore different contrast settings
     - Observe that there are very dim nuclei
