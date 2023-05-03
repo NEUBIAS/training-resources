@@ -28,6 +28,14 @@ def get_ijtiff(fpath: [str, Path]):
         raise TypeError("This module is intended to parse from ImageJ-created tiff files. This tiff file was apparently not created by ImageJ.")
     return tiff
 
+def escape_unicode(text: str):
+    return bytes(text, 'utf-8').decode('unicode_escape')
+    
+def encode_unicode(text: str):
+    # TODO: On windows this does not encode properly in IJ. 
+    # The returned value for micron is \xb5 and IJ does not read it as micron.
+    return text.encode('unicode_escape').decode('utf-8')
+
 def open_ij_tiff(fpath: [str, Path],
                  fetch_extra_metadata: bool = False # Should be true to extract any ImageJ display metadata from the tiff file.
                  ):
@@ -60,8 +68,7 @@ def open_ij_tiff(fpath: [str, Path],
             voxel_sizes['z'] = image_metadata['spacing']
             voxel_units['z'] = image_metadata['unit']
         else:
-            print('Z scale is missing from the ImageDescription metadata !!!!!')
-            print("Z scale was assigned '1' and Z scale unit was assigned 'Slice'")
+            print("Z scaling missing; Setting to 1 pixel.")
             voxel_sizes['z'] = 1
             voxel_units['z'] = 'Slice'
     # get time information
@@ -71,15 +78,13 @@ def open_ij_tiff(fpath: [str, Path],
             if 'fps' in image_metadata:
                 timeunit = 'sec'
             else:
-                print('Time unit is missing from the ImageDescription metadata !!!!!')
-                print("Time unit was assigned 'Frame'")
+                print("Time unit missing; Setting to 'Frame'.")
                 timeunit = 'Frame'
         elif 'fps' in image_metadata:
             finterval = 1 / image_metadata['fps']
             timeunit = 'sec'
         else:
-            print('Time scale is missing from the ImageDescription metadata !!!!!')
-            print("Time scale was assigned '1' and time scale unit was assigned 'Frame'")
+            print("Time scale missing; Setting to '1 Frame'.")
             finterval = 1
             timeunit = 'Frame'
         voxel_sizes['t'] = finterval
@@ -96,8 +101,7 @@ def open_ij_tiff(fpath: [str, Path],
         voxel_sizes['y'] = units / num_pixels
         voxel_units['y'] = image_metadata['unit']
     else:
-        print("Y scale is missing from the tiff file !!!!!")
-        print("Y scale was assigned '1' and y scale unit was assigned 'Pixel'")
+        print("Y scaling missing; Setting to 1 pixel.")
         voxel_sizes['y'] = 1
         voxel_units['y'] = 'Pixel'
     if 'XResolution' in tags:
@@ -105,12 +109,11 @@ def open_ij_tiff(fpath: [str, Path],
         voxel_sizes['x'] = units / num_pixels
         voxel_units['x'] = image_metadata['unit']
     else:
-        print("X scale is missing from the tiff file !!!!!")
-        print("X scale was assigned '1' and x scale unit was assigned 'Pixel'")
+        print("X scaling missing; Setting to 1 pixel.")
         voxel_sizes['x'] = 1
         voxel_units['x'] = 'Pixel'
     ax_scales = [voxel_sizes[i] for i in ax_names.lower()]
-    ax_units = [voxel_units[i] for i in ax_names.lower()]
+    ax_units = [escape_unicode(voxel_units[i]) for i in ax_names.lower()]
     ################### Return either with or without extra metadata #################################
     if fetch_extra_metadata:
         extra_metadata = {}
@@ -140,7 +143,7 @@ def save_ij_tiff(tiffdest: [str, Path],
         y_idx = ax_names.index('Y')
     if 'X' in ax_names:
         x_idx = ax_names.index('X')
-        metadata['unit'] = ax_units[x_idx]
+        metadata['unit'] = encode_unicode(ax_units[x_idx])
     if 'Z' in ax_names:
         z_idx = ax_names.index('Z')
         if ax_units[z_idx] != 'Slice': ### TODO: This checkpoint might be improved
