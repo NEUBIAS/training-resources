@@ -28,7 +28,7 @@ dilated = dilation(image_2spots)
 #%%
 # Now try with connectivity 2 (square).
 square3 = square(3)
-print(square)
+print(square3)
 eroded_square3 = erosion(image_2spots, square3)
 dilated_square3 = dilation(image_2spots, square3)
 
