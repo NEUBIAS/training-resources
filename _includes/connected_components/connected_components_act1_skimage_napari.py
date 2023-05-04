@@ -5,6 +5,7 @@
 # Import modules
 import napari
 from OpenIJTIFF import open_ij_tiff
+from skimage.measure import label
 
 # %%
 # Instantiate the napari viewer
@@ -17,11 +18,12 @@ viewer.add_image(binary_2D_image)
 
 # %%
 # Connected components with connectivity 1 (aka 2D 4 connectivity) 
-from skimage import measure
-labels_2D_conn1_image = measure.label(binary_2D_image, connectivity=1)
+labels_2D_conn1_image = label(binary_2D_image, connectivity=1)
 viewer.add_labels(labels_2D_conn1_image)
 
 # %%
 # Connected components with connectivity 2 (aka 2D 8 connectivity) 
-labels_2D_conn2_image = measure.label(binary_2D_image, connectivity=2)
+labels_2D_conn2_image = label(binary_2D_image, connectivity=2)
 viewer.add_labels(labels_2D_conn2_image)
+
+# %%

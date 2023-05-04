@@ -4,7 +4,7 @@
 # %%
 # Import modules
 import napari
-from skimage import measure
+from skimage.measure import label
 from OpenIJTIFF import open_ij_tiff
 import numpy as np
 
@@ -19,7 +19,7 @@ viewer.add_image(binary_3D_image)
 
 # %%
 # Connected components with connectivity 2 (aka 3D 26 connectivity) 
-labels_3D_conn2_image = measure.label(binary_3D_image, connectivity=2)
+labels_3D_conn2_image = label(binary_3D_image, connectivity=2)
 viewer.add_labels(labels_3D_conn2_image)
 
 # %%
@@ -28,3 +28,5 @@ print(np.unique(labels_3D_conn2_image)) # the object indices
 print(len(np.unique(labels_3D_conn2_image))-1) # the number of objects (minus background)
 print(np.max(labels_3D_conn2_image)) # the number of objects (minus background) (if the labels are consecutive!)
 np.sum(labels_3D_conn2_image==2) # the number of pixels (~volume) in object number 2
+
+# %%
