@@ -18,7 +18,7 @@ Note that the `-st s3` option makes sure that the input path is searched for in 
 batchconvert omezarr -st s3 -dt s3 --drop_series --merge_files --concatenation_order t data/JPEG data/ZARR/$USER;
 ```
 This conversion mode assumes that the input files are part of the same series and thus will merge them along a specific axis during the conversion process.
-The `merge_files` flag ensures the grouped conversion option and the `--concatenation_order t` option makes sure that the files are merged along the time channel. 
+The `--merge_files` flag specifies the grouped conversion option and the `--concatenation_order t` option allows the files to be merged along the time channel. 
 
 **Check what has changed at the s3 end after the conversion:**
 ```
