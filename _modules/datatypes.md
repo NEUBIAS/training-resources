@@ -3,7 +3,7 @@ title:     Data types
 layout:    module
 
 prerequisites:
-  - "[Basic properties of images and pixels](../pixels)"
+  - "[Digital image basics](../pixels)"
 
 objectives:
   - "Understand that images have a data type which limits the values that the pixels in the image can have."
