@@ -24,12 +24,18 @@ print(axes)
 
 # %% [markdown]
 # **Napari GUI** Explore different sliders and values in the bottom left part \
-# **Napari GUI** Show in 3D. Note that the scaling are not yet correct. See `spatial calibration` module on how to fix it!
+# **Napari GUI** Show in 3D. Note that the order of axes is not yet correct
 
 # %%
-# Change order of axis (swap T and Z)
-napari_viewer.dims.order = (1, 0, 2, 3)
+# Load image with correct channel order
+napari_viewer.add_image(image[:,:,0,:,:],  name = 'dna', colormap = 'magenta')
+napari_viewer.add_image(image[:,:,1,:,:],  name = 'microtubules', colormap = 'green', blending='additive')
+
+# %% [markdown]
+# **Napari GUI** Explore different sliders and values in the bottom left part \
+# **Napari GUI** Correct axes. Scaling in 3D is not yet correct see `spatial calibration` module
+
 
 # %%
-# Return to the correct order
-napari_viewer.dims.order = (0, 1, 2, 3)
+# Load image with correct channel axes in one step
+napari_viewer.add_image(image, channel_axis = 2, name = ['dna', 'microtubules'])

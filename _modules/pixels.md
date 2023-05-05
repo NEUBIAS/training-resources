@@ -31,6 +31,8 @@ multiactivities:
   ["skimage napari", "pixels/pixels_act1_skimage_napari.py", "python"], 
   ["MATLAB", "pixels/pixels_act1_matlab.m", "matlab"]]]
   - ["pixels/pixels_act2.md", [["skimage napari", "pixels/pixels_act2_skimage_napari.py", "python"]]]
+  - ["pixels/pixels_act3.md", [["skimage napari", "pixels/pixels_act3_skimage_napari.py", "python"]]]
+  - ["pixels/pixels_act4.md", [["skimage napari", "pixels/pixels_act4_skimage_napari.py", "python"]]]
 
 exercises:
 
