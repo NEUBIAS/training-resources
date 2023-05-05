@@ -33,7 +33,7 @@ activity_preface: |
     - Plot line profiles
     - Compute and plot pixel value histograms
 
-activities:
+multiactivities:
   - ["ImageJ GUI", "pixels/pixels_imagejgui.md", "markdown"]
   - ["MATLAB", "pixels/pixels2D_matlab.m", "matlab"]
   - ["skimage napari", "pixels/pixels_skimage_napari.py", "python"]
