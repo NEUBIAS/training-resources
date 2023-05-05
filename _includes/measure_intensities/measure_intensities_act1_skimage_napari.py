@@ -26,8 +26,8 @@ napari_viewer.add_labels(labels, name='labels')
 # %% [markdown]
 # ## Compute the intensities 
 # ### Background label  
-# We can have an estimation of background intensity with the "0" label.\
-# Here, manually create in the Viewer an additional label ("3" in this case)
+# We can have an estimation of background intensity with the "0" label or create a specific background label.\
+# **Napari GUI** Using the `layer controls` for the `labels` layer, manually create an additional label ("3" in this case) that measures the background.
 
 # %%
 objects_labels = np.unique(labels.flatten())
