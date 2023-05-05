@@ -30,6 +30,7 @@ multiactivities:
   - ["pixels/pixels_act1.md", [["ImageJ GUI", "pixels/pixels_act1_imagejgui.md", "markdown"], 
   ["skimage napari", "pixels/pixels_act1_skimage_napari.py", "python"], 
   ["MATLAB", "pixels/pixels_act1_matlab.m", "matlab"]]]
+  - ["pixels/pixels_act2.md", [["skimage napari", "pixels/pixels_act2_skimage_napari.py", "python"]]]
 
 exercises:
 

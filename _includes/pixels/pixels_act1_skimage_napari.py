@@ -1,9 +1,9 @@
 # %% [markdown]
 # ## Inspect a 2D image
-# To follow along for the plot profile you require a napari plugin.
-# Install napari-plot-profile in your course activated conda environment.
-# `conda activate skimage-napari-tutorial`
-# `pip install napari-plot-profile`
+# To follow along for the plot profile you require a napari plugin. \
+# Install napari-plot-profile in your course activated conda environment.\
+# `conda activate skimage-napari-tutorial` \
+# `pip install napari-plot-profile` 
 
 # %%
 # Load the image
@@ -21,11 +21,11 @@ napari_viewer = Viewer()
 napari_viewer.add_image(image)
 
 # %% [markdown]
-# Alternative loading of data
-# **Napari GUI** drag and drop 
-# rename the layer for convenience
-# `napari_viewer.layers[0].name = 'image'`     
-# Get the data as numpy array
+# Alternative loading of data\
+# **Napari GUI** drag and drop image from browser \ 
+# rename the layer for convenience \
+# `napari_viewer.layers[0].name = 'image'` \     
+# Get the data as numpy array \
 # `image = napari_viewer.layers['image'].data` 
 
 # %%
