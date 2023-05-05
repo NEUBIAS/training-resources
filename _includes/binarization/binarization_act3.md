@@ -1,4 +1,4 @@
-#### Threshold above background
+<h4 id="abovebackground"><a href="#abovebackground">Threshold above background</a></h4>
 
 Here we set the threshold value `t` as a value x-times above the background + noise. 
 
