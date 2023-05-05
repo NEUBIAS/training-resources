@@ -21,13 +21,13 @@ labels, axes_labels, voxel_labels, units_labels = open_ij_tiff(fpath)
 # Create a napari_viewer and visualize image and labels
 napari_viewer = Viewer()
 napari_viewer.add_image(image, name='image')
-napari_viewer.add_labels(labels, name='objects')
+napari_viewer.add_labels(labels, name='labels')
 
 # %% [markdown]
 # ## Compute the intensities 
 # ### Background label  
-# We can have an estimation of background intensity with the "0" label.\
-# Here, manually create in the Viewer an additional label ("3" in this case)
+# We can have an estimation of background intensity with the "0" label or create a specific background label.\
+# **Napari GUI** Using the `layer controls` for the `labels` layer, manually create an additional label ("3" in this case) that measures the background.
 
 # %%
 objects_labels = np.unique(labels.flatten())
@@ -61,9 +61,9 @@ print(background)
 # %%
 # Append the background-corrected values to the table
 fluo_measures['intensity_sum'] = fluo_measures.intensity_mean * fluo_measures.area
-fluo_measures['mean_corr'] = fluo_measures.intensity_mean - background
-fluo_measures['max_corr'] = fluo_measures.intensity_max - background
-fluo_measures['sum_corr'] = fluo_measures.mean_corr * fluo_measures.area
+fluo_measures['intensity_mean_corr'] = fluo_measures.intensity_mean - background
+fluo_measures['intensity_max_corr'] = fluo_measures.intensity_max - background
+fluo_measures['intensity_sum_corr'] = fluo_measures.intensity_mean_corr * fluo_measures.area
 print(fluo_measures)
 
 # %%
@@ -82,7 +82,7 @@ print(objects_labels)
 
 # %%
 # Display the labels 
-napari_viewer.add_labels(dilated_labels, name='dilated_objects')
+napari_viewer.add_labels(dilated_labels, name='dilated_labels')
 
 # %%
 # Use the intensity_image to compute the fluorescence parameters
@@ -97,9 +97,11 @@ fluo_measures_dilated = pd.DataFrame(
 # %%
 # Append the background-corrected values to the table using the same background
 fluo_measures_dilated['intensity_sum'] = fluo_measures_dilated.intensity_mean * fluo_measures_dilated.area
-fluo_measures_dilated['mean_corr'] = fluo_measures_dilated.intensity_mean - background
-fluo_measures_dilated['max_corr'] = fluo_measures_dilated.intensity_max - background
-fluo_measures_dilated['sum_corr'] = fluo_measures_dilated.mean_corr * fluo_measures_dilated.area
+fluo_measures_dilated['intensity_mean_corr'] = fluo_measures_dilated.intensity_mean - background
+fluo_measures_dilated['intensity_max_corr'] = fluo_measures_dilated.intensity_max - background
+fluo_measures_dilated['intensity_sum_corr'] = fluo_measures_dilated.intensity_mean_corr * fluo_measures_dilated.area
 # Export the data
 fluo_measures_dilated.to_csv("object_measurements_dilated.csv")
 print(fluo_measures_dilated)
+
+# %%
