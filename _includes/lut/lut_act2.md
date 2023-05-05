@@ -1,4 +1,4 @@
-#### Configure LUTs
+<h4 id="configure"><a href="#configure">Configure LUTs</a></h4>
 Open those two image:
 - [xy_calibrated_16bit__nuclear_protein_control.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_calibrated_16bit__nuclear_protein_control.tif)
 - [xy_calibrated_16bit__nuclear_protein_treated.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_calibrated_16bit__nuclear_protein_treated.tif)

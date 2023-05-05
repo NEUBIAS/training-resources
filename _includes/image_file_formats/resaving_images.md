@@ -1,4 +1,4 @@
-#### Resave images in various file formats
+<h4 id="save"><a href="#save">Resave images in various file formats</a></h4> 
 
 Resaving images in different file formats very often leads to a loss of metadata or distortion of the pixel values. It is critical to be aware of this!
 
