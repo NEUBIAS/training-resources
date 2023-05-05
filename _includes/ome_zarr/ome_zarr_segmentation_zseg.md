@@ -17,7 +17,7 @@ In this command, the `-r` flag ensures that the input path is searched at the s3
 ```
 zseg threshold -r -m otsu -c 1 -ch 1 -n otsu-c1-ch1 --colormap viridis ome-zarr-course/data/ZARR/$USER/23052022_D3_0002_positiveCTRL.ome.zarr;
 ```
-Note that the `-c` argument has been changed.
+Note that the `-ch` argument has been changed.
 
 **Have a look at the segmented data** 
 ```
