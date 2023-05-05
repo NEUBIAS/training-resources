@@ -60,7 +60,7 @@ module_order:
 - batch_processing
 - script_functions
 - fetching_user_input
-- ome_zarr_s3
+- ome_zarr
 - correlative_image_rendering
 
 # Sites
