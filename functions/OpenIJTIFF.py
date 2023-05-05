@@ -68,7 +68,7 @@ def open_ij_tiff(fpath: [str, Path],
             voxel_sizes['z'] = image_metadata['spacing']
             voxel_units['z'] = image_metadata['unit']
         else:
-            print("Z scaling missing; Setting to 1 pixel.")
+            print("Z scaling missing or is exactly 1 spatial unit; Setting to 1 pixel.")
             voxel_sizes['z'] = 1
             voxel_units['z'] = 'Slice'
     # get time information
