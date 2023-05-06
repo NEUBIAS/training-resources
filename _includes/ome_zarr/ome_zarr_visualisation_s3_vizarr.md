@@ -11,5 +11,3 @@ https://hms-dbmi.github.io/vizarr/?source=https://s3.embl.de/ome-zarr-course/dat
     - 3D EM data: https://hms-dbmi.github.io/vizarr/?source=https://s3.embl.de/ome-zarr-course/data/ZARR/$USER/xyz_8bit_calibrated__fib_sem_crop.ome.zarr
     - A well from an HCS plate: https://hms-dbmi.github.io/vizarr/?source=https://s3.embl.de/eosc-future/EUOS/testdata.zarr/A/1
 
-
-Optional: practise vizarr with other self-created OME-Zarrs. 
