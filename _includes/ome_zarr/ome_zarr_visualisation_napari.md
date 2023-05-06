@@ -17,4 +17,4 @@ napari --plugin napari-ome-zarr ~/data/ZARR/xyzct_8bit__mitosis.ome.zarr
 ```
 napari --plugin napari-ome-zarr https://s3.embl.de/i2k-2020/platy-raw.ome.zarr
 ```
-Note that compared to big-data-viewer, there are more delays.
+Note that compared to BigDataViewer, there are more delays with Napari.
