@@ -24,33 +24,15 @@ concept_map: >
 figure: /figures/local_background_correction.png
 figure_legend: Local background correction using a median filter. Left - Raw data. Middle - Median filtered image (background). Right - Difference image (foreground).
 
-activity_preface: |
-  - Activity 1 - Background subtraction using a median filter.
-    - Open image [xy_8bit__some_spots_with_uneven_bg](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__some_spots_with_uneven_bg.tif)
-    - Compute a background image using a median filter
-    - Create a foreground image by subtracting the background image from the input image
-    - (Optional) Segment the spots in the foreground image.
-  - Activity 2 - Background subtraction using a maximum intensity projection.
-    - Open image [xyt_8bit_polyp](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyt_8bit_polyp.tif)
-    - Create a maximum intensity projection of this image.
-      - Because the polyp is moving around and is darker than the background this will create a background image.
-    - Create a foreground image by subtracting the maximum intensity projection from the original image.
-
-activities:
-  - ["Activity 1 ImageJ GUI", "local_background_correction/activities/local_background_correction_imagejgui.md", "markdown"]
-  - ["Activity 1 ImageJ Macro", "local_background_correction/activities/local_background_correction_imagejmacro.ijm", "java"]
-  - ["Activity 2 ImageJ GUI", "local_background_correction/activities/local_background_correction_activity2_gui.md", "markdown"]
-  - ["Activity 2 ImageJ Macro", "local_background_correction/activities/local_background_correction_activity2_macro.ijm", "java"]
-  - ["Activity 2 ImageJ Jython", "local_background_correction/activities/local_background_correction_activity2_jython.py", "python"]
-
 multiactivities:
-  - ["median_filter/median_filter.md", [["Activity 1 ImageJ GUI", "local_background_correction/local_background_correction_imagejgui.md", "markdown"],
-					["Activity 1 ImageJ Macro", "local_background_correction/local_background_correction_imagejmacro.ijm", "java"],
-					["Activity 1 skimage napari", "local_background_correction/local_background_correction_activity1_skimage_napari.py", "python"],					
-					["Activity 2 ImageJ GUI", "local_background_correction/local_background_correction_activity2_gui.md", "markdown"],
-					["Activity 2 ImageJ Macro", "local_background_correction/local_background_correction_activity2_macro.ijm", "java"],
-					["Activity 2 ImageJ Jython", "local_background_correction/local_background_correction_activity2_jython.py", "python"],
-					["Activity 2 skimage napari", "local_background_correction/local_background_correction_activity2_skimage_napari.py", "python"]]]
+- ["local_background_correction/background _subtraction_act1.md", [["Activity 1 ImageJ GUI", "local_background_correction/local_background_correction_imagejgui.md", "markdown"],
+					                           ["Activity 1 ImageJ Macro", "local_background_correction/local_background_correction_imagejmacro.ijm", "java"],
+					                           ["Activity 1 skimage napari", "local_background_correction/local_background_correction_activity1_skimage_napari.py", "python"]]]
+					
+- ["local_background_correction/background _subtraction_act2.md", [["Activity 2 ImageJ GUI", "local_background_correction/local_background_correction_activity2_gui.md", "markdown"],
+					                           ["Activity 2 ImageJ Macro", "local_background_correction/local_background_correction_activity2_macro.ijm", "java"],
+					                           ["Activity 2 ImageJ Jython", "local_background_correction/local_background_correction_activity2_jython.py", "python"],
+					                           ["Activity 2 skimage napari", "local_background_correction/local_background_correction_activity2_skimage_napari.py", "python"]]]
 
 exercise_preface: |
 
