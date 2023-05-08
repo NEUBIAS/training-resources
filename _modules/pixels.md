@@ -27,15 +27,8 @@ figure_legend:  Digital image pixel array and gray-scale rendering. This array (
 
 
 multiactivities:
-  - ["pixels/pixels_act1.md", [["ImageJ GUI", "pixels/pixels_act1_imagejgui.md", "markdown"], 
-  ["skimage napari", "pixels/pixels_act1_skimage_napari.py", "python"], 
-  ["MATLAB", "pixels/pixels_act1_matlab.m", "matlab"]]]
-  - ["pixels/pixels_act2.md", [["skimage napari", "pixels/pixels_act2_skimage_napari.py", "python"]]]
-  - ["pixels/pixels_act3.md", [["skimage napari", "pixels/pixels_act3_skimage_napari.py", "python"]]]
-  - ["pixels/pixels_act4.md", [["skimage napari", "pixels/pixels_act4_skimage_napari.py", "python"]]]
-
-exercises:
-
+  - ["pixels/pixels_act1.md", [["ImageJ GUI", "pixels/pixels_act1_imagejgui.md", "markdown"], ["skimage napari", "pixels/pixels_act1_skimage_napari.py", "python"], ["MATLAB", "pixels/pixels_act1_matlab.m", "matlab"]]]
+  
 assessment: >
 
   ### 2-D image inspection
@@ -75,6 +68,7 @@ exercises:
 learn_next:
    - "[Lookup tables](../lut)"
    - "[Spatial calibration](../spatial_calibration)"
+   - "[N-dimensional images](../multidimensional_image_basics)"
    - "[Data types](../datatypes)"
 
 external_links:

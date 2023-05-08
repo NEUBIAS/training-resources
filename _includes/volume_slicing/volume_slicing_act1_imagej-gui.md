@@ -1,0 +1,17 @@
+- **[File > Open...]** [xyz_16bit_t1-head.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_16bit_t1-head.tif)
+- **[Image > Stacks > Orthogonal views]** or press **CTRL+SHIFT+H** to explore the data in XY, XZ and YZ view. 
+- Scroll to z-slice 60 and **[Image > Duplicate]** to duplicate the image. 
+    - [ ]  `Duplicate stack`
+- Use the line tool to draw a straight vertical line (hold down SHIFT) at X=135 and go to **[Image > Stacks > Reslice [/]...]** or press **/** to open the Reslice menu.
+    - [X] `Rotate 90 degrees (optional)`
+    - [X] `avoid interpolation`
+- Use the line tool to draw a straight horizontal line (hold down SHIFT) at Y=160 and go to **[Image > Stacks > Reslice [/]...]** or press **/** to open the Reslice menu.
+    - [X] `Rotate 90 degrees (optional)`
+    - [X] `avoid interpolation` 
+- Use the line tool to draw a diagonal line from the bottom left to the right top corner and go to **[Image > Stacks > Reslice [/]...]** or press **/** to open the Reslice menu.
+    - [X] `Rotate 90 degrees (optional)`
+    - [X] `avoid interpolation` 
+- Alternatively, you can also slice the data at arbitrary angles using **[Plugins > BigDataViewer > Open Current Image]**
+    - `Shift-X/Y/Z`: slice along x,y,z.
+    - `Left button drag`: slice along arbitray plane
+    - `I`: toggle interpolation

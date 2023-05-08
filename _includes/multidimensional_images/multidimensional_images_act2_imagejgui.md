@@ -1,0 +1,6 @@
+- Open the 3D multi-channel image [xyzc_8bit_beads_p_open.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyzc_8bit_beads_p_open.tif).
+  - Use the sliders to explore different dimensions in the data, and observe that the image has 4 dimensions, X, Y, Z, and C (channel).
+  - Use **[ Image > Adjust > Brightness/Contrast...]** to adjust the display settings of the individual channels.
+  - Explore different viewing modes, using **[ Image > Color > Channels Tool... ]**.
+  - Explore the voxel dimensions, using **[ Image > Properties... ]** or **[Ctrl-Shift-P]**.
+    - Observe that the voxel dimensions are anisotropic.
