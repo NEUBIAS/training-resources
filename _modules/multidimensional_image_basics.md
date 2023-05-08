@@ -2,7 +2,7 @@
 title:     N-dimensional images
 layout:    module
 prerequisites:
-  - "[Basic properties of images and pixels](../pixels)"
+  - "[Digital image basics](../pixels)"
   - "[Spatial calibration](../spatial_calibration)"
 objectives:
 - "Explore and view the different dimensions image data can have."
@@ -24,13 +24,17 @@ figure: /figures/multi_dimensional_image.png
 figure_legend: Schematic representation of 2D, 3D, and 5D image data. 2D images are made up of tiny squares called pixels, whereas 3D images are made up of cubes called voxels.
 
 multiactivities:
-  - ["multidimensional_images/multidimensional_images_act1.md", [["ImageJ GUI", "multidimensional_images/multidimensional_images_act1_imagejgui.md", "markdown"], ['Napari GUI/Python', multidimensional_images/multidimensional_images_act1_napari.md]]]
-  - ["multidimensional_images/multidimensional_images_act2.md", [["ImageJ GUI", "multidimensional_images/multidimensional_images_act2_imagejgui.md", "markdown"], ['Napari GUI/Python', multidimensional_images/multidimensional_images_act2_napari.md]]]
-  - ["multidimensional_images/multidimensional_images_act3.md", [["ImageJ GUI", "multidimensional_images/multidimensional_images_act3_imagejgui.md", "markdown"], ['Napari GUI/Python', multidimensional_images/multidimensional_images_act3_napari.md]]]
+  - ["multidimensional_images/multidimensional_images_act1.md", [["ImageJ GUI", "multidimensional_images/multidimensional_images_act1_imagejgui.md", "markdown"], 
+  ['Napari GUI/Python', multidimensional_images/multidimensional_images_act1_napari.md], ["skimage napari", multidimensional_images/multidimensional_images_act1_skimage_napari.py]]]
+  - ["multidimensional_images/multidimensional_images_act2.md", [["ImageJ GUI", "multidimensional_images/multidimensional_images_act2_imagejgui.md", "markdown"], 
+  ['Napari GUI/Python', multidimensional_images/multidimensional_images_act2_napari.md], ["skimage napari", multidimensional_images/multidimensional_images_act2_skimage_napari.py]]]
+  - ["multidimensional_images/multidimensional_images_act3.md", [["skimage napari", multidimensional_images/multidimensional_images_act3_skimage_napari.py]]]
+  - ["multidimensional_images/multidimensional_images_act4.md", [["ImageJ GUI", "multidimensional_images/multidimensional_images_act4_imagejgui.md", "markdown"], 
+  ['Napari GUI/Python', multidimensional_images/multidimensional_images_act4_napari.md],["skimage napari", multidimensional_images/multidimensional_images_act4_skimage_napari.py]]]
 
 assessment: >
 
-  ### Fill in the blanks
+  ### Fill in the blanks with slices, anisotropic, deformed, stack
 
     1. A set of 2D \_\_\_\_ placed on top of each other form a 3D \_\_\_\_.
     2. An \_\_\_\_ voxel size can cause the image to appear \_\_\_\_ when viewing it at an angle.
@@ -50,7 +54,7 @@ assessment: >
     {: .solution}
 
 learn_next:
-  - "[Projections of 3D data](../projections)"
-  - "[3D slicing](../volume_slicing)"
-  - "[Volume viewer](../volume_viewer)"
+  - "[Projections](../projections)"
+  - "[Volume subsetting and slicing](../volume_slicing)"
+  - "[Volume rendering](../volume_viewer)"
 ---
