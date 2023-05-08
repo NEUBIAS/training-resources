@@ -31,22 +31,13 @@ concept_map: >
 figure: /figures/connected_components.png
 figure_legend:
 
-activity_preface: >
-  1. 2D connected component labeling:
-    - Open image [xy_8bit_binary__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__nuclei.tif).
-    - Create a label image by means of 4-connected connected components labeling. 
-    - Apply a multi-color LUT.
-    - Repeat with 8-connected labeling and discuss the difference.
-  2. 3D connected component labeling:
-    - Open image [xyz_8bit_binary__spots.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit_binary__spots.tif) 
-    - Inspect the pixel values of the label image and see what you can learn about the objects that are encoded in this image.
-
-activities:
-  - ["ImageJ MorpholibJ Macro & GUI", "connected_components/activities/connected_components_imagejmacro.ijm", java]
-  - ["skimage napari", "connected_components/activities/connected_components_skimage_napari.py", python]
-
-exercises:
-  - ["ImageJ MorpholibJ Macro & GUI", "connected_components/exercises/connected_components_imagejmacro.md"]
+multiactivities:
+  - ["connected_components/connected_components_act1.md", [["ImageJ MorpholibJ Macro & GUI", "connected_components/connected_components_act1_imagejmacro.ijm", java], 
+	["skimage napari", "connected_components/connected_components_act1_skimage_napari.py", python], ["Knime", "connected_components/connected_components_act1_knime.md"]]]
+  - ["connected_components/connected_components_act2.md", [["ImageJ MorpholibJ Macro & GUI", "connected_components/connected_components_act2_imagejmacro.ijm", java], 
+	["skimage napari", "connected_components/connected_components_act2_skimage_napari.py", python]]]
+  - ["connected_components/connected_components_act3.md",  [["ImageJ MorpholibJ Macro & GUI", "connected_components/connected_components_act3_imagejmacro.ijm"], 
+  ["skimage napari", "connected_components/connected_components_act3_skimage_napari.py", python]]]
 
 
 
@@ -71,17 +62,16 @@ assessment: >
     {: .solution}
 
 learn_next:
-#  - "[Split touching objects](object_splitting)"
-#  - "[Measure object shapes](measure_shapes)"
+   - "[Measure object shapes](measure_shapes)"
 external_links:
   - "[Wikipedia: Connected components labeling](https://en.wikipedia.org/wiki/Connected-component_labeling)"
 ---
 
-# Connected components
 
-A typical workflow is to first categorise an image into background and foreground regions, which can be represented as a binary image. If there are more than one object of interest, cluster of pixels which are spatially connected to each other can be assigned a same pixel value. Such clusters in the segmented image can be called as connected components. The relation between two or more pixels is described by its connectivity. The next step is a connected components labeling, where spatially connected regions of foreground pixels are assigned (labeled) as being part of one region (object).
+Typically, one first categorise an image into background and foreground regions, which can be represented as a binary image. Such clusters in the segmented image are called connected components. The relation between two or more pixels is described by its connectivity. The next step is a connected components labeling, where spatially connected regions of foreground pixels are assigned (labeled) as being part of one region (object).
 
-# Connectivity
+<img src="../figures/connected_components_connectivity2D.png"  align ="left" width="50%" >
+<img src="../figures/connected_components_connectivity3D.png"  align ="right" width="50%">
 
 In an image, pixels are ordered in a squared configuration. 
 
@@ -98,5 +88,4 @@ This leads to the following equivalent nomenclatures:
 - 3D: 1 connectivity = 6 connectivity
 - 3D: 2 connectivity = 26 connectivity
 
-<img src="../figures/connected_components_connectivity2D.png"  align ="left" width="50%" >
-<img src="../figures/connected_components_connectivity3D.png"  align ="right" width="50%">
+

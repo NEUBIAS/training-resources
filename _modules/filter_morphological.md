@@ -38,33 +38,10 @@ concept_map: >
      
     
 figure: /figures/filter_morphological.png
-figure_legend: A dilation and erosion using a 3x3 structuring element (left side). Morphological filters applied in series, e.g. opening and closing, can achieve very useful results (right side). 
-
-activity_preface: |
-
- Perform some or all of the activities below
-
- * Dilation and Erosion of binary
-    * Open [xy_8bit_binary__two_spots_different_size.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__two_spots_different_size.tif) 
-    * explore erosion and dilation 
-    * explore how structures grow and shrink depending on the size of the structuring element
- 
- * Opening and closing of binary
-    * Open [xy_8bit_binary__for_open_and_close.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__for_open_and_close.tif)
-    * Perform erosion followed by dilation - opening. Explains it effects in removing thin structures, smoothing borders. If applicable show that opening runs as single command.
-    * Perform dilation followed by erosion - closing. Explains it effects on filling small holes, connecting gaps. If applicable show that opening runs as single command.
+figure_legend: A dilation and erosion using a 3x3 structuring element (left side). Morphological filters applied in series, e.g. opening and closing, can achieve very useful results (right side).  
   
- * Morphological internal gradient of binary
-    * Open [xy_8bit_binary__h2b.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__h2b.tif)
-    * Perform an erosion
-    * Subtract eroded image from binary image and discuss the results (Internal Gradient)
-    * If applicable show where the morphological gradient runs as a single command
- 
-  
-activities: 
- - ["ImageJ Macro & GUI: Dilation and erosion", "filter_morphological/activities/filter_morphological_dilation_erosion.ijm", "java"]
- - ["ImageJ Macro & GUI: Closing and opening", "filter_morphological/activities/filter_morphological_opening_closing.ijm", "java"]
- - ["ImageJ Macro & GUI: Internal Gradient", "filter_morphological/activities/filter_morphological_inner_gradient.ijm", "java"]
+multiactivities: 
+ - ["filter_morphological/activities/filter_morphological.md", [["ImageJ Macro & GUI: Dilation and erosion", "filter_morphological/activities/filter_morphological_dilation_erosion.ijm", "java"],["ImageJ Macro & GUI: Closing and opening", "filter_morphological/activities/filter_morphological_opening_closing.ijm", "java"], ["ImageJ Macro & GUI: Internal Gradient", "filter_morphological/activities/filter_morphological_inner_gradient.ijm", "java"], ["skimage napari", "filter_morphological/activities/filter_morphological_skimage_napari.py", "python"]]]
   
 exercise_preface: |
   ### Measure intensity on the nuclear membrane

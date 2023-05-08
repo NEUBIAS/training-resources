@@ -19,23 +19,9 @@ concept_map: >
 figure: /figures/auto_threshold.png
 figure_legend: Input images, histograms (Huang threshold - blue, Otsu threshold - orange),  binary images (Huang), binary images (Otsu).
 
-activity_preface: |
-  - Manual vs. auto thresholding
-    - Open [xy_8bit__nuclei_without_offset.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_without_offset.tif) and [xy_8bit__nuclei_with_offset.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_with_offset.tif)
-    - Explore the differences in doing manual and auto thresholding
-
-
-activities:
-- ["ImageJ GUI", "auto_threshold/activities/auto_threshold_imagejgui.md", "markdown"]
-- ["skimage napari", "auto_threshold/activities/auto_threshold_skimage_napari.py", "python"]
-
-exercise_preface: |
-  - Auto thresholding on image stack
-    - Open [xyz_8bit__nuclei_autothresh.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit__nuclei_autothresh.tif)
-    - Select any threshold method and observe the differences in segmentation when you use the histogram computed from all images in 3D stack      
-
-exercises:
-- ["ImageJ GUI", "auto_threshold/exercises/auto_threshold_imagejgui.md", "markdown"]
+multiactivities:
+  - ["auto_threshold/auto_threshold_act1.md", [["ImageJ GUI", "auto_threshold/auto_threshold_act1_imagejgui.md", "markdown"], ["skimage napari", "auto_threshold/auto_threshold_act1_skimage_napari.py", "python"]]]
+  - ["auto_threshold/auto_threshold_act2.md", [["ImageJ GUI", "auto_threshold/auto_threshold_act2_imagejgui.md", "markdown"], ["skimage napari", "auto_threshold/auto_threshold_act2_skimage_napari.py", "python"]]]
 
 assessment: >
 
