@@ -43,6 +43,15 @@ activities:
   - ["Activity 2 ImageJ Macro", "local_background_correction/activities/local_background_correction_activity2_macro.ijm", "java"]
   - ["Activity 2 ImageJ Jython", "local_background_correction/activities/local_background_correction_activity2_jython.py", "python"]
 
+multiactivities:
+  - ["median_filter/median_filter.md", [["Activity 1 ImageJ GUI", "local_background_correction/local_background_correction_imagejgui.md", "markdown"],
+					["Activity 1 ImageJ Macro", "local_background_correction/local_background_correction_imagejmacro.ijm", "java"],
+					["Activity 1 skimage napari", "local_background_correction/local_background_correction_activity1_skimage_napari.py", "python"],					
+					["Activity 2 ImageJ GUI", "local_background_correction/local_background_correction_activity2_gui.md", "markdown"],
+					["Activity 2 ImageJ Macro", "local_background_correction/local_background_correction_activity2_macro.ijm", "java"],
+					["Activity 2 ImageJ Jython", "local_background_correction/local_background_correction_activity2_jython.py", "python"],
+					["Activity 2 skimage napari", "local_background_correction/local_background_correction_activity2_skimage_napari.py", "python"]]]
+
 exercise_preface: |
 
   - Spots in a cell
