@@ -18,7 +18,7 @@ figure: /figures/template.png
 figure_legend: TODO
 
 multiactivities:
-  - ["spatial_calibration/activities/spatial_calibration.md", [["ImageJ GUI", "spatial_calibration/activities/spatial_calibration_imagejgui.md", "markdown"], ["skimage napari", "spatial_calibration/activities/spatial_calibration_skimage_napari.py", "python"]]]
+  - ["template/act01.md", [["ImageJ GUI", "template/act01_imagejgui.md"], ["skimage napari", "template/act01_skimage_napari.py"]]]
 
 assessment: >
 
