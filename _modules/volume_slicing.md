@@ -1,30 +1,30 @@
 ---
-title:     Slice viewing
+title:     Volume subsetting and slicing
 layout:    module
 prerequisites:
   - "[Basic properties of images and pixels](../pixels)"
   - "[Spatial calibration](../spatial_calibration)"
+  - "[N-dimensional data](../multidimensional_image_basics)"
 objectives:
-- "Describe the different dimensions image data can have."
-- "View and slice images in different dimensions."
+- "Slice 3D image stacks"
+- "Subset a multidimensional image to create a new image that is smaller or has fewer dimensions"
+
 motivation: |
-  Apart from the X and Y dimensions, visible in the width and height of an image, image data can have additional dimensions. The most common additional dimensions include:
-  - the Z dimension, providing depth to image data,
-  - different channels, showing data recorded with different detectors or detector settings,
-  - the time dimension.
-  Viewing such multi-dimensional data is challenging, because a computer monitor can only render a (multi-color) 2D representation of such data. Thus it is important to learn how to efficiently visualise subsets ("slices") of such high-dimensional data.
+   In some cases, you may only want to focus on a particular part of a multidimensional image, such as a specific time point or region in space. To achieve this, you can subset the image, which means reducing it to fewer dimensions or selecting only certain parts of the existing dimensions. One special way to do this is through slicing: selecting a 2D slice from a 3D volume.
 
 concept_map: >
   graph TD
+    ND("N-dimensional image") --> SS("Subset")
+    SS("Subset") --> SI("Partial N-dimensional image")
     ND("N-dimensional image") --> S("Slice")
     S --> M("2D image")
 
-figure: /figures/volume_slicing.png
-figure_legend: Schematic representation of 2D, 3D, and 5D image data. 2D images are made up of tiny squares called pixels, whereas 3D images are made up of cubes called voxels. Pixels and voxels are not necessarily isotropic, as shown here by squares versus rectangles. In order to see a different part of the image data on a 2D monitor, the image has to be sliced and sometimes rotated.
+figure: /figures/volume_slicing_subsetting.png
+figure_legend: (Left) Subsetting a 3D volume results in a smaller 3D or 2D image. (Right) Slicing a 3D volume is a form of subsetting that results in a 2D slice. 
 
 multiactivities:
-  - ["volume_slicing/volume_slicing_act1.md", [["ImageJ GUI", "volume_slicing/volume_slicing_act1_imagejgui.md", "markdown"], ["ImageJ Macro", "volume_slicing/volume_slicing_act1_imagejmacro.ijm", "java"], ["ImageJ Jython", "volume_slicing/volume_slicing_act1_imagejpython.py", "python"]]]
-  - ["volume_slicing/volume_slicing_act2.md", [["ImageJ GUI", "volume_slicing/volume_slicing_act2_imagejgui.md", "markdown"], ["ImageJ Macro", "volume_slicing/volume_slicing_act2_imagejmacro.ijm", "java"], ["ImageJ Jython", "volume_slicing/volume_slicing_act2_imagejpython.py", "python"]]]
+  - ["volume_slicing/volume_slicing_act1.md", [["ImageJ GUI", "volume_slicing/volume_slicing_act1_imagej-gui.md", "markdown"], ["ImageJ Macro", "volume_slicing/volume_slicing_act1_imagej-macro.ijm", "java"], ["ImageJ Jython", "volume_slicing/volume_slicing_act1_imagej-jython.py", "python"]]]
+  - ["volume_slicing/volume_slicing_act2.md", [["ImageJ GUI", "volume_slicing/volume_slicing_act2_imagej-gui.md", "markdown"], ["ImageJ Macro", "volume_slicing/volume_slicing_act2_imagej-macro.ijm", "java"], ["ImageJ Jython", "volume_slicing/volume_slicing_act2_imagej-jython.py", "python"]]]
 
 assessment: >
 

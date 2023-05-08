@@ -25,21 +25,10 @@ concept_map: >
 figure: /figures/pixels.jpg
 figure_legend:  Digital image pixel array and gray-scale rendering. This array (image) has two dimensions with 21 x 21 elements (pixels). The pixel values (black numbers) can be addressed by their respective pixel indices (green numbers).
 
-activity_preface: |
-  - Open image: [xy_8bit__nuclei_noisy_different_intensity.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_different_intensity.tif)
-  - Explore different ways to inspect pixel values and indices, e.g.,
-    - Examine image dimensions
-    - Examine individual (or a range of) pixel values
-    - Plot line profiles
-    - Compute and plot pixel value histograms
 
-activities:
-  - ["ImageJ GUI", "pixels/activities/pixels_imagejgui.md", "markdown"]
-  - ["MATLAB", "pixels/activities/pixels2D_matlab.m", "matlab"]
-  - ["skimage napari", "pixels/activities/pixels_skimage_napari.py", "python"]
-
-exercises:
-
+multiactivities:
+  - ["pixels/pixels_act1.md", [["ImageJ GUI", "pixels/pixels_act1_imagejgui.md", "markdown"], ["skimage napari", "pixels/pixels_act1_skimage_napari.py", "python"], ["MATLAB", "pixels/pixels_act1_matlab.m", "matlab"]]]
+  
 assessment: >
 
   ### 2-D image inspection
@@ -79,6 +68,7 @@ exercises:
 learn_next:
    - "[Lookup tables](../lut)"
    - "[Spatial calibration](../spatial_calibration)"
+   - "[N-dimensional images](../multidimensional_image_basics)"
    - "[Data types](../datatypes)"
 
 external_links:

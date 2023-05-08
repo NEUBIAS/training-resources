@@ -22,6 +22,7 @@ module_order:
 - image_formation_confocal
 - lut
 - spatial_calibration
+- multidimensional_image_basics
 - datatypes
 - image_file_formats
 - big_image_file_formats
@@ -60,7 +61,7 @@ module_order:
 - batch_processing
 - script_functions
 - fetching_user_input
-- ome_zarr_s3
+- ome_zarr
 - correlative_image_rendering
 
 # Sites

@@ -17,18 +17,11 @@ concept_map: >
     T -->|require| S("Installation")
 
 figure: /figures/tool_installation.png
-figure_legend:
+figure_legend: Screenshot of the community partners of https://forum.image.sc, containing many very useful bioimage analysis tools.
 
-activity_preface:
-
-activities:
-  - ["ImageJ GUI", "tool_installation/activities/tool_installation_imagej.md", "markdown"]
-  - ["ImageJ Macro", "tool_installation/activities/tool_installation_imagej.md", "markdown"]
-  - ["ImageJ Jython", "tool_installation/activities/tool_installation_imagej.md", "markdown"]
-  - ["skimage napari", "tool_installation/activities/tool_installation_napari.md", "markdown"]
-  - ["MATLAB", "tool_installation/activities/tool_installation_MATLAB.md", "markdown"]
-
-exercises:
+multiactivities:
+  - ["tool_installation/imagej.md", [["Fiji", "tool_installation/install_fiji.md"], ["IntelliJ", "tool_installation/install_intellij.md"] ]]
+  - ["tool_installation/skimage_napari.md", [["conda", "tool_installation/install_skimage_napari_conda.md"], ["BAND", "tool_installation/install_skimage_napari_BAND.md"] ]]
 
 assessment:
 
