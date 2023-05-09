@@ -34,19 +34,6 @@ multiactivities:
 					                           ["Activity 2 ImageJ Jython", "local_background_correction/local_background_correction_activity2_jython.py", "python"],
 					                           ["Activity 2 skimage napari", "local_background_correction/local_background_correction_activity2_skimage_napari.py", "python"]]]
 
-exercise_preface: |
-
-  - Spots in a cell
-    - Open [xy_16bit__autophagosomes_crop.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit__autophagosomes_crop.tif)
-    - Create a background image by duplicating the input image and applying a median filter to it.
-      - Choose the radius of the median filter just large enough such that the bright spots dissappear.
-    - Create the foreground image by subtracting the background image from the input image.
-      - You should see an image with the bright spots, now without the uneven background.
-
-exercises:
-  - ["ImageJ GUI", "local_background_correction/exercises/local_background_correction_imagejgui.md"]
-  - ["ImageJ Macro", "local_background_correction/exercises/local_background_correction_imagejmacro.ijm"]
-
 assessment: |
 
   ### True or false?
