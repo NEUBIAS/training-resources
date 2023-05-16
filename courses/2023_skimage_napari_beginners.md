@@ -56,8 +56,9 @@ Afternoon sessions (in person at your institute, rooms will be announced)
 1. [Digital image basics](https://neubias.github.io/training-resources/pixels/index.html)
 1. [Lookup tables](https://neubias.github.io/training-resources/lut/index.html)
 1. [Spatial image calibration](https://neubias.github.io/training-resources/spatial_calibration/index.html) 
-1. [Image data types](https://neubias.github.io/training-resources/datatypes/index.html) 
-1. [Image projections](https://neubias.github.io/training-resources/projections/index.html)
+2. [N-dimensional images](https://neubias.github.io/training-resources/multidimensional_image_basics/index.html)
+3. [Image data types](https://neubias.github.io/training-resources/datatypes/index.html) 
+4. [Image projections](https://neubias.github.io/training-resources/projections/index.html)
 
 ### Image analysis basics (day 2)
 
