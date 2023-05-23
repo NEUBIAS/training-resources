@@ -50,11 +50,11 @@
 
 To execute the below steps you need to open a terminal window:
 
-![terminal](/training-resources/figures/BAND_Terminal.png)
+![terminal](/figures/BAND_Terminal.png)
 
 ...and you also need to open an Application:
 
-![applications](../figures/BAND_Applications.png)
+![applications](/figures/BAND_Applications.png)
 
 
 1. Open a Terminal and execute
