@@ -54,7 +54,7 @@ To execute the below steps you need to open a terminal window:
 
 ...and you also need to open an Application:
 
-![applications](/training-resources/figures/BAND_Applications.png)
+![applications](../figures/BAND_Applications.png)
 
 
 1. Open a Terminal and execute
