@@ -1,11 +1,13 @@
 import numpy as np
+
 # Instantiate the napari viewer
 import napari
 viewer = napari.Viewer()
+
 # Read the intensity image
 from OpenIJTIFF import open_ij_tiff
-
 image, axes, scales, units = open_ij_tiff('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__some_spots_with_uneven_bg.tif')
+
 # View the intensity image
 viewer.add_image(image, name='original image')
 
