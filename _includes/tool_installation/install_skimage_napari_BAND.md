@@ -62,7 +62,7 @@ To execute the below steps you need to open a terminal window:
         - cd Documents # go to the Document folder
         - mkdir skimage-napari-tutorial # create a folder called skimage-napari-tutorial
         - cd skimage-napari-tutorial
-        - wget [https://neubias.github.io/training-resources/functions/OpenIJTIFF.py]()
+        - wget https://neubias.github.io/training-resources/functions/OpenIJTIFF.py
 
 2. Go to "Applications Places->Programming->JupyterLab". Select 'napari.tensorflow' Kernel
 
