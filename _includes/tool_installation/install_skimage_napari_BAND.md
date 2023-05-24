@@ -54,7 +54,7 @@ To execute the below steps you need to open a terminal window:
 
 ...and you also need to open an Application:
 
-![applications](https://github.com/NEUBIAS/training-resources/raw/master/figures/BAND_applications.png)
+![applications](https://github.com/NEUBIAS/training-resources/raw/master/figures/BAND_Applications.png)
 
 
 1. Open a Terminal and execute
