@@ -22,10 +22,7 @@ figure: /figures/median_filter_grayscale.png
 figure_legend: Median filter example. Left - Raw; Right - After a 5x5 median filter.
 
 multiactivities:
-  - ["median_filter/median_filter.md", [["ImageJ GUI & Macro median", "median_filter/median_filter_imagejmacrogui.ijm", "java"],
-				 	     ["ImageJ GUI & Macro median", "median_filter/mean_filter_imagejmacrogui.ijm", "java"],
-					     ["skimage napari", "median_filter/median_filter__skimage_napari.py", "python"],
-	         			     ["skimage napari", "median_filter/mean_filter__skimage_napari.py", "python"]]]
+  - ["median_filter/median_filter.md", [["ImageJ GUI & Macro median", "median_filter/median_filter_imagejmacrogui.ijm", "java"], ["skimage napari", "median_filter/mean_filter__skimage_napari.py", "python"]]]
 
 assessment: |
 
