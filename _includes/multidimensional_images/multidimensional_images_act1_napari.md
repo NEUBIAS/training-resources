@@ -1,0 +1,5 @@
+  - Open the 3D image [xyz_8bit__chromsomes.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit__chromosomes.tif) by dragging and dropping the file in a Napari viewer.
+  - The data shows chromosomes wrapped around a nucleus, but it does not appear spherical.
+  - View the data in XY, YZ, and XZ by rotating the stack (third button in the bottom left corner) and by activating the 3D-view option (second button in the bottom left corner).
+  - Observe that the image is not calibrated, because the XZ and YZ views are deformed and the chromosomes are wrapped around a nucleus that should be spherical but does not appear so in the image.
+  - To take the calibration into account, open the console (first button in the bottom left corner: `>_`) and type `viewer.layers[0].scale = (0.1500000, 0.0338542, 0.0338542)`. Observe the difference in the 3D view.

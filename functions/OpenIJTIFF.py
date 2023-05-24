@@ -91,7 +91,7 @@ def open_ij_tiff(fpath: [str, Path],
         voxel_units['t'] = timeunit  ### imagej metadata does not seem to store time increment unit other than seconds ?!
     # get channel information
     if 'C' in ax_names:
-        voxel_sizes['c'] = 'na'
+        voxel_sizes['c'] = 1
         voxel_units['c'] = 'na'
 
     # third, parse x and y

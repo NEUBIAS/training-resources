@@ -1,0 +1,11 @@
+- Open the 5D image [xyzct_8bit_blobs.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyzct_8bit_blobs.tif) by dragging and dropping it in Napari.
+- The channel, Z, and time dimensions appear as sliders
+- Check the order of the dimensions by opening the Napari console and typing `viewer.layers[0].data.shape`. This should return `(6, 151, 2, 84, 79)`, corresponding to time, Z, channel, Y, X, respectively. 
+- Note that the display of the dimensions in Napari is in reverse order: by default, the last two dimensions (typically Y and X) form a 2D image on the screen, and each additional dimension appears as a slider, in the same reverse order (channel, Z, time) from top to bottom. 
+- Note that if you switch display mode from 2D to 3D, the channel dimension is the first in line, so this becomes the third dimension in the viewer (and not the Z dimension, as you might have expected). 
+- In order to see the data in 3D space, we need to reorder the image dimensions, such that the Z dimension becomes the third-last dimension. Do the following in the console: 
+    - `import numpy as np`
+    - Reorder the dimensions: `viewer.layers[0].data = np.transpose(viewer.layers[0].data, (2, 0, 1, 3, 4))`. This will change the order of the dimensions to channel, time, Z, Y, X. 
+    - Note that if you change the viewer from 2D to 3D, you will now see the image in 3D space. 
+    - In order to see the two channels simultaneously in different colors, we need to split the stack. 
+    Right mouse click on the layer and selecting 'Split Stack'. You can also do so with the commands `viewer.add_image(viewer.layers[0].data[0])` and `viewer.add_image(viewer.layers[0].data[1])`.
