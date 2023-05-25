@@ -2,7 +2,7 @@ import imageio.v3 as iio
 import napari
 
 # Read and display the label-image from https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__four_objects.tif
-image = iio.imread("xy_8bit_labels__four_objects.tif")
+image = iio.imread("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__four_objects.tif")
 viewer = napari.Viewer()
 viewer.add_labels(image)
 
@@ -52,7 +52,7 @@ print(len(shape_measurements))
 list(shape_measurements[0])
 
 # print some features of the first region
-print(shape_measurements[0].area, shape_measurements[0].eccentricity)
+print(shape_measurements[0].area, shape_measurements[0].num_pixels)
 
 # print the area and of each region
 for index, region in enumerate(shape_measurements):
@@ -64,7 +64,7 @@ for index, region in enumerate(shape_measurements):
 metadata = iio.immeta(
     "https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_16bit_labels__spindle_spots.tif"
 )
-# TODO: spacing = ???
-shape_measurements = regionprops(image, spacing=spacing)
+
+shape_measurements = regionprops(image, spacing=metadata["spacing"])
 # print some features of first object
-print(shape_measurements[0].area, shape_measurements[0].eccentricity)
+print(shape_measurements[0].area, shape_measurements[0].num_pixels)
