@@ -38,7 +38,7 @@ activity_preface: |
 multiactivities:
   - ["projections/projections_act1.md", 
       [
-        ["ImageJ GUI Reslice", "projections/projections_imagejgui_clij2.md", "markdown"],
+        ["ImageJ GUI Reslice", "projections/projections_imagejgui_reslice.md", "markdown"],
         ["ImageJ GUI CLIJ2", "projections/projections_imagejgui_clij2.md", "markdown"],
         ["ImageJ GUI TransformJ", "projections/projections_imagejgui_transformj.md", "markdown"],
         ["skimage napari", "projections/projections_skimage_napari.py", "python"]
