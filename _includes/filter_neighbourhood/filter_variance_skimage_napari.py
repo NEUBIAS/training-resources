@@ -19,20 +19,28 @@ viewer.add_image(binary_image)
 
 # %% 
 # Apply a variance filter 
-from skimage.filters.rank import mean
-from skimage.morphology import disk
+
+# Convert to uint16 to be able to accommodate 
+# the square of the unit8 image
 import numpy as np
-int_image = image.astype(np.int32)
-mean_image = mean(int_image, disk(11))
-squared_diff_image = (int_image  - mean_image)**2
-mean_squared_diff_image = mean(squared_diff_image, disk(11))
-viewer.add_image(mean_squared_diff_image)
+print(image.dtype)
+uint16_image = image.astype(np.uint16)
+
+# Use ndimage instead of skimage,
+# because skimage.filters.rank.mean 
+# only works up to unit16, which here specifically
+# would have been sufficient. However if the input image 
+# would have been uint16 we would have needed unit32
+# for the variance.
+from scipy import ndimage
+sqr_mean_image = ndimage.uniform_filter(uint16_image, (11, 11))**2
+mean_sqr_mean = ndimage.uniform_filter(uint16_image**2, (11, 11))
+var_image = mean_sqr_mean - sqr_mean_image
+viewer.add_image(var_image)
 
 # %%
 # Segment the foreground by applying a threshold
-# (TBH in this specific case a simple mean filter might have been sufficient
+# (Note that in this specific case a simple mean filter might have been sufficient
 # to achieve the same result, because the sample is on average darker than the background)
-binary_variance_image = mean_squared_diff_image > 100
-viewer.add_image(binary_variance_image)
-
-# %%
+binary_var_image = var_image > 100
+viewer.add_image(binary_var_image)
