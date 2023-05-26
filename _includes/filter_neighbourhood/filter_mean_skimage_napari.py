@@ -1,3 +1,6 @@
+# %% [markdown]
+# ## Applying mean filters to an image
+
 # %%
 # Instantiate the napari viewer
 import napari
