@@ -1,10 +1,10 @@
-import imageio.v3 as iio
+from OpenIJTIFF import open_ij_tiff
 import matplotlib.pyplot as plt
 import napari
 from skimage.measure import regionprops, regionprops_table
 
 # Open image [xy_16bit_labels__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit_labels__nuclei.tif)
-image = iio.imread(
+image, axes_image, scales_image, units_image = open_ij_tiff(
     "https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit_labels__nuclei.tif"
 )
 
@@ -29,3 +29,5 @@ label_layer = viewer.add_labels(image, name="eccentricity")
 colors = plt.cm.viridis(shape_measurements_table["eccentricity"])
 label_layer.color_mode = "direct"
 label_layer.color = dict(zip(shape_measurements_table["label"], colors))
+
+
