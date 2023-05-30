@@ -38,15 +38,15 @@ activity_preface: |
 multiactivities:
   - ["projections/projections_act1.md", 
       [
-        ["ImageJ GUI Reslice", "projections/projections_imagejgui_reslice.md", "markdown"],
-        ["ImageJ GUI CLIJ2", "projections/projections_imagejgui_clij2.md", "markdown"],
-        ["ImageJ GUI TransformJ", "projections/projections_imagejgui_transformj.md", "markdown"],
-        ["skimage napari", "projections/projections_skimage_napari.py", "python"]
+        ["ImageJ GUI Reslice", "projections/projections_act1_imagejgui_reslice.md", "markdown"],
+        ["ImageJ GUI CLIJ2", "projections/projections_act1_imagejgui_clij2.md", "markdown"],
+        ["ImageJ GUI TransformJ", "projections/projections_act1_imagejgui_transformj.md", "markdown"],
+        ["skimage napari", "projections/projections_act1_skimage_napari.py", "python"]
   ]]
   - ["projections/projections_act2.md", 
       [
-        ["ImageJ GUI Reslice", "projections/projections_imagejgui_reslice_act2.md"],
-        ["ImageJ GUI CLIJ2", "projections/projections_imagejgui_clij2_act2.md", "markdown"]
+        ["ImageJ GUI Reslice", "projections/projections_act2_imagejgui_reslice.md"],
+        ["ImageJ GUI CLIJ2", "projections/projections_act2_imagejgui_clij2.md", "markdown"]
   ]]
 
 assessment: >
