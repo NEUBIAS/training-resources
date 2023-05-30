@@ -1,4 +1,4 @@
-### Measure object shapes in an image
+<h4 id='measure_act1'><a href="#measure_act1">Measure object shapes in an image</a></h4>
 
 - Open an image and perform shape measurements.
 - Explore simple shape features (area, volume, perimeter) and some more complex ones, like circularity, elongation.
