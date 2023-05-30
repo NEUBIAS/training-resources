@@ -33,5 +33,5 @@ print(image_ch1.shape)
 
 # %%
 # View images as separate channels
-napari_viewer.add_image(image_ch0,  name = 'Ch1', colormap = 'magenta', scale = scale_3D)
-napari_viewer.add_image(image_ch1,  name = 'Ch2', colormap = 'green', blending='additive', scale = scale_3D)
+napari_viewer.add_image(image_ch0,  name = 'Ch0', colormap = 'magenta', scale = scale_3D)
+napari_viewer.add_image(image_ch1,  name = 'Ch1', colormap = 'green', blending='additive', scale = scale_3D)

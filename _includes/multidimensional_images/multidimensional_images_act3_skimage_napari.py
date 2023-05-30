@@ -1,28 +1,22 @@
 # %% [markdown]
-# ## Inspect a 3D image + time
+# ## Inspect a 3D time-lapse image
 
 # %%
-from OpenIJTIFF import open_ij_tiff
 # Load the image
-# You can also load a local image by providing the path to the file
-image, axes, scales, units  = open_ij_tiff("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyzt_8bit__starfish_chromosomes.tif")
+from OpenIJTIFF import open_ij_tiff
+image, axes, scales, units = open_ij_tiff("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyzt_8bit__starfish_chromosomes.tif")
 
+# %%
+# Print image shape & axes
+print("Shape:", image.shape)
+print("Axes:",axes)
+print("Scales:",scales)
+print("Units:",units)
+
+# %%
+# View the image
 from napari.viewer import Viewer
-# Create a new napari viewer.
 napari_viewer = Viewer()
-
-# %%
-# Print image shape
-print(image.shape)
-
-# %%
-# Print axes IDs
-print(axes)
-
-# %%
-# Print scaling
-print(scales)
-# Add an image to the napari_viewer.
 napari_viewer.add_image(image, scale = scales)
 
 # %% [markdown]
