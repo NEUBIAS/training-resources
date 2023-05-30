@@ -1,8 +1,7 @@
-# %%
-#######################################################
-## To follow along you need to complete the tool
-## installation activity for skimage napari.
-#######################################################
+# %% [markdown]
+# ## Spatial image calibration
+# #### Requirements
+# - [skimage and napari](https://neubias.github.io/training-resources/tool_installation/index.html#skimage_napari)
 
 # %%
 # Import python packages.
@@ -10,73 +9,70 @@ from OpenIJTIFF import open_ij_tiff, save_ij_tiff
 import numpy as np
 from napari.viewer import Viewer
 
-# %%
-# download and read tif file
-# load image from url
-fpath = "https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit__mitotic_plate_calibrated.tif"
-image, axes, voxel_size_input, units = open_ij_tiff(fpath)
+# %% 
+# Open an image and its axes metadata
+image, axes, voxel_size, units = open_ij_tiff("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit__mitotic_plate_calibrated.tif"
+)
 
-# visualize metadata
+# Inspect the image axes metadata.
 print(axes)
-print(voxel_size_input)
+print(voxel_size)
 print(units)
 
 # %%
-# Create a napari_viewer and visualize image
+# Open napari and add the image with its voxel size.
 napari_viewer = Viewer()
-napari_viewer.add_image(image, scale=voxel_size_input)
+napari_viewer.add_image(image, scale=voxel_size)
 
 # %% [markdown]
-# - **Napari GUI** using the orthogonal views button (`Change order of visible axes`)
-# - **Napari GUI** inspect the volume and observe that the voxel size makes sense.
-# - **Napari GUI** use 3D viewer button to inspect data in 3D (`Toggle ndisplay`).
+# Napari GUI: Change the axes order using the corresponding button. \
+# Napari GUI: Use the 3D viewer button to render the image in 3D.
 
 # %%
-# update voxel size to some other values
-# change voxel size and resave
-voxel_size_output = voxel_size_input
-voxel_size_output[0] = voxel_size_output[0]*2
-print('Output voxel size:', voxel_size_output)
+# Change the voxel size and resave the image.
+# Note that this is not necessary for the remainder of the activity.
+changed_voxel_size = voxel_size
+changed_voxel_size[0] = changed_voxel_size[0]*2
+print('Output voxel size:', changed_voxel_size)
 
 save_ij_tiff(
-    'resaved_image.tif',
+    'image_with_changed_calibration.tif',
      image,
      axes,
-     voxel_size_output,
+     changed_voxel_size,
      units
 )
 
-# %% [markdown]
-# - Add an image with changed scale.
-# - Visualize images side by side in Napari (`toggle grid mode`)
-
 # %%
-napari_viewer.add_image(image, scale=voxel_size_output, name = "rescaled")
+# Visualise an image with changed voxel sizes (scale) in napari. 
+# Visualize images side by side in Napari (Orthogonal views)
+napari_viewer.add_image(image, scale=changed_voxel_size, name = "rescaled")
 
 # %% [markdown]
-# - **Napari GUI** use the `New points layer button` to create a new point layer
-# - **Napari GUI** use `Add points` to create 2 points (in the same plane or in different planes)
+# **Napari GUI** remove the "rescaled" image as it is not needed anymore
+# **Napari GUI** use the `New points layer button` to create a new points layer \
+# **Napari GUI** use `Add points` to add two points somewhere on the meta-phase plate \
 
 # %%
 # extract point coordinates
 points = napari_viewer.layers['Points'].data
+print(points)
 
 # %%
 # compute distance between points in voxel indices
-dist_pxl = np.sqrt(((points[1]-points[0])**2).sum())
+diff_vector = points[1]-points[0]
+print("diff_vector: ", diff_vector)
+sqr_diff_vector = diff_vector**2
+print("sqr_diff_vector: ", sqr_diff_vector)
+dist_pxl = np.sqrt(sqr_diff_vector.sum())
 print('Distance in pixels:',dist_pxl)
 
 # %%
-# extract point calibrated positions
-points_cal = napari_viewer.layers['Points'].data * napari_viewer.layers['Points'].scale
+# calibrate the positions
+points_cal = points * napari_viewer.layers['Points'].scale
+print(points_cal)
 
 # %%
-# compute distance between points in um using calibrated point positions
+# compute calibrated distance between points
 dist_cal = np.sqrt(((points_cal[1]-points_cal[0])**2).sum())
 print('Distance in um:',dist_cal)
-
-# %% [markdown]
-# - discuss why dist_pxl differs from dist_cal
-# - appreciate that one needs to use spatial calibration to obtain distances in physical units
-
-# %%
