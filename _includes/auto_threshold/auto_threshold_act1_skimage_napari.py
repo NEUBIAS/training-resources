@@ -37,8 +37,8 @@ print('\n Min image2 %d max image2 %d' % (image2.min(), image2.max()))
 # %%
 # Show the histogram
 import matplotlib.pyplot as plt
-plt.hist(image1.flatten(), bins=np.arange(max_val+1), log=True);
-plt.hist(image2.flatten(), bins=np.arange(max_val+1), log=True);
+plt.hist(image1.flatten(), bins=np.arange(image1.max()+1), log=True);
+plt.hist(image2.flatten(), bins=np.arange(image2.max()+1), log=True);
 
 # %%
 # Try manual thresholding
@@ -48,8 +48,8 @@ thr2 = 75
 manual_thresholded1 = image1>thr1
 manual_thresholded2 = image2>thr2
 
-viewer.add_image(manual1, name='manual_thresholded1', opacity = 0.4, colormap='magenta')
-viewer.add_image(manual2, name='manual_thresholded2', opacity = 0.4, colormap='magenta')
+viewer.add_image(manual_thresholded1, name='manual_thresholded1', opacity = 0.4, colormap='magenta')
+viewer.add_image(manual_thresholded2, name='manual_thresholded2', opacity = 0.4, colormap='magenta')
 # Identify possible problems with this solution
 
 # %% [markdown]
