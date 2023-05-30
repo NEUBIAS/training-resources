@@ -1,17 +1,14 @@
 # %% [markdown]
-# ## Explore dimensions in a 3D image
+# ## Explore a 3D image
 
 # %%
-from OpenIJTIFF import open_ij_tiff
 # Load the image
-# You can also load a local image by providing the path to the file
+from OpenIJTIFF import open_ij_tiff
 image, axes, scales, units  = open_ij_tiff("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit__chromosomes.tif")
 
+# View the image in napari
 from napari.viewer import Viewer
-# Create a new napari viewer.
 napari_viewer = Viewer()
-
-# Add an image to the napari_viewer.
 napari_viewer.add_image(image)
 
 # %%
@@ -19,7 +16,7 @@ napari_viewer.add_image(image)
 print(image.shape)
 
 # %%
-# Print axes IDs
+# Print axes
 print(axes)
 
 # %% [markdown]
