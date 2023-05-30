@@ -12,12 +12,9 @@ napari_viewer = Viewer()
 napari_viewer.add_image(image)
 
 # %%
-# Print image shape
-print(image.shape)
-
-# %%
-# Print axes
-print(axes)
+# Print image axes & shape
+print("Axes: ", axes)
+print("Shape: ", image.shape)
 
 # %% [markdown]
 # **Napari GUI** Explore different sliders and values in the bottom left part \
