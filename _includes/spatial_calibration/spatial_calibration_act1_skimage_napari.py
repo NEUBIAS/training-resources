@@ -9,11 +9,13 @@ from OpenIJTIFF import open_ij_tiff, save_ij_tiff
 import numpy as np
 from napari.viewer import Viewer
 
-# %% 
+# %%
 # Open an image and its axes metadata
-image, axes, voxel_size, units = open_ij_tiff("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit__mitotic_plate_calibrated.tif"
+image, axes, voxel_size, units = open_ij_tiff(
+    "https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit__mitotic_plate_calibrated.tif"
 )
 
+# %%
 # Inspect the image axes metadata.
 print(axes)
 print(voxel_size)
@@ -25,31 +27,12 @@ napari_viewer = Viewer()
 napari_viewer.add_image(image, scale=voxel_size)
 
 # %% [markdown]
-# Napari GUI: Change the axes order using the corresponding button. \
-# Napari GUI: Use the 3D viewer button to render the image in 3D.
-
-# %%
-# Change the voxel size and resave the image.
-# Note that this is not necessary for the remainder of the activity.
-changed_voxel_size = voxel_size
-changed_voxel_size[0] = changed_voxel_size[0]*2
-print('Output voxel size:', changed_voxel_size)
-
-save_ij_tiff(
-    'image_with_changed_calibration.tif',
-     image,
-     axes,
-     changed_voxel_size,
-     units
-)
-
-# %%
-# Visualise an image with changed voxel sizes (scale) in napari. 
-# Visualize images side by side in Napari (Orthogonal views)
-napari_viewer.add_image(image, scale=changed_voxel_size, name = "rescaled")
+# **Napari GUI**: Change the axes order using the corresponding button. \
+# **Napari GUI**: Use the 3D viewer button to render the image in 3D.
 
 # %% [markdown]
-# **Napari GUI** remove the "rescaled" image as it is not needed anymore
+# ### Compute distances between points
+#
 # **Napari GUI** use the `New points layer button` to create a new points layer \
 # **Napari GUI** use `Add points` to add two points somewhere on the meta-phase plate \
 
@@ -76,3 +59,5 @@ print(points_cal)
 # compute calibrated distance between points
 dist_cal = np.sqrt(((points_cal[1]-points_cal[0])**2).sum())
 print('Distance in um:',dist_cal)
+
+# %%
