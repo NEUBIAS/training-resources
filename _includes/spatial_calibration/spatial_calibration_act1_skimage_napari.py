@@ -17,9 +17,10 @@ image, axes, voxel_size, units = open_ij_tiff(
 
 # %%
 # Inspect the image axes metadata.
-print(axes)
-print(voxel_size)
-print(units)
+print("Shape: ", image.shape)
+print("Axes: ", axes)
+print("Scale: ", voxel_size)
+print("Units: ", units)
 
 # %%
 # Open napari and add the image with its voxel size.

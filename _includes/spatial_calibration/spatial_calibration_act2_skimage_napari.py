@@ -17,9 +17,10 @@ image_cal, axes_image_cal, voxel_size_image_cal, units_image_cal = open_ij_tiff(
 
 # %%
 # Inspect the image axes metadata.
-print(axes_image_cal)
-print(voxel_size_image_cal)
-print(units_image_cal)
+print("Shape: ", image_cal.shape)
+print("Axes: ", axes_image_cal)
+print("Scale: ", voxel_size_image_cal)
+print("Units: ", units_image_cal)
 
 # %%
 # Open an image and its axes metadata
@@ -29,9 +30,10 @@ image_nucleus, axes_image_nucleus, voxel_size_image_nucleus, units_image_nucleus
 
 # %%
 # Inspect the image axes metadata.
-print(axes_image_nucleus)
-print(voxel_size_image_nucleus)
-print(units_image_nucleus)
+print("Shape: ", image_nucleus.shape)
+print("Axes: ", axes_image_nucleus)
+print("Scale: ", voxel_size_image_nucleus)
+print("Units: ", units_image_nucleus)
 
 # %%
 # Note that this image does not have a calibrated voxel size
@@ -41,9 +43,10 @@ units_image_nucleus = ["um","um","um"]
 
 # %%
 # Inspect the new image axes metadata.
-print(axes_image_nucleus)
-print(voxel_size_image_nucleus)
-print(units_image_nucleus)
+print("Shape: ", image_nucleus.shape)
+print("Axes: ", axes_image_nucleus)
+print("Scale: ", voxel_size_image_nucleus)
+print("Units: ", units_image_nucleus)
 
 # %%
 # Open napari and add the image with its voxel size.
@@ -60,6 +63,19 @@ napari_viewer.add_image(image_nucleus, scale=voxel_size_image_nucleus, name='ima
 changed_voxel_size = voxel_size_image_nucleus
 changed_voxel_size[0] = changed_voxel_size[0]*2
 print('Output voxel size:', changed_voxel_size)
+
+# %%
+# Save image
+save_ij_tiff(
+    'resaved_image.tif',
+     image_nucleus,
+     axes_image_nucleus,
+     changed_voxel_size,
+     units_image_nucleus
+)
+
+# %%
+# Open save tif file in FIJI and verify image scales were properly saved.
 
 # %%
 # Visualise an image with changed voxel sizes (scale) in napari. 
