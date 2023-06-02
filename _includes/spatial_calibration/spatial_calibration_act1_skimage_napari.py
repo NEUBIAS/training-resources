@@ -5,7 +5,7 @@
 
 # %%
 # Import python packages.
-from OpenIJTIFF import open_ij_tiff, save_ij_tiff
+from OpenIJTIFF import open_ij_tiff
 import numpy as np
 from napari.viewer import Viewer
 
@@ -44,7 +44,7 @@ print(points)
 
 # %%
 # compute distance between points in voxel indices
-diff_vector = points[1]-points[0]
+diff_vector = points[1] - points[0]
 print("diff_vector: ", diff_vector)
 sqr_diff_vector = diff_vector**2
 print("sqr_diff_vector: ", sqr_diff_vector)
@@ -57,8 +57,7 @@ points_cal = points * napari_viewer.layers['Points'].scale
 print(points_cal)
 
 # %%
-# compute calibrated distance between points
+# compute the calibrated distance between points
 dist_cal = np.sqrt(((points_cal[1]-points_cal[0])**2).sum())
 print('Distance in um:',dist_cal)
 
-# %%
