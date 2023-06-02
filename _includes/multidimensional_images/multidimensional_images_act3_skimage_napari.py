@@ -22,11 +22,3 @@ napari_viewer.add_image(image, scale = scales)
 # %% [markdown]
 # **Napari GUI** Explore different sliders and values in the bottom left part \
 # **Napari GUI** Show in 3D. 
-
-# %%
-# Change order of axis (swap T and Z)
-napari_viewer.dims.order = (1, 0, 2, 3)
-
-# %%
-# Return to the correct order
-napari_viewer.dims.order = (0, 1, 2, 3)
