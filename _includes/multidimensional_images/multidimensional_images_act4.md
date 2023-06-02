@@ -1,4 +1,6 @@
-<h4 id="xyzct"><a href="#xyzct"> Explore dimensions in a 5D image (3D image + channels + time) </a></h4>
+<h4 id="xyzct"><a href="#xyzct"> Explore a 5D image (3D + channels + time)</a></h4>
 
-- Open the 5D image [xyzct_8bit_blobs.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyzct_8bit_blobs.tif)
-- Explore visualization options for the different dimensions.
+Explore various visualization options for the different dimensions.
+
+Examples images:
+- [xyzct_16bit__metaphase_eb3_cenpa.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyzct_16bit__metaphase_eb3_cenpa.tif)
