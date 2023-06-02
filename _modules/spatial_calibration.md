@@ -33,7 +33,7 @@ figure_legend: Spatial calibration and size measurements
 multiactivities:
   - ["spatial_calibration/spatial_calibration_act1.md", [["ImageJ GUI", "spatial_calibration/spatial_calibration_act1_imagejgui.md", "markdown"], 
   ["skimage napari", "spatial_calibration/spatial_calibration_act1_skimage_napari.py", "python"]]]
-  - ["spatial_calibration/spatial_calibration_act2.md", [["ImageJ GUI", "spatial_calibration/spatial_calibration_act2_imagejgui.md"]]]
+  - ["spatial_calibration/spatial_calibration_act2.md", [["ImageJ GUI", "spatial_calibration/spatial_calibration_act2_imagejgui.md"], ["skimage napari", "spatial_calibration/spatial_calibration_act2_skimage_napari.py", "python"]]]
 
 
 assessment: |
