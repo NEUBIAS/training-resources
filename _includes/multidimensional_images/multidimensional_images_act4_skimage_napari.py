@@ -1,17 +1,17 @@
 # %% [markdown]
-# ## Explore dimensions in a 5D image (3D image + channels + time)
+# ## Explore a 5D image (3D image + channels + time)
 
 # %%
 # Load the image
 from OpenIJTIFF import open_ij_tiff
-image, axes, scales, units  = open_ij_tiff("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyzct_8bit_blobs.tif")
+image, axes, scales, units = open_ij_tiff("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyzct_8bit_blobs.tif")
 
 # %%
 # Print image shape & axes
 print("Shape:", image.shape)
-print("Axes:",axes)
-print("Scales:",scales)
-print("Units:",units)
+print("Axes:", axes)
+print("Scales:", scales)
+print("Units:", units)
 
 # %%
 # Display image in napari
@@ -21,11 +21,11 @@ napari_viewer.add_image(image)
 
 # %% [markdown]
 # **Napari GUI** Explore different sliders and values in the bottom left part \
-# **Napari GUI** Show in 3D. Note that the order of axes is not yet correct. Napari expects that the last 3 dimension are ZYX\
+# **Napari GUI** Show in 3D. Note that the order of axes is not yet correct.\ Napari expects that the last 3 dimension are ZYX\
 # **Napari GUI** Delete image 
 
 # %%
-# Add images as separate channels
+# Add image as separate channels
 napari_viewer.add_image(image[:,:,0,:,:],  name = 'Ch0', colormap = 'magenta')
 napari_viewer.add_image(image[:,:,1,:,:],  name = 'Ch1', colormap = 'green', blending='additive')
 
@@ -34,7 +34,7 @@ napari_viewer.add_image(image[:,:,1,:,:],  name = 'Ch1', colormap = 'green', ble
 # **Napari GUI** delete image and try direct loading
 
 # %%
-# Load image as separate channels in one step
+# View image as separate channels in one step
 napari_viewer.add_image(image, channel_axis = 2, name = ['Ch1', 'Ch2'])
 
 # %% [markdown]

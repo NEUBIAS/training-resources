@@ -4,31 +4,27 @@
 # %%
 # Load the image
 from OpenIJTIFF import open_ij_tiff
-image, axes, scales, units  = open_ij_tiff("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit__chromosomes.tif")
+image, axes, scales, units = open_ij_tiff("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit__chromosomes.tif")
 
 # View the image in napari
 from napari.viewer import Viewer
 napari_viewer = Viewer()
 napari_viewer.add_image(image)
 
-# %%
-# Print image axes & shape
-print("Axes: ", axes)
-print("Shape: ", image.shape)
-
 # %% [markdown]
 # **Napari GUI** Explore different sliders and values in the bottom left part \
-# **Napari GUI** Show in 3D. Note that the scaling are not yet correct. 
+# **Napari GUI** Show in 3D. Note that the scalings are not yet correct. 
 
 # %%
-# compute aspect ratio
-print(scales)
-aspect_ratio = [s/scales[2] for s in scales]
-print(aspect_ratio)
+# Print image axes metadata
+print("Shape: ", image.shape)
+print("Axes: ", axes)
+print("Scales: ", scales)
+print("Units: ", units)
 
 # %%
-# Add image. Rationale is to show both images in the same scale
-napari_viewer.add_image(image, name = "with aspect ratio", scale = aspect_ratio) 
+# Add image with scaling. 
+napari_viewer.add_image(image, name = "Scaled image", scale = scales) 
 
 # %% [markdown]
-# **Napari GUI** Show images with blending additive and different LUTs
+# **Napari GUI** View scaled image in 3D. Note that the scaling is now correct. 
