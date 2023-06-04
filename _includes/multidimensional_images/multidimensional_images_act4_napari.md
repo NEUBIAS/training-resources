@@ -1,4 +1,4 @@
-- Open the 5D image [xyzct_8bit_blobs.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyzct_8bit_blobs.tif) by dragging and dropping it in Napari.
+- Open [xyzct_16bit__metaphase_eb3_cenpa.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyzct_16bit__metaphase_eb3_cenpa.tif) by dragging and dropping it in Napari.
 - The channel, Z, and time dimensions appear as sliders
 - Check the order of the dimensions by opening the Napari console and typing `viewer.layers[0].data.shape`. This should return `(6, 151, 2, 84, 79)`, corresponding to time, Z, channel, Y, X, respectively. 
 - Note that the display of the dimensions in Napari is in reverse order: by default, the last two dimensions (typically Y and X) form a 2D image on the screen, and each additional dimension appears as a slider, in the same reverse order (channel, Z, time) from top to bottom. 
