@@ -3,7 +3,7 @@ title: Projections
 layout: module
 prerequisites:
   - "[Basic properties of images and pixels](../pixels)"
-  - "Volume slicing (TODO)"
+  - "[N-dimensional images](../multidimensional_image_basics)"
 
 objectives:
   - "Project multi-dimensional image data into lower dimensions"
