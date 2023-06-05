@@ -4,6 +4,10 @@
 # - [skimage and napari](https://neubias.github.io/training-resources/tool_installation/index.html#skimage_napari)
 
 # %%
+import sys
+sys.path.append("/Users/tischer/Documents/training-resources/functions")
+
+# %%
 # Import python packages.
 from OpenIJTIFF import open_ij_tiff
 import numpy as np
@@ -44,20 +48,33 @@ print(points)
 
 # %%
 # compute distance between points in voxel indices
+# formula: sqrt( (z[1] - z[0])^2 + (y[1] - y[0])^2 + (x[1] - x[0])^2 )
 diff_vector = points[1] - points[0]
 print("diff_vector: ", diff_vector)
+
+# %%
 sqr_diff_vector = diff_vector**2
 print("sqr_diff_vector: ", sqr_diff_vector)
+
+# %%
 dist_pxl = np.sqrt(sqr_diff_vector.sum())
 print('Distance in pixels:',dist_pxl)
 
 # %%
 # calibrate the positions
-points_cal = points * napari_viewer.layers['Points'].scale
-print(points_cal)
+scale = napari_viewer.layers['Points'].scale
+print("Points scale: ", scale)
+print("Voxel size: ", voxel_size)
+
+# %%
+points_cal = points * scale 
+print("Points :\n", points)
+print("Calibrated points :\n", points_cal)
 
 # %%
 # compute the calibrated distance between points
 dist_cal = np.sqrt(((points_cal[1]-points_cal[0])**2).sum())
-print('Distance in um:',dist_cal)
+print('Distance in um:', dist_cal)
 
+
+# %%
