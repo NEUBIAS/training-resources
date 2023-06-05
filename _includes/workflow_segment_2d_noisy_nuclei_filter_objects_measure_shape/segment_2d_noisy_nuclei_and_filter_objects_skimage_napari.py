@@ -15,7 +15,6 @@ import pandas as pd
 # Instantiate the napari viewer
 napari_viewer1 = napari.Viewer()
 
-# %%
 # Read and inspect the image:
 fpath = 'https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_small.tif'
 image1, axes_image1, scales_image1, units_image1 = open_ij_tiff(fpath)
@@ -69,6 +68,7 @@ properties = regionprops_table(
     properties = {'label', 'area'}
 )
 
+# %%
 # Print areas for each cell:
 properties = pd.DataFrame(properties)
 areas = properties
