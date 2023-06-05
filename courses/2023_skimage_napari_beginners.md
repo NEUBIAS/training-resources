@@ -36,6 +36,8 @@ Afternoon sessions (in person at your institute, rooms will be announced)
 
 ## Trainers
 
+[Slide with pictures](https://docs.google.com/presentation/d/1duVwHr7owPKwSKBZYdprRaSHfELsJH--PmtUeJcrJAk/edit?usp=sharing)
+
 - Antonio Politi (MPI Multidisciplinary Sciences)
 - Tim-Oliver Buchholz (FMI Basel)
 - Nicola Gritti (EMBL Barcelona)
