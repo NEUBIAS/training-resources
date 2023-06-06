@@ -16,6 +16,14 @@ image, axes, scales, units  = open_ij_tiff("https://github.com/NEUBIAS/training-
 from napari.viewer import Viewer
 napari_viewer = Viewer()
 
+# %% [markdown]
+# ### Code completion and help in Jupyter notebook 
+# * **Code completion** type `napari_viewer.` and press `TAB`
+# * **Help** type `napari_viewer.add_image` and press `SHIFT-TAB` this will open a help associated to the add_image method/command
+
+# %% 
+
+
 # %%
 # Add an image to the napari_viewer.
 napari_viewer.add_image(image)
