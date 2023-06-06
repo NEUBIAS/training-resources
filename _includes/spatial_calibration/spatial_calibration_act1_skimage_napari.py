@@ -43,25 +43,13 @@ napari_viewer.add_image(image, scale=voxel_size)
 
 # %%
 # extract point coordinates
+# appreciate that they are in unscaled voxel coordinates
+# and thus not suited for measuring distances
 points = napari_viewer.layers['Points'].data
 print(points)
 
 # %%
-# compute distance between points in voxel indices
-# formula: sqrt( (z[1] - z[0])^2 + (y[1] - y[0])^2 + (x[1] - x[0])^2 )
-diff_vector = points[1] - points[0]
-print("diff_vector: ", diff_vector)
-
-# %%
-sqr_diff_vector = diff_vector**2
-print("sqr_diff_vector: ", sqr_diff_vector)
-
-# %%
-dist_pxl = np.sqrt(sqr_diff_vector.sum())
-print('Distance in pixels:',dist_pxl)
-
-# %%
-# calibrate the positions
+# scale the positions
 scale = napari_viewer.layers['Points'].scale
 print("Points scale: ", scale)
 print("Voxel size: ", voxel_size)
@@ -72,9 +60,15 @@ print("Points :\n", points)
 print("Calibrated points :\n", points_cal)
 
 # %%
-# compute the calibrated distance between points
-dist_cal = np.sqrt(((points_cal[1]-points_cal[0])**2).sum())
-print('Distance in um:', dist_cal)
-
+# compute distance between points in voxel indices
+# formula: sqrt( (z[1] - z[0])^2 + (y[1] - y[0])^2 + (x[1] - x[0])^2 )
+diff_vector = points_cal[1] - points_cal[0]
+print("diff_vector: ", diff_vector)
 
 # %%
+sqr_diff_vector = diff_vector**2
+print("sqr_diff_vector: ", sqr_diff_vector)
+
+# %%
+distance = np.sqrt(sqr_diff_vector.sum())
+print('Distance:', distance)

@@ -46,7 +46,7 @@ assessment: |
   > ## Solution
   > 1. `0.975`
   > 2. `1.538 ( -> 1 )`
-  > 3. `-0.15 ( -> 0 )`
+  > 3. `-0.22 ( -> 0 )`
   {: .solution}
 
   ### Fill in the blanks
