@@ -65,11 +65,11 @@ external_links:
 
 The pixels in an image have a certain data type. The data type limits the values that pixels can take.
 
-For example, unsigned N-bit integer images can represent values from 0 to 2^(N-1), e.g.
+For example, unsigned N-bit integer images can represent values from 0 to 2^N -1, e.g.
   - 8-bit unsigned integer: 0 - 255
   - 12-bit unsigned integer: 0 - 4095
   - 16-bit unsigned integer: 0 - 65535
 
 ### Intensity clipping (saturation)
 
-If the value of a pixel in an N-bit unsigned integer image is equal to either 0 or 2^(N-1), you cannot know for sure whether you lost information at some point during the image acquisition or image storage. For example, if there is a pixel with the value 255 in an unsigned integer 8-bit image, it may be that the actual intensity "was higher", e.g. would have corresponded to a gray value of 302. One speaks of "saturation" or "intensity clipping" in such cases. It is important to realise that there can be also clipping at the lower end of the range (some microscopes have an unfortunate "offset" slider that can be set to negative values, which can cause this).
+If the value of a pixel in an N-bit unsigned integer image is equal to either 0 or 2^N - 1, you cannot know for sure whether you lost information at some point during the image acquisition or image storage. For example, if there is a pixel with the value 255 in an unsigned integer 8-bit image, it may be that the actual intensity "was higher", e.g. would have corresponded to a gray value of 302. One speaks of "saturation" or "intensity clipping" in such cases. It is important to realise that there can be also clipping at the lower end of the range (some microscopes have an unfortunate "offset" slider that can be set to negative values, which can cause this).
