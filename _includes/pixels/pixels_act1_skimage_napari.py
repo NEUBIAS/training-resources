@@ -9,7 +9,8 @@
 # Load the image
 # You can also load a local image by providing the path to the file
 from OpenIJTIFF import open_ij_tiff
-image, axes, scales, units  = open_ij_tiff("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_different_intensity.tif")
+image_url = "https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_different_intensity.tif"
+image, axes, scales, units  = open_ij_tiff(image_url)
 
 # %%
 # Create a new napari viewer.
