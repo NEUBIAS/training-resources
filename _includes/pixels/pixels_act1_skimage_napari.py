@@ -9,38 +9,51 @@
 # Load the image
 # You can also load a local image by providing the path to the file
 from OpenIJTIFF import open_ij_tiff
-image, axes, scales, units  = open_ij_tiff("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_different_intensity.tif")
+image_url = "https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_different_intensity.tif"
+image, axes, scales, units  = open_ij_tiff(image_url)
 
 # %%
 # Create a new napari viewer.
 from napari.viewer import Viewer
 napari_viewer = Viewer()
 
+# %% [markdown]
+# ### Code completion and help in Jupyter notebook 
+# * **Code completion** type `napari_viewer.` and press `TAB`
+# * **Help** type `napari_viewer.add_image` and press `SHIFT-TAB` this will open a help associated to the add_image method/command
+
+# %%
+
+
 # %%
 # Add an image to the napari_viewer.
 napari_viewer.add_image(image)
 
 # %% [markdown]
-# Alternative loading of data\
-# **Napari GUI** drag and drop image from browser \ 
-# rename the layer for convenience \
-# `napari_viewer.layers[0].name = 'image'` \     
-# Get the data as numpy array \
+# ### Alternative loading of data
+# **Napari GUI** drag and drop image from browser\
+# rename the layer for convenience\
+# `napari_viewer.layers[0].name = 'image'`      
+# Get the data as numpy array\
 # `image = napari_viewer.layers['image'].data` 
 
 # %%
 # Print image shape
 print(image.shape)
 
+# %%
 # Print the image pixel values.
 print(image)
 
+# %%
 # Top left corner is [y, x] = [r, c] = [0, 0]
 print(image[0, 0])
 
+# %%
 # [y, x] = [r, c] = [1, 0]
 print(image[1, 0])
 
+# %%
 # [y, x] = [r, c] = [0, 2]
 print(image[0, 2])
 
