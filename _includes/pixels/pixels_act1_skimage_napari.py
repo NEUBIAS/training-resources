@@ -30,12 +30,12 @@ napari_viewer = Viewer()
 napari_viewer.add_image(image)
 
 # %% [markdown]
-# Alternative loading of data\
-# **Napari GUI** drag and drop image from browser \ 
-# rename the layer for convenience \
-# `napari_viewer.layers[0].name = 'image'` \     
-# Get the data as numpy array \
-# `image = napari_viewer.layers['image'].data` 
+# ### Alternative loading of data
+# **Napari GUI** drag and drop image from browser\
+# rename the layer for convenience\
+# `napari_viewer.layers[0].name = 'image'`      
+# Get the data as numpy array\
+# `image = napari_viewer.layers['image'].data`
 
 # %%
 # Print image shape
