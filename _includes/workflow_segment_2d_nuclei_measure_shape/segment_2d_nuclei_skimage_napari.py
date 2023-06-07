@@ -1,6 +1,6 @@
 # %% [markdown]
 # ## Workflow segment 2D nuclei
-# This activity is show in [Nuclei segmentation and shape measurement](https://neubias.github.io/training-resources/workflow_segment_2d_nuclei_measure_shape/index.html) 
+# This activity is part of [Nuclei segmentation and shape measurement](https://neubias.github.io/training-resources/workflow_segment_2d_nuclei_measure_shape/index.html) 
 
 # %%
 # Import modules
