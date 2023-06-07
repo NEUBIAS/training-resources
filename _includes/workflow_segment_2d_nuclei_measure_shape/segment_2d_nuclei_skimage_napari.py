@@ -10,34 +10,36 @@ import pandas as pd
 napari_viewer = napari.Viewer()
 
 # %%
-# Read and inspect the image:
-fpath = 'https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__mitocheck_incenp_t1.tif'
-image_t1, axes_t1, voxel_size_input_t1, units_t1 = open_ij_tiff(fpath)
-
-napari_viewer.add_image(image_t1, name='frame 1')
-
-
-# %%
-def nuclei_quantification(image, viewer, thr):
-    print(f"Threshold: {thr}")
-    # Binarize the image:
-    image = image > thr
-    viewer.add_labels(image, name='binary')
-    # Find labels:
-    img_labels = label(image)
-    viewer.add_labels(img_labels, name='labels')
-    # Obtain cell properties:
-    properties = regionprops_table(
-        img_labels,
-        properties = {'label', 'area'}
-    )
-    # Print areas for each cell:
-    areas = pd.DataFrame(properties)
-    print(areas)
+# Open and inspect the image
+# Learning opportunity: 
+# - change file_path and image name to analyse a different image
+#   - https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__mitocheck_incenp_t70.tif
+file_path = "https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__mitocheck_incenp_t1.tif"
+image, axes, scales, units = open_ij_tiff(file_path)
+napari_viewer.add_image(image, name='incenp_t1')
 
 # %%
-# Run workflow on each image:
-threshold = 25
-nuclei_quantification(image_t1, napari_viewer, threshold)
+# Binarize the image
+image = image > 25
+viewer.add_labels(image, name='binary')
 
-# Now try running the workflow using the second image!
+# %%
+# Perform connected components analysis (i.e create labels)
+img_labels = label(image)
+viewer.add_labels(img_labels, name='labels')
+
+# %%
+# Measure nuclei shapes
+# Learning opportunity: 
+# - add other measurements (Hint: google: skimage regionprops)
+properties = regionprops_table(
+    img_labels,
+    properties = {'label', 'area'}
+)
+
+# %%
+# Print areas for each cell
+# Learning opportunity: 
+# - print other measurements
+areas = pd.DataFrame(properties)
+print(areas)
