@@ -45,27 +45,8 @@ multiactivities:
 																	 ["skimage napari", "filter_morphological/filter_morphological_act1_skimage_napari.py", "python"]]]
  - ["filter_morphological/filter_morphological_act2.md", [["ImageJ Macro", "filter_morphological/filter_morphological_act2_imagejmacro.ijm", "java"]]] 
  - ["filter_morphological/filter_morphological_act3.md", [["ImageJ Macro", "filter_morphological/filter_morphological_act3_imagejmacro.ijm", "java"]]] 
-  
-exercise_preface: |
-  ### Measure intensity on the nuclear membrane
-  In image [xyc_16bit__nup__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__nup_nuclei.tif) we would like to measure the intensity along the nuclear membrane (channel 1) using the information from the DNA (channel 2). We designed two exercises that provide a workflow using morphological filters. 
-  
-  #### Clean up segmentation
-  
-  * Use a combination of opening and closing operations to improve the segmentation of the DNA channel  [xy_8bit_binary__nuclei_noisy.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__nup_nuclei/xy_8bit_binary__nuclei_noisy.tif). 
-  *  The goal is to achieve something like [xy_8bit_binary__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__nup_nuclei/xy_8bit_binary__nuclei.tif) that can be used for further processing and identification of membrane regions. 
-  
-  #### Define nuclear rim 
-  * Use morphological filtering to define an inner rim of width 3 pixels using the label mask:  [xy_8bit_labels__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__nup_nuclei/xy_8bit_labels__nuclei.tif)
-  * (Optional) Measure the mean and total intensity in the first channel of  [xyc_16bit__nup__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__nup_nuclei.tif) using the modified labels masks.
-
-exercises: 
- - ["ImageJ GUI: Clean up segmentation", "filter_morphological/exercises/filter_morphological_binary.md"]
- - ["ImageJ GUI: Define nuclear rim",  "filter_morphological/exercises/filter_morphological_label.md"]
- - ["ImageJ Macro: Clean up segmentation", "filter_morphological/exercises/filter_morphological_binary.ijm"]
- - ["ImageJ Macro: Define nuclear rim",  "filter_morphological/exercises/filter_morphological_label.ijm"]
- 
-
+ - ["filter_morphological/filter_morphological_act4.md", [["ImageJ GUI", "filter_morphological/filter_morphological_act4_imagejgui.md", "markdown"], 
+															["ImageJ Macro", "filter_morphological/filter_morphological_act4_imagejmacro.ijm", "java"]]] 
 
 assessment: | 
  
