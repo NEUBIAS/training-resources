@@ -25,9 +25,13 @@ figure: /figures/local_background_correction.png
 figure_legend: Local background correction using a median filter. Left - Raw data. Middle - Median filtered image (background). Right - Difference image (foreground).
 
 multiactivities:
-- ["local_background_correction/local_background_correction_activity1.md", [["Activity 1 ImageJ GUI", "local_background_correction/local_background_correction_imagejgui.md", "markdown"], 
-["Activity 1 ImageJ Macro", "local_background_correction/local_background_correction_imagejmacro.ijm", "java"], ["Activity 1 skimage napari", "local_background_correction/local_background_correction_activity1_skimage_napari.py", "python"]]]					
-- ["local_background_correction/local_background_correction_activity2.md", [["Activity 2 ImageJ GUI", "local_background_correction/local_background_correction_activity2_gui.md", "markdown"], ["Activity 2 ImageJ Macro", "local_background_correction/local_background_correction_activity2_macro.ijm", "java"], ["Activity 2 ImageJ Jython", "local_background_correction/local_background_correction_activity2_jython.py", "python"], ["Activity 2 skimage napari", "local_background_correction/local_background_correction_activity2_skimage_napari.py", "python"]]]
+- ["local_background_correction/local_background_correction_act1.md", [["ImageJ GUI", "local_background_correction/local_background_correction_act1_imagejgui.md", "markdown"], 
+																			["ImageJ Macro", "local_background_correction/local_background_correction_act1_imagejmacro.ijm", "java"], 
+																			["skimage napari", "local_background_correction/local_background_correction_act1_skimage_napari.py", "python"]]]					
+- ["local_background_correction/local_background_correction_act2.md", [["ImageJ GUI", "local_background_correction/local_background_correction_act2_imagejgui.md", "markdown"], 
+																			["ImageJ Macro", "local_background_correction/local_background_correction_act2_imagejmacro.ijm", "java"], 
+																			["ImageJ Jython", "local_background_correction/local_background_correction_act2_jython.py", "python"], 
+																			["skimage napari", "local_background_correction/local_background_correction_act2_skimage_napari.py", "python"]]]
 
 assessment: >
 
