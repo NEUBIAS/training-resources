@@ -25,7 +25,7 @@ def get_ijtiff(fpath: [str, Path]):
         if tiff is None:
             raise ValueError("tiff file could not be found in the given path:\n{}".format(fpath))
     if not tiff.is_imagej:
-        raise TypeError("This module is intended to parse from ImageJ-created tiff files. This tiff file was apparently not created by ImageJ.")
+        raise TypeError("This module is intended to parse from ImageJ-created tiff files.\nThis tiff file was apparently not created by ImageJ.\nTry from skimage import io \nio.imread(path_to_file)")
     return tiff
 
 def escape_unicode(text: str):
