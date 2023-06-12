@@ -35,11 +35,12 @@ objects_labels.sort()
 print(objects_labels)
 
 # %% [markdown]
-# Observe that there are 4 values, 0 being the label of the background, 
-# 1,2 are the cells and 3 is the manually labeled background.
+# Observe that there are 4 values: 0 being the background label, 
+# 1, 2 are the cells and 3 is the manually labeled background.
 
 # %%
-# Use the intensity_image option to measure fluorescence intensity of objects
+# Use the intensity_image option of regionprops 
+# to measure the fluorescence intensity of objects
 fluo_regionprops = regionprops_table(
         labels,
         intensity_image = image,
