@@ -25,8 +25,13 @@ figure: /figures/local_background_correction.png
 figure_legend: Local background correction using a median filter. Left - Raw data. Middle - Median filtered image (background). Right - Difference image (foreground).
 
 multiactivities:
-- ["local_background_correction/local_background_correction_activity1.md", [["Activity 1 ImageJ GUI", "local_background_correction/local_background_correction_imagejgui.md", "markdown"], ["Activity 1 ImageJ Macro", "local_background_correction/local_background_correction_imagejmacro.ijm", "java"], ["Activity 1 skimage napari", "local_background_correction/local_background_correction_activity1_skimage_napari.py", "python"]]]					
-- ["local_background_correction/local_background_correction_activity2.md", [["Activity 2 ImageJ GUI", "local_background_correction/local_background_correction_activity2_gui.md", "markdown"], ["Activity 2 ImageJ Macro", "local_background_correction/local_background_correction_activity2_macro.ijm", "java"], ["Activity 2 ImageJ Jython", "local_background_correction/local_background_correction_activity2_jython.py", "python"], ["Activity 2 skimage napari", "local_background_correction/local_background_correction_activity2_skimage_napari.py", "python"]]]
+- ["local_background_correction/local_background_correction_act1.md", [["ImageJ GUI", "local_background_correction/local_background_correction_act1_imagejgui.md", "markdown"], 
+																			["ImageJ Macro", "local_background_correction/local_background_correction_act1_imagejmacro.ijm", "java"], 
+																			["skimage napari", "local_background_correction/local_background_correction_act1_skimage_napari.py", "python"]]]					
+- ["local_background_correction/local_background_correction_act2.md", [["ImageJ GUI", "local_background_correction/local_background_correction_act2_imagejgui.md", "markdown"], 
+																			["ImageJ Macro", "local_background_correction/local_background_correction_act2_imagejmacro.ijm", "java"], 
+																			["ImageJ Jython", "local_background_correction/local_background_correction_act2_jython.py", "python"], 
+																			["skimage napari", "local_background_correction/local_background_correction_act2_skimage_napari.py", "python"]]]
 
 assessment: >
 
@@ -43,6 +48,19 @@ assessment: >
     {: .solution}
 
 learn_next:
-
+  - "[Morphological filtering](../filter_morphological)"
+  
 external_links:
 ---
+
+There exist multiple methods on how to compute a background image. 
+Which methods and parameters work best depends on the specific input image and the size of the object of interest. 
+
+
+Common methods are:
+
+* **Median filtering**
+* **Morphological opening**. Subtraction of the opened image from the original image is also called **Top-Hat** filtering. 
+* **Rolling ball**, this alogorithm is implemented for instance in ImageJ `Background Subtraction` or [`skimage.restoration.rolling_ball`](https://scikit-image.org/docs/stable/api/skimage.restoration.html#skimage.restoration.rolling_ball)
+
+Some of the methods may be sensistive to noise. Therefore, it can be convenient to smooth the image, e.g. with a mean or gaussian filtering,  prior computing the background image.  
