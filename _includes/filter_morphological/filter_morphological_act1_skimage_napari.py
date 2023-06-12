@@ -46,23 +46,14 @@ napari_viewer.add_image(dilated, name='dilated1', colormap = 'green', opacity = 
 # Now try with a structuring element with connectivity 2 (3x3 square).
 square3 = square(3)
 print(square3)
-eroded_square3 = erosion(image, footprsquare3)
-dilated_square3 = dilation(image, square3)
+eroded_square3 = erosion(image, footprint = square3)
+dilated_square3 = dilation(image, footprint = square3)
 
 napari_viewer.add_image(eroded_square3, name='eroded3', colormap='magenta', opacity = 0.5)
 napari_viewer.add_image(dilated_square3, name='dilated3', colormap='green', opacity = 0.5)
-
-# %%
-# add images to the viewer and inspect the results
-napari_viewer.add_image(eroded, name='eroded1')
-napari_viewer.add_image(dilated, name='dilated1')
-napari_viewer.add_image(eroded_square3, name='eroded3')
-napari_viewer.add_image(dilated_square3, name='dilated3')
 
 # %% [markdown]
 # **Learning opportunity**\
 # Try with a bigger square (e.g. `square(5)`)\
 # or a different structuring element (e.g. disk(1))\
 # Also refer to https://scikit-image.org/docs/stable/api/skimage.morphology.html
-
-# %%

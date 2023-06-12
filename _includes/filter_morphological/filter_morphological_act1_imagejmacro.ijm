@@ -2,7 +2,7 @@ run("Close All");
 //Make sure black background in Process > Binary > Options is set to true
 setOption("black background", true);
 
-open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__two_spots_different_size.tif");
+open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__three_spots_different_size.tif");
 // Image > Rename
 rename("binary");
 run("Set... ", "zoom=400 x=29 y=25");
