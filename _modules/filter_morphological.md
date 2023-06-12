@@ -37,9 +37,9 @@ concept_map: >
     any .->  BIM("Modified binary/label image")
      
     
-figure: /figures/filter_morphological.png
-figure_legend: A dilation and erosion using a 3x3 structuring element (left side). Morphological filters applied in series, e.g. opening and closing, can achieve very useful results (right side).  
-  
+figure: figures/filter_morphological.png
+figure_legend: Upper row - Example of a workflow using morphological filters to improve the segmentation and compute the edge of the nuclei for further intensity measurements.  Lower row - A dilation and erosion using a 3x3 structuring element (left side). Morphological filters applied in series, e.g. opening and closing, can achieve very useful results (right side). 
+
 multiactivities: 
  - ["filter_morphological/filter_morphological_act1.md", [["ImageJ Macro", "filter_morphological/filter_morphological_act1_imagejmacro.ijm", "java"],
 																	 ["skimage napari", "filter_morphological/filter_morphological_act1_skimage_napari.py", "python"]]]
