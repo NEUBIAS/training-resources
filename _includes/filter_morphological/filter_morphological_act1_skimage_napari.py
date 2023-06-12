@@ -1,7 +1,7 @@
 # %% [markdown]
 # ### Dilation and erosion of binary
 #
-# Part of teaching module [Morphological filtering](https://neubias.github.io/training-resources/filter_morphological/#dilateerode)
+# Part of teaching module [Morphological filtering](https://neubias.github.io/training-resources/filter_morphological/index.html#dilateerode)
 
 # %%
 # Import python packages.
@@ -9,7 +9,6 @@ from OpenIJTIFF import open_ij_tiff
 from napari.viewer import Viewer
 from skimage.morphology import square, disk
 from skimage.morphology import erosion, dilation
-from skimage.morphology import opening, closing
 
 # Create a napari_viewer and visualize image and labels.
 napari_viewer = Viewer()
@@ -26,17 +25,17 @@ napari_viewer.add_image(image, name='image')
 #
 
 # %%
-# Perform erosion and dilation with default structuring element (cross-shaped)
+# Perform erosion and dilation with default structuring element (cross-shaped - disk(1))
 # 0 1 0 
 # 1 1 1
 # 0 1 0
-# This element has connectivity = 1
-eroded = erosion(image)
-dilated = dilation(image)
+# This element has connectivity = 1 
+eroded = erosion(image, footprint = disk(1))
+dilated = dilation(image, footprint = disk(1))
 
 # Add to napari
-napari_viewer.add_image(eroded, name='eroded1', colormap='magenta', opacity = 0.7)
-napari_viewer.add_image(dilated, name='dilated1', colormap = 'green', opacity = 0.7)
+napari_viewer.add_labels(eroded, name='eroded1', colormap='magenta', opacity = 0.7)
+napari_viewer.add_labels(dilated, name='dilated1', colormap = 'green', opacity = 0.7)
 
 # %% [markdown]
 # Appreciate that the single pixel disappeared with erosion.\
