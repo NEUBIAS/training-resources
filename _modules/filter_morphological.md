@@ -43,8 +43,10 @@ figure_legend: A dilation and erosion using a 3x3 structuring element (left side
 multiactivities: 
  - ["filter_morphological/filter_morphological_act1.md", [["ImageJ Macro", "filter_morphological/filter_morphological_act1_imagejmacro.ijm", "java"],
 																	 ["skimage napari", "filter_morphological/filter_morphological_act1_skimage_napari.py", "python"]]]
- - ["filter_morphological/filter_morphological_act2.md", [["ImageJ Macro", "filter_morphological/filter_morphological_act2_imagejmacro.ijm", "java"]]] 
- - ["filter_morphological/filter_morphological_act3.md", [["ImageJ Macro", "filter_morphological/filter_morphological_act3_imagejmacro.ijm", "java"]]] 
+ - ["filter_morphological/filter_morphological_act2.md", [["ImageJ Macro", "filter_morphological/filter_morphological_act2_imagejmacro.ijm", "java"], 
+																	 ["skimage napari", "filter_morphological/filter_morphological_act2_skimage_napari.py", "python"]]] 
+ - ["filter_morphological/filter_morphological_act3.md", [["ImageJ Macro", "filter_morphological/filter_morphological_act3_imagejmacro.ijm", "java"], 
+																	 ["skimage napari", "filter_morphological/filter_morphological_act3_skimage_napari.py", "python"]]] 
  - ["filter_morphological/filter_morphological_act4.md", [["ImageJ GUI", "filter_morphological/filter_morphological_act4_imagejgui.md", "markdown"], 
 															["ImageJ Macro", "filter_morphological/filter_morphological_act4_imagejmacro.ijm", "java"]]] 
 
