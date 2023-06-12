@@ -48,6 +48,19 @@ assessment: >
     {: .solution}
 
 learn_next:
-
+  - "[Morphological filtering](../filter_morphological)"
+  
 external_links:
 ---
+
+There exist multiple methods on how to compute a background image. 
+Which methods and parameters work best depends on the specific input image and the size of the object of interest. 
+
+
+Common methods are:
+
+* **Median filtering**
+* **Morphological opening**. Subtraction of the opened image from the original image is also called **Top-Hat** filtering. 
+* **Rolling ball**, this alogorithm is implemented for instance in ImageJ `Background Subtraction` or [`skimage.restoration.rolling_ball`](https://scikit-image.org/docs/stable/api/skimage.restoration.html#skimage.restoration.rolling_ball)
+
+Some of the methods may be sensistive to noise. Therefore, it can be convenient to smooth the image, e.g. with a mean or gaussian filtering,  prior computing the background image.  
