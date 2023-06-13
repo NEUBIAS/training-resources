@@ -13,7 +13,7 @@ print('image type:', image.dtype,'\n',
       'image shape:', image.shape,'\n',
       'intensity min:',   np.min(image),'\n',
       'intensity max:',   np.max(image),'\n'
-      'axes order:', axes
+      'axis order:', axes
       )
 
 # %%
@@ -23,13 +23,13 @@ viewer = napari.Viewer()
 viewer.add_image(image, name='original image')
 
 # %%
-# Remember the axis order 0=z, 1=x, 2=y
-# Maximum projection along z-axis
-max_z_image = np.max(image, axis=0)
-viewer.add_image(background, name='background')
+# Remember the axis order 0=t, 1=x, 2=y
+# Maximum projection along t-axis
+max_t_image = np.max(image, axis = 0)
+viewer.add_image(max_t_image, name = 'background')
 
 # %%
 # Cast to signed int16 to include also negative values
-foreground = image.astype('int16') - max_z_image.astype('int16')
-viewer.add_image(foreground, name='foreground')
+foreground = image.astype('int16') - max_t_image.astype('int16')
+viewer.add_image(foreground, name = 'foreground')
 
