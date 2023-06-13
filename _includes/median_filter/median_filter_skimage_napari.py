@@ -25,7 +25,7 @@ viewer.add_image(image1, name='original image1')
 
 # First method using the median filter
 from skimage import filters
-# First method using the median filter
+# Second method using the mean filter
 from skimage.filters import rank
 
 from skimage.morphology import disk
