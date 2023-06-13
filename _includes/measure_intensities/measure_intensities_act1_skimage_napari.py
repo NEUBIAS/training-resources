@@ -35,11 +35,12 @@ objects_labels.sort()
 print(objects_labels)
 
 # %% [markdown]
-# Observe that there are 4 values, 0 being the label of the background, 
-# 1,2 are the cells and 3 is the manually labeled background.
+# Observe that there are 4 values: 0 being the background label, 
+# 1, 2 are the cells and 3 is the manually labeled background.
 
 # %%
-# Use the intensity_image option to measure fluorescence intensity of objects
+# Use the intensity_image option of regionprops 
+# to measure the fluorescence intensity of objects
 fluo_regionprops = regionprops_table(
         labels,
         intensity_image = image,
@@ -54,27 +55,25 @@ fluo_measures.to_csv("object_measurements.csv")
 print(fluo_measures)
 
 # %%
-# Compute background value
-background = fluo_measures[fluo_measures.label==3].intensity_mean.values[0]
+# print the background intensity value
+background_label = 3
+background = fluo_measures[fluo_measures.label==background_label].intensity_mean.values[0]
 print(background)
 
 # %%
-# Append the background-corrected values to the table
+# Append the sum intensity and 
+# background-corrected values to the table
 fluo_measures['intensity_sum'] = fluo_measures.intensity_mean * fluo_measures.area
 fluo_measures['intensity_mean_corr'] = fluo_measures.intensity_mean - background
 fluo_measures['intensity_max_corr'] = fluo_measures.intensity_max - background
 fluo_measures['intensity_sum_corr'] = fluo_measures.intensity_mean_corr * fluo_measures.area
 print(fluo_measures)
 
-# %%
-# Save as table
-fluo_measures.to_csv("object_measurements.csv")
-
 # %% [markdown]
 # ### Larger labels for intensitiy measures  
 
 # %%
-# Load the data
+# Load the larger labels
 fpath = "https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__h2b_dilate_labels.tif"
 dilated_labels, axes_labels, voxel_labels, units_labels = open_ij_tiff(fpath)
 objects_labels = np.unique(dilated_labels.flatten())
@@ -85,7 +84,7 @@ print(objects_labels)
 napari_viewer.add_labels(dilated_labels, name='dilated_labels')
 
 # %%
-# Use the intensity_image to compute the fluorescence parameters
+# Measure the object intensites
 fluo_measures_dilated = pd.DataFrame(
     regionprops_table(
         dilated_labels,
@@ -95,13 +94,27 @@ fluo_measures_dilated = pd.DataFrame(
 )
 
 # %%
-# Append the background-corrected values to the table using the same background
+# Append the background-corrected values to the table 
+# with the dilated labels, using the same background
 fluo_measures_dilated['intensity_sum'] = fluo_measures_dilated.intensity_mean * fluo_measures_dilated.area
 fluo_measures_dilated['intensity_mean_corr'] = fluo_measures_dilated.intensity_mean - background
 fluo_measures_dilated['intensity_max_corr'] = fluo_measures_dilated.intensity_max - background
 fluo_measures_dilated['intensity_sum_corr'] = fluo_measures_dilated.intensity_mean_corr * fluo_measures_dilated.area
-# Export the data
-fluo_measures_dilated.to_csv("object_measurements_dilated.csv")
 print(fluo_measures_dilated)
 
 # %%
+# Compare the results
+# Observe:
+# 1. mean intensity is affected by label size
+# 2. max intensity is not affected by label size
+# 3. bg-corrected sum intensity is hardly affected by label size
+print("Small labels:")
+print(fluo_measures)
+print("\nLarge labels:")
+print(fluo_measures_dilated)
+
+# %%
+# Export the data
+fluo_measures.to_csv("object_measurements.csv")
+fluo_measures_dilated.to_csv("object_measurements_dilated.csv")
+
