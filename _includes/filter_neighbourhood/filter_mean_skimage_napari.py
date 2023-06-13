@@ -17,11 +17,13 @@ viewer.add_image(image)
 
 # %%
 # Appreciate that one cannot segment the nuclei by a simple intensity threshold
+# Activity: Explore different threshold values
 binary_image = image > 40
 viewer.add_image(binary_image)
 
 # %% 
 # Define a circular structural element with a radius of 1 pixel
+# Activity: Explore different radii
 from skimage.morphology import disk
 radius = 1
 disk_radius1 = disk(radius)
