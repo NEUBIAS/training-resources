@@ -51,7 +51,6 @@ print(fluo_regionprops)
 # %%
 # Wrap in a panda dataframe for better visualization nd export
 fluo_measures = pd.DataFrame(fluo_regionprops)
-fluo_measures.to_csv("object_measurements.csv")
 print(fluo_measures)
 
 # %%
