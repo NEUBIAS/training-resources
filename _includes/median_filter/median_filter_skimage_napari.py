@@ -11,7 +11,7 @@ viewer = napari.Viewer()
 # (Replace the image path to explore the other example images)
 #
 from OpenIJTIFF import open_ij_tiff
-image1, axes1, scales1, units1 = open_ij_tiff('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__squares_different_size.tif')
+image1, axes1, scales1, units1 = open_ij_tiff('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__two_noisy_squares_different_size.tif')
 
 # Inspect image data type and values
 print('image type:', image1.dtype,'\n',
