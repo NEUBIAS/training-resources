@@ -43,10 +43,11 @@ It works well to let students do the module assessments or some of the activitie
 A possible teaching instruction is that only one of the two students is allowed to touch the computer. This promotes interactivity and discussions.
 
 ## Group work on students images
-This way of group work is fun and works well in a in person context for a several day course (2-3 days)
-Day 1: students could present their research, the images they generate and what they would like to measure. Each of this could be a small project with example images and a goal.
-Day 1-2: Teach basic concepts and perform activities as above.
-Day 2 or 3: Pick some projects and discuss how we can solve the problems with the knowledge we have. Make groups of 2-3 people and help students to work through the projects.
+This way of group work is fun and works well in a in person context for a several day course (2-3 days). For example:
+
+* Day 1: Students present projects connected to their research. This shoudl contain the images they generate and what they would like to measure. 
+* Day 1-2: Go through essential modules and modules that may fit well with the students project. 
+* Day 2-3: Pick some projects and discuss how we can solve the problems with the knowledge we have. Make groups of 2-3 people and help students to work through the projects.
 
 ## ...
 
