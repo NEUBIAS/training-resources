@@ -21,7 +21,9 @@ Each module should be first tought without dwelling too much on the software imp
 
 We typically start with the concept map that contains the essential ideas which are independent of the software implementation. The Figure is like a slide that helps illustrate the concept. Ideally the figure should have a biological example and a if needed a technical explanation. 
 
-After this introduction we present one or several activities that illustrate the concept within the given software implementation.  
+After this introduction we present one or several activities that illustrate the concept within the given software implementation. Each activity has a general description and several software implementation, which correspond to a solution. 
+
+Two screens are helpful for the teacher. The teacher can move the respective window (code, GUI, browser) on the presenter screen when needed. 
 
 
 ## Motivate each individual module biologically
@@ -41,6 +43,8 @@ For a code containing activity (e.fg. skimage-napari) it is hard to perform a wr
 
 It works well to let students do the module assessments or some of the activities on their own in very small groups (of two persons). In an online context this can be done as break-out rooms. 
 A possible teaching instruction is that only one of the two students is allowed to touch the computer. This promotes interactivity and discussions.
+
+Some module activities contain further text indications, where students can try out new features that have not been included in the solution. 
 
 ## Group work on students images
 This way of group work is fun and works well in a in person context for a several day course (2-3 days). For example:
