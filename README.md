@@ -9,6 +9,14 @@
 This project is intended to collect together various resources
 that can be useful when planning/delivering training in image analysis.
 
+## Teach
+
+The material in this repository can be flexibly used in many ways.
+
+Some guidance and tips can be found in [`TEACHING_TIPS`](TEACHING_TIPS.md)
+
+## Contribute
+
 Detailed guidance for contributing can be found in [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ## Repository

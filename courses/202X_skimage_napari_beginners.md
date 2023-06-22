@@ -2,7 +2,7 @@
 
 TODO:
 - go through all activities and check whether they can be given more biological context, i.e. whether the actual example image could be motivated biologically
-
+- consider reminding people that they can bring their own data (one has to think when there is a good time for this, depending on how one does the teaching). Maybe this could be even a different day after the course, so more like a hackathon, shortly after the course.
 
 
 ## Why take this course
@@ -65,6 +65,7 @@ TODO:
 ### Image inspection basics (day 1)
 
 TODO:
+- Consider having some introductory slides that discusses the pros and cons of the tool that is being taught; e.g. what are the pros and cons of python scripting vs Fiji vs Imaris vs QuPath, ...
 - Consider starting showing a relevant biological workflow that would require all the modules that are taught during that day
  
 
