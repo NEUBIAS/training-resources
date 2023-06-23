@@ -54,5 +54,7 @@ This way of group work is fun and works well in a in person context for a severa
 * Day 1-2: Go through essential modules and modules that may fit well with the students project. 
 * Day 2-3: Pick some projects and discuss how we can solve the problems with the knowledge we have. Make groups of 2-3 people and help students to work through the projects.
 
-## ...
+## Teaching only a workflow
+
+If you don't have much time but still want to teach something it can also be an option to only pick one of the workflows and just go through that workflow without explicitly teaching the individual modules. This will allow you to very fast get across the overall concepts but you will miss some details. 
 
