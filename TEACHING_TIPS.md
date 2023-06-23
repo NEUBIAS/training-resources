@@ -15,11 +15,11 @@ For example, one could:
 
 Essentially, go back and forth between teaching modules and where we are right now in the workflow.
 
-## Teaching workflow for a module
+## Teaching a module
 
-Each module should be first tought without dwelling too much on the software implementation (Fiji does it this way, python is like this and so on). The goal is that students should at east remember why you need a specific concept, when to apply it and in the best cases also how (techinical part). 
+Each module should be first tought without dwelling too much on the software implementation (Fiji does it this way, python is like this and so on). The goal is that students should at least remember why you need a specific concept, when to apply it and in the best cases also how (techinical part). 
 
-We typically start with the concept map that contains the essential ideas which are independent of the software implementation. The Figure is like a slide that helps illustrate the concept. Ideally the figure should have a biological example and a if needed a technical explanation. 
+We typically start with the concept map that contains the essential ideas which are independent of the software implementation. The Figure is like a slide that helps illustrate the concept. Ideally the figure should have a biological example and a if needed a technical explanation (some figures should be improved in this respect; we could also discuss whether we may want have two figures, e.g. technical concept and application examples). 
 
 After this introduction we present one or several activities that illustrate the concept within the given software implementation. Each activity has a general description and several software implementation, which correspond to a solution. 
 
@@ -47,6 +47,7 @@ A possible teaching instruction is that only one of the two students is allowed 
 Some module activities contain further text indications, where students can try out new features that have not been included in the solution. 
 
 ## Group work on students images
+
 This way of group work is fun and works well in a in person context for a several day course (2-3 days). For example:
 
 * Day 1: Students present projects connected to their research. This shoudl contain the images they generate and what they would like to measure. 
