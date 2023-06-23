@@ -4,6 +4,14 @@ The material in this repository can be used in various ways. We have used as it 
 or in person.  The material consists of modules that explain basic concepts of bioimage analysis or more complex example workflows. 
 The teaching of each module including one or several activities takes about 30-45 min. 
 
+## Know your audience
+
+If possible try to find out who will be your students:
+* What is their background 
+* Education level (PostDoc, bachelor)
+* Which kind of images do they typically generate (modality, instrument, ...)
+  
+
 ## Motivate and contextualise modules by workflow
 To help students understand what the concepts are useful for, it is good to provide a broader context. For example, by placing the concepts within a larger workflow of image analysis. 
 For example, one could:
