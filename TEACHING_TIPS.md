@@ -8,7 +8,7 @@ The teaching of each module including one or several activities takes about 30-4
 
 If possible try to find out who will be your students:
 * What is their background 
-* Education level (PostDoc, bachelor)
+* Education level (PostDoc, bachelor, ...)
 * Which kind of images do they typically generate (modality, instrument, ...)
   
 
