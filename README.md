@@ -9,6 +9,10 @@
 This project is intended to collect together various resources
 that can be useful when planning/delivering training in image analysis.
 
+## About 
+
+- [Google slides presentation](https://docs.google.com/presentation/d/1x5euj3p4hoAdOONQbzFA5xf3rnsNeTjC1rpadCbwbQk/edit?usp=sharing)
+
 ## Teach
 
 The material in this repository can be flexibly used in many ways.
