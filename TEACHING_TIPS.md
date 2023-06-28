@@ -10,9 +10,9 @@ If possible try to find out who will be your students:
 * What is their background 
 * Education level (PostDoc, bachelor, ...)
 * Which kind of images do they typically generate (modality, instrument, ...)
-  
 
-## Motivate and contextualise modules by workflow
+## Motivate and contextualise modules by workflows
+
 To help students understand what the concepts are useful for, it is good to provide a broader context. For example, by placing the concepts within a larger workflow of image analysis. 
 For example, one could:
 
@@ -25,9 +25,23 @@ Essentially, go back and forth between teaching modules and where we are right n
 
 ## Teaching a module
 
-Each module should be first tought without dwelling too much on the software implementation (Fiji does it this way, python is like this and so on). The goal is that students should at least remember why you need a specific concept, when to apply it and in the best cases also how (techinical part). 
+### Motivation
+
+Is is good to explain why the content of this specific module is important. As mentioned above, a good way is to contextualise it in some bigger analysis workflow.
+
+In addition, there is a short text at the beginning of each module that explains the importance. This content of this text should be communicated to the students.
+
+### Concept
+
+Each module should be first taught without dwelling too much on the software implementation (Fiji does it this way, python is like this and so on). The goal is that students should at least remember why you need a specific concept, when to apply it and in the best cases also how (technical part). 
 
 We typically start with the concept map that contains the essential ideas which are independent of the software implementation. The Figure is like a slide that helps illustrate the concept. Ideally the figure should have a biological example and a if needed a technical explanation (some figures should be improved in this respect; we could also discuss whether we may want have two figures, e.g. technical concept and application examples). 
+
+For online teaching going through the concept map and figure is an option.
+
+For in-person teaching it can work even better to explain the concepts on a white board. In this case the module figure and concept map are only used for the teacher to check that nothing important is forgotten while teaching on the white board.
+
+### Activities for specific analysis platforms
 
 After this introduction we present one or several activities that illustrate the concept within the given software implementation. Each activity has a general description and several software implementation, which correspond to a solution. 
 
