@@ -1,9 +1,24 @@
 <h4 id="explore"><a href="#explore">Explore image data types and value ranges</a></h4> 
-Open the following images and discuss (a) their data type, and (b) whether there are any signs of intensity clipping.
+Open the following images and discuss their data type and whether there are any signs of intensity clipping.
 - [xy_8bit__nuclei_noisy_different_intensity.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_different_intensity.tif)
+  - Appreciate that this image has no major issues.
 - [xy_8bit__nuclei_intensity_clipping_issue_a.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_intensity_clipping_issue_a.tif)
+  - This image has saturation issues (many pixels of value 255).
+  - This is problematic as one cannot compare the intensity of some of the nuclei.
 - [xy_8bit__nuclei_intensity_clipping_issue_b.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_intensity_clipping_issue_b.tif)
+  - This image clips intensities at low gray scale levels (many zeros in the image).
+  - This is problematic as the data could be seen as if there is no DNA within some places of the nuclei, which most likely would be the wrong biophysical interpretation.
 - [xy_8bit_binary__h2b.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__h2b.tif)
+  - Even though this is an unsigend 8-bit integer image there are only two of the possible 256 gray values used. Thus, in practice this probably represents a binary image.
 - [xy_16bit__autophagosomes.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit__autophagosomes.tif)
+  - This is an unsigned integer 16-bit image.
+  - Not all 65535 gray values are used.
+  - In fact, the highest value in the image is 1200 which is less than 4095, thus, maybe this image was actually acquired with a 12-bit camera or some other bit-depth less than 16.
+  - In general, working with bit-depths between 8 and 16 is a bit problematic because there is not much support in terms of file formats and analysis software. Thus in the process one may loose track of the original bit-depth of the image.
 - [xy_16bit__scanR_datatype_issue.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit__scanR_datatype_issue.tif)
-
+  - This image is stored as an unsigned integer 16-bit image.
+  - The range of the data is from 32963 to 36863
+  - In fact, this image is a 12-bit image that has an offset of 2^15.
+  - `2^15 = 32768` (minimal possible value, which does not occur in this particular image because there is some background)
+  - `2^15 + 2^12 - 1 = 36863` (maximal value possible in this image)
+  - This example, which is produced by a real commercial microscope, again demonstrates that interpreting 16 bit images can be tricky, as they may actually be of a lower bit depth.

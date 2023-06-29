@@ -22,9 +22,8 @@ concept_map: >
 figure: /figures/data_types.png
 figure_legend: Examples for data types of different bit depths.
 
-
 multiactivities:
-  - ["datatypes/datatypes_act1.md", [["skimage napari", "datatypes/datatypes_act1_skimage_napari.py", "python"]]]
+  - ["datatypes/datatypes_act1.md", [["skimage napari", "datatypes/datatypes_act1_skimage_napari.py"], ["ImageJ GUI", "datatypes/datatypes_act1_imagej_gui.md"]]]
 
 exercises:
 
