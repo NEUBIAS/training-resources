@@ -26,14 +26,9 @@ figure: /figures/binarization.png
 figure_legend: Image before and after applying a threshold of 73 gray values.
 
 multiactivities:
-  - ["binarization/binarization_act1.md", [["ImageJ GUI", "binarization/binarization_act1_imagejgui.md", "markdown"], 
- ["ImageJ Macro", "binarization/binarization_act1_imagejmacro.ijm", "java"], ["ImageJ Jython", "binarization/binarization_act1_jython.py", "python"], 
- ["skimage napari", "binarization/binarization_act1_skimage_napari.py", "python"], ["MATLAB", "binarization/binarization_act1_matlab.m", "java"], 
- ["Knime", "binarization/binarization_act1_knime.md"]]]
-  - ["binarization/binarization_act2.md", [["ImageJ GUI", "binarization/binarization_act2_imagejgui.md", "markdown"], ["ImageJ Macro", "binarization/binarization_act2_imagejmacro.ijm", "java"], 
-  ["ImageJ Jython", "binarization/binarization_act2_jython.py", "python"],["ImageJ Jython + input parameters", "binarization/binarization_act2_jython_inputparameters.py", "python"], 
-  ["skimage napari", "binarization/binarization_act2_skimage_napari.py"]]]
-  - ["binarization/binarization_act3.md", [["ImageJ GUI", "binarization/binarization_act3_imagejgui.md", "markdown"]]]
+  - ["binarization/binarization_act1.md", [["ImageJ GUI", "binarization/binarization_act1_imagejgui.md"], ["ImageJ Macro", "binarization/binarization_act1_imagejmacro.ijm"], ["ImageJ Jython", "binarization/binarization_act1_jython.py"], ["skimage napari", "binarization/binarization_act1_skimage_napari.py", "python"]]]
+  - ["binarization/binarization_act2.md", [["ImageJ GUI", "binarization/binarization_act2_imagejgui.md"], ["ImageJ Macro", "binarization/binarization_act2_imagejmacro.ijm"], ["ImageJ Jython", "binarization/binarization_act2_jython.py"], ["ImageJ Jython + input parameters", "binarization/binarization_act2_jython_inputparameters.py"], ["skimage napari", "binarization/binarization_act2_skimage_napari.py"]]]
+  - ["binarization/binarization_act3.md", [["ImageJ GUI", "binarization/binarization_act3_imagejgui.md"]]]
 
 
 assessment: >
