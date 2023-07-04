@@ -33,10 +33,16 @@ multiactivities:
 assessment: >
 
   ### True or False
-    - TODO.
+    - Surface rendering and volume rendering are identical words for the same 3-D visualisation method.
+    - Volume rendering is particularly useful for data containing very dense 3-D information such as very many cells or nuclei in an organ of a biological specimen.
+    - Volume rendering is a simple algorithm that can easily be used without expert knowledge.
+    - Volume rendering is very useful to get an impression of the morphology and spatial distribution of objects.
 
     > ## Solution
-    >   - **TODO**
+    >   - False. Although both methods are used for 3-D rendering they are different. In surface rendering one needs to define "the shell" of an object and only this will be visible. In volume rendering the intensity of all voxels can be represented such as in a maximum intensity projection based volume rendering.
+    >   - False. If the data is very dense, there is a high probabilty that no matter from which angle you look there will be objects hidden behind other objects. Thus, sparse data can be more suited to 3-D rendering than very dense data.
+    >   - False. In fact, volume rendering is very complex and there are many things to learn to master it (see for example [this website](https://developer.nvidia.com/gpugems/gpugems/part-vi-beyond-triangles/chapter-39-volume-rendering-techniques).
+    >   - True. If the sample is not too dense, volume rendering allows one to get a quick overview of the whole 3-D specimen and its morphology.
     {: .solution}
 
 learn_next:
