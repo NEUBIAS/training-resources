@@ -1,15 +1,12 @@
----
-layout: page
-title: Guidelines for Contributing
----
+# Contribute
 
-Contributions to this project are very welcome.
-Changes should be submitted by merge request from a new branch to `master`.
-Merge requests should be reviewed by at least one Maintainer before merging.
+There are already [numerous contributors](https://github.com/NEUBIAS/training-resources/graphs/contributors) to this project and we are always welcoming more!
 
-See `README.md` for information on the structure of the repository.
+If you are a first time contributor we recommend expressing your interest by [creating an issue](https://github.com/NEUBIAS/training-resources/issues) where you describe how you would like to contribute. 
+We will then get in touch with you to discuss the details, e.g. by having a zoom with you.
 
-## Step by step guide
+
+## Step by step technical contribution guide
 
 To contribute to this project, please follow those steps:
 
@@ -23,6 +20,7 @@ To contribute to this project, please follow those steps:
 1. Thank you for your contribution!
 
 ### Editor
+
 [Visual Studio Code](https://code.visualstudio.com/) supports code formating and highlighting with the [Liquid](https://marketplace.visualstudio.com/items?itemName=sissel.shopify-liquid) and [Jekyll Syntax Support](https://marketplace.visualstudio.com/items?itemName=ginfuru.ginfuru-vscode-jekyll-syntax) extensions (available via VSCode marketplace).
 
 After the extensions are installed the document type can be changed to "Liquid" in the bottom right corner.
@@ -35,9 +33,13 @@ This should enable syntax highlighting. By pressing `Ctrl + Shift + p` you can s
 Each module page is built from a template (`_layouts/module.html`),
 ensuring a consistent structure and style for the whole collection.
 To create a new module, you will need to add a few files
-in a few different places in this repository.
+in a few different places in this repository. 
+
+For convenience there is the [add_new_module.sh](https://github.com/NEUBIAS/training-resources/blob/master/add_new_module.sh) shell script that will automatically create the file and folder skeleton for a new module. Example usage: `./add_new_module.sh distance_transform`
+
 
 ### Module file
+
 Most important is the module file itself.
 This module file should be saved with a short, descriptive name (no spaces!)
 ending with the `.md` (Markdown) extension.
