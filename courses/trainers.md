@@ -12,4 +12,4 @@ We are aware that this training material has been taught by:
 - Ignacio Arganda-Carreras, University of the Basque Country, Spain
 - Kagayaki Kato, NIBB, Japan
 - Yusaku Ohta, NIBB, Japan
-- Ana Cayuela Lopez
+- Ana Cayuela Lopez, Madrid, Spain
