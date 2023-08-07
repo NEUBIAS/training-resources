@@ -1,7 +1,6 @@
-Adapt the code from the activity such that you:
-1. Specify an output directory in the beginning
-2. Save the results table as comma-separated data table instead of text-delimited data.
-3. Save the output label image in a different image format (e.g. PNG, JPEG). Is this a good format for label images?
+1. Download the template script: [output_saving_imagej-macro_template.ijm](https://github.com/NEUBIAS/training-resources/tree/master/_includes/output_saving//output_saving_act1_imagej-macro.ijm). The aim of the script is to generate different kinds of output (labels, results, ROIs) from this image: [xy_8bit_binary_randomshapes.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary_randomshapes.tif).
+2. Run and understand the script.
+3. Add commands that save the different output: label image, results table, ROIs.
 
 > ## Solution
 > ```java
@@ -29,8 +28,8 @@ Adapt the code from the activity such that you:
 >run("Analyze Particles...", "size=&minSize-&maxSize show=[Count Masks] display add") // run the particle analyzer>run("glasbey")
 >
 >// Save the results
->saveAs("Png", outputDir + File.separator + "/shapes_labels_macro.png"); // save label mask to output directory
->saveAs("Results", outputDir + File.separator + "/shapes_results_macro.csv"); // save results file to output directory
->roiManager("Save", outputDir + File.separator + "/shapes_ROIset_macro.zip"); // save ROIs to output directory
+>saveAs("tiff", outputDir + File.separator + "shapes_labels_macro.tiff"); // save label mask to output directory
+>saveAs("results", outputDir + File.separator + "shapes_results_macro.txt"); // save results file to output directory
+>roiManager("Save", outputDir + File.separator + "shapes_ROIset_macro.zip"); // save rois to output directory
 > ```
 {: .solution}

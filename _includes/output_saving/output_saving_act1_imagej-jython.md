@@ -1,6 +1,6 @@
-1. Download the template script: [output_saving_imagej-jython_template.py](https://github.com/NEUBIAS/training-resources/tree/master/_includes/output_saving/activities/output_saving_imagej-jython_template.py). The aim of the script is to generate different kinds of output (labels, results, ROIs) from this image: [xy_8bit_binary_randomshapes.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary_randomshapes.tif).
+1. Download the template script: [output_saving_imagej-jython_template.py](https://github.com/NEUBIAS/training-resources/tree/master/_includes/output_saving/output_saving_act1_imagej-jython_template.py). The aim of the script is to generate different kinds of output (labels, results, ROIs) from this image: [xy_8bit_binary_randomshapes.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary_randomshapes.tif).
 2. Run and understand the script.
-2. Add commands that save the different output: label image, results table, ROIs.
+3. Add commands that save the different output: label image, results table, ROIs.
 
 > ## Solution
 > ```python
