@@ -13,7 +13,7 @@ motivation: |
 concept_map: >
   graph TD
     ID("Image data") --> IS("Inspect")
-    P("Present")
+    IS --> P("Present")
 
 figure: /figures/workflow_collagen_image_inspection.png
 figure_legend: "Quantitative image display of microscopy data showing collagen secretion of tissue culture cells. Left: 0 hours secretion; right: 96 hours secretion."
