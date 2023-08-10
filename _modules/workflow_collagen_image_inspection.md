@@ -1,7 +1,11 @@
 ---
 title: Collagen secretion image presentation
 layout: module
+<<<<<<< HEAD
 tags: ["workflow"]
+=======
+tags: ["draft", "workflow"]
+>>>>>>> workflow_quantitative_image_inspection
 prerequisites:
   - "[Digital image basics](../pixels)"
   - "[Lookup tables](../lut)"
