@@ -1,11 +1,7 @@
 ---
-title: Collagen secretion image presentation
+title: Microscopy data inspection and presentation 
 layout: module
-<<<<<<< HEAD
-tags: ["workflow"]
-=======
 tags: ["draft", "workflow"]
->>>>>>> workflow_quantitative_image_inspection
 prerequisites:
   - "[Digital image basics](../pixels)"
   - "[Lookup tables](../lut)"
@@ -16,13 +12,15 @@ motivation: |
 
 concept_map: >
   graph TD
-    T1("Image data") --> T2("Presentation figure")
+    ID("Image data") --> IS("Inspect")
+    P("Present")
 
 figure: /figures/workflow_collagen_image_inspection.png
 figure_legend: "Quantitative image display of microscopy data showing collagen secretion of tissue culture cells. Left: 0 hours secretion; right: 96 hours secretion."
 
 multiactivities:
-  - ["workflow_collagen_image_inspection/create_figure.md", [["ImageJ Macro", "workflow_collagen_image_inspection/create_figure.ijm"]]]
+  - ["workflow_collagen_image_inspection/inspect_collagen_data.md", [["ImageJ Macro", "workflow_collagen_image_inspection/inspect_collagen_data.ijm"]]]
+  - ["workflow_collagen_image_inspection/create_collagen_figure.md", [["Powerpoint", "workflow_collagen_image_inspection/create_collagen_figure_powerpoint.md"]]]
 
 assessment: >
 
