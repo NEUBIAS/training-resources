@@ -1,6 +1,7 @@
 ---
 title: Lookup tables
 layout: module
+permalink: /lut/
 
 prerequisites:
   - "[Basic properties of images and pixels](../pixels)"

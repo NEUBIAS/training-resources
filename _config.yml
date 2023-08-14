@@ -43,7 +43,7 @@ module_order:
 - local_background_correction
 - filter_objects
 - workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape
-- workflow_collagen_image_inspection
+- image_inspection_and_presentation
 - distance_transform
 - watershed
 - skeletonization

@@ -12,15 +12,15 @@ motivation: |
 
 concept_map: >
   graph TD
-    ID("Image data") --> IS("Inspect")
-    IS --> P("Present")
+    ID("Image data") --> IS("Inspection")
+    IS --> P("Presentation")
 
-figure: /figures/workflow_collagen_image_inspection.png
+figure: /figures/image_inspection_and_presentation.png
 figure_legend: "Quantitative image display of microscopy data showing collagen secretion of tissue culture cells. Left: 0 hours secretion; right: 96 hours secretion."
 
 multiactivities:
-  - ["workflow_collagen_image_inspection/inspect_collagen_data.md", [["ImageJ Macro", "workflow_collagen_image_inspection/inspect_collagen_data.ijm"]]]
-  - ["workflow_collagen_image_inspection/create_collagen_figure.md", [["Powerpoint", "workflow_collagen_image_inspection/create_collagen_figure_powerpoint.md"]]]
+  - ["image_inspection_and_presentation/inspect_collagen_data.md", [["ImageJ Macro", "image_inspection_and_presentation/inspect_collagen_data.ijm"]]]
+  - ["image_inspection_and_presentation/create_collagen_figure.md", [["Powerpoint", "image_inspection_and_presentation/create_collagen_figure_powerpoint.md"]]]
 
 assessment: >
 
