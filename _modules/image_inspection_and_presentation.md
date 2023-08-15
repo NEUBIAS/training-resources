@@ -1,7 +1,7 @@
 ---
-title: Microscopy data inspection and presentation 
+title: Quantitative image inspection and presentation 
 layout: module
-tags: ["draft", "workflow"]
+tags: ["workflow"]
 prerequisites:
   - "[Digital image basics](../pixels)"
   - "[Lookup tables](../lut)"
@@ -16,7 +16,7 @@ concept_map: >
     IS --> P("Presentation")
 
 figure: /figures/image_inspection_and_presentation.png
-figure_legend: "Quantitative image display of microscopy data showing collagen secretion of tissue culture cells. Left: 0 hours secretion; right: 96 hours secretion."
+figure_legend: "Fluorescence microscopy data showing collagen secretion of tissue culture cells. Left: 0 hours secretion of collagen; right: 96 hours secretion of collagen."
 
 multiactivities:
   - ["image_inspection_and_presentation/inspect_collagen_data.md", [["ImageJ Macro", "image_inspection_and_presentation/inspect_collagen_data.ijm"]]]
