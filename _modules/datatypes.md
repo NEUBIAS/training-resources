@@ -1,6 +1,7 @@
 ---
 title:     Data types
 layout:    module
+permalink: /datatypes/
 
 prerequisites:
   - "[Digital image basics](../pixels)"
@@ -24,6 +25,7 @@ figure_legend: Examples for data types of different bit depths.
 
 multiactivities:
   - ["datatypes/datatypes_act1.md", [["skimage napari", "datatypes/datatypes_act1_skimage_napari.py"], ["ImageJ GUI", "datatypes/datatypes_act1_imagej_gui.md"]]]
+  - ["datatypes/metadata_and_datatype.md", [["ImageJ GUI", "datatypes/metadata_and_datatype_imagej_gui.md"]]] 
 
 exercises:
 

@@ -4,7 +4,7 @@ In this workflow we inspect the content of images of tissue culture cells expres
 
 - [Inspect the image pixel values](/pixels/index.html#inspect_collagen) 
 - [Adjust the image display](/lut/index.html#configure)
-- Inspect image metadata
+- [Inspect image metadata and datatype](/datatypes/index.html#metadata_and_datatype)
 - Inspect and display spatial calibration
 - Create line profiles
 - Create magnified insets
