@@ -11,6 +11,7 @@ If you are a beginner, we recommend first learning the individual steps
   - [Inspect image metadata and datatype](/datatypes/index.html#metadata_and_datatype)
   - [Inspect microscope settings metadata](/image_file_formats/index.html#open)
     - Of particular interest here is the image: Collagen  - Molecular Devices TIFF with extensive metadata 
+    - Find important metadata that affect the measurements, such as exposure time and illumination intensity
   - [Inspect and display spatial calibration](/spatial_calibration/index.html#scale_bar)
 
 
