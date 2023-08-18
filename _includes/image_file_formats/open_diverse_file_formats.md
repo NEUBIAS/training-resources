@@ -1,18 +1,20 @@
-<h4 id="open"><a href="#open">Open various file formats</a></h4>
+<h4 id="open"><a href="#open">Explore various image file formats</a></h4>
 
-- Open different image file formats and inspect their pixel data and metadata
-- Appreciate that some image file formats
+- Open different image file formats and inspect their pixel data and also their metadata
+- Appreciate that image file formats
   - include more or less metadata
-  - consist of multiple files, e.g. splitting metadata and pixel data across two files
-  - may contain multiple (5D) images
-- Example images
-  - TIFF with minimal metadata: [xy_8bit__nuclei_PLK1_control.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_PLK1_control.tif)
-  - LIF containing two images with extensive metadata: [xy_xyc__two_images.lif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_xyc__two_images.lif)
-  - CZI containing several images: [xyz__multiple_images.czi](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz__multiple_images.czi)
-  - ICS/IDS
-    - Text metadata [xyzct_16bit__mitosis.ics](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyzct_16bit__mitosis.ics)
-    - Corresponding binary pixel data [xyzct_16bit__mitosis.ids](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyzct_16bit__mitosis.ids) 
-  - XML/HDF5 
-    - XML metadata [xyzct_16bit__mitosis.xml](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyzct_16bit__mitosis.xml) 
-    - Corresponding HDF5 pixel data [xyzct_16bit__mitosis.h5](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyzct_16bit__mitosis.h5)
+  - may contain multiple images
+  - may consist of multiple files, e.g. splitting metadata and pixel data across two files
 
+##### Example image data
+
+- [Nuclei - TIFF with minimal metadata](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_PLK1_control.tif)
+- [Collagen  - Molecular Devices TIFF with extensive metadata](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit__collagen.md.tif)
+- [LIF containing two images with extensive metadata](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_xyc__two_images.lif)
+- [CZI containing several images](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz__multiple_images.czi)
+- ICS/IDS
+  - [ICS metadata](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyzct_16bit__mitosis.ics)
+  - [IDS pixel data](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyzct_16bit__mitosis.ids) 
+- XML/HDF5 
+  - [XML metadata](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyzct_16bit__mitosis.xml) 
+  - [HDF5 pixel data](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyzct_16bit__mitosis.h5)

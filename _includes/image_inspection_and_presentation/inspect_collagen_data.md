@@ -9,6 +9,8 @@ If you are a beginner, we recommend first learning the individual steps
   - [Inspect the image pixel values](/pixels/index.html#inspect_collagen) 
   - [Adjust the image display](/lut/index.html#configure)
   - [Inspect image metadata and datatype](/datatypes/index.html#metadata_and_datatype)
+  - [Inspect microscope settings metadata](/image_file_formats/index.html#open)
+    - Of particular interest here is the image: Collagen  - Molecular Devices TIFF with extensive metadata 
   - [Inspect and display spatial calibration](/spatial_calibration/index.html#scale_bar)
 
 

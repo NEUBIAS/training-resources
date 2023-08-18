@@ -8,5 +8,5 @@ The reason for this is that most software only support data types where the bit 
 
 ##### Image data
 
-- [12 bit OIR image](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_12bit__plant.oir)
-- TODO: Add collagen MD image
+- [uint12 OIR image](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_12bit__plant.oir)
+- [uint16 MD TIFF image(https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit__collagen.md.tif)
