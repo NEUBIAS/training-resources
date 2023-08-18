@@ -4,4 +4,4 @@
 
 ##### Image data
 
-- [TODO: MD Collagen](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit__mitotic_plate_calibrated.tif)
+- [Collagen Molecular Devices TIFF](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit__collagen.md.tif)

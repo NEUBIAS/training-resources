@@ -37,5 +37,6 @@ assessment: >
 learn_next:
 
 external_links:
+  - "[Forum discussion on collagen figure creation](https://forum.image.sc/t/image-data-figure-creation-best-practices-example-for-collagen-secretion/84584)"
 ---
 
