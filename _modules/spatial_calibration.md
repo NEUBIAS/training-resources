@@ -20,13 +20,12 @@ motivation: >
 
 concept_map: >
   graph TD
-    Im("Image") -->|has many| P("Pixel/Voxel")
-    Im --> |has| C("Calibration")
-    P -->|has| Va("Value")
-    P -->|has| I("Indices")
-    P --> |has| RWC("Real world coordinate")
-    C --> RWC
-    I --> RWC
+    Im("Image") --> P("Pixels")
+    Im --> C("Calibration")
+    P --> Va("Value")
+    P --> I("Indices")
+    I --> CC("Calibrated coordinate")
+    C --> CC
 
 figure: /figures/spatial_calibration.png
 figure_legend: Spatial calibration and size measurements
