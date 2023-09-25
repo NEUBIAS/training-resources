@@ -7,12 +7,12 @@ mentioned in this module's prerequisites.
 
 If you are a beginner, we recommend first learning the individual steps
   - [Inspect the image pixel values](https://neubias.github.io/training-resources/pixels/index.html#inspect_collagen) 
-  - [Adjust the image display]((https://neubias.github.io/training-resources/lut/index.html#configure_luts)
-  - [Inspect image metadata and datatype]((https://neubias.github.io/training-resources/datatypes/index.html#metadata_and_datatype)
-  - [Inspect microscope settings metadata]((https://neubias.github.io/training-resources/image_file_formats/index.html#open)
+  - [Adjust the image display](https://neubias.github.io/training-resources/lut/index.html#configure_luts)
+  - [Inspect image metadata and datatype](https://neubias.github.io/training-resources/datatypes/index.html#metadata_and_datatype)
+  - [Inspect microscope settings metadata](https://neubias.github.io/training-resources/image_file_formats/index.html#open)
     - Of particular interest here is the image: Collagen  - Molecular Devices TIFF with extensive metadata 
     - Find important metadata that affect the measurements, such as exposure time and illumination intensity
-  - [Inspect and display spatial calibration]((https://neubias.github.io/training-resources/spatial_calibration/index.html#scale_bar)
+  - [Inspect and display spatial calibration](https://neubias.github.io/training-resources/spatial_calibration/index.html#scale_bar)
 
 
 ##### Image data
