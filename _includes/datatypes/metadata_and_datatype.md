@@ -1,12 +1,14 @@
-<h4 id="metadata_and_datatype"><a href="#metadata_and_datatype">Explore image metadata and data types</a></h4> 
+<h4 id="datatype_metadata"><a href="#datatype_metadata">Explore image data types</a></h4> 
 
-Explore the metadata and datatypes of images. 
+Explore the datatypes of images! 
 
-Observe that for some software the datatype of the image after opening it does not match the datatype that is given in the metadata.
+Observe that for some software the datatype of the loaded image **does not match** the datatype given in the metadata.
 
-The reason for this is that most software only support data types where the bit depth is a multiple of 8. For example, unsigned integer 12-bit data may not be supported.
+The reason is that some software only support data types where the bit depth is a multiple of 8. For example, unsigned integer 12-bit data may not be supported. 
+
+This is very important as you may misinterpret whether your image contains saturated pixels or not.
 
 ##### Image data
 
-- [uint12 OIR image](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_12bit__plant.oir)
-- [uint16 MD TIFF image(https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit__collagen.md.tif)
+- [plant__12bit_olympus.oir](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_12bit__plant.oir)
+- [collagen__16bit_molecular_devices.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit__collagen.md.tif)
