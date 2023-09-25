@@ -1,8 +1,9 @@
-- Open one or more of the images that are mentioned in the activity preface, using `Plugins › Bio-Formats › Bio-Formats Importer`
-    - `[X] Display metadata`
+- Open one of the above images using `Plugins › Bio-Formats › Bio-Formats Importer`
     - `[X] Display OME-XML metadata`
-- Find the pixel calibration in the metadata text windows
-- Also inspect the pixel size using `Image > Properties`
-- Check that all information are consistent
+- Find the pixel calibration in the metadata text
+- Also inspect the pixel size in `Image > Properties`
+- Check that those information are consistent
 - Add a scale bar to the image using `Analyze › Tools › Scale Bar...`
     - Explore the various options for where and how to place the scale bar
+- Open the same image again using `File > Open...`
+  - Are you getting the same pixel calibration?

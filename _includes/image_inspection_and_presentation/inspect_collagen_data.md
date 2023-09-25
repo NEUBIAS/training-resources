@@ -2,15 +2,14 @@
 
 In this activity we inspect images of tissue culture cells expressing collagen.
 
-The below drop down menu allows you to perfom all steps in one go, which requires prior knowledge as 
-mentioned in this module's prerequisites.
+The below drop down menu allows you to perfom all steps in one go, which requires prior knowledge as mentioned in this module's prerequisites.
 
 If you are a beginner, we recommend first learning the individual steps
-  - [Inspect the image pixel values](https://neubias.github.io/training-resources/pixels/index.html#inspect_collagen) 
-  - [Adjust the image display](https://neubias.github.io/training-resources/lut/index.html#configure_luts)
-  - [Inspect and display spatial calibration](https://neubias.github.io/training-resources/spatial_calibration/index.html#scale_bar)
-  - [Inspect image data type](https://neubias.github.io/training-resources/datatypes/index.html#datatype_metadata)
-  - [Inspect microscope settings](https://neubias.github.io/training-resources/image_file_formats/index.html#open)
+  - [Image pixel value inspection](https://neubias.github.io/training-resources/pixels/index.html#inspect_collagen) 
+  - [Image display adjustment](https://neubias.github.io/training-resources/lut/index.html#configure_luts)
+  - [Image spatial calibration](https://neubias.github.io/training-resources/spatial_calibration/index.html#scale_bar)
+  - [Image data types](https://neubias.github.io/training-resources/datatypes/index.html#datatype_metadata)
+  - [Image microscopy metadata](https://neubias.github.io/training-resources/image_file_formats/index.html#open)
     - Check out the collagen image and find important metadata, such as exposure time and illumination intensity
 
 
