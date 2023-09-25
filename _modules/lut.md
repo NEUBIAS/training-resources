@@ -19,7 +19,7 @@ concept_map: >
     V("Pixel value") --> L("Lookup table (LUT)")
     L --> |does not change|V
     L --> C("Color & Brightness")
-    L -->|often is| A("Adjustable")
+    L --> A("Adjustable")
 
 figure: /figures/lut.png
 figure_legend:

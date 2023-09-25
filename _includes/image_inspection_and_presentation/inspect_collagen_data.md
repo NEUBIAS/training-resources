@@ -6,7 +6,7 @@ The below drop down menu allows you to perfom all steps in one go, which require
 mentioned in this module's prerequisites.
 
 If you are a beginner, we recommend first learning the individual steps
-  - [Inspect the image pixel values](/pixels/index.html#inspect_collagen) 
+  - [Inspect the image pixel values](/training-resources/pixels/index.html#inspect_collagen) 
   - [Adjust the image display](/lut/index.html#configure)
   - [Inspect image metadata and datatype](/datatypes/index.html#metadata_and_datatype)
   - [Inspect microscope settings metadata](/image_file_formats/index.html#open)
