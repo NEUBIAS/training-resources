@@ -1,5 +1,5 @@
 - Open one of the pairs of images mentioned in the activity preface
-- Choose a suitable LUT [Image › Lookup Tables ›  ... ]
-- Adjust brightness and contrast in the brighter image [ Image › Adjust › Brightness/Contrast... ]
-- Use the [ Set ] button in [ Image › Adjust › Brightness/Contrast... ] and check "[X] propagate to ..."
-- Visualise the LUT as an inset in both images using [Analyze › Tools › Calibration Bar...]
+- Choose a suitable LUT using `Image › Lookup Tables ›  ... `
+- Adjust brightness and contrast in the brighter image using `Image › Adjust › Brightness/Contrast...`
+- Use the `Set` button in `Image › Adjust › Brightness/Contrast...` and check `[X] propagate to ...`
+- Visualise the LUT as an inset in both images using `Analyze › Tools › Calibration Bar...`

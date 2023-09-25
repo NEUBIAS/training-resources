@@ -1,7 +1,6 @@
 ---
 title: Digital image basics
 layout: module
-permalink: /training-resources/pixels/
 prerequisites:
 
 objectives:

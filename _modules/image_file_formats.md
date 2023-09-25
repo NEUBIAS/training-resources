@@ -1,7 +1,6 @@
 ---
 title: Image file formats
 layout: module
-permalink: /image_file_formats/
 prerequisites:
   - "[Basic properties of images and pixels](../pixels)"
   - "[Data types](../datatypes)"

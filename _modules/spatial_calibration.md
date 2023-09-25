@@ -1,7 +1,6 @@
 ---
 title:  Spatial calibration
 layout: module
-permalink: /spatial_calibration/
 
 prerequisites:
   - "[Basics properties of images and pixels](../pixels)"

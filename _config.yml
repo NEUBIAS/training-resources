@@ -5,6 +5,9 @@ description: > # this means to ignore newlines until "baseurl:"
   Includes concept maps, exercises, example data
 contributing: CONTRIBUTING
 
+baseurl: "/training-resources" # this should be the name of your repository
+url: "https://neubias.github.io" # this should be the base hostname & protocol for your site
+
 # Build settings
 # Turn on built-in syntax highlighting.
 highlighter: rouge
@@ -68,6 +71,7 @@ module_order:
 # Sites
 repository: <USERNAME>/<PROJECT>
 cc_by_human: "https://creativecommons.org/licenses/by/4.0/"
+
 
 # Specify that things in the episodes collection should be output.
 collections:

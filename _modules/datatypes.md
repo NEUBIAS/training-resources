@@ -1,7 +1,6 @@
 ---
 title:     Data types
 layout:    module
-permalink: /datatypes/
 
 prerequisites:
   - "[Digital image basics](../pixels)"
