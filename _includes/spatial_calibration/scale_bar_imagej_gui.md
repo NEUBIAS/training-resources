@@ -5,5 +5,7 @@
 - Check that those information are consistent
 - Add a scale bar to the image using `Analyze › Tools › Scale Bar...`
     - Explore the various options for where and how to place the scale bar
-- Open the same image again using `File > Open...`
+    - Export the image using `Plugins › BioVoxxel Figure Tools › Export SVG` (requires BioVoxxel update site)
+        - SVG preserves the rendering of the scale bar at different zoom levels.
+- Open the raw data image again using `File > Open...` instead of Bio-Formats
   - Are you getting the same pixel calibration?

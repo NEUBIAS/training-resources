@@ -5,3 +5,5 @@
   - To find out which image is brighter you can try to use `Analyze > Histogram` 
 - Use the `Set` button in `Image › Adjust › Brightness/Contrast...` and check `[X] Propagate to all other open images`
 - Visualise the current LUT as an inset in both images using `Analyze › Tools › Calibration Bar...`
+    - Export the image using `Plugins › BioVoxxel Figure Tools › Export SVG` (requires BioVoxxel update site)
+        - SVG preserves the rendering of the scale bar at different zoom levels.
