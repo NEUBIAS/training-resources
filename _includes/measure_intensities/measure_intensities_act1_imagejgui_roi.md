@@ -1,0 +1,11 @@
+- Open the intensity image
+- Open the ROI manage to organise the object and background regions 
+    - `Analyze › Tools › ROI Manager...`
+- Use the Polygon selection tool to delineate both cells and a background region
+- `Add [t]` the respective ROIs to the ROI manager and `Rename...` them: `cell_1`, `cell_2`, `background`
+- Use `Analyze › Set Measurements...` to select `Area`, `Mean gray value`, `Min & max gray value`, `Integrated density`, `Display label`
+- Select all ROIs in the ROI Manager and click `Measure`
+- This will open a table
+- Use `File Save As..` to export the table as CSV and open it in a spreadsheet software (e.g. Google Sheet or Excel)
+- Add new columns for background corrected sum and mean intensity and do the math to correct all measurements for the background
+- Note that it is essential for the `Area` to be in pixel units when it using it to correct the sum intensity measurement
