@@ -36,15 +36,15 @@ Scientists that may use microscopy data in their research.
 ## Teaching content
 
 1. [Scientfic image data presentation](https://neubias.github.io/training-resources/image_inspection_and_presentation/index.html)
-  - Only discuss the main figure for motivation of the course: to create the figure all the below modules need to be learned
+    - Only discuss the main figure for motivation of the course: to create the figure all the below modules need to be learned
 1. [Digital image basics](https://neubias.github.io/training-resources/pixels/index.html)
 1. [Image data types](https://neubias.github.io/training-resources/datatypes/index.html) 
 1. [Lookup tables](https://neubias.github.io/training-resources/lut/index.html)
 1. [Spatial image calibration](https://neubias.github.io/training-resources/spatial_calibration/index.html) 
 1. [Image file formats](https://neubias.github.io/training-resources/image_file_formats/index.html)
 1. [Scientfic image data presentation](https://neubias.github.io/training-resources/image_inspection_and_presentation/index.html)
-  - Now we are ready to perform the module activity and create the scientific image presentation
-  - TODO the activity needs to be adapted: https://github.com/NEUBIAS/training-resources/issues/606 
+    - Now we are ready to perform the module activity and create the scientific image presentation
+    - TODO the activity needs to be adapted: https://github.com/NEUBIAS/training-resources/issues/606 
 
 ## Teaching tips
 
