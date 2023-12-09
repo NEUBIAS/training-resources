@@ -1610,6 +1610,8 @@ pre code {
 .row {
   margin-right: -10px;
   margin-left: -10px;
+  display: flex; /* MODIFIED */
+  flex-wrap: wrap; /* MODIFIED */
 }
 .row-no-gutters {
   margin-right: 0;
@@ -5530,6 +5532,7 @@ button.list-group-item-danger.active:focus {
   border-radius: 4px;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  flex: 1; /* MODIFIED */
 }
 .panel-body {
   padding: 15px;
