@@ -22,7 +22,6 @@ kind: "lesson"
 module_order:
 - tool_installation
 - pixels
-- image_formation_confocal
 - lut
 - spatial_calibration
 - multidimensional_image_basics
@@ -67,6 +66,7 @@ module_order:
 - manual_segmentation
 - workflow_golgi_per_cell
 - big_image_file_formats
+- image_formation_confocal
 
 # Sites
 repository: <USERNAME>/<PROJECT>
