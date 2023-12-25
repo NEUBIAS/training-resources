@@ -48,7 +48,7 @@ open an issue: https://github.com/carpentries/styles/issues/new
   {% assign title_prefix = "Scripting: " %}
 {% endif %}
 
-<div class="col-xs-6 col-sm-4 col-md-3 col-lg-1">
+<div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-1">
   <div class="panel panel-default">
     <div class="panel-heading">
       <a href="{{ e.url | relative_url }}">
