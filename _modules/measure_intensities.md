@@ -14,14 +14,12 @@ motivation: >
 
 concept_map: >
   graph TD
-    li[Label image] --> im("Object intensity measurements")
+    li[Object regions] --> im("Object intensity measurements")
     ii[Intensity image] --> im
-    im --> table["Results table"]
+    im --> table["Objects table<br>oid | sum | mean | mean_bg <br>001 | 222 | 24 | 12 <br> 002 | 500 | 21 | 12 "]
+    style table text-align:left
     ii --> bgm("Background measurement")
     bgm --> table
-    table --> object_column["Columns are intensity features"]
-    object_column -.- |"e.g."| ex["Mean, Sum, Max, ..., Background"] 
-    table --> object_row["Rows are objects"]
    
         
 figure: /figures/measure_intensities.png
