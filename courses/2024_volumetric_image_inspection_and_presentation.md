@@ -47,7 +47,7 @@ Scientists that may use microscopy data in their research.
     - TODO: Check which viewer we want to use for this; maybe Napari?
     - TODO: Can one just install napari as a standalone App, without conda?
 
-### 11:30 - 12:30 (optional)
+### 11:30 - 12:30
 
 1. Using Blender for 3D rendering
     - TODO: Add link to Oane's material.
