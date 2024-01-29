@@ -50,7 +50,8 @@ Scientists that may use microscopy data in their research.
 ### 11:30 - 12:30
 
 1. Using Blender for 3D rendering
-    - TODO: Add link to Oane's material.
+    - [tif2blender](https://github.com/oanegros/tif2blender) blender add-on demonstration. This will cover installing blender + tif2blender, loading data and changing some key parameters. 
+    - Further information in the [video tutorial](https://www.youtube.com/watch?v=TCQojYEYxVo) and [text tutorial](https://github.com/oanegros/Blender_for_Biologists_2023).
 
 ### Timing
 
