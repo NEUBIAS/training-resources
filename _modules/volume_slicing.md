@@ -19,8 +19,8 @@ concept_map: >
     S --> M["2D image"]
     M -.- A 
 
-figure: /figures/volume_slicing_subsetting.png
-figure_legend: "TODO: (Left) Subsetting a 3D volume results in a smaller 3D or 2D image. (Right) Slicing a 3D volume is a form of subsetting that results in a 2D slice." 
+figure: /figures/volume_slicing.png
+figure_legend: "Extracting 2-D slices from a 3-D volume, e.g. to be visualised on a computer monitor." 
 
 multiactivities:
   - ["volume_slicing/volume_slicing_act1.md", [["ImageJ GUI", "volume_slicing/volume_slicing_act1_imagej-gui.md", "markdown"], ["ImageJ Macro", "volume_slicing/volume_slicing_act1_imagej-macro.ijm", "java"], ["ImageJ Jython", "volume_slicing/volume_slicing_act1_imagej-jython.py", "python"]]]
