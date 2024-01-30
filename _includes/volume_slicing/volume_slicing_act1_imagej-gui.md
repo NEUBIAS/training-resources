@@ -1,6 +1,6 @@
 - Open a 3D image
-- Use `Imaeg > Properties` to check for anisotropic voxel sizes
-- Use `Image > Stacks > Orthogonal views` to view the data in XY, XZ and YZ planes 
+- Use `Image > Properties` to check for anisotropic voxel sizes
+- Use `Image > Stacks > Orthogonal views` to view the data in XY, XZ and YZ planes
   - Understand how the anisotropy is dealt with
 - Use `Image > Stacks > Reslice` to resample the data, exploring the below options to deal with anisotropy
   - `Output spacing`

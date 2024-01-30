@@ -1,32 +1,45 @@
-// This macro opens the head image stack and reslices it to view it from different angles (side, front, top and diagonal view)
-// and then selects slices corresponding to Z=60, X=135, and Y=160.
-// Close other open images
-run("Close All");
+// open image stack
+open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_16bit_calibrated__dna_metaphase.tif");
 
-// open head image stack
-open("http://imagej.net/images/t1-head.zip");
-rename("Head viewed from the side");
-run("Duplicate...", "duplicate range=60");
-rename("Head Z=60");
+// explore the dimensions
+width = getWidth();
+height = getHeight();
+depth = nSlices();
+print("Original Image Dimensions: Width = " + width + ", Height = " + height + ", Depth = " + depth);
 
-// Reslice the head image stack to view the head from the front and from the top, and select the slices for X=135 and Y=160 in the orginal view.
-selectWindow("Head viewed from the side");
-run("Reslice [/]...", "output=1.500 start=Left rotate"); // view head from the front
-rename("Head viewed from the front");
-run("Duplicate...", "duplicate range=135-135");
-rename("Head X=135");
+// reslice YZ with interpolation
+run("Reslice [/]...", "output=0.300 start=Left flip rotate");
+rename("YZ view");
+width = getWidth();
+height = getHeight();
+depth = nSlices();
+print("Image Dimensions YZ view: Width = " + width + ", Height = " + height + ", Depth = " + depth);
 
-selectWindow("Head viewed from the side");
-run("Reslice [/]...", "output=1.500 start=Top rotate"); // view head from the top
-rename("Head viewed from the top");
-run("Duplicate...", "duplicate range=160-160");
-rename("Head Y=160");
+// reslice XZ with interpolation
+selectImage("xyz_16bit_calibrated__dna_metaphase.tif");
+run("Reslice [/]...", "output=0.300 start=Top");
+rename("XZ view");
+width = getWidth();
+height = getHeight();
+depth = nSlices();
+print("Image Dimensions XZ view: Width = " + width + ", Height = " + height + ", Depth = " + depth);
 
-// Rotate the head stack that is viewed from the side and reslice to obtain diagonal view
-selectWindow("Head viewed from the side");
-run("Duplicate...", "duplicate");
-run("Rotate... ", "angle=45 grid=1 interpolation=Bilinear enlarge stack"); // rotate the stack
-run("Reslice [/]...", "output=1.500 start=Top rotate");
-rename("Head in diagonal view");
+// reslice YZ without interpolation
+selectImage("xyz_16bit_calibrated__dna_metaphase.tif");
+run("Reslice [/]...", "output=0.300 start=Left flip rotate avoid");
+rename("YZ view");
+width = getWidth();
+height = getHeight();
+depth = nSlices();
+print("Image Dimensions YZ view WITHOUT interpolation: Width = " + width + ", Height = " + height + ", Depth = " + depth);
 
-run("Tile");
+// reslice XZ with interpolation
+selectImage("xyz_16bit_calibrated__dna_metaphase.tif");
+run("Reslice [/]...", "output=0.300 start=Top avoid");
+rename("XZ view");
+width = getWidth();
+height = getHeight();
+depth = nSlices();
+print("Image Dimensions XZ view WITHOUT interpolation: Width = " + width + ", Height = " + height + ", Depth = " + depth);
+
+run("Tile")
