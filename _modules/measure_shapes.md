@@ -24,7 +24,7 @@ concept_map: >
     style table text-align:left
 
 figure: /figures/measure_shapes.png
-figure_legend: TODO: Create new figure, e.g. based on image by Chris, or using https://onlinelibrary.wiley.com/doi/full/10.1002/ece3.644 
+figure_legend: "TODO: Create new figure, e.g. based on image by Chris, or using https://onlinelibrary.wiley.com/doi/full/10.1002/ece3.644" 
 
 multiactivities:
   - ["measure_shapes/measure_shapes_act1.md", [["ImageJ GUI ROI", "measure_shapes/measure_shapes_act1_imagejgui_rois.md"],["ImageJ GUI MorphoLibJ", "measure_shapes/measure_shapes_act1_imagejgui.md", "markdown"], ["skimage napari", "measure_shapes/measure_shapes_act1_skimage_napari.py", "python"]]]
@@ -54,9 +54,10 @@ learn_next:
   - "[Object intensity measurements](../measure_intensities)"
 
 external_links:
-  - "[MorphoLibJ documentation](https://imagej.net/MorphoLibJ#Region_analysis)"
-  - "[Wikipedia coastal line paradox](https://en.wikipedia.org/wiki/Coastline_paradox). Effect of Sampling and resolution on the measurements"
+  - "[ImageJ: Measurements](https://imagej.net/ij/docs/menus/analyze.html#set)"
+  - "[ImageJ: MorphoLibJ](https://imagej.net/MorphoLibJ#Region_analysis)"
   - "[ImageJ: Results visualisation](https://imagej.net/MorphoLibJ#Grayscale_morphological_filters). Label visualization in 3D viewer"
   - "[ImageJ: Overlay label IDs](https://forum.image.sc/t/overlay-numbers-on-image/35604/6)"
   - "[Python: Segmentation and regionprops tutorial](https://jni.github.io/i2k-skimage-napari/lectures/2_segmentation_and_regionprops.html)"
+  - "[Coastal line paradox](https://en.wikipedia.org/wiki/Coastline_paradox). Effect of Sampling and resolution on the measurements"
 ---

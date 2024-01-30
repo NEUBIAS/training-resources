@@ -37,6 +37,7 @@ module_order:
 - connected_components
 - measure_shapes
 - workflow_segment_2d_nuclei_measure_shape
+- image_formation_fluo_mic
 - measure_intensities
 - global_background_correction
 - filter_neighbourhood
@@ -66,7 +67,6 @@ module_order:
 - manual_segmentation
 - workflow_golgi_per_cell
 - big_image_file_formats
-- image_formation_confocal
 
 # Sites
 repository: <USERNAME>/<PROJECT>

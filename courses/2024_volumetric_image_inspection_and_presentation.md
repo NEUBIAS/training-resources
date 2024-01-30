@@ -39,9 +39,11 @@ Scientists that may use microscopy data in their research.
 
 1. [Volume slicing](https://neubias.github.io/training-resources/volume_slicing/index.html)
     - TODO: Improve the figure, e.g. remove the subsetting part!
-1. [Confocal image formation](https://neubias.github.io/training-resources/image_formation_confocal/index.html)
+1. [Fluorescence microscopy image formation](https://neubias.github.io/training-resources/image_formation_fluo_mic/index.html)
+    - TODO: Maybe better to show this before the measure_intensity module?!
     - TODO: Module is still a draft
     - TODO: Add activity, using this image: xyzc_8bit__zebrafish_HisGFP_LyntdTomato.tif
+    - TODO: Show how intensity measurements in a widefield image do not depend on the z-position, using: Hoechst_LSM_WF3.czi (from Toni)
 1. [Projections](https://neubias.github.io/training-resources/projections/index.html)
 1. [Volume rendering](https://neubias.github.io/training-resources/volume_viewer/index.html)
     - TODO: Check which viewer we want to use for this; maybe Napari?
