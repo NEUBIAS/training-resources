@@ -38,21 +38,20 @@ Scientists that may use microscopy data in their research.
 ### 9:30 - 11:30 (including break)
 
 1. [Volume slicing](https://neubias.github.io/training-resources/volume_slicing/index.html)
-    - TODO: Improve the figure, e.g. remove the subsetting part!
-1. [Fluorescence microscopy image formation](https://neubias.github.io/training-resources/image_formation_fluo_mic/index.html)
-    - TODO: Maybe better to show this before the measure_intensity module?!
-    - TODO: Module is still a draft
-    - TODO: Add activity, using this image: xyzc_8bit__zebrafish_HisGFP_LyntdTomato.tif
-    - TODO: Show how intensity measurements in a widefield image do not depend on the z-position, using: Hoechst_LSM_WF3.czi (from Toni)
+   - TODO (Tischi): https://github.com/NEUBIAS/training-resources/issues/613
+1. [Confocal image formation](https://neubias.github.io/training-resources/image_formation_confocal/index.html)
+    - TODO (Tischi): Module is still a draft
+    - TODO (Tischi): Add activity, using this image: xyzc_8bit__zebrafish_HisGFP_LyntdTomato.tif
 1. [Projections](https://neubias.github.io/training-resources/projections/index.html)
 1. [Volume rendering](https://neubias.github.io/training-resources/volume_viewer/index.html)
     - TODO: Check which viewer we want to use for this; maybe Napari?
     - TODO: Can one just install napari as a standalone App, without conda?
 
-### 11:30 - 12:30 (optional)
+### 11:30 - 12:30
 
 1. Using Blender for 3D rendering
-    - TODO: Await Oane response in Mattermost
+    - [tif2blender](https://github.com/oanegros/tif2blender) blender add-on demonstration. This will cover installing blender + tif2blender, loading data and changing some key parameters. 
+    - Further information in the [video tutorial](https://www.youtube.com/watch?v=TCQojYEYxVo) and [text tutorial](https://github.com/oanegros/Blender_for_Biologists_2023).
 
 ### Timing
 
