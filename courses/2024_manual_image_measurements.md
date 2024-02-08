@@ -41,6 +41,9 @@ Scientists that may use microscopy data in their research.
     - TODO (Tischi): Improve the figure, i.e. add manual ROIs, remove the binary, make the cc image coloured (like in the measure_intensities module)
     - TODO (Tischi): Add manual IJ GUI shape 2D measurements activity, teach that one can save the ROIs!
     - TODO (Arif?): Add manual IJ GUI 3D spots counting (multi-point ROI)
+1. [Fluorescence image formation](https://neubias.github.io/training-resources/image_formation_confocal/index.html)
+    - TODO (Tischi): Module is still a draft
+    - TODO (Tischi): Add activity, using this image: xyzc_8bit__zebrafish_HisGFP_LyntdTomato.tif
 1. [Manual intensity measurements](https://neubias.github.io/training-resources/measure_intensities/index.html)
     - DONE (Tischi): Add ROIs for the nuclei in the figure 
     - DONE (Tischi): Add ImageJ GUI manual ROI 2D intensity measurement activity
