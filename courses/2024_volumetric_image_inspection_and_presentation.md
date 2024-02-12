@@ -38,7 +38,7 @@ Scientists that may use microscopy data in their research.
 ### 9:30 - 11:30 (including break)
 
 1. [Volume slicing](https://neubias.github.io/training-resources/volume_slicing/index.html)
-   - TODO (Tischi): https://github.com/NEUBIAS/training-resources/issues/613
+   - DONE (Tischi): https://github.com/NEUBIAS/training-resources/issues/613
 1. [Projections](https://neubias.github.io/training-resources/projections/index.html)
 1. [Volume rendering](https://neubias.github.io/training-resources/volume_viewer/index.html)
     - TODO (Arif): Check which viewer we want to use for this; maybe Napari?
