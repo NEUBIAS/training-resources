@@ -1,4 +1,4 @@
-- Open image [TODO: Chris, or https://onlinelibrary.wiley.com/doi/full/10.1002/ece3.644]()
+- Open an image with objects of different shapes, choosing one that is mentioned in the activity
 - Use `Analyse > Tools > ROI Manager` to open the ROI manager
 - Use the ROI tools, e.g. the Polygon selection in the Fiji menu bar to delineate some objects in the image 
 - Use `ROI Manager > Add` to record each ROI
