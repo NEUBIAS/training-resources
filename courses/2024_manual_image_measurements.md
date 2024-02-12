@@ -38,13 +38,16 @@ Scientists that may use microscopy data in their research.
 ### 9:30 - 12:30 (including break)
 
 1. [Manual shape measurements](https://neubias.github.io/training-resources/measure_shapes/index.html)
-    - TODO (Tischi): Improve the figure, i.e. add manual ROIs, remove the binary, make the cc image coloured (like in the measure_intensities module)
-    - TODO (Tischi): Add manual IJ GUI shape 2D measurements activity, teach that one can save the ROIs!
-    - TODO (???): Add manual IJ GUI 3D spots counting (multi-point ROI)
+    - DONE (Tischi): Improve the figure, i.e. add manual ROIs, remove the binary, make the cc image coloured (like in the measure_intensities module)
+    - DONE (Tischi): Add manual IJ GUI shape 2D measurements activity, teach that one can save the ROIs!
+    - TODO (Arif?): Add manual IJ GUI 3D spots counting (multi-point ROI)
+1. [Fluorescence image formation](https://neubias.github.io/training-resources/image_formation_confocal/index.html)
+    - DONE (Tischi): Module is still a draft
+    - DONE (Tischi): Add activity, using this image: xyzc_8bit__zebrafish_HisGFP_LyntdTomato.tif
 1. [Manual intensity measurements](https://neubias.github.io/training-resources/measure_intensities/index.html)
     - DONE (Tischi): Add ROIs for the nuclei in the figure 
     - DONE (Tischi): Add ImageJ GUI manual ROI 2D intensity measurement activity
-    - TODO (Tischi) Using the image formation example data Add ImageJ GUI manual 2D ROI intensity measurement in a 3D tissue culture image, either in a single slice or sum projection, in a widefield and in confocal image
+    - TODO (Tischi?) Using the image formation example data add ImageJ GUI manual 2D ROI intensity measurement in a 3D tissue culture image, either in a single slice or sum projection, in a widefield and in confocal image
 1. [Manual 3D object delineation](https://neubias.github.io/training-resources/manual_segmentation/index.html)
     - TODO (Arif?): make this module work
     - ...one could then use the 3D ROI manager in Fiji to measure stuff (3D image suite)
