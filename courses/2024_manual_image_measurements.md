@@ -38,8 +38,8 @@ Scientists that may use microscopy data in their research.
 ### 9:30 - 12:30 (including break)
 
 1. [Manual shape measurements](https://neubias.github.io/training-resources/measure_shapes/index.html)
-    - TODO (Tischi): Improve the figure, i.e. add manual ROIs, remove the binary, make the cc image coloured (like in the measure_intensities module)
-    - TODO (Tischi): Add manual IJ GUI shape 2D measurements activity, teach that one can save the ROIs!
+    - DONE (Tischi): Improve the figure, i.e. add manual ROIs, remove the binary, make the cc image coloured (like in the measure_intensities module)
+    - DONE (Tischi): Add manual IJ GUI shape 2D measurements activity, teach that one can save the ROIs!
     - TODO (Arif?): Add manual IJ GUI 3D spots counting (multi-point ROI)
 1. [Fluorescence image formation](https://neubias.github.io/training-resources/image_formation_confocal/index.html)
     - TODO (Tischi): Module is still a draft
