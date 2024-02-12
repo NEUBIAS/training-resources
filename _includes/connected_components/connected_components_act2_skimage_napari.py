@@ -2,6 +2,10 @@
 # # 3D connected component labeling
 
 # %%
+import sys
+sys.path.append("C:\\Users\\akhan\\python_course")
+
+# %%
 # Import modules
 import napari
 from skimage.measure import label
