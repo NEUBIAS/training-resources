@@ -1,5 +1,13 @@
-- Repeat activity 1
+- Open the sample image `File > Open Samples > HeLa Cells(48-bit RGB)`
 - Remove the text in the lower right corner of the image using `Image > Overlay > Remove Overlay`
   - _Note:_ It is a non-destructive overlay that can be removed by using the command above
-- To convert this image to RGB,  use `Image > Overlay > Flatten` or press `shift-f`
+- Convert this image to RGB using  `Image > Overlay > Flatten` or press `shift-f`
+  - _Note:_ The image data type is now `RGB Color` if you check it through `Image > Type`
 - Use `File > Save As > Tiff` to save as a 48-bit TIFF
+- Now, reopen sample image `File > Open Samples > HeLa Cells(48-bit RGB)`
+- Split the channels using `Image > Color > Split Channels`
+- Select any two channels, adjust the brightness and contrast and change their look up table according to your own choice
+- Now merge the channels using `Image > Color > Merge Channels...` and select the channels in `C1` and `C2` fields and leave other channels set to `*None*`
+  - _Note:_ Keep these settings: [x] - Create composite, [] Keep source images, [] Ignore source LUTs
+- Convert this image to RGB using `Image > Overlay > Flatten` or press `shift-f`
+- Use `File > Save As > Tiff` to save as a TIFF
