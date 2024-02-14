@@ -1,0 +1,5 @@
+- Repeat activity 1
+- Remove the text in the lower right corner of the image using `Image > Overlay > Remove Overlay`
+  - _Note:_ It is a non-destructive overlay that can be removed by using the command above
+- To convert this image to RGB,  use `Image > Overlay > Flatten` or press `shift-f`
+- Use `File > Save As > Tiff` to save as a 48-bit TIFF
