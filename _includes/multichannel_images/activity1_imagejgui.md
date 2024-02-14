@@ -1,6 +1,3 @@
-- Open a sample image `File > Open Samples > HeLa Cells(48-bit RGB)`
-- Once the image is loaded, press `I` and read the information
-  - This is a 16-bits/channel composite color image of HeLa cells with red lysosomes, green mitochondria and blue nucleus. Image courtesy of Tony Collins, creator of the ImageJ for Microscopy collection of plugins at <http://www.macbiophotonics.ca/imagej/>
 - Use the slider bar under the image to select the channel to be processed/analyzed
   - The number of bar positions are equal to the number of channels
   - _Note:_ The color of the subtitle changes when you switch to a different channel

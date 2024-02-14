@@ -21,18 +21,20 @@ concept_map: >
 
 figure: /figures/multichannel_2d_image.png
 
-figure_legend: Multichannel image. Example for three 2D (xy) channels. Left - Each individual detector is one channel shown in blue, red and green lookup tables.
+figure_legend: Multichannel image. Example for three 2D (xy) channels. Left - Each individual image is a channel shown in blue, red and green lookup tables.
   Right - All channels overlaid to display a composite image.
   Note that the array shape of (x,y,c) is just an example of channel order. The order may vary depending upon the data structure used to read image
 
 activity_preface: |
-  - Open and inspect a sample multichannel image from ImageJ
+  - Open a [sample multichannel image](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__hela-cells.tif)
+    - This is a 16-bits/channel composite color image of HeLa cells with red lysosomes, green mitochondria and blue nucleus. Image courtesy of Tony Collins, creator of the ImageJ for Microscopy collection of plugins at <http://www.macbiophotonics.ca/imagej/>
   - Explore how different channels can be viewed and selected
   - Learn to adjust look up tables and brightness/contrast settings
   - Select any two channels and save it as an RGB image
 
 activities:
     - ["ImageJ GUI - Inspect/view channels", "multichannel_images/activity1_imagejgui.md", "markdown"]
+    #- ["binarization/binarization_act1.md", [["ImageJ GUI", "binarization/binarization_act1_imagejgui.md"], ["ImageJ Macro", "binarization/binarization_act1_imagejmacro.ijm"], ["ImageJ Jython", "binarization/binarization_act1_jython.py"], ["skimage napari", "binarization/binarization_act1_skimage_napari.py", "python"]]]
     - ["ImageJ GUI - Save channels as Tiff/RGB image", "multichannel_images/activity2_imagejgui.md", "markdown"]
 
 assessment: >

@@ -1,6 +1,4 @@
-- Open the sample image `File > Open Samples > HeLa Cells(48-bit RGB)`
-- Remove the text in the lower right corner of the image using `Image > Overlay > Remove Overlay`
-  - _Note:_ It is a non-destructive overlay that can be removed by using the command above
+- Open a [sample multichannel image](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__hela-cells.tif)
 - Convert this image to RGB using  `Image > Overlay > Flatten` or press `shift-f`
   - _Note:_ The image data type is now `RGB Color` if you check it through `Image > Type`
 - Use `File > Save As > Tiff` to save as a 48-bit TIFF
