@@ -1,5 +1,5 @@
 ---
-title: Quantitative image inspection and presentation 
+title: Quantitative image inspection and presentation
 layout: module
 tags: ["workflow"]
 prerequisites:
@@ -19,7 +19,7 @@ figure: /figures/image_inspection_and_presentation.png
 figure_legend: "Fluorescence microscopy data showing collagen secretion of tissue culture cells. Left: 0 hours secretion of collagen; right: 96 hours secretion of collagen."
 
 multiactivities:
-  - ["image_inspection_and_presentation/inspect_collagen_data.md", [["ImageJ Macro", "image_inspection_and_presentation/inspect_collagen_data.ijm"]]]
+  - ["image_inspection_and_presentation/inspect_collagen_data.md", [["ImageJ Macro", "image_inspection_and_presentation/inspect_collagen_data.ijm"], ["ImageJ GUI", "image_inspection_and_presentation/inspect_collagen_datagui.md"]]]
   - ["image_inspection_and_presentation/create_collagen_figure.md", [["Powerpoint", "image_inspection_and_presentation/create_collagen_figure_powerpoint.md"]]]
 
 assessment: >
@@ -28,7 +28,7 @@ assessment: >
 
     1. TODO ___ .
     1. TODO ___ .
-    
+
     > ## Solution
     >   1. TODO
     >   1. TODO
@@ -39,4 +39,3 @@ learn_next:
 external_links:
   - "[Forum discussion on collagen figure creation](https://forum.image.sc/t/image-data-figure-creation-best-practices-example-for-collagen-secretion/84584)"
 ---
-
