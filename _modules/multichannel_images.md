@@ -30,7 +30,7 @@ activity_preface: |
     - This is a 16-bits/channel composite color image of HeLa cells with red lysosomes, green mitochondria and blue nucleus. Image courtesy of Tony Collins, creator of the ImageJ for Microscopy collection of plugins at <http://www.macbiophotonics.ca/imagej/>
   - Explore how different channels can be viewed and selected
   - Learn to adjust look up tables and brightness/contrast settings
-  - Select any two channels and save it as an RGB image
+  - Learn to select channels and make an RGB image
 
 activities:
     - ["ImageJ GUI - Inspect/view channels", "multichannel_images/activity1_imagejgui.md", "markdown"]
