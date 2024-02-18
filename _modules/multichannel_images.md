@@ -46,7 +46,7 @@ assessment: >
 
 
     > ## Solution
-    >   1. True
+    >   1. False; RGB is a datatype and has nothing to do with the image dimensionality
     >   1. True
     {: .solution}
 
