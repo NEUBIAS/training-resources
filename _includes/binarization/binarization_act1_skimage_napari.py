@@ -2,6 +2,10 @@
 # ## Thresholding bright and dim cell
 
 # %%
+import sys
+sys.path.append("C:\\Users\\akhan\\python_course")
+
+# %%
 # Instantiate the napari viewer
 import napari
 from OpenIJTIFF import open_ij_tiff
@@ -44,3 +48,5 @@ print(np.unique(binary_image_two_cells))
 # to only select the brighter cell
 binary_image_one_cell = image > 100
 viewer.add_image(binary_image_one_cell, opacity=0.8)
+
+# %%

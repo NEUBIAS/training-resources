@@ -1,6 +1,10 @@
 # %% [markdown]
 # ## Spots and threshold interval
- 
+
+# %%
+import sys
+sys.path.append("C:\\Users\\akhan\\python_course")
+
 # %%
 # Instantiate the napari viewer
 import napari
@@ -50,3 +54,5 @@ viewer.add_image(binary_image_bright_dots, opacity=0.8)
 # to only select the boundary of cells
 binary_image_boundary = (image < 5) * (image >= 4)
 viewer.add_image(binary_image_boundary, opacity=0.8)
+
+# %%

@@ -2,6 +2,10 @@
 # ## Apply automated thresholds in 3D
 
 # %%
+import sys
+sys.path.append("C:\\Users\\akhan\\python_course")
+
+# %%
 # initial imports
 import numpy as np
 import napari
@@ -41,3 +45,5 @@ from skimage.filters import threshold_li
 thresholded_li = image > threshold_li(image)
 
 viewer.add_labels(thresholded_li, name='li', num_colors=1, color={1: 'orange'}, scale=scales)
+
+# %%
