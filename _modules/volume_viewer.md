@@ -6,7 +6,7 @@ prerequisites:
   - "[Volume slicing](../volume_slicing)"
 
 objectives:
-  - "Understand the concepts and some methodes of 3-D rendering."
+  - "Understand the concepts and some methods of 3-D rendering."
   - "Appreciate that 3-D rendering can be challenging for some data."
   - "Perform basic volume rendering using a software tool."
 
@@ -27,7 +27,8 @@ figure: /figures/volume_viewer.png
 figure_legend: Volume rendering examples.
 
 multiactivities:
-  - ["volume_viewer/volume_rendering.md", [["ImageJ 3D Viewer", "volume_viewer/volume_rendering_imagej_3dviewer.md"], ["skimage napari", "volume_viewer/volume_rendering_skimage_napari.py"]]]
+  - ["volume_viewer/volume_rendering.md", [["ImageJ 3D Viewer", "volume_viewer/volume_rendering_imagej_3dviewer.md"], ["skimage napari", "volume_viewer/volume_rendering_skimage_napari.py"], ["napari standalone app", "volume_viewer/volume_rendering_napari_gui.md"]]]
+
 
 
 assessment: >
@@ -50,7 +51,7 @@ learn_next:
 external_links:
   - "[Blender documentation](https://docs.blender.org/manual/en/2.79/render/blender_render/materials/special_effects/volume.html)"
   - "[Wikipedia: Volume rendering](https://en.wikipedia.org/wiki/Volume_rendering)"
-  
+
 ---
 
 ## Volume rendering software
@@ -61,6 +62,6 @@ external_links:
 | [Drishti](https://github.com/nci/drishti) | | |   |   |   |   |   |   |   |
 | [ImageJ 3Dscript](https://imagej.net/plugins/3dscript) |  |  |   |   |  |   |   |   |   |
 | [ImageJ 3D viewer](https://imagej.net/plugins/3d-viewer/) | N | N | N  | Y  | Y |   |   |   |   |
-| [ImageJ ClearVolume (Upate Site)](https://imagej.net/plugins/clearvolume)  | Y  | Y | Y  | N  | N  |   |   |   | 
+| [ImageJ ClearVolume (Upate Site)](https://imagej.net/plugins/clearvolume)  | Y  | Y | Y  | N  | N  |   |   |   |
 | [ImageJ Volume Viewer](https://imagej.nih.gov/ij/plugins/volume-viewer.html) | N | N  | Y | Y  | N  |   |   |   |   |
 | [Napari](https://napari.org/)    |  |   |   |   |  |  |  |   |   |
