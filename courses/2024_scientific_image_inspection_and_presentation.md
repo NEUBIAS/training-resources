@@ -45,7 +45,6 @@ Scientists that may use microscopy data in their research.
 1. [Image file formats](https://neubias.github.io/training-resources/image_file_formats/index.html)
 1. [Scientfic image data presentation](https://neubias.github.io/training-resources/image_inspection_and_presentation/index.html)
     - Now we are ready to perform the module activity and create the scientific image presentation
-    - TODO the activity needs to be adapted: https://github.com/NEUBIAS/training-resources/issues/606  (ARIF)
 
 ### Timing
 
