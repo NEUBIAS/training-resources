@@ -41,22 +41,21 @@ assessment: >
 
   ### True of false?
 
-    1. An RGB image is a 3-dimensional image
     1. In a multichannel image, each channel is a grayscale image that represents different data
 
-
     > ## Solution
-    >   1. False; RGB is a datatype and has nothing to do with the image dimensionality
     >   1. True
     {: .solution}
 
   ###  Discuss with your neighbor
 
     1. How can multichannel images be used to improve machine learning models for image/object classification?
+    1. Is RGB image always a 3-dimensional image?
     1. What is a potential challenge when analyzing multichannel images?
 
     > ## Solution
     > 1. By providing additional context and information that can be leveraged by the model
+    > 1. Not necessarily. In Fiji, one can have an RGB data type without alteration of the image array dimensions (still 2D for xy images). However, in MALTAB and Python, for an RGB, an image array must be at least 3-dimensional
     > 1. Correcting for crosstalk or bleed-through between channels
     {: .solution}
 
