@@ -47,17 +47,23 @@ After this introduction we present one or several activities that illustrate the
 
 Two screens are helpful for the teacher. The teacher can move the respective window (code, GUI, browser) on the presenter screen when needed. 
 
-
 ## Motivate each individual module biologically
 
 Ideally the example images for the activities in the teaching modules should be biologically relevant and motivating. Currently this is not always the case and this should be improved in the future (open for good suggestions). 
-
 
 ## Teach the first activity of a module click-along style (GUI activity)
 
 Most modules contain several activities; for GUI based activities it works well if one shows the first activity slow enough such that students click-along. This ensures that one teaches slow enough and also that one does not loose students. 
 
-## Teach code containing activity 
+## Enagage your audience
+
+Whenever there is an opportunity **engage the participants**; it is much more fun for everyone! 
+
+For example [this activity about image data types](https://neubias.github.io/training-resources/datatypes/index.html#explore) is quite repetetive; you could demo what needs to be done for the first image and then ask the participants: "Please open the second image on your own and inspect it: What do you find special about this image? How does it differ from the image before.
+
+In general, look for places where you can teach a new concept by asking a question.
+
+## Teaching code containing activity 
 
 For a code containing activity (e.fg. skimage-napari) it is hard to perform a write-along. It can also be very dry if you exactly explain the code syntax. So ideally, one should explain just enough of the syntax or library used (for instance by referring to online documentation). The main part of the activity should concentrate on illustrating the concept.   
 

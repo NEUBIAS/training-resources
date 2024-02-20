@@ -15,7 +15,7 @@
 - Open dapi images [0h_dapi](https://github.com/NEUBIAS/training-resources/raw/master/image_data/image_inspection_and_presentation/xy_16bit__0h_dapi.ome.tif) and [96h_dapi](https://github.com/NEUBIAS/training-resources/raw/master/image_data/image_inspection_and_presentation/xy_16bit__96h_dapi.ome.tif)
 - Adjust the display range of both images using `Image > Adjust > Brightness/Contrast...`
   - Use `Set` button of `B&C` and set `Minimum displayed value` and `Maximum displayed value` to `0` and `4000` respectively and select `[x] Propagate to all other open images` and press `OK`
-- Merge channels belonging to the same image (e.g. "*_0h_collagen.ome.tif" belongs to "*_0h_dapi.ome.tif") using `Image > Color > Merge Channels...`. and in the settings:
+- Merge channels belonging to the same image (e.g. "_*_0h_collagen.ome.tif_" belongs to "_*_0h_dapi.ome.tif_") using `Image > Color > Merge Channels...`. and in the settings:
   - Set collagen channel as `C2(green)`
   - Set dapi channel as `C3(blue)`
   - `[x] Create composite`
@@ -41,6 +41,6 @@
 - Select `Rectangle` tool from Fiji GUI, and select an ROI on `96h_collagen` image (grayscale) and repeat the procedure above
   - _Note:_ You can use the same ROI as above by selecting the ROI rectangular box on `0h_collagen` image and then selecting `96h_collagen` image and doing `Edit > Selection > Restore Selection`
 - To save all the images in the high quality, go to `Plugins > BioVoxxel Figure Toolbox > Export all images as SVG`
-  - `Traget folder` - folder of your choice to save all `SVG` images
+  - `Target folder` - folder of your choice to save all `SVG` images
   - `Export channels` - `Color`
   - `Lock critical ROIs [x]`  

@@ -12,8 +12,8 @@ motivation: |
 
 concept_map: >
   graph TD
-    ID("Image data") --> IS("Inspection")
-    IS --> P("Presentation")
+    ID("Image data") --> IS("Quantitative inspection")
+    IS --> P("Scientific presentation")
 
 figure: /figures/image_inspection_and_presentation.png
 figure_legend: "Fluorescence microscopy data showing collagen secretion of tissue culture cells. Left: 0 hours secretion of collagen; right: 96 hours secretion of collagen."
