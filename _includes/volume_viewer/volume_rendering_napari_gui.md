@@ -6,6 +6,7 @@
   - rotate the volume (pressing and holding left-click of mouse)
   - pan (Ctrl + pressing and holding left-click of mouse)
 - Add axes by clicking on `View > Axes > Axes Visible`
+- Add scale bar by clicking on `View > Scale Bar > Scale Bar Visible`
 - Open the same image in Fiji and note down the calibration given in `Image > Properties...`
 - Add the scale by opening a console within `napari` GUI and type this:
   - `viewer.layers['im'].scale = [z, y, x]`
