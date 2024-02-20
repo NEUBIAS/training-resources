@@ -5,3 +5,4 @@
   image analysis.
 - Requirements:
   - BioVoxxel Fiji Update site for saving images as SVG vector graphics
+    - _NOTE (IMPORTANT):_ Please update to include BioVoxxel plugin (using `Help > Update > Manage update sites`) before proceeding to the activity
