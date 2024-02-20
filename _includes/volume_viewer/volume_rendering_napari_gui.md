@@ -9,6 +9,7 @@
 - Add scale bar by clicking on `View > Scale Bar > Scale Bar Visible`
 - Open the same image in Fiji and note down the calibration given in `Image > Properties...`
 - Add the scale by opening a console within `napari` GUI and type this:
-  - `viewer.layers['im'].scale = [z, y, x]`
-    - where `im` - image name, `x` , `y` and `z` are scaling factors in their respective dimensions. Set this according to the metadata (i.e. the calibration noted down in the previous step) of the image.
+  - `viewer.layers[viewer.layers[0].name].scale = [z, y, x]`
+    - where, `x` , `y` and `z` are scaling factors in their respective dimensions. Set this according to the metadata (i.e. the calibration noted down in the previous step) of the image.
+    - _Note(IMPORTANT):_ the above command `viewer.layers[0].name` only works if you have loaded just one image in `napari`
 - Try different `rendering` modes: `mip`, `iso`, `attenuated_mip`
