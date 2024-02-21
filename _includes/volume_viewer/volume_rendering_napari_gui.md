@@ -1,10 +1,10 @@
 - Install `napari standalone app` as described in [tools installation](https://neubias.github.io/training-resources/tool_installation/index.html#activities)
 - Open `napari`
-- Load [this image]('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit_calibrated__mri_full_head.tif') using `File > Open File(s)...` or press `Ctrl+O`. One can also `drag and drop` an image into the GUI area to open it
+- Load an image using `File > Open File(s)...` or press `Ctrl+O`. One can also `drag and drop` an image into the GUI area to open it
 - Change viewer from 2D to 3D
   - zoom in and out (mouse scroll)
   - rotate the volume (pressing and holding left-click of mouse)
-  - pan (Ctrl + pressing and holding left-click of mouse)
+  - pan (Shift + pressing and holding left-click of mouse)
 - Add axes by clicking on `View > Axes > Axes Visible`
 - Add scale bar by clicking on `View > Scale Bar > Scale Bar Visible`
 - Open the same image in Fiji and note down the calibration given in `Image > Properties...`
