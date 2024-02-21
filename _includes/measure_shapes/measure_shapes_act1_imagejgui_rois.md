@@ -1,8 +1,8 @@
-- Open an image with objects of different shapes, choosing one that is mentioned in the activity
+- Open an image with objects of different shapes (see activity preface) 
 - Use `Analyse > Tools > ROI Manager` to open the ROI manager
 - Use the ROI tools, e.g. the Polygon selection in the Fiji menu bar to delineate some objects in the image 
 - Use `ROI Manager > Add` to record each ROI
-- Use `ROI Manager > Rename...` to give them good names
+- Use `ROI Manager > Rename...` to give them meaningful names
 - For easier region identification use `ROI Manager > More > Options` 
   - [X] Use ROI names as labels
 - Display all regions using `ROI Manager`
@@ -10,7 +10,6 @@
   - [X] Labels
 - Once all are added use `ROI Manager > More > Save...` to store the ROIs
   - This is important to document your work; the ROI file can be opened via drag&drop on Fiji
-- Appreciate that it is tedious to do this for all objects, thus [download ROIs for all particles, TODO]()
 - Use `Analyse > Set Measurements` to configure [what to measure](https://imagej.net/ij/docs/menus/analyze.html#set):
   - [X] Area
   - [X] Centroid
@@ -20,12 +19,12 @@
   - [X] Shape Descriptors 
   - [X] Display label (adds a column with the object name)
 - Use `ROI Manager > More > Multi Measure` to measure all ROIs at once
-- Use `Image > Properties` to check the pixel calibration
-- Use [ Results > File > Rename ] to rename to table, indicating the pixel calibration in the table name
- - Use `Image > Properties` to change the image to pixel units
-- Measure all ROIs again, and again change the table name to indicate the calibration   
+- Use `Image > Properties` to check the image calibration
+- Use `Results > File > Rename` to indicate the image calibration in the table name
+  - Use `Image > Properties` to change the image to pixel units
+- Measure all ROIs again and change the table name to indicate the calibration   
 - Understand all the measurements
+  - Compare calibrated and pixel unit measurements
   - Go through the columns and see which object has an extreme value and why 
   - See [ImageJ measurements documentation](https://imagej.net/ij/docs/menus/analyze.html#set) 
   - Select one object and use `Edit > Selection > Convex Hull` to see the convex hull 
-  - Compare calibrated and pixel unit measurements, which ones change, which don't 

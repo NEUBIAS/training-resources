@@ -10,7 +10,7 @@
   - Ellipse fit parameters or Elongation: Useful to measure object elongation
   - Discuss issues with small object in digital images, e.g., by exploring a square (=circle?!) of 2x2 pixels.
 - Open an image with objects, e.g.,
-  - Fluorescence image with nuclei of different shapes: [xy_16bit_calibrated__nuclei_various_shapes.tif]((https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit_calibrated__nuclei_various_shapes.tif)
+  - Fluorescence image with nuclei of different shapes: [xy_16bit_calibrated__nuclei_various_shapes.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit_calibrated__nuclei_various_shapes.tif)
   - Label image with objects of different shapes: [xy_8bit_labels__four_objects.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__four_objects.tif)
   - Label image with circles of different sizes: [xy_8bit_labels__circles_different_size.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__circles_different_size.tif) 
 - Perform shape features such as area, perimeter, circularity, and solidity
