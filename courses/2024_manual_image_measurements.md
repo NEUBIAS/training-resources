@@ -38,7 +38,7 @@ Scientists that may use microscopy data in their research.
 ### 9:30 - 12:30 (including break)
 
 1. [Manual shape measurements](https://neubias.github.io/training-resources/measure_shapes/index.html)
-1. [Fluorescence image formation](https://neubias.github.io/training-resources/image_formation_confocal/index.html)
+1. [Fluorescence image formation](https://neubias.github.io/training-resources/image_formation_fluo_mic/index.html)
 1. [Manual intensity measurements](https://neubias.github.io/training-resources/measure_intensities/index.html)
 1. [Manual 3D object delineation](https://neubias.github.io/training-resources/manual_segmentation/index.html)
 
