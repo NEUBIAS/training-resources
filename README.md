@@ -6,6 +6,7 @@
 
 **[Home page](https://neubias.github.io/training-resources)**
 
+
 This project is intended to collect together various resources
 that can be useful when planning/delivering training in image analysis.
 
