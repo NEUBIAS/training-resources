@@ -23,7 +23,7 @@ figure: /figures/volume_slicing.png
 figure_legend: "Extracting 2-D slices from a 3-D volume, e.g. to be visualised on a computer monitor."
 
 multiactivities:
-  - ["volume_slicing/volume_slicing_act1.md", [["ImageJ GUI", "volume_slicing/volume_slicing_act1_imagej-gui.md", "markdown"], ["ImageJ Macro", "volume_slicing/volume_slicing_act1_imagej-macro.ijm", "java"], ["ImageJ Jython", "volume_slicing/volume_slicing_act1_imagej-jython.py", "python"], ["Python Napari", "volume_slicing/volume_slicing_act1_python-napari.py", "python"]]]
+  - ["volume_slicing/volume_slicing_act1.md", [["ImageJ GUI", "volume_slicing/volume_slicing_act1_imagej-gui.md", "markdown"], ["ImageJ Macro", "volume_slicing/volume_slicing_act1_imagej-macro.ijm", "java"], ["Python Napari", "volume_slicing/volume_slicing_act1_python-napari.py", "python"]]]
 
 assessment: >
 
