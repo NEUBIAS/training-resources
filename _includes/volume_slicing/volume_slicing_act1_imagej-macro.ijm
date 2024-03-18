@@ -1,4 +1,4 @@
-// open image stack
+// open volumetric image
 open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_16bit_calibrated__dna_metaphase.tif");
 
 // explore the dimensions
