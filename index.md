@@ -19,7 +19,7 @@ Happy teaching and learning!
 
 #### How to contribute to this resource
 
-Please see our [Contributors Guide](CONTRIBUTING).
+Please see our [Contributors Guide](https://github.com/NEUBIAS/training-resources/blob/master/CONTRIBUTING.md).
 
 #### How to teach using this resource
 

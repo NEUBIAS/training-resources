@@ -4,6 +4,10 @@
 #
 
 # %%
+import sys
+sys.path.append("C:\\Users\\akhan\\python_course")
+
+# %%
 # Import python packages.
 from OpenIJTIFF import open_ij_tiff
 import numpy as np
@@ -24,6 +28,7 @@ viewer.add_image(image)
 # Check image dimension
 # Axis order is 0=z, 1=x, 2=y
 image.shape
+
 
 
 # %%
@@ -91,3 +96,12 @@ viewer.add_image(rescaled_max_y_image)
 rescaled_max_x_image = rescale(max_x_image, [dz/dy,1])  
 viewer.add_image(rescaled_max_x_image)
 
+
+# %%
+rescaled_max_x_image.shape
+
+
+# %%
+rescaled_max_y_image.shape
+
+# %%

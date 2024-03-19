@@ -20,7 +20,7 @@ concept_map: >
     M -.- A
 
 figure: /figures/volume_slicing.png
-figure_legend: "Extracting 2-D slices from a 3-D volume, e.g. to be visualised on a computer monitor."
+figure_legend: "Volume slicing: Extracting 2-D slices from a 3-D volume, e.g. to be visualised on a computer monitor. Anisotropy: The measured data points have a different spacing in pixel vs. physical space, which poses a practical challenge for the rendering." 
 
 multiactivities:
   - ["volume_slicing/volume_slicing_act1.md", [["ImageJ GUI", "volume_slicing/volume_slicing_act1_imagej-gui.md", "markdown"], ["ImageJ Macro", "volume_slicing/volume_slicing_act1_imagej-macro.ijm", "java"], ["Python Napari", "volume_slicing/volume_slicing_act1_python-napari.py", "python"]]]

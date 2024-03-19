@@ -38,14 +38,8 @@ Scientists that may use microscopy data in their research.
 ### 9:30 - 11:30 (including break)
 
 1. [Volume slicing](https://neubias.github.io/training-resources/volume_slicing/index.html)
-   - TODO (Tischi): https://github.com/NEUBIAS/training-resources/issues/613
-1. [Confocal image formation](https://neubias.github.io/training-resources/image_formation_confocal/index.html)
-    - TODO (Tischi): Module is still a draft
-    - TODO (Tischi): Add activity, using this image: xyzc_8bit__zebrafish_HisGFP_LyntdTomato.tif
 1. [Projections](https://neubias.github.io/training-resources/projections/index.html)
 1. [Volume rendering](https://neubias.github.io/training-resources/volume_viewer/index.html)
-    - TODO: Check which viewer we want to use for this; maybe Napari?
-    - TODO: Can one just install napari as a standalone App, without conda?
 
 ### 11:30 - 12:30
 

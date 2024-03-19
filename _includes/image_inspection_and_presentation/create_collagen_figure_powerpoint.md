@@ -1,0 +1,8 @@
+- Run `PowerPoint` and open a `Blank presentation`
+  - Remove `Text boxes` or images, if present, by selecting them and pressing `Delete` key from keyboard
+- Drag and drop all the saved images from the folder into your `Blank presentation`
+  - Select `Intensity profile plots` and `ROI images`, use right click menu and press `Bring to Front`
+- Resize and arrange all the images so that `Intensity profile plots` and `ROI images` belong to their respective images.
+- When all images are arranged correctly, press `Ctrl + A` to select all images and group them using right click menu and pressing `Group > Group`
+- Use right click menu again on the `Group` image and  press `Save as Picture`
+  - Select  a file name and folder and save as type `SVG`

@@ -24,7 +24,7 @@ concept_map: >
     style table text-align:left
 
 figure: /figures/measure_shapes.png
-figure_legend: "TODO: Create new figure, e.g. based on image by Chris, or using https://onlinelibrary.wiley.com/doi/full/10.1002/ece3.644" 
+figure_legend: "Left: Fluorescence microscopy of nuclei showing various shapes with three nuclei manually delineated. Right: Label mask image of all nuclei. Bottom: Table with some shape measurements of the manually delineated nuclei." 
 
 multiactivities:
   - ["measure_shapes/measure_shapes_act1.md", [["ImageJ GUI ROI", "measure_shapes/measure_shapes_act1_imagejgui_rois.md"],["ImageJ GUI MorphoLibJ", "measure_shapes/measure_shapes_act1_imagejgui.md", "markdown"], ["skimage napari", "measure_shapes/measure_shapes_act1_skimage_napari.py", "python"]]]

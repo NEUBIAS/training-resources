@@ -23,6 +23,7 @@ module_order:
 - tool_installation
 - pixels
 - lut
+- multichannel_images
 - spatial_calibration
 - multidimensional_image_basics
 - datatypes

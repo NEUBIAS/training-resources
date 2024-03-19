@@ -2,6 +2,10 @@
 # ## Apply manual and automated thresholds
 
 # %%
+import sys
+sys.path.append("C:\\Users\\akhan\\python_course")
+
+# %%
 # initial imports
 import napari
 import numpy as np

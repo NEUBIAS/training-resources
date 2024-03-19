@@ -13,12 +13,7 @@ motivation: |
 
 concept_map: >
   graph TD
-    Ex("Excitation") -->|Sample| F("Fluorophore")
-    F --> Em("Emission")
-    Em -->|Sample| D("Detector")
-    D --> I("Digital image")
-    Ex --- PSF("Spatial distribution: PSF")
-    F --- SD("Spatial distribution: Sample shape")
+     Light -->|interacs with| Sample -->|forms an| Image
 
 figure: /figures/image_formation_confocal.png
 figure_legend: Membranes in a zebrafish embryo, imaged with a confocal microscope. The optical axis runs from bottom to top. One sees that membranes appear more contrasty if they run along the optical axis. One also sees that the signal gets dimmer further inside the specimen. In fact, here only the outer-most cell layer is clearly visible.
@@ -31,15 +26,18 @@ assessment: >
 
   ### Fill in the blanks
 
-    1. TODO ___ .
-    1. TODO ___ .
+    1. In fluorescence microscopy the signal quality typically ___ when imaging deep inside a specimen.
+    1. In confocal microscopy elongated structures that align with the z-axis typically appear ___ than elongated structures that align with the x or y-axis.
+    1. In wide-field fluorescence microscopy there is no  ___ and thus signal intensity quantifications for one specific z-position are typically not possible.
     
     > ## Solution
-    >   1. TODO
-    >   1. TODO
+    >   1. decreases
+    >   1. brighter
+    >   1. optical sectioning
     {: .solution}
 
 learn_next:
+  - "[Intensity measurements of fluorescent objects](../measure_intensities)"
 
 external_links:
 ---
