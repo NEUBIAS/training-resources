@@ -53,6 +53,7 @@ module_order:
 - skeletonization
 - ome_zarr
 - script_run
+- coding_with_llms
 - script_record
 - script_variables
 - string_concat

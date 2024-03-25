@@ -1,4 +1,4 @@
-<h4 id="abovebackground"><a href="#abovebackground">Threshold based on noisemeasurement</a></h4>
+<h4 id="abovebackground"><a href="#abovebackground">Threshold based on noise measurement</a></h4>
 
 Here we set the threshold value `t` such that it is higher than the background intensity plus some noise level.
 
