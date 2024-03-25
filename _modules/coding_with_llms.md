@@ -12,8 +12,8 @@ motivation: |
 
 concept_map: >
   graph TD
-    CS("'Create a script that...'") --> LLM("Large language model (LLM)")
-    LLM --> S("from skimage import io\nimage = io.imread('cells.tif')\n...")
+    P("Prompt") --> LLM("Large language model (LLM)")
+    LLM --> C("Code")
 
 figure: /figures/coding_with_llms.png
 figure_legend: "TODO: create a better figure; current figure shows not so great success using DALL-E"
