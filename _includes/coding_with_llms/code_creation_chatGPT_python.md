@@ -1,7 +1,8 @@
 - Go to the openAI chatGPT website: https://chat.openai.com/
-  - You may have to log in, e.g. using your Google account, but it should be for free
-- To get started, enter the following prompt: `Which programming language and which libraries would you recommend for bioimage anlaysis?`
-  - Check with your neighbor whether the answers are the same.
-- Now ask it to create some code: `Write python code that opens and displays the image at https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_high_dynamic_range.tif.`
+  - You may have to log in, e.g. using your Google account, but it should be for free.
+- To get started, enter the following prompt: `Which programming language and which libraries would you recommend for bioimage analysis?`
+  - You may get an answer such as: "For bioimage analysis, Python is a popular choice due to its versatility, extensive libraries, and ease of use. Here are some recommended libraries: **1. scikit-image**: This library provides a collection of algorithms for image processing. It's user-friendly and efficient, making it suitable for various tasks in bioimage analysis. **2. OpenCV**: OpenCV is a powerful library for computer vision tasks, including image processing and analysis. It offers a wide range of functionalities for tasks such as image segmentation, feature extraction, and object detection. **3. NumPy**: NumPy is essential for scientific computing in Python. It provides support for large, multi-dimensional arrays and matrices, along with a collection of mathematical functions to operate on these arrays efficiently...".
+  - Check whether your answer differs from this, also compare what other course participants got.
+- Now ask it to create some code: `Write python code that opens and displays the image at https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_high_dynamic_range.tif`
   - Depending on the python environment that you are working with you may need to specify which library to use to open the image also how to display it.
 - Continue by asking it to write code for more complex image analysis workflows as are suggested in the activity preface.   

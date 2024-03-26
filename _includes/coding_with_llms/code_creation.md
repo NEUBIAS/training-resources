@@ -9,7 +9,7 @@ Activities that could be solved using a LLM:
 Tips for creating the prompt:
 - Often the instructions given in the activity can be a good starting point to create the LLM prompt.
 - Tell the LLM in which programming language you would like the code to be implemented.
-- Sometimes it may also be good to tell it which libraries to use. For example, chatGPT seems to like `openCV` while `skimage` is more what we may typically use in bioimage anlaysis.
+- Sometimes it may also be good to tell it which libraries to use. For example, chatGPT seems to like "openCV" while "skimage" is more what we may typically use in bioimage anlaysis.
 - Tell the LLM where exactly the input data is stored on your computer such that it can write the code to open the data.
 
 Fixing errors:
