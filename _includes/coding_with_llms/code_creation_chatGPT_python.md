@@ -1,0 +1,7 @@
+- Go to the openAI chatGPT website: https://chat.openai.com/
+  - You may have to log in, e.g. using your Google account, but it should be for free
+- To get started, enter the following prompt: `Which programming language and which libraries would you recommend for bioimage anlaysis?`
+  - Check with your neighbor whether the answers are the same.
+- Now ask it to create some code: `Write python code that opens and displays the image at https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_high_dynamic_range.tif.`
+  - Depending on the python environment that you are working with you may need to specify which library to use to open the image also how to display it.
+- Continue by asking it to write code for more complex image analysis workflows as are suggested in the activity preface.   

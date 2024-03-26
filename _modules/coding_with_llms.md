@@ -16,7 +16,7 @@ concept_map: >
     LLM --> C("Code")
 
 figure: /figures/coding_with_llms.png
-figure_legend: "TODO: create a better figure; current figure shows not so great success using DALL-E"
+figure_legend: "The figure was created by an AI model. It should show how a human asks a computer to create code. This figure couuld be improved... :-)"
 
 multiactivities:
   - ["coding_with_llms/code_creation.md", [["chatGPT python", "coding_with_llms/code_creation_chatGPT_python.md"]]]
