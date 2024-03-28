@@ -11,7 +11,7 @@ If possible try to find out who will be your students:
 * Education level (PostDoc, bachelor, ...)
 * Which kind of images do they typically generate (modality, instrument, ...)
 
-## Motivate and contextualise modules by workflows
+## Motivate and contextualise teaching modules by workflows
 
 To help students understand what the concepts are useful for, it is good to provide a broader context. For example, by placing the concepts within a larger workflow of image analysis. 
 For example, one could:
@@ -44,6 +44,8 @@ For in-person teaching it can work even better to explain the concepts on a whit
 ### Activities for specific analysis platforms
 
 After this introduction we present one or several activities that illustrate the concept within the given software implementation. Each activity has a general description and several software implementation, which correspond to a solution. 
+
+It is critical to familiarise yourself with the various activities before teaching and carefully select which activities you want to teach. Depending on the course you may teach just one or several of the activities. 
 
 Two screens are helpful for the teacher. The teacher can move the respective window (code, GUI, browser) on the presenter screen when needed. 
 
