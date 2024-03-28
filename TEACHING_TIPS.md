@@ -1,8 +1,10 @@
 # Teaching tips
 
-The material in this repository can be used in various ways. We have used as it pure online material, hybrid with lectures online and hands-on in  person, 
-or in person.  The material consists of modules that explain basic concepts of bioimage analysis or more complex example workflows. 
-The teaching of each module including one or several activities takes about 30-45 min. 
+The material in this repository can be used in various ways. We have used as it pure online material, hybrid with lectures, or hands-on in person. 
+
+The material consists of modules that explain basic concepts of bioimage analysis or more complex example workflows. 
+
+The modules can be combined into various courses. [Here are some courses](https://github.com/NEUBIAS/training-resources/tree/master/courses) that have been taught using this material.
 
 ## Know your audience
 
@@ -10,8 +12,19 @@ If possible try to find out who will be your students:
 * What is their background 
 * Education level (PostDoc, bachelor, ...)
 * Which kind of images do they typically generate (modality, instrument, ...)
+* ...
 
-## Motivate and contextualise modules by workflows
+## Know your teaching aims
+
+Clarify what the aim your course is
+
+After taking the course the participants should be able to:
+* Independently open and inspect image data in Fiji
+* Interact with images in napari via the napari python shell
+* Record IJ-macro scripts in Fiji
+* ...
+
+## Motivate and contextualise teaching modules by workflows
 
 To help students understand what the concepts are useful for, it is good to provide a broader context. For example, by placing the concepts within a larger workflow of image analysis. 
 For example, one could:
@@ -24,6 +37,10 @@ For example, one could:
 Essentially, go back and forth between teaching modules and where we are right now in the workflow.
 
 ## Teaching a module
+
+### Computer setup
+
+Two screens are helpful for the teacher. The teacher can move the respective window (code, GUI, browser) on the presenter screen when needed. 
 
 ### Motivation
 
@@ -41,19 +58,27 @@ For online teaching going through the concept map and figure is an option.
 
 For in-person teaching it can work even better to explain the concepts on a white board. In this case the module figure and concept map are only used for the teacher to check that nothing important is forgotten while teaching on the white board.
 
-### Activities for specific analysis platforms
+### Choosing activities
 
-After this introduction we present one or several activities that illustrate the concept within the given software implementation. Each activity has a general description and several software implementation, which correspond to a solution. 
+After this introduction we present one or several activities that illustrate the concept within the given software implementation. Each activity has a general description and several software implementation, which correspond to a solution.
 
-Two screens are helpful for the teacher. The teacher can move the respective window (code, GUI, browser) on the presenter screen when needed. 
+It is critical to familiarise yourself with the various activities before teaching and carefully select which activities you want to teach. Depending on the course you may teach just one or several of the activities. 
 
-## Motivate each individual module biologically
+### Teach the first activity of a module click-along style (GUI activity)
+
+Most modules contain several activities; for GUI based activities it works well if one shows the first activity slow enough such that students click-along. This ensures that one teaches slow enough and also that one does not loose students. 
+
+If you want the course to be time effective it is usually fine to stop after performing one activity click-along. However, if you have more time the training effect may be much better if you chose a second activity for the students to perfom on their own (see below).  
+
+### Let students do a second activity as small group work
+
+Once the first acitivity has been taught it often should be possible for students to work through another activity on their own; small group work (see below) is typically a fun and engaging way to do this.
+
+### Motivate each activity biologically
 
 Ideally the example images for the activities in the teaching modules should be biologically relevant and motivating. Currently this is not always the case and this should be improved in the future (open for good suggestions). 
 
-## Teach the first activity of a module click-along style (GUI activity)
-
-Most modules contain several activities; for GUI based activities it works well if one shows the first activity slow enough such that students click-along. This ensures that one teaches slow enough and also that one does not loose students. 
+--------
 
 ## Enagage your audience
 
@@ -65,18 +90,23 @@ In general, look for places where you can teach a new concept by asking a questi
 
 ## Teaching code containing activity 
 
-For a code containing activity (e.fg. skimage-napari) it is hard to perform a write-along. It can also be very dry if you exactly explain the code syntax. So ideally, one should explain just enough of the syntax or library used (for instance by referring to online documentation). The main part of the activity should concentrate on illustrating the concept.   
+The main part of the code may be copied by the students from the training material into the code execution platform.
 
-## Group work using the teaching material
+Some parts of the code may be typed by the students to get a feel for the important details of the code.
 
-It works well to let students do the module assessments or some of the activities on their own in very small groups (of two persons). In an online context this can be done as break-out rooms. 
-A possible teaching instruction is that only one of the two students is allowed to touch the computer. This promotes interactivity and discussions.
+Some parts of the code contain parameters, e.g. a threshold value; it can be a good exercise to ask students to rerun the code while changing the parameter value.
 
-Some module activities contain further text indications, where students can try out new features that have not been included in the solution. 
+## Implement small group work
+
+We had very good experiences asking students to do module assessments or some of the activities in small groups; typically just with their neighbor(i.e., two persons). 
+
+A recommended teaching instruction is that only one of the two students is allowed to touch the computer. This promotes interactivity and discussions.
+
+In an online context this can be implemted as break-out rooms. 
 
 ## Group work on students images
 
-This way of group work is fun and works well in a in person context for a several day course (2-3 days). For example:
+This way of group work is fun and works well in an in-person context for a several day course (2-3 days). For example:
 
 * Day 1: Students present projects connected to their research. This shoudl contain the images they generate and what they would like to measure. 
 * Day 1-2: Go through essential modules and modules that may fit well with the students project. 
