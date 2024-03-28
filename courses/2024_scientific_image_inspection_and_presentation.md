@@ -40,7 +40,7 @@ Scientists that may use microscopy data in their research.
 1. [Digital image basics](https://neubias.github.io/training-resources/pixels/index.html)
 1. [Image data types](https://neubias.github.io/training-resources/datatypes/index.html) 
 1. [Lookup tables](https://neubias.github.io/training-resources/lut/index.html)
-1. [2D multichannel images](https://neubias.github.io/training-resources/multichannel_images/index.html)
+1. [Multichannel images](https://neubias.github.io/training-resources/multichannel_images/index.html)
 1. [Spatial image calibration](https://neubias.github.io/training-resources/spatial_calibration/index.html) 
 1. [Image file formats](https://neubias.github.io/training-resources/image_file_formats/index.html)
 1. [Scientfic image data presentation](https://neubias.github.io/training-resources/image_inspection_and_presentation/index.html)
