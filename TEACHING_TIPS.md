@@ -1,8 +1,10 @@
 # Teaching tips
 
-The material in this repository can be used in various ways. We have used as it pure online material, hybrid with lectures online and hands-on in  person, 
-or in person.  The material consists of modules that explain basic concepts of bioimage analysis or more complex example workflows. 
-The teaching of each module including one or several activities takes about 30-45 min. 
+The material in this repository can be used in various ways. We have used as it pure online material, hybrid with lectures, or hands-on in person. 
+
+The material consists of modules that explain basic concepts of bioimage analysis or more complex example workflows. 
+
+The modules can be combined into various courses. [Here are some courses](https://github.com/NEUBIAS/training-resources/tree/master/courses) that have been taught using this material.
 
 ## Know your audience
 
@@ -10,6 +12,17 @@ If possible try to find out who will be your students:
 * What is their background 
 * Education level (PostDoc, bachelor, ...)
 * Which kind of images do they typically generate (modality, instrument, ...)
+* ...
+
+## Know your teaching aims
+
+Clarify what the aim your course is
+
+After taking the course the participants should be able to:
+* Independently open and inspect image data in Fiji
+* Interact with images in napari via the napari python shell
+* Record IJ-macro scripts in Fiji
+* ...
 
 ## Motivate and contextualise teaching modules by workflows
 
