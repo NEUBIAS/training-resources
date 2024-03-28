@@ -15,10 +15,9 @@ motivation: |
 
 concept_map: >
   graph TD
-    V("Pixel value") --> L("Lookup table (LUT)")
+    V("Image pixel value") --> L("Lookup table (LUT)")
     L --> |does not change|V
-    L --> C("Color & Brightness")
-    L --> A("Adjustable")
+    L --> |changes|C("Displayed pixel color & brightness")
 
 figure: /figures/lut.png
 figure_legend:
