@@ -1,8 +1,17 @@
-# Scientific bioimage data inspection and presentation
+# Microscopy data inspection 
 
 ## Why take this course
 
 For microscopy based scientific discovery it is critical to be able to quantitatively inspect bioimaging data, because it is important to judge whether the intended measurements are properly captured by the acquired data. Often times one realises that sample preparation and acquisition parameters could be improved; in fact, microscopy data acquisition and inspection are typically an iterative process that needs to be repeated several times until optimal imaging data is acquired for the scientific question at hand.
+
+## Teaching aims
+
+After taking this course, the participants should be able to:
+- Open a microscopy image and inspect the pixel values
+- Responsibly configure the display settings for rendering the pixel values
+- Check the quality of a microscopy image in terms of dynamic range
+- Inspect and visualise an image's spatial calibration
+- Deal with multi-channel and volumetric images
 
 ## Target audience
 
@@ -10,8 +19,12 @@ Scientists that use microscopy data in their research
 
 ## Prerequisites
 
+* Some experience acquiring microscopy data
 * No computational skills are required
-* Computer with internet access
+
+## IT setup
+
+This course can be conducted on any computer with internet access, where the owners have the rights to install a few open-source software packages.
 
 ## Dates
 

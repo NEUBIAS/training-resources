@@ -1,6 +1,6 @@
-# Teachers
+# Trainers
 
-We are aware that this training material has been taught by:
+We are aware that parts of this training material have been taught by:
 
 - Antonio Politi, MPI Interdisciplinary Science, Goettingen, Germany
 - Arif Khan, EMBL Heidelberg, Germany

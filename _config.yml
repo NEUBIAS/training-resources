@@ -51,6 +51,7 @@ module_order:
 - watershed
 - workflow_nuclei_and_cells_segmentation
 - skeletonization
+- similarity_transforms
 - ome_zarr
 - script_run
 - coding_with_llms
