@@ -1,3 +1,10 @@
+# Requirements
+
+## Mac
+# brew install yq
+# brew install --cask libreoffice
+
+
 # List of modules to exclude
 exclude_modules=("tool_installation" "image_inspection_and_presentation")
 
