@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# Requirements
+## Mac
+# brew install yq
+# brew install imagemagick
+
+# TODO read the module names from the config.yml
+
 # Array of file names
 figures=("pixels.jpg" "ome-zarr.png") 
 
