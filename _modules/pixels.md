@@ -26,7 +26,7 @@ figure_legend:  Digital image pixel array and gray-scale rendering. This array (
 
 
 multiactivities:
-  - ["pixels/pixels_act1.md", [["ImageJ GUI", "pixels/pixels_act1_imagejgui.md"], ["skimage napari", "pixels/pixels_act1_skimage_napari.py"], ["MATLAB", "pixels/pixels_act1_matlab.m"]]]
+  - ["pixels/pixels_act1.md", [["ImageJ GUI", "pixels/pixels_act1_imagejgui.md"], ["skimage napari", "pixels/pixels_act1_skimage_napari.py"], ["MATLAB", "pixels/pixels_act1_matlab.m"], ["Galaxy", "pixels/pixels_act1_galaxy.md"]]] 
   - ["pixels/collagen_inspection.md", [["ImageJ GUI", "pixels/collagen_inspection_imagejgui.md"]]]
   
 assessment: >
