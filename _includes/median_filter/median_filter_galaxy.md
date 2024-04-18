@@ -3,11 +3,11 @@
     - Locate the Tools panel on the left, click the `Upload Data` button.
     - Within the `Uupload data` pop-up wintow, Click `Paste/Fetch data` button.
     - In the text box, paste the URLs of the following images. Enter each URL on a new line.
-        - [xy_8bit_binrary__squares_different_size.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__squares_different_size.tif)
-        - [xy_8bit_binrary__large_spot.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__large_spot.tif)
+        - [xy_8bit_binary__squares_different_size.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__squares_different_size.tif)
+        - [xy_8bit_binary__large_spot.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__large_spot.tif)
         - [xy_8bit__two_noisy_squares_different_size.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__large_spot.tif)
         - [xy_8bit__PCNA.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__PCNA.tif)
-        - [xy_8bit_binrary__test_structures.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__test_structures.tif)
+        - [xy_8bit_binary__test_structures.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__test_structures.tif)
     
     - Click the `Start` button to upload the images.
     - Once the upload is finished, click the `Close` button at the bottom of the upload window
