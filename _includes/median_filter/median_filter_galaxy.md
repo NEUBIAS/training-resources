@@ -1,0 +1,22 @@
+- Upload the following images to Galaxy
+    - Go to https://usegalaxy.eu
+    - Locate the Tools panel on the left, click the `Upload Data` button.
+    - Within the `Uupload data` pop-up wintow, Click `Paste/Fetch data` button.
+    - In the text box, paste the URLs of the following images. Enter each URL on a new line.
+        - [xy_8bit_binrary__squares_different_size.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__squares_different_size.tif)
+        - [xy_8bit_binrary__large_spot.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__large_spot.tif)
+        - [xy_8bit__two_noisy_squares_different_size.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__large_spot.tif)
+        - [xy_8bit__PCNA.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__PCNA.tif)
+        - [xy_8bit_binrary__test_structures.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__test_structures.tif)
+    
+    - Click the `Start` button to upload the images.
+    - Once the upload is finished, click the `Close` button at the bottom of the upload window
+    - The uploaded images will be available in your Galaxy history on the right panel.
+- Apply Median Filter
+    - In the `Tools` panel, search `Filter 2D image`, and click `Filter 2D image with scikit-image` from the search results
+    - In Galaxy main window,apply the followings
+        - `Filter type`: `Median`
+        - `Radius/Sigma`: Explore different values, such as `1`,`2` or `5`
+        - `Source file`: click the second button to activate `Multiple datasets`. Select images from the dropdown list.
+    - Click `Run Tool`
+    - Depending on the number of input images, you will see the corresponding number of outputs in the `History` panel on the right. Wait for them to turn green and download the resulting images.

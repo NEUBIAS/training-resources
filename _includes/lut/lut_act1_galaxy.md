@@ -7,8 +7,8 @@
 - Start the Napari Interactive Tool
     - In the Tools panel on the left, search for `Run Napari interactive tool`
     - Select  `xy_8bit_nuclei_high_dynamic_range.tif` from the `Images` dropdown list.
-    - Click `Run Tool`. Once the `Open` link appears at the top of the page, click it to open Napari in a separate browser tab.
-    - In the Napari browser tab, navigate to `File -> Open File(s)` and select the image `xy_8bit_nuclei_high_dynamic_range.tif` from the `input` folder
+    - Click the `Run Tool` button. Once the `Open` link appears at the top of the page, click it to open Napari in a separate browser tab.
+    - In the Napari browser tab, navigate to `File -> Open File(s)` and select the image `xy_8bit_nuclei_high_dynamic_range.tif` from the `input` folder.
 - Change the Contrast settings
 	- Experiment with different minimum and maximum values of the `contract limits`.
 	- Notice how, at certain settings, a very dim nucleus becomes visible.
