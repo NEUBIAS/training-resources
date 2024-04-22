@@ -23,6 +23,8 @@ The whole course will be guided hands-on sessions.
 - Tuesday, April 30, 2024, 9:30 - 16:00
 - Tuesday, May 7, 2024, 9:30 - 16:00
 
+Each day several modules will be taught, for each module there is about 45 minutes time.
+
 ## Venue
 
 - Imaging Centre, Lecture hall (lower floor)
@@ -55,24 +57,24 @@ The whole course will be guided hands-on sessions.
 ### Image analysis basics (day 2)
 
 1. [Segmentation](https://neubias.github.io/training-resources/segmentation/index.html)
-  - Nima Vakili
+    - Christian Tischer
 1. [Manual thresholding](https://neubias.github.io/training-resources/binarization/index.html)
-  - Nima Vakili
+    - Christian Tischer
 1. [Automated thresholding](https://neubias.github.io/training-resources/auto_threshold/index.html) 
-  - Julian Hennies
+    - Julian Hennies
 1. [Connected component labeling](https://neubias.github.io/training-resources/connected_components/index.html)
-  - Julian Hennies
+    - Julian Hennies
 1. [Object shape measurements](https://neubias.github.io/training-resources/measure_shapes/index.html)
-  - Arif Khan
+    - Arif Khan
 1. [Workflow: Basic 2D object analysis](https://neubias.github.io/training-resources/workflow_segment_2d_nuclei_measure_shape/index.html)
-  - Arif Khan
+    - Arif Khan
 
 ### Image analysis basics (day 3)
 
 1. [Image neighborhood filtering](https://neubias.github.io/training-resources/filter_neighbourhood/index.html)
-  - Nima Vakili
+  - Bugra Oezdemir
 1. [Median filter](https://neubias.github.io/training-resources/median_filter/index.html)
-  - Nima Vakili
+  - Bugra Oezdemir
 1. [Object intensity measurements](https://neubias.github.io/training-resources/measure_intensities/index.html)
   - Dominik Kutra
 1. [Local background subtraction](https://neubias.github.io/training-resources/local_background_correction/index.html)
