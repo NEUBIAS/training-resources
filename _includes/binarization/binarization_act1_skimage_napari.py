@@ -2,10 +2,6 @@
 # ## Thresholding bright and dim cell
 
 # %%
-import sys
-sys.path.append("C:\\Users\\akhan\\python_course")
-
-# %%
 # Instantiate the napari viewer
 import napari
 from OpenIJTIFF import open_ij_tiff
