@@ -69,23 +69,30 @@ def encode_unicode(text: str) -> str:
     return text.encode("unicode_escape").decode("utf-8")
 
 
+_open_ij_tiff_returns = Tuple[npt.ArrayLike, str, Sequence[Union[float, str]], Sequence[str]]
+_open_ij_tiff_returns_extra = Tuple[npt.ArrayLike, str, Sequence[Union[float, str]], Sequence[str], Dict[str, Any]]
+open_ij_tiff_returns = Union[_open_ij_tiff_returns, _open_ij_tiff_returns_extra]
+
+
 def open_ij_tiff(
     fpath: Union[str, Path],
-    fetch_extra_metadata: bool = False,  # Should be true to extract any ImageJ display metadata from the tiff file.
-):
+    fetch_extra_metadata: bool = False,
+) -> open_ij_tiff_returns:
     """
     What it does:
         Imports the binary data and the metadata from an ImageJ-created tiff file.
     Args:
         fpath: Either a local path or url to a tiff file.
         fetch_extra_metadata: Whether to extract any ImageJ display metadata from the input tiff file.
-                              If False, only the pixel calibration metadata are extracted.
+          If False, only the pixel calibration metadata are extracted.
+          Should be true to extract any ImageJ display metadata from the tiff file.
     Returns
-        image_array: A numpy array with the binary image data
-        ax_names: The available axes, can be any combination of t, c, z, y, x
-        ax_scales: Voxel scales along each dimension. Float for t, z, y and x and 'na' for channel.
-        ax_units: Voxel scale units along each dimension ('na' for channel)
-        extra_metadata (returned only if fetch_extra_metadata is True): Extra ImageJ-specific metadata, such as LUTs, brightness-contrast adjustments, etc.
+        image_array: A numpy array with the binary image data.
+        ax_names: The available axes, can be any combination of T, C, Z, Y, X.
+        ax_scales: Voxel scales along each dimension. Float for T, Z, Y and X and 'na' for channel.
+        ax_units: Voxel scale units along each dimension ('na' for channel).
+        extra_metadata, optional (returned only if fetch_extra_metadata is True).
+          Extra ImageJ-specific metadata, such as LUTs, brightness-contrast adjustments, etc.
     """
     ############################# download the image if path is a url ###############################
     tiff = get_ijtiff(fpath)
@@ -209,7 +216,7 @@ def save_ij_tiff(
             metadata["fps"] = image_array.shape[t_idx] / ax_scales[t_idx]
 
     if extra_metadata is not None:
-        assert isinstance(extra_metadata, type({})), " 'extra_metadata' must be of type 'dict' "
+        assert isinstance(extra_metadata, dict), " 'extra_metadata' must be of type 'dict' "
         for key in extra_metadata:
             if key not in ["images", "slices", "frames", "hyperstack", "bitspersample"]:
                 metadata[key] = extra_metadata[key]
