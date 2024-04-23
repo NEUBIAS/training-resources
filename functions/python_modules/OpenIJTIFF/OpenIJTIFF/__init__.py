@@ -1,11 +1,35 @@
-import os
 import tempfile
 from pathlib import Path
-from typing import Any, Dict, Optional, Sequence, Union
+from typing import Any, Dict, Optional, Sequence, Tuple, Union
 
 import numpy as np
+import numpy.typing as npt
 import requests
 import tifffile
+
+
+def _fetch_data(uri: str) -> Path:
+    """Downloads a given file from a uri to a temporary directory
+
+    Creates a directory safely via tempfile.mkdtemp for each downloaded
+    files. Note: files are not cleaned up.
+
+    Args:
+        uri: uri pointing to a file
+
+    Returns:
+        Path to downloaded file in temporary directory
+    """
+    fname = uri.rsplit("/")[-1]
+
+    tmpdir = Path(tempfile.mkdtemp())
+
+    localpath = tmpdir / fname
+    r = requests.get(uri)
+    r.raise_for_status()
+    localpath.write_bytes(r.content)
+
+    return localpath
 
 
 def get_ijtiff(fpath: Union[str, Path]) -> tifffile.TiffFile:
@@ -20,23 +44,14 @@ def get_ijtiff(fpath: Union[str, Path]) -> tifffile.TiffFile:
 
     Raises
         TypeError if the file is not an ImageJ-created tiff.
-        ValueError if for some reason tifffile did not manage to open the file.
     """
-    fname = fpath.rsplit("/")[-1]
-    tiff = None
-    try:
-        if fpath.startswith("https:") or fpath.startswith("http:"):
-            # then fpath is a url, download it to the current directory
-            with tempfile.TemporaryDirectory() as tempdir:
-                localpath = Path(os.path.join(tempdir, fname))
-                r = requests.get(fpath)
-                with open(os.path.join(localpath), "wb") as f:
-                    f.write(r.content)
-                tiff = tifffile.TiffFile(localpath)
-        else:
-            tiff = tifffile.TiffFile(fpath)
-    except Exception as e:
-        raise ValueError(f"tiff file could not be opened in the given path: {fpath}") from e
+    if isinstance(fpath, str) and (fpath.startswith("https://") or fpath.startswith("http://")):
+        fpath = _fetch_data(fpath)
+    else:
+        fpath = Path(fpath)
+
+    tiff = tifffile.TiffFile(fpath)
+
     if not tiff.is_imagej:
         raise TypeError(
             "This module is intended to parse from ImageJ-created tiff files. This tiff file was apparently not created by ImageJ."
