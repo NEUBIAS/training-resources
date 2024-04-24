@@ -42,17 +42,17 @@ Each day several modules will be taught, for each module there is about 45 minut
 ### Image inspection basics (day 1)
 
 1. [Digital image basics](https://neubias.github.io/training-resources/pixels/index.html)
-  - Christian Tischer 
+    - Christian Tischer 
 1. [Lookup tables](https://neubias.github.io/training-resources/lut/index.html)
-  - Christian Tischer
+    - Christian Tischer
 1. [Spatial image calibration](https://neubias.github.io/training-resources/spatial_calibration/index.html) 
-  - Dominik Kutra
+    - Dominik Kutra
 1. [N-dimensional images](https://neubias.github.io/training-resources/multidimensional_image_basics/index.html)
-  - Dominik Kutra
+    - Dominik Kutra
 1. [Image data types](https://neubias.github.io/training-resources/datatypes/index.html) 
-  - Julian Hennies
+    - Julian Hennies
 1. [Image projections](https://neubias.github.io/training-resources/projections/index.html)
-  - Julian Hennies
+    - Julian Hennies
 
 ### Image analysis basics (day 2)
 
@@ -72,14 +72,14 @@ Each day several modules will be taught, for each module there is about 45 minut
 ### Image analysis basics (day 3)
 
 1. [Image neighborhood filtering](https://neubias.github.io/training-resources/filter_neighbourhood/index.html)
-  - Bugra Oezdemir
+    - Bugra Oezdemir
 1. [Median filter](https://neubias.github.io/training-resources/median_filter/index.html)
-  - Bugra Oezdemir
+    - Bugra Oezdemir
 1. [Object intensity measurements](https://neubias.github.io/training-resources/measure_intensities/index.html)
-  - Dominik Kutra
+    - Dominik Kutra
 1. [Local background subtraction](https://neubias.github.io/training-resources/local_background_correction/index.html)
-  - Domink Kutra
+    - Domink Kutra
 1. [Morphological filters](https://neubias.github.io/training-resources/filter_morphological/index.html)
-  - Arif Khan
+    - Arif Khan
 1. [Workflow: 2D noisy object segmentation and filtering](https://neubias.github.io/training-resources/workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape/index.html)
-  - Arif Khan
+    - Arif Khan
