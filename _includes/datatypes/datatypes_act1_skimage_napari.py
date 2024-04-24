@@ -2,10 +2,6 @@
 # ## Explore image data types and value ranges
 
 # %%
-import sys
-sys.path.append("C:\\Users\\akhan\\python_course")
-
-# %%
 # Import modules
 import napari
 import numpy as np

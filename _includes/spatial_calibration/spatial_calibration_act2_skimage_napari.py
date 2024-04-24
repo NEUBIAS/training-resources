@@ -4,10 +4,6 @@
 # - [skimage and napari](https://neubias.github.io/training-resources/tool_installation/index.html#skimage_napari)
 
 # %%
-import sys
-sys.path.append("/Users/tischer/Documents/training-resources/functions")
-
-# %%
 # Import python packages.
 from OpenIJTIFF import open_ij_tiff, save_ij_tiff
 import numpy as np

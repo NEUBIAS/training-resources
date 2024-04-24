@@ -2,10 +2,6 @@
 # ## Spots and threshold interval
 
 # %%
-import sys
-sys.path.append("C:\\Users\\akhan\\python_course")
-
-# %%
 # Instantiate the napari viewer
 import napari
 viewer = napari.Viewer()
