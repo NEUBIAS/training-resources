@@ -23,6 +23,9 @@ The whole course will be guided hands-on sessions.
 - Tuesday, April 30, 2024, 9:30 - 16:00
 - Tuesday, May 7, 2024, 9:30 - 16:00
 
+This includes a lunch break (1 hr) and two coffee breaks (20 minutes), resulting in approximately 5 hr of teaching time.
+As there are 6 modules per day that makes ~45 minutes per module.
+
 ## Venue
 
 - Imaging Centre, Lecture hall (lower floor)
@@ -76,7 +79,7 @@ The whole course will be guided hands-on sessions.
 1. [Object intensity measurements](https://neubias.github.io/training-resources/measure_intensities/index.html)
   - Dominik Kutra
 1. [Local background subtraction](https://neubias.github.io/training-resources/local_background_correction/index.html)
-  - Domink Kutra
+  - Dominik Kutra
 1. [Morphological filters](https://neubias.github.io/training-resources/filter_morphological/index.html)
   - Arif Khan
 1. [Workflow: 2D noisy object segmentation and filtering](https://neubias.github.io/training-resources/workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape/index.html)
