@@ -34,8 +34,8 @@ eroded = erosion(image, footprint = disk(1))
 dilated = dilation(image, footprint = disk(1))
 
 # Add to napari
-napari_viewer.add_labels(eroded, name='eroded1', colormap='magenta', opacity = 0.7)
-napari_viewer.add_labels(dilated, name='dilated1', colormap = 'green', opacity = 0.7)
+napari_viewer.add_image(eroded, name='eroded1', colormap='magenta', opacity = 0.7)
+napari_viewer.add_image(dilated, name='dilated1', colormap='green', opacity = 0.7)
 
 # %% [markdown]
 # Appreciate that the single pixel disappeared with erosion.\
