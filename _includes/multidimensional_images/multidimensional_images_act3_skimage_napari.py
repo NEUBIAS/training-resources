@@ -2,11 +2,6 @@
 # ## Inspect a 3D time-lapse image
 
 # %%
-# Add folder with functions to path
-import sys
-sys.path.append("/Users/tischer/Documents/training-resources/functions")
-
-# %%
 # Load the image
 from OpenIJTIFF import open_ij_tiff
 image, axes, scales, units = open_ij_tiff("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyzt_8bit__starfish_chromosomes.tif")

@@ -7,10 +7,9 @@
 
 # %%
 # Load the image
-# You can also load a local image by providing the path to the file
 from OpenIJTIFF import open_ij_tiff
 image_url = "https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_different_intensity.tif"
-image, axes, scales, units  = open_ij_tiff(image_url)
+image = open_ij_tiff(image_url)
 
 # %%
 # Create a new napari viewer.
@@ -28,6 +27,12 @@ napari_viewer = Viewer()
 # %%
 # Add an image to the napari_viewer.
 napari_viewer.add_image(image)
+
+# %% [markdown]
+# ### Code completion and help in Jupyter notebook 
+# * **Code completion** type `napari_viewer.` and press `TAB`
+# * **Help** type `napari_viewer.add_image` and press `SHIFT-TAB` this will open a help associated to the add_image method/command
+
 
 # %% [markdown]
 # ### Alternative loading of data
