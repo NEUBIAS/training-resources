@@ -5,6 +5,7 @@
 
 # %%
 # Import python packages.
+import os
 from OpenIJTIFF import open_ij_tiff, save_ij_tiff
 import numpy as np
 from napari.viewer import Viewer
@@ -62,7 +63,8 @@ napari_viewer.add_image(image_3D, scale=voxel_size_image_3D, name='image_3D')
 # %%
 # Save the 3D image with the calibration metadata
 save_ij_tiff(
-    '/Users/tischer/Desktop/image_3D_calibrated.tif',
+     # during trainings this Path should be replaced by the user's desktop, e.g. C:/Users/dominik/Desktop
+     os.path.join(os.path.expanduser("~"), "image_3D_calibrated.tif"),
      image_3D,
      axes_image_3D,
      voxel_size_image_3D,

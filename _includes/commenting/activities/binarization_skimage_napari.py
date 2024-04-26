@@ -1,10 +1,9 @@
-import numpy as np
 import matplotlib.pyplot as plt
-from skimage import io
+from OpenIJTIFF import open_ij_tiff
 
 # load the image from file
-image_file = "/image_data/xy_8bit__two_cells.tif"
-image = io.imread(image_file)
+image_file = "https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__two_cells.tif"
+image, _, _, _ = open_ij_tiff(image_file)
 
 # binarize the image, so that all values larger than the threshold are foreground
 threshold_value = 60
