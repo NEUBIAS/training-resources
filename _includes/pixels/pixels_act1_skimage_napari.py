@@ -28,29 +28,19 @@ napari_viewer = Viewer()
 # Add an image to the napari_viewer.
 napari_viewer.add_image(image)
 
-# %% [markdown]
-# ### Code completion and help in Jupyter notebook 
-# * **Code completion** type `napari_viewer.` and press `TAB`
-# * **Help** type `napari_viewer.add_image` and press `SHIFT-TAB` this will open a help associated to the add_image method/command
-
-
-# %% [markdown]
-# ### Alternative loading of data
-# **Napari GUI** drag and drop image from browser\
-# rename the layer for convenience\
-# `napari_viewer.layers[0].name = 'image'`      
-# Get the data as numpy array\
-# `image = napari_viewer.layers['image'].data` 
+# %%
+# Napari GUI: However with the mouse over the image and observe the pixel indices and value
 
 # %%
-# Print image shape
+# Inspect the image shape
 print(image.shape)
 
 # %%
-# Print the image pixel values.
+# Inspect all image pixel values.
 print(image)
 
 # %%
+# Inspect specific pixel values
 # Top left corner is [y, x] = [r, c] = [0, 0]
 print(image[0, 0])
 
@@ -79,3 +69,13 @@ plt.hist(image.flatten(), bins=np.arange(image.min(), image.max() + 1));
 # Most frequent pixel value (the mode)
 from scipy.stats import mode
 mode(image, axis = None, keepdims = True)
+
+# %% [markdown]
+# Optional: Alternative loading of data
+# Napari GUI: Drag and drop image from browser onto napari
+# Napari GUI: Rename the layer for convenience to: image
+
+# %%
+# Fetch the image data from napari
+image = napari_viewer.layers['image'].data` 
+print(image.shape)
