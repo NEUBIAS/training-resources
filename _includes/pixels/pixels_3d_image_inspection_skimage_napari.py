@@ -1,0 +1,81 @@
+# %% [markdown]
+# ## Inspect a 2D image
+# To follow along for the plot profile you require a napari plugin. \
+# Install napari-plot-profile in your course activated conda environment.\
+# `conda activate skimage-napari-tutorial` \
+# `pip install napari-plot-profile` 
+
+# %%
+# Load the image
+from OpenIJTIFF import open_ij_tiff
+image_url = "https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_different_intensity.tif"
+image = open_ij_tiff(image_url)
+
+# %%
+# Create a new napari viewer.
+from napari.viewer import Viewer
+napari_viewer = Viewer()
+
+# %% [markdown]
+# ### Code completion and help in Jupyter notebook 
+# * **Code completion** type `napari_viewer.` and press `TAB`
+# * **Help** type `napari_viewer.add_image` and press `SHIFT-TAB` this will open a help associated to the add_image method/command
+
+# %%
+
+
+# %%
+# Add an image to the napari_viewer.
+napari_viewer.add_image(image)
+
+# %%
+# Napari GUI: However with the mouse over the image and observe the pixel indices and value
+
+# %%
+# Inspect the image shape
+print(image.shape)
+
+# %%
+# Inspect all image pixel values.
+print(image)
+
+# %%
+# Inspect specific pixel values
+# Top left corner is [y, x] = [r, c] = [0, 0]
+print(image[0, 0])
+
+# %%
+# [y, x] = [r, c] = [1, 0]
+print(image[1, 0])
+
+# %%
+# [y, x] = [r, c] = [0, 2]
+print(image[0, 2])
+
+# %% [markdown]
+# **Napari GUI** Explore the napari-plot-profile plugin (optional)
+
+# %%
+import numpy as np
+# Compute min and max.
+print(image.min(), image.max())
+
+# %%
+import matplotlib.pyplot as plt
+# Use matplotlib to quickly plot a histogram.
+plt.hist(image.flatten(), bins=np.arange(image.min(), image.max() + 1));
+
+# %%
+# Most frequent pixel value (the mode)
+from scipy.stats import mode
+mode(image, axis = None, keepdims = True)
+
+# %% [markdown]
+# Optional: Alternative loading of data
+# Napari GUI: Drag and drop image from browser onto napari
+# Napari GUI: Rename the layer for convenience to: image
+
+# %%
+# Fetch the image data from napari
+image = napari_viewer.layers['image'].data` 
+print(image.shape)
