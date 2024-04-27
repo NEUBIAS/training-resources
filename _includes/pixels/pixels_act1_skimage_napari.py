@@ -2,15 +2,23 @@
 # 2D image inspection using skimage and napari
 
 # %%
-# Create a napari viewer
-from napari.viewer import Viewer
-napari_viewer = Viewer()
-
-# %%
 # Load an image
 from OpenIJTIFF import open_ij_tiff
 image_url = "https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_different_intensity.tif"
 image, *_ = open_ij_tiff(image_url)
+
+# %%
+# Inspect all image pixel values
+print(image)
+
+# %%
+# Inspect the image shape
+print(image.shape)
+
+# %%
+# Create a napari viewer
+from napari.viewer import Viewer
+napari_viewer = Viewer()
 
 # %%
 # Jupyter notebook exercise:
@@ -26,28 +34,26 @@ napari_viewer.add_image(image)
 # However with the mouse over the image and observe the pixel indices and values
 
 # %%
-# Inspect the image shape
-print(image.shape)
-
-# %%
-# Inspect all image pixel values
-print(image)
-
-# %%
-# Inspect specific pixel values
-# Top left corner is [y, x] = [r, c] = [0, 0]
+# Inspect the pixel at the top left corner
 print(image[0, 0])
 
 # %%
-# [y, x] = [r, c] = [1, 0]
-print(image[1, 0])
+# Inspect the pixel at the bottom right corner
+print(image[49, 58])
+print(image.shape[0], image.shape[1])
+print(image[image.shape[0]-1, image.shape[1]-1))
 
 # %%
-# [y, x] = [r, c] = [0, 2]
-print(image[0, 2])
+# Fetch a pixel value from the background
+# Beware the index order: [y, x] = [r, c]
+print(image[4, 8])
 
 # %%
-# Extract a line of pixel values across the two nuclei
+# Fetch a pixel value from within an object
+print(image[31, 42])
+
+# %%
+# Extract a line of pixel values across the objects
 print(image[20,:])
 
 # %% 
@@ -55,7 +61,7 @@ print(image[20,:])
 # Use the plot profile plugin to inspect a line of pixel values
  
 # %%
-# Extract one nucleus as a square of pixel values
+# Extract one object as a square of pixel values
 print(image[7:30,10:26])
 
 # %%
@@ -82,5 +88,5 @@ mode(image, axis = None, keepdims = True)
 
 # %%
 # Fetch the image data from napari and check its shape
-image = napari_viewer.layers['image'].data` 
+image = napari_viewer.layers['image'].data
 print(image.shape)
