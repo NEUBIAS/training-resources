@@ -2,8 +2,12 @@
 # ## Explore a 3D multi-channel image
 
 # %%
-# Load the image
+# Imports
 from OpenIJTIFF import open_ij_tiff
+from napari.viewer import Viewer
+
+# %%
+# Load the image
 image, axes, scales, units = open_ij_tiff("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyzc_8bit_beads_p_open.tif")
 
 # %%
@@ -15,7 +19,6 @@ print("Units:",units)
 
 # %%
 # View the image
-from napari.viewer import Viewer
 napari_viewer = Viewer()
 napari_viewer.add_image(image, scale = scales)
 

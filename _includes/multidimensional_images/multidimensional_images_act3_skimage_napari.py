@@ -2,8 +2,12 @@
 # Inspect a 3D time-lapse image
 
 # %%
-# Load the image
+# Imports
 from OpenIJTIFF import open_ij_tiff
+from napari.viewer import Viewer
+
+# %%
+# Load the image
 image, axes, scales, units = open_ij_tiff("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyzt_8bit__starfish_chromosomes.tif")
 
 # %%
@@ -15,7 +19,6 @@ print("Units:", units)
 
 # %%
 # View the image
-from napari.viewer import Viewer
 napari_viewer = Viewer()
 napari_viewer.add_image(image, scale = scales)
 

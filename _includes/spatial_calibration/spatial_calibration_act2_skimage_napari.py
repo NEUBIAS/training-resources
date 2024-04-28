@@ -5,8 +5,8 @@
 # Import python packages.
 import os
 from OpenIJTIFF import open_ij_tiff, save_ij_tiff
-import numpy as np
 from napari.viewer import Viewer
+import numpy as np
 
 # %%
 # Open a 2D image and its axes metadata

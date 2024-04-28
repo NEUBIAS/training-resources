@@ -2,8 +2,13 @@
 # Explore a 5D image (3D image + channels + time)
 
 # %%
-# Load the image
+# Imports
 from OpenIJTIFF import open_ij_tiff
+from napari.viewer import Viewer
+import numpy as np
+
+# %%
+# Load the image
 image, axes, scales, units = open_ij_tiff("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyzct_16bit__metaphase_eb3_cenpa.tif")
 
 # %%
@@ -15,7 +20,6 @@ print("Units:", units)
 
 # %%
 # Display image in napari
-from napari.viewer import Viewer
 napari_viewer = Viewer()
 napari_viewer.add_image(image, scale = scales)
 
@@ -50,7 +54,6 @@ napari_viewer.add_image(image, channel_axis = 2, scale = scales_tzyx, name = ['C
 
 # %%
 # Loading with numpy transpose
-import numpy as np
 image_transpose = np.transpose(image, (2, 0, 1, 3, 4))
 scales_transpose = [scales[2],scales[0],scales[1],scales[3],scales[4]]
 napari_viewer.add_image(image_transpose, scale = scales_transpose)
