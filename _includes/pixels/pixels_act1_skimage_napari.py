@@ -41,7 +41,7 @@ print(image[0, 0])
 # Inspect the pixel at the bottom right corner
 print(image[49, 58])
 print(image.shape[0], image.shape[1])
-print(image[image.shape[0]-1, image.shape[1]-1))
+print(image[image.shape[0]-1, image.shape[1]-1])
 
 # %%
 # Fetch a pixel value from the background
