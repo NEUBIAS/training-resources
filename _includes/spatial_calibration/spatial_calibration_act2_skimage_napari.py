@@ -39,7 +39,7 @@ print("Units: ", units_image_3D)
 # Let's add spatial calibration using the x&y voxel_size from the 2D image
 # and also add a z scaling
 voxel_size_image_3D = [0.52, voxel_size_image_2D[1], voxel_size_image_2D[0]]
-units_image_3D = ["um","um","um"]
+units_image_3D = ["um", "um", "um"]
 
 # %%
 # Inspect the metadata for the 3D image
@@ -49,13 +49,11 @@ print("Scale: ", voxel_size_image_3D)
 print("Units: ", units_image_3D)
 
 # %%
-# Open napari and add the images with their voxel sizes as scaling
+# Open napari and add the 3D image with voxel_size
 napari_viewer = Viewer()
-napari_viewer.add_image(image_2D, scale=voxel_size_image_2D, name='image_2D')
 napari_viewer.add_image(image_3D, scale=voxel_size_image_3D, name='image_3D')
 
 # %%
-# Napari GUI: Change the axes order using the corresponding button.
 # Napari GUI: Use the 3D viewer button to render the image in 3D.
 
 # %%
@@ -71,3 +69,21 @@ save_ij_tiff(
 
 # %%
 # Open the above file in FIJI and verify image scales were properly saved.
+
+# %%
+# Measure the length of the nucleus (as exercise)
+# Napari GUI: use the `New points layer button` to create a new points layer.
+# Napari GUI: use `Add points` to add two points along the longest axis
+
+# %%
+# points = napari_viewer.layers['Points'].data
+# scale = napari_viewer.layers['Points'].scale
+# points_cal = points * scale
+# print("Points :\n", points)
+# print("Calibrated points :\n", points_cal)
+
+# %%
+# diff_vector = points_cal[1] - points_cal[0]
+# sqr_diff_vector = diff_vector ** 2
+# distance = np.sqrt(sqr_diff_vector.sum())
+# print('Distance:', distance)

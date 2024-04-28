@@ -26,7 +26,7 @@ napari_viewer = Viewer()
 napari_viewer.add_image(image, scale=voxel_size)
 
 # %%
-# Napari GUI: Change the axes order using the corresponding button.
+# Napari GUI: Change the viewer dimension order using the corresponding button.
 # Napari GUI: Use the 3D viewer button to render the image in 3D.
 
 # %%
