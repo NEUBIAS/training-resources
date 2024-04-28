@@ -1,7 +1,5 @@
-# %% [markdown]
-# ## Spatial image calibration
-# #### Requirements
-# - [skimage and napari](https://neubias.github.io/training-resources/tool_installation/index.html#skimage_napari)
+# %%
+# Spatial image calibration
 
 # %%
 # Import python packages.
@@ -27,15 +25,15 @@ print("Units: ", units)
 napari_viewer = Viewer()
 napari_viewer.add_image(image, scale=voxel_size)
 
-# %% [markdown]
-# **Napari GUI**: Change the axes order using the corresponding button. \
-# **Napari GUI**: Use the 3D viewer button to render the image in 3D.
+# %%
+# Napari GUI: Change the axes order using the corresponding button.
+# Napari GUI: Use the 3D viewer button to render the image in 3D.
 
-# %% [markdown]
-# ### Compute distances between points
+# %%
+# Compute distances between points
 #
-# **Napari GUI** use the `New points layer button` to create a new points layer \
-# **Napari GUI** use `Add points` to add two points somewhere on the meta-phase plate \
+# Napari GUI: use the `New points layer button` to create a new points layer.
+# Napari GUI: use `Add points` to add two points somewhere on the meta-phase plate.
 
 # %%
 # extract point coordinates
@@ -51,7 +49,7 @@ print("Points scale: ", scale)
 print("Voxel size: ", voxel_size)
 
 # %%
-points_cal = points * scale 
+points_cal = points * scale
 print("Points :\n", points)
 print("Calibrated points :\n", points_cal)
 

@@ -1,7 +1,5 @@
-# %% [markdown]
-# ## Spatial image calibration
-# #### Requirements
-# - [skimage and napari](https://neubias.github.io/training-resources/tool_installation/index.html#skimage_napari)
+# %%
+# Spatial image calibration
 
 # %%
 # Import python packages.
@@ -39,7 +37,7 @@ print("Units: ", units_image_3D)
 # %%
 # Note that the 3D image does not have calibrated metadata.
 # Let's add spatial calibration using the x&y voxel_size from the 2D image
-# and also add a z scaling 
+# and also add a z scaling
 voxel_size_image_3D = [0.52, voxel_size_image_2D[1], voxel_size_image_2D[0]]
 units_image_3D = ["um","um","um"]
 
@@ -56,8 +54,8 @@ napari_viewer = Viewer()
 napari_viewer.add_image(image_2D, scale=voxel_size_image_2D, name='image_2D')
 napari_viewer.add_image(image_3D, scale=voxel_size_image_3D, name='image_3D')
 
-# %% [markdown]
-# Napari GUI: Change the axes order using the corresponding button. \
+# %%
+# Napari GUI: Change the axes order using the corresponding button.
 # Napari GUI: Use the 3D viewer button to render the image in 3D.
 
 # %%
