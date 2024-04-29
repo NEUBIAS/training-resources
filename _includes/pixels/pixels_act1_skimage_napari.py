@@ -8,7 +8,11 @@ image_url = "https://github.com/NEUBIAS/training-resources/raw/master/image_data
 image, *_ = open_ij_tiff(image_url)
 
 # %%
-# Inspect all image pixel values
+# Inspect what the image actually is
+print(type(image))
+
+# %%
+# Inspect the pixel values
 print(image)
 
 # %%
@@ -16,7 +20,7 @@ print(image)
 print(image.shape)
 
 # %%
-# Create a napari viewer
+# Create a napari viewer for looking at the image
 from napari.viewer import Viewer
 napari_viewer = Viewer()
 
@@ -26,7 +30,7 @@ napari_viewer = Viewer()
 # Get help: Type `napari_viewer.add_image` and press `SHIFT-TAB` 
 
 # %%
-# Add an image to the napari_viewer
+# Add the image the viewer 
 napari_viewer.add_image(image)
 
 # %%
@@ -34,12 +38,9 @@ napari_viewer.add_image(image)
 # However with the mouse over the image and observe the pixel indices and values
 
 # %%
-# Fetch a pixel value from the background
-print(image[4, 8])
-
-# %%
-# Fetch a pixel value from within an object
-print(image[31, 42])
+# Fetch single pixel values
+print(image[4, 8]) # in the background
+print(image[31, 42]) # inside a nucleus
 
 # %%
 # Extract a line of pixel values across the objects
@@ -55,6 +56,7 @@ print(image[7:30,10:26])
 
 # %%
 # Compute the image min and max
+# Jupyter: Use TAB to find the min and max functions
 print(image.min(), image.max())
 
 # %%
