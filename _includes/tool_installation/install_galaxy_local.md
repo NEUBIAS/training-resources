@@ -27,3 +27,12 @@ To setup a Galaxy server locally, we will first clone the Galaxy github reposito
 6. Open Galaxy
 - Open a web browser
 - Navigate to ```localhost:8080``` to access Galaxy
+
+7. Register an account on Galaxy using the email address you added to the ```config/galaxy.yml``` file. Once logged in, verify that you have a menu item named ```Admin``` in your top menu bar.
+
+8. Pull Galaxy tools from toolshed
+    - Click on the ```Admin``` menu.
+    - On the left pane, click on ```Install and Uninstall``` under the ```Tool Management``` section.
+    - Search for the tools via the ```Search Repositories`` text box on top of the main window.
+    - Click on the repository name to expand it. 
+    - Click ```Install``` to install the tool into your local Galaxy.
