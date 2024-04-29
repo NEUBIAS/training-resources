@@ -12,7 +12,7 @@ image, *_ = open_ij_tiff(image_url)
 print(image)
 
 # %%
-# Inspect the image shape
+# Inspect the image dimensions
 print(image.shape)
 
 # %%
@@ -34,18 +34,7 @@ napari_viewer.add_image(image)
 # However with the mouse over the image and observe the pixel indices and values
 
 # %%
-# Inspect the pixel at the top left corner
-print(image[0, 0])
-
-# %%
-# Inspect the pixel at the bottom right corner
-print(image[49, 58])
-print(image.shape[0], image.shape[1])
-print(image[image.shape[0]-1, image.shape[1]-1])
-
-# %%
 # Fetch a pixel value from the background
-# Beware the index order: [y, x] = [r, c]
 print(image[4, 8])
 
 # %%
@@ -73,11 +62,6 @@ print(image.min(), image.max())
 import matplotlib.pyplot as plt
 import numpy as np
 plt.hist(image.flatten(), bins=np.arange(image.min(), image.max() + 1));
-
-# %%
-# Compute the most frequent pixel value (the mode)
-from scipy.stats import mode
-mode(image, axis = None, keepdims = True)
 
 # %%
 # Napari:
