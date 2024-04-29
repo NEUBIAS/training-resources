@@ -30,18 +30,23 @@ As there are 6 modules per day that makes ~45 minutes per module.
 
 - Imaging Centre, Lecture hall (lower floor)
 
-## Trainers
+## Trainers and organisers
 
-- Dominik Kutra (EMBL Heidelberg)
-- Christian Tischer (EMBL Heidelberg)
-- Arif Khan (EMBL Heidelberg)
-- Nima Vakili (EMBL Heidelberg)
 - Julian Hennies (EMBL Heidelberg)
+- Arif Khan (EMBL Heidelberg)
+- Dominik Kutra (EMBL Heidelberg)
+- Bugra Oezdemir (EMBL Heidelberg)
+- Christian Tischer (EMBL Heidelberg)
+- Nima Vakili (EMBL Heidelberg)
 
 ## Teaching content
 
 ### Image inspection basics (day 1)
 
+1. Introduction
+    - Trainers introduce themselves, where they work and how they are competent
+    - Participants introduce themselves, where they work, why they joined the course, and what previous experience they have
+        - Depending on the number of participants, one could distribute the introductions across the course, e.g. do some in the morning and some in the afternoon
 1. [Digital image basics](https://neubias.github.io/training-resources/pixels/index.html)
     - Christian Tischer 
 1. [Lookup tables](https://neubias.github.io/training-resources/lut/index.html)
