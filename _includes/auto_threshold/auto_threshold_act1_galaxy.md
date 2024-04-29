@@ -6,47 +6,29 @@
     - Click the `Start` button and wait for the upload to complete.
     - Once the upload is finished, click the `Close` button. The image will now be available in your Galaxy history.
 - Apply a threshhold
-  - In the Tools panel on the left side, search `ImageJ2`.
-  - Choose the tool named `Adjust threshold with ImageJ2`, and click on it.
+  - In the Tools panel on the left side, search `Threshold image`.
+  - Choose the tool named `Threshold image with scikit-image`, and click on it.
     - Manual threshold
       - `xy_8bit__nuclei_without_offset.tif`
         - Select the image `xy_8bit__nuclei_without_offset.tif` from the `Select image` dropdown list.
-        - Set the minimum threshold value to `20`
-        - Leave the maximum threshold value unchanged.
-        - Select `Default` from the `Method` dropdown list.
-        - Select `Black and White` as `Display` type
-        - Set `Black background` to `Yes`
-        - Set `Stack histogram` to `No`
+        - Select `Manual` from the `Thresholding method` dropdown list.
+        - Set `Threshold value` to `20`.
+        - Toggle `Invert output labels` to `Yes`
         - Click the `Run Tool` button and wait for the job to finish (The job will turn green).
-        - Click on the job in your Galaxy history to retrieve the results.
+        - Click on the job in your Galaxy history to download the resulting image.
       - `xy_8bit__nuclei_with_offset.tif`
         - Select the image `xy_8bit__nuclei_with_offset.tif` from the `Select image` dropdown list.
-        - Set the minimum threshold value to `20`
-        - Set the maximum threshold value to `40`.
-        - Select `Default` from the `Method` dropdown list.
-        - Select `Black and White` as `Display` type.
-        - Set `Black background` to `Yes`
-        - Set `Stack histogram` to `No`
+        - Select `Manual` from the `Thresholding method` dropdown list.
+        - Set `Threshold value` to `40`.
+        - Toggle `Invert output labels` to `Yes`
         - Click the `Run Tool` button and wait for the job to finish (The job will turn green).
         - Click on the job in your Galaxy history to retrieve the results.   
     - Auto threshold
-    - `xy_8bit__nuclei_without_offset.tif`
-      - Select the image `xy_8bit__nuclei_without_offset.tif` from the `Select image` dropdown list.
-      - Leave the minimum threshold value unchanged.
-      - Leave the maximum threshold value unchanged.
-      - Select one of the items from the `Method` dropdown list.
-      - Select `Black and White` as `Display` type
-      - Set `Black background` to `Yes`
-      - Set `Stack histogram` to `yes`
-      - Click the `Run Tool` button and wait for the job to finish (The job will turn green).
-      - Click on the job in your Galaxy history to retrieve the results.
-    - `xy_8bit__nuclei_with_offset.tif`
-      - Select the image `xy_8bit__nuclei_with_offset.tif` from the `Select image` dropdown list.
-      - Leave the minimum threshold value unchanged.
-      - Leave the maximum threshold value unchanged.
-      - Select one of the items from the `Method` dropdown list.
-      - Select `Black and White` as `Display` type.
-      - Set `Black background` to `Yes`
-      - Set `Stack histogram` to `Yes`
-      - Click the `Run Tool` button and wait for the job to finish (The job will turn green).
-      - Click on the job in your Galaxy history to retrieve the results.   
+      - `xy_8bit__nuclei_without_offset.tif` 
+        - Select the image `xy_8bit__nuclei_without_offset.tif` from the `Select image` dropdown list.
+        - Select `Otsu` from the `Thresholding Method` dropdown list.
+        - Leave `Offset` value unchanged.
+        - Toggle `Invert output labels` to `Yes`
+        - Click the `Run Tool` button and wait for the job to finish (The job will turn green).
+        - Click on the job in your Galaxy history to retrieve the results.  
+      - Repeat the steps for a different image `xy_8bit__nuclei_with_offset.tif`

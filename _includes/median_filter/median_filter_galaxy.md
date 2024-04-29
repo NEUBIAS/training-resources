@@ -1,5 +1,5 @@
 - Upload the following images to Galaxy
-    - Go to https://usegalaxy.eu
+    - Navigate to [Galaxy](https://usegalaxy.eu)
     - Locate the Tools panel on the left, click the `Upload Data` button.
     - Within the `Uupload data` pop-up wintow, Click `Paste/Fetch data` button.
     - In the text box, paste the URLs of the following images. Enter each URL on a new line.
