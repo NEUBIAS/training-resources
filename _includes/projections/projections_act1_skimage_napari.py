@@ -4,10 +4,6 @@
 #
 
 # %%
-import sys
-sys.path.append("C:\\Users\\akhan\\python_course")
-
-# %%
 # Import python packages.
 from OpenIJTIFF import open_ij_tiff
 import numpy as np

@@ -3,9 +3,8 @@
 1. install [miniconda](https://docs.conda.io/en/latest/miniconda.html)
 1. open a terminal window
 	* Windows: *Anaconda Prompt (Miniconda3)*, e.g. type `Anaconda` in the search bar
-1. write `conda create -n skimage-napari-tutorial -c conda-forge python=3.10 napari=0.4.17 notebook matplotlib jupytext "scikit-image>=0.20"` and press enter
+1. write `conda create -n skimage-napari-tutorial -c conda-forge -c euro-bioimaging python=3.10 napari=0.4.17 notebook matplotlib jupytext "scikit-image>=0.20" openijtiff` and press enter
 1. create a directory called `skimage-napari-tutorial` (e.g. on your Desktop)
-1. download [OpenIJTIFF.py](https://neubias.github.io/training-resources/functions/OpenIJTIFF.py) to the `skimage-napari-tutorial` directory
 
 #### Test installation (only once) 
 1. download [test_installation_skimage_napari.py](https://neubias.github.io/training-resources/functions/test_installation_skimage_napari.py) to 
@@ -14,7 +13,8 @@ the `skimage-napari-tutorial` directory.
 1. `cd skimage-napari-tutorial`
 1. `conda activate skimage-napari-tutorial`
 1. `jupyter notebook`
-1. Click on `test_installation_skimage_napari.py`. You will get a notebook with preconfigured cells. Run the cells one by one (`Run` button or `Shift-Enter`). 
+1. Richt-click on `test_installation_skimage_napari.py` and choose _Open with -> Notebook_.
+   You will get a notebook with preconfigured cells. Run the cells one by one (`Run` button or `Shift-Enter`). 
 The napari GUI will show twice the same image.
 1. create a new notebook
 	- `New  > Python 3`
@@ -56,5 +56,5 @@ viewer.add_image(image_opentiff)
 
 To run an activity either: 
  * (with package `jupytext`) create an empty file, e.g. `current_activity.py` in the `skimage-napari-tutorial` directory. 
-	Copy the activity code to this file and save the file. From the `jupyter` main landing page click on the file.
+	Copy the activity code to this file and save the file. From the `jupyter` main landing page right-click on the file and choose _Open with -> Notebook_.
  *  Create a new notebook `New > Python 3` and copy the code in the activity into the notebook.

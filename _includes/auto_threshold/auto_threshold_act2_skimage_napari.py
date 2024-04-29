@@ -1,9 +1,6 @@
 # %% [markdown]
 # ## Apply automated thresholds in 3D
 
-# %%
-import sys
-sys.path.append("C:\\Users\\akhan\\python_course")
 
 # %%
 # initial imports

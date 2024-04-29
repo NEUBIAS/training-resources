@@ -2,11 +2,6 @@
 # ## Explore a 5D image (3D image + channels + time)
 
 # %%
-# Add folder with functions to path
-import sys
-sys.path.append("/Users/tischer/Documents/training-resources/functions")
-
-# %%
 # Load the image
 from OpenIJTIFF import open_ij_tiff
 image, axes, scales, units = open_ij_tiff("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyzct_16bit__metaphase_eb3_cenpa.tif")
