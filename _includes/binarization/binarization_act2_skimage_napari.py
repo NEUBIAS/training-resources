@@ -2,8 +2,10 @@
 # Nuclei, spots and nuclei boundary segmentation
 
 # %%
-# Instantiate the viewer
+# Import libraries and instantiate the viewer
 import napari
+import numpy as np 
+import matplotlib.pyplot as plt
 viewer = napari.Viewer()
 
 # %%
@@ -23,7 +25,6 @@ viewer.add_image(image)
 # %%
 # Also check the image histogram for a threshold
 # Observe that interestingly there are several local minima in the histogram
-import matplotlib.pyplot as plt
 plt.hist(image.flatten(), bins=np.arange(image.min(), image.max() + 1));
 plt.yscale('log')
 
@@ -33,7 +34,6 @@ plt.yscale('log')
 # and view the binary image
 binary_image_two_nuclei = image > 5
 print(binary_image_two_nuclei.dtype)
-import numpy as np
 print(np.unique(binary_image_two_nuclei))
 viewer.add_image(binary_image_two_nuclei, opacity=0.8)
 
