@@ -13,132 +13,59 @@ import pandas as pd
 
 # %%
 # Instantiate the napari viewer
-napari_viewer1 = napari.Viewer()
+napari_viewer = napari.Viewer()
 
 # Read and inspect the image:
 fpath = 'https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_small.tif'
-image1, axes_image1, scales_image1, units_image1 = open_ij_tiff(fpath)
-napari_viewer1.add_image(image1, name='image1')
+image, axes_image, scales_image, units_image = open_ij_tiff(fpath)
+napari_viewer.add_image(image)
 
 # %%
 # Apply local mean filter
 radius = 3
 
 disk_radius = disk(radius)
-image_denoise = mean(image1, disk_radius)
-napari_viewer1.add_image(image_denoise, name='denoised')
+denoised_image = mean(image, disk_radius)
+napari_viewer.add_image(denoised_image)
 
 # %%
 # Binarize the image:
 thr = 25
 
-image_binary = image_denoise > thr
-napari_viewer1.add_labels(image_binary, name='binary')
+binary_image = denoised_image > thr
+napari_viewer1.add_labels(binary_image)
 
 # %%
 # Fill small holes
 min_size_holes = 100
 
-img_binary_fill = remove_small_holes(image_binary, area_threshold=min_size_holes)
-napari_viewer1.add_labels(img_binary_fill, name='filled')
+filled_binary_image = remove_small_holes(binary_image, area_threshold=min_size_holes)
+napari_viewer.add_labels(filled_binary_image)
 
 # %%
 # Find labels
 connectivity = 2
 
-img_labels = label(img_binary_fill, connectivity=connectivity)
-napari_viewer1.add_labels(img_labels, name='labels')
+label_mask = label(filled_binary_image, connectivity=connectivity)
+napari_viewer.add_labels(label_mask)
 
 # %%
 # Remove small regions
 min_size_regions = 100
 
-img_labels_filt = remove_small_objects(img_labels, min_size=min_size_regions)
-napari_viewer1.add_labels(img_labels_filt, name='labels_filt')
+filtered_label_mask = remove_small_objects(label_mask, min_size=min_size_regions)
+napari_viewer.add_labels(filtered_label_mask)
 
 # %%
 # Remove regions touching the borders
-img_labels_filt_no_borders = clear_border(img_labels_filt)
-napari_viewer1.add_labels(img_labels_filt_no_borders, name='labels_filt_no_borders')
-
-# %%
-# Obtain cell properties:
-properties = regionprops_table(
-    img_labels_filt_no_borders,
-    properties = {'label', 'area'}
-)
+filtered_label_mask_no_borders = clear_border(filtered_label_mask)
+napari_viewer.add_labels(filtered_label_mask_no_borders)
 
 # %%
 # Print areas for each cell:
-properties = pd.DataFrame(properties)
-areas = properties
-print(areas)
+properties = pd.DataFrame(regionprops_table(filtered_label_mask_no_borders,
+                properties = {'label', 'area'})
+print(properties)
 
-# %% [markdown]
-# ### Define a workflow using function
-
-# %%
-# define workflow function
-
-def noisy_nuclei_quantification(
-    image, 
-    viewer, 
-    radius=3,
-    thr=25,
-    min_size_holes=100,
-    connectivity=2,
-    min_size_regions=100,
-):
-    
-    # Apply local mean filter
-    disk_radius = disk(radius)
-    image_denoise = mean(image, disk_radius)
-    viewer.add_image(image_denoise, name='denoise')
-    
-    # Binarize the image:
-    image_binary = image_denoise > thr
-    viewer.add_labels(image_binary, name='binary')
-    
-    # Fill small holes
-    img_binary_fill = remove_small_holes(image_binary, area_threshold=min_size_holes)
-    viewer.add_labels(img_binary_fill, name='filled')
-    
-    # Find labels:
-    img_labels = label(img_binary_fill, connectivity=connectivity)
-    viewer.add_labels(img_labels, name='labels')
-    
-    # Remove small regions
-    img_labels_filt = remove_small_objects(img_labels, min_size=min_size_regions)
-    viewer.add_labels(img_labels_filt, name='labels_filt')
-    
-    # Remove regions touching the borders
-    img_labels_filt_no_borders = clear_border(img_labels_filt)
-    viewer.add_labels(img_labels_filt_no_borders, name='labels_filt_no_borders')
-    
-    # Obtain cell properties:
-    properties = regionprops_table(
-        img_labels_filt_no_borders,
-        properties = {'label', 'area'}
-    )
-    
-    # Print areas for each cell:
-    properties = pd.DataFrame(properties)
-    areas = properties
-    print(areas)
-
-    return properties
-
-# %%
-# Instantiate the napari viewer
-napari_viewer2 = napari.Viewer()
-
-# Read and inspect the image
-fpath = 'https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_large.tif'
-image2, axes_image2, scales_image2, units_image2 = open_ij_tiff(fpath)
-napari_viewer2.add_image(image2, name='image2')
-
-# %%
-# Run workflow
-properties = noisy_nuclei_quantification(image2, napari_viewer2)
 
 # %%
