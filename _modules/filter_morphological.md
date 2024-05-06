@@ -38,7 +38,7 @@ concept_map: >
 
 
 figure: figures/filter_morphological.png
-figure_legend: Upper row - Example of a workflow using morphological filters to improve the segmentation and compute the edge of the nuclei for further intensity measurements if necessary measurements have to be made on the periphery. Image on top left is a 2 channel intensity image (where channel 1 shows nuclear periphery and channel 2 shows nuclear staining). Lower row - Image level description of dilation and erosion operation using a 3x3 structuring element (left side). Morphological filters applied in series, e.g. opening (i.e. erosion followed by dilation) and closing (i.e. dilation followed by erosion), can achieve very useful results (right side). Red and green arrows show erosion and dilation respectively
+figure_legend: Upper row - Example of a workflow using morphological filters to improve the segmentation and compute the edge of the nuclei for further intensity measurements if necessary measurements have to be made on the periphery. Image on top left is a 2 channel intensity image (where channel 1 shows nuclear membrane and channel 2 shows dna staining). Lower row - Image level description of dilation and erosion operation using a 3x3 structuring element (left side). Morphological filters applied in series, e.g. opening (i.e. erosion followed by dilation) and closing (i.e. dilation followed by erosion), can achieve very useful results (right side). Red and green arrows show erosion and dilation respectively
 
 multiactivities:
  - ["filter_morphological/filter_morphological_act1.md", [["ImageJ Macro", "filter_morphological/filter_morphological_act1_imagejmacro.ijm", "java"],
@@ -58,8 +58,8 @@ assessment: |
       1. An erosion _____ objects in a binary image.
       2. An erosion in a binary image _____ the number of foreground pixels.
       3. A dilation _____ objects in a binary image.
-      4. An erosion of a binary image correspods to a ___ rank operation.
-      5. An dilation of a binary image correspods to a ___ rank operation.
+      4. An erosion of a binary image corresponds to a ___ rank operation.
+      5. An dilation of a binary image corresponds to a ___ rank operation.
       6. A dilation followed by an erosion is called ___.
       7. An erosion followed by a dilation is called ___ .
 
