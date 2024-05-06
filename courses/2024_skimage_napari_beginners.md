@@ -77,12 +77,12 @@ As there are 6 modules per day that makes ~45 minutes per module.
 
 ### Image analysis basics (day 3)
 
+1. [Object intensity measurements](https://neubias.github.io/training-resources/measure_intensities/index.html)
+    - Dominik Kutra
 1. [Image neighborhood filtering](https://neubias.github.io/training-resources/filter_neighbourhood/index.html)
     - Bugra Oezdemir
 1. [Median filter](https://neubias.github.io/training-resources/median_filter/index.html)
     - Bugra Oezdemir
-1. [Object intensity measurements](https://neubias.github.io/training-resources/measure_intensities/index.html)
-    - Dominik Kutra
 1. [Local background subtraction](https://neubias.github.io/training-resources/local_background_correction/index.html)
     - Domink Kutra
 1. [Morphological filters](https://neubias.github.io/training-resources/filter_morphological/index.html)
