@@ -7,6 +7,8 @@ from skimage.morphology import disk, remove_small_objects, remove_small_holes
 from skimage.measure import label, regionprops_table
 from skimage.segmentation import clear_border
 import pandas as pd
+import os
+import numpy as np
 
 # %% [markdown]
 # ### Process the first image
