@@ -1,5 +1,5 @@
-# %% [markdown]
-# ## Applying mean filters to an image
+# %% 
+# Apply mean filters to an image to aid foreground background segmentation 
 
 # %%
 # Instantiate the napari viewer
@@ -9,46 +9,48 @@ viewer = napari.Viewer()
 
 # %%
 # Read the intensity image
-image, axes, scales, units = open_ij_tiff('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_very_noisy.tif')
+image, *_ = open_ij_tiff('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_very_noisy.tif')
 
 # %%
-# View the intensity image
+# View the image 
+# - Appreciate that is is quite noisy
+# - Inspect the pixel values to find a threshold that separates the nuclei from the background
 viewer.add_image(image)
 
 # %%
-# Appreciate that one cannot segment the nuclei by a simple intensity threshold
+# Binarise the image
+# - Appreciate that one cannot segment the nuclei by a simple intensity threshold
 binary_image = image > 40
 viewer.add_image(binary_image)
 
 # %% 
-# Define a circular structural element with a radius of 1 pixel
+# Prepare filtering the image by defining a circular structural element with a radius of 1 pixel
 from skimage.morphology import disk
-radius = 1
-disk_radius1 = disk(radius)
-print(disk_radius1)
+disk_radius_1 = disk(1)
+print(disk_radius_1)
 
 # %%
-# Apply a mean filter with the structural element
+# Apply a mean filter to the image with the above structural element
 from skimage.filters.rank import mean
-mean_disk_radius1 = mean(image, disk_radius1)
+mean_image_1 = mean(image, disk_radius_1)
 
 # Add the filtered image to napari
-# Napari: Zoom in to appreciate that the filtered image 
-# contains the local mean values of the raw image
-viewer.add_image(mean_disk_radius1)
+# Napari:
+# - Zoom in to appreciate that the filtered image contains the local mean values of the raw image
+viewer.add_image(mean_image_1)
 
 # %%
-# One still cannot readily segment the nuclei
-# (rerun the below code with different thresholds)
-binary_mean_disk_radius1 = mean_disk_radius1 > 35
-viewer.add_image(binary_mean_disk_radius1)
+# Binarise the filtered image
+# - Appreciate that one still cannot readily segment the nuclei
+binary_image_1 = mean_image_1 > 35
+viewer.add_image(binary_image_1)
 
 # %% 
 # Apply mean filter with a disk of radius 3
-mean_disk_radius3 = mean(image, disk(3))
-viewer.add_image(mean_disk_radius3)
+mean_image_3 = mean(image, disk(3))
+viewer.add_image(mean_image_3)
 
 # %%
 # Now the nuclei can be segmented
-binary_mean_disk_radius3 = mean_disk_radius3 > 32
-viewer.add_image(binary_mean_disk_radius3)
+binary_image_3 = mean_image_3 > 32
+viewer.add_image(binary_image_3)
