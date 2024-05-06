@@ -6,6 +6,8 @@ import numpy as np
 import numpy.typing as npt
 import requests
 import tifffile
+from skimage.io import imread
+import napari
 
 
 def _fetch_data(uri: str) -> Path:
@@ -173,9 +175,9 @@ def open_ij_tiff(
 def save_ij_tiff(
     tiffdest: Union[str, Path],
     image_array: np.ndarray,
-    ax_names: Sequence[str],
-    ax_scales: Sequence[float],
-    ax_units: Sequence[str],
+    ax_names: Optional[Sequence[str]] = None,
+    ax_scales: Optional[Sequence[float]] = None,
+    ax_units: Optional[Sequence[str]] = None,
     extra_metadata: Optional[dict] = None,
 ) -> Dict[str, Any]:
     """
@@ -195,15 +197,33 @@ def save_ij_tiff(
         Metadata dictionary
     """
 
+    _full_axes = 'TCZYX'
+    _full_units = ['Frame', 'na', 'Slice', 'Pixel', 'Pixel']
+
+    if ax_names is None:
+        ax_names = _full_axes[-image_array.ndim:]
+    if ax_units is None:
+        ax_units = _full_units[-image_array.ndim:]
+    if ax_scales is None:
+        ax_scales = [1] * image_array.ndim
+    ax_names = ax_names.upper()
+    assert len(ax_names) == image_array.ndim, f"The length of 'ax_names' must match the number of dimensions, which is {image_array.ndim}"
+    assert len(ax_units) == image_array.ndim, f"The length of 'ax_units' must match the number of dimensions, which is {image_array.ndim}"
+    assert len(ax_scales) == image_array.ndim, f"The length of 'ax_scales' must match the number of dimensions, which is {image_array.ndim}"
+
     metadata = {
         "axes": ax_names,
     }
 
+    if image_array.dtype == np.dtype(bool):
+        image_array = image_array.astype(np.uint8) * 255
+
     if "Y" in ax_names:
         y_idx = ax_names.index("Y")
+        metadata["unit"] = ax_units[y_idx]
     if "X" in ax_names:
         x_idx = ax_names.index("X")
-        metadata["unit"] = encode_unicode(ax_units[x_idx])
+        metadata["unit"] = ax_units[x_idx]
     if "Z" in ax_names:
         z_idx = ax_names.index("Z")
         if ax_units[z_idx] != "Slice":  ### TODO: This checkpoint might be improved
@@ -238,3 +258,7 @@ def save_ij_tiff(
         metadata=metadata,
     )
     return metadata
+
+
+
+
