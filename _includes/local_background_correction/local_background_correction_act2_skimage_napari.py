@@ -1,35 +1,41 @@
-# %% [markdown]
-# ### Background subtraction using a maximum intensity projection
-# Activity is part of the teaching module [Local background correction](https://neubias.github.io/training-resources/local_background_correction/index.html#bgmaxima)
+# %% 
+# Background subtraction using a maximum intensity projection
 
 # %%
 import numpy as np
-# Read the intensity image
 from OpenIJTIFF import open_ij_tiff
+import napari
+import matplotlib.pyplot as plt
+
+# Read the image
 image, axes, scales, units = open_ij_tiff('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyt_8bit_polyp.tif')
 
-# Inspect image data type and values
-print('image type:', image.dtype,'\n',
-      'image shape:', image.shape,'\n',
-      'intensity min:',   np.min(image),'\n',
-      'intensity max:',   np.max(image),'\n'
-      'axis order:', axes
-      )
+# %%
+# Appreciate that this is a time-lapse image
+print(image.shape, axes)
 
 # %%
 # Instantiate the napari viewer
-import napari
+# - Appreciate that one probably cannot segment the polyp by a simple intensity threshold
 viewer = napari.Viewer()
-viewer.add_image(image, name='original image')
+viewer.add_image(image)
 
 # %%
-# Remember the axis order 0=t, 1=x, 2=y
-# Maximum projection along t-axis
-max_t_image = np.max(image, axis = 0)
-viewer.add_image(max_t_image, name = 'background')
+# Create a background image by a maximum projection
+# - Remember the axis order 0=t, 1=x, 2=y
+# - The background is bright and the object is moving, thus a maximum projection yields the background
+background = np.max(image, axis = 0)
+viewer.add_image(background)
 
 # %%
-# Cast to signed int16 to include also negative values
-foreground = image.astype('int16') - max_t_image.astype('int16')
-viewer.add_image(foreground, name = 'foreground')
+# Create foreground image
+# - Cast to signed int16 to include also negative values
+foreground = image.astype('int16') - background.astype('int16')
+viewer.add_image(foreground)
 
+# %%
+# Segment the polyp by a simple thresholding of the foreground image
+plt.hist(foreground.flatten(), bins=np.arange(foreground.min(), foreground.max() + 1));
+plt.yscale('log')
+binary = foreground < -25
+viewer.add_image(binary)
