@@ -23,7 +23,7 @@ jobs:
           sudo apt-get install -yy mesa-utils libgl1-mesa-dev xvfb curl
       - uses: conda-incubator/setup-miniconda@v3
         with:
-          auto-update-conda: true
+          auto-update-conda: false
           auto-activate-base: true
           activate-environment: ""
           channel-priority: strict
