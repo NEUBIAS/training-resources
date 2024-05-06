@@ -33,7 +33,7 @@ napari_viewer.add_image(denoised_image)
 thr = 25
 
 binary_image = denoised_image > thr
-napari_viewer1.add_labels(binary_image)
+napari_viewer.add_labels(binary_image)
 
 # %%
 # Fill small holes
@@ -64,8 +64,24 @@ napari_viewer.add_labels(filtered_label_mask_no_borders)
 # %%
 # Print areas for each cell:
 properties = pd.DataFrame(regionprops_table(filtered_label_mask_no_borders,
-                properties = {'label', 'area'})
+                properties = {'label', 'area'}))
 print(properties)
 
+# %%
+# Find the basename of the input file from input file path
+file_name = os.path.basename(fpath)
+base_name = os.path.splitext(file_name)[0]
+print(base_name)
+
+# %%
+# Save final label mask as tif file
+mask_save_name = base_name+"_labelmask.tif"
+save_ij_tiff(mask_save_name, filtered_label_mask_no_borders.astype(np.uint8), axes_image, scales_image, units_image)
+print(f"The label mask is saved as : {mask_save_name}")
+
+# %%
+# Save object properties dataframe as csv file
+table_save_name = base_name+"_intensity_measurements.csv"
+properties.to_csv(table_save_name, index=False)
 
 # %%
