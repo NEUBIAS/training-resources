@@ -6,8 +6,7 @@ import numpy as np
 import numpy.typing as npt
 import requests
 import tifffile
-from skimage.io import imread
-import napari
+
 
 
 def _fetch_data(uri: str) -> Path:
