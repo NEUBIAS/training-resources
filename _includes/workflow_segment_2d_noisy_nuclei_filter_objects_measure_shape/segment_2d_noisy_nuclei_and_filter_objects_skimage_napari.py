@@ -1,7 +1,7 @@
 # %%
 # Import modules
 import napari
-from OpenIJTIFF import open_ij_tiff
+from OpenIJTIFF import open_ij_tiff, save_ij_tiff
 from skimage.filters.rank import mean
 from skimage.morphology import disk, remove_small_objects, remove_small_holes
 from skimage.measure import label, regionprops_table
@@ -85,5 +85,8 @@ print(f"The label mask is saved as : {mask_save_name}")
 # Save object properties dataframe as csv file
 table_save_name = base_name+"_intensity_measurements.csv"
 properties.to_csv(table_save_name, index=False)
+
+# %%
+# Repeat the steps on the second image
 
 # %%
