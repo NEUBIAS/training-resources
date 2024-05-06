@@ -17,7 +17,7 @@ from skimage.morphology import opening, closing
 fpath = "https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__for_open_and_close.tif"
 image, _, _, _ = open_ij_tiff(fpath)
 napari_viewer = Viewer()
-napari_viewer.add_image(image, name='image')
+napari_viewer.add_image(image)
 
 # %% [markdown]
 # Morphological *opening* is the *dilation* of an *eroded* image using the same structuring element
@@ -26,8 +26,8 @@ napari_viewer.add_image(image, name='image')
 # Opening operation
 eroded = erosion(image, footprint = square(3))
 opened = dilation(eroded, footprint = square(3))
-napari_viewer.add_image(eroded, name='eroded')
-napari_viewer.add_image(opened, name='opening')
+napari_viewer.add_labels(eroded)
+napari_viewer.add_labels(opened)
 
 # %% [markdown]
 # Appreciate how the *opening* operation removed thin structures (< structuring element size) and smoothen objects
@@ -45,8 +45,8 @@ print((opened==opened_1step).all())
 # Closing: fill holes, connect gaps.
 dilated = dilation(image, footprint = square(3))
 closed = erosion(dilated, square(3))
-napari_viewer.add_image(dilated, name='dilation')
-napari_viewer.add_image(closed, name='closing')
+napari_viewer.add_labels(dilated)
+napari_viewer.add_labels(closed)
 
 # %%
 # Closing operations are so common that often they have their own command

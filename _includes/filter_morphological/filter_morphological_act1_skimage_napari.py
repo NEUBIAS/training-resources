@@ -18,7 +18,7 @@ napari_viewer = Viewer()
 fpath = "https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__three_spots_different_size.tif"
 image, _, _, _ = open_ij_tiff(fpath)
 
-napari_viewer.add_image(image, name='image')
+napari_viewer.add_image(image)
 
 # %% [markdown]
 # Perform [erosion](https://scikit-image.org/docs/stable/api/skimage.morphology.html#skimage.morphology.erosion) and [dilation](https://scikit-image.org/docs/stable/api/skimage.morphology.html#skimage.morphology.dilation) using defaults
@@ -26,16 +26,16 @@ napari_viewer.add_image(image, name='image')
 
 # %%
 # Perform erosion and dilation with default structuring element (cross-shaped - disk(1))
-# 0 1 0 
+# 0 1 0
 # 1 1 1
 # 0 1 0
-# This element has connectivity = 1 
+# This element has connectivity = 1
 eroded = erosion(image, footprint = disk(1))
 dilated = dilation(image, footprint = disk(1))
 
 # Add to napari
-napari_viewer.add_image(eroded, name='eroded1', colormap='magenta', opacity = 0.7)
-napari_viewer.add_image(dilated, name='dilated1', colormap='green', opacity = 0.7)
+napari_viewer.add_labels(eroded)
+napari_viewer.add_labels(dilated)
 
 # %% [markdown]
 # Appreciate that the single pixel disappeared with erosion.\
@@ -48,8 +48,8 @@ print(square3)
 eroded_square3 = erosion(image, footprint = square3)
 dilated_square3 = dilation(image, footprint = square3)
 
-napari_viewer.add_image(eroded_square3, name='eroded3', colormap='magenta', opacity = 0.5)
-napari_viewer.add_image(dilated_square3, name='dilated3', colormap='green', opacity = 0.5)
+napari_viewer.add_labels(eroded_square3)
+napari_viewer.add_labels(dilated_square3)
 
 # %% [markdown]
 # **Learning opportunity**\

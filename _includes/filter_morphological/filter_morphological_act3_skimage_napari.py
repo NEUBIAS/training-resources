@@ -22,8 +22,8 @@ internal_gradient = image - eroded
 
 # %%
 # Create a napari_viewer and visualize images.
-napari_viewer.add_image(image, name='image')
-napari_viewer.add_labels(eroded, name='eroded')
+napari_viewer.add_image(image)
+napari_viewer.add_labels(eroded)
 napari_viewer.add_labels(internal_gradient, name='internal_gradient')
 
 # %% [markdown]
@@ -35,4 +35,4 @@ napari_viewer.add_labels(internal_gradient, name='internal_gradient')
 # * Compute the external gradient (dilation - image)
 # * Try different sized structuring elements for the dilation
 # * What controls the thickness of the edge?
-# * Compute the central gradient (dilation - erosion) 
+# * Compute the central gradient (dilation - erosion)
