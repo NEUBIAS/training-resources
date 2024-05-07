@@ -36,14 +36,14 @@ mean_3 = rank.mean(image, disk(3))
 viewer.add_image(mean_3)
 
 
-############################  New image  ################################
+###########  New image: nucleare speckles #############
 
 # %%
 # Clear the napari viewer
 viewer.layers.clear()
 
 # %%
-# Load another image
+# Load image
 image, *_ = open_ij_tiff('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__PCNA.tif')
 
 # %%
@@ -54,6 +54,8 @@ viewer.add_image(image)
 # Remove small intra-nuclear structures 
 # - Appreciate that a median filter removes the intra-nuclear speckles while keeping the nuclear shape intact
 # - This can be helpful in many ways, e.g. some deep learning nuclear segmentation tools get confused by intra-nuclear speckles
+# - Another application is to subtract the filtered image from the original image to only have the speckles; this will be used in the 
+#   "local background subtraction" training module
 image_without_speckles = filters.median(image, disk(radius=15))
 viewer.add_image(image_without_speckles)
 

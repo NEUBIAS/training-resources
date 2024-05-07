@@ -25,7 +25,8 @@ napari_viewer.add_labels(labels)
 # %% 
 # Napari:
 # Add a dedicated background label  
-# - We could also have estimation of background intensity with the "0" label, but this may include object pixels
+# - Intensity measurements require background subtraction, thus one needs a region to measure the background intensity
+# - Finding a suitable background region can be challenging, here we do it manually 
 # - Using the `layer controls` for the `labels` layer, manually create an additional label ("3" in this case) that specifically measures the background
 
 # %%
@@ -38,9 +39,8 @@ print("labels", np.unique(labels))
 regionprops?
 
 # %%
-# Measure the intensitues into a dataframe
-# - This immediately "wraps" the measurements into a pandas dataframe
-# - TODO: How to know which properties are available?
+# Measure the object intensities 
+# - This immediately converts the measurements into a pandas dataframe
 df = pd.DataFrame(regionprops_table(
         labels,
         intensity_image = image,
@@ -67,3 +67,4 @@ df.to_csv("intensity_measurements.csv")
 
 # %%
 # Optional: Repeat the above with "https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__h2b_dilate_labels.tif"
+# - Discuss how the measurements are affected by the larger object regions
