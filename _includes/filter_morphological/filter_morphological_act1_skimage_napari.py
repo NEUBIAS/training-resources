@@ -18,7 +18,9 @@ image, *_ = open_ij_tiff("https://github.com/NEUBIAS/training-resources/raw/mast
 napari_viewer.add_image(image)
 
 # %%
-# Check datatype and pixel values to ensure that this is a binary image
+# Check datatype and pixel values 
+# - Ensure that this is a binary image
+# - Check how the binary values are encoded (could be in principle: true, false, 0, 1, 255)
 print(image.dtype)
 print(np.unique(image))
 
@@ -27,34 +29,34 @@ print(np.unique(image))
 #
 
 # %%
-# Perform erosion and dilation with default structuring element (cross-shaped - disk(1))
-# 0 1 0
-# 1 1 1
-# 0 1 0
+# Perform erosion and dilation with a cross-shaped / disk(1) structural element
 # This element has connectivity = 1
+#
+print(disk(1))
 eroded = erosion(image, footprint = disk(1))
 dilated = dilation(image, footprint = disk(1))
 
-# Add resulting images to napari
+# Add images to napari and observe:
+# - The single pixel disappeared with erosion
+# - The single pixel became a cross with dilation. This is in fact the form of the structuring element
+# - For the dilation no pixels have been added (diagonally) at corners, because the disk(1) has only horizontal and vertical "1" connectivity
 napari_viewer.add_labels(eroded)
 napari_viewer.add_labels(dilated)
 
 # %%
-# Appreciate that the single pixel disappeared with erosion
-# Appreciate that the single pixel became a cross with dilation. This is in fact the form of the structuring element
+# Now try with a structuring element with connectivity 2 (3x3 square).
+print(square(3))
+eroded_square3 = erosion(image, footprint = square(3))
+dilated_square3 = dilation(image, footprint = square(3))
 
 # %%
-# Now try with a structuring element with connectivity 2 (3x3 square).
-square3 = square(3)
-print(square3)
-eroded_square3 = erosion(image, footprint = square3)
-dilated_square3 = dilation(image, footprint = square3)
-
+# View images in napari
+#
 napari_viewer.add_labels(eroded_square3)
 napari_viewer.add_labels(dilated_square3)
 
 # %%
 # Learning opportunity:
-# Try with a bigger square (e.g. `square(5)`)\
-# or a different structuring element (e.g. disk(1))\
+# Try with a bigger square (e.g. square(5))
+# or a different structuring element (e.g. disk(1))
 # Also refer to https://scikit-image.org/docs/stable/api/skimage.morphology.html
