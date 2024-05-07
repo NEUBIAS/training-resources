@@ -24,7 +24,7 @@ internal_gradient = image - eroded
 # Create a napari_viewer and visualize images.
 napari_viewer.add_image(image)
 napari_viewer.add_labels(eroded)
-napari_viewer.add_labels(internal_gradient, name='internal_gradient')
+napari_viewer.add_labels(internal_gradient)
 
 # %% [markdown]
 # The internal gradient represents the inner edge of the object.\
