@@ -7,6 +7,7 @@ from OpenIJTIFF import open_ij_tiff
 from napari.viewer import Viewer
 from skimage.morphology import square, disk
 from skimage.morphology import erosion, dilation
+import numpy as np
 
 # %%
 # Create a napari_viewer 
