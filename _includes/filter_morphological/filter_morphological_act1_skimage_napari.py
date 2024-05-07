@@ -1,7 +1,5 @@
-# %% [markdown]
-# ### Dilation and erosion of binary
-#
-# Part of teaching module [Morphological filtering](https://neubias.github.io/training-resources/filter_morphological/index.html#dilateerode)
+# %% 
+# Dilation and erosion of a binary image
 
 # %%
 # Import python packages.
@@ -10,18 +8,22 @@ from napari.viewer import Viewer
 from skimage.morphology import square, disk
 from skimage.morphology import erosion, dilation
 
-# Create a napari_viewer and visualize image and labels.
+# %%
+# Create a napari_viewer 
 napari_viewer = Viewer()
 
 # %%
-# download and read tif file
-fpath = "https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__three_spots_different_size.tif"
-image, _, _, _ = open_ij_tiff(fpath)
-
+# Open and view image
+image, *_ = open_ij_tiff("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__three_spots_different_size.tif")
 napari_viewer.add_image(image)
 
-# %% [markdown]
-# Perform [erosion](https://scikit-image.org/docs/stable/api/skimage.morphology.html#skimage.morphology.erosion) and [dilation](https://scikit-image.org/docs/stable/api/skimage.morphology.html#skimage.morphology.dilation) using defaults
+# %%
+# Check datatype and pixel values to ensure that this is a binary image
+print(image.dtype)
+print(np.unique(image))
+
+# %%
+# Perform [erosion](https://scikit-image.org/docs/stable/api/skimage.morphology.html#skimage.morphology.erosion) and [dilation](https://scikit-image.org/docs/stable/api/skimage.morphology.html#skimage.morphology.dilation) using default setting
 #
 
 # %%
@@ -33,12 +35,12 @@ napari_viewer.add_image(image)
 eroded = erosion(image, footprint = disk(1))
 dilated = dilation(image, footprint = disk(1))
 
-# Add to napari
+# Add resulting images to napari
 napari_viewer.add_labels(eroded)
 napari_viewer.add_labels(dilated)
 
-# %% [markdown]
-# Appreciate that the single pixel disappeared with erosion.\
+# %%
+# Appreciate that the single pixel disappeared with erosion
 # Appreciate that the single pixel became a cross with dilation. This is in fact the form of the structuring element
 
 # %%
@@ -51,8 +53,8 @@ dilated_square3 = dilation(image, footprint = square3)
 napari_viewer.add_labels(eroded_square3)
 napari_viewer.add_labels(dilated_square3)
 
-# %% [markdown]
-# **Learning opportunity**\
+# %%
+# Learning opportunity:
 # Try with a bigger square (e.g. `square(5)`)\
 # or a different structuring element (e.g. disk(1))\
 # Also refer to https://scikit-image.org/docs/stable/api/skimage.morphology.html
