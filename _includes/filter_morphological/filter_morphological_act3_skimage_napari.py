@@ -1,6 +1,5 @@
-# %% [markdown]
-# ### Morphological internal gradient of binary
-# Activity is part of the teaching module [Morphological filtering](https://neubias.github.io/training-resources/filter_morphological/index.html#gradient)
+# %% 
+# Morphological internal gradient of a binary image
 
 # %%
 from OpenIJTIFF import open_ij_tiff

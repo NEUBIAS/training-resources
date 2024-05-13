@@ -38,17 +38,15 @@ concept_map: >
 
 
 figure: figures/filter_morphological.png
-figure_legend: Upper row - Example of a workflow using morphological filters to improve the segmentation and compute the edge of the nuclei for further intensity measurements if necessary measurements have to be made on the periphery. Image on top left is a 2 channel intensity image (where channel 1 shows nuclear membrane and channel 2 shows dna staining). Lower row - Image level description of dilation and erosion operation using a 3x3 structuring element (left side). Morphological filters applied in series, e.g. opening (i.e. erosion followed by dilation) and closing (i.e. dilation followed by erosion), can achieve very useful results (right side). Red and green arrows show erosion and dilation respectively
+figure_legend: "Upper row - Example of a workflow using morphological filters to improve the segmentation and compute the edge of the nuclei for further intensity measurements if necessary measurements have to be made on the periphery. Image on top left is a 2 channel intensity image (where channel 1 shows nuclear membrane and channel 2 shows dna staining). Lower row - Image level description of dilation and erosion operation using a 3x3 structuring element (left side). Morphological filters applied in series, e.g. opening (i.e. erosion followed by dilation) and closing (i.e. dilation followed by erosion), can achieve very useful results (right side). Red and green arrows show erosion and dilation respectively"
 
 multiactivities:
- - ["filter_morphological/filter_morphological_act1.md", [["ImageJ Macro", "filter_morphological/filter_morphological_act1_imagejmacro.ijm", "java"],
-																	 ["skimage napari", "filter_morphological/filter_morphological_act1_skimage_napari.py", "python"]]]
- - ["filter_morphological/filter_morphological_act2.md", [["ImageJ Macro", "filter_morphological/filter_morphological_act2_imagejmacro.ijm", "java"],
-																	 ["skimage napari", "filter_morphological/filter_morphological_act2_skimage_napari.py", "python"]]]
- - ["filter_morphological/filter_morphological_act3.md", [["ImageJ Macro", "filter_morphological/filter_morphological_act3_imagejmacro.ijm", "java"],
-																	 ["skimage napari", "filter_morphological/filter_morphological_act3_skimage_napari.py", "python"]]]
- - ["filter_morphological/filter_morphological_act4.md", [["ImageJ GUI", "filter_morphological/filter_morphological_act4_imagejgui.md", "markdown"],
-															["ImageJ Macro", "filter_morphological/filter_morphological_act4_imagejmacro.ijm", "java"]]]
+  - ["filter_morphological/filter_morphological_act1.md", [["ImageJ Macro", "filter_morphological/filter_morphological_act1_imagejmacro.ijm", "java"], ["skimage napari", "filter_morphological/filter_morphological_act1_skimage_napari.py"]]]
+  - ["filter_morphological/filter_morphological_act2.md", [["ImageJ Macro", "filter_morphological/filter_morphological_act2_imagejmacro.ijm", "java"], ["skimage napari", "filter_morphological/filter_morphological_act2_skimage_napari.py", "python"]]]
+  - ["filter_morphological/filter_morphological_act3.md", [["ImageJ Macro", "filter_morphological/filter_morphological_act3_imagejmacro.ijm", "java"], ["skimage napari", "filter_morphological/filter_morphological_act3_skimage_napari.py", "python"]]]
+  - ["filter_morphological/filter_morphological_act4.md", [["ImageJ GUI", "filter_morphological/filter_morphological_act4_imagejgui.md", "markdown"], ["ImageJ Macro", "filter_morphological/filter_morphological_act4_imagejmacro.ijm", "java"]]]
+  - ["filter_morphological/cytoplasmic_ring.md", [["skimage napari", "filter_morphological/cytoplasmic_ring_skimage_napari.py"]]] 
+
 
 assessment: |
 
