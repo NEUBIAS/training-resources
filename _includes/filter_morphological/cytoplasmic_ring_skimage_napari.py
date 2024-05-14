@@ -40,5 +40,5 @@ viewer.add_labels(ring_labels)
 
 # %%
 # prevent napari from quitting when exectuing from a scripting environment
-napari.run()
+# napari.run()
 
