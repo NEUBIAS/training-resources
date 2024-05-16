@@ -3,7 +3,8 @@ title: Batch processing
 layout: module
 tags: ["scripting"]
 prerequisites:
-  - "[Working with Strings](../string_concat)"
+  - "[Working with strings](../string_concat)"
+  - "[For loops](../script_for_loop)"
 objectives:
   - "Automatically process a number of images"
 motivation: |
@@ -13,16 +14,16 @@ concept_map: >
   graph TD
     I1("Image 1") --> S("Analysis workflow")
     I2("Image 2") --> S
-    IN("Image ...") --> S
+    IN("...") --> S
     S --> R1("Result 1")
     S --> R2("Result 2")
-    S --> RN("Result ...")
+    S --> RN("...")
 
 figure: /figures/batch_processing.png
-figure_legend: Batch processing of many images, yielding many tables.
+figure_legend: Batch processing of several images, yielding as many segmentations and object measurement tables.
 
 multiactivities:
-  - ["batch_processing/measure_nuclei_shapes.md", [["ImageJ SciJava Macro", "batch_processing/batch_measure_nuclei_shape_scijava_ijmacro.md"]]]
+  - ["batch_processing/batch_measure_nuclei_shapes.md", [["ImageJ SciJava Macro", "batch_processing/batch_measure_nuclei_shape_scijava_ijmacro.md"],["skimage python", "batch_processing/batch_measure_nuclei_shape.py"]]]
 
 exercises_preface: |
   - Download those two images
