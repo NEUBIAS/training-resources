@@ -3,6 +3,7 @@ title: Batch processing
 layout: module
 tags: ["scripting"]
 prerequisites:
+  - "[Working with Strings](../string_concat)"
 objectives:
   - "Automatically process a number of images"
 motivation: |
@@ -20,14 +21,8 @@ concept_map: >
 figure: /figures/batch_processing.png
 figure_legend: Batch processing of many images, yielding many tables.
 
-activity_preface: |
-  - Batch process several images containing nuclei.
-  - Download the images in [image_data/batch_process](https://github.com/NEUBIAS/training-resources/tree/master/image_data/batch_process).
-    - For each image
-      - Segment the nuclei and save the label mask.
-      - Measure the nuclei area and save the results in a table.
-activities:
-  - ["ImageJ Macro Scijava","batch_processing/activities/nuclei_measure_shape_scijava_imagejmacro.ijm", "Java"]
+multiactivities:
+  - ["batch_processing/measure_nuclei_shapes.md", [["ImageJ SciJava Macro", "batch_processing/batch_measure_nuclei_shape_scijava_ijmacro.md"]]]
 
 exercises_preface: |
   - Download those two images
