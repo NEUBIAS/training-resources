@@ -1,4 +1,4 @@
-<h4 id="scanr_12bit><a href="#scanr_12bit>Inspect a ScanR 12-bit image</a></h4> 
+<h4 id="scanr_12bit"><a href="#scanr_12bit">Inspect a ScanR microscope 12-bit image</a></h4> 
 
 This activity shows that correctly handling 12-bit data can be tricky, becuause typically neither on disk nor in memory there is a 12-bit datatype.
  
