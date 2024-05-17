@@ -39,12 +39,14 @@ Dear Trainers, please consider checking these [teaching tips](https://github.com
 
 ## Teaching content
 
+### Introduction
+
+- Trainers introduce themselves, where they work and how they are competent
+- Participants introduce themselves, where they work, why they joined the course, and what previous experience they have
+    - Depending on the number of participants, one could distribute the introductions across the course, e.g. do some in the morning and some in the afternoon
+
 ### Essential python scripting skills for conducting automated batch analysis (day 1)
 
-1. Introduction
-    - Trainers introduce themselves, where they work and how they are competent
-    - Participants introduce themselves, where they work, why they joined the course, and what previous experience they have
-        - Depending on the number of participants, one could distribute the introductions across the course, e.g. do some in the morning and some in the afternoon
 1. [Loops](https://neubias.github.io/training-resources/script_for_loop/index.html)
     - Trainer
 1. [String and path manipulations](https://neubias.github.io/training-resources/string_concat/index.html)
