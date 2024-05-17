@@ -23,6 +23,9 @@ figure: /figures/data_types.png
 figure_legend: Examples for data types of different bit depths.
 
 multiactivities:
+  - ["datatypes/inspect_8bit_saturation.md", [["skimage napari", "datatypes/inspect_8bit_saturation_skimage_napari.py"]]]
+  - ["datatypes/inspect_binary_8bit.md", [["skimage napari", "datatypes/inspect_binary_8bit_skimage_napari.py"]]]
+  - ["datatypes/inspect_scanr_12bit.md", [["skimage napari", "datatypes/inspect_scanr_12bit_skimage_napari.py"]]]
   - ["datatypes/datatypes_act1.md", [["skimage napari", "datatypes/datatypes_act1_skimage_napari.py"], ["ImageJ GUI", "datatypes/datatypes_act1_imagej_gui.md"]]]
   - ["datatypes/metadata_and_datatype.md", [["ImageJ GUI", "datatypes/metadata_and_datatype_imagej_gui.md"]]] 
 

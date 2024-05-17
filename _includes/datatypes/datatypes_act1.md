@@ -1,4 +1,4 @@
-<h4 id="explore"><a href="#explore">Explore image data types and value ranges</a></h4> 
+<h4 id="explore"><a href="#explore">Explore various image data types</a></h4> 
 Open the following images and discuss their data type and whether there are any signs of intensity clipping.
 - [xy_8bit__nuclei_noisy_different_intensity.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_different_intensity.tif)
   - Appreciate that this image has no major issues.

@@ -1,5 +1,5 @@
 # %% 
-# Detect saturated pixels in an uint8 image
+# Open and inspect a binary image 
 
 # %%
 # Import libraries and instantiate napari
@@ -12,25 +12,23 @@ viewer = napari.Viewer()
 
 # %%
 # Open image and view it
-image, *_ = open_ij_tiff('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_intensity_clipping_issue_a.tif')
+image, *_ = open_ij_tiff('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__h2b.tif')
 viewer.add_image(image)
 
-# TODO: https://forum.image.sc/t/add-hilo-colormap-to-napari/95601
-
 # %% 
-# Check the image's datatype, possible value range, and used value range
-print(image.dtype)
-print(np.iinfo(image.dtype)) # Useful as it also prints the value range
+# Check the image's datatype and values
+# - From the datatype alone we cannot tell that this is a binary image (aka a mask)
+# - But the fact that it only has two values suggests that it in fact is a binary image
+print(np.iinfo(image.dtype)) 
 print("Min:", image.min())
 print("Max:", image.max()) 
+print(np.unique(image))
 
 # %%
-# Check for clipping, i.e. pixels values at the limits of the value range
-# This is important for many reasons: 
-# - Pixel values at the limit of the value range typically cannot be used for intensity quantification 
-# - Spot detection algorithms may not work well in regions with saturated values 
-# - Automated thresholding algorithsm may not work well if the background is just plain zeros (it is better to have some noise there)
-print("Number of 0 pixels:", np.sum(image==0)) # How many pixels are plain zeros?
-print("Number of 255 pixels:", np.sum(image==255)) # How many pixels are saturated?
-plt.hist(image.flatten(), bins=np.arange(image.min(), image.max() + 1));
-
+# Convert to a boolean binary image
+# - For working with this mask in python it will be probably more convenient to convert it to a boolean type image
+# - The issue is that boolean type images cannot be saved as such on disk, because e.g. TIFF does not support this datatype
+binary_image = ( image == 255 ) 
+print(image.shape, binary_image.shape) # ensure we did not mess up the shape
+print(np.iinfo(binary_image.dtype))
+print(np.unique(binary_image))
