@@ -1,4 +1,4 @@
-<h4 id="datatype_metadata"><a href="#datatype_metadata">Explore image data types</a></h4> 
+<h4 id="datatype_metadata"><a href="#datatype_metadata">Explore more image data types and their metadata</a></h4> 
 
 Observe that for some software the datatype of the loaded image **does not match** the datatype given in the metadata.
 
