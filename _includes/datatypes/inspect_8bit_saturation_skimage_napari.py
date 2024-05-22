@@ -32,22 +32,3 @@ print("Max:", image.max()) # Are there any clipped pixels?
 print("Number of 0 pixels:", np.sum(image==0)) # How many clipped pixels are there?
 print("Number of 255 pixels:", np.sum(image==255))
 plt.hist(image.flatten(), bins=np.arange(image.min(), image.max() + 1));
-
-
-#image, *_ = open_ij_tiff('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__h2b.tif')
-#image, *_ = open_ij_tiff('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit__autophagosomes.tif')
-image, *_ = open_ij_tiff('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit__scanR_datatype_issue.tif')
-
-# View the image
-viewer.add_image(image)
-
-# %%
-# Check the image's datatype and its value limits
-print(np.iinfo(image.dtype))
-
-# Check the image's minimum and maximum intensity
-print(np.min(image),np.max(image))
-
-# %%
-
-# %%
