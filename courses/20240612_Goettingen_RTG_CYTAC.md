@@ -30,8 +30,7 @@ Antonio Politi, MPI-NAT, Goettingen (apoliti@mpinat.mpg.de)
 
 ## Prerequisites
 * You should know all the topics mentioned in the **Learn the Basics** section of the [Learn Python](https://www.learnpython.org/en/Welcome) website (you may skip "Classes and Objects" and "Modules and Packages").
-* Please practice running code in a Jupyter Notebook. You can follow this [guide](https://jupyter.org/try-jupyter/retro/notebooks/?path=notebooks/Intro.ipynb).
-
+* Please practice running code in a Jupyter Notebook following this Jupyter Lab [guide](https://jupyter.org/try-jupyter/lab/). For plain Jupyter Notebook (old interface) follow this [guide](https://jupyter.org/try-jupyter/notebooks/?path=notebooks/Intro.ipynb) 
 ## IT Setup
 For the course you will need to bring your laptop (you will need WiFi and eduroam). 
 
