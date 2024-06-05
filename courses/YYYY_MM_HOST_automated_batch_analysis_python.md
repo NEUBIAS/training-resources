@@ -48,16 +48,20 @@ Dear Trainers, please consider checking these [teaching tips](https://github.com
 ### Essential python scripting skills for conducting automated batch analysis (day 1)
 
 1. [Loops](https://neubias.github.io/training-resources/script_for_loop/index.html)
+    - TODO: Tischi check this
     - Trainer
 1. [String and path manipulations](https://neubias.github.io/training-resources/string_concat/index.html)
+    - TODO: Dominik
     - Trainer 
 1. [Functions](https://neubias.github.io/training-resources/script_functions/index.html)
-    - TODO: strictly speaking this is not needed, one could just type everything into the for-loop directly???
+    - TODO: Arif check this module
     - Trainer
 
 ### Conducting batch analysis using python scripting 
 
 1. [Batch analysis](https://neubias.github.io/training-resources/batch_processing/index.html)
+    - Arif: Check this
+    - Low priority ( Arif: Add an activity where the starting point is a batch analysis python script that has the input_dir_path as an interal variable and make is CLI executable. )
     - TODO: Is there an added benefit of also teaching how to make the script command line executable and give the input and output directory as CLI parameters? Disadvantage would be that we could not do this with Jupyter notebooks!
     - Trainer
 
