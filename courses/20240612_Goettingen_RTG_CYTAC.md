@@ -34,7 +34,7 @@ For the course you will need to bring your laptop (you will need WiFi and eduroa
 
 Please, before the course use the `conda` platform to install skimage and napari on your laptop, following [these instructions](https://neubias.github.io/training-resources/tool_installation/index.html#skimage_napari). 
 
-Do also install a recent version of FiJi following [these instructions]([https://neubias.github.io/training-resources/tool_installation/index.html#skimage_napari]).
+Do also install a recent version of FiJi following [these instructions](https://neubias.github.io/training-resources/tool_installation/index.html#skimage_napari).
 
 Do login with your university/mpinat/... account on https://chat.gwdg.de. We will use RocketChat to exchange links and course material. 
 
