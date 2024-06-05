@@ -11,8 +11,8 @@ Facility for light microscopy, Tower 2, SOG, Room 006-a (see also https://www.mp
 
 Ring the bell at "Mikr. lebender Zellen Lenart".
 
-# Teachers
-Antonio Politi, MPI-NAT, Goettingen
+## Teachers
+Antonio Politi, MPI-NAT, Goettingen (apoliti@mpinat.mpg.de)
 
 ## Course time schedule
 * 12.06.2024
