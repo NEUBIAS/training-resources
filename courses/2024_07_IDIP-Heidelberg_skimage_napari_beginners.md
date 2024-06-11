@@ -33,11 +33,12 @@ As there are 6 modules per day that makes ~45 minutes per module.
 ## Trainers and organisers
 
 - Severina Klaus (Uni Heidelberg)
-- 
+- Charlotte Kaplan (Uni Heidelberg)
+- Felix Schneider (EMBL)
 - Christian Tischer (EMBL)
 - Arif Khan (EMBL)
 - Julian Hennies (EMBL)
-
+- Bugra Oezdemir (EMBL)
 
 ## Teaching tips
 
