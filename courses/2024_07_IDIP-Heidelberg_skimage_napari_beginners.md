@@ -13,22 +13,26 @@ In this course, you will be introduced to essential concepts of image analysis. 
 
 ### IT Setup
 
-Please, before the course use the `conda` platform to install skimage and napari on your laptop, following [these instructions](https://neubias.github.io/training-resources/tool_installation/index.html#skimage_napari). 
+You will be guided on how to set up your python platform and how to install the necessary modules on day 0 of the course.  
+
+If you are already proficient with python and do not need to revisit the basics, please make sure to use the `conda` platform to install skimage and napari on your laptop before the course, following [these instructions](https://neubias.github.io/training-resources/tool_installation/index.html#skimage_napari). 
 
 ## Schedule
 
 The whole course will be guided hands-on sessions.
 
-- Day, Month, Year, Times
-- 10:00 - 17:00 
+- Monday 01.07.2024 10:00 - 17:00
+- Tuesday 02.07.2024 10:00 - 17:00
+- Monday 08.07.2024 10:00 - 17:00
+- Tuesday 09.07.2024 10:00 - 17:00 
 
 This includes a lunch break (1 hr) and two coffee breaks (20 minutes), resulting in approximately 5 hr of teaching time.
 As there are 6 modules per day that makes ~45 minutes per module.
 
 ## Venue
 
-- Country, City, Street, Institute, Room
-- Zoom link
+- Big seminar room in the ground floor of the Center for Integrative Infectious Disease Research, Uni Heidelberg, INF 344, Heidelberg, Germany
+- This workshop will be in person only
 
 ## Trainers and organisers
 
@@ -48,6 +52,10 @@ Dear Trainers, please consider checking these [teaching tips](https://github.com
 
 ### Python basics (day 0)
 
+1. Introduction to python and basic environment management
+   - What is python, how to install python, how to use the command line, how to use Jupyter notebook
+
+2. Basics of python programming
 TODO: Charlotte adds some content here
 
 Conda environments
@@ -93,9 +101,9 @@ Python basics
 ### Image analysis basics (day 3)
 
 1. [Object intensity measurements](https://neubias.github.io/training-resources/measure_intensities/index.html)
-    - Trainer
+    - Severina
 1. [Image neighborhood filtering](https://neubias.github.io/training-resources/filter_neighbourhood/index.html)
-    - Trainer
+    - Severina
 1. [Median filter](https://neubias.github.io/training-resources/median_filter/index.html)
     - Trainer
 1. [Local background subtraction](https://neubias.github.io/training-resources/local_background_correction/index.html)
