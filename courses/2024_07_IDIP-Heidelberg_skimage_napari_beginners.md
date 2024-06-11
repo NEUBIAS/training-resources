@@ -20,6 +20,7 @@ Please, before the course use the `conda` platform to install skimage and napari
 The whole course will be guided hands-on sessions.
 
 - Day, Month, Year, Times
+- 10:00 - 17:00 
 
 This includes a lunch break (1 hr) and two coffee breaks (20 minutes), resulting in approximately 5 hr of teaching time.
 As there are 6 modules per day that makes ~45 minutes per module.
@@ -32,16 +33,27 @@ As there are 6 modules per day that makes ~45 minutes per module.
 ## Trainers and organisers
 
 - Severina Klaus (Uni Heidelberg)
+- 
 - Christian Tischer (EMBL)
 - Arif Khan (EMBL)
 - Julian Hennies (EMBL)
-- Dominik Kutra (EMBL)
+
 
 ## Teaching tips
 
 Dear Trainers, please consider checking these [teaching tips](https://github.com/NEUBIAS/training-resources/blob/master/TEACHING_TIPS.md).
 
 ## Teaching content
+
+### Python basics (day 0)
+
+TODO: Charlotte adds some content here
+
+Conda environments
+Jupyter notebooks
+Python basics
+
+
 
 ### Image inspection basics (day 1)
 
