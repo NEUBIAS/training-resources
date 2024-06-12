@@ -43,3 +43,9 @@ Do login with your university/mpinat/... account on https://chat.gwdg.de. We wil
 ## Modules
 The teaching will use the online material https://neubias.github.io/training-resources/all-modules/. Which modules we will address will be listed soon. 
 
+1. [Digital image basics](https://neubias.github.io/training-resources/pixels/index.html)
+1. [Lookup tables](https://neubias.github.io/training-resources/lut/index.html)
+1. [Spatial image calibration](https://neubias.github.io/training-resources/spatial_calibration/index.html) 
+1. [N-dimensional images](https://neubias.github.io/training-resources/multidimensional_image_basics/index.html)
+1. [Image data types](https://neubias.github.io/training-resources/datatypes/index.html) 
+1. [Image projections](https://neubias.github.io/training-resources/projections/index.html)
