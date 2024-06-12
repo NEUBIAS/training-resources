@@ -43,9 +43,21 @@ Do login with your university/mpinat/... account on https://chat.gwdg.de. We wil
 ## Modules
 The teaching will use the online material https://neubias.github.io/training-resources/all-modules/. Which modules we will address will be listed soon. 
 
+# 12.06.2024 Morning session
+
 1. [Digital image basics](https://neubias.github.io/training-resources/pixels/index.html)
 1. [Lookup tables](https://neubias.github.io/training-resources/lut/index.html)
 1. [Spatial image calibration](https://neubias.github.io/training-resources/spatial_calibration/index.html) 
-1. [N-dimensional images](https://neubias.github.io/training-resources/multidimensional_image_basics/index.html)
-1. [Image data types](https://neubias.github.io/training-resources/datatypes/index.html) 
+1. [N-dimensional images](https://neubias.github.io/training-resources/multidimensional_image_basics/index.html) (self study)
+
+# 12.06.204 afternoon session
+1. [Image data types](https://neubias.github.io/training-resources/datatypes/index.html)
 1. [Image projections](https://neubias.github.io/training-resources/projections/index.html)
+
+1. [Segmentation](https://neubias.github.io/training-resources/segmentation/index.html)
+1. [Manual thresholding](https://neubias.github.io/training-resources/binarization/index.html)r
+1. [Automated thresholding](https://neubias.github.io/training-resources/auto_threshold/index.html) 
+1. [Connected component labeling](https://neubias.github.io/training-resources/connected_components/index.html)
+1. [Object shape measurements](https://neubias.github.io/training-resources/measure_shapes/index.html)
+1. [Workflow: Basic 2D object analysis](https://neubias.github.io/training-resources/workflow_segment_2d_nuclei_measure_shape/index.html)
+    - Arif Khan
