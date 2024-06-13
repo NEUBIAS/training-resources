@@ -60,4 +60,12 @@ The teaching will use the online material https://neubias.github.io/training-res
 
 # 13.06.2024 morning session
 1. [Object shape measurements](https://neubias.github.io/training-resources/measure_shapes/index.html)
-1. [Workflow: Basic 2D object analysis](https://neubias.github.io/training-resources/workflow_segment_2d_nuclei_measure_shape/index.html)
+1. [Workflow: Basic 2D object analysis](https://neubias.github.io/training-resources/workflow_segment_2d_nuclei_measure_shape/index.html) (self study)
+1. [Object intensity measurement](https://neubias.github.io/training-resources/measure_intensities/index.html)
+
+# 13.06.2024 afternoon session
+1. [Image neighborhood filtering](https://neubias.github.io/training-resources/filter_neighbourhood/index.html)
+1. [Median filter](https://neubias.github.io/training-resources/median_filter/index.html)
+1. [Local background subtraction](https://neubias.github.io/training-resources/local_background_correction/index.html)
+1. [Morphological filters](https://neubias.github.io/training-resources/filter_morphological/index.html)
+1. [Workflow: 2D noisy object segmentation and filtering](https://neubias.github.io/training-resources/workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape/index.html)
