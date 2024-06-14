@@ -1,0 +1,17 @@
+- Navigate to [Galaxy](https://usergalaxy.eu)
+- Upload an image
+    - In the Tools panel on the left side, click `Upload Data`.
+    - Click the `Paste/Fetch data` button.
+    - Paste the URLs of the images : [xy_8bit__two_cells.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__two_cells.tif) 
+    - Click the `Start` button and wait for the upload to complete.
+    - Once the upload is finished, click the `Close` button. The image will now be available in your Galaxy history.
+- Apply a threshhold
+  - In the Tools panel on the left side, search `Threshold image`.
+  - Choose the tool named `Threshold image with scikit-image`, and click on it.
+  - Select the image `xy_8bit__two_cells.tif` from the `Select image` dropdown list.
+  - Select `Manual` from the `Thresholding method` dropdown list.
+  - Set `Threshold value` to `49`.
+  - Toggle `Invert output labels` to `Yes`
+  - Click the `Run Tool` button and wait for the job to finish (The job will turn green).
+  - Click on the job in your Galaxy history to download the resulting image.
+ 

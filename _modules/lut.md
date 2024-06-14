@@ -26,10 +26,10 @@ figure_legend:
 multiactivities:
   - ["lut/lut_act1.md", [["ImageJ GUI", "lut/lut_act1_imagejgui.md", "markdown"], 
 	["ImageJ Macro", "lut/lut_act1_imagejmacro.ijm", "java"], 
-	["skimage napari", "lut/lut_act1_skimage_napari.py", "python"]]]
+	["skimage napari", "lut/lut_act1_skimage_napari.py", "python"],["Galaxy Napari","lut/lut_act1_galaxy.md"]]]
   - ["lut/lut_act2.md", [["ImageJ GUI", "lut/lut_act2_imagejgui.md"], 
   ["ImageJ Macro", "lut/lut_act2_imagejmacro.ijm", "java"], 
-	["skimage napari", "lut/lut_act2_skimage_napari.py", "python"]]]
+	["skimage napari", "lut/lut_act2_skimage_napari.py", "python"],["Galaxy Napari","lut/lut_act2_galaxy.md"]]]
 
 keypoints:
   - A LUT has configurable contrast limits that determine the pixel value range that is rendered linearly.

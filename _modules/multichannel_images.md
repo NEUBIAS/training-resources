@@ -36,6 +36,7 @@ activities:
     - ["ImageJ GUI - Inspect/view channels", "multichannel_images/activity1_imagejgui.md", "markdown"]
     #- ["binarization/binarization_act1.md", [["ImageJ GUI", "binarization/binarization_act1_imagejgui.md"], ["ImageJ Macro", "binarization/binarization_act1_imagejmacro.ijm"], ["ImageJ Jython", "binarization/binarization_act1_jython.py"], ["skimage napari", "binarization/binarization_act1_skimage_napari.py", "python"]]]
     - ["ImageJ GUI - Save channels as Tiff/RGB image", "multichannel_images/activity2_imagejgui.md", "markdown"]
+    - ["Galaxy Napari - Inspect/view channels", "multichannel_images/activity1_galaxy.md", "markdown"]
 
 assessment: >
 
