@@ -30,5 +30,6 @@ print(np.unique(image))
 # - The issue is that boolean type images cannot be saved as such on disk, because e.g. TIFF does not support this datatype
 binary_image = ( image == 255 ) 
 print(image.shape, binary_image.shape) # ensure we did not mess up the shape
-print(np.iinfo(binary_image.dtype))
+# np.iinfo is not implemented for bool
+print(binary_image.dtype)
 print(np.unique(binary_image))
