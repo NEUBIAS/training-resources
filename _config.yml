@@ -52,6 +52,7 @@ module_order:
 - workflow_nuclei_and_cells_segmentation
 - skeletonization
 - similarity_transforms
+- tiff
 - ome_zarr
 - script_run
 - coding_with_llms
