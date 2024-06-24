@@ -71,9 +71,9 @@ Python basics
     - Participants introduce themselves, where they work, why they joined the course, and what previous experience they have
         - Depending on the number of participants, one could distribute the introductions across the course, e.g. do some in the morning and some in the afternoon
 1. [Digital image basics](https://neubias.github.io/training-resources/pixels/index.html)
-    - Trainer 
+    - Felix Schneider 
 1. [Lookup tables](https://neubias.github.io/training-resources/lut/index.html)
-    - Trainer
+    - Felix Schneider
 1. [Spatial image calibration](https://neubias.github.io/training-resources/spatial_calibration/index.html) 
     - Trainer
 1. [N-dimensional images](https://neubias.github.io/training-resources/multidimensional_image_basics/index.html)
