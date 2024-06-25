@@ -1,4 +1,4 @@
-ll# Beginners course for python based image analysis using skimage and napari
+# Beginners course for python based image analysis using skimage and napari
 
 ## Why take this course
 
