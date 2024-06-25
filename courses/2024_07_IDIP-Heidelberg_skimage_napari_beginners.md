@@ -8,8 +8,8 @@ In this course, you will be introduced to essential concepts of image analysis. 
 
 ## Prerequisites
 
-* You should know all the topics mentioned in the **Learn the Basics** section of the [Learn Python](https://www.learnpython.org/en/Welcome) website (you may skip "Classes and Objects" and "Modules and Packages").
-* Please practice running code in a Jupyter Notebook. You can follow this [guide](https://jupyter.org/try-jupyter/retro/notebooks/?path=notebooks/Intro.ipynb).
+* Ideally, you should know all the topics mentioned in the **Learn the Basics** section of the [Learn Python](https://www.learnpython.org/en/Welcome) website (you may skip "Classes and Objects" and "Modules and Packages").
+* If you have time, please practice running code in a Jupyter Notebook. You can follow this [guide](https://jupyter.org/try-jupyter/retro/notebooks/?path=notebooks/Intro.ipynb).
 
 ### IT Setup
 
@@ -42,7 +42,6 @@ As there are 6 modules per day that makes ~45 minutes per module.
 - Christian Tischer (EMBL)
 - Arif Khan (EMBL)
 - Julian Hennies (EMBL)
-- Bugra Oezdemir (EMBL)
 
 ## Teaching tips
 
@@ -52,15 +51,16 @@ Dear Trainers, please consider checking these [teaching tips](https://github.com
 
 ### Python basics (day 0)
 
+The first day is an onboarding day tp bring everyone to the same level on basic python programming. If you are already proficient with python, you may skip this day. In this case, please make sure to use the `conda` platform to install skimage and napari on your laptop before the course, following [these instructions](https://neubias.github.io/training-resources/tool_installation/index.html#skimage_napari). 
+
 1. Introduction to python and basic environment management
+   [Tool installations](https://neubias.github.io/training-resources/tool_installation/index.html#skimage_napari).
    - What is python, how to install python, how to use the command line, how to use Jupyter notebook
+   - Severina Klaus
 
-2. Basics of python programming
+3. Basics of python programming
+
 TODO: Charlotte adds some content here
-
-Conda environments
-Jupyter notebooks
-Python basics
 
 
 
