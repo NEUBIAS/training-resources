@@ -59,7 +59,14 @@ The first day is an onboarding day to bring everyone to the same level on basic 
 
 3. Basics of python programming
 
-TODO: Charlotte adds some content here
+   - Charlotte Kaplan 
+     -   Jupyter notebook/ lab 
+     - Data types: integer, float, lists
+     - Basic operations
+     - Variables
+     - Built-in functions
+     - Modules
+      - For-loop
 
 
 
