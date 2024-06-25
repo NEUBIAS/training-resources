@@ -51,11 +51,10 @@ Dear Trainers, please consider checking these [teaching tips](https://github.com
 
 ### Python basics (day 0)
 
-The first day is an onboarding day tp bring everyone to the same level on basic python programming. If you are already proficient with python, you may skip this day. In this case, please make sure to use the `conda` platform to install skimage and napari on your laptop before the course, following [these instructions](https://neubias.github.io/training-resources/tool_installation/index.html#skimage_napari). 
+The first day is an onboarding day to bring everyone to the same level on basic python programming. If you are already proficient with python, you may skip this day. In this case, please make sure to use the `conda` platform to install skimage and napari on your laptop before the course, following [these instructions](https://neubias.github.io/training-resources/tool_installation/index.html#skimage_napari). 
 
 1. Introduction to python and basic environment management
-   [Tool installations](https://neubias.github.io/training-resources/tool_installation/index.html#skimage_napari).
-   - What is python, how to install python, how to use the command line, how to use Jupyter notebook
+2. [Tool installations](https://neubias.github.io/training-resources/tool_installation/index.html#skimage_napari).
    - Severina Klaus
 
 3. Basics of python programming
