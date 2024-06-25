@@ -43,10 +43,6 @@ As there are 6 modules per day that makes ~45 minutes per module.
 - Arif Khan (EMBL)
 - Julian Hennies (EMBL)
 
-## Teaching tips
-
-Dear Trainers, please consider checking these [teaching tips](https://github.com/NEUBIAS/training-resources/blob/master/TEACHING_TIPS.md).
-
 ## Teaching content
 
 ### Python basics (day 0)
@@ -117,7 +113,4 @@ The first day is an onboarding day to bring everyone to the same level on basic 
     - Trainer
 
 
-## What to learn/teach next?
-
-- It could make sense to follow this course up (or extend it) with some modules about batch analysis
 
