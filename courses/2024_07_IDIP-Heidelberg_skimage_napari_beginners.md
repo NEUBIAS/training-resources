@@ -58,14 +58,14 @@ The first day is an onboarding day to bring everyone to the same level on basic 
    - Severina Klaus
 
 3. Basics of python programming
-- Charlotte Kaplan
-    - Jupyter notebook/ lab
-    - Data types: integer, float, lists
-    - Basic operations
-    - Variables
-    - Built-in functions
-    - Modules
-    - For-loop
+   - Charlotte Kaplan
+       - Jupyter notebook/ lab
+       - Data types: integer, float, lists
+       - Basic operations
+       - Variables
+       - Built-in functions
+       - Modules
+       - For-loop
 
 ### Image inspection basics (day 1)
 
