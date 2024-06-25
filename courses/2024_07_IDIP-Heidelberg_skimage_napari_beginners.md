@@ -100,9 +100,9 @@ The first day is an onboarding day to bring everyone to the same level on basic 
 ### Image analysis basics (day 3)
 
 1. [Object intensity measurements](https://neubias.github.io/training-resources/measure_intensities/index.html)
-    - Severina
+    - Severina Klaus
 1. [Image neighborhood filtering](https://neubias.github.io/training-resources/filter_neighbourhood/index.html)
-    - Severina
+    - Severina Klaus
 1. [Median filter](https://neubias.github.io/training-resources/median_filter/index.html)
     - Trainer
 1. [Local background subtraction](https://neubias.github.io/training-resources/local_background_correction/index.html)
