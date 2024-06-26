@@ -76,7 +76,7 @@ The first day is an onboarding day to bring everyone to the same level on basic 
 1. [Spatial image calibration](https://neubias.github.io/training-resources/spatial_calibration/index.html) 
     - Trainer
 1. [N-dimensional images](https://neubias.github.io/training-resources/multidimensional_image_basics/index.html)
-    - Trainer
+    - Arif
 1. [Image data types](https://neubias.github.io/training-resources/datatypes/index.html) 
     - Julian Hennies
 1. [Image projections](https://neubias.github.io/training-resources/projections/index.html)
@@ -85,9 +85,9 @@ The first day is an onboarding day to bring everyone to the same level on basic 
 ### Image analysis basics (day 2)
 
 1. [Segmentation](https://neubias.github.io/training-resources/segmentation/index.html)
-    - Trainer
+    - Arif
 1. [Manual thresholding](https://neubias.github.io/training-resources/binarization/index.html)
-    - Trainer
+    - Arif
 1. [Automated thresholding](https://neubias.github.io/training-resources/auto_threshold/index.html) 
     - Julian Hennies
 1. [Connected component labeling](https://neubias.github.io/training-resources/connected_components/index.html)
@@ -108,7 +108,7 @@ The first day is an onboarding day to bring everyone to the same level on basic 
 1. [Local background subtraction](https://neubias.github.io/training-resources/local_background_correction/index.html)
     - Trainer 
 1. [Morphological filters](https://neubias.github.io/training-resources/filter_morphological/index.html)
-    - Trainer
+    - Arif
 1. [Workflow: 2D noisy object segmentation and filtering](https://neubias.github.io/training-resources/workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape/index.html)
     - Trainer
 
