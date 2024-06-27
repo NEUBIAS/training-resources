@@ -74,13 +74,13 @@ The first day is an onboarding day to bring everyone to the same level on basic 
 1. [Lookup tables](https://neubias.github.io/training-resources/lut/index.html)
     - Felix Schneider
 1. [Spatial image calibration](https://neubias.github.io/training-resources/spatial_calibration/index.html) 
-    - Trainer
+    - Christian Tischer?
 1. [N-dimensional images](https://neubias.github.io/training-resources/multidimensional_image_basics/index.html)
     - Arif
 1. [Image data types](https://neubias.github.io/training-resources/datatypes/index.html) 
-    - Julian Hennies
+    - Christian Tischer?
 1. [Image projections](https://neubias.github.io/training-resources/projections/index.html)
-    - Julian Hennies
+    - Christian Tischer?
 
 ### Image analysis basics (day 2)
 
@@ -104,13 +104,13 @@ The first day is an onboarding day to bring everyone to the same level on basic 
 1. [Image neighborhood filtering](https://neubias.github.io/training-resources/filter_neighbourhood/index.html)
     - Severina Klaus
 1. [Median filter](https://neubias.github.io/training-resources/median_filter/index.html)
-    - Trainer
+    - Julian Hennies
 1. [Local background subtraction](https://neubias.github.io/training-resources/local_background_correction/index.html)
-    - Trainer 
+    - Julian Hennies 
 1. [Morphological filters](https://neubias.github.io/training-resources/filter_morphological/index.html)
     - Arif
 1. [Workflow: 2D noisy object segmentation and filtering](https://neubias.github.io/training-resources/workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape/index.html)
-    - Trainer
+    - Julian Hennies
 
 
 
