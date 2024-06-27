@@ -49,11 +49,11 @@ As there are 6 modules per day that makes ~45 minutes per module.
 
 The first day is an onboarding day to bring everyone to the same level on basic python programming. If you are already proficient with python, you may skip this day. In this case, please make sure to use the `conda` platform to install skimage and napari on your laptop before the course, following [these instructions](https://neubias.github.io/training-resources/tool_installation/index.html#skimage_napari). 
 
+1. Participants introduce themselves, where they work, why they joined the course, and what previous experience they have
 1. Introduction to python and basic environment management
-2. [Tool installations](https://neubias.github.io/training-resources/tool_installation/index.html#skimage_napari).
+1. [Tool installations](https://neubias.github.io/training-resources/tool_installation/index.html#skimage_napari).
    - Severina Klaus
-
-3. Basics of python programming
+1. Basics of python programming
    - Charlotte Kaplan
        - Jupyter notebook/ lab
        - Data types: integer, float, lists
@@ -67,35 +67,33 @@ The first day is an onboarding day to bring everyone to the same level on basic 
 
 1. Introduction
     - Trainers introduce themselves, where they work and how they are competent
-    - Participants introduce themselves, where they work, why they joined the course, and what previous experience they have
-        - Depending on the number of participants, one could distribute the introductions across the course, e.g. do some in the morning and some in the afternoon
-1. [Digital image basics](https://neubias.github.io/training-resources/pixels/index.html)
+. [Digital image basics](https://neubias.github.io/training-resources/pixels/index.html)
     - Felix Schneider 
 1. [Lookup tables](https://neubias.github.io/training-resources/lut/index.html)
     - Felix Schneider
 1. [Spatial image calibration](https://neubias.github.io/training-resources/spatial_calibration/index.html) 
-    - Christian Tischer?
+    - Christian Tischer
 1. [N-dimensional images](https://neubias.github.io/training-resources/multidimensional_image_basics/index.html)
-    - Arif
+    - Arif Khan
 1. [Image data types](https://neubias.github.io/training-resources/datatypes/index.html) 
-    - Christian Tischer?
+    - Christian Tischer
 1. [Image projections](https://neubias.github.io/training-resources/projections/index.html)
-    - Christian Tischer?
+    - Christian Tischer
 
 ### Image analysis basics (day 2)
 
 1. [Segmentation](https://neubias.github.io/training-resources/segmentation/index.html)
-    - Arif
+    - Arif Khan
 1. [Manual thresholding](https://neubias.github.io/training-resources/binarization/index.html)
-    - Arif
+    - Arif Khan
 1. [Automated thresholding](https://neubias.github.io/training-resources/auto_threshold/index.html) 
     - Julian Hennies
 1. [Connected component labeling](https://neubias.github.io/training-resources/connected_components/index.html)
     - Julian Hennies
 1. [Object shape measurements](https://neubias.github.io/training-resources/measure_shapes/index.html)
-    - Trainer
+    - Christian Tischer
 1. [Workflow: Basic 2D object analysis](https://neubias.github.io/training-resources/workflow_segment_2d_nuclei_measure_shape/index.html)
-    - Trainer
+    - Christian Tischer
 
 ### Image analysis basics (day 3)
 
@@ -108,7 +106,7 @@ The first day is an onboarding day to bring everyone to the same level on basic 
 1. [Local background subtraction](https://neubias.github.io/training-resources/local_background_correction/index.html)
     - Julian Hennies 
 1. [Morphological filters](https://neubias.github.io/training-resources/filter_morphological/index.html)
-    - Arif
+    - Arif Khan
 1. [Workflow: 2D noisy object segmentation and filtering](https://neubias.github.io/training-resources/workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape/index.html)
     - Julian Hennies
 
