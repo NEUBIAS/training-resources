@@ -1,4 +1,4 @@
-- Go to the openAI chatGPT website: [https://chat.openai.com/](https://chat.openai.com/])
+- Go to the openAI chatGPT website: [https://chat.openai.com/](https://chat.openai.com/)
   - You may have to log in, e.g. using your Google account, but it should be for free
   - You may also have to solve some annoying puzzles to prove that you are human
 - Get started:
