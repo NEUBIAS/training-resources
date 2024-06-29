@@ -67,7 +67,7 @@ The first day is an onboarding day to bring everyone to the same level on basic 
 
 1. Introduction
     - Trainers introduce themselves, where they work and how they are competent
-. [Digital image basics](https://neubias.github.io/training-resources/pixels/index.html)
+1. [Digital image basics](https://neubias.github.io/training-resources/pixels/index.html)
     - Felix Schneider 
 1. [Lookup tables](https://neubias.github.io/training-resources/lut/index.html)
     - Felix Schneider
