@@ -1,4 +1,4 @@
-# %% [markdown]
+# %%
 # ## Spatial image calibration
 # #### Requirements
 # - [skimage and napari](https://neubias.github.io/training-resources/tool_installation/index.html#skimage_napari)

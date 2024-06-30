@@ -1,5 +1,5 @@
 # %% 
-# Check for saturation in an 8-bit image 
+# Check for saturation in a 12 bit image
 
 # %%
 # Import libraries and instantiate napari
@@ -12,10 +12,8 @@ viewer = napari.Viewer()
 
 # %%
 # Open an image and view it
-image, *_ = open_ij_tiff('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_intensity_clipping_issue_a.tif')
+image, *_ = open_ij_tiff('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_12bit__saturated_plant.tif')
 viewer.add_image(image)
-
-# TODO: This would be nice https://forum.image.sc/t/add-hilo-colormap-to-napari/95601
 
 # %% 
 # Check the image's datatype
