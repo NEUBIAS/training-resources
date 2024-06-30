@@ -73,14 +73,16 @@ The first day is an onboarding day to bring everyone to the same level on basic 
     - Felix Schneider
 1. [Spatial image calibration](https://neubias.github.io/training-resources/spatial_calibration/index.html) 
     - Christian Tischer
-    - [8 bit saturation]()
-    - [12 bit saturation]()
+    - [3-D spatial calibration]()
 1. [N-dimensional images](https://neubias.github.io/training-resources/multidimensional_image_basics/index.html)
     - Arif Khan
 1. [Image data types](https://neubias.github.io/training-resources/datatypes/index.html) 
     - Christian Tischer
+    - [Saturation in an 8 bit image]()
+    - [Saturation in a 12 bit image]()
 1. [Image projections](https://neubias.github.io/training-resources/projections/index.html)
     - Christian Tischer
+    - [Max and sum projections of an anisotropic image]()
 
 ### Image analysis basics (day 2)
 

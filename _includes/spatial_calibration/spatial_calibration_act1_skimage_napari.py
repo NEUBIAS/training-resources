@@ -11,28 +11,21 @@ import numpy as np
 from napari.viewer import Viewer
 
 # %%
-# Open an image and its axes metadata
+# Open an image of metaphase chromosomes and inspect the metadata
+# - Observe that the xy and z voxel sizes are different (= anisotropic)
 image, axes, voxel_size, units = open_ij_tiff(
     "https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit__mitotic_plate_calibrated.tif"
 )
-
-# %%
-# Inspect the image axes metadata.
 print("Shape: ", image.shape)
 print("Axes: ", axes)
 print("Scale: ", voxel_size)
 print("Units: ", units)
 
 # %%
-# Open napari and add the image with its voxel size as a "scale".
-#
-# Notes:
-# - In principle it would be very instructive to observe how this compares
-#   to the rendering of the image without the "scale" parameter; however in our
-#   experience the navigation in napari, due to the different spatial extends 
-#   of the images, becomes quite confusing...
-napari_viewer = Viewer()
-napari_viewer.add_image(image, scale=voxel_size)
+# View the image in napari
+# - Observe that the 3D rendering does not reflect the real shape
+#   of the metaphase chromosomes in this image
+Viewer().add_image(image)
 
 # %%
 # Napari GUI: 
@@ -41,6 +34,15 @@ napari_viewer.add_image(image, scale=voxel_size)
 #   layers have been added to deal with the voxel_size anisotropy of this image
 # - Look at the image in 3-D using the corresponding button; 
 #   observe that the overall shape looks correct, thanks to the anisotropic scalings
+# - Important: close this viewer before proceeding, not to confuse yourself
+
+# %%
+# Open a new napari and and now add the image with its voxel size as a "scale".
+# - Note that we are using a new viewer because navigating 
+#   both the scaled and unscaled image in the same viewer is tricky
+viewer = Viewer()
+viewer.add_image(image, scale=voxel_size)
+
 
 # %%
 # Compute distances between points
@@ -55,12 +57,12 @@ napari_viewer.add_image(image, scale=voxel_size)
 # Extract point coordinates
 # observe that they are in unscaled voxel coordinates
 # and thus not suited for measuring distances
-points = napari_viewer.layers['Points'].data
+points = viewer.layers['Points'].data
 print(points)
 
 # %%
 # Scale the positions
-scale = napari_viewer.layers['Points'].scale
+scale = viewer.layers['Points'].scale
 print("Points scale: ", scale)
 print("Voxel size: ", voxel_size)
 
