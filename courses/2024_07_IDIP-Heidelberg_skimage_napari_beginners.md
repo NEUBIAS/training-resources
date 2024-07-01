@@ -53,7 +53,7 @@ The first day is an onboarding day to bring everyone to the same level on basic 
 1. Introduction to python and basic environment management
 1. [Tool installations](https://neubias.github.io/training-resources/tool_installation/index.html#skimage_napari).
    - Severina Klaus
-1. Basics of python programming
+1. [Basics of python programming](https://heibox.uni-heidelberg.de/d/da0a61ef203347c7aff2/)
    - Charlotte Kaplan
        - Jupyter notebook/ lab
        - Data types: integer, float, lists
