@@ -2,10 +2,10 @@
 # Spatial image calibration
 # 
 # Requirements:
-# - [skimage and napari](https://neubias.github.io/training-resources/tool_installation/index.html#skimage_napari)
+# - https://neubias.github.io/training-resources/tool_installation/index.html#skimage_napari
 
 # %%
-# Import python packages.
+# Import python packages
 from OpenIJTIFF import open_ij_tiff
 import numpy as np
 from napari.viewer import Viewer
@@ -23,30 +23,25 @@ print("Units: ", units)
 
 # %%
 # View the image in napari
-# - Observe that the 3D rendering does not reflect the real shape
-#   of the metaphase chromosomes in this image
 Viewer().add_image(image)
 
 # %%
 # Napari GUI: 
-# - In order to inspect the image from "the side", change the axes order 
-#   using the corresponding button; observe that additional data 
-#   layers have been added to deal with the voxel_size anisotropy of this image
-# - Look at the image in 3-D using the corresponding button; 
-#   observe that the overall shape looks correct, thanks to the anisotropic scalings
+# - Change the axes order to look at the image from the side using the corresponding button
+# - Look at the image in 3-D using the corresponding button
+# - Conclude that the physical shape does not look correct
 # - Important: close this viewer before proceeding, not to confuse yourself
 
 # %%
 # Open a new napari and and now add the image with its voxel size as a "scale".
-# - Note that we are using a new viewer because navigating 
-#   both the scaled and unscaled image in the same viewer is tricky
+# - Note that we are using a new viewer because navigating both the scaled and unscaled image in the same viewer is tricky
+# - Again look at the image from the side and in 3-D
+# - Observe that napari added interpolated data to make the image appear scaled
 viewer = Viewer()
 viewer.add_image(image, scale=voxel_size)
 
-
 # %%
-# Compute distances between points
-# - In the next few steps we will computed distances between 3-D points
+# In the next few steps we will compute distances between 3-D points
 
 # %%
 # Napari GUI: 
@@ -54,33 +49,29 @@ viewer.add_image(image, scale=voxel_size)
 # - Use `Add points` to add two points somewhere on the meta-phase plate
 
 # %%
-# Extract point coordinates
-# observe that they are in unscaled voxel coordinates
-# and thus not suited for measuring distances
+# Extract the point coordinates
 points = viewer.layers['Points'].data
-print(points)
+print(points) # unscaled => not very useful for physical measurements
 
 # %%
-# Scale the positions
-scale = viewer.layers['Points'].scale
+# Scale the points
+scale = viewer.layers['Points'].scale # same as voxel_size
 print("Points scale: ", scale)
 print("Voxel size: ", voxel_size)
-
-# %%
 points_cal = points * scale 
-print("Points :\n", points)
-print("Calibrated points :\n", points_cal)
+print("Points:\n", points)
+print("Calibrated points:\n", points_cal)
 
 # %%
 # Compute distance between points in voxel indices
-# - Formula: sqrt( (z[1] - z[0])^2 + (y[1] - y[0])^2 + (x[1] - x[0])^2 )
+# - Pythagoras: sqrt( (z1-z0)^2 + (y1-y0)^2 + (x1-x0)^2 )
 diff_vector = points_cal[1] - points_cal[0]
-print("diff_vector: ", diff_vector)
+print("diff_vector:", diff_vector)
 
 # %%
 sqr_diff_vector = diff_vector**2
-print("sqr_diff_vector: ", sqr_diff_vector)
+print("sqr_diff_vector:", sqr_diff_vector)
 
 # %%
 distance = np.sqrt(sqr_diff_vector.sum())
-print('distance:', distance)
+print("distance:", distance)

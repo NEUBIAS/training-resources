@@ -34,9 +34,7 @@ viewer.add_image(max_z_image, scale=[scales[1], scales[2]])
 # %%
 # Compute sum projection along z-axis
 # and display it in napari
-# - Napari: There is an an issue rendering the sum projection pixel values:
-#   some high values appear dark. More details and a possible work-around is given at 
-#   the end of this script.
+# - Napari: There is an an issue rendering the sum projection pixel values: some high values appear dark. More details and a possible work-around is given at the end of this script.
 sum_z_image = np.sum(image, axis=0)
 viewer.add_image(sum_z_image, scale=[scales[1], scales[2]])
 

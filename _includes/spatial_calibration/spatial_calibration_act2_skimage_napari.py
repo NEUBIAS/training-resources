@@ -17,7 +17,7 @@ image_2D, axes_image_2D, voxel_size_image_2D, units_image_2D = open_ij_tiff(
 )
 
 # %%
-# Inspect the image axes metadata
+# Inspect the image metadata
 print("Shape: ", image_2D.shape)
 print("Axes: ", axes_image_2D)
 print("Scale: ", voxel_size_image_2D)
