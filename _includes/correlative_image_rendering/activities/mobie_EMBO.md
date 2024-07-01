@@ -1,6 +1,16 @@
 **Requirements:** Fiji (if necessary download from https://fiji.sc)
 
+### general concepts
+
+
+![transformations](../../../figures/correlative_image_rendering/trafos.svg)
+
 #### enable MoBIE Update Site
+
+------- 
+THIS IS NOT REQUIRED IF MOBIE IS ALREADY INSTALLED LOCALLY
+
+-------
 
 Install Fiji, and enable the MoBIE update site ([how to install an update site](https://imagej.net/Following_an_update_site#Introduction)).  
 In detail:
@@ -17,6 +27,11 @@ In detail:
 
 #### get started with MoBIE
 
+![MoBIE_scheme](../../../figures/correlative_image_rendering/mobie_scheme.png)
+- a MoBIE project can ontain different **"datasets"**.
+- **dataset**: contains everything that should be visualized **together**. (In a combined **"view"**)
+- A **"view"** contains the information on **how which** data is shown.
+----
 - Open a MoBIE project containing correlative data
   - `[ Plugins › MoBIE › Open › Open MoBIE Project... ]`
     - `Project Location` `https://github.com/mobie/clem-example-project/`
@@ -74,7 +89,7 @@ In detail:
 #### register the volume CLEM data
 
 ------- 
-THIS IS PROBABLY NOT REQUIRED IF DATA IS AVAILABLE LOCALLY
+THIS IS NOT REQUIRED IF DATA IS AVAILABLE LOCALLY
 
 -------
 
