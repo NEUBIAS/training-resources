@@ -11,37 +11,42 @@ import numpy as np
 from napari.viewer import Viewer
 
 # %%
-# Open an image of metaphase chromosomes and inspect the metadata
-# - Observe that the xy and z voxel sizes are different (= anisotropic)
+# Open a 3-D image of metaphase chromosomes and inspect the metadata
 image, axes, voxel_size, units = open_ij_tiff(
     "https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit__mitotic_plate_calibrated.tif"
 )
-print("Shape: ", image.shape)
-print("Axes: ", axes)
-print("Scale: ", voxel_size)
-print("Units: ", units)
+print("Shape:", image.shape)
+print("Axes:", axes)
+print("Scale:", voxel_size) # anisotropy!
+print("Units:", units)
 
 # %%
 # View the image in napari
 Viewer().add_image(image)
 
 # %%
-# Napari GUI: 
-# - Change the axes order to look at the image from the side using the corresponding button
+# Napari: 
+# - Change the axes order to look at the image "from the side" using the corresponding button
 # - Look at the image in 3-D using the corresponding button
 # - Conclude that the physical shape does not look correct
 # - Important: close this viewer before proceeding, not to confuse yourself
 
 # %%
 # Open a new napari and and now add the image with its voxel size as a "scale".
-# - Note that we are using a new viewer because navigating both the scaled and unscaled image in the same viewer is tricky
-# - Again look at the image from the side and in 3-D
-# - Observe that napari added interpolated data to make the image appear scaled
 viewer = Viewer()
 viewer.add_image(image, scale=voxel_size)
 
 # %%
-# In the next few steps we will compute distances between 3-D points
+# Napari: 
+# - Again look at the image from the side and in 3-D
+# - Observe that, thanks to the "scale", the 3-D physical shape looks correct now
+# - Observe that napari added interpolated data to make the image appear scaled
+
+# %%
+# In the following, we will compute distances between 3-D points
+# This is interesting, as you will learn:
+# - How to use drawing layers in napari
+# - How to use image scaling (voxel_size) information for physical measurements
 
 # %%
 # Napari GUI: 
