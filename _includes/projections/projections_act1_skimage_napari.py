@@ -29,7 +29,7 @@ viewer.add_image(image, scale=scales)
 # - Napari: observe that the image layer context menu also allows one to create projections
 # - Napari: *Toggle grid mode (Ctrl + G)* to view images side by side
 max_z_image = np.max(image, axis=0)
-viewer.add_image(max_z_image, scale=scales[1:3])
+viewer.add_image(max_z_image, scale=[scales[1], scales[2]])
 
 # %%
 # Compute sum projection along z-axis
@@ -38,7 +38,7 @@ viewer.add_image(max_z_image, scale=scales[1:3])
 #   some high values appear dark. More details and a possible work-around is given at 
 #   the end of this script.
 sum_z_image = np.sum(image, axis=0)
-viewer.add_image(sum_z_image, scale=scales[1:3])
+viewer.add_image(sum_z_image, scale=[scales[1], scales[2]])
 
 # %%
 # Observe that the data type changed during the sum projection
