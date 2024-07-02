@@ -68,15 +68,8 @@ print("Points:\n", points)
 print("Calibrated points:\n", points_cal)
 
 # %%
-# Compute distance between points in voxel indices
-# - Pythagoras: sqrt( (z1-z0)^2 + (y1-y0)^2 + (x1-x0)^2 )
-diff_vector = points_cal[1] - points_cal[0]
-print("diff_vector:", diff_vector)
-
-# %%
-sqr_diff_vector = diff_vector**2
-print("sqr_diff_vector:", sqr_diff_vector)
-
-# %%
-distance = np.sqrt(sqr_diff_vector.sum())
-print("distance:", distance)
+# Compute the distance between the first and second point
+print("First point:" , points_cal[0])
+print("Second point:" , points_cal[1])
+from scipy.spatial import distance
+distance.euclidean(points_cal[0], points_cal[1])
