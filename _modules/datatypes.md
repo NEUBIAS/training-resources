@@ -7,7 +7,7 @@ prerequisites:
 
 objectives:
   - "Understand that images have a data type which limits the values that the pixels in the image can have."
-  - "Understand common data types such as 8-bit and 16-bit unsigned integer."
+  - "Understand common data types such as 8-bit, 12-bit and 16-bit unsigned integer."
 
 motivation: |
   Images contain numerical values that must be somehow stored on the hard disc or within the computer memory. To do so, for each pixel a certain amount of space (memory) must be allocated (usually measure in bits). Generally, the more bits you allocate, the bigger are the numbers that you can store, however, you also need more space. Thus choosing the right data type usually is a balance between what you can represent and how much space you want to afford for this. Especially, for large image data such as volume EM and light-sheet data, the choice of the data type can have quite some impact on your purse. In addition, certain operations on images can yield results with values outside of the original data type; this is a serious and frequently occurring source of mistakes when handling image data and thus must be well understood!
@@ -23,6 +23,10 @@ figure: /figures/data_types.png
 figure_legend: Examples for data types of different bit depths.
 
 multiactivities:
+  - ["datatypes/inspect_8bit_saturation.md", [["skimage napari", "datatypes/inspect_8bit_saturation_skimage_napari.py"]]]
+  - ["datatypes/inspect_12bit_saturation.md", [["skimage napari", "datatypes/inspect_12bit_saturation_skimage_napari.py"]]]
+  - ["datatypes/inspect_binary_8bit.md", [["skimage napari", "datatypes/inspect_binary_8bit_skimage_napari.py"]]]
+  - ["datatypes/inspect_scanr_12bit.md", [["skimage napari", "datatypes/inspect_scanr_12bit_skimage_napari.py"]]]
   - ["datatypes/datatypes_act1.md", [["skimage napari", "datatypes/datatypes_act1_skimage_napari.py"], ["ImageJ GUI", "datatypes/datatypes_act1_imagej_gui.md"]]]
   - ["datatypes/metadata_and_datatype.md", [["ImageJ GUI", "datatypes/metadata_and_datatype_imagej_gui.md"]]] 
 

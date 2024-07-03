@@ -1,76 +1,78 @@
-# %% [markdown]
-# ## Inspect a 2D image
-# To follow along for the plot profile you require a napari plugin. \
-# Install napari-plot-profile in your course activated conda environment.\
-# `conda activate skimage-napari-tutorial` \
-# `pip install napari-plot-profile` 
+# %%
+# 2D image inspection using skimage and napari
 
 # %%
-# Load the image
-# You can also load a local image by providing the path to the file
+# Load an image
 from OpenIJTIFF import open_ij_tiff
 image_url = "https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_different_intensity.tif"
-image, axes, scales, units  = open_ij_tiff(image_url)
+image, *_ = open_ij_tiff(image_url)
 
 # %%
-# Create a new napari viewer.
-from napari.viewer import Viewer
-napari_viewer = Viewer()
-
-# %% [markdown]
-# ### Code completion and help in Jupyter notebook 
-# * **Code completion** type `napari_viewer.` and press `TAB`
-# * **Help** type `napari_viewer.add_image` and press `SHIFT-TAB` this will open a help associated to the add_image method/command
+# Inspect what the image actually is
+print(type(image))
 
 # %%
-
-
-# %%
-# Add an image to the napari_viewer.
-napari_viewer.add_image(image)
-
-# %% [markdown]
-# ### Alternative loading of data
-# **Napari GUI** drag and drop image from browser\
-# rename the layer for convenience\
-# `napari_viewer.layers[0].name = 'image'`      
-# Get the data as numpy array\
-# `image = napari_viewer.layers['image'].data` 
-
-# %%
-# Print image shape
-print(image.shape)
-
-# %%
-# Print the image pixel values.
+# Inspect the pixel values
 print(image)
 
 # %%
-# Top left corner is [y, x] = [r, c] = [0, 0]
-print(image[0, 0])
+# Inspect the image dimensions
+print(image.shape)
 
 # %%
-# [y, x] = [r, c] = [1, 0]
-print(image[1, 0])
+# Create a napari viewer for looking at the image
+from napari.viewer import Viewer
+napari_viewer = Viewer()
 
 # %%
-# [y, x] = [r, c] = [0, 2]
-print(image[0, 2])
-
-# %% [markdown]
-# **Napari GUI** Explore the napari-plot-profile plugin (optional)
+# Jupyter notebook exercise:
+# Code completion: Type `napari_viewer.` and press `TAB`
+# Get help: Type `napari_viewer.add_image` and press `SHIFT-TAB` 
 
 # %%
-import numpy as np
-# Compute min and max.
+# Add the image the viewer 
+napari_viewer.add_image(image)
+
+# %%
+# Pixel value inspection in napari: 
+# However with the mouse over the image and observe the pixel indices and values
+
+# %%
+# Fetch single pixel values
+print(image[4, 8]) # in the background
+print(image[31, 42]) # inside a nucleus
+
+# %%
+# Extract a line of pixel values across the objects
+print(image[20,:])
+
+# %% 
+# Napari:
+# Use the plot profile plugin to inspect a line of pixel values
+ 
+# %%
+# Extract one object as a square of pixel values
+print(image[7:30,10:26])
+
+# %%
+# Compute the image min and max
+# Jupyter: Use TAB to find the min and max functions
 print(image.min(), image.max())
 
 # %%
+# Compute the image histogram
 import matplotlib.pyplot as plt
-# Use matplotlib to quickly plot a histogram.
+import numpy as np
 plt.hist(image.flatten(), bins=np.arange(image.min(), image.max() + 1));
 
 # %%
-# Most frequent pixel value (the mode)
-from scipy.stats import mode
-mode(image, axis = None, keepdims = True)
+# Napari:
+# Alternative loading of data
+# Remove the currently shown image
+# Drag and drop image from browser onto napari
+# Rename the layer to: image
+
+# %%
+# Fetch the image data from napari and check its shape
+image = napari_viewer.layers['image'].data
+print(image.shape)

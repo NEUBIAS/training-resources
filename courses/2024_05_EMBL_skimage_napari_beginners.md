@@ -23,24 +23,30 @@ The whole course will be guided hands-on sessions.
 - Tuesday, April 30, 2024, 9:30 - 16:00
 - Tuesday, May 7, 2024, 9:30 - 16:00
 
-Each day several modules will be taught, for each module there is about 45 minutes time.
+This includes a lunch break (1 hr) and two coffee breaks (20 minutes), resulting in approximately 5 hr of teaching time.
+As there are 6 modules per day that makes ~45 minutes per module.
 
 ## Venue
 
 - Imaging Centre, Lecture hall (lower floor)
 
-## Trainers
+## Trainers and organisers
 
-- Dominik Kutra (EMBL Heidelberg)
-- Christian Tischer (EMBL Heidelberg)
-- Arif Khan (EMBL Heidelberg)
-- Nima Vakili (EMBL Heidelberg)
 - Julian Hennies (EMBL Heidelberg)
+- Arif Khan (EMBL Heidelberg)
+- Dominik Kutra (EMBL Heidelberg)
+- Bugra Oezdemir (EMBL Heidelberg)
+- Christian Tischer (EMBL Heidelberg)
+- Nima Vakili (EMBL Heidelberg)
 
 ## Teaching content
 
 ### Image inspection basics (day 1)
 
+1. Introduction
+    - Trainers introduce themselves, where they work and how they are competent
+    - Participants introduce themselves, where they work, why they joined the course, and what previous experience they have
+        - Depending on the number of participants, one could distribute the introductions across the course, e.g. do some in the morning and some in the afternoon
 1. [Digital image basics](https://neubias.github.io/training-resources/pixels/index.html)
     - Christian Tischer 
 1. [Lookup tables](https://neubias.github.io/training-resources/lut/index.html)
@@ -71,12 +77,12 @@ Each day several modules will be taught, for each module there is about 45 minut
 
 ### Image analysis basics (day 3)
 
+1. [Object intensity measurements](https://neubias.github.io/training-resources/measure_intensities/index.html)
+    - Dominik Kutra
 1. [Image neighborhood filtering](https://neubias.github.io/training-resources/filter_neighbourhood/index.html)
     - Bugra Oezdemir
 1. [Median filter](https://neubias.github.io/training-resources/median_filter/index.html)
     - Bugra Oezdemir
-1. [Object intensity measurements](https://neubias.github.io/training-resources/measure_intensities/index.html)
-    - Dominik Kutra
 1. [Local background subtraction](https://neubias.github.io/training-resources/local_background_correction/index.html)
     - Domink Kutra
 1. [Morphological filters](https://neubias.github.io/training-resources/filter_morphological/index.html)

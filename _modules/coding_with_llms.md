@@ -1,7 +1,6 @@
 ---
 title: Coding with LLMs
 layout: module
-tags: ["draft"]
 prerequisites:
   - "[Running a script](../script_run)"
 objectives:
@@ -13,10 +12,10 @@ motivation: |
 concept_map: >
   graph TD
     P("Prompt") --> LLM("Large language model (LLM)")
-    LLM --> C("Code")
+    LLM --> C("Code & explanations")
 
 figure: /figures/coding_with_llms.png
-figure_legend: "The figure was created by an AI model. It should show how a human asks a computer to create code. This figure couuld be improved... :-)"
+figure_legend: "The figure was created by an AI model. It should show how a human asks a computer to create code. This figure could be improved... :-)"
 
 multiactivities:
   - ["coding_with_llms/code_creation.md", [["chatGPT python", "coding_with_llms/code_creation_chatGPT_python.md"]]]
@@ -38,5 +37,6 @@ learn_next:
 
 external_links:
   - "[bia-bob](https://github.com/haesleinhuepf/bia-bob)"
+  - "[OMEGA](https://github.com/royerlab/napari-chatgpt)"
 ---
 
