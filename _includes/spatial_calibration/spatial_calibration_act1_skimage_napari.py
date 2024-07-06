@@ -49,7 +49,7 @@ viewer.add_image(image, scale=voxel_size)
 # - How to use image scaling (voxel_size) information for physical measurements
 
 # %%
-# Napari GUI: 
+# Napari: 
 # - Use the `New points layer button` to create a new points layer
 # - Use `Add points` to add two points somewhere on the meta-phase plate
 
