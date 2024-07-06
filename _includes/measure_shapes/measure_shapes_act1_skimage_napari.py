@@ -20,10 +20,16 @@ viewer.add_labels(labels)
 from skimage.measure import regionprops_table
 import pandas as pd
 properties = [ 'label', 'area', 'perimeter', 'eccentricity', 'major_axis_length', 'minor_axis_length', 'solidity']
-table = regionprops_table( labels, properties = properties )
+table = regionprops_table(labels, properties = properties)
 print(type(table))
 df = pd.DataFrame(table)
 print(type(df))
+print(df)
+
+#%%
+# Perform scaled (calibrated) shape measurement
+# - Observe which shape measurements are changing due to the scaling
+df = pd.DataFrame(regionprops_table(labels, properties = properties, spacing=scales))
 print(df)
 
 #%%
@@ -31,3 +37,7 @@ print(df)
 print(df['area'].max())
 print(df['area'].idxmax())
 print(df['label'][0]) # i.e. df['label'][df['area'].idxmax()]
+
+#%%
+# Save the table as a CSV
+df.to_csv('shape_measurements.csv', sep='\t', index=False)
