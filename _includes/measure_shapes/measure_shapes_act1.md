@@ -1,4 +1,4 @@
-<h4 id='measure_act1'><a href="#measure_act1">Measure object shapes in a digital image</a></h4>
+<h4 id='measure_2d_shapes'><a href="#measure_2d_shapes">Measure 2-D shapes in an image</a></h4>
 
 - Using a drawing board, discuss important shape features and concepts, such as,
   - Area
@@ -14,7 +14,7 @@
 - Discuss how objects can be distiguished by various shape measurements
 - Perform shape measurements in pixel or calibrated units
 
-### Example data
+##### Example data
 
 - Fluorescence image with nuclei of different shapes: [xy_16bit_calibrated__nuclei_various_shapes.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit_calibrated__nuclei_various_shapes.tif)
   - Useful for manual delineation of objects and subsequent measurements
