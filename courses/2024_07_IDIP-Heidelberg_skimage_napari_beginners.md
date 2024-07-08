@@ -89,7 +89,7 @@ The first day is an onboarding day to bring everyone to the same level on basic 
 ### Image analysis basics (day 2)
 1. [Segmentation](https://neubias.github.io/training-resources/segmentation/index.html)
     - Arif Khan
-1. [Workflow: Basic 2D object analysis](https://neubias.github.io/training-resources/workflow_segment_2d_nuc    lei_measure_shape/index.html)
+1. [Workflow: Basic 2D object analysis](https://neubias.github.io/training-resources/workflow_segment_2d_nuclei_measure_shape/index.html)
     - Arif Khan
     - Only discuss the figure:
         - The most basic segmentation workflow
