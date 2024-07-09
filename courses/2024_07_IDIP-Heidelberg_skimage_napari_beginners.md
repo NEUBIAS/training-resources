@@ -116,7 +116,9 @@ The first day is an onboarding day to bring everyone to the same level on basic 
 1. [Local background subtraction](https://neubias.github.io/training-resources/local_background_correction/index.html)
     - Julian Hennies 
 1. [Morphological filters](https://neubias.github.io/training-resources/filter_morphological/index.html)
-    - Arif Khan
+    - Julian Hennies
+1. [Batch processing]((https://neubias.github.io/training-resources/batch_processing/index.html))
+    - Julian Hennies
 1. [Workflow: 2D noisy object segmentation and filtering](https://neubias.github.io/training-resources/workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape/index.html)
     - Julian Hennies
 
