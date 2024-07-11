@@ -12,7 +12,7 @@
 ### IT Setup
 
 - All software is already provided in the VMs for the course. 
-- If you like to redo the practical, you need a fresh [Fiji](https://fiji.sc) installation. Then, install the MoBIe plugin following [this tutorial](https://mobie.github.io/tutorials/installation.html).
+- If you like to redo the practical on another computer (MoBIE does not need specific resources), you need a fresh [Fiji](https://fiji.sc) installation. Then, install the MoBIe plugin following [this tutorial](https://mobie.github.io/tutorials/installation.html).
 
 
 ## Trainer
@@ -45,7 +45,7 @@ Let's quickly look at the [basic tutorial](https://mobie.github.io/tutorials/exp
 ![transformations](../figures/registration_visualization.svg)
 
 
-Let's quickly explore a CLEM dataset and see how MoBIE works:
+Let's quickly explore a CLEM dataset and see how MoBIE can visualize multimodal data:
 
 This will follow the module: ["Correlative image rendering"](https://neubias.github.io/training-resources/correlative_image_rendering/index.html).
 
