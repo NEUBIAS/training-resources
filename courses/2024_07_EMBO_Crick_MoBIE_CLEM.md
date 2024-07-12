@@ -12,7 +12,7 @@
 ### IT Setup
 
 - All software is already provided in the VMs for the course. 
-- If you like to redo the practical on another computer (MoBIE does not need specific resources), you need a fresh [Fiji](https://fiji.sc) installation. Then, install the MoBIe plugin following [this tutorial](https://mobie.github.io/tutorials/installation.html).
+- If you like to redo the practical on another computer (MoBIE does not need specific resources), you need a fresh [Fiji](https://fiji.sc) installation. Then, install the MoBIE plugin following [this tutorial](https://mobie.github.io/tutorials/installation.html).
 
 
 ## Trainer
@@ -27,7 +27,7 @@
 
 MoBIE allows access to large imaging projects in a fast and reproducible way. You can explore and browse data that is stored locally or available over the network.
 
-- a MoBIE **project** can ontain different **"datasets"**.
+- a MoBIE **project** can contain different **"datasets"**.
 - **dataset**: contains everything that should be visualized **together**. (In a combined **"view"**)
 - A **"view"** contains the information on **how which** data is shown.
 
