@@ -60,10 +60,11 @@ print(image[7:30,10:26])
 print(image.min(), image.max())
 
 # %%
-# Compute the image histogram
+# Compute and show the image histogram
 import matplotlib.pyplot as plt
 import numpy as np
-plt.hist(image.flatten(), bins=np.arange(image.min(), image.max() + 1));
+plt.hist(image.flatten(), bins=np.arange(image.min(), image.max() + 1))
+plt.show() # instead, we could end the above line with ";"
 
 # %%
 # Napari:
