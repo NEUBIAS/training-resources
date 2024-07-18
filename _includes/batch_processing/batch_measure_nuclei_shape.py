@@ -15,6 +15,10 @@ from napari import Viewer
 # Create a function that analyses one image
 # Below, this function will be called several times, for all images
 def analyse(image_path, output_folder):
+
+    # This prints which image is currently analysed
+    print("Analyzing:", image_path)
+
     image, axes, scales, units = open_ij_tiff(image_path)
 
     # Binarize the image using auto-thresholding
@@ -67,7 +71,6 @@ image_paths = ["https://github.com/NEUBIAS/training-resources/raw/master/image_d
                "https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__mitocheck_incenp_t70.tif"]
 
 for image_path in image_paths:
-    print("Analyzing:", image_path)
     analyse(image_path, output_dir)
 
 # %%
