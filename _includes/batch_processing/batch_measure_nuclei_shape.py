@@ -57,7 +57,7 @@ def analyse(image_path, output_folder):
 # %%
 # Assign an output folder 
 # Note: This uses your current working directory; you may want to change this to another folder on your computer
-output_folder = Path.cwd()
+output_dir = Path.cwd()
 
 # %%
 # Create a list of the paths to all data
@@ -66,4 +66,4 @@ image_paths = ["https://github.com/NEUBIAS/training-resources/raw/master/image_d
 
 for image_path in image_paths:
     print("Analyzing:", image_path)
-    analyse(image_path, output_folder)
+    analyse(image_path, output_dir)
