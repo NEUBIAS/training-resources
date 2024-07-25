@@ -29,7 +29,7 @@ figure: /figures/image_file_formats.png
 figure_legend: Image pixel data and metadata
 
 multiactivities:
-  - ["image_file_formats/open_diverse_file_formats.md", [["ImageJ GUI", "image_file_formats/open_diverse_file_formats_imagejgui.md", "markdown"]]]
+  - ["image_file_formats/open_diverse_file_formats.md", [["ImageJ GUI", "image_file_formats/open_diverse_file_formats_imagejgui.md"],["python BioIO", "image_file_formats/open_diverse_file_formats_bioio.py"]]]
   - ["image_file_formats/resaving_images.md", [["ImageJ GUI", "image_file_formats/resaving_images_imagejgui.md", "markdown"]]]
 
 assessment: >
