@@ -144,7 +144,7 @@ print(bioimage)
 print(type(bioimage))
 
 # %%
-# lession in between
+# little excersise in between
 # Access image dimensions
 print(bioimage.dims)
 
@@ -173,6 +173,10 @@ img_2d = img_3d[0]
 
 # - Observe that numpy.array shape is 2 dimensional representing y,x
 print(img_2d.shape)
+
+# %%
+# little excercise:
+# paticipants should try to open one of their files with python
 
 # %%
 # Save image as .ome.tif
