@@ -1,4 +1,4 @@
-ll# Beginners course for python based image analysis using skimage and napari
+# Beginners course for python based image analysis using skimage and napari
 
 ## Why take this course
 
@@ -8,8 +8,8 @@ In this course, you will be introduced to essential concepts of image analysis. 
 
 ## Prerequisites
 
-* You should know all the topics mentioned in the **Learn the Basics** section of the [Learn Python](https://www.learnpython.org/en/Welcome) website (you may skip "Classes and Objects" and "Modules and Packages").
-* Please practice running code in a Jupyter Notebook. You can follow this [guide](https://jupyter.org/try-jupyter/retro/notebooks/?path=notebooks/Intro.ipynb).
+* Ideally, you should know all the topics mentioned in the **Learn the Basics** section of the [Learn Python](https://www.learnpython.org/en/Welcome) website (you may skip "Classes and Objects" and "Modules and Packages").
+* If you have time, please practice running code in a Jupyter Notebook. You can follow this [guide](https://jupyter.org/try-jupyter/retro/notebooks/?path=notebooks/Intro.ipynb).
 
 ### IT Setup
 
@@ -42,79 +42,85 @@ As there are 6 modules per day that makes ~45 minutes per module.
 - Christian Tischer (EMBL)
 - Arif Khan (EMBL)
 - Julian Hennies (EMBL)
-- Bugra Oezdemir (EMBL)
-
-## Teaching tips
-
-Dear Trainers, please consider checking these [teaching tips](https://github.com/NEUBIAS/training-resources/blob/master/TEACHING_TIPS.md).
 
 ## Teaching content
 
 ### Python basics (day 0)
 
+The first day is an onboarding day to bring everyone to the same level on basic python programming. If you are already proficient with python, you may skip this day. In this case, please make sure to use the `conda` platform to install skimage and napari on your laptop before the course, following [these instructions](https://neubias.github.io/training-resources/tool_installation/index.html#skimage_napari). 
+
+1. Participants introduce themselves, where they work, why they joined the course, and what previous experience they have
 1. Introduction to python and basic environment management
-   - What is python, how to install python, how to use the command line, how to use Jupyter notebook
-
-2. Basics of python programming
-TODO: Charlotte adds some content here
-
-Conda environments
-Jupyter notebooks
-Python basics
-
-
+1. [Tool installations](https://neubias.github.io/training-resources/tool_installation/index.html#skimage_napari).
+   - Severina Klaus
+1. [Basics of python programming](https://heibox.uni-heidelberg.de/d/da0a61ef203347c7aff2/)
+   - Charlotte Kaplan
+       - Jupyter notebook/ lab
+       - Data types: integer, float, lists
+       - Basic operations
+       - Variables
+       - Built-in functions
+       - Modules
+       - For-loop
 
 ### Image inspection basics (day 1)
 
 1. Introduction
     - Trainers introduce themselves, where they work and how they are competent
-    - Participants introduce themselves, where they work, why they joined the course, and what previous experience they have
-        - Depending on the number of participants, one could distribute the introductions across the course, e.g. do some in the morning and some in the afternoon
 1. [Digital image basics](https://neubias.github.io/training-resources/pixels/index.html)
-    - Trainer 
+    - Felix Schneider 
 1. [Lookup tables](https://neubias.github.io/training-resources/lut/index.html)
-    - Trainer
+    - Felix Schneider
 1. [Spatial image calibration](https://neubias.github.io/training-resources/spatial_calibration/index.html) 
-    - Trainer
+    - Christian Tischer
+    - Activities
+       - [3-D spatial calibration](https://neubias.github.io/training-resources/spatial_calibration/index.html#explore3D)
 1. [N-dimensional images](https://neubias.github.io/training-resources/multidimensional_image_basics/index.html)
-    - Trainer
+    - Arif Khan
 1. [Image data types](https://neubias.github.io/training-resources/datatypes/index.html) 
-    - Julian Hennies
+    - Christian Tischer
+    - Activities
+       - [Inspect an 8 bit image](https://neubias.github.io/training-resources/datatypes/index.html#saturation_8bit)
+       - [Inspect a 12 bit image](https://neubias.github.io/training-resources/datatypes/index.html#saturation_12bit)
 1. [Image projections](https://neubias.github.io/training-resources/projections/index.html)
-    - Julian Hennies
+    - Christian Tischer
+    - [Max and sum projections of an anisotropic image]()
 
 ### Image analysis basics (day 2)
-
 1. [Segmentation](https://neubias.github.io/training-resources/segmentation/index.html)
-    - Trainer
+    - Arif Khan
+1. [Workflow: Basic 2D object analysis](https://neubias.github.io/training-resources/workflow_segment_2d_nuclei_measure_shape/index.html)
+    - Arif Khan
+    - Only discuss the figure:
+        - The most basic segmentation workflow
+        - The components of this workflow will be taught now
 1. [Manual thresholding](https://neubias.github.io/training-resources/binarization/index.html)
-    - Trainer
+    - Arif Khan
 1. [Automated thresholding](https://neubias.github.io/training-resources/auto_threshold/index.html) 
     - Julian Hennies
 1. [Connected component labeling](https://neubias.github.io/training-resources/connected_components/index.html)
     - Julian Hennies
 1. [Object shape measurements](https://neubias.github.io/training-resources/measure_shapes/index.html)
-    - Trainer
+    - Christian Tischer
 1. [Workflow: Basic 2D object analysis](https://neubias.github.io/training-resources/workflow_segment_2d_nuclei_measure_shape/index.html)
-    - Trainer
+    - Christian Tischer
 
 ### Image analysis basics (day 3)
 
 1. [Object intensity measurements](https://neubias.github.io/training-resources/measure_intensities/index.html)
-    - Severina
+    - Severina Klaus
 1. [Image neighborhood filtering](https://neubias.github.io/training-resources/filter_neighbourhood/index.html)
-    - Severina
+    - Severina Klaus
 1. [Median filter](https://neubias.github.io/training-resources/median_filter/index.html)
-    - Trainer
+    - Julian Hennies
 1. [Local background subtraction](https://neubias.github.io/training-resources/local_background_correction/index.html)
-    - Trainer 
+    - Julian Hennies 
 1. [Morphological filters](https://neubias.github.io/training-resources/filter_morphological/index.html)
-    - Trainer
+    - Julian Hennies
+1. [Batch processing](https://neubias.github.io/training-resources/batch_processing/index.html)
+    - Julian Hennies
 1. [Workflow: 2D noisy object segmentation and filtering](https://neubias.github.io/training-resources/workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape/index.html)
-    - Trainer
+    - Julian Hennies
 
 
-## What to learn/teach next?
-
-- It could make sense to follow this course up (or extend it) with some modules about batch analysis
 

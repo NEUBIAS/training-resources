@@ -3,7 +3,7 @@ title: Batch processing
 layout: module
 tags: ["scripting"]
 prerequisites:
-  - "[Working with strings](../string_concat)"
+  - "[Strings and paths](../string_concat)"
   - "[For loops](../script_for_loop)"
 objectives:
   - "Automatically process a number of images"
@@ -24,15 +24,6 @@ figure_legend: Batch processing of several images, yielding as many segmentation
 
 multiactivities:
   - ["batch_processing/batch_measure_nuclei_shapes.md", [["ImageJ SciJava Macro", "batch_processing/batch_measure_nuclei_shape_scijava_ijmacro.md"],["skimage python", "batch_processing/batch_measure_nuclei_shape.py"]]]
-
-exercises_preface: |
-  - Download those two images
-    - [xy_8bit__nuclei_noisy_small.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_small.tif)
-    - [xy_8bit__nuclei_noisy_large.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_large.tif)
-  - Modify the script given in the exercise to enable the batch processing of those two images.
-
-exercises:
-  - ["ImageJ Macro Scijava","batch_processing/exercises/imagejmacro.md"]
 
 assessment: >
 

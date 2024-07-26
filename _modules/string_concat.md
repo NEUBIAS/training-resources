@@ -1,5 +1,5 @@
 ---
-title: Working with strings
+title: Strings and paths
 layout: module
 tags: ["scripting"]
 prerequisites: 
@@ -7,10 +7,10 @@ prerequisites:
 
 objectives:
   - "Construct complex strings, e.g. to produce log messages and create file paths"
-  - "Master the backward slash \\."
+  - "Automatically create paths for saving the results of the analysis of an input image"
 
 motivation: |
-  Combining several strings into a larger string is a prevalent operation in scripting. This is useful, e.g., to create file paths and create log messages. Such concatenation of strings is surprisingly error prone and it is thus important to learn it properly and be aware of all the pitfalls.
+  Combining several strings into a larger string is a prevalent operation in scripting. This is useful, e.g., to create file paths and create log messages. Such concatenation of strings is surprisingly error prone and it is thus important to learn it properly and be aware of all the pitfalls. In addition, it is critical to be able to deal with and manipulate file paths, as this is crucial to write code that automatically saves resulting data at appropriate locations.
 
 concept_map: >
   graph TD
