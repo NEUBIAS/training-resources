@@ -12,23 +12,20 @@ Typically, one starts a bioimage analysis project by, more or less, interactivel
 
 Please, before the course use the `conda` platform to install skimage and napari on your laptop, following [these instructions](https://neubias.github.io/training-resources/tool_installation/index.html#skimage_napari). 
 
-## Schedule
+## Schedule 
 
 The whole course will be guided hands-on sessions.
 
-- **2024 August 06, 9:30 - 12:00** 
-
-This includes a lunch break (1 hr) and two coffee breaks (20 minutes), resulting in approximately 5 hr of teaching time.
-As there are 6 modules per day that makes ~45 minutes per module.
+- **2024 August Tuesday 06, 9:30 - 12:00** 
 
 ## Venue
 
-- Germany, Heidelberg, Meyerhofstr. 1, EMBL, Room: TBD
+- Germany, Heidelberg, Meyerhofstr. 1, EMBL, Room: IC Lecture hall
 - Zoom link: TBD
 
 ## Trainers and organisers
 
-- Name (Institute)
+- Christian Tischer (EMBL)
 - ...
 
 ## Teaching tips
@@ -45,19 +42,25 @@ Dear Trainers, please consider checking these [teaching tips](https://github.com
 
 ### Basics of automated image batch analysis in python
 
-1. Discuss good practices for input and output file and folder names
-    - Show how the input and output of the course pipeline will look like
-    - Recommend saving the analysis script into the same folder structure, with a date?!
 1. [Loops](https://neubias.github.io/training-resources/script_for_loop/index.html)
-    - TODO: Tischi check this
-    - Trainer
+    - Trainer: Felix Schneider
+    - TODO: Flex: check and improve
 1. [String and path manipulations](https://neubias.github.io/training-resources/string_concat/index.html)
-    - Trainer 
+    - TODO: Tischi change to multi-activities
+    - Trainer: Dominik Kutra
 1. [Functions](https://neubias.github.io/training-resources/script_functions/index.html)
     - TODO: Arif check this 
-    - Trainer
+    - Trainer: Arif Khan
+1. Discuss good practices for input and output file and folder names
+    - Trainer: Christian Tischer
+    - Show how the input and output of the "Batch analysis" module
+    - Show this? https://git.embl.de/grp-cba/astrocyte-differentiations/-/blob/main/data_management.md
+    - Recommend saving the analysis script into the same folder structure, with a date?!
 1. [Batch analysis](https://neubias.github.io/training-resources/batch_processing/index.html)
-    - Trainer
+    - Trainer: Julian Hennies or Felix Schneider
+    - TODO: Dominik: how hard would it be to save a MoBIE table
+1. Demo batch inspection with MoBIE
+    - Trainer: Christian Tischer
 
 ## Follow-up courses
 
