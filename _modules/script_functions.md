@@ -10,7 +10,7 @@ objectives:
   - "Understand the skeleton of a function."
   - "Make the script more efficient."
 motivation: |
-  When a series of steps(i.e. algorithm) that has to be performed on an image or a set of images should be executed more than once, or when the script gets too long and repetitive, it is more efficient to write this series as modules called "functions".
+  When a series of steps (i.e. algorithm) that has to be performed on an image or a set of images should be executed more than once, or when the script gets too long and repetitive, it is more efficient to write this series as modules called "functions".
   This essentially means that you can reuse parts of code instead of rewriting it. A function is a block that has a specific name and can be called with inputs and can return values.
 
 concept_map: >
