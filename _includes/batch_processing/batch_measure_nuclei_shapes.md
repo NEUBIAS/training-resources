@@ -5,14 +5,17 @@
 - Adapt this workflow for automated batch analysis of many images
 - Start by building the skeleton of the workflow without filling in the functionality;
   
-  Note that the code below runs fine, but does not produce any results:
+  Note that the pseudo-code below will run fine, but does not produce any results:
 
 ```
-def analyse(image_path, output_folder):
-    print("Analyzing:", image_path)
-    
-for image_path in image_paths:
-    analyse(image_path, output_dir)
+FUNCTION analyse(image_path, output_folder)
+    PRINT "Analyzing:", image_path
+END FUNCTION
+
+FOR each image_path in image_paths
+    CALL analyse(image_path, output_dir)
+END FOR
 ```
 
  - Make sure the loop with the (almost) empty analyse function runs without error before filling in the image analysis steps
+ - Inspect the analysis results in a suitable software
