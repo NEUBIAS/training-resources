@@ -11,15 +11,16 @@ import pathlib
 from pathlib import Path
 from napari import Viewer
 
+
 # %%
 # Create a function that analyses one image
 # Below, this function will be called several times, for all images
-def analyse(image_path, output_folder):
+def analyse(image_filepath, output_folder):
 
     # This prints which image is currently analysed
-    print("Analyzing:", image_path)
+    print("Analyzing:", image_filepath)
 
-    image, axes, scales, units = open_ij_tiff(image_path)
+    image, axes, scales, units = open_ij_tiff(image_filepath)
 
     # Binarize the image using auto-thresholding
     threshold = threshold_otsu(image)
@@ -45,19 +46,21 @@ def analyse(image_path, output_folder):
 
     # Save the results to disk
 
-    # Convert the image_path String to a Path,
+    # Convert the image_filepath String to a Path,
     # which is more convenient to create the output files
-    image_path = pathlib.Path(image_path)
+    image_filepath = pathlib.Path(image_filepath)
 
     # Save the labels
-    label_image_path = output_folder / f"{image_path.stem}_labels.tif"
-    save_ij_tiff(label_image_path, label_image, axes, scales, units)
+    label_image_filepath = output_folder / f"{image_filepath.stem}_labels.tif"
+    save_ij_tiff(label_image_filepath, label_image, axes, scales, units)
 
     # Save the measurements table
     # to a tab delimited text file (sep='\t')
     # without row numbers (index=False)
-    table_path = output_folder / f"{image_path.stem}_measurements.csv"
+    table_path = output_folder / f"{image_filepath.stem}_measurements.csv"
     df.to_csv(table_path, sep='\t', index=False)
+
+    return label_image_filepath
     
 
 # %%
@@ -65,19 +68,28 @@ def analyse(image_path, output_folder):
 # Note: This uses your current working directory; you may want to change this to another folder on your computer
 output_dir = Path.cwd()
 
+
 # %%
 # Create a list of the paths to all data
-image_paths = ["https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__mitocheck_incenp_t1.tif", 
-               "https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__mitocheck_incenp_t70.tif"]
+image_paths = [output_dir / "xy_8bit__mitocheck_incenp_t1.tif",
+               output_dir / "xy_8bit__mitocheck_incenp_t70.tif"]
+# Create an empty list for the result label images
+label_image_paths = []
 
-for image_path in image_paths:
-    analyse(image_path, output_dir)
 
 # %%
-# Plot the first output image to check if the pipeline worked
-image1, *_ = open_ij_tiff(image_paths[0])
-labels1, *_ = open_ij_tiff('xy_8bit__mitocheck_incenp_t1_labels.tif')
+# The loop which performs the analysis
+for image_path in image_paths:
 
-viewer = Viewer()
-viewer.add_image(image1)
-viewer.add_labels(labels1)
+    # Computes the analysis and returns the path of the resulting label image
+    label_image_path = analyse(image_path, output_dir)
+
+    # Append the label image path to the list initialized before the loop
+    label_image_paths.append(label_image_path)
+
+
+# %%
+# Create a table to view the results in MoBIE
+df = pd.DataFrame(data={'image': image_paths, 'labels': label_image_paths})
+mobie_table_path = output_dir + Path('mobie_table.csv')
+df.to_csv(mobie_table_path, sep='\t', index=False)
