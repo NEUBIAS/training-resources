@@ -9,7 +9,6 @@ from skimage.filters import threshold_otsu
 import pandas as pd
 import pathlib
 from pathlib import Path
-from napari import Viewer
 
 
 # %%
