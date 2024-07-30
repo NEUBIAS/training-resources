@@ -44,7 +44,7 @@ Dear Trainers, please consider checking these [teaching tips](https://github.com
 
 1. [Loops](https://neubias.github.io/training-resources/script_for_loop/index.html)
     - Trainer: Felix Schneider
-    - TODO: Flex: check and improve
+    - TODO: Felix: check and improve
 1. [String and path manipulations](https://neubias.github.io/training-resources/string_concat/index.html)
     - TODO: Tischi change to multi-activities
     - Trainer: Dominik Kutra
