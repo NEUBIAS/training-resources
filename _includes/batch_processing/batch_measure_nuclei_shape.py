@@ -1,6 +1,7 @@
 # %% 
 # Batch analysis of 2D nuclei shape measurements
 
+
 # %%
 # Import python modules
 from OpenIJTIFF import open_ij_tiff, save_ij_tiff
@@ -9,17 +10,21 @@ from skimage.filters import threshold_otsu
 import pandas as pd
 import pathlib
 from pathlib import Path
-from napari import Viewer
+
 
 # %%
 # Create a function that analyses one image
 # Below, this function will be called several times, for all images
-def analyse(image_path, output_folder):
+def analyse(image_filepath, output_folder):
 
     # This prints which image is currently analysed
-    print("Analyzing:", image_path)
+    print("Analyzing:", image_filepath)
 
-    image, axes, scales, units = open_ij_tiff(image_path)
+    # Convert the image_filepath String to a Path,
+    # which is more convenient to create the output files
+    image_filepath = pathlib.Path(image_filepath)
+
+    image, axes, scales, units = open_ij_tiff(image_filepath)
 
     # Binarize the image using auto-thresholding
     threshold = threshold_otsu(image)
@@ -31,10 +36,14 @@ def analyse(image_path, output_folder):
     # We can safely convert to 16 bit as we know that we don't have too many objects
     label_image = label(binary_image).astype('uint16')
 
+    # Save the labels
+    label_image_filepath = output_folder / f"{image_filepath.stem}_labels.tif"
+    save_ij_tiff(label_image_filepath, label_image, axes, scales, units)
+
     # Measure calibrated (scaled) nuclei shapes
     df = pd.DataFrame(regionprops_table(
         label_image,
-        properties={'label', 'area'},
+        properties={'label', 'area', 'centroid'},
         spacing=scales))
 
     # Round all measurements to 2 decimal places.
@@ -43,21 +52,12 @@ def analyse(image_path, output_folder):
     # you may not want to round that much!
     df = df.round(2)
 
-    # Save the results to disk
+    # Add the image and label filepaths to the data-frame
+    df['image'] = image_filepath
+    df['labels'] = label_image_filepath
 
-    # Convert the image_path String to a Path,
-    # which is more convenient to create the output files
-    image_path = pathlib.Path(image_path)
-
-    # Save the labels
-    label_image_path = output_folder / f"{image_path.stem}_labels.tif"
-    save_ij_tiff(label_image_path, label_image, axes, scales, units)
-
-    # Save the measurements table
-    # to a tab delimited text file (sep='\t')
-    # without row numbers (index=False)
-    table_path = output_folder / f"{image_path.stem}_measurements.csv"
-    df.to_csv(table_path, sep='\t', index=False)
+    # Return the data-frame
+    return df
     
 
 # %%
@@ -65,19 +65,29 @@ def analyse(image_path, output_folder):
 # Note: This uses your current working directory; you may want to change this to another folder on your computer
 output_dir = Path.cwd()
 
+
 # %%
 # Create a list of the paths to all data
-image_paths = ["https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__mitocheck_incenp_t1.tif", 
-               "https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__mitocheck_incenp_t70.tif"]
+image_paths = [output_dir / "xy_8bit__mitocheck_incenp_t1.tif",
+               output_dir / "xy_8bit__mitocheck_incenp_t70.tif"]
+# Create an empty list for the measurement results
+result_dfs = []
 
-for image_path in image_paths:
-    analyse(image_path, output_dir)
 
 # %%
-# Plot the first output image to check if the pipeline worked
-image1, *_ = open_ij_tiff(image_paths[0])
-labels1, *_ = open_ij_tiff('xy_8bit__mitocheck_incenp_t1_labels.tif')
+# The loop which performs the analysis
+for image_path in image_paths:
 
-viewer = Viewer()
-viewer.add_image(image1)
-viewer.add_labels(labels1)
+    # Computes the analysis and returns a data-frame with the resulting measurements
+    result_df = analyse(image_path, output_dir)
+
+    # Append the label image path to the list initialized before the loop
+    result_dfs.append(result_df)
+
+
+# %%
+# Concatenate the result data-frames to a single one which contains all results
+final_df = pd.concat(result_dfs, ignore_index=True)
+# Save the final results to disk
+final_df.to_csv(output_dir / 'batch_processing_results.csv', sep='\t', index=False)
+
