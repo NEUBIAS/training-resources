@@ -4,6 +4,7 @@ layout: module
 tags: ["draft","scripting"]
 prerequisites:
   - "[Variables](../script_variables)"
+  - "[Loops](../script_for_loops)"
 
 objectives:
   - "Avoid code duplication using functions."
@@ -22,18 +23,11 @@ concept_map: >
 figure: /figures/script_functions.png
 figure_legend: Components and working of a function within a script.
 
-activity_preface: |
-  - Open an image stack
-  - Enter the slice numbers for which you want to calculate mean intensity.
-  - Run a function to extract the specified slices, display them and calculate their mean intensity.
-  - Display the mean intensity value for each specified slice.
 
-activities:
-  - ["ImageJ Macro", "script_functions/activities/function_display_slice_imagejmacro.ijm", "java"]
+multiactivities:
+  - ["script_functions/add_two_numbers_activity1.md", [["skimage napari", "script_functions/add_two_numbers_activity1_skimage_napari.py"]]]
+  - ["script_functions/open_inspect_image_activity2.md", [["skimage napari", "script_functions/open_inspect_image_activity2_skimage_napari.py"]]]
 
-exercises:
-  - ["Exercise1 - ImageJ Macro", "script_functions/exercises/functions_imagejmacro.md"]
-  - ["Exercise2 - ImageJ Macro", "script_functions/exercises/functions_imagejmacro2.md"]
 
 assessment: >
 
