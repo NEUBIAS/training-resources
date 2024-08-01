@@ -1,4 +1,4 @@
-<h4 id="binary_8bit"><a href="#binary_8bit">Inspect a binary image</a></h4>
+<h4 id="binary_8bit"><a href="#binary_8bit">Refactor code to make a function</a></h4>
 
 This activity shows a script that has following steps.
   - Opening an image

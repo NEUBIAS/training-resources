@@ -9,5 +9,5 @@ def add_two_number(number1, number2):
 
 # %%
 # Call the function to add numbers and display result
-z = add_two_number(10, 5)
-print(f'Result of addition:  {z}  \n')
+total_sum = add_two_number(10, 5)
+print("Result": total_sum)
