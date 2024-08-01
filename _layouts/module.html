@@ -7,19 +7,6 @@ layout: base
   {%- if page.multiactivities -%}
     <script language="javascript" type="text/javascript">
 
-        function updateUrlWithSelection(selectId) {
-          console.log(`updateUrlWithSelection called with selectId: ${selectId}`); 
-          const selectElement = document.getElementById(selectId);
-          const selectedValue = selectElement.value;
-          const currentUrl = new URL(window.location.href);
-
-          // Update the URL with the selected value as a query parameter
-          currentUrl.searchParams.set(selectId, selectedValue);
-
-          // Update the browser's address bar without reloading the page
-          window.history.replaceState({}, '', currentUrl);
-        }
-
         function setDropdownFromUrl(selectId, selectedValue) {
           console.log(`setDropdownFromUrl called`);
           console.log(`selectId: ${selectId}`);
@@ -151,6 +138,19 @@ window.onload = function() {
           set_exercises_view_defaults();
         }
 
+        function updateUrlWithSelection(selectId) {
+          console.log(`updateUrlWithSelection called with selectId: ${selectId}`); 
+          const selectElement = document.getElementById(selectId);
+          const selectedValue = selectElement.value;
+          const currentUrl = new URL(window.location.href);
+
+          // Update the URL with the selected value as a query parameter
+          currentUrl.searchParams.set(selectId, selectedValue);
+
+          // Update the browser's address bar without reloading the page
+          window.history.replaceState({}, '', currentUrl);
+        }
+
         function set_activity_view_defaults () {
           {% for platform in page.activities %}
             document.getElementById("{{ platform[0] | slugify }}-activity-div").style.display = 'none';{% endfor %}{% unless site.default-platform == "NONE" %}document.getElementById("{{ site.default-platform | slugify }}-activity-div").style.display = 'block';{% endunless %}
@@ -164,10 +164,10 @@ window.onload = function() {
           {% endfor %}
           if (! form_control || document.getElementById(form_control).value == "null-activity") {
             set_activity_view_defaults();
-          {% for platform in page.activities %}
+            {% for platform in page.activities %}
             } else if (document.getElementById(form_control).value == "{{ platform[0] | slugify }}-activity") {
               document.getElementById("{{ platform[0] | slugify }}-activity-div").style.display = 'block';
-          {% endfor %}
+            {% endfor %}
         } else {
           alert("Error: Missing platform value for 'change_activity_content_by_platform()' script!");
         }
@@ -180,13 +180,17 @@ window.onload = function() {
 
       function change_exercises_content_by_platform (form_control) {
         {% for platform in page.exercises %}
-          document.getElementById("{{ platform[0] | slugify }}-exercises-div").style.display = 'none';{% endfor %}if (! form_control || document.getElementById(form_control).value == "null-exercises") {
-          set_exercises_view_defaults();{% for platform in page.exercises %}
+          document.getElementById("{{ platform[0] | slugify }}-exercises-div").style.display = 'none';
+        {% endfor %}
+        if (! form_control || document.getElementById(form_control).value == "null-exercises") {
+          set_exercises_view_defaults();
+        {% for platform in page.exercises %}
           } else if (document.getElementById(form_control).value == "{{ platform[0] | slugify }}-exercises") {
-            document.getElementById("{{ platform[0] | slugify }}-exercises-div").style.display = 'block';{% endfor %}
-      } else {
-        alert("Error: Missing platform value for 'change_exercises_content_by_platform()' script!");
-      }
+            document.getElementById("{{ platform[0] | slugify }}-exercises-div").style.display = 'block';
+        {% endfor %}
+        } else {
+          alert("Error: Missing platform value for 'change_exercises_content_by_platform()' script!");
+        }
     }
 
     window.onload = set_view_defaults;
