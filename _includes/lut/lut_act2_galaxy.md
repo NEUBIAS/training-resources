@@ -1,0 +1,13 @@
+- Upload one of the above pairs of images to Galaxy
+    - Go to https://usegalaxy.eu
+    - In the Tools panel on the left, click `Upload Data`
+    - Click `Paste/Fetch data` button
+    - Paste the URLs of the two images(one line per URL) and click the `Start` button
+    - Click the `Close` button after upload finishes, then the image will be available in your Galaxy history.
+- Start the Napari interactive tool
+    - In the Tools panel on the left, search for `Run Napari interactive tool`
+    - Select the two uploaded images from the `Images` dropdown list
+    - Click the `Run Tool` button. Once the `Open` link appears at the top of the page, click it to open Napari in a separate browser tab.
+    - In the Napari tab, navigate to `File -> Open file(s)`, and select the two images from the `input` folder.
+    -  Turn on grid mode by clicking the `Grid` button located at the bottom left,second from the right. The two images will appear side by side
+    - Adjust the `contrast limits` and apply the same values to both images to compare them directly
