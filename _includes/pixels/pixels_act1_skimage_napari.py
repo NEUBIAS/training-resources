@@ -8,15 +8,19 @@ image_url = "https://github.com/NEUBIAS/training-resources/raw/master/image_data
 image, *_ = open_ij_tiff(image_url)
 
 # %%
-# Inspect all image pixel values
+# Inspect what the image actually is
+print(type(image))
+
+# %%
+# Inspect the pixel values
 print(image)
 
 # %%
-# Inspect the image shape
+# Inspect the image dimensions
 print(image.shape)
 
 # %%
-# Create a napari viewer
+# Create a napari viewer for looking at the image
 from napari.viewer import Viewer
 napari_viewer = Viewer()
 
@@ -26,7 +30,7 @@ napari_viewer = Viewer()
 # Get help: Type `napari_viewer.add_image` and press `SHIFT-TAB` 
 
 # %%
-# Add an image to the napari_viewer
+# Add the image the viewer 
 napari_viewer.add_image(image)
 
 # %%
@@ -34,23 +38,9 @@ napari_viewer.add_image(image)
 # However with the mouse over the image and observe the pixel indices and values
 
 # %%
-# Inspect the pixel at the top left corner
-print(image[0, 0])
-
-# %%
-# Inspect the pixel at the bottom right corner
-print(image[49, 58])
-print(image.shape[0], image.shape[1])
-print(image[image.shape[0]-1, image.shape[1]-1])
-
-# %%
-# Fetch a pixel value from the background
-# Beware the index order: [y, x] = [r, c]
-print(image[4, 8])
-
-# %%
-# Fetch a pixel value from within an object
-print(image[31, 42])
+# Fetch single pixel values
+print(image[4, 8]) # in the background
+print(image[31, 42]) # inside a nucleus
 
 # %%
 # Extract a line of pixel values across the objects
@@ -66,6 +56,7 @@ print(image[7:30,10:26])
 
 # %%
 # Compute the image min and max
+# Jupyter: Use TAB to find the min and max functions
 print(image.min(), image.max())
 
 # %%
@@ -73,11 +64,6 @@ print(image.min(), image.max())
 import matplotlib.pyplot as plt
 import numpy as np
 plt.hist(image.flatten(), bins=np.arange(image.min(), image.max() + 1));
-
-# %%
-# Compute the most frequent pixel value (the mode)
-from scipy.stats import mode
-mode(image, axis = None, keepdims = True)
 
 # %%
 # Napari:

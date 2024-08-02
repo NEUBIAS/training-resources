@@ -1,5 +1,5 @@
-#%% [markdown]
-# # Practice measure shape
+#%% 
+# Practice measure shape
 
 #%%
 from OpenIJTIFF import open_ij_tiff
