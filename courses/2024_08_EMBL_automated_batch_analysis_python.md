@@ -21,7 +21,7 @@ The whole course will be guided hands-on sessions.
 ## Venue
 
 - Germany, Heidelberg, Meyerhofstr. 1, EMBL, Room: IC Lecture hall
-- Zoom link: TBD
+- Zoom link: Has been sent by mail
 
 ## Trainers and organisers
 
