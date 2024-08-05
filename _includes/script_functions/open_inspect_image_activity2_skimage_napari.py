@@ -55,20 +55,15 @@ viewer = napari.Viewer()
 # Define a function to read and inspect image
 def open_inspect_image(image_path):
     image, *_ = open_ij_tiff(image_path)
-    image_data_type, image_min, image_max = image.dtype, image.min(), image.max()
-    return image, image_data_type, image_min, image_max
+    print(image.dtype)
+    print("Min:", image.min())
+    print("Max:", image.max())
+    return image
 
-im1, im1_dtype, im1_min, im1_max = open_inspect_image('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_intensity_clipping_issue_a.tif')
-im2, im2_dtype, im2_min, im2_max = open_inspect_image('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__two_cells.tif')
+image1 = open_inspect_image('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_intensity_clipping_issue_a.tif')
+image2 = open_inspect_image('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__two_cells.tif')
 
 # %%
 # Display images
-viewer.add_image(im1)
-viewer.add_image(im2)
-
-# %%
-# Print data type, min and max pixel values
-print(f'image 1 has dtype: {im1_dtype}, min pixel value: {im1_min} and max pixel value: {im1_max} \n')
-print(f'image 2 has dtype: {im2_dtype}, min pixel value: {im2_min} and max pixel value: {im2_max} \n')
-
-# TODO: One can also make a function for printing values
+viewer.add_image(image1)
+viewer.add_image(image2)
