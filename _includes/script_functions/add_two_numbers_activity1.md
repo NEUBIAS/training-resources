@@ -1,3 +1,5 @@
-<h4 id="binary_8bit"><a href="#binary_8bit">Add numbers using a function</a></h4>
+<h4 id="add_func"><a href="#add_func">Add two numbers using a function</a></h4>
 
-This activity shows how to write and call a function (to add two number) within a script.
+Learn how to create a simple function.
+
+Do so by implementing a function that adds two numbers and returns the resulting sum.
