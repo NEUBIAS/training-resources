@@ -9,6 +9,10 @@ layout: base
     
     <script language="javascript" type="text/javascript">
 
+      {%- assign break = " " -%}
+
+      {{ break }}
+
       function setDropdownFromUrl(selectId, selectedValue) 
       {
         console.log(`setDropdownFromUrl called`);
@@ -31,6 +35,8 @@ layout: base
         } 
       }
 
+      {{ break }}
+
       function updateUrlWithSelection(selectId) 
       {
           console.log(`updateUrlWithSelection called with selectId: ${selectId}`); 
@@ -45,77 +51,91 @@ layout: base
           window.history.replaceState({}, '', currentUrl);
         }
 
+        {{ break }}
+      
       function set_view_defaults() 
       {
         {%- assign idx_0 = 0 -%}
         {%- assign close = "();" -%}
         {% for activity in page.multiactivities %}
           {%- assign fun = "set_activity_view_defaults_" | append: idx_0 | append: close -%}
+          {{ break }}
           {{ fun }}
+          {{ break }}
           {%- assign idx_0 = idx_0 | plus:1 -%}
         {% endfor %}
       }
 
       {%- assign idx_0 = 0 -%}
-      {%- assign close = "() {" -%}
+      {%- assign close = "()" -%}
+      
+
       {%- for activity in page.multiactivities -%}
         {%- assign platforms = activity[1] -%}
         {%- assign fun = "function set_activity_view_defaults_" | append: idx_0 | append: close -%}
-        {{ fun }}
+       
+        {{ break }}
+        {{ break }}
+
+        {{ fun }} 
+        {
         {% for platform in platforms %}
           {%- assign id = platform[0] | slugify -%}
           {%- assign activity_div = "-activity-div-" -%}
           {%- assign activity_div_i = id | append: activity_div | append: idx_0 -%}
-          document.getElementById("{{ activity_div_i | slugify }}").style.display = 'none';
+            document.getElementById("{{ activity_div_i | slugify }}").style.display = 'none';
         {% endfor %}
         {% unless site.default-platform == "NONE" %}
-        document.getElementById("{{ site.default-platform | slugify }}-activity-div").style.display = 'block';
+           document.getElementById("{{ site.default-platform | slugify }}-activity-div").style.display = 'block';
         {% endunless %}
-      }
-
-      {%- assign close_call = "();" -%}
-      {%- assign fun = "set_activity_view_defaults_" | append: idx_0 | append: close_call -%}
-      {%- assign close_args = "(form_control) {" -%}
-      {%- assign content_fun = "function change_activity_content_by_platform_" | append: idx_0 | append: close_args -%}
-
-      {{ content_fun }}
-
-      {% for platform in platforms %}
-        {%- assign id = platform[0] | slugify -%}
-        {%- assign activity_div = "-activity-div-" -%}
-        {%- assign activity_div_i = id | append: activity_div | append: idx_0 -%}
-        {%- assign default_val = "null-activity-" | append: idx_0 -%}
-        document.getElementById("{{ activity_div_i | slugify }}").style.display = 'none';
-      {% endfor %}
-
-      if (!form_control || document.getElementById(form_control).value == "{{ default_val }}") 
-      {
-        {{ fun }}
-        {% for platform in platforms %}
-          {%- assign id = platform[0] | slugify -%}
-          {%- assign activity_div = "-activity-div-" -%}
-          {%- assign activity_div_i = id | append: activity_div | append: idx_0 -%}
-          {%- assign val = id | append: "-activity-" | append: idx_0  -%}
-        } 
-        else if (document.getElementById(form_control).value == "{{ val }}") 
-        {
-          document.getElementById("{{ activity_div_i | slugify }}").style.display = 'block';{% endfor %}
-        } 
-        else 
-        {
-          alert("Error: Missing platform value for 'change_activity_content_by_platform()' script!");
         }
 
-        updateUrlWithSelection(form_control);
-        console.log(`change_activity_content_by_platform_{{ idx_0 }} called with form_control: ${form_control}`);
-        console.log(`value: ${document.getElementById(form_control).value}`);
-      }
-      {% assign idx_0 = idx_0 | plus:1 %}
-    {%- endfor -%}
-  }
+        {{ break }}
+        {{ break }}
+
+        {%- assign close_call = "();" -%}
+        {%- assign fun = "set_activity_view_defaults_" | append: idx_0 | append: close_call -%}
+        {%- assign close_args = "(form_control)" -%}
+        {%- assign content_fun = "function change_activity_content_by_platform_" | append: idx_0 | append: close_args -%}
+        
+        {{ content_fun }} 
+        {
+          {% for platform in platforms %}
+            {%- assign id = platform[0] | slugify -%}
+            {%- assign activity_div = "-activity-div-" -%}
+            {%- assign activity_div_i = id | append: activity_div | append: idx_0 -%}
+            {%- assign default_val = "null-activity-" | append: idx_0 -%}
+            document.getElementById("{{ activity_div_i | slugify }}").style.display = 'none';
+          {% endfor %}
+
+          if (!form_control || document.getElementById(form_control).value == "{{ default_val }}") 
+          {
+            {{ fun }}
+          {% for platform in platforms %}
+            {%- assign id = platform[0] | slugify -%}
+            {%- assign activity_div = "-activity-div-" -%}
+            {%- assign activity_div_i = id | append: activity_div | append: idx_0 -%}
+            {%- assign val = id | append: "-activity-" | append: idx_0  -%}
+          } 
+          else if (document.getElementById(form_control).value == "{{ val }}") 
+          {
+            document.getElementById("{{ activity_div_i | slugify }}").style.display = 'block';
+          {% endfor %}
+          } 
+          else 
+          {
+            alert("Error: Missing platform value for 'change_activity_content_by_platform()' script!");
+          }
+
+          updateUrlWithSelection(form_control);
+          console.log(`change_activity_content_by_platform_{{ idx_0 }} called with form_control: ${form_control}`);
+          console.log(`value: ${document.getElementById(form_control).value}`);
+        }
+        {% assign idx_0 = idx_0 | plus:1 %}
+      {%- endfor -%}
 
     window.onload = function() {
-          set_view_defaults();
+        set_view_defaults();
 
         // Ensure the following code runs after set_view_defaults
         console.log(`Parsing URL...`);

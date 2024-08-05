@@ -25,8 +25,10 @@ The whole course will be guided hands-on sessions.
 
 ## Trainers and organisers
 
+- Julian Hennies (EMBL)
+- Dominik Kutra (EMBL)
+- Felix Schneider (EMBL)
 - Christian Tischer (EMBL)
-- ...
 
 ## Teaching tips
 
@@ -42,28 +44,30 @@ Dear Trainers, please consider checking these [teaching tips](https://github.com
 
 ### Basics of automated image batch analysis in python
 
+1. Introduce the general idea of batch processing
+    - Christian Tischer
+    - Ingredients: Loops, File paths, Functions, Data management, Results QC
 1. [Loops](https://neubias.github.io/training-resources/script_for_loop/index.html)
     - Trainer: Felix Schneider
-    - TODO: Felix: check and improve
 1. [String and path manipulations](https://neubias.github.io/training-resources/string_concat/index.html)
-    - TODO: Tischi change to multi-activities
     - Trainer: Dominik Kutra
 1. [Functions](https://neubias.github.io/training-resources/script_functions/index.html)
-    - TODO: Arif check this 
-    - Trainer: Arif Khan
-1. Discuss good practices for input and output file and folder names
     - Trainer: Christian Tischer
-    - Show how the input and output of the "Batch analysis" module
-    - Show this? https://git.embl.de/grp-cba/astrocyte-differentiations/-/blob/main/data_management.md
-    - Recommend saving the analysis script into the same folder structure, with a date?!
+1. Discuss good practices for file and folder names
+    - Trainer: Christian Tischer
+    - Discuss https://git.embl.de/grp-cba/astrocyte-differentiations/-/blob/main/data_management.md
 1. [Batch analysis](https://neubias.github.io/training-resources/batch_processing/index.html)
-    - Trainer: Julian Hennies or Felix Schneider
-    - TODO: Dominik: how hard would it be to save a MoBIE table
-1. Demo batch inspection with MoBIE
+    - Trainer: Julian Hennies
+1. Batch inspection with MoBIE
     - Trainer: Christian Tischer
+    - [Install Fiji/MoBIE](https://github.com/mobie/mobie-viewer-fiji?tab=readme-ov-file#install)
+    - Ideally use the results from the above "batch analysis" module, alternatively [download and unzip these files](https://github.com/NEUBIAS/training-resources/raw/master/image_data/batch_process/inputs_and_outpus.zip)
+    - Inspect the results table (e.g., drag and drop onto Fiji)
+    - Open the data with MoBIE
+        - `Plugins › MoBIE › Open › Open Table...`
+        - If you downloaded the results you need to apply a path mapping
+        - `IJ.run("Open Table...", "table=/Users/tischer/Downloads/batch_processing_in_and_output/batch_processing_results.csv images=image labels=labels pathmapping=/media/julian/Data/courses/2024_3_batch_processing,/Users/tischer/Downloads/batch_processing_in_and_output spatialcalibration=FromImage gridtype=Transformed");`
 
 ## Follow-up courses
 
-- Batch QC of image analysis results 
-    - Using MoBIE to open the images, label masks, and tables
 - Batch running using Nextflow

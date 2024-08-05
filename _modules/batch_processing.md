@@ -41,6 +41,6 @@ learn_next:
 
 external_links:
   - "[Batch processing in ImageJ](https://imagej.net/scripting/batch)"
-  - [MoBIE](https://github.com/mobie/mobie-viewer-fiji)
-  - [ImageDataExplorer](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0273698)
+  - "[MoBIE](https://github.com/mobie/mobie-viewer-fiji)"
+  - "[ImageDataExplorer](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0273698)"
 ---
