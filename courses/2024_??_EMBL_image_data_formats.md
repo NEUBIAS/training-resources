@@ -20,7 +20,7 @@ You will conduct the practical part of the course on your own computer.
 It is required to perform the below installations before the course:
 
 1. [Install Fiji with a few update sites](https://neubias.github.io/training-resources/tool_installation/index.html?id_activity_platform-1=conda-activity-1&id_activity_platform-0=fiji-activity-0#imagej)
-1. [Install and test the python dependencies skimage and napari]((https://neubias.github.io/training-resources/tool_installation/index.html?id_activity_platform-1=conda-activity-1#skimage_napari)
+1. [Install and test the python dependencies skimage and napari](https://neubias.github.io/training-resources/tool_installation/index.html?id_activity_platform-1=conda-activity-1#skimage_napari)
 
 
 ## Schedule 
@@ -36,8 +36,7 @@ The whole course will be guided hands-on sessions.
 
 ## Trainers and organisers
 
-- Julian Hennies (EMBL)
-- Dominik Kutra (EMBL)
+- Bugra Oezdemir (EMBL)
 - Felix Schneider (EMBL)
 - Christian Tischer (EMBL)
 
@@ -55,15 +54,15 @@ Dear Trainers, please consider checking these [teaching tips](https://github.com
 
 ### Modules
 
-1. [Image file formats](https://neubias.github.io/training-resources/image_file_formats/index.html)
+1. [Image data formats](https://neubias.github.io/training-resources/image_file_formats/index.html)
     - Trainer Fiji: Christian Tischer ?     
-    - Trainer python: Felix Schneider ? 
+    - Trainer python: Bugra Oezdemir / Felix Schneider ? 
 1. [TIFF](https://neubias.github.io/training-resources/tiff/index.html)
     - Trainer Fiji: Bugra Oezdemir ?
-    - Trainer python: Bugra Oezdemir ?
-1. [Big image file formats](https://neubias.github.io/training-resources/big_image_file_formats/index.html)
+    - Trainer python: Bugra Oezdemir / Felix Schneider ?
+1. [Big image data formats](https://neubias.github.io/training-resources/big_image_file_formats/index.html)
     - Trainer Fiji: Christian Tischer ?  
     - Trainer python: Felix Schneider ?
-1. [OME Zarr](https://neubias.github.io/training-resources/ome_zarr/index.html)
+1. [OME-Zarr](https://neubias.github.io/training-resources/ome_zarr/index.html)
     - Trainer Fiji: Christian Tischer ?  
     - Trainer python: Bugra Oezdemir ?
