@@ -1,5 +1,5 @@
 ---
-title: Automatic thresholding (histogram-based)
+title: Automatic thresholding
 layout: module
 prerequisites:
   - "[Thresholding](../binarization)"

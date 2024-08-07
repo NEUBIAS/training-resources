@@ -48,9 +48,9 @@ exercises:
  - ["ImageJ Macro, Multiple erosion", "script_for_loop/exercises/script_for_loop_erodeband.md"]
 
 assessment: >
-    
 
 learn_next:
+
 
 external_links:
   - "[ImageJ macro loops](https://imagej.nih.gov/ij/developer/macro/macros.html#loops)"

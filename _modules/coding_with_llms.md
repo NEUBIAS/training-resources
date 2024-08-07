@@ -1,6 +1,7 @@
 ---
 title: Coding with LLMs
 layout: module
+tags: ["scripting"]
 prerequisites:
   - "[Running a script](../script_run)"
 objectives:
