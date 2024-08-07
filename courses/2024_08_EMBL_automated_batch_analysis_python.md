@@ -61,7 +61,7 @@ Dear Trainers, please consider checking these [teaching tips](https://github.com
 1. Batch inspection with MoBIE
     - Trainer: Christian Tischer
     - [Install Fiji/MoBIE](https://github.com/mobie/mobie-viewer-fiji?tab=readme-ov-file#install)
-    - Ideally use the results from the above "batch analysis" module, alternatively [download and unzip these files](https://github.com/NEUBIAS/training-resources/raw/master/image_data/batch_process/inputs_and_outpus.zip)
+    - Ideally use the results from the above "batch analysis" module, alternatively [download and unzip these files](https://github.com/NEUBIAS/training-resources/raw/master/image_data/batch_process/inputs_and_outputs.zip)
     - Inspect the results table (e.g., drag and drop onto Fiji)
     - Open the data with MoBIE
         - `Plugins › MoBIE › Open › Open Table...`
