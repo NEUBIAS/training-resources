@@ -1,7 +1,7 @@
 ---
 title: Correlative image rendering
 layout: module
-tags: ["draft", "visualisation"]
+tags: ["visualisation"]
 prerequisites:
   - "[Spatial calibration](../spatial_calibration)"
   - "[Digital image basics](../pixels)"

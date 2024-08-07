@@ -1,12 +1,12 @@
 ---
-title: Big image data file formats
+title: Big image data formats
 layout: module
-tags: ["draft","chunking","multi-scale"]
+tags: ["chunking","multi-scale"]
 prerequisites:
   - "[Slice viewing](../volume_slicing.md)"
 objectives:
   - "Understand the concepts of lazy-loading, chunking and scale pyramids"
-  - "Know a concrete file format that implements chunking and scale pyramids"
+  - "Know some file formats that implement chunking and scale pyramids"
 motivation: |
   Modern microscopy frequently generates image data in the GB-TB range. Such data cannot be naively opened. First, the data may not fit into the working memory (RAM) of your computer. Second, it would take a lot of time to load the data into the memory. Thus, it is important to know about dedicated concepts and implemenations that enable swift interaction with such big image data.
 

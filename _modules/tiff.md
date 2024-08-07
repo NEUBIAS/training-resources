@@ -1,5 +1,5 @@
 ---
-title: Template
+title: TIFF
 layout: module
 tags: ["draft"]
 prerequisites:
