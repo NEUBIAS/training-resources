@@ -28,8 +28,11 @@ module_order:
 - multidimensional_image_basics
 - datatypes
 - image_file_formats
+- tiff
 - image_inspection_and_presentation
 - volume_slicing
+- big_image_file_formats
+- ome_zarr
 - projections
 - volume_viewer
 - segmentation
@@ -52,8 +55,6 @@ module_order:
 - workflow_nuclei_and_cells_segmentation
 - skeletonization
 - similarity_transforms
-- tiff
-- ome_zarr
 - script_run
 - coding_with_llms
 - script_record
@@ -70,7 +71,6 @@ module_order:
 - deep_learning_run_segmentation
 - manual_segmentation
 - workflow_golgi_per_cell
-- big_image_file_formats
 
 # Sites
 repository: <USERNAME>/<PROJECT>

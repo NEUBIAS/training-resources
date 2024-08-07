@@ -1,5 +1,5 @@
 ---
-title: Image file formats
+title: Image data formats
 layout: module
 prerequisites:
   - "[Basic properties of images and pixels](../pixels)"
