@@ -55,14 +55,14 @@ Dear Trainers, please consider checking these [teaching tips](https://github.com
 ### Modules
 
 1. [Image data formats](https://neubias.github.io/training-resources/image_file_formats/index.html)
-    - Trainer Fiji: Christian Tischer ?     
-    - Trainer python: Bugra Oezdemir / Felix Schneider ? 
+    - Trainer Fiji: Christian Tischer, Alexandra Zakieva ?
+    - Trainer python: Bugra Oezdemir, Felix Schneider ? 
 1. [TIFF](https://neubias.github.io/training-resources/tiff/index.html)
-    - Trainer Fiji: Bugra Oezdemir ?
+    - Trainer Fiji: Bugra Oezdemir, Alexandra Zakieva  ?
     - Trainer python: Bugra Oezdemir / Felix Schneider ?
 1. [Big image data formats](https://neubias.github.io/training-resources/big_image_file_formats/index.html)
-    - Trainer Fiji: Christian Tischer ?  
+    - Trainer Fiji: Christian Tischer, Alexandra Zakieva  ?  
     - Trainer python: Felix Schneider ?
 1. [OME-Zarr](https://neubias.github.io/training-resources/ome_zarr/index.html)
-    - Trainer Fiji: Christian Tischer ?  
+    - Trainer Fiji: Christian Tischer, Alexandra Zakieva  ?  
     - Trainer python: Bugra Oezdemir ?
