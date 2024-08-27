@@ -1,0 +1,4 @@
+- Explore the composite planar rendering of two (or more) (heterodimensional) images.
+- Change the angle and extent (zoom) of the rendered plane.
+- If the data contains both 2-D and 3-D images, observe and discuss how the 2-D image is rendered when "looking from the side".
+- For one (or more) of the images change the mapping from voxel space into the global space.

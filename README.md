@@ -1,4 +1,4 @@
-# Image Analysis Training Resources
+# Bioimage Analysis Training Resource
 
 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/neubias/training-resources)
 
@@ -6,8 +6,22 @@
 
 **[Home page](https://neubias.github.io/training-resources)**
 
+
 This project is intended to collect together various resources
 that can be useful when planning/delivering training in image analysis.
+
+## About 
+
+- [Google slides presentation](https://docs.google.com/presentation/d/1x5euj3p4hoAdOONQbzFA5xf3rnsNeTjC1rpadCbwbQk/edit?usp=sharing)
+- [Recorded webinar](https://www.youtube.com/watch?v=xtm7DAiXtr0)
+
+## Teach
+
+The material in this repository can be flexibly used in many ways.
+
+Some guidance and tips can be found in [`TEACHING_TIPS`](TEACHING_TIPS.md)
+
+## Contribute
 
 Detailed guidance for contributing can be found in [`CONTRIBUTING.md`](CONTRIBUTING.md).
 

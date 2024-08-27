@@ -3,7 +3,7 @@ title: Projections
 layout: module
 prerequisites:
   - "[Basic properties of images and pixels](../pixels)"
-  - "Volume slicing (TODO)"
+  - "[N-dimensional images](../multidimensional_image_basics)"
 
 objectives:
   - "Project multi-dimensional image data into lower dimensions"
@@ -29,19 +29,25 @@ activity_preface: |
   - Open [xyz_16bit__spots.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_16bit__spots.tif)
   - Project along the z axis
   - Compare maximum and sum projection
+    - Understand that the data type of the sum projection may need to be adapted
   - Project along the x and y axis
   - Resample the x and y projections for correct appearance in physical space
 
   ![](/figures/projections_activity.png)
 
-activities:
-  - ["ImageJ GUI Reslice", "projections/activities/projections_imagejgui_reslice.md", "markdown"]
-  - ["ImageJ GUI CLIJ2", "projections/activities/projections_imagejgui_clij2.md", "markdown"]
-  - ["ImageJ GUI TransformJ", "projections/activities/projections_imagejgui_transformj.md", "markdown"]
-
-exercises:
-  - ["ImageJ GUI Reslice", "projections/exercises/projections_imagejgui_reslice.md"]
-  - ["ImageJ GUI CLIJ2", "projections/exercises/projections_imagejgui_clij2.md"]
+multiactivities:
+  - ["projections/projections_act1.md", 
+      [
+        ["ImageJ GUI Reslice", "projections/projections_act1_imagejgui_reslice.md", "markdown"],
+        ["ImageJ GUI CLIJ2", "projections/projections_act1_imagejgui_clij2.md", "markdown"],
+        ["ImageJ GUI TransformJ", "projections/projections_act1_imagejgui_transformj.md", "markdown"],
+        ["skimage napari", "projections/projections_act1_skimage_napari.py", "python"]
+  ]]
+  - ["projections/projections_act2.md", 
+      [
+        ["ImageJ GUI Reslice", "projections/projections_act2_imagejgui_reslice.md"],
+        ["ImageJ GUI CLIJ2", "projections/projections_act2_imagejgui_clij2.md", "markdown"]
+  ]]
 
 assessment: >
 

@@ -17,13 +17,8 @@ concept_map: >
 figure: /figures/template.png
 figure_legend: TODO
 
-activity_preface: |
-  - Open the image [xy_8bit_binary__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__nuclei.tif).
-  - TODO
-
-activities:
-
-exercises:
+multiactivities:
+  - ["template/act01.md", [["ImageJ GUI", "template/act01_imagejgui.md"], ["skimage napari", "template/act01_skimage_napari.py"]]]
 
 assessment: >
 
@@ -38,7 +33,9 @@ assessment: >
     {: .solution}
 
 learn_next:
+  - "[Automatic threshold for binarization](../auto_threshold)"
 
 external_links:
+  - "[Wikipedia: Binary image](https://en.wikipedia.org/wiki/Binary_image)"
 ---
 

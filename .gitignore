@@ -10,3 +10,7 @@ _site*
 .idea
 Thumbs.db
 ~$*
+*.ipynb
+.ipynb_checkpoints
+**/__pycache__/
+Untitl*

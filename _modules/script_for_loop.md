@@ -23,7 +23,6 @@ figure_legend: In a control flow statement a piece of code is repeated (loop) as
 
 
 activity_preface: |
-  ### For loop basics
   - Open a script editor.
   - Open and run a script that contains several repeated operations and explain that you would like to write this part of code in a more simple way. 
   - Explain the different elements of a numeric `for` loop:
@@ -37,6 +36,7 @@ activities:
  - ["ImageJ Macro, loop structure", "script_for_loop/activities/script_for_loop_loopstructure.ijm"]
  - ["ImageJ Macro, example no loop", "script_for_loop/activities/script_for_loop_measure_distances_noloop.ijm"]
  - ["ImageJ Macro, example with loop", "script_for_loop/activities/script_for_loop_measure_distances_withloop.ijm"]
+ - ["Python, for loop", "script_for_loop/script_for_loop_python.py"]
     
 exercise_preface: |
  ### Multiple erosion
@@ -48,9 +48,9 @@ exercises:
  - ["ImageJ Macro, Multiple erosion", "script_for_loop/exercises/script_for_loop_erodeband.md"]
 
 assessment: >
-    
 
 learn_next:
+
 
 external_links:
   - "[ImageJ macro loops](https://imagej.nih.gov/ij/developer/macro/macros.html#loops)"

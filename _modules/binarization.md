@@ -5,10 +5,10 @@ tags: ["segmentation", "binarization"]
 prerequisites:
   - "[Image segmentation](../segmentation)"
   - "[Basic properties of images and pixels](../pixels)"
-  - "[Data types (unsigned 8-bit)](../datatypes)"
+  - "[Data types](../datatypes)"
 objectives:
-  - "Describe the relationship between an intensity image and a derived binary image."
-  - "Apply a threshold to segment an image into foreground and background regions"
+  - "Describe the relationship between an intensity image and a derived binary image"
+  - "Apply threshold to segment an image into foreground and background regions"
 motivation: |
   One strategy to detect objects or specific regions in images is to first distinguish so-called background pixels,
   which do not contain objects or interesting regions from foreground pixels, which mark the areas of interest.
@@ -23,28 +23,13 @@ concept_map: >
     BI --- FG("Foreground pixels (true, 1, 255)")
 
 figure: /figures/binarization.png
-figure_legend: Image before and after binarization
+figure_legend: Image before and after applying a threshold of 73 gray values.
 
-activity_preface: |
-  - Open the binary image [xy_8bit_binary__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__nuclei.tif).
-  - Discuss the image data type and the pixel values.
-  - Open the image [xy_8bit__two_cells.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__two_cells.tif) and binarize it by applying a manually defined threshold.
+multiactivities:
+  - ["binarization/binarization_act1.md", [["ImageJ GUI", "binarization/binarization_act1_imagejgui.md"], ["ImageJ Macro", "binarization/binarization_act1_imagejmacro.ijm"], ["ImageJ Jython", "binarization/binarization_act1_jython.py"], ["skimage napari", "binarization/binarization_act1_skimage_napari.py", "python"],["Galaxy", "binarization/binarization_act1_galaxy.md"]]]
+  - ["binarization/binarization_act2.md", [["ImageJ GUI", "binarization/binarization_act2_imagejgui.md"], ["ImageJ Macro", "binarization/binarization_act2_imagejmacro.ijm"], ["ImageJ Jython", "binarization/binarization_act2_jython.py"], ["ImageJ Jython + input parameters", "binarization/binarization_act2_jython_inputparameters.py"], ["skimage napari", "binarization/binarization_act2_skimage_napari.py"],["Galaxy", "binarization/binarization_act2_galaxy.md"]]]
+  - ["binarization/binarization_act3.md", [["ImageJ GUI", "binarization/binarization_act3_imagejgui.md"]]]
 
-activities:
-  - ["ImageJ GUI", "binarization/activities/binarization_imagejgui.md", "markdown"]
-  - ["ImageJ Macro", "binarization/activities/binarization_imagejmacro.ijm", "java"]
-  - ["ImageJ Jython", "binarization/activities/binarization_jython.py", "python"]
-  - ["MATLAB", "binarization/activities/binarization_matlab.m", "matlab"]
-  - ["KNIME", "binarization/activities/binarization_knime.md", "markdown"]
-  - ["Python", "binarization/activities/binarization.py", "python"]
-
-exercise_preface: |
-  Perform one of the following exercises.
-
-exercises:
-  - ["ImageJ GUI", "binarization/exercises/binarization_imagejgui.md"]
-  - ["ImageJ Macro", "binarization/exercises/binarization_imagejmacro.md"]
-  - ["ImageJ Jython", "binarization/exercises/binarization_jython.md"]
 
 assessment: >
 
@@ -76,7 +61,6 @@ external_links:
   - "[Wikipedia: Binary image](https://en.wikipedia.org/wiki/Binary_image)"
 
 ---
-#### Image thresholding
 A common algorithm for binarization is thresholding. A threshold value `t` is chosen, either manually or automatically,
 and all pixels with intensities below `t` are set to 0, whereas pixels with intensities `>= t` are set to the value for the foreground.
 Depending on the software the foreground value can be different (e.g. 1 in MATLAB or 255 in ImageJ). At any pixel `(x,y)`:

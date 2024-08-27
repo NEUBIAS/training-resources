@@ -14,43 +14,21 @@ motivation: >
 
 concept_map: >
   graph TD
-    li[Label image] --> im("Object intensity measurements")
+    li[Object regions] --> im("Object intensity measurements")
     ii[Intensity image] --> im
-    im --> table["Results table"]
+    im --> table["Objects table<br>oid | sum | mean | mean_bg <br>001 | 222 | 24 | 12 <br> 002 | 500 | 21 | 12 "]
+    style table text-align:left
     ii --> bgm("Background measurement")
     bgm --> table
-    table --> object_column["Columns are intensity features"]
-    object_column -.- |"e.g."| ex["Mean, Sum, Max, ..., Background"] 
-    table --> object_row["Rows are objects"]
    
         
 figure: /figures/measure_intensities.png
-figure_legend: H2b-mCherry widefield image of two cells. Common object intensity measurements, using a label mask and a manual background measurement.
+figure_legend: H2b-mCherry widefield image of two cells with common object and background intensity measurements, using manually drawn regions and/or a label mask image to delineate the objects.
 
-activity_preface: |
-  - Measure intensities (with background subtraction)
-    - Open image [xy_16bit__h2b.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit__h2b.tif)
-      - H2B-mCherry staining acquired with a widefield microscope
-    - Open label mask [xy_8bit_labels__h2b.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__h2b.tif)
-    - Using the label mask, measure the mean and max intensities as well as the objects' pixel area.
-      - Exports the results as a table (and open in a spreadsheet software)
-    - Manually measure the mean intensity in the background.
-      - Add the background measurement as a new column to the table
-    - Create new columns for background corrected mean, max, and sum intensity.
-    - Discuss the measurements' biophysical interpretation
-    - Optional: Repeat measurements with larger labels
-      - Open label mask [xy_8bit_labels__h2b_dilate_labels.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__h2b_dilate_labels.tif)
-      - Appreciate that it is not always clear how large exactly the label regions have to be
-      - Measure the intensities again, now with the larger label mask
-      - Discuss which values changed and by how much percent
-  - Inspect images where intensity quantificaion may not be possible
-    - [xyc_16bit__embryo_transmission_fluorescence.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__embryo_transmission_fluorescence.tif)
-      - Channel 1: Transmission image showing the object location
-      - Channel 2: Fluorescence image that should be quantified within the object
-        - Appreciate that the signal to noise is very low (CCD noise) and it is hard to decide which background to subtract.
-
-activities:
-  - ["ImageJ GUI", "measure_intensities/activities/measure_intensities_imagejgui.md", "markdown"]
+multiactivities:
+  - ["measure_intensities/measure_intensities_act1.md", [["ImageJ GUI ROIs", "measure_intensities/measure_intensities_act1_imagejgui_rois.md"], ["ImageJ GUI MorphoLibJ", "measure_intensities/measure_intensities_act1_imagejgui.md"], 
+  ["skimage napari", "measure_intensities/measure_intensities_act1_skimage_napari.py"]]]
+  - ["measure_intensities/measure_intensities_act2.md", [["skimage napari", "measure_intensities/measure_intensities_act2_skimage_napari.py", "python"]]]
 
 exercises:
   - ["ImageJ GUI", "measure_intensities/exercises/measure_intensities_imagejgui.md"]

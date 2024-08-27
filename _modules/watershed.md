@@ -52,10 +52,10 @@ activity_preface: |
       - For segmenting the three objects one would have to apply a mask to the resulting image (see activities above).
 
 activities:
-- ["ImageJ Macro: MorpholibJ basic watershed", "watershed/activities/morpholibj_basic_watershed.ijm", "java"]
-- ["ImageJ GUI: MorpholibJ basic watershed", "watershed/activities/morpholibj_basic_watershed_imagejgui.md", "markdown"]
-- ["ImageJ Macro: MorpholibJ shape watershed", "watershed/activities/morpholibj_shape_watershed.ijm", "java"]
-- ["ImageJ Macro: MorpholibJ seeded watershed", "watershed/activities/morpholibj_seeded_watershed.ijm", "java"]
+- ["ImageJ Macro: MorpholibJ basic watershed", "watershed/activities/watershed_basic_morpholibj.ijm", "java"]
+- ["ImageJ GUI: MorpholibJ basic watershed", "watershed/activities/watershed_basic_morpholibj_imagejgui.md", "markdown"]
+- ["ImageJ Macro: MorpholibJ shape watershed", "watershed/activities/watershed_shape_morpholibj.ijm", "java"]
+- ["ImageJ Macro: MorpholibJ seeded watershed", "watershed/activities/watershed_seeded_morpholibj.ijm", "java"]
 
 exercise_preface: |
   - Shape watershed

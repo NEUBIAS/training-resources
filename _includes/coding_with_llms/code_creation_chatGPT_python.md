@@ -1,0 +1,19 @@
+- Go to the openAI chatGPT website: [https://chat.openai.com/](https://chat.openai.com/)
+  - You may have to log in, e.g. using your Google account, but it should be for free
+  - You may also have to solve some annoying puzzles to prove that you are human
+- Get started:
+  - Prompt: Which programming languages and which libraries would you recommend for bioimage analysis?
+  - Compare what other course participants got; is it identical?
+- Now ask it to write some code: 
+  - Prompt: Hi, please write python code that opens and displays the image at https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_high_dynamic_range.tif
+  - Execute the code in a python environment (e.g. [the one described here](https://neubias.github.io/training-resources/tool_installation/index.html#skimage_napari)) and check whether it runs!
+    - If it does not run, you may need to tell which libraries you have in your environment, e.g. let it know how you installed your conda environment
+    - You may also ask it how to install the libraries needed to run the code (often it tells you anyway)
+  - Even if it runs, you may want to ask it to use different libraries for certain tasks 
+  - Ask it to explain you some lines of code in detail
+- Experiment with different prompts for the same task, e.g.
+  - Tell it that you are a beginner and would like to have everything explained in detail
+  - Tell it you don't have much time and you only want the most concise code, no explanations
+  - Tell it that you would like to see three different implementations of the same task
+  - ...
+- Continue by asking it to write code for more complex image analysis workflows as suggested in the activity preface   

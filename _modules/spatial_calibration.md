@@ -19,29 +19,23 @@ motivation: >
 
 concept_map: >
   graph TD
-    Im("Image") -->|has many| P("Pixel/Voxel")
-    Im --> |has| C("Calibration")
-    P -->|has| Va("Value")
-    P -->|has| I("Indices")
-    P --> |has| RWC("Real world coordinate")
-    C --> RWC
-    I --> RWC
+    Im("Image") --> P("Pixels")
+    Im --> C("Calibration")
+    P --> Va("Value")
+    P --> I("Indices")
+    I --> CC("Calibrated coordinate")
+    C --> CC
 
 figure: /figures/spatial_calibration.png
 figure_legend: Spatial calibration and size measurements
 
-activity_preface: |
-    - Open image: [xyz_8bit__mitotic_plate_calibrated.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit__mitotic_plate_calibrated.tif)
-    - Emphasize where to find spatial calibration image metadata and why it can be important. 
-    - Explain how to edit spatial calibration and perform consistency checks. 
-    - Show how to measure the Euclidian calibrated distances of pixels in 2D and 3D.
+multiactivities:
+  - ["spatial_calibration/scale_bar.md", [["ImageJ GUI", "spatial_calibration/scale_bar_imagej_gui.md"],["ImageJ Macro", "spatial_calibration/scale_bar_imagej_macro.ijm"]]]
+  - ["spatial_calibration/spatial_calibration_act1.md", [["ImageJ GUI", "spatial_calibration/spatial_calibration_act1_imagejgui.md", "markdown"], 
+  ["skimage napari", "spatial_calibration/spatial_calibration_act1_skimage_napari.py", "python"]]]
+  - ["spatial_calibration/spatial_calibration_act2.md", [["ImageJ GUI", "spatial_calibration/spatial_calibration_act2_imagejgui.md"], ["skimage napari", "spatial_calibration/spatial_calibration_act2_skimage_napari.py", "python"]]]
 
-activities:
-    - ["ImageJ GUI", "spatial_calibration/activities/spatial_calibration_imagejgui.md", "markdown"]
 
-exercises:
-    - ["ImageJ GUI", "spatial_calibration/exercises/spatial_calibration_imagejgui.md"]
-    
 assessment: |
     ### Answer these questions
 

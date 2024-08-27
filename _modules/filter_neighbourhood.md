@@ -23,28 +23,9 @@ figure: /figures/filter_neighbourhood.png
 
 figure_legend: Image filtering with a pixel neighborhood. (a) Raw intensity image with pixel neighborhood (structuring element (SE), outer green box) and central pixel (inner orange box) on which the filtering operation will be performed. (b) Pixel values in the neighborhood. (c) X is the value that would be replaced after operation (indicated as op). Here, max, mean and variance operations are used. Note - One has to carefully look at the data type of the image as some operations can produce large/floating point values. (d) Different SEs (neighborhood in green and affected pixel in orange) top left - SE  completely inside image boundaries; top right - SE at image boundaries (padding needed); bottom left - SE with different shape; bottom right - Line SE.
 
-activity_preface: |
-  - Mean filter
-    - Open [xy_8bit__nuclei_very_noisy.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_very_noisy.tif)
-    - Explore the effect of a mean filter with different radius values.
-  - Structuring element investigation
-    - Sometimes you would like to find out how the SE (the neighborhood) of a filter looks like. One way to do this is to apply a filter to a single white pixel and look at the resulting form.
-    - Open [xy_8bit_binary__one_foreground_pixel.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__one_foreground_pixel.tif)
-    - Find a filter that can help you visualize your SE
-
-activities:
-- ["ImageJ GUI", "filter_neighbourhood/activities/filter_mean_imagejgui.md", "markdown"]
-
-exercise_preface: |
-  - Mean filter for noisy fluorescence microscopy
-    - Open image [xy_8bit__noisy_two_nuclei_close.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_very_noisy_close.tif)
-    - Apply a mean filter to segment the nuclei
-  - Variance filter for electron microscopy
-    - Open image [xy_8bit__em_mitochondria_er.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__em_mitochondria_er.tif)
-    - Apply a variance (or standard deviation) filter to segment the regions contain the sample from the background
-
-exercises:
-- ["ImageJ GUI", "filter_neighbourhood/exercises/filter_mean_variance_imagejgui.md", "markdown"]
+multiactivities:
+  - ["filter_neighbourhood/filter_mean.md", [["ImageJ GUI", "filter_neighbourhood/filter_mean_imagejgui.md"], ["skimage napari", "filter_neighbourhood/filter_mean_skimage_napari.py"]]]
+  - ["filter_neighbourhood/filter_variance.md", [["ImageJ GUI", "filter_neighbourhood/filter_variance_imagejgui.md"], ["ImageJ Macro", "filter_neighbourhood/filter_variance_imagejmacro.md"], ["skimage napari", "filter_neighbourhood/filter_variance_skimage_napari.py"]]]
 
 assessment: >
   #### Fill in the blanks
@@ -62,14 +43,13 @@ assessment: >
     > - Filter can be used to **decrease** the noise in an image
     > - The usage of filters can **increase** the quality of image segmentation/binarization
     {: .solution}
+
 learn_next:
 - "[Morphological filters](../filter_morphological)"
 - "[Median filter](../median_filter)"
 external_links:
 
 ---
-
-### Neighborhood filters
 
 Neighborhood filters comprise two ingredients: a definition of the pixel neighborhood (size and shape) and a mathematical recipe what to compute on this neighborhood.
 The result of this computation will be used to replace the value of the central pixel in the neighborhood. This procedure can be applied to several (all) pixels of an image to obtain a filtered image. The animation shows a square neighborhood (3x3) applied to the inner pixels of the image.

@@ -1,5 +1,5 @@
 ---
-title: Working with strings
+title: Strings and paths
 layout: module
 tags: ["scripting"]
 prerequisites: 
@@ -7,10 +7,10 @@ prerequisites:
 
 objectives:
   - "Construct complex strings, e.g. to produce log messages and create file paths"
-  - "Master the backward slash \\."
+  - "Automatically create paths for saving the results of the analysis of an input image"
 
 motivation: |
-  Combining several strings into a larger string is a prevalent operation in scripting. This is useful, e.g., to create file paths and create log messages. Such concatenation of strings is surprisingly error prone and it is thus important to learn it properly and be aware of all the pitfalls.
+  Combining several strings into a larger string is a prevalent operation in scripting. This is useful, e.g., to create file paths and create log messages. Such concatenation of strings is surprisingly error prone and it is thus important to learn it properly and be aware of all the pitfalls. In addition, it is critical to be able to deal with and manipulate file paths, as this is crucial to write code that automatically saves resulting data at appropriate locations.
 
 concept_map: >
   graph TD
@@ -21,23 +21,9 @@ concept_map: >
 figure: /figures/string_concat.png
 figure_legend: Examples of string expressions as they may appear in a typical bioimage analysis script (in some hypothetical scripting language).
 
-activity_preface: |
-  - Open a script editor.
-  - Create a log message
-    - Define two variables: `i` with value `11` and `n` with value `100`.
-    - Using those two variables create the message: `"Analyzing image 11/100..."`.
-  - Create a file path
-    - Use an in-built function to print the string that separates folders on your operating system
-    - Get the temp folder on your system and store it in a variable
-    - Create a path to a hypothetical file in the temp folder with the help of the separator string
-  - Explore the escape string `\`
-    - Print `\`, depending on the language that may be a little challenge.
-    - Print the string `"\"` (it should actually print the quotation marks!)
-    - Create a string with two sentences and a line break.
-    - Print tab separated values.
-
-activities:
-  - ["ImageJ Macro", "string_concat/activities/string_concat.ijm", "java"]
+multiactivities:
+  - ["string_concat/creating_log_messages.md", [["ImageJ Macro", "string_concat/creating_log_messages.ijm"], ["python", "string_concat/creating_log_messages.py"]]]
+  - ["string_concat/manipulating_file_paths.md", [["ImageJ Macro", "string_concat/manipulating_file_paths.ijm"], ["python", "string_concat/manipulating_file_paths.py"]]] 
 
 exercises:
   - ["ImageJ Macro: Concatenate variables", "string_concat/exercises/string_concat_imagejmacro.md"]

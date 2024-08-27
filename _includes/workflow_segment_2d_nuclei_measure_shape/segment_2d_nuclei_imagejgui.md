@@ -1,0 +1,18 @@
+- `Process › Binary › Options...`
+  - `[X] Black background`, because we work with fluorescence data
+- Open one of the above images
+- `Image › Duplicate...`
+  - `Title = binary`
+- Draw a line profile to find a good threshold
+  - Use the straight line tool in the Fiji menu bar
+  - `Analyze › Plot Profile`
+    - `Live` and move the line around, including nuclei and background pixels
+- `Image › Adjust › Manual Threshold...`
+  - `Min = 25`
+  - `Max = 255`, because this is the maximum of the image data-type
+- `Process › Binary › Convert to Mask`
+- `Plugins › MorphoLibJ › Binary Images › Connected Components Labeling`
+  - `connectivity = 4`, for no good reason... 
+  - `type = 8 bits`, because we will have less than 255 objects
+- `Plugins › MorphoLibJ › Analyze › Analyze Regions`
+  - You may subset the measurements if you are not interested in all
