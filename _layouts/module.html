@@ -188,22 +188,26 @@ layout: base
             document.getElementById("{{ platform[0] | slugify }}-activity-div").style.display = 'none';{% endfor %}{% unless site.default-platform == "NONE" %}document.getElementById("{{ site.default-platform | slugify }}-activity-div").style.display = 'block';{% endunless %}
         }
 
-        function change_activity_content_by_platform(form_control) {
+        function change_activity_content_by_platform(form_control) 
+        {
           console.log(`change_activity_content_by_platform called with form_control: ${form_control}`);
           updateUrlWithSelection(form_control);
           {% for platform in page.activities %}
             document.getElementById("{{ platform[0] | slugify }}-activity-div").style.display = 'none';
           {% endfor %}
-          if (! form_control || document.getElementById(form_control).value == "null-activity") {
+          if (! form_control || document.getElementById(form_control).value == "null-activity") 
+          {
             set_activity_view_defaults();
             {% for platform in page.activities %}
             } else if (document.getElementById(form_control).value == "{{ platform[0] | slugify }}-activity") {
               document.getElementById("{{ platform[0] | slugify }}-activity-div").style.display = 'block';
             {% endfor %}
-        } else {
+          } 
+          else 
+          {
           alert("Error: Missing platform value for 'change_activity_content_by_platform()' script!");
+          }
         }
-      }
 
       function set_exercises_view_defaults () {
         {% for platform in page.exercises %}

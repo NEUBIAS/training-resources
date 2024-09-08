@@ -1,7 +1,7 @@
 ---
 title: Functions
 layout: module
-tags: ["draft","scripting"]
+tags: ["scripting"]
 prerequisites:
   - "[Variables](../script_variables)"
   - "[Loops](../script_for_loops)"

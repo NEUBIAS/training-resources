@@ -1,7 +1,7 @@
 ---
 title:     Loops
 layout:    module
-tags: ["scripting", "draft"]
+tags: ["scripting"]
 objectives:
   - "Use for loops to repeat operations multiple times"
   - "Running a script for multiple files"

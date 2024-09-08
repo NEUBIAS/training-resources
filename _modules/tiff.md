@@ -41,9 +41,8 @@ assessment: >
     {: .solution}
 
 learn_next:
-  - "[Automatic threshold for binarization](../auto_threshold)"
+  - "[OME-Zarr](../ome-zarr)"
 
 external_links:
-  - "[Wikipedia: Binary image](https://en.wikipedia.org/wiki/Binary_image)"
+  - "[Wikipedia: TIFF](https://en.wikipedia.org/wiki/TIFF)"
 ---
-
