@@ -26,7 +26,7 @@ concept_map: >
     MD --> NA("...")
 
 figure: /figures/image_file_formats.png 
-figure_legend: Image pixel data and metadata
+figure_legend: "Image pixel data are saved as binary data on disk. Essential metadata is needed to load the binary data into an image array."
 
 multiactivities:
   - ["image_file_formats/open_czi.md", [["ImageJ GUI", "image_file_formats/open_czi_imagejgui.md"],["python BioIO", "image_file_formats/open_czi_bioio.py"]]]

@@ -28,11 +28,12 @@ module_order:
 - multidimensional_image_basics
 - datatypes
 - image_file_formats
-- tiff
+- big_image_file_formats
+- ome_tiff
+- ome_zarr
+- table_file_formats
 - image_inspection_and_presentation
 - volume_slicing
-- big_image_file_formats
-- ome_zarr
 - projections
 - volume_viewer
 - segmentation

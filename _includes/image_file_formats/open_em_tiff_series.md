@@ -5,7 +5,8 @@
 - Observe that crucial metadata, namely the z slice position, is part of the file name
 - Observe that the pixel calibration metadata is wrong
   - Try to find the metadata at the EMPIAR website 
-- Discuss that while the 2D calibration could be part of the TIFF slice files, it is not so obvious where to store the z spacing, because the individual files are only 2D and thus may not have a metadata tag for the z-dimension  
+- Discuss that while the 2D calibration could be part of the TIFF slice files, it is not so obvious where to store the z spacing, because the individual files are only 2D and thus may not have a metadata tag for the z-dimension
+- Discuss that using [pattern files](https://bio-formats.readthedocs.io/en/stable/formats/pattern-file.html) might be useful for such data that is distributed across multiple files  
 
 ##### Data
 
