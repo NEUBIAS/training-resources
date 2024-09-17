@@ -9,8 +9,6 @@
 
 # %%
 # Load .lif file
-# file needs first to be downloaded from https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz__multiple_images.czi
-# save file in the same directory as this notebook
 # - Observe that BioImage chooses the correct reader plugin
 from bioio import BioImage
 image_url = "https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_xyc__two_images.lif"
