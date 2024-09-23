@@ -4,16 +4,15 @@
 # conda create -n ImageFileFormats python=3.10
 # activate ImageFileFormat
 # pip install bioio bioio-tifffile bioio-lif bioio-czi bioio-ome-tiff bioio-ome-zarr notebook
-# Note: for only dealing with .czi just do pip install bioio bioio-czi
+# Note: for only dealing with .lif just do pip install bioio bioio-lif
 
 
 # %%
-# Load .czi file
-# file needs first to be downloaded from https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz__multiple_images.czi
-# save file in the same directory as this notebook
+# Load .lif file
 # - Observe that BioImage chooses the correct reader plugin
 from bioio import BioImage
-bioimage = BioImage('~/skimage-napari-tutorial/ExampleImages/xyz__multiple_images.czi')
+image_url = "https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_xyc__two_images.lif"
+bioimage = BioImage(image_url)
 print(bioimage)
 print(type(bioimage))
 
