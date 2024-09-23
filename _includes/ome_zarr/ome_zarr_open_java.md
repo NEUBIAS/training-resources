@@ -3,4 +3,4 @@
 Open OME-Zarr data in the Java ecosystem.
 
 - Intensity multi-scale image: `https://s3.embl.de/i2k-2020/platy-raw.ome.zarr`
-- Label mask multi-scale image: `https://s3.embl.de/i2k-2020/platy-raw.ome.zarr/labels`
+- Label mask multi-scale image: `https://s3.embl.de/i2k-2020/platy-raw.ome.zarr/labels/cells`
