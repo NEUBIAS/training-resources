@@ -31,7 +31,7 @@ import tech.tablesaw.api.DoubleColumn;
 import tech.tablesaw.api.IntColumn;
 import tech.tablesaw.api.Table;
 
-public class ExploreTableSawParquet
+public class ParquetTableSaw
 {
     public static void main( String[] args )
     {

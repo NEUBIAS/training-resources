@@ -22,7 +22,7 @@ concept_map: >
     T("TIFF") --- I("Image data and metadata")
     T --- P("Planar image data model")
     T --- V("Variants exist")
-    V --- OT("OME-TIFF is an important variant)
+    V --- OT("OME-TIFF is an important variant")
 
 figure: /figures/tiff.png
 figure_legend: TODO
