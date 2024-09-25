@@ -25,10 +25,10 @@ concept_map: >
     V --- OT("OME-TIFF is an important variant")
 
 figure: /figures/tiff.png
-figure_legend: TODO
+figure_legend: "TIFF is a planar file format, where one TIFF file can contain multiple image planes of different sizes and different data types, which are specified in the respective IFD block. OME-TIFF features an additional OME-XML metadata block, which describes additional important microscopy metadata such as the mapping of IFDs to channel, time-point, and z-plane. In addition, OME-TIFF supports storing different image series within one TIFF file. Within an images series the image datatype, width and height are the same for all planes. In the figure, the OME-TIFF contains two image series, where the first is a z-stack and the second is a multi-channel image." 
 
 multiactivities:
-  - ["ome_tiff/lif2ometiff.md", [["Fiji & NGFF-Converter", "ome_tiff/lif2ometiff_fiji_ngff-converter.md"]]]
+  - ["ome_tiff/lif2ometiff.md", [["NGFF-Converter", "ome_tiff/lif2ometiff_fiji_ngff-converter.md"]]]
 
 assessment: >
 
