@@ -1,0 +1,44 @@
+name: test-python-scripts
+
+on:
+  push:
+    branches:
+      - gh-pages
+      - master
+  pull_request: []
+
+jobs:
+  test-python-scripts:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-latest, windows-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: install xvfb/deps
+        if: matrix.os == 'ubuntu-latest'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -yy mesa-utils libgl1-mesa-dev xvfb curl
+      - uses: conda-incubator/setup-miniconda@v3
+        with:
+          auto-update-conda: false
+          auto-activate-base: true
+          activate-environment: ""
+          channel-priority: strict
+          miniforge-version: latest
+      - name: install common conda dependencies
+        run: conda install -c conda-forge -c euro-bioimaging python=3.10 napari=0.4.17 pytest notebook matplotlib jupytext "scikit-image>=0.20" openijtiff -y
+      - name: linux test
+        if: matrix.os == 'ubuntu-latest'
+        shell: bash -l {0}
+        run: xvfb-run --server-args="-screen 0 1024x768x24" pytest -v test_python
+      - name: osx test
+        if: matrix.os == 'macos-latest'
+        shell: bash -l {0}
+        run: pytest -v test_python
+      - name: windows test
+        if: matrix.os == 'windows-latest'
+        shell: cmd /C CALL {0}
+        run: pytest -v test_python

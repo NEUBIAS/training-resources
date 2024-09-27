@@ -1,4 +1,5 @@
-### Difficult quantification
+<h4 id="difficult"><a href="#difficult">Difficult quantification</a></h4>
+
   - Inspect images where intensity quantification may not be possible
     - [xyc_16bit__embryo_transmission_fluorescence.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__embryo_transmission_fluorescence.tif)
       - Channel 1: Transmission image showing the object location

@@ -1,0 +1,12 @@
+- Open a 3D image
+- Use `Image > Properties` to check for anisotropic voxel sizes
+- Use `Image > Stacks > Orthogonal views` to view the data in XY, XZ and YZ planes 
+- Understand how the anisotropy is dealt with
+- Use `Image > Stacks > Reslice` to resample the data, exploring the below options for dealing with anisotropy
+  - `Output spacing`
+  - `[ ] avoid interpolation`, if this is checked, `Output spacing` is ignored
+- Use the line tool to draw a line ROI and again use `Image > Stacks > Reslice` to resample along this line
+- Slice the data at arbitrary angles using `Plugins > BigDataViewer > Open Current Image]`
+  - `Shift-X/Y/Z`: slice along x,y,z.
+  - `Left button drag`: slice along arbitray plane
+  - `I`: toggle interpolation

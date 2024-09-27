@@ -14,22 +14,20 @@ motivation: >
 
 concept_map: >
   graph TD
-    li[Label image] --> im("Object intensity measurements")
+    li[Object regions] --> im("Object intensity measurements")
     ii[Intensity image] --> im
-    im --> table["Results table"]
+    im --> table["Objects table<br>oid | sum | mean | mean_bg <br>001 | 222 | 24 | 12 <br> 002 | 500 | 21 | 12 "]
+    style table text-align:left
     ii --> bgm("Background measurement")
     bgm --> table
-    table --> object_column["Columns are intensity features"]
-    object_column -.- |"e.g."| ex["Mean, Sum, Max, ..., Background"] 
-    table --> object_row["Rows are objects"]
    
         
 figure: /figures/measure_intensities.png
-figure_legend: H2b-mCherry widefield image of two cells. Common object intensity measurements, using a label mask and a manual background measurement.
+figure_legend: H2b-mCherry widefield image of two cells with common object and background intensity measurements, using manually drawn regions and/or a label mask image to delineate the objects.
 
 multiactivities:
-  - ["measure_intensities/measure_intensities_act1.md", [["ImageJ GUI", "measure_intensities/measure_intensities_act1_imagejgui.md", "markdown"], 
-  ["skimage napari", "measure_intensities/measure_intensities_act1_skimage_napari.py", "python"]]]
+  - ["measure_intensities/measure_intensities_act1.md", [["ImageJ GUI ROIs", "measure_intensities/measure_intensities_act1_imagejgui_rois.md"], ["ImageJ GUI MorphoLibJ", "measure_intensities/measure_intensities_act1_imagejgui.md"], 
+  ["skimage napari", "measure_intensities/measure_intensities_act1_skimage_napari.py"]]]
   - ["measure_intensities/measure_intensities_act2.md", [["skimage napari", "measure_intensities/measure_intensities_act2_skimage_napari.py", "python"]]]
 
 exercises:

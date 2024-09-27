@@ -3,40 +3,29 @@ title:     Object shape measurements
 layout:    module
 
 prerequisites:
-  - "[Connected component analysis](../connected_components)"
+  - "[Connected component analysis](../connected_components)(for practicals that use label masks)"
     
 objectives:
   - Understand shape measurements and their limitations
-  - Perform shape measurements on objects. 
+  - Perform shape measurements on objects
   
 motivation: >
- Our eyes are extremely good in distinguishing forms and patterns and this has proven to be a powerful tool for characterizing different 
- cell-types, functions, phenotypes, etc. In image processing, we use shape measurements (e.g. area, 
- volume, elongation, ...) for an automated and objective characterization of forms. Consequently, one can address
- scientific questions or filter objects that should be used for further processing. 
- Typically, we apply shape measurements on a labeled image. The labeled image, as obtained after a connected component analysis, 
- defines a set of objects in 2D/3D. 
+  Our eyes are extremely good in distinguishing forms and patterns and this has proven to be a powerful tool for characterizing different  cell-types, functions, phenotypes, and more. In image processing, we use shape measurements (e.g. area,  volume, elongation, ...) for an automated and objective characterization of forms. Consequently, one can address scientific questions or filter objects that should be used for further processing.
 
 concept_map: >
   graph TD
-    li[Label Image] --> sa("Shape Analysis")
-    feature_columns -.- |"e.g."| ex["area (volume) <br> perimeter (surface)<br>circularity = 4 Pi A/P^2"]
-    sa --> table("Results table")
-    table --> object_rows["Rows are objects"]
-    table --> feature_columns["Columns are shape features"]
+    li[Object regions] --> sa("Shape Analysis")
+    sa --> table["Object table<br>oid | area | perimeter | circularity <br>001 | 222 | 56 | 0.9 <br> 002 | 500 | 101 | 0.2 "]
+    style table text-align:left
 
-figure: /figures/measure_shapes.jpg
-figure_legend: 
+figure: /figures/measure_shapes.png
+figure_legend: "Left: Fluorescence microscopy of nuclei showing various shapes with three nuclei manually delineated. Right: Label mask image of all nuclei. Bottom: Table with some shape measurements of the manually delineated nuclei." 
 
-activity_preface: |
-    Open an image and perform shape measurements. Explain simple shape features (area, volume, perimeter) and some more complexes
-    like circularity, elongation. Show that results can also be represented as an image.
- 
-activities:
-    - ["ImageJ GUI", "measure_shapes/activities/measure_shapes_imagejgui.md", "markdown"]
+multiactivities:
+  - ["measure_shapes/measure_shapes_act1.md", [["ImageJ GUI ROI", "measure_shapes/measure_shapes_act1_imagejgui_rois.md"],["ImageJ GUI MorphoLibJ", "measure_shapes/measure_shapes_act1_imagejgui.md", "markdown"], ["skimage napari", "measure_shapes/measure_shapes_act1_skimage_napari.py", "python"]]]
+  - ["measure_shapes/measure_shapes_act2.md", [["ImageJ GUI", "measure_shapes/measure_shapes_act2_imagejgui.md", "markdown"], ["skimage napari", "measure_shapes/measure_shapes_act2_skimage_napari.py", "python"]]]
 
-exercises:
-    - ["ImageJ GUI", "measure_shapes/exercises/measure_shapes_imagejgui.md"]
+
 
 assessment: >
 
@@ -57,11 +46,13 @@ assessment: >
 
 learn_next:
   - "[Workflow: Simple 2D object analysis](../workflow_segment_2d_nuclei_measure_shape)"
-  - "[Object intensity meaurements](../measure_intensities)"
+  - "[Object intensity measurements](../measure_intensities)"
 
 external_links:
-  - "[Segmentation Annotator](https://github.com/tischi/segmentation-annotator#segmentation-annotator). Label mask and measurements exploration and annotation in ImageJ"
-  - "[Wikipedia coastal line paradox](https://en.wikipedia.org/wiki/Coastline_paradox). Effect of Sampling and resolution on the measurements"
-  - "[Results visualisation](https://imagej.net/MorphoLibJ#Grayscale_morphological_filters). Label visualization in 3D viewer"
-  - "[Overlay label IDs in ImageJ](https://forum.image.sc/t/overlay-numbers-on-image/35604/6)"
+  - "[ImageJ: Measurements](https://imagej.net/ij/docs/menus/analyze.html#set)"
+  - "[ImageJ: MorphoLibJ](https://imagej.net/MorphoLibJ#Region_analysis)"
+  - "[ImageJ: Results visualisation](https://imagej.net/MorphoLibJ#Grayscale_morphological_filters). Label visualization in 3D viewer"
+  - "[ImageJ: Overlay label IDs](https://forum.image.sc/t/overlay-numbers-on-image/35604/6)"
+  - "[Python: Segmentation and regionprops tutorial](https://jni.github.io/i2k-skimage-napari/lectures/2_segmentation_and_regionprops.html)"
+  - "[Coastal line paradox](https://en.wikipedia.org/wiki/Coastline_paradox). Effect of Sampling and resolution on the measurements"
 ---

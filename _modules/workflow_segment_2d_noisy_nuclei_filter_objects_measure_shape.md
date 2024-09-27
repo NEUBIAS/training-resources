@@ -28,17 +28,8 @@ concept_map: >
 figure: /figures/workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape.png
 figure_legend: Nuclei segmentation and area measurement, including image denoising and object filtering.
 
-activity_preface: |
-  
-  #### Input images
-  - [xy_8bit__nuclei_noisy_small.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_small.tif)
-  - [xy_8bit__nuclei_noisy_large.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_large.tif)
-  
-  #### Workflow:
-  Apply the workflow outlined above (see Concept map and Example figure) to both images. The modules listed in this module's Prerequisites contain the information as to how to conduct each step of the workflow.
-
-activities:
-  - ["ImageJ Macro & GUI", "workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape/activities/segment_2d_noisy_nuclei_and_filter_objects_imagejmacro.ijm", "java"]
+multiactivities:
+  - ["workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape/segment_2d_noisy_nuclei_and_filter_objects.md", [["ImageJ Macro & GUI", "workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape/segment_2d_noisy_nuclei_and_filter_objects_imagejmacro.ijm", "java"], ["skimage and napari", "workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape/segment_2d_noisy_nuclei_and_filter_objects_skimage_napari.py"]]]
 
 exercises:
 

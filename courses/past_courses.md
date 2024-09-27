@@ -1,6 +1,24 @@
 # List of past courses performed using this material
 
-Please note that some links may be outdated as they are from the date of the course. Each module/topic takes about 30-45 min to teach, it starts with an activity and finishes with hands-on by students. 
+Please note that some links may be outdated as they are from the date of the course. Each module/topic takes about 30-45 min to teach, it starts with an activity and finishes with hands-on by students.
+
+# July 2023, ABiS-GBI 2023 course - Image data: image analysis, data management and reuse
+In person course Okazaki and Kobe, Japan, 2023 July 3-7
+See https://github.com/NEUBIAS/training-resources/blob/master/courses/2023_ABIS-GBI_image_data_and_analysis.md for further details.
+
+
+# June 2023, Beginners course for python based image analysis using skimage and napari
+Hybrid course with online sessions and in person hands-on. 
+The hands-on were performed by faculty staff on different sites.
+
+Course dates 2023 June 6, 7, 13. See https://github.com/NEUBIAS/training-resources/blob/master/courses/2023_skimage_napari_beginners.md for further details
+
+# December 2022, Basics of Bioimage Analysis using the ImageJ GUI and scripting
+Course dates 2022 December 7, 8, 9
+In person course at the Max Planck Institute for Experimental Medicine, Heidelberg, 3 days.
+Teacher Antonio Politi, MPI-NAT, Göttingen.
+
+At the end of the course we worked on student projects using their image data. 
 
 # March 2022, ImageJ macro scripting for bioimage analysis
 

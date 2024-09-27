@@ -1,0 +1,5 @@
+- Open the mentioned image(s)
+- Use `Plugins › BigDataViewer › Open Current Image` to inspect the image from different angles
+  - Use `Shift + Y` to look along the y-axis
+  - Use the mouse wheel to move along the y-axis
+  - Appreciate the mentioned effects on the membrane intensities

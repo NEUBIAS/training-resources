@@ -1,7 +1,6 @@
 ---
 title: Digital image basics
 layout: module
-
 prerequisites:
 
 objectives:
@@ -25,60 +24,26 @@ concept_map: >
 figure: /figures/pixels.jpg
 figure_legend:  Digital image pixel array and gray-scale rendering. This array (image) has two dimensions with 21 x 21 elements (pixels). The pixel values (black numbers) can be addressed by their respective pixel indices (green numbers).
 
-activity_preface: |
-  - Open image: [xy_8bit__nuclei_noisy_different_intensity.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_different_intensity.tif)
-  - Explore different ways to inspect pixel values and indices, e.g.,
-    - Examine image dimensions
-    - Examine individual (or a range of) pixel values
-    - Plot line profiles
-    - Compute and plot pixel value histograms
 
-activities:
-  - ["ImageJ GUI", "pixels/pixels_imagejgui.md", "markdown"]
-  - ["MATLAB", "pixels/pixels2D_matlab.m", "matlab"]
-  - ["skimage napari", "pixels/pixels_skimage_napari.py", "python"]
+multiactivities:
+  - ["pixels/pixels_act1.md", [["ImageJ GUI", "pixels/pixels_act1_imagejgui.md"], ["skimage napari", "pixels/pixels_act1_skimage_napari.py"], ["MATLAB", "pixels/pixels_act1_matlab.m"], ["Galaxy", "pixels/pixels_act1_galaxy.md"]]]
+  - ["pixels/pixels_3d_image_inspection.md", [["skimage napari", "pixels/pixels_3d_image_inspection_skimage_napari.py"]]]
+  - ["pixels/collagen_inspection.md", [["ImageJ GUI", "pixels/collagen_inspection_imagejgui.md"]]]
+  
+assessment: |
 
-exercises:
+  ### Answer the question
 
-assessment: >
+  1. If someome gives you a 2D image file and tells you to measure the value of the pixel at the indices `(7,8)` without telling you which programming language to use. Is that a precise enough instruction? If not, how many different pixels could that actually refer to?  
 
-  ### 2-D image inspection
-    Open image
-    [xy_8bit__nuclei_noisy_different_intensity.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_different_intensity.tif).
-    Hint: For certain exercises the inspection of the histogram will help
-    1. What is the value of the pixel at the indices (x=20,y=20)?
-    1. What is the highest value in the image?
-    1. What is the most frequently occurring value in the image?
-    1. Where is this pixel with the indices (x=0,y=0)? Why is this potentially confusing?
-    1. How many pixels does this image have in the x direction?
-    1. What is the highest pixel index in the x direction?
-    1. If you were to rotate the image by 90 degrees, would it change the image histogram?
-
-    > ## Solution
-    > 1. 82
-    > 1. 129
-    > 1. 55
-    > 1. Top left; normally x/y coordinate systems have their origin at the bottom left
-    > 1. 59
-    > 1. 58
-    > 1. No, the gray value histogram is independent of the pixel locations
-  {: .solution}
-
-  ### 3-D image inspection
-    Open image: [xyz_8bit__mri_head.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit__mri_head.tif)
-    1. What is the value of the voxel at the indices (x=93,y=124,z=13)?
-    1. Which is the highest value in the image?
-
-    > ## Solution
-    > 1. 47
-    > 1. 255
-    {: .solution}
-
-exercises:
+  > ## Solution
+  > 1. Unfortunately this instruction is not precise enough and, in practice it could refer to four different pixels, depending on whether this is meant to be zero or one-based indexing and depending whether this is row or column-major ordering. See [here for more details](https://en.wikipedia.org/wiki/Row-_and_column-major_order).
+  {: .solution} 
 
 learn_next:
    - "[Lookup tables](../lut)"
    - "[Spatial calibration](../spatial_calibration)"
+   - "[N-dimensional images](../multidimensional_image_basics)"
    - "[Data types](../datatypes)"
 
 external_links:

@@ -1,0 +1,8 @@
+- Open the 3D image [xyz_8bit__chromosomes.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit__chromosomes.tif).
+  - Observe that the image has 3 dimensions, X, Y, and Z.
+  - Explore the different dimensions using **[ Image > Stacks > Orthogonal Views ]** or **[Ctrl-Shift-H]**.
+  - Explore the effect of wrong calibration:
+    - Open image properties: **[ Image > Properties... ]** or **[Ctrl-Shift-P]**.
+    - Change all dimensions to `1 pixel`.
+    - Observe that the cell now appears as an oval in the `Orthogonal Views`.
+  - Reopen the image in order to have the correct calibration.

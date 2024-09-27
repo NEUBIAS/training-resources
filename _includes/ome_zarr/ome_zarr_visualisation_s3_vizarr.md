@@ -7,4 +7,7 @@ into the Google Chrome's search bar and press enter: \
 https://hms-dbmi.github.io/vizarr/?source=https://s3.embl.de/ome-zarr-course/data/ZARR/$USER/xyzct_8bit__mitosis.ome.zarr 
     - Note: you can find your user name by entering `echo $USER` in the BAND terminal.
 
-Optional: practise vizarr with other self-created OME-Zarrs. 
+- Optional: visualise the following in the same way:
+    - 3D EM data: https://hms-dbmi.github.io/vizarr/?source=https://s3.embl.de/ome-zarr-course/data/ZARR/$USER/xyz_8bit_calibrated__fib_sem_crop.ome.zarr
+    - A well from an HCS plate: https://hms-dbmi.github.io/vizarr/?source=https://s3.embl.de/eosc-future/EUOS/testdata.zarr/A/1
+

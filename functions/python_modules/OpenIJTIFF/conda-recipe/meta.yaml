@@ -1,0 +1,31 @@
+{% set pyproject = load_file_data('pyproject.toml') %}
+{% set python_requirement = "python" + pyproject.get('project').get('requires-python') %}
+
+
+package:
+  name: openijtiff
+  version: {{ pyproject.get('project').get('version') }} 
+
+source:
+  path: ..
+
+
+build:
+  noarch: python
+  script:
+    - python -m pip install --no-deps --ignore-installed .
+
+requirements:
+  build:
+    - {{ python_requirement }}
+    - pip
+  run:
+    - {{ python_requirement }}
+    {% for dep in pyproject.get('project').get('dependencies') %}
+    - {{ dep.lower() }}
+    {% endfor %}
+
+
+test:
+  imports:
+    - OpenIJTIFF

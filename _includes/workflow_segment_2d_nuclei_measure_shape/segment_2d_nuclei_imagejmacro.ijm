@@ -7,6 +7,7 @@
  */
 
 // Threshold parameter
+// Exercise: Explore how choosing a different threshold value affects the measured shapes 
 threshold = 25;
 
 // Code

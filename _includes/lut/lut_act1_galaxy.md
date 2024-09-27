@@ -1,0 +1,19 @@
+- Upload an [image](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_high_dynamic_range.tif) to Galaxy
+    - Go to https://usegalaxy.eu
+    - In the Tools panel on the left, click `Upload Data`
+    - Click `Paste/Fetch data` button
+    - Paste the image url: https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_high_dynamic_range.tif and click the `Start` button
+    - Click the `Close` button after upload finishes, then the image will be available in your Galaxy history.
+- Start the Napari Interactive Tool
+    - In the Tools panel on the left, search for `Run Napari interactive tool`
+    - Select  `xy_8bit_nuclei_high_dynamic_range.tif` from the `Images` dropdown list.
+    - Click the `Run Tool` button. Once the `Open` link appears at the top of the page, click it to open Napari in a separate browser tab.
+    - In the Napari browser tab, navigate to `File -> Open File(s)` and select the image `xy_8bit_nuclei_high_dynamic_range.tif` from the `input` folder.
+- Change the Contrast settings
+	- Experiment with different minimum and maximum values of the `contract limits`.
+	- Notice how, at certain settings, a very dim nucleus becomes visible.
+- Explore different LUTs, e.g.
+	- Go to `File › Open File(s)`
+	- Select the same image `xy_8bit_nuclei_high_dynamic_range.tif` from the `input` folder. A new layer will appear in the bottom left pane.
+    - Change the `colormap` to `turbo`, from the layer options in the top left pane.
+    - Turn on grid mode by clicking the `Grid` button located at the bottom left,second from the right.
