@@ -1,0 +1,11 @@
+- Open one of the example images 
+- Resize the image by zooming in and out, using the arrow up and down keys
+  - Appreciate that this does not change the data: number of pixels and pixel calibration stays the same (`Image > Properties`)
+  - Optionally copy the image at different zoom levels into PowerPoint using `Edit > Copy to System`
+    - Notice that the zoom level does not affect the size of the image in PowerPoint
+- Resize the image using `Image > Scale`
+  - Try both options, using `Scale` or `Width & Height`
+  - `[X] Create new window` to keep the original image
+  - Check the image calibration before and after the scaling, using `Image > Properties`
+  - Explore the different interpolation modes
+  - Optionally Check what happens if you copy and paste the resized images into PowerPoint (see above)

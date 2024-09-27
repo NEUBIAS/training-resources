@@ -15,10 +15,9 @@ motivation: |
 
 concept_map: >
   graph TD
-    V("Pixel value") --> L("Lookup table (LUT)")
+    V("Image pixel value") --> L("Lookup table (LUT)")
     L --> |does not change|V
-    L --> C("Color & Brightness")
-    L -->|often is| A("Adjustable")
+    L --> |changes|C("Displayed pixel color & brightness")
 
 figure: /figures/lut.png
 figure_legend:
@@ -27,17 +26,21 @@ figure_legend:
 multiactivities:
   - ["lut/lut_act1.md", [["ImageJ GUI", "lut/lut_act1_imagejgui.md", "markdown"], 
 	["ImageJ Macro", "lut/lut_act1_imagejmacro.ijm", "java"], 
-	["skimage napari", "lut/lut_act1_skimage_napari.py", "python"]]]
+	["skimage napari", "lut/lut_act1_skimage_napari.py", "python"],["Galaxy Napari","lut/lut_act1_galaxy.md"]]]
   - ["lut/lut_act2.md", [["ImageJ GUI", "lut/lut_act2_imagejgui.md"], 
   ["ImageJ Macro", "lut/lut_act2_imagejmacro.ijm", "java"], 
-	["skimage napari", "lut/lut_act2_skimage_napari.py", "python"]]]
+	["skimage napari", "lut/lut_act2_skimage_napari.py", "python"],["Galaxy Napari","lut/lut_act2_galaxy.md"]]]
 
-
+keypoints:
+  - A LUT has configurable contrast limits that determine the pixel value range that is rendered linearly.
+  - LUT settings must be responsibly chosen to convey the intended scientific message and not to hide relevant information.
+  - A gray scale LUT is usually preferable over a colour LUT, especially blue and red are not well visible for many people. 
+  - For high dynamic range images multi-color LUTs may be useful to visualise a wider range of pixel values.
 assessment: |
 
-  ## Calculate the brightness:
+  ### Compute how the contrast limits affect the rendered pixel brightness
 
-  Use the formula and explanations given in "single color lookup tables" section below.
+  Read the below section "Explanations: Single color lookup tables" and use the formula that is given there to compute the rendered pixel brightness for the following scenarios:
 
   1. `value =  49, min = 10,  max = 50, brightness = ?`
   2. `value = 100, min =  0,  max = 65, brightness = ?`
@@ -45,8 +48,8 @@ assessment: |
 
   > ## Solution
   > 1. `0.975`
-  > 2. `1.538 ( -> 1 )`
-  > 3. `-0.15 ( -> 0 )`
+  > 2. `1.538 -> 1.0`
+  > 3. `-0.22  -> 0.0`  
   {: .solution}
 
   ### Fill in the blanks

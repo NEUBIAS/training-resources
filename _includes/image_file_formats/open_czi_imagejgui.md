@@ -1,0 +1,8 @@
+- Open the file mentioned in the activity using:
+  - [Plugins > Bio-Formats > Bio-Format Importer]
+    - [X] Display metadata
+    - [X] Display OME-XML Metadata
+  - Press [OK]
+  - Select both "Series"
+  - Look at the images
+  - Inspect the metadata

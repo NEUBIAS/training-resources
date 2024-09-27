@@ -1,0 +1,6 @@
+- Open one of the example images with few pixels
+- Resize the image by dragging one of the edges while holding the SHIFT key to keep the proportions
+- Depending on your PowerPoint version the boundaries between the original pixels will likely appear blurred
+- Note if you instead zoom in using `View > Zoom` it may also look blurred
+- Probably the issue is that PowerPoint already applies some interpolation during the loading, which is bad
+- Thus, to properly show scientific image data with only few pixels in PowerPoint you probably have to resize the image _before_ importing it into PowerPoint using some other software such as, e.g. ImageJ

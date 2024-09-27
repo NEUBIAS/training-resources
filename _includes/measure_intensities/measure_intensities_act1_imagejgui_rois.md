@@ -1,0 +1,27 @@
+- Requirements
+  - "Vanilla" Fiji or even only ImageJ without any plugins 
+- Use `File > Open` to open the intensity image that is mentioned in the activity
+- Use `Image > Properties` to convert the calibration to pixel units (if necessary)
+  - Pixel units are more convenient because then area = num_pixels and one can relate the sum and mean intensity via sum = mean * area 
+- Use `Analyse > Tools > ROI Manager` to open the ROI manager
+- Use the ROI tools, e.g. the Polygon selection in the Fiji menu bar to delineate the two nuclei and also a background region
+- Use `ROI Manager > Add` to record each ROI
+- Use `ROI Manger > Rename...` to give them good names
+- Use `ROI Manager > More > Save...` to store the ROIs 
+  - This is important to document your work; the ROI file can be opened via drag&drop on Fiji
+- Use `Analyse > Set Measurements` to configure what to measure: 
+  - [X] Area 
+  - [X] Mean gray value
+  - [X] Min & max gray value 
+  - [X] Display label (adds a column with the object name)
+- Use `ROI Manager > More > Multi Measure` to measure all ROIs at once 
+- Click on the resulting table and save it via `File > Save As...`
+- Open the object table in a spreadsheet software
+  - In Excel use `File > Import` to parse the CSV
+- Compute new columns for
+  - sum intensity = mean * number of pixels
+  - bg corr mean = mean intensity - bg mean
+  - bg corr max = max intensity - bg mean
+  - bg corr sum = sum intensity - bg mean * number of pixels
+- Discuss the biophysical interpretation of the results
+- There is some subjectivity in how to exactly draw the ROIs, thus repeat the activity, drawing the ROIs larger than before and compare the results

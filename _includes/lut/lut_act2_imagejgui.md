@@ -1,8 +1,9 @@
-* Open the files by drag and drop or first download and then [File > Open ...]
-	- [xy_calibrated_16bit__nuclear_protein_control.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_calibrated_16bit__nuclear_protein_control.tif)
-	- [xy_calibrated_16bit__nuclear_protein_treated.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_calibrated_16bit__nuclear_protein_treated.tif)
-* Choose a suitable LUT [Image › Lookup Tables ›  ... ]
-* Adjust brightness and contrast [ Image › Adjust › Brightness/Contrast... ]
-* Use the [ Set ] button in [ Image › Adjust › Brightness/Contrast... ] and check "[X] propagate to ..."
-* Visualise the LUT as an inset in both images using [Analyze › Tools › Calibration Bar...]
-
+- Open one of the above pairs of images
+- Choose a suitable LUT using `Image › Lookup Tables ›  ... `
+- Adjust brightness and contrast in one image using `Image › Adjust › Brightness/Contrast...`
+  - To avoid intensity clipping one typically sets the contrast on the brightest image (this may depend on your scientific question though...)
+  - To find out which image is brighter you can try to use `Analyze > Histogram` 
+- Use the `Set` button in `Image › Adjust › Brightness/Contrast...` and check `[X] Propagate to all other open images`
+- Visualise the current LUT as an inset in both images using `Analyze › Tools › Calibration Bar...`
+    - Export the image using `Plugins › BioVoxxel Figure Tools › Export SVG` (requires BioVoxxel update site)
+        - SVG preserves the rendering of the scale bar at different zoom levels.

@@ -1,0 +1,12 @@
+<h4 id=scale<a href=#scale>Resize an image</a></h4>
+- Open an image 
+- Explore different options to "resize" the image
+- Appreciate that depending on the software, algorithm and interpolation strategy 
+  - The size of the rendered image on your screen may or may not change
+  - The number of pixels in the image data may or may not change ("zooming" vs rescaling)
+  - The boundaries between pixels may stay more or less sharp (nearest vs linear interpolation)
+- Example data:
+  -  TODO: e.g. an calibrated(!) image of ER exit site with only few pixels could be good
+    - Use case: enlarge the image for presenting it, e.g. in a publication figure, without compromising the scientific message 
+  - TODO: a oversampled image, which should be down-scaled for ease of further analysis
+    - Use case: down-scale the image, e.g. to speed up further analysis, without compromising the scientific measurements 
