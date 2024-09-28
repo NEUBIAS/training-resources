@@ -29,6 +29,7 @@ figure_legend: "TIFF is a planar file format, where one TIFF file can contain mu
 
 multiactivities:
   - ["ome_tiff/lif2ometiff.md", [["NGFF-Converter", "ome_tiff/lif2ometiff_fiji_ngff-converter.md"]]]
+  - ["ome_tiff/inspect_metadata.md", [["Fiji Bio-Formats", "ome_tiff/inspect_metadata_fiji_bioformats.md"]]]
 
 assessment: >
 
@@ -48,5 +49,29 @@ learn_next:
 external_links:
   - "[Converting an image series to OME-TIFF](https://forum.image.sc/t/tiff-series-to-ome-ngff/101081/7)"
   - "[Wikipedia: TIFF](https://en.wikipedia.org/wiki/TIFF)"
-  - "[TODO: Add OME-TIFF link]()"
+  - "[OME-TIFF metadata specification](https://www.openmicroscopy.org/Schemas/Documentation/Generated/OME-2016-06/ome_xsd.html#TiffData)"
 ---
+
+#### General comments
+
+The TIFF file format is already complex and the OME-TIFF variant is adding even more metadata on top. To fully understand everything is way beyond the aim of this training material. We will just scratch the surface to understand the most important concepts.
+
+#### IFDs and image planes
+
+TIFF is a planar image data format. Internally there are always pairs of IFD and data blocks. IFD stands for "Image File Directory" and contains information about where the corresponding image data block can be found in the file, the image width and height, as well as its datatype.
+
+One TIFF file can contain many IFD/data pairs.
+
+The IFD/data pairs may contain images of different sizes and different datatypes.
+
+#### Physical pixel size
+
+The TIFF format does natively support storing pixel size metadata, typically in units of centimetre or inches. 
+
+#### Resolution pyramids and chunking
+
+The TIFF format supports the concept of resolution pyramids, and chunked storage of pixels within one plane. However there is no 3-D chunking available. Thus, TIFF can in fact be used as a 2-D big image data format.
+
+#### Channels, z-planes, and time points 
+
+The TIFF format does **not** natively support storing information about which channel, z-plane or time-point an IFD/data pair belongs to. This bioimaging specific information is handled by additional metadata of TIFF variants, such as OME-TIFF.
