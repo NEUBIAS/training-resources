@@ -25,10 +25,11 @@ concept_map: >
     MD --> DS("Display settings")
     MD --> NA("...")
 
-figure: /figures/image_file_formats.png 
+figure: /figures/image_file_formats.png
 figure_legend: "Image pixel data are saved as binary data on disk. Essential metadata is needed to load the binary data into an image array."
 
 multiactivities:
+  - ["image_file_formats/open_tif.md", [["ImageJ GUI", "image_file_formats/open_tif_imagejgui.md"],["python BioIO", "image_file_formats/open_tif_bioio.py"]]]
   - ["image_file_formats/open_czi.md", [["ImageJ GUI", "image_file_formats/open_czi_imagejgui.md"],["python BioIO", "image_file_formats/open_czi_bioio.py"]]]
   - ["image_file_formats/open_em_tiff_series.md", [["ImageJ GUI", "image_file_formats/open_em_tiff_series_imagejgui.md"],["python BioIO", "image_file_formats/open_em_tiff_series_bioio.py"]]]
   - ["image_file_formats/open_diverse_file_formats.md", [["ImageJ GUI", "image_file_formats/open_diverse_file_formats_imagejgui.md"],["python BioIO", "image_file_formats/open_diverse_file_formats_bioio.py"]]]
