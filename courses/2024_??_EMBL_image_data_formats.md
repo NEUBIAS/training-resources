@@ -54,15 +54,25 @@ Dear Trainers, please consider checking these [teaching tips](https://github.com
 
 ### Modules
 
+
+#### Day 1: Fiji / NGFF Converter / Bftools
+
+Trainers: Christian Tischer, Bugra Oezdemir, Alexandra Zakieva(?)
+
 1. [Image data formats](https://neubias.github.io/training-resources/image_file_formats/index.html)
-    - Trainer Fiji: Christian Tischer, Alexandra Zakieva ?
-    - Trainer python: Bugra Oezdemir, Felix Schneider ? 
-1. [TIFF](https://neubias.github.io/training-resources/tiff/index.html)
-    - Trainer Fiji: Bugra Oezdemir, Alexandra Zakieva  ?
-    - Trainer python: Bugra Oezdemir / Felix Schneider ?
 1. [Big image data formats](https://neubias.github.io/training-resources/big_image_file_formats/index.html)
-    - Trainer Fiji: Christian Tischer, Alexandra Zakieva  ?  
-    - Trainer python: Felix Schneider ?
+    - TODO: Implementation Lazy load from TIFF stack in python
+    - TODO: Show opening one HDF5 flavour (BDV, Imaris)
+        - https://imaris.oxinst.com/support/imaris-file-format
+        - Python implementation? => Napari IMS support?
+1. [OME-TIFF](https://neubias.github.io/training-resources/tiff/index.html)
+    - TODO: https://github.com/NEUBIAS/training-resources/issues/729
+    - TODO: ... 
 1. [OME-Zarr](https://neubias.github.io/training-resources/ome_zarr/index.html)
-    - Trainer Fiji: Christian Tischer, Alexandra Zakieva  ?  
-    - Trainer python: Bugra Oezdemir ?
+    - TODO: we know, many (see issues)
+  
+#### Day 2: Python
+
+Same modules as first day but with python implementations.
+
+Trainers: Bugra Oezdemir, Felix Schneider
