@@ -24,7 +24,7 @@ multiactivities:
   - ["ome_zarr/ome_zarr_inspection.md", [["minio-client", "ome_zarr/ome_zarr_inspection_minio-client.md"], ["ome-zarr-py","ome_zarr/ome_zarr_inspection_ome-zarr-py.md"]]]
   - ["ome_zarr/ome_zarr_performance.md", [["vizarr Chrome", "ome_zarr/ome_zarr_performance_vizarr_chrome.md"]]]
   - ["ome_zarr/ome_zarr_creation.md", [["BatchConvert", "ome_zarr/ome_zarr_creation_BatchConvert.md"]]]
-  - ["ome_zarr/ome_zarr_open_java.md", [["Fiji/MoBIE", "ome_zarr/ome_zarr_open_java_mobie.md"]]]
+  - ["ome_zarr/ome_zarr_open_java.md", [["Fiji/MoBIE", "ome_zarr/ome_zarr_open_java_mobie.md"], ["Fiji/n5-ij-viewer", "ome_zarr/ome_zarr_open_java_n5-ij-viewer.md"]]]
   - ["ome_zarr/ome_zarr_visualisation.md", [ ["napari","ome_zarr/ome_zarr_visualisation_napari.md"], ["Fiji/MoBIE", "ome_zarr/ome_zarr_visualisation_s3_mobie.md"], ["Neuroglancer","ome_zarr/ome_zarr_visualisation_s3_neuroglancer.md"], ["vizarr","ome_zarr/ome_zarr_visualisation_s3_vizarr.md"]]]
   - ["ome_zarr/ome_zarr_segmentation.md", [["ZarrSeg", "ome_zarr/ome_zarr_segmentation_zseg.md"]]]
 
