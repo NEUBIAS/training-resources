@@ -1,4 +1,4 @@
-<h4 id="ome-zarr-open-java"><a href="ome-zarr-open-java">Open OME-Zarr in Java ecosystem</a></h4>
+<h4 id="ome-zarr-open-java"><a href="#ome-zarr-open-java">Open OME-Zarr in Java ecosystem</a></h4>
 
 Open OME-Zarr data in the Java ecosystem.
 

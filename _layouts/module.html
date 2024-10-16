@@ -289,6 +289,14 @@ layout: base
   <br>
   <br>
 
+  <div class="module-content">
+    {{ content }}
+  </div>
+
+  <br>
+  <br>
+  <br>
+
   {% if page.multiactivities %}
     <h2 id="activities"><a href="#activities">Activities</a></h2>
     {%- assign idx_0 = 0 -%}
@@ -306,7 +314,7 @@ layout: base
       <select id="{{ iap }}" name="activityplatformlist" onchange="{{ fun }}">
         {% if site.default-platform == "NONE" %}
           <option value="null-activity-{{ idx_0 }}" id="default-activity-option-{{ idx_0 }}" selected="selected">
-            Select a platform...
+            Select an implementation...
           </option>
         {% else %}
           <option value="{{ site.default-platform | slugify }}-activity-{{ idx_0 }}" id="{{ site.default-platform | slugify }}-option-{{ idx_0 }}" selected="selected">
@@ -372,7 +380,7 @@ layout: base
       <select id="id_activity_platform" name="activityplatformlist" onchange="change_activity_content_by_platform('id_activity_platform');return false;">
         {% if site.default-platform == "NONE" %}
           <option value="null-activity" id="default-activity-option" selected="selected">
-            Select a platform...
+            Select an implementation...
           </option>
         {% else %}
           <option value="{{ site.default-platform | slugify }}-activity" id="{{ site.default-platform | slugify }}-option" selected="selected">
@@ -431,7 +439,7 @@ layout: base
     <select id="id_exercises_platform" name="exercisesplatformlist" onchange="change_exercises_content_by_platform('id_exercises_platform');return false;">
       {%- if site.default-platform == "NONE" -%}
         <option value="null-exercises" id="null-exercises-option" selected="selected">
-          Select a platform...
+          Select an implementation...
         </option>
       {%- else -%}
         <option value="{{ site.default-platform | slugify }}-exercises" id="{{ site.default-platform | slugify }}-exercises-option" selected="selected">
@@ -496,11 +504,6 @@ layout: base
     </blockquote>
   {% endif %}
 
-
-  <h2>Explanations</h2>
-  <div class="module-content">
-    {{ content }}
-  </div>
 
   <br>
   <br>

@@ -1,0 +1,13 @@
+- Open Fiji with the [MoBIE update site installed](https://github.com/mobie/mobie-viewer-fiji?tab=readme-ov-file#install).
+- Use MoBIE to inspect segmented nuclei and nuclei measurements
+- [ Plugins › MoBIE › Open › Open Image and Labels... ]
+   - Image URI: [ Browse ] to `Well_1_C0.tif` and then, to open all wells, replace `_1_` by `_.*_` such that it reads `.../Well_.*_C0.tif`
+   - Label Mask URI: [ Browse ] to `Well_1_nuclei_labels.tif` and, as above, replace `_1_` by `_.*_`
+   - Label Mask Table URI: [ Browse ] to `Well_1_nuclei.txt` and, as above, replace `_1_` by `_.*_`
+   - SpatialCalibration: Does not matter here, because the images are only in pixel units anyway
+   - Grid: Transformed (Stitched performs better if you have >100 images)
+   - Click [ OK ]
+- The MoBIE UI and BigDataViewer will open allowing you to conveniently browse all data
+- Browsing suggestions:
+   - Sort the nuclei table by `AreaShape_Area` and browse to the largest and smallest nuclei, as those are likely representing segmentation errors
+   - In the table, use "Color by Column", select a measurement and color it using the blue-white-red LUT 

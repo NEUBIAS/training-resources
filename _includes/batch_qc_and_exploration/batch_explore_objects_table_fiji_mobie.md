@@ -1,0 +1,17 @@
+- Open Fiji with the [MoBIE update site installed](https://github.com/mobie/mobie-viewer-fiji?tab=readme-ov-file#install).
+- Open `All_Wells_cells.txt` and identify the columns that contain file names, as those will be needed to open the table with MoBIE
+- [ Plugins › MoBIE › Open › Open Table... ]
+   - Table Path: [ Browse ] to `All_Wells_cells.txt`
+   - Image Path Column(s): `FileName_DNA, FileName_PLA`
+   - Labels Path Column(s): `FileName_CellLabels, FileName_PLALabels`
+   - Data Root Folder: [ Browse ] to data folder
+   - SpatialCalibration: Does not matter as everything is in pixel units
+   - Grid: Transformed (Stitched performs better if you have >100 images)
+   - Click [ OK ]
+- The MoBIE UI and BigDataViewer will open allowing you to conveniently browse all data
+- Browsing suggestions:
+   - Cell table: `Color > Color by Column`: `Children_PLA_dots_Count` with `blueWhiteRed` LUT
+      - This will paint cells red that have a lot of PLA spots
+   - Image table: `Color > Color by Column`: `Mean [Object Number]` with `blueWhiteRed` LUT
+      - This will outline images red that have a lot of cells
+   
