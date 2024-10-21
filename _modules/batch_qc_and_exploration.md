@@ -24,6 +24,7 @@ figure_legend: "Depiction of a typical bioimage analysis workflow, where batch a
 multiactivities:
   - ["batch_qc_and_exploration/batch_explore_segmented_images.md", [["Fiji MoBIE", "batch_qc_and_exploration/batch_explore_segmented_images_fiji_mobie.md"], ["napari (TODO)", "batch_qc_and_exploration/batch_explore_segmented_images_napari.py"]]]
   - ["batch_qc_and_exploration/batch_explore_segmented_images_and_object_measurements.md", [["Explore Images & Labels & Tables - Fiji MoBIE", "batch_qc_and_exploration/batch_explore_segmented_images_and_object_measurements_fiji_mobie.md"], ["Explore Objects Table - Fiji MoBIE", "batch_qc_and_exploration/batch_explore_objects_table_fiji_mobie.md"]]]
+  - ["batch_qc_and_exploration/batch_explore_ilastik_output.md", [["Explore ilastik tracking results - Fiji MoBIE", "batch_qc_and_exploration/batch_explore_ilastik_tracking_results_fiji_mobie.md"]]]
 
 assessment: >
 
