@@ -1,4 +1,5 @@
-- Open Fiji with the [MoBIE update site installed](https://github.com/mobie/mobie-viewer-fiji?tab=readme-ov-file#install).
+- Open Fiji with the [MoBIE update site installed](https://github.com/mobie/mobie-viewer-fiji?tab=readme-ov-file#install)
+- Inspect `Well_1_nuclei.txt` in Fiji and observe that the table contains measurements for each nucleus 
 - Use MoBIE to inspect segmented nuclei and nuclei measurements
 - [ Plugins › MoBIE › Open › Open Image and Labels... ]
    - Image URI: [ Browse ] to `Well_1_C0.tif` and then, to open all wells, replace `_1_` by `_.*_` such that it reads `.../Well_.*_C0.tif`
@@ -10,4 +11,7 @@
 - The MoBIE UI and BigDataViewer will open allowing you to conveniently browse all data
 - Browsing suggestions:
    - Sort the nuclei table by `AreaShape_Area` and browse to the largest and smallest nuclei, as those are likely representing segmentation errors
-   - In the table, use "Color by Column", select a measurement and color it using the blue-white-red LUT 
+   - BDV: Ctrl+Click on a particularly large nucleus and observe that the corresponding table row is moved to the top of the table
+   - Table menu: Color > Color by Column, select the `AreaShape_Area` measurement and color it `blue-white-red`
+   - Table menu: Annotate (this requires some practice...)
+

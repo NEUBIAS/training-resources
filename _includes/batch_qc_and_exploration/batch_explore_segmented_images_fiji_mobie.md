@@ -14,5 +14,10 @@
    - Click [ OK ]
 - The MoBIE UI and BigDataViewer will open allowing you to conveniently browse all data
 - Browsing suggestions
-   - [ Ctrl L ] to shuffle the label colors
+   - Use [ Ctrl L ] to shuffle the nuclei label colors
    - Use the table to move between images
+   - Table Menu: Table > Add text column, call it "Notes" and add comments while browsing through the table
+   - Explore the MoBIE layers UI, e.g.
+      - Fit to page button
+      - Toggle layers on and off
+      - Change the labels layer opacity
