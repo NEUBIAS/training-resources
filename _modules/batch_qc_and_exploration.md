@@ -14,7 +14,7 @@ concept_map: >
     I("Images") --> BA("Batch analysis")
     BA --> S("Segmentations") 
     S --> M("Object measurements")
-    I --> Q("Visual QC")
+    I --> Q("Visual inspection")
     S --> Q
     M --> Q
 
