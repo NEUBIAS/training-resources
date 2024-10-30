@@ -22,10 +22,10 @@ kind: "lesson"
 module_order:
 - pixels
 - binarization
+- filter_morphological
 - connected_components
 - measure_shapes
 - spatial_calibration
-- filter_morphological
 - multidimensional_image_basics
 - datatypes
 - image_file_formats
