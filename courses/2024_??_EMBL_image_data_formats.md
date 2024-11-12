@@ -27,7 +27,8 @@ It is required to perform the below installations before the course:
 
 The whole course will be guided hands-on sessions.
 
-- **2024 MM DD, 9:30 - 12:00** 
+- 2025 Jan 16, 9:30 - 17:00
+- 2025 Jan 17, 9:30 - 17:00
 
 ## Venue
 
@@ -55,7 +56,7 @@ Dear Trainers, please consider checking these [teaching tips](https://github.com
 ### Modules
 
 
-#### Day 1: Fiji / NGFF Converter / Bftools
+#### Day 1: GUI/CLI: Fiji / NGFF Converter / Bftools
 
 Trainers: Christian Tischer, Bugra Oezdemir, Alexandra Zakieva(?)
 
@@ -71,7 +72,7 @@ Trainers: Christian Tischer, Bugra Oezdemir, Alexandra Zakieva(?)
 1. [OME-Zarr](https://neubias.github.io/training-resources/ome_zarr/index.html)
     - TODO: we know, many (see issues)
   
-#### Day 2: Python
+#### Day 2: Python (optional)
 
 Same modules as first day but with python implementations.
 
