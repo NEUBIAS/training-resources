@@ -1,4 +1,4 @@
-<h4 id="lif2ometiff"><a href="#lif2ometiff">Convert LIF to OME-TIFF</a></h4>
+<h4 id="convert"><a href="#convert">Convert an image file to OME-TIFF</a></h4>
 
 - Download the Leica image file [image.lif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_xyc__two_images.lif)
 - Open the file
