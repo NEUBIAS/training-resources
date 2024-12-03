@@ -55,7 +55,7 @@ authors:
 
 
 title: "Modular training resources for bioimage analysis"
-version: 1.0.0
-doi: TBD
-date-released: TBD
+version: 1.0.1
+doi: 10.5281/zenodo.14264885
+date-released: 2024.12.03
 url: "https://github.com/NEUBIAS/training-resources"
