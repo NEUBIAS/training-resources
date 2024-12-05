@@ -1,6 +1,12 @@
 cff-version: 1.2.0
 message: "If you use this repository, please cite it as below."
 authors:
+  - family-names: "Tischer"
+    given-names: "Christian"
+    orcid: "https://orcid.org/0000-0003-4105-1990"
+  - family-names: "Politi"
+    given-names: "Antonio"
+    orcid: "https://orcid.org/0000-0003-4788-0933"
   - family-names: "Buchholz"
     given-names: "Tim-Oliver"
     orcid: "https://orcid.org/0000-0001-6953-8915"
@@ -33,9 +39,6 @@ authors:
   - family-names: "Oezdemir"
     given-names: "Bugra"
     orcid: "https://orcid.org/0000-0001-9823-0581"
-  - family-names: "Politi"
-    given-names: "Antonio"
-    orcid: "https://orcid.org/0000-0003-4788-0933"
   - family-names: "Schneider"
     given-names: "Felix"
     orcid: "https://orcid.org/0000-0002-9958-8961"
@@ -47,9 +50,6 @@ authors:
   - family-names: "Sun"
     given-names: "Yi"
     orcid: "https://orcid.org/0000-0002-7636-0200"
-  - family-names: "Tischer"
-    given-names: "Christian"
-    orcid: "https://orcid.org/0000-0003-4105-1990"
   - family-names: "Vakili"
     given-names: "Nima"
 
