@@ -1,7 +1,8 @@
 # Bioimage Analysis Training Resources
 
 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/neubias/training-resources)
-[![DOI](https://zenodo.org/badge/{github_id}.svg)](https://zenodo.org/badge/latestdoi/{github_id})
+
+[![DOI](https://zenodo.org/badge/2157566.svg)](https://zenodo.org/badge/latestdoi/2157566)
 
 **[Module overview](https://neubias.github.io/training-resources/all-modules)**
 
