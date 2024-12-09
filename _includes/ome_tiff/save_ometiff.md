@@ -1,6 +1,3 @@
-<h4 id="save"><a href="#save">Save... OME-TIFF metadata</a></h4>
+<h4 id="save"><a href="#save">Save... OME-TIFF</a></h4>
 
-- Download the OME-TIFF image file [xy_xyc__two_images.ome.tiff](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_xyc__two_images.ome.tiff)
-- Open the OME-XML metadata of this file and try to understand it
-- Interesting entries entail:
-    - `PixelPhysicalSize`
+Save image file as OME-TIFF.
