@@ -1,3 +1,3 @@
-<h4 id="saving"><a href="#saving">Save</a></h4>
+<h4 id="save"><a href="#save">Save OME-Zarr</a></h4>
 
-Save an image from various tools to OME-Zarr
+Save data to OME-Zarr
