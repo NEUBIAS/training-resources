@@ -4,20 +4,10 @@ import zarr, s3fs, os, pprint
 import numpy as np
 ```
 
-**Open a remote OME-Zarr using `s3fs` and `zarr`**
+**Open a remote OME-Zarr using `zarr.open_group`**
 ```Python
-# credentials_key = "your_access_key"
-# credentials_secret = "your_secret_key"
-credentials_endpoint_url = "https://uk1s3.embassy.ebi.ac.uk"
-credentials_region_name = 'eu-west-2'
-
-s3 = s3fs.S3FileSystem(anon = True, 
-                       endpoint_url=credentials_endpoint_url, 
-                       client_kwargs=dict(region_name = credentials_region_name)
-                       )
-# s3.ls('idr/')
-store = s3fs.S3Map(root='idr/zarr/v0.4/idr0062A/6001240.zarr', s3=s3, check=False)
-dataset = zarr.open_group(store=store, mode = 'r')
+url = "https://uk1s3.embassy.ebi.ac.uk/idr/zarr/v0.4/idr0062A/6001240.zarr"
+dataset = zarr.open_group(url, mode = 'r')
 print(f"Type of the dataset: {type(dataset)}")
 ```
 

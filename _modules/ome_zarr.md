@@ -27,7 +27,7 @@ multiactivities:
             ["Inspect and validate OME-Zarr in Python using ome-zarr-validator","ome_zarr/validate_ome_zarr_ome-zarr-validator.md"],
             ["Open local OME-Zarr in Python using zarr-python","ome_zarr/open_local_ome_zarr_zarr-python.md"],
             ["Open remote OME-Zarr in Python using zarr-python","ome_zarr/open_remote_ome_zarr_zarr-python.md"],
-            ["Open OME-Zarr in Python using ome-zarr-py","ome_zarr/open_remote_ome_zarr_ome-zarr-py.md"],
+            ["Open OME-Zarr in Python using ome-zarr-py","ome_zarr/open_ome_zarr_ome-zarr-py.md"],
             ###
             ["Open OME-Zarr in Fiji using MoBIE", "ome_zarr/ome_zarr_open_java_mobie.md"],
             ["Open OME-Zarr in Fiji using n5-ij", "ome_zarr/ome_zarr_open_java_n5-ij.md"],

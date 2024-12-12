@@ -1,6 +1,6 @@
 **Import the relevant tools:**
 
-```Python
+```python
 import zarr, os
 import numcodecs
 from ome_zarr import writer, scale
@@ -10,7 +10,7 @@ from skimage.data import astronaut
 
 **Create fake data:**
 
-```Python
+```python
 data = astronaut().transpose()
 ```
 
@@ -20,7 +20,7 @@ For the sake of simplicity, here we demonstrate how to write to a local store.
 It is also possible to write to a remote location by simply specifying a remote 
 url as input to the `parse_url` function.
 
-```Python
+```python
 # Specify the path where you want to write
 output_path = f"{os.path.expanduser('~')}/ome_zarr_course/data/zarr/outputs/astronaut.zarr"
 # Parse the url as a zarr store. Note that "mode = 'w'" enables writing to this store.
@@ -33,7 +33,7 @@ root = zarr.open_group(store)
 In order to create an image pyramid, one has to instantiate a scaler. 
 This scaler requires the parameters: scale factor, number of resolution
 layers and downscaling method.
-```Python
+```python
 scaler = scale.Scaler(downscale=2, # Downscaling factor fox x and y axes
                       max_layer=4, # Number of downscalings
                       method = 'nearest' # downscaling method
@@ -45,7 +45,7 @@ scaler = scale.Scaler(downscale=2, # Downscaling factor fox x and y axes
 This dictionary will impose the axis order and the units corresponding to 
 each axis.
 
-```Python
+```python
 axes = [
     dict(name = 'c', type = 'channel'),
     dict(name = 'y', type = 'space', unit = 'micrometer'),
@@ -61,7 +61,7 @@ for different types of coordinate transforms. Each inner list must
 contain a scaling transform, a dictionary that takes `scale` as key 
 and an iterable of voxel sizes as value.
  
-```Python
+```python
 coordinate_transforms = [
     [{'scale': [1, 0.2, 0.2], 'type': 'scale'}],
     [{'scale': [1, 0.4, 0.4], 'type': 'scale'}],
@@ -78,7 +78,7 @@ parameters. The `chunks` parameter is simply a tuple of integers corresponding
 to each axis. The `compression` parameter requires compressor object from 
 the `Numcodecs` package, which is a dependency of `zarr-python`.
 
-```Python
+```python
 storage_options=dict(
                     chunks=(1, 64, 64),  # Output chunk shape
                     compression = numcodecs.Zlib(), # Compressor to be used, defaults to numcodecs.Blosc()
@@ -92,7 +92,7 @@ Here we use the `ome_zarr.writer.write_image` function to save the array.
 This function takes the parameters specified above as input, downscales the 
 array accordingly and writes the resulting pyramid to the specified zarr group. 
 
-```Python
+```python
 writer.write_image(image = data, # In this case, a numpy array
                    group = root,
                    axes = axes, # Dimensionality order

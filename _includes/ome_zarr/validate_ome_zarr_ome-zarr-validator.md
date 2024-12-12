@@ -25,7 +25,7 @@ Enter the following into your browser: `https://ome.github.io/ome-ngff-validator
 
 Then paste the dataset url after the 'equal' sign, constructing the following link: 
 
-https://ome.github.io/ome-ngff-validator/?source=https://uk1s3.embassy.ebi.ac.uk/idr/zarr/v0.4/idr0062A/6001240.zarr 
+[https://ome.github.io/ome-ngff-validator/?source=https://uk1s3.embassy.ebi.ac.uk/idr/zarr/v0.4/idr0062A/6001240.zarr](https://ome.github.io/ome-ngff-validator/?source=https://uk1s3.embassy.ebi.ac.uk/idr/zarr/v0.4/idr0062A/6001240.zarr) 
 
 
 
