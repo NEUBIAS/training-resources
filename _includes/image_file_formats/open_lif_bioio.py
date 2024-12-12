@@ -1,5 +1,5 @@
 # %% 
-# Open a CZI image file
+# Open a LIF image file
 # minimal conda env for this module
 # conda create -n ImageFileFormats python=3.10
 # activate ImageFileFormat

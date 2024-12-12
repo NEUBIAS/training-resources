@@ -1,4 +1,4 @@
-<h4 id="spots"><a href="#spots">Apply various thresholds to one image</a></h4>
+<h4 id="spots"><a href="#spots">Threshold nuclei and intra-nuclear speckles</a></h4>
 
 - Open [xy_8bit__PCNA.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__PCNA.tif)
 - Apply a threshold value such that there are two foreground nuclei

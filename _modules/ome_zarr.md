@@ -20,6 +20,7 @@ concept_map: >
 figure: /figures/ome-zarr.png
 figure_legend: 
 
+
 multiactivities:
   - ["ome_zarr/open_ome_zarr.md", [
             ["Inspect OME-Zarr datasets using minio-client", "ome_zarr/ome_zarr_inspection_minio-client.md"], 
@@ -44,7 +45,6 @@ multiactivities:
             ["BatchConvert", "ome_zarr/ome_zarr_creation_BatchConvert.md"]
         ]
   ]
-
 
 assessment: >
 
