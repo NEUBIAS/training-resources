@@ -1,3 +1,3 @@
-<h4 id="creation"><a href="#creation">OME-Zarr creation</a></h4>
+<h4 id="convert"><a href="#convert">Convert an image file to OME-Zarr</a></h4>
 
-Create OME-Zarr data from data stored in monolithic file formats.
+Convert monolithic file formats to the OME-Zarr format.

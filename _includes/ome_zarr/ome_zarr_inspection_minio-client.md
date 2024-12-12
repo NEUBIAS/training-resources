@@ -1,3 +1,7 @@
+**Connect to the s3 bucket using credentials:**
+
+mc alias set s3 https://s3.embl.de T0XMlxMdq8C6rSxurrdqMqHNrhyhC4f0 dRFXoR852egFtp3lC9NJPYjpPaCBNRa8
+
 **Check out what we have at our s3 bucket:**
 ``` 
 mc tree -d 2 s3/ome-zarr-course/
