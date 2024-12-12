@@ -21,14 +21,29 @@ figure: /figures/ome-zarr.png
 figure_legend: 
 
 multiactivities:
-  - ["ome_zarr/ome_zarr_inspection.md", [["minio-client", "ome_zarr/ome_zarr_inspection_minio-client.md"], ["ome-zarr-py","ome_zarr/ome_zarr_inspection_ome-zarr-py.md"]]]
-  - ["ome_zarr/ome_zarr_creation.md", [["BatchConvert", "ome_zarr/ome_zarr_creation_BatchConvert.md"]]]
-  - ["ome_zarr/ome_zarr_open_java.md", [["Fiji/MoBIE", "ome_zarr/ome_zarr_open_java_mobie.md"], ["Fiji/n5-ij-viewer", "ome_zarr/ome_zarr_open_java_n5-ij-viewer.md"]]]
-  - ["ome_zarr/ome_zarr_visualisation.md", [ ["napari","ome_zarr/ome_zarr_visualisation_napari.md"], ["Fiji/MoBIE", "ome_zarr/ome_zarr_visualisation_s3_mobie.md"], ["Neuroglancer","ome_zarr/ome_zarr_visualisation_s3_neuroglancer.md"], ["vizarr","ome_zarr/ome_zarr_visualisation_s3_vizarr.md"]]]
-  - ["ome_zarr/ome_zarr_segmentation.md", [["ZarrSeg", "ome_zarr/ome_zarr_segmentation_zseg.md"]]]
-
-
-
+  - ["ome_zarr/open_ome_zarr.md", [
+            ["Inspect OME-Zarr datasets using minio-client", "ome_zarr/ome_zarr_inspection_minio-client.md"], 
+            ["Inspect OME-Zarr datasets using ome_zarr_py client","ome_zarr/ome_zarr_inspection_ome-zarr-py.md"],
+            ["Inspect and validate OME-Zarr in Python using ome-zarr-validator","ome_zarr/validate_ome_zarr_ome-zarr-validator.md"],
+            ["Open local OME-Zarr in Python using zarr-python","ome_zarr/open_local_ome_zarr_zarr-python.md"],
+            ["Open remote OME-Zarr in Python using zarr-python","ome_zarr/open_remote_ome_zarr_zarr-python.md"],
+            ["Open OME-Zarr in Python using ome-zarr-py","ome_zarr/open_remote_ome_zarr_ome-zarr-py.md"],
+            ###
+            ["Open OME-Zarr in Fiji using MoBIE", "ome_zarr/ome_zarr_open_java_mobie.md"],
+            ["Open OME-Zarr in Fiji using n5-ij", "ome_zarr/ome_zarr_open_java_n5-ij.md"],
+            ["Open OME-Zarr in Fiji using n5-viewer", "ome_zarr/ome_zarr_open_java_n5-viewer.md"],
+            ["Open OME-Zarr in napari","ome_zarr/ome_zarr_visualisation_napari.md"],
+            ["Open OME-Zarr in vizarr","ome_zarr/ome_zarr_visualisation_s3_vizarr.md"],
+        ]
+  ]
+  - ["ome_zarr/save_ome_zarr.md", [
+            ["Save OME-Zarr in Python using ome-zarr-py","ome_zarr/save_ome_zarr_ome-zarr-py.md"],    
+        ] 
+  ]
+  - ["ome_zarr/ome_zarr_creation.md", [
+            ["BatchConvert", "ome_zarr/ome_zarr_creation_BatchConvert.md"]
+        ]
+  ]
 
 
 assessment: >
