@@ -24,6 +24,7 @@ figure_legend:
 multiactivities:
   - ["ome_zarr/open_ome_zarr.md", [
             ["Inspect OME-Zarr datasets using minio-client", "ome_zarr/ome_zarr_inspection_minio-client.md"], 
+            ["Inspect OME-Zarr from IDR using minio-client", "ome_zarr/ome_zarr_work_with_idr_bucket_minio-client.md"],
             ["Inspect OME-Zarr datasets using ome_zarr_py client","ome_zarr/ome_zarr_inspection_ome-zarr-py.md"],
             ["Inspect and validate OME-Zarr in Python using ome-zarr-validator","ome_zarr/validate_ome_zarr_ome-zarr-validator.md"],
             ["Open local OME-Zarr in Python using zarr-python","ome_zarr/open_local_ome_zarr_zarr-python.md"],
@@ -38,7 +39,8 @@ multiactivities:
         ]
   ]
   - ["ome_zarr/save_ome_zarr.md", [
-            ["Save OME-Zarr in Python using ome-zarr-py","ome_zarr/save_ome_zarr_ome-zarr-py.md"],    
+            ["Save OME-Zarr in Python using ome-zarr-py","ome_zarr/save_ome_zarr_ome-zarr-py.md"],
+            ["Update the rendering metadata using zarr and ome-zarr-py","update_rendering_metadata.md"]
         ] 
   ]
   - ["ome_zarr/ome_zarr_creation.md", [
