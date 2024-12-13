@@ -40,7 +40,7 @@ multiactivities:
   ]
   - ["ome_zarr/save_ome_zarr.md", [
             ["Save OME-Zarr in Python using ome-zarr-py","ome_zarr/save_ome_zarr_ome-zarr-py.md"],
-            ["Update the rendering metadata using zarr and ome-zarr-py","update_rendering_metadata.md"]
+            ["Update the rendering metadata using zarr and ome-zarr-py","ome_zarr/update_rendering_metadata.md"]
         ] 
   ]
   - ["ome_zarr/ome_zarr_creation.md", [
