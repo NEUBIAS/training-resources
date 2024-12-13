@@ -1,7 +1,6 @@
 ---
 title: OME-TIFF
 layout: module
-tags: ["draft"]
 prerequisites:
   - "[Digital image basics](../pixels)"
 objectives:
@@ -28,9 +27,10 @@ figure: /figures/tiff.png
 figure_legend: "TIFF is a planar file format, where one TIFF file can contain multiple image planes of different sizes and different data types, which are specified in the respective IFD block. OME-TIFF features an additional OME-XML metadata block, which describes additional important microscopy metadata such as the mapping of IFDs to channel, time-point, and z-plane. In addition, OME-TIFF supports storing different image series within one TIFF file. Within an images series the image datatype, width and height are the same for all planes. In the figure, the OME-TIFF contains two image series, where the first is a z-stack and the second is a multi-channel image." 
 
 multiactivities:
-  - ["ome_tiff/convert_to_ometiff.md", [["NGFF-Converter", "ome_tiff/convert_to_ometiff_ngff-converter.md"],["Python/BioIO", "ome_tiff/convert_lif_to_ome_tif_bioio.py"]]]
   - ["ome_tiff/open_ometiff.md", [["Fiji Bio-Formats", "ome_tiff/open_ometiff_fiji_bioformats.md"],["Python/BioIO", "ome_tiff/open_ome_tif_bioio.py"]]]
   - ["ome_tiff/save_ometiff.md", [["Python/BioIO", "ome_tiff/save_ome_tif_bioio.py"]]]
+  - ["ome_tiff/convert_to_ometiff.md", [["NGFF-Converter", "ome_tiff/convert_to_ometiff_ngff-converter.md"],["Python/BioIO", "ome_tiff/convert_lif_to_ome_tif_bioio.py"]]]
+
 
 assessment: >
 

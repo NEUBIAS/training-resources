@@ -58,22 +58,58 @@ Dear Trainers, please consider checking these [teaching tips](https://github.com
 
 #### Day 1: GUI/CLI: Fiji / NGFF Converter / Bftools
 
-Trainers: Christian Tischer, Bugra Oezdemir, Alexandra Zakieva(?)
+Trainers: Christian Tischer, Bugra Oezdemir, Felix Schneider
 
 1. [Image data formats](https://neubias.github.io/training-resources/image_file_formats/index.html)
+    - Open a number of file formats in Fiji (Tischi)
 1. [Big image data formats](https://neubias.github.io/training-resources/big_image_file_formats/index.html)
-    - TODO: Implementation Lazy load from TIFF stack in python
-    - TODO: Show opening one HDF5 flavour (BDV, Imaris)
-        - https://imaris.oxinst.com/support/imaris-file-format
-        - Python implementation? => Napari IMS support?
+    - TODO: Tischi: Upload somewhere a somewhat large TIFF file series (ask EMCF)
+    - TODO: Felix: Implementation Lazy load from TIFF file series in python
+    - TODO: Tischi: add activity for opening BDV HDF5
+        - TODO: Tischi: implementation HDFView
+        - TODO: Tischi: implementation Fiji GUI for BDV 
+        - TODO: Felix: implementation opening BDV in python
 1. [OME-TIFF](https://neubias.github.io/training-resources/tiff/index.html)
     - TODO: https://github.com/NEUBIAS/training-resources/issues/729
-    - TODO: ... 
+    - TODO: Tischi: implementation save image as OME.TIFF in Fiji
+        - Boats sample image, including manually adding pixel sizes
+    - Convert:
+        - bfconvert (Bugra) TODO
 1. [OME-Zarr](https://neubias.github.io/training-resources/ome_zarr/index.html)
-    - TODO: we know, many (see issues)
+    - Open 
+        - mc inspection
+        - ome-zarr validator
+        - n5-ij
+        - n5-viewer
+    - Save
+        - TODO: Bugra: n5 saving from Fiji
+    - Convert
+        - TODO: Tischi: NGFF converter tool
+        - BatchConvert  
   
 #### Day 2: Python (optional)
 
 Same modules as first day but with python implementations.
 
-Trainers: Bugra Oezdemir, Felix Schneider
+Trainers: Bugra Oezdemir, Felix Schneider, Christian Tischer
+
+1. [Image data formats](https://neubias.github.io/training-resources/image_file_formats/index.html)
+    - Open a number of file formats in python (Felix)
+1. [Big image data formats](https://neubias.github.io/training-resources/big_image_file_formats/index.html)
+    - TODO: Lazy load TIFF series (Felix)
+    - TODO: Lazy load BDV (Felix)
+1. [OME-TIFF](https://neubias.github.io/training-resources/tiff/index.html)
+    - Open with bioio (Felix)
+    - Save with bioio (Felix)
+        - TODO: T and XYZ units 
+    - Convert (Felix)
+        - TODO: Remove indirect conversion
+1. [OME-Zarr](https://neubias.github.io/training-resources/ome_zarr/index.html)
+    - Open (Bugra)
+        - napari
+        - zarr
+        - ome-zarr
+        - n5-viewer
+    - Save (Bugra)
+        - ome-zarr
+        - optional: rendering metadata
