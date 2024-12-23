@@ -32,3 +32,10 @@ em_volume = [bioimage.data.squeeze() for bioimage in bioimages]
 import numpy as np
 em_volume = np.stack(em_volume,axis=0)
 print(em_volume.shape)
+
+# %%
+# Lazy load
+import dask.array as da
+em_volume = [bioimage.dask_data[0,0,:,:,:] for bioimage in bioimages]
+em_volume = da.stack(em_volume,axis=0)
+print(em_volume.shape)
