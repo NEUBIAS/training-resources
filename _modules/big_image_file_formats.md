@@ -21,8 +21,7 @@ figure_legend: "Big image data formats typically support flexible chunking of da
 
 multiactivities:
   - ["big_image_file_formats/lazy_load_tiff_stack.md", [["ImageJ GUI", "big_image_file_formats/lazy_load_tiff_stack_imagej_gui.md"]]]
-  - ["big_image_file_formats/create_imaris.md", [["Imaris File Converter", "big_image_file_formats/create_imaris_imaris_file_converter.md"]]]
-
+  - ["big_image_file_formats/lazy_load_bdv_hdf5.md", [["ImageJ GUI", "big_image_file_formats/lazy_load_bdv_hdf5_imagej_gui.md"]]]
 
 exercises:
 
