@@ -21,7 +21,7 @@ figure_legend: "Big image data formats typically support flexible chunking of da
 
 multiactivities:
   - ["big_image_file_formats/lazy_load_tiff_stack.md", [["ImageJ GUI", "big_image_file_formats/lazy_load_tiff_stack_imagej_gui.md"]]]
-  - ["big_image_file_formats/lazy_load_bdv_hdf5.md", [["ImageJ GUI", "big_image_file_formats/lazy_load_bdv_hdf5_imagej_gui.md"]]]
+  - ["big_image_file_formats/lazy_load_bdv_hdf5.md", [["h5ls", "big_image_file_formats/lazy_load_bdv_hdf5_h5ls.md"], ["ImageJ GUI", "big_image_file_formats/lazy_load_bdv_hdf5_imagej_gui.md"]]]
 
 exercises:
 
