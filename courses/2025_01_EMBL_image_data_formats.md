@@ -63,11 +63,11 @@ Trainers: Christian Tischer, Bugra Oezdemir, Felix Schneider
 1. [Image data formats](https://neubias.github.io/training-resources/image_file_formats/index.html)
     - Open a number of file formats in Fiji (Tischi)
 1. [Big image data formats](https://neubias.github.io/training-resources/big_image_file_formats/index.html)
-    - TODO: Tischi: Upload somewhere a somewhat large TIFF file series (ask EMCF)
+    - DONE: Tischi: Upload somewhere a somewhat large TIFF file series (ask EMCF)
     - TODO: Felix: Implementation Lazy load from TIFF file series in python
-    - TODO: Tischi: add activity for opening BDV HDF5
-        - TODO: Tischi: implementation HDFView
-        - TODO: Tischi: implementation Fiji GUI for BDV 
+    - DONE: Tischi: add activity for opening BDV HDF5
+        - DONE: Tischi: implementation HDFView
+        - DONE: Tischi: implementation Fiji GUI for BDV 
         - TODO: Felix: implementation opening BDV in python
 1. [OME-TIFF](https://neubias.github.io/training-resources/tiff/index.html)
     - TODO: https://github.com/NEUBIAS/training-resources/issues/729

@@ -6,9 +6,8 @@ prerequisites:
   - "[Data types](../datatypes)"
   - "[Image calibration](../spatial_calibration)"
 objectives:
-  - Open and save various image files formats
-  - Understand the difference between image voxel data and metadata
-  - Understand that converting between image file formats likely leads to loss of information
+  - Open various image files formats
+  - Understand the difference between image data and metadata
 
 motivation: |
   There are numerous ways how to save image data on disk. Virtually every microscope vendor has their own file format. It is thus very important to understand how to open those files and inspect their content. Moreover, some software will open only specific image file formats and thus it is sometime necessary to re-save the data. During such image file format conversions information can be lost; it is important to be aware of this and avoid such information loss as much as possible.
