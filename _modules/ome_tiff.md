@@ -29,7 +29,7 @@ figure_legend: "TIFF is a planar file format, where one TIFF file can contain mu
 multiactivities:
   - ["ome_tiff/open_ometiff.md", [["Fiji Bio-Formats", "ome_tiff/open_ometiff_fiji_bioformats.md"],["Python/BioIO", "ome_tiff/open_ome_tif_bioio.py"]]]
   - ["ome_tiff/save_ometiff.md", [["Python/BioIO", "ome_tiff/save_ome_tif_bioio.py"]]]
-  - ["ome_tiff/convert_to_ometiff.md", [["NGFF-Converter", "ome_tiff/convert_to_ometiff_ngff-converter.md"],["Python/BioIO", "ome_tiff/convert_lif_to_ome_tif_bioio.py"]]]
+  - ["ome_tiff/convert_to_ometiff.md", [["NGFF-Converter", "ome_tiff/convert_to_ometiff_ngff-converter.md"],["Python/BioIO", "ome_tiff/convert_lif_to_ome_tif_bioio.py"],["bfconvert", "ome_tiff/convert_to_ometiff_bfconvert.md"]]]
 
 
 assessment: >

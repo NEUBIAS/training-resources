@@ -39,8 +39,9 @@ multiactivities:
         ]
   ]
   - ["ome_zarr/save_ome_zarr.md", [
-            ["Save OME-Zarr in Python using ome-zarr-py","ome_zarr/save_ome_zarr_ome-zarr-py.md"],
-            ["Update the rendering metadata using zarr and ome-zarr-py","ome_zarr/update_rendering_metadata.md"]
+            ["Export OME-Zarr from Python using ome-zarr-py","ome_zarr/save_ome_zarr_ome-zarr-py.md"],
+            ["Export an image from Fiji as OME-Zarr","ome_zarr/save_ome_zarr_fiji.md"],           
+            ["Update the rendering metadata using zarr and ome-zarr-py","ome_zarr/update_rendering_metadata.md"],
         ] 
   ]
   - ["ome_zarr/ome_zarr_creation.md", [
