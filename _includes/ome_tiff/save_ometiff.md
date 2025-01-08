@@ -1,3 +1,3 @@
-<h4 id="save"><a href="#save">Save... OME-TIFF</a></h4>
+<h4 id="save"><a href="#save">Save as OME-TIFF</a></h4>
 
-Save image file as OME-TIFF.
+Save an image as OME-TIFF.

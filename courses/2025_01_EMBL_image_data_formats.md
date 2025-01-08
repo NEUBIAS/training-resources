@@ -70,8 +70,8 @@ Trainers: Christian Tischer, Bugra Oezdemir, Felix Schneider
         - DONE: Tischi: implementation Fiji GUI for BDV 
         - TODO: Felix: implementation opening BDV in python
 1. [OME-TIFF](https://neubias.github.io/training-resources/tiff/index.html)
-    - TODO: https://github.com/NEUBIAS/training-resources/issues/729
-    - TODO: Tischi: implementation save image as OME.TIFF in Fiji
+    - TODO: Felix: https://github.com/NEUBIAS/training-resources/issues/729
+    - DONE: Tischi: implementation save image as OME.TIFF in Fiji
         - Boats sample image, including manually adding pixel sizes
     - Convert:
         - bfconvert (Bugra) TODO
