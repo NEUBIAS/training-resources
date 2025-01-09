@@ -12,8 +12,7 @@ This activity uses the NGFF Converter to convert a LIF image data set into an OM
         - For each image note its dimensions and spatial calibration
     - Inspect the OME-XML metadata and note down some values that you deem important
 - Convert LIF to OME-TIFF using the NGFF converter: 
-    - Install the NGFF converter [TODO: add link]()
-    - Open the NGFF converter
+    - Open the NGFF converter; [tool website](https://www.glencoesoftware.com/products/ngff-converter/) 
     - Drag and drop the LIF file onto it
     - A dialog will open:
         - Output format: OME-TIFF

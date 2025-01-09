@@ -19,8 +19,11 @@ You will conduct the practical part of the course on your own computer.
 
 It is required to perform the below installations before the course:
 
-1. [Install Fiji with a few update sites](https://neubias.github.io/training-resources/tool_installation/index.html?id_activity_platform-1=conda-activity-1&id_activity_platform-0=fiji-activity-0#imagej)
-1. [Install and test the python dependencies skimage and napari](https://neubias.github.io/training-resources/tool_installation/index.html?id_activity_platform-1=conda-activity-1#skimage_napari)
+1. [Install Fiji on your computer](https://fiji.sc/)
+1. TODO: Create conda env(s) for all CLI and python tools (Bugra and Felix)
+    - hdf5
+    - ...
+1. TODO: Download NGFF Converter (Bugra)
 
 
 ## Schedule 
@@ -55,7 +58,6 @@ Dear Trainers, please consider checking these [teaching tips](https://github.com
 
 ### Modules
 
-
 #### Day 1: GUI/CLI: Fiji / NGFF Converter / Bftools
 
 Trainers: Christian Tischer, Bugra Oezdemir, Felix Schneider
@@ -63,29 +65,27 @@ Trainers: Christian Tischer, Bugra Oezdemir, Felix Schneider
 1. [Image data formats](https://neubias.github.io/training-resources/image_file_formats/index.html)
     - Open a number of file formats in Fiji (Tischi)
 1. [Big image data formats](https://neubias.github.io/training-resources/big_image_file_formats/index.html)
-    - DONE: Tischi: Upload somewhere a somewhat large TIFF file series (ask EMCF)
-    - TODO: Felix: Implementation Lazy load from TIFF file series in python
-    - DONE: Tischi: add activity for opening BDV HDF5
-        - DONE: Tischi: implementation HDFView
-        - DONE: Tischi: implementation Fiji GUI for BDV 
-        - TODO: Felix: implementation opening BDV in python
+    - Open TIFF stack in Fiji (Tischi)
+    - Inspect BDV XML/HDF5 using h5ls (Demo Tischi)
+    - Open BDV XML/HDF5 in Fiji (Tischi)
+    - TODO: Implementation Fiji: drag and drop BDV XML (Tischi)
 1. [OME-TIFF](https://neubias.github.io/training-resources/tiff/index.html)
-    - TODO: Felix: https://github.com/NEUBIAS/training-resources/issues/729
-    - DONE: Tischi: implementation save image as OME.TIFF in Fiji
-        - Boats sample image, including manually adding pixel sizes
-    - Convert:
-        - bfconvert (Bugra) TODO
+    - Open OME-TIFF in Bio-Formats Fiji (Tischi)
+    - Save as OME-TIFF in Bio-Formats Fiji (Tischi)
+    - Convert an image file to OME-TIFF
+        - NGFF Converter (Tischi)
+        - bfconvert (Bugra)
 1. [OME-Zarr](https://neubias.github.io/training-resources/ome_zarr/index.html)
-    - Open 
+    - Open (Bugra)
         - mc inspection
         - ome-zarr validator
         - n5-ij
         - n5-viewer
-    - Save
-        - TODO: Bugra: n5 saving from Fiji
+    - Save (Bugra)
+        - n5 saving from Fiji
     - Convert
-        - TODO: Tischi: NGFF converter tool
-        - BatchConvert  
+        - TODO: NGFF Converter (Tischi)
+        - TODO: BatchConvert local file (Bugra)
   
 #### Day 2: Python (optional)
 
@@ -96,14 +96,13 @@ Trainers: Bugra Oezdemir, Felix Schneider, Christian Tischer
 1. [Image data formats](https://neubias.github.io/training-resources/image_file_formats/index.html)
     - Open a number of file formats in python (Felix)
 1. [Big image data formats](https://neubias.github.io/training-resources/big_image_file_formats/index.html)
-    - TODO: Lazy load TIFF series (Felix)
+    - TODO: Lazy load TIFF stack (Felix)
     - TODO: Lazy load BDV (Felix)
 1. [OME-TIFF](https://neubias.github.io/training-resources/tiff/index.html)
     - Open with bioio (Felix)
     - Save with bioio (Felix)
         - TODO: T and XYZ units 
-    - Convert (Felix)
-        - TODO: Remove indirect conversion
+    - Convert with bioio (Felix)
 1. [OME-Zarr](https://neubias.github.io/training-resources/ome_zarr/index.html)
     - Open (Bugra)
         - napari

@@ -1,6 +1,6 @@
-<h4 id="tiff"><a href="#tiff">Lazy load from a TIFF stack</a></h4>
+<h4 id="tiff"><a href="#tiff">Lazy load from a multi-plane TIFF file</a></h4>
 
-- Download [TODO: Large TIFF]()
+- Download a [TIFF stack (4.0 GB)](https://zenodo.org/records/14591118/files/xyz_uint8__em_platy_raw_s4.tif?download=1)
 - Inspect the size of the file on disk and compare to your computer's memory
 - Open the whole file
     - Observe that this takes some time
