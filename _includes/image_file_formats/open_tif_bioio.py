@@ -59,3 +59,7 @@ bioimage = BioImage(image_path)
 # lazy load
 bioimage_data = bioimage.dask_data
 print(bioimage_data)
+
+#%%
+# load specific image plane
+bioimage_data = bioimage.dask_data[:,:,:,10,:].compute()
