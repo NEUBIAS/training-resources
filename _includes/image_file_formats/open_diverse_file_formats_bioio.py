@@ -5,6 +5,8 @@
 # activate ImageFileFormat
 # pip install bioio bioio-tifffile bioio-lif bioio-czi bioio-ome-tiff bioio-ome-zarr notebook
 
+# IMPORTANT: bioio by default expects z,y,x to be in microns and T to be in frames per second
+
 # %%
 # Load .tif file with minimal metadata
 # - Observe that BioImage chooses the correct reader plugin
