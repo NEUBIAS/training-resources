@@ -50,3 +50,12 @@ print(f'Pixel size: {bioimage.physical_pixel_sizes}')
 # Read metadata
 print(f'Metadata type: {type(bioimage.metadata)}')
 print(f'Metadata: {bioimage.metadata}')
+
+#%%
+# Load a large tif lazily
+from pathlib import Path
+image_path = Path().cwd()/'xyz_uint8__em_platy_raw_s4.tif'
+bioimage = BioImage(image_path)
+# lazy load
+bioimage_data = bioimage.dask_data
+print(bioimage_data)
