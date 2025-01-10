@@ -13,7 +13,8 @@
 # save file in the same directory as this notebook
 # - Observe that BioImage chooses the correct reader plugin
 from bioio import BioImage
-bioimage = BioImage('~/skimage-napari-tutorial/ExampleImages/xyz__multiple_images.czi')
+from pathlib import Path
+bioimage = BioImage(Path().cwd()/'ExampleImages/xyz__multiple_images.czi')
 print(bioimage)
 print(type(bioimage))
 
