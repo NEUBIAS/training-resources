@@ -7,7 +7,7 @@ import numpy as np
 **Open a local OME-Zarr using `zarr.open_group`**
 ```python
 path = f"{os.path.expanduser('~')}/ome_zarr_course/data/zarr/6001240.zarr"
-dataset = zarr.open_group(store, mode = 'r')
+dataset = zarr.open_group(path, mode = 'r')
 print(f"Type of the dataset: {type(dataset)}")
 ```
 
