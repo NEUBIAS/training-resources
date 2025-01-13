@@ -1,15 +1,6 @@
-Create a local directory and download a set of sample images:
+**Perform parallelised conversion of image data collections to OME-Zarr using BatchConvert**
 
-```bash
-mkdir /path/to/tiff_series # eg: ~/image_data_course/data/tiff/tiff_series
-cd /path/to/tiff_series # eg: ~/image_data_course/data/zarr/outputs/zarr_series
-for i in {001..020}; do
-    curl -L0 \
-    https://github.com/NEUBIAS/training-resources/raw/refs/heads/master/image_data/xyz_8bit__em_volume_tiff_series/c_elegans_em_z0$i.tif \
-    --output $PWD/c_elegans_em_z0$i.tif
-done
-```
-There are multiple conversion modes. Let's try each of them.
+As input, use the `tiff_series` dataset (`~/image_data_course/data/tiff/tiff_series`).
 
 **Perform parallelised, independent conversion:**
 ```bash
