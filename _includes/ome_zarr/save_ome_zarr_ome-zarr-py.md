@@ -22,7 +22,8 @@ url as input to the `parse_url` function.
 
 ```python
 # Specify the path where you want to write
-output_path = f"{os.path.expanduser('~')}/ome_zarr_course/data/zarr/outputs/astronaut.zarr"
+# output_path = f"{os.path.expanduser('~')}/ome_zarr_course/data/zarr/outputs/astronaut.zarr"
+output_path = "/path/to/astronaut.zarr"
 # Parse the url as a zarr store. Note that "mode = 'w'" enables writing to this store.
 store = parse_url(output_path, mode = 'w').store 
 root = zarr.open_group(store)

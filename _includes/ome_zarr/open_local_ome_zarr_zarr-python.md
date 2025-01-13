@@ -4,9 +4,10 @@ import zarr, os, pprint
 import numpy as np
 ```
 
-**Open a local OME-Zarr using `zarr.open_group`**
+**Open the local OME-Zarr using `zarr.open_group`**
 ```python
-path = f"{os.path.expanduser('~')}/ome_zarr_course/data/zarr/6001240.zarr"
+#path = f"{os.path.expanduser('~')}/image_data_course/data/zarr/6001240.zarr"
+path = "/path/to/local/zarr"
 dataset = zarr.open_group(path, mode = 'r')
 print(f"Type of the dataset: {type(dataset)}")
 ```

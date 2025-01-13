@@ -7,7 +7,7 @@ from ome_zarr.io import parse_url
 ```
 **Read remote OME-Zarr:**
 ```python
-# local_path = f"{os.path.expanduser('~')}/ome_zarr_course/data/zarr/6001240.zarr"
+# local_path = f"{os.path.expanduser('~')}/image_data_course/data/zarr/6001240.zarr"
 remote_path = f"https://uk1s3.embassy.ebi.ac.uk/idr/zarr/v0.4/idr0062A/6001240.zarr"
 reader = Reader(parse_url(remote_path))
 # Note here that 'parse_url' can parse both remote and local urls.
