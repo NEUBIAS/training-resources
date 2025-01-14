@@ -39,7 +39,7 @@ https://github.com/conda-forge/miniforge
 Now create the environment by running:
 
 ```bash
-conda env create -f /path/to/environment.yml
+conda env create -f https://raw.githubusercontent.com/NEUBIAS/training-resources/refs/heads/master/_includes/tool_installation/image_data_formats_conda_env.yml
 ```
 
 Once the environment has been created, activate it by running:
