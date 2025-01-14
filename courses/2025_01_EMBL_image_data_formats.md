@@ -67,8 +67,8 @@ Trainers: Christian Tischer, Bugra Oezdemir, Felix Schneider
 1. [Big image data formats](https://neubias.github.io/training-resources/big_image_file_formats/index.html)
     - Open TIFF stack in Fiji (Tischi)
     - Inspect BDV XML/HDF5 using h5ls (Demo Tischi)
-    - Open BDV XML/HDF5 in Fiji (Tischi)
-    - TODO: Implementation Fiji: drag and drop BDV XML (Tischi)
+    - Open BDV XML/HDF5 in Fiji with Bio-Formats (Tischi)
+    - Open BDV XML/HDF5 in Fiji with BDV (Tischi)
 1. [OME-TIFF](https://neubias.github.io/training-resources/tiff/index.html)
     - Open OME-TIFF in Bio-Formats Fiji (Tischi)
     - Save as OME-TIFF in Bio-Formats Fiji (Tischi)
@@ -84,7 +84,7 @@ Trainers: Christian Tischer, Bugra Oezdemir, Felix Schneider
     - Save (Bugra)
         - n5 saving from Fiji
     - Convert
-        - TODO: NGFF Converter (Tischi)
+        - NGFF Converter (Tischi)
         - TODO: BatchConvert local file (Bugra)
   
 #### Day 2: Python (optional)
