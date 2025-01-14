@@ -13,25 +13,75 @@ Performing modern microscopy one is exposed to many different image data formats
   * [Image data types](https://neubias.github.io/training-resources/datatypes/index.html)
   * [Volume slicing](https://neubias.github.io/training-resources/volume_slicing/index.html)
 
-### IT Setup
+### Installation instructions
 
 You will conduct the practical part of the course on your own computer.
 
-It is required to perform the below installations before the course:
+It is required to perform the below installations before the course.
 
-1. [Install Fiji on your computer](https://fiji.sc/)
-1. TODO: Create conda env(s) for all CLI and python tools (Bugra and Felix)
-    - hdf5
-    - ...
-1. TODO: Download NGFF Converter (Bugra)
+#### Download big image example data
 
+https://zenodo.org/api/records/14591118/files-archive
+
+#### Fiji
+
+[Install Fiji on your computer.](https://fiji.sc/)
+
+#### NGFF Converter
+
+[Install the NGFF Converter on your computer.](https://www.glencoesoftware.com/products/ngff-converter/)
+
+#### Python and CLI environment
+
+Install Miniforge3 on your computer according to these instructions: \
+https://github.com/conda-forge/miniforge
+
+Now create the environment by running:
+
+```bash
+conda env create -f /path/to/environment.yml
+```
+
+Once the environment has been created, activate it by running:
+
+```bash
+conda activate image_data_formats
+```
+
+```bash
+napari
+```
+
+Now the napari image viewer should open. If that is not the case, please check the below trouble shooting section or contact the instructors.
+
+##### Troubleshooting
+
+Remove the environment again
+
+```bash
+conda env remove -n image_data_formats
+```
+
+Delete any caches by running 
+
+```bash
+conda clean -all
+```
+
+Also remove cached packages
+
+```bash
+rm -r `~/miniforge3/pkgs`
+```
+
+Then install the environment again (see above).
 
 ## Schedule 
 
 The whole course will be guided hands-on sessions.
 
-- 2025 Jan 16, 9:30 - 17:00
-- 2025 Jan 17, 9:30 - 17:00
+- 2025 Jan 16, 9:30 - 16:00
+- 2025 Jan 17, 9:30 - 16:00
 
 ## Venue
 
@@ -77,7 +127,7 @@ Trainers: Christian Tischer, Bugra Oezdemir, Felix Schneider
         - bfconvert (Bugra)
 1. [OME-Zarr](https://neubias.github.io/training-resources/ome_zarr/index.html)
     - Open (Bugra)
-        - mc inspection
+        - ome-zarr inspection
         - ome-zarr validator
         - n5-ij
         - n5-viewer
@@ -85,7 +135,7 @@ Trainers: Christian Tischer, Bugra Oezdemir, Felix Schneider
         - n5 saving from Fiji
     - Convert
         - NGFF Converter (Tischi)
-        - TODO: BatchConvert local file (Bugra)
+        - BatchConvert local file (Bugra)
   
 #### Day 2: Python (optional)
 
@@ -96,12 +146,12 @@ Trainers: Bugra Oezdemir, Felix Schneider, Christian Tischer
 1. [Image data formats](https://neubias.github.io/training-resources/image_file_formats/index.html)
     - Open a number of file formats in python (Felix)
 1. [Big image data formats](https://neubias.github.io/training-resources/big_image_file_formats/index.html)
-    - DONE: Lazy load TIFF stack (Felix)
-    - DONE: Lazy load BDV (Felix)
+    - Lazy load TIFF stack (Felix)
+    - Lazy load BDV (Felix)
 1. [OME-TIFF](https://neubias.github.io/training-resources/tiff/index.html)
     - Open with bioio (Felix)
     - Save with bioio (Felix)
-        - DONE: T and XYZ units 
+        - T and XYZ units 
     - Convert with bioio (Felix)
 1. [OME-Zarr](https://neubias.github.io/training-resources/ome_zarr/index.html)
     - Open (Bugra)
