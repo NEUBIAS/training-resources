@@ -20,8 +20,10 @@ figure: /figures/big_image_file_formats.png
 figure_legend: "Big image data formats typically support flexible chunking of data and resolution pyramids. Chunking enables efficient loading of image subregions. Resolution pyramids prevent loading useless details when being zoomed out."
 
 multiactivities:
-  - ["big_image_file_formats/lazy_load_tiff_stack.md", [["ImageJ GUI", "big_image_file_formats/lazy_load_tiff_stack_imagej_gui.md"]]]
-  - ["big_image_file_formats/lazy_load_bdv_hdf5.md", [["h5ls", "big_image_file_formats/lazy_load_bdv_hdf5_h5ls.md"], ["ImageJ GUI Bio-Formats", "big_image_file_formats/lazy_load_bdv_hdf5_imagej_bioformats.md"], ["ImageJ GUI BDV", "big_image_file_formats/lazy_load_bdv_hdf5_imagej_bdv.md"]]]
+  - ["big_image_file_formats/lazy_load_tiff_stack.md", [["ImageJ GUI", "big_image_file_formats/lazy_load_tiff_stack_imagej_gui.md"],
+  ["python bioio","image_file_formats/open_tif_bioio.py"]]]
+  - ["big_image_file_formats/lazy_load_bdv_hdf5.md", [["h5ls", "big_image_file_formats/lazy_load_bdv_hdf5_h5ls.md"], ["ImageJ GUI Bio-Formats", "big_image_file_formats/lazy_load_bdv_hdf5_imagej_bioformats.md"], ["ImageJ GUI BDV", "big_image_file_formats/lazy_load_bdv_hdf5_imagej_bdv.md"],
+  ["python bioio","image_file_formats/open_BDV_bioio.py"]]]
 
 exercises:
 

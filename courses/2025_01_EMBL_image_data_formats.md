@@ -96,12 +96,12 @@ Trainers: Bugra Oezdemir, Felix Schneider, Christian Tischer
 1. [Image data formats](https://neubias.github.io/training-resources/image_file_formats/index.html)
     - Open a number of file formats in python (Felix)
 1. [Big image data formats](https://neubias.github.io/training-resources/big_image_file_formats/index.html)
-    - TODO: Lazy load TIFF stack (Felix)
-    - TODO: Lazy load BDV (Felix)
+    - DONE: Lazy load TIFF stack (Felix)
+    - DONE: Lazy load BDV (Felix)
 1. [OME-TIFF](https://neubias.github.io/training-resources/tiff/index.html)
     - Open with bioio (Felix)
     - Save with bioio (Felix)
-        - TODO: T and XYZ units 
+        - DONE: T and XYZ units 
     - Convert with bioio (Felix)
 1. [OME-Zarr](https://neubias.github.io/training-resources/ome_zarr/index.html)
     - Open (Bugra)

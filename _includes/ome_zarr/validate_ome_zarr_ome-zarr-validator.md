@@ -1,7 +1,7 @@
 **Open the OME-Zarr validator with local data using ome-zarr-py from the command line:**
 
 ```bash
-ome_zarr view ~/ome_zarr_course/data/zarr/6001240.zarr
+ome_zarr view /path/to/local/omezarr # eg: ~/image_data_course/data/zarr/6001240.zarr
 ```
 
 The validator will open in a web browser and demonstrate various metadata fields
