@@ -14,7 +14,7 @@ dependencies:
   - zarr=2.17.2
   - napari-ome-zarr=0.6.*
   - pyqt=5.15.*
-  - lxml<=5.3.0
+  - lxml=4.9.4
   - hdf5=1.14.*
   - ome-zarr=0.10.3
   - batchconvert-minimal=0.0.6
