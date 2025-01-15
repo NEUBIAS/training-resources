@@ -37,7 +37,7 @@ ls /path/to/concatenated_output_dir
 Optional: Inspect the created OME-Zarr. 
 
 
-**Perform grouped conversion with specific chunking and downscaling and compression parameters:**
+**Perform grouped conversion with specific chunking, downscaling and compression parameters:**
 
 ```bash
 batchconvert omezarr \
