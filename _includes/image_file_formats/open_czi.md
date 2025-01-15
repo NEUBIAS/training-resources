@@ -1,8 +1,7 @@
 <h4 id="open_czi"><a href="#open_czi">Open CZI image data</a></h4>
 
 - Open a CZI (Carl Zeiss Image) file and inspect its pixel and metatdata content
-- Observe the data is presented as one file on disk
-- Observe that this one file contains multiple image datasets
+- Observe the data is presented as one file on disk, but contains two image datasets with the same dimensions
 
 ##### Data
 

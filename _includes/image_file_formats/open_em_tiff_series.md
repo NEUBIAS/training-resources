@@ -10,6 +10,7 @@
 
 ##### Data
 
-- [EM TIFF Series](https://github.com/NEUBIAS/training-resources/raw/master/image_data/image_data/xyz_8bit__em_volume_tiff_series.zip)
-  - From https://www.ebi.ac.uk/empiar/EMPIAR-10982/ 
+- [EM TIFF Series](https://github.com/NEUBIAS/training-resources/raw/refs/heads/master/image_data/xyz_8bit__em_volume_tiff_series.zip)
+  - The data is from https://www.ebi.ac.uk/empiar/EMPIAR-10982/ 
   - ZIP archive, please uncompress after download 
+  - If the above link does not work, please [download from here](https://github.com/NEUBIAS/training-resources/blob/master/image_data/xyz_8bit__em_volume_tiff_series.zip)
