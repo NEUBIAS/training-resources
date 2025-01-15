@@ -4,9 +4,9 @@
 - Use [ Edit > Options > Memory & Threads... ] to see how much  memory is accessible to Fiji
 - Use [ Plugins > Utilities > Monitor Memory... ] to monitor how much memory is currently used
 - Use [ File > Open ] to open the entire TIFF stack
-    - Observe that this takes time and that your computer's memory fills up
+    - Observe that this takes time and that the memory fills up
 - Close the image and observe whether memory is freed
-    - Use [ Plugins > Utilities > Collect Garbage ] to enforce freeing the memory
+- Use [ Plugins > Utilities > Collect Garbage ] to enforce freeing the memory
 - Use [ Plugins > Bio-Formats > Bio-Formats Importer ] to lazy open the TIFF stack 
     - [X] Open virtual (<= this is key!) 
     - Observe that initial opening is faster and your memory is not filling up as much

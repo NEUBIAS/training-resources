@@ -1,13 +1,12 @@
-- Inspect the XML using your web browser, e.g.
+- Inspect the XML file using your web browser, e.g.
     - Chrome: [ File > Open File... ]
     - Observe the relevant metadata such as
         - Image dimensions
         - Voxel size
 - Inspect the HDF5 file 
-    - Install the HDF5 command line tools, e.g.
-        - `conda create -n hdf5 python=3.9 hdf5`
+    - Install the HDF5 command line tools, e.g. `conda create -n hdf5 python=3.9 hdf5`
     - `h5ls xyz_uint8__em_platy_raw_s4.h5`
-        - Note that an h5 file is like a file directory 
+        - Observe that the h5 file is like a file directory 
     - Explore the content, e.g.,
         - `h5ls -v -d xyz_uint8__em_platy_raw_s4.h5/s00/resolutions`
         - `h5ls -v -d xyz_uint8__em_platy_raw_s4.h5/s00/subdivisions`
