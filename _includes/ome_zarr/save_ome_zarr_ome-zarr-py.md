@@ -22,7 +22,7 @@ url as input to the `parse_url` function.
 
 ```python
 # Specify the path where you want to write
-# output_path = f"{os.path.expanduser('~')}/ome_zarr_course/data/zarr/outputs/astronaut.zarr"
+# output_path = f"{os.path.expanduser('~')}/image_data_formats/day2/astronaut.zarr"
 output_path = "/path/to/astronaut.zarr"
 # Parse the url as a zarr store. Note that "mode = 'w'" enables writing to this store.
 store = parse_url(output_path, mode = 'w').store 
@@ -35,8 +35,8 @@ In order to create an image pyramid, one has to instantiate a scaler.
 This scaler requires the parameters: scale factor, number of resolution
 layers and downscaling method.
 ```python
-scaler = scale.Scaler(downscale=2, # Downscaling factor fox x and y axes
-                      max_layer=4, # Number of downscalings
+scaler = scale.Scaler(downscale=2, # Downscaling factor for x and y axes
+                      max_layer=4, # Number of downscalings = 5
                       method = 'nearest' # downscaling method
                       )
 ```

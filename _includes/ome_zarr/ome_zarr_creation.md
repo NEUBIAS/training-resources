@@ -2,7 +2,7 @@
 
 Create OME-Zarr data from data stored in monolithic file formats.
 
-- Download the tiff [image series](https://zenodo.org/records/14641498/files/tiff_series.zip?download=1) and extract them to a convenient local directory. \
+- Download the [tiff_series](https://zenodo.org/records/14641498/files/tiff_series.zip?download=1) dataset and extract them to a convenient local directory. \
 For example: `~/image_data_course/data/tiff/tiff_series`
 
 - Open the files

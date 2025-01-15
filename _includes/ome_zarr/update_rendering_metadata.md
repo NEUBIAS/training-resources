@@ -2,14 +2,16 @@
 
 ```python
 import zarr, os
-from ome_zarr.io import parse_url
+from ome_zarr.io import parse_url, utils
 import matplotlib.colors as mcolors
 ```
 
 **At this stage inspect the image using the OME-Zarr validator:**
 
-```bash
-ome_zarr view ~/ome_zarr_course/data/zarr/outputs/astronaut.zarr
+```python
+# path = f"{os.path.expanduser('~')}/image_data_formats/day2/astronaut.zarr"
+path = "/path/to/astronaut.zarr"
+utils.view(path) 
 ```
 
 **Define a utility function to get the hex color code by simple color names**
@@ -26,7 +28,6 @@ def get_color_code(color_name):
 **Now add rendering metadata**
 
 ```python
-path = f"{os.path.expanduser('~')}/ome_zarr_course/data/zarr/outputs/astronaut.zarr"
 store = parse_url(path, mode = 'w').store # Create a zarr store to save the data. Note that this can also be an s3 object store.
 root = zarr.open_group(store=store)
 root.attrs["omero"] = {
@@ -55,7 +56,8 @@ root.attrs["omero"] = {
 
 It is important to know here that not all OME-Zarr readers recognize each of these settings. \
 Apply the validator again to the data to see the changes:
-```bash
-ome_zarr view ~/ome_zarr_course/data/zarr/outputs/astronaut.zarr
+```python
+path = "/path/to/astronaut.zarr"
+utils.view(path) 
 ```
 As the data looks valid, now visualize using different viewers to see if the rendering is working.

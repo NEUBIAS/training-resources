@@ -2,20 +2,39 @@
 
 ```python
 import ome_zarr, zarr, pprint, os
+from ome_zarr import utils
 from ome_zarr.reader import Reader
 from ome_zarr.io import parse_url
 ```
+
+**Use the utils module to inspect, download or validate the remote data**
+
+Inspect:
+```python
+list(utils.info("https://uk1s3.embassy.ebi.ac.uk/EuBI/anna_steyer0/20160112_C.elegans_std_fullhead.zarr"))
+```
+
+Download:
+```python
+utils.download(input_path = "https://uk1s3.embassy.ebi.ac.uk/idr/zarr/v0.4/idr0062A/6001240.zarr",
+               output_dir = "/path/to/local/zarr") # eg: "/home/oezdemir/image_data_formats/day1/ome_zarr"
+```
+
+Validate:
+```python
+utils.view(input_path = "https://uk1s3.embassy.ebi.ac.uk/idr/zarr/v0.4/idr0062A/6001240.zarr")
+```
+
+
 **Read remote OME-Zarr:**
 ```python
 # local_path = f"{os.path.expanduser('~')}/image_data_course/data/zarr/6001240.zarr"
 remote_path = f"https://uk1s3.embassy.ebi.ac.uk/idr/zarr/v0.4/idr0062A/6001240.zarr"
 reader = Reader(parse_url(remote_path))
 # Note here that 'parse_url' can parse both remote and local urls.
-# No need for explicit use of s3fs.
 ```
 
-
-Note that ome-zarr-py uses the term 'node' for different zarr groups \
+Note that ome-zarr-py uses the term 'node' for different zarr groups
 and reads them in a flat list. 
 
 **Print the node information per resolution level:**

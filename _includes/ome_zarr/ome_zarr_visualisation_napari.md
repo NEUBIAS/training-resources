@@ -1,20 +1,44 @@
-**Visualise the remote data using Napari together with the napari-ome-zarr plugin.**
+#### Visualise the remote data using Napari together with the napari-ome-zarr plugin.
 
-```
-napari --plugin napari-ome-zarr https://s3.embl.de/ome-zarr-course/data/ZARR/$USER/xyzct_8bit__mitosis.ome.zarr
-```
-
-```
-napari --plugin napari-ome-zarr https://s3.embl.de/ome-zarr-course/data/ZARR/$USER/xyz_8bit_calibrated__fib_sem_crop.ome.zarr
+**Use command line:**
+``` bash
+napari --plugin napari-ome-zarr https://uk1s3.embassy.ebi.ac.uk/idr/zarr/v0.4/idr0062A/6001240.zarr
 ```
 
-**Optional: visualise local OME-Zarr data in the same way:**
+**Use Python code:**
+
+Approach 1: Open the full OME-Zarr from the top level url:
+```python
+import napari
+import zarr, dask.array as da
+ 
+v = napari.Viewer()
+v.open("https://uk1s3.embassy.ebi.ac.uk/idr/zarr/v0.4/idr0062A/6001240.zarr",
+       plugin = 'napari-ome-zarr'
+       )
+napari.run()
 ```
-napari --plugin napari-ome-zarr ~/data/ZARR/xyzct_8bit__mitosis.ome.zarr
+Note that this approach automates a lot of tasks for the user,
+discovering look-up tables, pixel scalings and units from the OME-Zarr metadata.
+
+Approach 2: Read arrays and open them individually:
+```python
+import napari
+import zarr, dask.array as da
+
+url = "https://uk1s3.embassy.ebi.ac.uk/idr/zarr/v0.4/idr0062A/6001240.zarr"
+gr = zarr.open_group(url, mode = 'r')
+#array0 = da.from_zarr(gr[0])
+array2 = da.from_zarr(gr[2])
+#label_array0 = da.from_zarr(gr.labels['0'][0])
+label_array2 = da.from_zarr(gr.labels['0'][2])
+v = napari.Viewer()
+#v.add_image(array0, contrast_limits = (0, 2000), colormap = 'yellow')
+v.add_image(array2, contrast_limits = (0, 2000), colormap = 'red')
+#v.add_labels(label_array0)
+v.add_labels(label_array2)
+napari.run()
 ```
 
-**Optional: visualise big remote OME-Zarr data:**
-```
-napari --plugin napari-ome-zarr https://s3.embl.de/i2k-2020/platy-raw.ome.zarr
-```
-Note that compared to BigDataViewer, there are more delays with Napari.
+Note that approach 2 is flexible but does not use any metadata. You have to
+specify the metadata to the viewer manually.

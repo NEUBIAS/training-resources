@@ -1,6 +1,8 @@
-**Perform parallelised conversion of image data collections to OME-Zarr using BatchConvert**
+#### Perform parallelised conversion of image data collections to OME-Zarr using BatchConvert
 
-As input, use the `tiff_series` dataset (`~/image_data_course/data/tiff/tiff_series`).
+**Important note: BatchConvert is currently only supported on unix-based systems**
+
+As input, use the `tiff_series` dataset.
 
 **Perform parallelised, independent conversion:**
 ```bash
@@ -55,3 +57,13 @@ Check the content of the `zarr_series_concatenated_rechunked` folder:
 ls /path/to/zarr_series_concatenated_rechunked
 ```
 Optional: Inspect the created OME-Zarr. Compare it to the one created earlier.
+
+
+
+```bash
+batchconvert omezarr input_path output_path 
+```
+
+```bash
+bfconvert input_path output_path 
+```
