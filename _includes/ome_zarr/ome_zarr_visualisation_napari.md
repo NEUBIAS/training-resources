@@ -10,7 +10,6 @@ napari --plugin napari-ome-zarr https://uk1s3.embassy.ebi.ac.uk/idr/zarr/v0.4/id
 Approach 1: Open the full OME-Zarr from the top level url:
 ```python
 import napari
-import zarr, dask.array as da
  
 v = napari.Viewer()
 v.open("https://uk1s3.embassy.ebi.ac.uk/idr/zarr/v0.4/idr0062A/6001240.zarr",
