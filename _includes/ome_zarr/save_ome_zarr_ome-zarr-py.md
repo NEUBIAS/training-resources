@@ -98,7 +98,7 @@ writer.write_image(image = data, # In this case, a numpy array
                    group = root,
                    axes = axes, # Dimensionality order
                    scaler=scaler,
-                   coordinate_transformations=transforms,
+                   coordinate_transformations = coordinate_transforms,
                    storage_options = storage_options
                    )
 ```
