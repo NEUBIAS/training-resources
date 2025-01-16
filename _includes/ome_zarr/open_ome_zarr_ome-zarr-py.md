@@ -22,7 +22,7 @@ utils.download(input_path = "https://uk1s3.embassy.ebi.ac.uk/idr/zarr/v0.4/idr00
 
 Validate:
 ```python
-utils.view(input_path = "https://uk1s3.embassy.ebi.ac.uk/idr/zarr/v0.4/idr0062A/6001240.zarr")
+utils.view(input_path = "/local/path/to/6001240.zarr")
 ```
 
 
