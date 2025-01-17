@@ -11,7 +11,7 @@ from skimage.data import astronaut
 **Create fake data:**
 
 ```python
-data = astronaut().transpose()
+data = astronaut().swapaxes(0, 2).swapaxes(1, 2)
 ```
 
 **Create a zarr store to write:**
