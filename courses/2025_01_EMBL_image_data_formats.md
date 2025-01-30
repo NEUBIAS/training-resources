@@ -12,6 +12,7 @@ Performing modern microscopy one is exposed to many different image data formats
   * [Spatial calibration](https://neubias.github.io/training-resources/spatial_calibration/index.html)
   * [Image data types](https://neubias.github.io/training-resources/datatypes/index.html)
   * [Volume slicing](https://neubias.github.io/training-resources/volume_slicing/index.html)
+  * [Label mask (segmentation) images](https://neubias.github.io/training-resources/connected_components/index.html)
 
 ### Installation instructions
 
