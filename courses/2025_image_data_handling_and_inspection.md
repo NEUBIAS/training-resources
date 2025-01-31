@@ -35,16 +35,15 @@ Scientists that may use microscopy data in their research.
 
 ## Morning session teaching content
 
-1. [Scientfic image data presentation](https://neubias.github.io/training-resources/image_inspection_and_presentation/index.html)
-    - Only discuss the main figure for motivation of the course: to create the figure all the below modules need to be learned
 1. [Digital image basics](https://neubias.github.io/training-resources/pixels/index.html)
 1. [Image data types](https://neubias.github.io/training-resources/datatypes/index.html)
 1. [Lookup tables](https://neubias.github.io/training-resources/lut/index.html)
-1. [Multichannel images](https://neubias.github.io/training-resources/multichannel_images/index.html)
 1. [Spatial image calibration](https://neubias.github.io/training-resources/spatial_calibration/index.html)
+1. [Multichannel images](https://neubias.github.io/training-resources/multichannel_images/index.html)
+1. [Volume slicing](https://neubias.github.io/training-resources/volume_slicing/index.html)
 1. [Image file formats](https://neubias.github.io/training-resources/image_file_formats/index.html)
-1. [Scientfic image data presentation](https://neubias.github.io/training-resources/image_inspection_and_presentation/index.html)
-    - Now we are ready to perform the module activity and create the scientific image presentation
+1. [Microscopy image formation](https://neubias.github.io/training-resources/image_formation_fluo_mic/index.html)
+1. [Projections](https://neubias.github.io/training-resources/projections/index.html)
 
 ### Timing
 
