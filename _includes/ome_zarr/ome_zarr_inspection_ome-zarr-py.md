@@ -1,6 +1,6 @@
 **Use the ome_zarr tool for the inspecting and downloading OME-Zarrs from s3:**
 
-Remote OME-Zarr data stored in a public s3 bucket can be inspected and downloaded using 
+Remote OME-Zarr data stored in a **public** s3 bucket can be inspected and downloaded using 
 the `ome-zarr-py` tool. 
 
 Inspect 3 different remote datasets:
@@ -20,8 +20,12 @@ ome_zarr info https://s3.embl.de/i2k-2020/platy-raw.ome.zarr
 **Optional:** Download the dataset `6001240.zarr` from s3 to a local path:
 
 ```bash
-# cd ~/ome_zarr_course/data/zarr
+# cd ~/image_data_formats/day1/ome_zarr
 cd /path/to/local/zarr # where you want to keep the data on your system
 ome_zarr download https://uk1s3.embassy.ebi.ac.uk/idr/zarr/v0.4/idr0062A/6001240.zarr
 ```
 
+**Optional:** Inspect the local dataset in the same way:
+```bash
+ome_zarr info /path/to/local/zarr/6001240.zarr
+```
