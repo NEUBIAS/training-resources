@@ -1,5 +1,6 @@
 ---
-permalink: /all-modules/index.html
+title: Image Data Formats Course
+permalink: /image-data-formats-course/index.html
 ---
 
 {% comment %}
@@ -10,4 +11,4 @@ open an issue: https://github.com/carpentries/styles/issues/new
 
 {% include base_path.html %}
 
-{% include all-modules.md %}
+{% include some-modules.md %}

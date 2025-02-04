@@ -1,4 +1,4 @@
-title: "Bioimage Analysis Training Resources"
+title: "Training Resources"
 email: "image-analysis-support@embl.de"
 description: > # this means to ignore newlines until "baseurl:"
   A collection of material for teaching image analysis.
@@ -18,6 +18,12 @@ default-platform: "NONE"
 
 life_cycle: "stable"
 kind: "lesson"
+
+some_module_order:
+- image_file_formats
+- big_image_file_formats
+- ome_tiff
+- ome_zarr
 
 module_order:
 - tool_installation
