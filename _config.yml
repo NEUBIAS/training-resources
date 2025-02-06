@@ -19,7 +19,8 @@ default-platform: "NONE"
 life_cycle: "stable"
 kind: "lesson"
 
-some_module_order:
+image_data_formats_course_order:
+- image_data_formats_course
 - image_file_formats
 - big_image_file_formats
 - ome_tiff

@@ -11,4 +11,4 @@ open an issue: https://github.com/carpentries/styles/issues/new
 
 {% include base_path.html %}
 
-{% include some-modules.md %}
+{% include image_data_formats_course_modules.md %}

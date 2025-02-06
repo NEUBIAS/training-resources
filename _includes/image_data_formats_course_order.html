@@ -43,7 +43,7 @@
     find the corresponding episode object. This is what we do with the
     following code in every loop over 'lesson_episodes':
 
-        {% if site.some_module_order %}
+        {% if site.module_order %}
           {% assign episode = site.modules| where: "slug", lesson_episode | first %}
         {% else %}
           {% assign episode = lesson_episode %}
@@ -54,8 +54,8 @@
 Manual ordering of Episodes begins here
 {% endcomment %}
 
-{% if site.some_module_order %}
-    {% assign lesson_episodes = site.some_module_order %}
+{% if site.image_data_formats_course_order %}
+    {% assign lesson_episodes = site.image_data_formats_course_order %}
 {% else %}
     {% assign lesson_episodes = site.modules%}
 {% endif %}
@@ -68,7 +68,7 @@ Manual ordering of Episodes begins here
 {% endcomment %}
 
 
-{% if site.some_module_order %}
+{% if site.image_data_formats_course_order %}
   {% for lesson_episode in lesson_episodes %}
 
     {% comment %}

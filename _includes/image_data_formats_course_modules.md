@@ -4,7 +4,7 @@ If you notice that something doesn't work, please
 open an issue: https://github.com/carpentries/styles/issues/new
 {% endcomment %}
 
-{% include some_manual_episode_order.html %}
+{% include image_data_formats_course_order.html %}
 
 <style>
   h2 {text-align: center;}

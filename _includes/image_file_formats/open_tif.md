@@ -1,4 +1,4 @@
-<h4 id="open_tif"><a href="#open_tif">Open TIF image data</a></h4>
+<h4 id="open_tif"><a href="#open_tif">Open TIFF image data</a></h4>
 
 - Open a TIFF (Tag Image File) file and inspect its pixel and metatdata content
 - Observe that there are different variants of TIFF files
