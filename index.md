@@ -26,6 +26,8 @@ The [training modules](all-modules/index.html) have been used in various context
 
 <br>
 
+#### [Basic bioimage properties and inspection course](basic-image-inspection-course/index.html)
+
 #### [Image data formats course](image-data-formats-course/index.html)
 
 #### [Basic image analysis course](basic-image-analysis-course/index.html)
