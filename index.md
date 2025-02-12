@@ -14,17 +14,22 @@ The material is divided into small modules, where the teaching of each module sh
 
 The modules are meant to be taught hands-on, i.e. following the teacher's guidance, students execute the relevant steps in an image analysis software on their computers. The modules provide those steps for several major image analysis platforms, such as ImageJ GUI, ImageJ Macro, Python and Galaxy.
 
+There are many teaching modules available, some of them are still under development. Please feel free to browse **[all available training modules](all-modules/index.html)**.
+
 Please note that this material is under constant development and help is very much appreciated. Please see our [Contributors Guide](CONTRIBUTING.md).
 
 Happy teaching, learning and contributing!
 
-## Training modules and courses 
+### Established courses 
+
+The [training modules](all-modules/index.html) have been used in various contexts and compiled into various courses ([see here for past courses](https://github.com/NEUBIAS/training-resources/tree/master/courses)). Here is a selection of consolidated courses that have been taught multiple times already. Please let us know if you'd like to see or add another course here.
+
+<br>
 
 #### [Image data formats course](image-data-formats-course/index.html)
 
-#### [All training modules](all-modules/index.html)
+#### [Basic image analysis course](basic-image-analysis-course/index.html)
 
 <br><br><br>
-
 
 {% include links.md %}
