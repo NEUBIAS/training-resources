@@ -32,6 +32,7 @@ multiactivities:
 	["skimage napari", "lut/lut_act2_skimage_napari.py", "python"],["Galaxy Napari","lut/lut_act2_galaxy.md"]]]
 
 keypoints:
+  - LUT stands for "look-up table"; it defines how numeric pixel values are mapped to colors for display.
   - A LUT has configurable contrast limits that determine the pixel value range that is rendered linearly.
   - LUT settings must be responsibly chosen to convey the intended scientific message and not to hide relevant information.
   - A gray scale LUT is usually preferable over a colour LUT, especially blue and red are not well visible for many people. 

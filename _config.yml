@@ -19,12 +19,6 @@ default-platform: "NONE"
 life_cycle: "stable"
 kind: "lesson"
 
-image_data_formats_course_order:
-- image_data_formats_course
-- image_file_formats
-- big_image_file_formats
-- ome_tiff
-- ome_zarr
 
 module_order:
 - tool_installation
