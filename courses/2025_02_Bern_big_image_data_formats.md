@@ -1,4 +1,8 @@
-# Big image data formats (SPIM Data course, Bern Feburary 2025)
+# Big image data formats (SPIM Data course)
+
+## Location
+
+Uni Bern, February 2025
 
 ## Topics
 
