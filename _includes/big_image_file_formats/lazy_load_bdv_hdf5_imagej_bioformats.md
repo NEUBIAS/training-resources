@@ -1,5 +1,0 @@
-- Open Fiji
-- Use [ Plugins > Utilities > Monitor Memory... ] to keep an eye on the memory
-- Drag and drop the BDV XML file on the Fiji menu bar
-- The Bio-Formats plugin should automatically pop up 
-- Choose one or multiple resolution layers to be opened

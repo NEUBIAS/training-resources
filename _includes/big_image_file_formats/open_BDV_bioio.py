@@ -12,7 +12,7 @@
 # - Observe that BioImage chooses the correct reader plugin
 from bioio import BioImage
 from pathlib import Path
-bioimage = BioImage(Path().cwd()/'xyz_uint8__em_platy_raw_s4.xml')
+bioimage = BioImage(Path().cwd()/'xyz_uint8__em_platy__3d_chunk_multires.xml')
 print(bioimage)
 print(type(bioimage))
 
