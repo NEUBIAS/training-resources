@@ -31,6 +31,7 @@ module_order:
 - image_file_formats
 - big_image_file_formats
 - ome_tiff
+- remote_data_access
 - ome_zarr
 - table_file_formats
 - image_inspection_and_presentation
