@@ -19,14 +19,7 @@
     - Observe that this is a bit slow because it needs to fetch the data
     - Observe that your memory fills up while you move
 - Use [ Image > Stacks > Orthogonal Views ] to look at the data from the side
-    - Observe that now it needs to load all data
-
-#### TIFF chunking and layout on disk
-
-The above acitivity demonstrated that one can efficiently lazy load XY planes from a TIFF file. However lazy loading YZ planes efficiently is not possible. The reason is that for all current storage systems (e.g., hard disks) data that resides close together can be read in **one read** operation; however, data that is distributed must be read in a **sequence of seek and read** operations, which is much slower. Note that often it is actually faster to just read everything in one go, even if not all data is needed.
-
-![Lazy load from 3D TIFF](../figures/lazy_load_from_3d_tiff.png)
-
+    - Observe that now it needs to load all data, because efficiently lazy loading YZ planes from TIFF is not possible, because TIFF files are chunked as XY planes
 
 #### Lazy load TIFF into BigDataViewer (BDV)
 
@@ -44,6 +37,6 @@ The above acitivity demonstrated that one can efficiently lazy load XY planes fr
 
 #### Key points
 
-- "Bio-Formats Importer" with the "Open virtual" option allows you to lazy load image data into Fiji
-- "Bio-Formats Importer" only supports plane-wise lazy loading from a single resolution level
-- TIFF stacks are internally plane-wise chunked
+- "Bio-Formats Importer" with the **open virtual** option allows you to **lazy load XY planes** from image data into Fiji
+- **TIFF stacks are chunked as XY planes** and within the planes as Y strips; lazy loading planes is typically supported by reader libraries, lazy-loading strips is less supported (and may not be efficient because it may be faster to just load the whole plane anyway).
+- The ImageJ viewer is **blocking**; BigDataViewer is **not blocking**, i.e. you can move around while data is being loaded.

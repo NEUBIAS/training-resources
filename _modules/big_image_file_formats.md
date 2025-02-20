@@ -61,7 +61,17 @@ The efficiency with which parts (chunks) of image data can be loaded from your h
 
 ### Resolution pyramids
 
-TODO
+If the image data is big and one is zoomed out, the data may have more pixels that the viewing window of your computer monitor. In this case it makes no sense to load all the data, but a lower resolution (down-sampled) version of the same data would give you the same displayed information and, since it is less data, it could be loaded  faster. Thus, for big image data one typically saves the data multiple times at different levels of downsampling in a so-called resolution pyramid. If you use appropriate viewing software it will automatically load the data from the appropriate resolution level, depending on your zoom level and the number of pixels of your viewing device. Note that is not only useful for fast visualisation, but can be also handy for image analysis purposes, where certain computations may not need to be performed on the full resolution data.
+
+See also an introduction to [resolution pyramids on Wikipedia](https://en.wikipedia.org/wiki/Pyramid_%28image_processing%29)
+
+
+### TIFF chunking
+
+![Lazy load from 3D TIFF](../figures/tiff_chunking.png)
+
+TIFF files are chunked as **planes** and as **strips** within the planes.
+One can therefore efficiently lazy load XY planes from a TIFF file. However, in particular lazy loading of YZ planes is very inefficient. The reason is that for typical storage systems (e.g., hard disks) data that resides close together can be swiftly fetched in **one read** operation. However, data that is distributed must be read in **several  seek and read** operations, which is much slower, because each operation needs time. Note that often it is actually faster to just read everything in one go, even if not all data is needed.
 
 
 
