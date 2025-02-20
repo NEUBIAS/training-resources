@@ -1,3 +1,5 @@
+#### Fully load TIFF stack into memory
+
 - Check the image file size on disk
 - Compare this to your computer's memory
 - Open Fiji
@@ -7,6 +9,9 @@
     - Observe that this takes time and that the memory fills up
 - Close the image and observe whether memory is freed
 - Use [ Plugins > Utilities > Collect Garbage ] to enforce freeing the memory
+
+#### Lazy load TIFF into standard ImageJ Viewer
+
 - Use [ Plugins > Bio-Formats > Bio-Formats Importer ] to lazy open the TIFF stack 
     - [X] Open virtual (<= this is key!) 
     - Observe that initial opening is faster and your memory is not filling up as much
@@ -16,7 +21,14 @@
 - Use [ Image > Stacks > Orthogonal Views ] to look at the data from the side
     - Observe that now it needs to load all data
 
-#### Lazy load into BigDataViewer (BDV)
+#### TIFF chunking and layout on disk
+
+The above acitivity demonstrated that one can efficiently lazy load XY planes from a TIFF file. However lazy loading YZ planes efficiently is not possible. The reason is that for all current storage systems (e.g., hard disks) data that resides close together can be read in **one read** operation; however, data that is distributed must be read in a **sequence of seek and read** operations, which is much slower. Note that often it is actually faster to just read everything in one go, even if not all data is needed.
+
+![Lazy load from 3D TIFF](../figures/lazy_load_from_3d_tiff.png)
+
+
+#### Lazy load TIFF into BigDataViewer (BDV)
 
 - Close all images
 - Use [ Plugins > Utilities > Collect Garbage ] to free all memory
