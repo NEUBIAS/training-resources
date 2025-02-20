@@ -23,7 +23,6 @@ figure_legend:
 
 multiactivities:
   - ["ome_zarr/open_ome_zarr.md", [
-            ["Inspect OME-Zarr datasets using minio-client", "ome_zarr/ome_zarr_inspection_minio-client.md"], 
             ["Inspect OME-Zarr from IDR using minio-client", "ome_zarr/ome_zarr_work_with_idr_bucket_minio-client.md"],
             ["Inspect OME-Zarr datasets using ome_zarr_py client","ome_zarr/ome_zarr_inspection_ome-zarr-py.md"],
             ["Inspect and validate OME-Zarr in Python using ome-zarr-validator","ome_zarr/validate_ome_zarr_ome-zarr-validator.md"],
