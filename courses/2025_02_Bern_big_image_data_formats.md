@@ -45,6 +45,7 @@ Christian Tischer (EMBL)
             - Observe that looking at this dataset "from the side" is not performant
         - Use S3 URL to inspect the chunking with the NGFF Validator
             - Observe that the chunking is like in a TIFF file
+            - See that one can load individual chunks
         - (Optional) Copy S3 URL and use minio CLI to inspect the data
     - Platy EM data
         - https://s3.embl.de/i2k-2020/platy-raw.ome.zarr

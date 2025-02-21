@@ -1,4 +1,4 @@
-- Inspect the XML file using your web browser, e.g.
+- Inspect the BDV XML file using your web browser, e.g.
     - Chrome: [ File > Open File... ]
     - Observe the relevant metadata such as
         - Image dimensions
