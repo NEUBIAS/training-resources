@@ -1,0 +1,4 @@
+- Open Fiji
+- Open an image of your choice
+- Use [ Plugins > BigDataViewer > Export Current Image as XML/HDF5 ] to save the image
+- TODO: Add more information...

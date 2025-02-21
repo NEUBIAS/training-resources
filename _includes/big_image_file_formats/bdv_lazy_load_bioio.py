@@ -1,11 +1,9 @@
 # %% 
-# Open a CZI image file
-# minimal conda env for this module
-# conda create -n ImageFileFormats python=3.10
-# activate ImageFileFormat
-# pip install bioio bioio-tifffile bioio-lif bioio-czi bioio-ome-tiff bioio-ome-zarr notebook
-# Note: for only dealing with .czi just do pip install bioio bioio-czi
-
+# Open a BDV image file
+# conda env for this module
+# conda create -n bio_io_bdv python=3.10
+# activate bio_io_bdv
+# pip install bioio bioio-tifffile
 
 # %%
 # Load BDV file
@@ -25,7 +23,6 @@ image_data = bioimage.data
 image_data = bioimage.dask_data
 print(image_data)
 
-
 #%%
-# load specific image plane
+# lazy load a specific image plane
 bioimage_data = bioimage.dask_data[:,:,:,10,:].compute()

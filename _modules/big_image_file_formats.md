@@ -20,10 +20,17 @@ figure: /figures/big_image_file_formats.png
 figure_legend: "Big image data formats typically support flexible chunking of data and resolution pyramids. Chunking enables efficient loading of image subregions. Resolution pyramids prevent loading useless details when being zoomed out."
 
 multiactivities:
-  - ["big_image_file_formats/lazy_load_tiff_stack.md", [["ImageJ GUI", "big_image_file_formats/lazy_load_tiff_stack_imagej_gui.md"],
-  ["python bioio","image_file_formats/open_tif_bioio.py"]]]
-  - ["big_image_file_formats/lazy_load_bdv_hdf5.md", [["myhdf5 (browser)", "big_image_file_formats/inspect_bdv_hdf5_with_myhdf5.md"], ["h5ls (CLI)", "big_image_file_formats/inspect_bdv_hdf5_with_h5ls.md"], ["ImageJ GUI BigDataViewer & Bio-Formats", "big_image_file_formats/lazy_load_bdv_hdf5_imagej_bdv.md"],
-  ["python bioio","big_image_file_formats/open_BDV_bioio.py"]]]
+  - ["big_image_file_formats/tiff.md", [
+      ["ImageJ GUI", "big_image_file_formats/tiff_lazy_load_imagej_gui.md"],
+      ["python bioio","big_image_file_formats/tiff_lazy_load_bioio.py"]]
+    ]
+  - ["big_image_file_formats/bdv_hdf5.md", [
+      ["Inspect BDV HDF5 with myhdf5 (browser)", "big_image_file_formats/inspect_bdv_hdf5_with_myhdf5.md"], 
+      ["Inspect BDV HDF5 with h5ls (CLI)", "big_image_file_formats/inspect_bdv_hdf5_with_h5ls.md"], 
+      ["Open BDV HDF5 with ImageJ BigDataViewer & Bio-Formats", "big_image_file_formats/lazy_load_bdv_hdf5_imagej_bdv.md"], 
+      ["Open BDV HDF5 with python bioio","big_image_file_formats/bdv_lazy_load_bioio.py"],
+      ["Create BDV HDF5 with ImageJ","big_image_file_formats/bdv_create_with_imagej.md"]
+    ]]
 
 exercises:
 
