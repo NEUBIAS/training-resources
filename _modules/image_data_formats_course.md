@@ -1,5 +1,5 @@
 ---
-title: Image data formats course overview
+title: Image data formats course
 layout: module
 prerequisites:
   - "Familiarity with using [Fiji](https://fiji.sc/)'s graphical user interface"
