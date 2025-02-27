@@ -3,8 +3,7 @@
 # minimal conda env for this module
 # conda create -n ImageFileFormats python=3.10
 # activate ImageFileFormat
-# pip install bioio bioio-tifffile bioio-lif bioio-czi bioio-ome-tiff bioio-ome-zarr notebook
-# Note: for only dealing with .tif just do pip install bioio bioio-tifffile
+# pip install bioio bioio-tifffile notebook
 
 
 # %%
@@ -50,16 +49,3 @@ print(f'Pixel size: {bioimage.physical_pixel_sizes}')
 # Read metadata
 print(f'Metadata type: {type(bioimage.metadata)}')
 print(f'Metadata: {bioimage.metadata}')
-
-#%%
-# Load a large tif lazily
-from pathlib import Path
-image_path = Path().cwd()/'xyz_uint8__em_platy_raw_s4.tif'
-bioimage = BioImage(image_path)
-# lazy load
-bioimage_data = bioimage.dask_data
-print(bioimage_data)
-
-#%%
-# load specific image plane
-bioimage_data = bioimage.dask_data[:,:,:,10,:].compute()
