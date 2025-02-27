@@ -44,3 +44,28 @@ for image in bioimage.scenes:
     print(f'Metadata type: {type(bioimage.metadata)}')
     print(f'Metadata: {bioimage.metadata}')
     print('\n')
+
+#%%
+# Handle metadata
+import xml.etree.ElementTree as ET
+from xml.dom import minidom
+# print a pretty version of the xml metadata
+md = bioimage.metadata
+xml_string = ET.tostring(md, encoding='unicode')
+pretty_xml = minidom.parseString(xml_string).toprettyxml(indent="  ")
+print(pretty_xml)
+
+#%%
+# Grab specific information
+size_x = md.find(".//DimensionDescription").get('NumberOfElements')
+pixel_size_x = float(md.find(".//DimensionDescription").get('Length'))
+pixel_size_x_unit = md.find(".//DimensionDescription").get('Unit')
+print(f'Image size in X: {size_x}')
+print(f'Pixel size x: {pixel_size_x} in {pixel_size_x_unit}')
+channels = md.findall(".//MultiBand")
+excitation_wavelength = channels[1].get("TargetWaveLengthBegin")
+emission_wavelength = channels[1].get("TargetWaveLengthEnd")
+dye_name = channels[1].get("DyeName")
+print(f'Excitation wavelength: {excitation_wavelength}')
+print(f'Emission wavelength: {emission_wavelength}')
+print(f'Dye name: {dye_name}')
