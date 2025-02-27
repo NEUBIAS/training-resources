@@ -6,6 +6,6 @@ For teaching handling big image data it is useful to work with image data that a
 
 ### Platyereis EM: TIFF and BDV-HDF5
 
-https://zenodo.org/records/14591118
+https://zenodo.org/records/14857764
 
 
