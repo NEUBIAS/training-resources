@@ -31,6 +31,8 @@ The above training modules have been used in various contexts and compiled into 
 
 #### [Basic bioimage analysis](basic-image-analysis-course/index.html)
 
+#### [Cloud based bioimage analysis](cloud-based-analysis-course/index.html)
+
 <br><br><br>
 
 {% include links.md %}
