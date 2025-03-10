@@ -40,11 +40,17 @@
 
     - Test in batch mode.
 
+        - Open a terminal and create a directory called `testimage`,e.g. /tmp/testimage
+        - Download the example image [here](https://github.com/embl-cba/bard-containers/blob/main/cellpose-nobard/MAX_pg6-3CF1_20--t1-3.jpg) and store it into `/tmp/testimg`
+        - Perform segmentation on the example image using the `cyto` model
         ```
-        docker run --rm cellpose:01 --help
+        docker run -v /tmp/testimage:/testimage cellpose:01 --dir /testimage --pretrained_model cyto --save_png
         ```
 
-        - You should see the `Help` contents displayed on your terminal. 
+        - Note the `-v` flag which makes your test image on your local computer available inside container.
+        - The `/testimage` after the colon is the target directory inside container. You example image will be available under this direcotry inside container.
+        - The arguments after the container `cellpose:01` are standard cellpose command options. You could refer to them [here](https://cellpose.readthedocs.io/en/latest/command.html)
+        - After the run finished, your output images are saved in the same /testimage directory.
         - This command runs CellPose in batch mode. You could specify any CellPose argument here.
         - By default, if we don't specify any argument, i.e. just to run `docker run --rm cellpose:01` , the CellPose GUI starts, however, it requires extra configurations which we will do in the next step.
 

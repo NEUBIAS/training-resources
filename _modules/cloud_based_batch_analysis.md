@@ -21,7 +21,7 @@ figure: /figures/cloud_based_batch_analysis.png
 figure_legend: Key components that enable efficient bioimage batch analysis
 
 multiactivities:
-  - ["cloud_based_batch_analysis/act01.md", [ ["Batch containers", "cloud_based_batch_analysis/act01_headless_containers.md"],["Galaxy", "cloud_based_batch_analysis/act01_galaxy.md"], ["Nextflow", "cloud_based_batch_analysis/act01_nf.md"]]]
+  - ["cloud_based_batch_analysis/act01.md", [["Galaxy", "cloud_based_batch_analysis/act01_galaxy.md"], ["Nextflow", "cloud_based_batch_analysis/act01_nf.md"]]]
 
 external_links:
   - "[Galaxy Training Network](https://training.galaxyproject.org/)"
