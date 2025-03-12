@@ -13,11 +13,3 @@ We will use the BARD desktop EMBL instance for this course.
         - All applications start as the current logged-in user.
         - Your home directory is shared among all containers, which means if you need data accessible for all applications, you will need to store them in your own home folder.
 
-- Upload data to the BARD desktop
-    - For small data, e.g. less than 100MB, you could just drag the files to your desktop.
-    - After upload finishes, your files appear in your home folder, e.g.,`/home/trainingXX`
-    - For large file upload and download:
-        - Go to https://filebrowser.bard-external.embl.de
-        - Log in with username `tim2025`, password: `time2025`
-        - Find your own folder under `tim2025`, your folder name is the same as your BARD log in username
-        - Start upload/Download files

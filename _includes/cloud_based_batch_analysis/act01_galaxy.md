@@ -8,18 +8,28 @@ To build a batch analysis workflow in Galaxy, we will use [this tutorial](https:
     - Register an account in usegalaxy.eu if you are using it.Some tools are only available for registered users. 
     - Once you get to the Galaxy main page, on the left pane is the tool menu,where you will find all tools available in Galaxy EU.
     - You could also search for a particular tool using the search box on top.
-    - Follow this **[tutorial](https://training.galaxyproject.org/training-material/topics/imaging/tutorials/imaging-introduction/tutorial.html/)** and complete all the steps in it.
-    - After completing all the steps in the tutorial, we will extract the workflow from our Galaxy history. 
-        - Click `History Option` on the top right corner of your history.
-        - Select `Extract workflow`, tick all the steps in the main panel, and click `Create workflow`.
-        - When the workflow is created, click `run` workflow. This will automatically run all of the previous steps.
+    - Follow this **[tutorial](https://training.galaxyproject.org/training-material/topics/imaging/tutorials/hela-screen-analysis/tutorial.html)** and complete all the steps in it.
+ 
+ - Share Galaxy workflows
+    - After completing all the steps in the tutorial above, you will have a workflow in Galaxy. But what if you want to share it with others to make it reusable?
+        - Click `Workflow` on the left side of the Galaxy screen. All available workflows under your account are listed in the main panel.
+        - Find the workflow you want to share, and click the `Share` button.
+        - By default, the workflow is only accessible to the the users listed under `Share Workflow with Individual Users`.
+        - To grant access to additional users, enter their email addresses in the provided text box and click `Save`. These users will then see the workflow under `Workflow shared with me` in their own accounts.
+        - To generate a shareable URL that allows anyone with the link to view and import the workflow, toggle `Make Workflow accessible` at the top section.
+        - If you want to make the workflow publicly available - so it appears in `Public workflows` and is searchable by anyone - toggle `Make Workflow publicly available in published workflows`.
 
-- Upload data to Galaxy
-    - Ensure you logged in to Galaxy
-    - On the `History` pane, click the `+` sign to create a new history.
-    - Click `Upload` at the top of the tool panel
-    - Select either `Choose local files`, `Choose remote files` or `Paste/Fetch Data`
-        - `Choose local file` : use this to upload from your local computer.
-        - `Choose remote files`: use this if your files are in cloud storage, such s S3. Note the cloud storage need to preconfigured in Galaxy.
-        - `Paste/Fetch Data`: use this if you need to get data from URL.
-    - Press Start, wait for the upload to finish, then close the window.
+- Import/Export Galaxy workflows
+    - Currently the workflow is in the Galaxy EU instance, but what if we need to move it to another instances?
+        - Log in to the Galaxy EU and click `Workflows` in the left menu.
+        - Find the workflow you want to transfer.
+        - Click `Download workflow in .ga format`. This will download a `.ga` file to your host computer. You can then use the file in several ways as listed below. In this exercise, will will focus on importing it to another instance.
+            - **Import it to another Galaxy innstance.**
+            - Upload it to [workflowhub.eu](https://workflowhub.eu)
+            - Publish it to [Zenodo](https://zenodo.org) and obtain a DOI.
+        - Log in to another Galaxy instance, such as [usegalaxy.org](https://usegalaxy.org)
+        - Click the `Workflows` in the left menu.
+        - In the top right corner of the centre pane, click `Import`.
+        - If your `.ga` file has an accessible URL, paste it into `Archived Workflow URL`.
+        - If your `.ga` file is stored on your computer, click `Browse` under `Archived Workflow File`, and select your file.
+        - Click `Import workflow` to complete the process.

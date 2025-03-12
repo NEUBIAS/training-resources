@@ -39,8 +39,8 @@ figure_legend: Example container architecture
 
 multiactivities:
   - ["containers/act01.md", [["Linux(Ubuntu)", "containers/act01_ubuntu.md"], ["macOS", "containers/act01_mac.md"]]]
-  - ["containers/act02.md", [["01_Pulling an image", "containers/act02_pull_image.md"], ["02_Removing an image", "containers/act02_remove_image.md"], ["03_Running a container", "containers/act02_running_containers.md"], ["04_Removing a container", "containers/act02_remove_containers.md"]]]
-  - ["containers/act03.md", [["Build and test your container(Ubuntu)", "containers/act03_ubuntu.md"], ["Build and test your container(macOS)", "containers/act03_mac.md"]]]
+  - ["containers/act02.md", [["Run a simple container", "containers/act02_simple.md"], ["Run CellPose container", "containers/act02_cellpose.md"]]]
+  - ["containers/act03.md", [["Understand Dockerfile", "containers/act03_understand.md"], ["Build from Dockerfile", "containers/act03_build.md"]]]
 
 
 learn_next:
