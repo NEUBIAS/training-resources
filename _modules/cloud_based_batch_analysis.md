@@ -1,41 +1,29 @@
 ---
 title: Cloud based batch analysis
 layout: module
-tags: ["draft"]
 prerequisites:
-  - "[TODO](../cloud_based_batch_analysis)"
+  - "[Bioimage tools containers ](../containers)"
 objectives:
-  - "TODO"
+  - "Understand how to leverage cloud computing platforms, such as Galaxy, for efficient bioimage batch analysis"
+
 motivation: |
-  TODO
+  Bioimage analysis requires significant computational power, making local processing inefficient and time-consuming. By leveraging cloud-based batch processing, researchers can scale their analyses, automate workflows, and handle imaging data with greater efficiency.
 
 concept_map: >
   graph TD
-    T1("TODO1") --> T2("TODO2")
-    T2 --> T3("TODO3")
+    T1("Bioimage batch analysis") 
+    T2("Galaxy")--> T1
+    T3("Nextflow")--> T1
+    T4("Others")--> T1
+ 
 
 figure: /figures/cloud_based_batch_analysis.png
-figure_legend: TODO
+figure_legend: Key components that enable efficient bioimage batch analysis
 
 multiactivities:
-  - ["cloud_based_batch_analysis/act01.md", [["ImageJ GUI", "cloud_based_batch_analysis/act01_imagejgui.md"], ["skimage napari", "cloud_based_batch_analysis/act01_skimage_napari.py"]]]
-
-assessment: >
-
-  ### Fill in the blanks
-
-    1. TODO ___ .
-    1. TODO ___ .
-    
-    > ## Solution
-    >   1. TODO
-    >   1. TODO
-    {: .solution}
-
-learn_next:
-  - "[Automatic threshold for binarization](../auto_threshold)"
+  - ["cloud_based_batch_analysis/act01.md", [["Galaxy", "cloud_based_batch_analysis/act01_galaxy.md"], ["Nextflow", "cloud_based_batch_analysis/act01_nf.md"]]]
 
 external_links:
-  - "[Wikipedia: Binary image](https://en.wikipedia.org/wiki/Binary_image)"
+  - "[Galaxy Training Network](https://training.galaxyproject.org/)"
+  - "[Nextflow Training](https://training.nextflow.io/latest/) "
 ---
-

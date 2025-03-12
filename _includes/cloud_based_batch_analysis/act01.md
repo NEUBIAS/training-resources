@@ -1,1 +1,2 @@
-<h4 id=act_ref><a href=#act_ref>Activity title</a></h4>
+
+In this exercise, we will build workflow using different batch analysis platforms

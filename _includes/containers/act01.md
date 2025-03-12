@@ -1,1 +1,2 @@
-<h4 id=act_ref><a href=#act_ref>Activity title</a></h4>
+<h4 id="spots"><a href="#spots">Installation</a></h4>
+Here, we outline the steps to install Docker on your computer.
