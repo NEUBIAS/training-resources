@@ -17,13 +17,12 @@ motivation: |
 
 concept_map: >
   graph TD;
-    L1("Client computer") -->|"shell, browser"| CR("Cloud resource")
-    CR --- OS("Software\n(Platform, Applications)")
-    OS --- H("Hardware")
-    CR ---|examples| E("Google Colab\nSlurm cluster\nVirtual Desktops\n Galaxy\n...")
+    C("Client computer(s)") -->|"shell, browser"| CR("Cloud resource")
+    CR --- OS("Software & Hardware")
+    CR ---|examples| E("Google Colab\nSlurm cluster\nVirtual desktops\n Galaxy\n...")
     
 figure: /figures/cloud-course-figure.png 
-figure_legend: "There are cloud-based solutions for both interactive and automated batch analysis of microsopy image data."
+figure_legend: "Cloud based (bioimage) analysis. Examples for integrated (software and hardware) cloud resources include: Google Colab and Galaxy; Examples for cloud software platforms include: Virtual Desktops, Jupyter Notebooks, Galaxy, Nextflow, Slurm."
 
 learn_next:
   - "[Bioimage tools containers](../containers/index.html)"
