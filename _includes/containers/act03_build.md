@@ -42,4 +42,4 @@ For mac users, replace `docker` with `podman`.
     cellpose                         01                   9055a7c1a1ef  51 minutes ago  12.7 GB
     ```
 
-4. Now we have the cellpose container locally, we can run it by using the steps in previous activity `Run CellPose container`.
+4. Now we have the cellpose container locally, we can run it by using the steps in previous activity `Run CellPose container` from step 3.

@@ -19,10 +19,11 @@ In this section, we will demonstrate how to make a custom container available fo
         - The `oc.showinview` label instructs BARD to place an icon of the application in its dock.
 
     - Make app icon images available. Line 66,67
-        ```
-        RUN  if [ -d /usr/share/icons ];   then cd /usr/share/icons;    /composer/safelinks.sh; fi 
-        RUN  if [ -d /usr/share/pixmaps ]; then cd /usr/share/pixmaps;  /composer/safelinks.sh; fi 
-        ```
+        
+        > _RUN  if [ -d /usr/share/icons ];   then cd /usr/share/icons;    /composer/safelinks.sh; fi_ 
+        >
+        > _RUN  if [ -d /usr/share/pixmaps ]; then cd /usr/share/pixmaps;  /composer/safelinks.sh; fi_ 
+    
 
     - `ENV` variables. Line 69-72
         - `ENV APPNAME`: The name of the application.
@@ -31,14 +32,13 @@ In this section, we will demonstrate how to make a custom container available fo
         - `ENV ARGS`: This specifies the arguments for `APPBIN`.
 
     - To start container as the current logged-in user. Line 89-98
-        ```
-        RUN mkdir -p /run/user && chmod 777 /run/user
-
-        RUN mkdir -p /etc/localaccount && \
-            for f in passwd shadow group gshadow ; do if [ -f /etc/$f ] ; then  cp /etc/$f /etc/localaccount; rm -f /etc/$f; ln -s /etc/localaccount/$f /etc/$f; fi; done
         
-        CMD ["/composer/appli-docker-entrypoint.sh" ]
-        ```
+        >  _RUN mkdir -p /run/user && chmod 777 /run/user_
+        >
+        >  _RUN mkdir -p /etc/localaccount && \ 
+        >      for f in passwd shadow group gshadow ; do if [ -f /etc/$f ] ; then  cp /etc/$f /etc/localaccount; rm -f /etc/$f; ln -s /etc/localaccount/$f /etc/$f; fi; done_   
+        >   _CMD ["/composer/appli-docker-entrypoint.sh" ]_
+        
 
         - BARD Desktop allows users to log in via LDAP or OIDC, so the Docker container must run as the logged-in user. The commands above store the LDAP information and ensure that the logged-in user is available inside the container.
 
@@ -55,9 +55,9 @@ In this section, we will demonstrate how to make a custom container available fo
         - Pull the image from the registry.
         - Extract the metadata from image using the below command, (replace with the actual image ID)
             ```
-            docker inspect  CELLPOSE_IMAGE_ID > cellpose.json
+            $ docker inspect  CELLPOSE_IMAGE_ID > cellpose.json
             ```
         - In a terminal,
             ```
-            curl -X PUT -H 'Content-type: text/javascript https://YOUR_BARD_URL/API/manager/image -d@cellpose.json
+            $ curl -X PUT -H 'Content-type: text/javascript https://YOUR_BARD_URL/API/manager/image -d@cellpose.json
             ```
