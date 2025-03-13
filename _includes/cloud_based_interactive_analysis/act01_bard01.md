@@ -1,4 +1,4 @@
-We will use the BARD desktop EMBL instance for this course.
+We will use the BARD desktop EMBL instance.
 
 - Access the BARD Desktop
     - Go to the [BARD](https://bard-external.embl.de)
