@@ -17,12 +17,12 @@ motivation: |
 
 concept_map: >
   graph TD;
-    C("Client computer(s)") -->|"shell, browser"| CR("Cloud resource")
-    CR --- OS("Software & Hardware")
-    CR ---|examples| E("Google Colab\nSlurm cluster\nVirtual desktops\n Galaxy\n...")
+    C("Client computer(s)") -->|"shell, browser"| CR("Cloud resource\n\nGoogle Colab, Slurm cluster,\nVirtual desktop, Galaxy\n...")
+    CR --- S("Software")
+    CR --- H("Hardware")
     
 figure: /figures/cloud-course-figure.png 
-figure_legend: "Cloud based (bioimage) analysis. Examples for integrated (software and hardware) cloud resources include: Google Colab and Galaxy; Examples for cloud software platforms include: Virtual Desktops, Jupyter Notebooks, Galaxy, Nextflow, Slurm."
+figure_legend: "Cloud based bioimage analysis."
 
 learn_next:
   - "[Bioimage tools containers](../containers/index.html)"
@@ -41,6 +41,4 @@ The material for this course consists of the following training modules:
 - [Cloud based batch analysis](../cloud_based_batch_analysis/index.html)
 
 
-As usual, each training module contains several activities that can be executed in various compute platforms. As a trainer, it is necessary to familiarise yourself with the material and decide what to teach.
-
-It is also highly recommended to consider our [TEACHING TIPS](https://github.com/NEUBIAS/training-resources/blob/master/TEACHING_TIPS.md).
+As usual, each training module contains several activities that can be executed on various compute platforms. As a trainer, it is necessary to familiarise yourself with the material before and decide which activities to teach. It is also highly recommended to consider our [TEACHING TIPS](https://github.com/NEUBIAS/training-resources/blob/master/TEACHING_TIPS.md).
