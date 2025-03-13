@@ -1,7 +1,12 @@
-Once we created the Dockerfile, we can build the container image locally. For mac users, replace `docker` with `podman`. 
-1. Start a terminal and enter the commands below.
+Once we created the Dockerfile, we can build the container image locally. 
+For mac users, replace `docker` with `podman`. 
+1. Download everything from **[here](https://git.embl.de/grp-cbbcs/abcdesktop-apps/-/tree/main/cellpose3d?ref_type=heads)**. 
+    - You will need **all** files to run it locally.
+    - `cellpose.svg` and `cp3d.json` are specific for the BARD, we could safely ignore them for now.
+
+2. Go to the same directory where your Dockerfile is located, start a terminal and enter the commands below.
     ```
-    docker build -t cellpose:01 .
+    $ docker build -t cellpose:01 .
     ```
 
     - The `-t` flag specifies the image tag, allowing you to name and version the built image.
@@ -10,28 +15,28 @@ Once we created the Dockerfile, we can build the container image locally. For ma
     - By default, the Docker recipe is named Dockerfile, but you can name it differently and specify the custom name when building the image using the `-f` flag. 
 
         ```
-        docker build -t cellpose:01 -f /home/ballonn/cellpose_recipe.d
+        $ docker build -t cellpose:01 -f /home/ballonn/cellpose_recipe.d
         
         ```
     where `/home/ballonn/cellpose_recipe.d` is the path to the Docker recipe.
     - For Linux users, you may see a `WARNING` after the build is finished.
 
-        ```
-        WARNING: No output specified with docker-container driver. Build result will only remain in the build cache. To push result image into registry use --push or to load image into docker use --load 
-        ```
+    > _WARNING: No output specified with docker-container driver. Build result will only remain in the build cache. To push result image into registry use --push or to load image into docker use --load_ 
 
-        This is caused by [BuildKit](https://docs.docker.com/build/buildkit/). For newer Docker version, BuildKit is enabled by default. The build result is stored only in the cache, meaning it won’t be available as a usable image unless explicitly saved. 
-        Now we load the image from cache to local machine:
 
-        ```
-        docker buildx build --load -t cellpose:01 .
-        ```
+    This is caused by [BuildKit](https://docs.docker.com/build/buildkit/). For newer Docker version, BuildKit is enabled by default. The build result is stored only in the cache, meaning it won’t be available as a usable image unless explicitly saved. 
+    
+    Now we load the image from cache to local machine:
+
+    ```
+    $ docker buildx build --load -t cellpose:01 .
+    ```
 
 
 2. Verify the image exists locally.
 
     ```
-    docker images
+    $ docker images
     REPOSITORY                       TAG                  IMAGE ID       CREATED          SIZE
     moby/buildkit                    buildx-stable-1      f210b5f94e18   13 days ago      209MB
     cellpose                         01                   9055a7c1a1ef  51 minutes ago  12.7 GB

@@ -1,11 +1,13 @@
-In this activity, we will run a more complex container, CellPose, on your local computer. This is the same CellPose container used on BARD. For mac users using podman, simply replace `docker` with `podman` in all the following commands.
+Now we will run a more complex container, CellPose, on your local computer. [CellPose](https://www.cellpose.org/) is a deep learning-based tool designed for robust and automated cell segmentation in microscopy images. This is the same CellPose container used on BARD. 
+
+For mac users using podman, simply replace `docker` with `podman` in all the following commands.
 
 **Steps**
 
 1. Pull the container image.
     
     ```
-    docker pull registry.git.embl.de/grp-cbbcs/abcdesktop-apps/cellpose3d
+    $ docker pull registry.git.embl.de/grp-cbbcs/abcdesktop-apps/cellpose3d
     Using default tag: latest
     c7322280ec71: Download complete 
     9266759a1867: Download complete 
@@ -17,7 +19,7 @@ In this activity, we will run a more complex container, CellPose, on your local 
 
 2. Verify the image exists.
     ```
-    docker images
+    $ docker images
     REPOSITORY                                                  TAG                  IMAGE ID       CREATED         SIZE
     ubuntu                                                      22.10                692eb4a905c0   20 months ago   72.8MB
     registry.git.embl.de/grp-cbbcs/abcdesktop-apps/cellpose3d   latest               1f5da5b9ba0c   7 days ago      12.8GB
@@ -25,10 +27,19 @@ In this activity, we will run a more complex container, CellPose, on your local 
 
 3. Run CellPose locally in batch mode.
     - Open a terminal and create a directory called `testimage`,e.g. `~/testimage`
-    - Download the example image [here](https://raw.githubusercontent.com/embl-cba/bard-containers/refs/heads/main/cellpose-nobard/MAX_pg6-3CF1_20--t1-3.jpg) and store it into `~/testimge`
+    ```
+    $ mkdir ~/testimage
+    ```
+
+    - Download the example image from [here](https://raw.githubusercontent.com/embl-cba/bard-containers/refs/heads/main/cellpose-nobard/MAX_pg6-3CF1_20--t1-3.jpg) and store it into `~/testimge`
+    ```
+    $ cd ~/testimage
+    $ wget https://raw.githubusercontent.com/embl-cba/bard-containers/refs/heads/main/cellpose-nobard/MAX_pg6-3CF1_20--t1-3.jpg
+    ```
+
     - Perform segmentation on the example image using the `cyto` model
     ```
-    docker run -v ~/testimage:/testimage 1f5da5b9ba0c --dir /testimage --pretrained_model cyto --save_png
+    $ docker run -v ~/testimage:/testimage 1f5da5b9ba0c --dir /testimage --pretrained_model cyto --save_png
     ```
 
     - Note the `-v` flag which makes your test image on your local computer available inside container.
@@ -42,18 +53,18 @@ In this activity, we will run a more complex container, CellPose, on your local 
         - Configure X11 to allow local processes (including Docker containers) to access the [X server](https://en.wikipedia.org/wiki/X_Window_System) for running GUI applications.
 
         ```
-        xhost +localhost
+        $ xhost +localhost
         ```
         
         Now run the CellPose GUI container:
 
         ```
-        docker run -it --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix 1f5da5b9ba0c
+        $ docker run -it --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix 1f5da5b9ba0c
         ```
 
         - Similar to the batch mode, to make data available inside the container, we use the `-v` again.
         ```
-        docker run -it --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v /home/ysun/testdata:/mnt/testdata 1f5da5b9ba0c
+        $ docker run -it --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v /home/ysun/testdata:/mnt/testdata 1f5da5b9ba0c
         ```
             - `/home/ysun/testdata` is the directory on you host computer.
             - `/mnt/testdata` is the target directory in your container. Docker will automatically creates it for you.
@@ -64,27 +75,26 @@ In this activity, we will run a more complex container, CellPose, on your local 
             - Go to Settings, on the Security tab, make sure "Allow connections from networkclients" is checked
             - In XQuartz, open a terminal (XQuartz terminal) window and run the `xhost +` command. You will see this text appear in your XQuartz terminal 
          
-        ```
-        access control disabled, clients can connect from any host
-        ```
+        >   _access control disabled, clients can connect from any host_
+        
         - Run CellPose GUI.
             - In Mac Terminal (not XQuartz terminal), Set the `DISPLAY` environment variable to point to your Mac’s X11 server. This tells the container where to send the GUI output.
 
             ```
-            export DISPLAY=host.docker.internal:0
+            $ export DISPLAY=host.docker.internal:0
             ```
                  
             - Verify the value is set correctly
 
             ```
-            echo $DISPLAY
+            $ echo $DISPLAY
             host.docker.internal:0
             ```
 
             - Start CellPose container with GUI
 
             ```
-            podman run -e DISPLAY=host.docker.internal:0 --rm 1f5da5b9ba0c
+            $ podman run -e DISPLAY=host.docker.internal:0 --rm 1f5da5b9ba0c
             ```
 
             - The `-e DISPLAY=host.docker.internal:0` tells the container where to send the GUI output.

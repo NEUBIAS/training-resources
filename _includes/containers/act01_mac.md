@@ -9,20 +9,20 @@
 - Download Podman Desktop from [podman.io](https://podman.io/docs/installation)
 - You can also install podman via `brew` in terminal
     ```
-    brew install podman
+    $ brew install podman
     ```
 
 - After installation, create and start your first Podman machine.
     - **Option 1**: Follow the instructions on the prompt window to init and start your podman machine.
     - **Option 2**: In a terminal, type
     ```
-    podman machine init
-    podman machine start
+    $ podman machine init
+    $ podman machine start
     ```
 
 - Verify the installation information using:
     ```
-    podman info
+    $ podman info
     ```
 
 - Once the Podman machine is started, you should see its status as `Running` in the Podman Desktop GUI interface.
@@ -44,7 +44,7 @@
     - Install Homebrew using the instruction from [brew.sh](https://brew.sh/)
     - Start a `Terminal` on your Mac, and type the below command
         ```
-        brew install --cask xquartz
+        $ brew install --cask xquartz
         ```
 
         - The flag `--cask` is used to install GUI applications on macOS that are distributed as `.dmg`, `.pkg` or `.app` bundles.
