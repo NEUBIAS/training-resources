@@ -25,7 +25,7 @@ figure: /figures/cloud-course-figure.png
 figure_legend: "Cloud based bioimage analysis."
 
 learn_next:
-  - "[Bioimage tools containers](../containers/index.html)"
+  - "[Cloud based interactive analysis](../cloud_based_interactive_analysis/index.html)"
 
 external_links:
   - "[Docker for beginers](https://www.docker.com/101-tutorial/)"
@@ -36,9 +36,9 @@ external_links:
 
 The material for this course consists of the following training modules:
 
-- [Bioimage tools containers](../containers/index.html)
 - [Cloud based interactive analysis](../cloud_based_interactive_analysis/index.html)
 - [Cloud based batch analysis](../cloud_based_batch_analysis/index.html)
+- [Bioimage tools containers](../containers/index.html)
 
 
 As usual, each training module contains several activities that can be executed on various compute platforms. As a trainer, it is necessary to familiarise yourself with the material before and decide which activities to teach. It is also highly recommended to consider our [TEACHING TIPS](https://github.com/NEUBIAS/training-resources/blob/master/TEACHING_TIPS.md).

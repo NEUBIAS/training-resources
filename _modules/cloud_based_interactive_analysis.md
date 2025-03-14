@@ -2,7 +2,7 @@
 title: Cloud based interactive analysis
 layout: module
 prerequisites:
-  - "[Bioimage tools containers ](../containers)"
+  - "Basic computer usage"
 objectives:
   - "Understand interactive analysis platforms, including virtual desktops, Galaxy interactive tools, and Jupyter notebooks for bioimage analysis."
   - "Run bioimage tools, such as CellPose on virtual desktops"

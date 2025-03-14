@@ -42,10 +42,6 @@ multiactivities:
   - ["containers/act02.md", [["Run a simple container", "containers/act02_simple.md"], ["Run CellPose container", "containers/act02_cellpose.md"]]]
   - ["containers/act03.md", [["Understand Dockerfile", "containers/act03_understand.md"], ["Build from Dockerfile", "containers/act03_build.md"]]]
 
-
-learn_next:
-  - "[Cloud based interactive analysis](../cloud_based_interactive_analysis/index.html)"
-
 external_links:
   - "[Docker Docs](https://docs.docker.com/)"
   - "[Podman Docs](https://docs.podman.io/en/latest/)"
