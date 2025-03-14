@@ -27,8 +27,9 @@ We will use the Galaxy's Training Infrastructure as a Service(TIaaS) in the Gala
     - Monitor the blue info box on the next page, which will inform you when the Interactive Tool is accessible and provide you with a link to access it. This could take a while.
     - If you navigate away from this page, you can view your running Interactive Tools from the `Interactive Tools` menu item in the menu of the left.
     - Click the `Open` link to display CellPose in a new browser tab.
-    - Once you are on in CellPose, go to `File->Load image`, navigate to `/home/cp_working_dir` and select the image.
+    - Once you are in CellPose, go to `File->Load image`, navigate to `/home/cp_working_dir` and select the image.
     - Click the `run cyto3` button to start the segmentation. You can experiment with different parameters and pre-trained models using the CellPose GUI.
+    <img src="{{ site.baseurl }}/figures/gxit_cellpose.png" alt="CellPose GxIT" style="display: block; margin: 2px 0;" /><br><br>
 
 - View image with the Napari interactive tool
     - Click `Tools` from the menu on the left. 
