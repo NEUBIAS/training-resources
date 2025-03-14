@@ -15,23 +15,16 @@ motivation: |
 concept_map: >
   graph TD
     A[Docker Containers]
-    
-    A --> D[Installation]
-    A --> E[Docker Images]
+  
+    A --> E[Managing Images]
     A --> F[Running Containers]
-    A --> G[Managing Containers]
-    
-    D --> D1[Linux/macOS]
-    D --> D2[Verifying Installation]
 
     E --> E1[Pulling Images]
     E --> E2[Building Custom Images]
 
-    F --> F1[docker run]
-    F --> F2[Interactive vs Batch Mode]
+    F --> F1[Batch mode]
+    F --> F2[Interactive mode]
 
-    G --> G1[Listing Containers]
-    G --> G2[Stopping & Removing]
 
 
 figure: /figures/container-figure.png
