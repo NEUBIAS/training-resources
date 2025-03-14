@@ -26,7 +26,6 @@ concept_map: >
     F --> F2[Interactive mode]
 
 
-
 figure: /figures/container-figure.png
 figure_legend: Example container architecture
 
