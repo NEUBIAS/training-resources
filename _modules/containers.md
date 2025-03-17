@@ -15,23 +15,15 @@ motivation: |
 concept_map: >
   graph TD
     A[Docker Containers]
-    
-    A --> D[Installation]
-    A --> E[Docker Images]
+  
+    A --> E[Managing Images]
     A --> F[Running Containers]
-    A --> G[Managing Containers]
-    
-    D --> D1[Linux/macOS]
-    D --> D2[Verifying Installation]
 
     E --> E1[Pulling Images]
     E --> E2[Building Custom Images]
 
-    F --> F1[docker run]
-    F --> F2[Interactive vs Batch Mode]
-
-    G --> G1[Listing Containers]
-    G --> G2[Stopping & Removing]
+    F --> F1[Batch mode]
+    F --> F2[Interactive mode]
 
 
 figure: /figures/container-figure.png
@@ -41,10 +33,6 @@ multiactivities:
   - ["containers/act01.md", [["Linux(Ubuntu)", "containers/act01_ubuntu.md"], ["macOS", "containers/act01_mac.md"]]]
   - ["containers/act02.md", [["Run a simple container", "containers/act02_simple.md"], ["Run CellPose container", "containers/act02_cellpose.md"]]]
   - ["containers/act03.md", [["Understand Dockerfile", "containers/act03_understand.md"], ["Build from Dockerfile", "containers/act03_build.md"]]]
-
-
-learn_next:
-  - "[Cloud based interactive analysis](../cloud_based_interactive_analysis/index.html)"
 
 external_links:
   - "[Docker Docs](https://docs.docker.com/)"

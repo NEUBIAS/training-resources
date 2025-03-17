@@ -1,5 +1,5 @@
 **Things to know**
-- The instructions have been tested on macOS Sequoia and should also work on Ventura and later versions.
+- The instructions have been tested on macOS Sequoia, it may or may not work for other OS version.
 - To work with Docker on macOS, we recommend installing [Podman Desktop](https://podman.io).Podman Desktop provides a graphical interface for managing containers, offering an easy way to build, run, and control them. It is fully Docker-compatible and runs containers in a rootless, daemonless environment, enhancing security.
 - Alternatively, you can use [Docker Desktop](https://www.docker.com/products/docker-desktop/) but mindful of its license agreement.
 - Since macOS lacks native [X Window System,Version 11 (X11)](https://en.wikipedia.org/wiki/X_Window_System) support, which is required for running GUI applications inside containers, you will need to install [XQuartz](https://www.xquartz.org/) - an X11 server for macOS that enables GUI applications from containers to display properly.

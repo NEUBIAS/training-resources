@@ -28,7 +28,7 @@ In this activity, we will explain how to make your container available as an Int
         >
         > _WORKDIR /config_
         
-    5. Refer to the [previous modules](../containers/) your Dockerfile locally. 
+    5. Build and test your Dockerfile locally. You could refer to [this module](../containers/) for building containers.
     6. Create a public repository for your docker recipe, e.g., Github(https://github.com), and make the repository public.
     7. Push your image to a public container registry, such as [quay.io](quay.io)
     8. If you would like to make your interactive tool available in Galaxy EU, visit the [Galaxy EU repository](https://github.com/usegalaxy-eu/usegalaxy-eu-tools) submit a pull request(PR).
