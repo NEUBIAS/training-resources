@@ -17,7 +17,7 @@ motivation: |
 
 concept_map: >
   graph TD;
-    C("Client computer(s)") -->|"shell, browser"| CR("Cloud resource\n\nGoogle Colab, Slurm cluster,\nVirtual desktop, Galaxy\n...")
+    C("Client computer(s)") -->|"shell, browser"| CR("Cloud resource\n\n(Google Colab, Slurm cluster,\nVirtual desktop, Galaxy, ...)")
     CR --- S("Software")
     CR --- H("Hardware")
     
