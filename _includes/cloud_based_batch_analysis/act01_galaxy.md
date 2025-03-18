@@ -8,7 +8,9 @@ To build a batch analysis workflow in Galaxy, we will use [this tutorial](https:
     - Register an account in usegalaxy.eu if you are using it.Some tools are only available for registered users. 
     - Once you get to the Galaxy main page, on the left pane is the tool menu,where you will find all tools available in Galaxy EU.
     - You could also search for a particular tool using the search box on top.
-    - Follow this **[tutorial](https://training.galaxyproject.org/training-material/topics/imaging/tutorials/hela-screen-analysis/tutorial.html)** and complete all the steps in it.
+    - Now we will build a workflow basede on this **[tutorial](https://training.galaxyproject.org/training-material/topics/imaging/tutorials/hela-screen-analysis/tutorial.html)**.
+    - Complete Steps 1 to 11, by the end of Step 11, we will have data ready in our Galaxy History.
+    - Click the `Workflow` item on the Galaxy menu, this will open an empty workflow page where we could start building our workflow in Galaxy.
  
  - Share Galaxy workflows
     - After completing all the steps in the tutorial above, you will have a workflow in Galaxy. But what if you want to share it with others to make it reusable?
