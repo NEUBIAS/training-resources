@@ -9,11 +9,14 @@ objectives:
   - "Execute cloud based interactive biomage analysis tools"
   - "Execute and manage cloud based batch analysis workflows"
   - "Use bioimage tool containers"
-  - "Create bioimage tool containers"
-  
+  - "Create bioimage tool containers"  
 
 motivation: |
-  Cloud-based platforms, containers, and Galaxy workflows enable scalable, reproducible, and automated image processing. This course equips you with the skills to use and build bioimage tools, run workflows, and optimize cloud-based analysis. By mastering these technologies, you can enhance research efficiency and tackle complex image analysis tasks with ease.
+  Cloud-based bioimage analysis offers several advantages, including:
+  - access to high-end hardware: multi-core, large RAM, GPUs
+  - access to preinstalled software
+  - reproducibility: different people running same software on same hardware
+  - scalability: spawn various computational jobs in parallel
 
 concept_map: >
   graph TD;
@@ -33,6 +36,7 @@ external_links:
   - "[Galaxy training network](https://training.galaxyproject.org/)"
 ---
 
+#### Course overview
 
 The material for this course consists of the following training modules:
 
@@ -40,5 +44,9 @@ The material for this course consists of the following training modules:
 - [Cloud based batch analysis](../cloud_based_batch_analysis/index.html)
 - [Bioimage tools containers](../containers/index.html)
 
-
 As usual, each training module contains several activities that can be executed on various compute platforms. As a trainer, it is necessary to familiarise yourself with the material before and decide which activities to teach. It is also highly recommended to consider our [TEACHING TIPS](https://github.com/NEUBIAS/training-resources/blob/master/TEACHING_TIPS.md).
+
+#### Cloud based bioimage anlaysis 
+
+In [this document](https://docs.google.com/document/d/1ozBp12H1D2QuJEz3MfaqcRLwVnYNbvRgZecGjPCNPzU/edit?usp=sharing) we are attempting to review the currently available options for conducting cloud based bioimage analysis.
+ 
