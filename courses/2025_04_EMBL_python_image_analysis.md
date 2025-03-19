@@ -13,60 +13,40 @@ In this course, you will be introduced to essential concepts of image analysis. 
 
 ### IT Setup
 
-You will be guided on how to set up your python platform and how to install the necessary modules on day 0 of the course.  
-
-If you are already proficient with python and do not need to revisit the basics, please make sure to use the `conda` platform to install skimage and napari on your laptop before the course, following [these instructions](https://neubias.github.io/training-resources/tool_installation/index.html#skimage_napari). 
+Please, before the course use the `conda` platform to install skimage and napari on your laptop, following [these instructions](https://neubias.github.io/training-resources/tool_installation/index.html#skimage_napari). 
 
 ## Schedule
 
-The whole course will be guided hands-on sessions.
+The course is also [announced on the EMBL bio-it website](https://bio-it.embl.de/events/basics-of-bioimage-analysis-in-python-3/).
 
-- Monday 01.07.2024 10:00 - 17:00
-- Tuesday 02.07.2024 10:00 - 17:00
-- Monday 08.07.2024 10:00 - 17:00
-- Tuesday 09.07.2024 10:00 - 17:00 
+
+- Monday, 9:30 – 16:00, April 28, 2025 day 1
+- Tuesday, 9:30 – 16:00, April 29, 2025 day 2
+- Monday, 9:30 – 16:00, May 05, 2025 day 3
+- Tuesday,9:30 – 16:00, May 06, 2025 day 4
 
 This includes a lunch break (1 hr) and two coffee breaks (20 minutes), resulting in approximately 5 hr of teaching time.
 As there are 6 modules per day that makes ~45 minutes per module.
 
 ## Venue
 
-- Big seminar room in the ground floor of the Center for Integrative Infectious Disease Research, Uni Heidelberg, INF 344, Heidelberg, Germany
-- This workshop will be in person only
+- EMBL Heidelberg
 
 ## Trainers and organisers
 
 - Severina Klaus (Uni Heidelberg)
-- Charlotte Kaplan (Uni Heidelberg)
 - Felix Schneider (EMBL)
+- Dominik Kutra (EMBL)
 - Christian Tischer (EMBL)
 - Arif Khan (EMBL)
 - Julian Hennies (EMBL)
 
 ## Teaching content
 
-### Python basics (day 0)
-
-The first day is an onboarding day to bring everyone to the same level on basic python programming. If you are already proficient with python, you may skip this day. In this case, please make sure to use the `conda` platform to install skimage and napari on your laptop before the course, following [these instructions](https://neubias.github.io/training-resources/tool_installation/index.html#skimage_napari). 
-
-1. Participants introduce themselves, where they work, why they joined the course, and what previous experience they have
-1. Introduction to python and basic environment management
-1. [Tool installations](https://neubias.github.io/training-resources/tool_installation/index.html#skimage_napari).
-   - Severina Klaus
-1. [Basics of python programming](https://heibox.uni-heidelberg.de/d/da0a61ef203347c7aff2/)
-   - Charlotte Kaplan
-       - Jupyter notebook/ lab
-       - Data types: integer, float, lists
-       - Basic operations
-       - Variables
-       - Built-in functions
-       - Modules
-       - For-loop
+The whole course will be guided hands-on sessions. 
 
 ### Image inspection basics (day 1)
 
-1. Introduction
-    - Trainers introduce themselves, where they work and how they are competent
 1. [Digital image basics](https://neubias.github.io/training-resources/pixels/index.html)
     - Felix Schneider 
 1. [Lookup tables](https://neubias.github.io/training-resources/lut/index.html)
@@ -87,6 +67,7 @@ The first day is an onboarding day to bring everyone to the same level on basic 
     - [Max and sum projections of an anisotropic image]()
 
 ### Image analysis basics (day 2)
+
 1. [Segmentation](https://neubias.github.io/training-resources/segmentation/index.html)
     - Arif Khan
 1. [Workflow: Basic 2D object analysis](https://neubias.github.io/training-resources/workflow_segment_2d_nuclei_measure_shape/index.html)
@@ -123,4 +104,29 @@ The first day is an onboarding day to bring everyone to the same level on basic 
     - Julian Hennies
 
 
+### Batch image analysis basics (day 4)
+
+1. Introduce the general idea of batch processing
+    - Christian Tischer
+    - Ingredients: Loops, File paths, Functions, Data management, Results QC
+1. [Loops](https://neubias.github.io/training-resources/script_for_loop/index.html)
+    - Felix Schneider
+1. [String and path manipulations](https://neubias.github.io/training-resources/string_concat/index.html)
+    - Dominik Kutra
+1. [Functions](https://neubias.github.io/training-resources/script_functions/index.html)
+    - Christian Tischer
+1. Discuss good practices for file and folder names
+    - Christian Tischer
+    - Discuss https://git.embl.de/grp-cba/astrocyte-differentiations/-/blob/main/data_management.md
+1. [Batch analysis](https://neubias.github.io/training-resources/batch_processing/index.html)
+    - Julian Hennies
+1. Batch inspection with MoBIE
+    - Christian Tischer
+    - [Install Fiji/MoBIE](https://github.com/mobie/mobie-viewer-fiji?tab=readme-ov-file#install)
+    - Ideally use the results from the above "batch analysis" module, alternatively [download and unzip these files](https://github.com/NEUBIAS/training-resources/raw/master/image_data/batch_process/inputs_and_outputs.zip)
+    - Inspect the results table (e.g., drag and drop onto Fiji)
+    - Open the data with MoBIE
+        - `Plugins › MoBIE › Open › Open Table...`
+        - If you downloaded the results you need to apply a path mapping
+        - `IJ.run("Open Table...", "table=/Users/tischer/Downloads/batch_processing_in_and_output/batch_processing_results.csv images=image labels=labels pathmapping=/media/julian/Data/courses/2024_3_batch_processing,/Users/tischer/Downloads/batch_processing_in_and_output spatialcalibration=FromImage gridtype=Transformed");`
 
