@@ -13,10 +13,10 @@ objectives:
 
 motivation: |
   Cloud-based bioimage analysis offers several advantages, including:
-  - access to high-end hardware: multi-core, large RAM, GPUs
-  - access to preinstalled software
-  - reproducibility: different people running same software on same hardware
-  - scalability: spawn various computational jobs in parallel
+  - Access to high-end hardware: multi-core, large RAM, GPUs
+  - Access to preinstalled software
+  - Reproducibility: different people running same software on same hardware
+  - Scalability: spawn various computational jobs in parallel
 
 concept_map: >
   graph TD;
@@ -49,4 +49,4 @@ As usual, each training module contains several activities that can be executed 
 #### Cloud based bioimage anlaysis 
 
 In [this document](https://docs.google.com/document/d/1ozBp12H1D2QuJEz3MfaqcRLwVnYNbvRgZecGjPCNPzU/edit?usp=sharing) we are attempting to review the currently available options for conducting cloud based bioimage analysis.
- 
+

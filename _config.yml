@@ -49,6 +49,8 @@ module_order:
 - measure_intensities
 - global_background_correction
 - filter_neighbourhood
+- filter_convolution
+- filter_rank
 - median_filter
 - workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape
 - filter_morphological

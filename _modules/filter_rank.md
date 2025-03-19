@@ -1,9 +1,9 @@
 ---
-title: Convolutional filters
+title: Rank filters
 layout: module
 tags: ["draft"]
 prerequisites:
-  - "[TODO](../filter_convolution)"
+  - "[TODO](../filter_rank)"
 objectives:
   - "TODO"
 motivation: |
@@ -14,11 +14,11 @@ concept_map: >
     T1("TODO1") --> T2("TODO2")
     T2 --> T3("TODO3")
 
-figure: /figures/filter_convolution.png
+figure: /figures/filter_rank.png
 figure_legend: TODO
 
 multiactivities:
-  - ["filter_convolution/act01.md", [["ImageJ GUI", "filter_convolution/act01_imagejgui.md"], ["skimage napari", "filter_convolution/act01_skimage_napari.py"]]]
+  - ["filter_rank/act01.md", [["ImageJ GUI", "filter_rank/act01_imagejgui.md"], ["skimage napari", "filter_rank/act01_skimage_napari.py"]]]
 
 assessment: >
 
