@@ -13,6 +13,15 @@ We will use the BARD desktop EMBL instance.
         - All applications start as the current logged-in user.
         - Your home directory is shared among all containers, which means if you need data accessible for all applications, you will need to store them in your own home folder.
 
+- Using microSAM on BARD
+    - From the dock in your BARD desktop, click `microSAM`, since microSAM is based on Napari, a `Napari` GUI will appear.
+    - Start `Annotator 2D` from `Plugin -> Segment Anything for Microscopy -> Annotator 2D`.
+    - Go to `File -> Open Sample -> Segment Anything for Microscopy -> LiveCell example data`
+    - Click `Compute Embeddings` from the right pane.
+    - Click `Automatic Segmentation` button on the right.
+    - For details on how to use microSAM, please refer to its [Documentations](https://computational-cell-analytics.github.io/micro-sam/micro_sam.html)
+ <img src="{{ site.baseurl }}/figures/bard-microsam.png" alt="CellPose GxIT" style="display: block; margin: 2px 0;" /><br><br>
+
 - Segmentation using CellPose on BARD
     - Start Firefox from the bottom dock on your BARD desktop.
     - Go to the [Bioimage archive AI Gallery](https://www.ebi.ac.uk/bioimage-archive/galleries/ai-galleries/) and click on `Analysed datasets`.

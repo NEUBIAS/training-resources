@@ -1,4 +1,4 @@
-title: "Training Resources"
+title: "Bioimage Analysis Training Resources"
 email: "image-analysis-support@embl.de"
 description: > # this means to ignore newlines until "baseurl:"
   A collection of material for teaching image analysis.
@@ -21,10 +21,11 @@ kind: "lesson"
 
 
 module_order:
-- tool_installation
 - pixels
-- lut
-- multichannel_images
+- binarization
+- filter_morphological
+- connected_components
+- measure_shapes
 - spatial_calibration
 - multidimensional_image_basics
 - datatypes
@@ -40,10 +41,6 @@ module_order:
 - projections
 - volume_viewer
 - segmentation
-- binarization
-- auto_threshold
-- connected_components
-- measure_shapes
 - workflow_segment_2d_nuclei_measure_shape
 - image_formation_fluo_mic
 - measure_intensities
@@ -53,7 +50,6 @@ module_order:
 - filter_rank
 - median_filter
 - workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape
-- filter_morphological
 - local_background_correction
 - filter_objects
 - distance_transform
