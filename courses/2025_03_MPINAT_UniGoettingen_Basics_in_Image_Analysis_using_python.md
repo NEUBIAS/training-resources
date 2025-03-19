@@ -35,7 +35,7 @@ Antonio Politi, MPI-NAT, Goettingen (apoliti@mpinat.mpg.de)
 
 ## Prerequisites
 * You should know all the topics mentioned in the **Learn the Basics** section of the [Learn Python](https://www.learnpython.org/en/Welcome) website (you may skip "Classes and Objects" and "Modules and Packages").
-* Please practice running code in a Jupyter Notebook following this Jupyter Lab [guide](https://jupyter.org/try-jupyter/lab/) path [notebooks> Intro.ipynb]. For plain Jupyter Notebook (old interface) follow this [guide](https://jupyter.org/try-jupyter/notebooks/?path=notebooks/Intro.ipynb). 
+* Please practice running code in a Jupyter Notebook following this Jupyter Lab [guide](https://jupyter.org/try-jupyter/lab/) path [notebooks> Intro.ipynb]. 
 * For the course you will need to bring your laptop (you will need WiFi and eduroam).
 * Please, before the course use the `conda` platform to install skimage and napari on your laptop, following [these instructions](https://neubias.github.io/training-resources/tool_installation/index.html#skimage_napari). Do also install a recent version of FiJi following [these instructions](https://neubias.github.io/training-resources/tool_installation/index.html#imagej).
 
