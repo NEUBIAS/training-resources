@@ -21,6 +21,7 @@ kind: "lesson"
 
 
 module_order:
+- tool_installation
 - pixels
 - binarization
 - filter_morphological
