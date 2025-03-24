@@ -23,6 +23,7 @@ known_failures = {
     "measure_intensities_act1_skimage_napari.py": "Requires manual interaction to pass.",
     "spatial_calibration_act1_skimage_napari.py": "Requires manual interaction to pass.",
     "volume_slicing_act1_python-napari.py": "Not supposed to be run in a script, but in the napari viewer itself.",
+    "batch_measure_nuclei_shape.py": "Requires image download.",
 }
 
 
