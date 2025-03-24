@@ -1,3 +1,10 @@
+"""
+Search for `.py` script files in the _include folder and run them.
+Only runs scripts that should work on all platforms
+
+(e.g. scripts that require bioconda packages cannot be run on windows)
+"""
+
 import pathlib
 import runpy
 
