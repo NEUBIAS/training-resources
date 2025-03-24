@@ -3,10 +3,20 @@ import runpy
 
 import pytest
 
-scripts = filter(
-    lambda x: "jython" not in x.lower(),
-    map(lambda x: x.as_posix(), (pathlib.Path(__file__).parent / ".." / "_includes").resolve().glob("**/*.py")),
-)
+
+def filter_criteria(filename):
+    exclude_filters = ("jython",)
+    if any(filt in str(filename).lower() for filt in exclude_filters):
+        return False
+
+    bioioimports = ("import bioio", "from bioio")
+    content = filename.read_text()
+    if any(bioimp in content for bioimp in bioioimports):
+        return False
+
+    return True
+
+scripts = filter(filter_criteria, (pathlib.Path(__file__).parent / ".." / "_includes").resolve().glob("**/*.py"))
 
 
 known_failures = {
@@ -16,8 +26,8 @@ known_failures = {
 }
 
 
-@pytest.mark.parametrize("script", scripts)
-def test_script_execution(script):
-    if (script_name := pathlib.Path(script).name) in known_failures:
-        pytest.xfail(known_failures[script_name])
-    runpy.run_path(script)
+@pytest.mark.parametrize("script", [pytest.param(script, id=script.name) for script in scripts])
+def test_script_execution(script: pathlib.Path):
+    if script.name in known_failures:
+        pytest.xfail(known_failures[script.name])
+    runpy.run_path(script.as_posix())
