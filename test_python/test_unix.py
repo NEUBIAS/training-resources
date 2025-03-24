@@ -13,7 +13,12 @@ def filter_criteria(filename):
     if any(filt in str(filename).lower() for filt in exclude_filters):
         return False
 
-    return True
+    bioioimports = ("import bioio", "from bioio")
+    content = filename.read_text()
+    if any(bioimp in content for bioimp in bioioimports):
+        return True
+
+    return False
 
 scripts = filter(filter_criteria, (pathlib.Path(__file__).parent / ".." / "_includes").resolve().glob("**/*.py"))
 
