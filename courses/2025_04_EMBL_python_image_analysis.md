@@ -17,8 +17,13 @@ Please, before the course use the `conda` platform to install skimage and napari
 
 ## Schedule
 
-The course is also [announced on the EMBL bio-it website](https://bio-it.embl.de/events/basics-of-bioimage-analysis-in-python-3/).
+The course is combining these three courses:
 
+- https://neubias.github.io/training-resources/basic-image-inspection-course/index.html
+- https://neubias.github.io/training-resources/basic-image-analysis-course/index.html
+- https://neubias.github.io/training-resources/basic-batch-analysis-course/index.html
+
+The course is also [announced on the EMBL bio-it website](https://bio-it.embl.de/events/basics-of-bioimage-analysis-in-python-3/).
 
 - Monday, 9:30 – 16:00, April 28, 2025 day 1
 - Tuesday, 9:30 – 16:00, April 29, 2025 day 2
@@ -26,6 +31,7 @@ The course is also [announced on the EMBL bio-it website](https://bio-it.embl.de
 - Tuesday,9:30 – 16:00, May 06, 2025 day 4
 
 This includes a lunch break (1 hr) and two coffee breaks (20 minutes), resulting in approximately 5 hr of teaching time.
+
 As there are 6 modules per day that makes ~45 minutes per module.
 
 ## Venue
