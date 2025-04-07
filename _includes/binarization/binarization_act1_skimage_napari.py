@@ -2,13 +2,13 @@
 # Thresholding bright and dim cells
 
 # %%
-# Instantiate the napari
+# Instantiate napari
 import napari
-from OpenIJTIFF import open_ij_tiff
 viewer = napari.Viewer()
 
 # %%
 # Load the image
+from OpenIJTIFF import open_ij_tiff
 image, *_ = open_ij_tiff('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__two_cells.tif')
 
 # %%
@@ -35,11 +35,11 @@ print(binary_image_two_cells.dtype)
 
 # %%
 # Overlay the binary image
-viewer.add_image(binary_image_two_cells, opacity=0.8)
+viewer.add_labels(binary_image_two_cells, opacity=0.8)
 
 # %%
 # Apply a higher threshold
 # to only select the brighter cell
 # and also add this to the viewer
 binary_image_one_cell = image > 100
-viewer.add_image(binary_image_one_cell, opacity=0.8)
+viewer.add_labels(binary_image_one_cell, opacity=0.8)

@@ -48,16 +48,11 @@ viewer.add_image(uint16_image)
 # thus we introduce a, very useful, generic approach to compute any kind of local neighborhood
 # filter
 
-# import the function
+# import the generic filter function
 from scipy.ndimage import generic_filter
 
-# define a function that computes one value from an array of data
-def local_variance(data):
-  value = np.var(data)
-  return value
-
-# apply this function locally to image
-var_image = generic_filter(uint16_image, function=local_variance, size=11)
+# apply the generic filter with a variance computation
+var_image = generic_filter(uint16_image, function=np.var, size=11)
 
 # %%
 # View the variance filtered the image to napari

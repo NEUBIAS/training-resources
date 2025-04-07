@@ -1,0 +1,6 @@
+- Go to [https://myhdf5.hdfgroup.org/](https://myhdf5.hdfgroup.org/)
+- Select the BDV HDF5 file
+- Explore the chunking:
+    - Go to `s00/subdivisions` and click `Display` and `Matrix`
+- Explore the resolution levels:
+    - Go to `s00/resolutions` and click `Display` and `Matrix`

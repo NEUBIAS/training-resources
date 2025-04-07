@@ -1,0 +1,13 @@
+- Inspect the BDV XML file using your web browser, e.g.
+    - Chrome: [ File > Open File... ]
+    - Observe the relevant metadata such as
+        - Image dimensions
+        - Voxel size
+- Inspect the HDF5 file 
+    - Install the HDF5 command line tools, e.g. `conda create -n hdf5 python=3.9 hdf5`
+    - `h5ls xyz_uint8__em_platy_raw_s4.h5`
+        - Observe that the h5 file is like a file directory 
+    - Explore the content, e.g.,
+        - `h5ls -v -d xyz_uint8__em_platy_raw_s4.h5/s00/resolutions`
+        - `h5ls -v -d xyz_uint8__em_platy_raw_s4.h5/s00/subdivisions`
+        - `h5ls -v xyz_uint8__em_platy_raw_s4.h5/t00000/s00/0`

@@ -3,7 +3,7 @@ title: Batch processing
 layout: module
 tags: ["scripting"]
 prerequisites:
-  - "[Working with strings](../string_concat)"
+  - "[Strings and paths](../string_concat)"
   - "[For loops](../script_for_loop)"
 objectives:
   - "Automatically process a number of images"
@@ -23,16 +23,7 @@ figure: /figures/batch_processing.png
 figure_legend: Batch processing of several images, yielding as many segmentations and object measurement tables.
 
 multiactivities:
-  - ["batch_processing/batch_measure_nuclei_shapes.md", [["ImageJ SciJava Macro", "batch_processing/batch_measure_nuclei_shape_scijava_ijmacro.md"],["skimage python", "batch_processing/batch_measure_nuclei_shape.py"]]]
-
-exercises_preface: |
-  - Download those two images
-    - [xy_8bit__nuclei_noisy_small.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_small.tif)
-    - [xy_8bit__nuclei_noisy_large.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_large.tif)
-  - Modify the script given in the exercise to enable the batch processing of those two images.
-
-exercises:
-  - ["ImageJ Macro Scijava","batch_processing/exercises/imagejmacro.md"]
+  - ["batch_processing/batch_measure_nuclei_shapes.md", [["ImageJ SciJava Macro", "batch_processing/batch_measure_nuclei_shape.ijm"],["skimage python", "batch_processing/batch_measure_nuclei_shape.py"]]]
 
 assessment: >
 
@@ -50,4 +41,6 @@ learn_next:
 
 external_links:
   - "[Batch processing in ImageJ](https://imagej.net/scripting/batch)"
+  - "[MoBIE](https://github.com/mobie/mobie-viewer-fiji)"
+  - "[ImageDataExplorer](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0273698)"
 ---
