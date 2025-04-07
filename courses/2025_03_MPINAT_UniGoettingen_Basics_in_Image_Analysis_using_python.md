@@ -11,26 +11,17 @@ Please register using the portal https://events.gwdg.de/e/bioimage_python
 
 ## Venue
 
-To be confirmed
+Großer Seminarraum 01. OG
+European Neuroscience Institute Göttingen
+ENI-G, Grisebachstr. 5, 37077 Göttingen
 
 ## Teachers
 Antonio Politi, MPI-NAT, Goettingen (apoliti@mpinat.mpg.de)
 
 ## Course time schedule
-* 31.03.2025
-  * 13:00 - 15:00 - Lecture and hands-on
-  * 15:00 - 15:30 - Coffee break
-  * 15:30 - 17:00 - Lecture and hands-on
 
-* 01.04.2024
-  * 13:00 - 15:00 - Lecture and hands-on
-  * 15:00 - 15:30 - Coffee break
-  * 15:30 - 17:00 - Lecture and hands-on 
+See https://events.gwdg.de/e/bioimage_python
 
-* 02.04.2024
-  * 13:00 - 15:00 - Lecture and hands-on
-  * 15:00 - 15:30 - Coffee break
-  * 15:30 - 17:00 - Lecture and hands-on 
 
 
 ## Prerequisites

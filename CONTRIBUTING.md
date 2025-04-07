@@ -139,7 +139,13 @@ It is important to test locally whether the website builds correctly before subm
 
 ### Building locally OSX
 
-To test your changes locally, install `jekyll` on your system. Instructions for Mac OSX are here: [https://jekyllrb.com/docs/installation/macos/](https://jekyllrb.com/docs/installation/macos/).
+To test your changes locally, install `jekyll` on your system. Instructions for Mac OSX are here: [https://jekyllrb.com/docs/installation/macos/](https://jekyllrb.com/docs/installation/macos/). 
+
+Install bundler
+
+```bash
+gem install bundler
+```
 
 Once you have `jekyll` and `bundler` setup,
 clone and move into this repository,
