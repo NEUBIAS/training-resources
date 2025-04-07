@@ -1,5 +1,5 @@
 # %%
-# Spatial image calibration
+# ## Spatial image calibration
 
 # %%
 # Import python packages.
@@ -15,7 +15,7 @@ image_2D, axes_image_2D, voxel_size_image_2D, units_image_2D = open_ij_tiff(
 )
 
 # %%
-# Inspect the image axes metadata
+# Inspect the image metadata
 print("Shape: ", image_2D.shape)
 print("Axes: ", axes_image_2D)
 print("Scale: ", voxel_size_image_2D)
@@ -83,7 +83,5 @@ save_ij_tiff(
 # print("Calibrated points :\n", points_cal)
 
 # %%
-# diff_vector = points_cal[1] - points_cal[0]
-# sqr_diff_vector = diff_vector ** 2
-# distance = np.sqrt(sqr_diff_vector.sum())
-# print('Distance:', distance)
+# from scipy.spatial import distance
+# distance.euclidean(points_cal[0], points_cal[1])

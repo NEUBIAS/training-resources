@@ -26,12 +26,13 @@ figure_legend:
 multiactivities:
   - ["lut/lut_act1.md", [["ImageJ GUI", "lut/lut_act1_imagejgui.md", "markdown"], 
 	["ImageJ Macro", "lut/lut_act1_imagejmacro.ijm", "java"], 
-	["skimage napari", "lut/lut_act1_skimage_napari.py", "python"]]]
+	["skimage napari", "lut/lut_act1_skimage_napari.py", "python"],["Galaxy Napari","lut/lut_act1_galaxy.md"]]]
   - ["lut/lut_act2.md", [["ImageJ GUI", "lut/lut_act2_imagejgui.md"], 
   ["ImageJ Macro", "lut/lut_act2_imagejmacro.ijm", "java"], 
-	["skimage napari", "lut/lut_act2_skimage_napari.py", "python"]]]
+	["skimage napari", "lut/lut_act2_skimage_napari.py", "python"],["Galaxy Napari","lut/lut_act2_galaxy.md"]]]
 
 keypoints:
+  - LUT stands for "look-up table"; it defines how numeric pixel values are mapped to colors for display.
   - A LUT has configurable contrast limits that determine the pixel value range that is rendered linearly.
   - LUT settings must be responsibly chosen to convey the intended scientific message and not to hide relevant information.
   - A gray scale LUT is usually preferable over a colour LUT, especially blue and red are not well visible for many people. 

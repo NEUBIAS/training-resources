@@ -1,4 +1,4 @@
-<h4 id="workflow"><a href="#workflow">Workflow measure intensity on the nuclear membrane</a></h4>
+<h4 id="workflow"><a href="#workflow">Workflow to measure the intensity on a nuclear membrane</a></h4>
 In image [xyc_16bit__nup__nuclei.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__nup_nuclei.tif) 
 we would like to measure the intensity along the nuclear membrane (channel 1) using the information from the DNA (channel 2) using following workflow:
 * Segmentation of the nuclei using channel 2, the results is a binary mask.

@@ -1,5 +1,5 @@
 ---
-title: Handling script parameters
+title: Handling input parameters
 layout: module
 tags: ["scripting"]
 prerequisites:

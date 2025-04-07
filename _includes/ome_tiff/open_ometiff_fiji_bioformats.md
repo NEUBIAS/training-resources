@@ -1,0 +1,9 @@
+- Open Fiji 
+- Drag and drop the OME-TIFF image onto Fiji
+- The Bio-Formats Importer will open
+    - `[X]` Display OME-XML metadata
+    - [ OK ]
+    - Observe that there are only two datasets, but stored at different resolution levels
+    - Select all images
+    - [ OK ]
+- Inspect the OME-XML metadata

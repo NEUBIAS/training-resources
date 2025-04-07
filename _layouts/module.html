@@ -4,84 +4,183 @@ layout: base
 <article class="module">
 
   {% assign first = false %}
+  
   {%- if page.multiactivities -%}
+    
     <script language="javascript" type="text/javascript">
-      function set_view_defaults() {
+
+      {%- assign break = " " -%}
+
+      {{ break }}
+
+      function setDropdownFromUrl(selectId, selectedValue) 
+      {
+        console.log(`setDropdownFromUrl called`);
+        console.log(`selectId: ${selectId}`);
+        console.log(`value: ${selectedValue}`); 
+        
+        const selectElement = document.getElementById(selectId);
+        selectElement.value = selectedValue;
+        
+        const match = selectId.match(/-(\d+)$/);
+        if (match) {
+          const digit = match[1];
+          console.log(`activity_id: ${digit}`);
+          const functionName = `change_activity_content_by_platform_${digit}`;
+          if (typeof window[functionName] === "function") {
+            window[functionName](selectId);
+          } else {
+            console.error(`Function ${functionName} does not exist`);
+          }
+        } 
+      }
+
+      {{ break }}
+
+      function updateUrlWithSelection(selectId) 
+      {
+          console.log(`updateUrlWithSelection called with selectId: ${selectId}`); 
+          const selectElement = document.getElementById(selectId);
+          const selectedValue = selectElement.value;
+          const currentUrl = new URL(window.location.href);
+
+          // Update the URL with the selected value as a query parameter
+          currentUrl.searchParams.set(selectId, selectedValue);
+
+          // Update the browser's address bar without reloading the page
+          window.history.replaceState({}, '', currentUrl);
+        }
+
+        {{ break }}
+      
+      function set_view_defaults() 
+      {
         {%- assign idx_0 = 0 -%}
         {%- assign close = "();" -%}
         {% for activity in page.multiactivities %}
           {%- assign fun = "set_activity_view_defaults_" | append: idx_0 | append: close -%}
+          {{ break }}
           {{ fun }}
+          {{ break }}
           {%- assign idx_0 = idx_0 | plus:1 -%}
         {% endfor %}
-        set_exercises_view_defaults();
       }
+
       {%- assign idx_0 = 0 -%}
-      {%- assign close = "() {" -%}
+      {%- assign close = "()" -%}
+      
+
       {%- for activity in page.multiactivities -%}
         {%- assign platforms = activity[1] -%}
         {%- assign fun = "function set_activity_view_defaults_" | append: idx_0 | append: close -%}
-        {{ fun }}
+       
+        {{ break }}
+        {{ break }}
+
+        {{ fun }} 
+        {
         {% for platform in platforms %}
           {%- assign id = platform[0] | slugify -%}
           {%- assign activity_div = "-activity-div-" -%}
           {%- assign activity_div_i = id | append: activity_div | append: idx_0 -%}
-          document.getElementById("{{ activity_div_i | slugify }}").style.display = 'none';{% endfor %}{% unless site.default-platform == "NONE" %}document.getElementById("{{ site.default-platform | slugify }}-activity-div").style.display = 'block';{% endunless %}
-      }
+            document.getElementById("{{ activity_div_i | slugify }}").style.display = 'none';
+        {% endfor %}
+        {% unless site.default-platform == "NONE" %}
+           document.getElementById("{{ site.default-platform | slugify }}-activity-div").style.display = 'block';
+        {% endunless %}
+        }
+
+        {{ break }}
+        {{ break }}
+
+        {%- assign close_call = "();" -%}
+        {%- assign fun = "set_activity_view_defaults_" | append: idx_0 | append: close_call -%}
+        {%- assign close_args = "(form_control)" -%}
+        {%- assign content_fun = "function change_activity_content_by_platform_" | append: idx_0 | append: close_args -%}
+        
+        {{ content_fun }} 
+        {
+          {% for platform in platforms %}
+            {%- assign id = platform[0] | slugify -%}
+            {%- assign activity_div = "-activity-div-" -%}
+            {%- assign activity_div_i = id | append: activity_div | append: idx_0 -%}
+            {%- assign default_val = "null-activity-" | append: idx_0 -%}
+            document.getElementById("{{ activity_div_i | slugify }}").style.display = 'none';
+          {% endfor %}
+
+          if (!form_control || document.getElementById(form_control).value == "{{ default_val }}") 
+          {
+            {{ fun }}
+          {% for platform in platforms %}
+            {%- assign id = platform[0] | slugify -%}
+            {%- assign activity_div = "-activity-div-" -%}
+            {%- assign activity_div_i = id | append: activity_div | append: idx_0 -%}
+            {%- assign val = id | append: "-activity-" | append: idx_0  -%}
+          } 
+          else if (document.getElementById(form_control).value == "{{ val }}") 
+          {
+            document.getElementById("{{ activity_div_i | slugify }}").style.display = 'block';
+          {% endfor %}
+          } 
+          else 
+          {
+            alert("Error: Missing platform value for 'change_activity_content_by_platform()' script!");
+          }
+
+          updateUrlWithSelection(form_control);
+          console.log(`change_activity_content_by_platform_{{ idx_0 }} called with form_control: ${form_control}`);
+          console.log(`value: ${document.getElementById(form_control).value}`);
+        }
+        {% assign idx_0 = idx_0 | plus:1 %}
+      {%- endfor -%}
+
+    window.onload = function() {
+        set_view_defaults();
+
+        // Ensure the following code runs after set_view_defaults
+        console.log(`Parsing URL...`);
+
+        // Get the current URL of the wxebpage
+        const url = window.location.href;
+
+        // Create a URL object
+        const urlObj = new URL(url);
+
+        // Get the query string part of the URL
+        const queryString = urlObj.search;
+
+        // Parse query string into a URLSearchParams object
+        const params = new URLSearchParams(queryString);
+
+        for (const [key, value] of params) {
+          console.log(`${key}: ${value}`);
+          setDropdownFromUrl(key, value);
+        }
+      };
+
+</script>
 
 
-      {%- assign close_call = "();" -%}
-      {%- assign fun = "set_activity_view_defaults_" | append: idx_0 | append: close_call -%}
-      {%- assign close_args = "(form_control) {" -%}
-      {%- assign content_fun = "function change_activity_content_by_platform_" | append: idx_0 | append: close_args -%}
-
-
-      {{ content_fun }}
-      {% for platform in platforms %}
-        {%- assign id = platform[0] | slugify -%}
-        {%- assign activity_div = "-activity-div-" -%}
-        {%- assign activity_div_i = id | append: activity_div | append: idx_0 -%}
-        {%- assign default_val = "null-activity-" | append: idx_0 -%}
-        document.getElementById("{{ activity_div_i | slugify }}").style.display = 'none';{% endfor %}if (!form_control || document.getElementById(form_control).value == "{{ default_val }}") {
-        {{ fun }}
-        {% for platform in platforms %}
-          {%- assign id = platform[0] | slugify -%}
-          {%- assign activity_div = "-activity-div-" -%}
-          {%- assign activity_div_i = id | append: activity_div | append: idx_0 -%}
-          {%- assign val = id | append: "-activity-" | append: idx_0  -%}
-        } else if (document.getElementById(form_control).value == "{{ val }}") {
-          document.getElementById("{{ activity_div_i | slugify }}").style.display = 'block';{% endfor %}
-      } else {
-        alert("Error: Missing platform value for 'change_activity_content_by_platform()' script!");
-      }
-    }
-    {% assign idx_0 = idx_0 | plus:1 %}
-  {%- endfor -%}
-
-  function set_exercises_view_defaults () {
-    {% for platform in page.exercises %}
-      document.getElementById("{{ platform[0] | slugify }}-exercises-div").style.display = 'none';{% endfor %}{% unless site.default-platform == "NONE" %}document.getElementById("{{ site.default-platform | slugify }}-exercises-div").style.display = 'block';{% endunless %}
-  }
-
-  function change_exercises_content_by_platform (form_control) {
-    {% for platform in page.exercises %}
-      document.getElementById("{{ platform[0] | slugify }}-exercises-div").style.display = 'none';{% endfor %}if (! form_control || document.getElementById(form_control).value == "null-exercises") {
-      set_exercises_view_defaults();{% for platform in page.exercises %}
-      } else if (document.getElementById(form_control).value == "{{ platform[0] | slugify }}-exercises") {
-        document.getElementById("{{ platform[0] | slugify }}-exercises-div").style.display = 'block';{% endfor %}
-  } else {
-    alert("Error: Missing platform value for 'change_exercises_content_by_platform()' script!");
-  }
-}
-
-window.onload = set_view_defaults;
-    </script>
-  {%- else -%}
+{%- else -%}
     {% if page.activities or page.exercise %}
       <script language="javascript" type="text/javascript">
+
         function set_view_defaults () {
           set_activity_view_defaults();
           set_exercises_view_defaults();
+        }
+
+        function updateUrlWithSelection(selectId) {
+          console.log(`updateUrlWithSelection called with selectId: ${selectId}`); 
+          const selectElement = document.getElementById(selectId);
+          const selectedValue = selectElement.value;
+          const currentUrl = new URL(window.location.href);
+
+          // Update the URL with the selected value as a query parameter
+          currentUrl.searchParams.set(selectId, selectedValue);
+
+          // Update the browser's address bar without reloading the page
+          window.history.replaceState({}, '', currentUrl);
         }
 
         function set_activity_view_defaults () {
@@ -89,16 +188,26 @@ window.onload = set_view_defaults;
             document.getElementById("{{ platform[0] | slugify }}-activity-div").style.display = 'none';{% endfor %}{% unless site.default-platform == "NONE" %}document.getElementById("{{ site.default-platform | slugify }}-activity-div").style.display = 'block';{% endunless %}
         }
 
-        function change_activity_content_by_platform (form_control) {
+        function change_activity_content_by_platform(form_control) 
+        {
+          console.log(`change_activity_content_by_platform called with form_control: ${form_control}`);
+          updateUrlWithSelection(form_control);
           {% for platform in page.activities %}
-            document.getElementById("{{ platform[0] | slugify }}-activity-div").style.display = 'none';{% endfor %}if (! form_control || document.getElementById(form_control).value == "null-activity") {
-            set_activity_view_defaults();{% for platform in page.activities %}
+            document.getElementById("{{ platform[0] | slugify }}-activity-div").style.display = 'none';
+          {% endfor %}
+          if (! form_control || document.getElementById(form_control).value == "null-activity") 
+          {
+            set_activity_view_defaults();
+            {% for platform in page.activities %}
             } else if (document.getElementById(form_control).value == "{{ platform[0] | slugify }}-activity") {
-              document.getElementById("{{ platform[0] | slugify }}-activity-div").style.display = 'block';{% endfor %}
-        } else {
+              document.getElementById("{{ platform[0] | slugify }}-activity-div").style.display = 'block';
+            {% endfor %}
+          } 
+          else 
+          {
           alert("Error: Missing platform value for 'change_activity_content_by_platform()' script!");
+          }
         }
-      }
 
       function set_exercises_view_defaults () {
         {% for platform in page.exercises %}
@@ -107,13 +216,17 @@ window.onload = set_view_defaults;
 
       function change_exercises_content_by_platform (form_control) {
         {% for platform in page.exercises %}
-          document.getElementById("{{ platform[0] | slugify }}-exercises-div").style.display = 'none';{% endfor %}if (! form_control || document.getElementById(form_control).value == "null-exercises") {
-          set_exercises_view_defaults();{% for platform in page.exercises %}
+          document.getElementById("{{ platform[0] | slugify }}-exercises-div").style.display = 'none';
+        {% endfor %}
+        if (! form_control || document.getElementById(form_control).value == "null-exercises") {
+          set_exercises_view_defaults();
+        {% for platform in page.exercises %}
           } else if (document.getElementById(form_control).value == "{{ platform[0] | slugify }}-exercises") {
-            document.getElementById("{{ platform[0] | slugify }}-exercises-div").style.display = 'block';{% endfor %}
-      } else {
-        alert("Error: Missing platform value for 'change_exercises_content_by_platform()' script!");
-      }
+            document.getElementById("{{ platform[0] | slugify }}-exercises-div").style.display = 'block';
+        {% endfor %}
+        } else {
+          alert("Error: Missing platform value for 'change_exercises_content_by_platform()' script!");
+        }
     }
 
     window.onload = set_view_defaults;
@@ -176,6 +289,14 @@ window.onload = set_view_defaults;
   <br>
   <br>
 
+  <div class="module-content">
+    {{ content }}
+  </div>
+
+  <br>
+  <br>
+  <br>
+
   {% if page.multiactivities %}
     <h2 id="activities"><a href="#activities">Activities</a></h2>
     {%- assign idx_0 = 0 -%}
@@ -193,7 +314,7 @@ window.onload = set_view_defaults;
       <select id="{{ iap }}" name="activityplatformlist" onchange="{{ fun }}">
         {% if site.default-platform == "NONE" %}
           <option value="null-activity-{{ idx_0 }}" id="default-activity-option-{{ idx_0 }}" selected="selected">
-            Select a platform...
+            Select an implementation...
           </option>
         {% else %}
           <option value="{{ site.default-platform | slugify }}-activity-{{ idx_0 }}" id="{{ site.default-platform | slugify }}-option-{{ idx_0 }}" selected="selected">
@@ -259,7 +380,7 @@ window.onload = set_view_defaults;
       <select id="id_activity_platform" name="activityplatformlist" onchange="change_activity_content_by_platform('id_activity_platform');return false;">
         {% if site.default-platform == "NONE" %}
           <option value="null-activity" id="default-activity-option" selected="selected">
-            Select a platform...
+            Select an implementation...
           </option>
         {% else %}
           <option value="{{ site.default-platform | slugify }}-activity" id="{{ site.default-platform | slugify }}-option" selected="selected">
@@ -318,7 +439,7 @@ window.onload = set_view_defaults;
     <select id="id_exercises_platform" name="exercisesplatformlist" onchange="change_exercises_content_by_platform('id_exercises_platform');return false;">
       {%- if site.default-platform == "NONE" -%}
         <option value="null-exercises" id="null-exercises-option" selected="selected">
-          Select a platform...
+          Select an implementation...
         </option>
       {%- else -%}
         <option value="{{ site.default-platform | slugify }}-exercises" id="{{ site.default-platform | slugify }}-exercises-option" selected="selected">
@@ -383,11 +504,6 @@ window.onload = set_view_defaults;
     </blockquote>
   {% endif %}
 
-
-  <h2>Explanations</h2>
-  <div class="module-content">
-    {{ content }}
-  </div>
 
   <br>
   <br>

@@ -8,7 +8,7 @@ on:
   pull_request: []
 
 jobs:
-  test-python-scripts:
+  test-python-all-platforms:
     strategy:
       fail-fast: false
       matrix:
@@ -23,22 +23,54 @@ jobs:
           sudo apt-get install -yy mesa-utils libgl1-mesa-dev xvfb curl
       - uses: conda-incubator/setup-miniconda@v3
         with:
-          auto-update-conda: false
-          auto-activate-base: true
-          activate-environment: ""
+          auto-update-conda: true
+          activate-environment: test
           channel-priority: strict
           miniforge-version: latest
+          conda-remove-defaults: "true"
       - name: install common conda dependencies
-        run: conda install -c conda-forge -c euro-bioimaging python=3.10 napari=0.4.17 pytest notebook matplotlib jupytext "scikit-image>=0.20" openijtiff -y
+        run: conda install -n test -c conda-forge -c euro-bioimaging python=3.10 napari=0.4.17 pytest notebook matplotlib jupytext "scikit-image>=0.20" openijtiff -y
       - name: linux test
         if: matrix.os == 'ubuntu-latest'
         shell: bash -l {0}
-        run: xvfb-run --server-args="-screen 0 1024x768x24" pytest -v test_python
+        run: xvfb-run --server-args="-screen 0 1024x768x24" conda run -n test pytest -v test_python/test_all_platforms.py
       - name: osx test
         if: matrix.os == 'macos-latest'
         shell: bash -l {0}
-        run: pytest -v test_python
+        run: conda run -n test pytest -v test_python/test_all_platforms.py
       - name: windows test
         if: matrix.os == 'windows-latest'
         shell: cmd /C CALL {0}
-        run: pytest -v test_python
+        run: conda run -n test pytest -v test_python/test_all_platforms.py
+
+  test-python-unix:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: install xvfb/deps
+        if: matrix.os == 'ubuntu-latest'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -yy mesa-utils libgl1-mesa-dev xvfb curl
+      - uses: conda-incubator/setup-miniconda@v3
+        with:
+          auto-update-conda: true
+          activate-environment: test
+          channel-priority: strict
+          miniforge-version: latest
+          environment-file: _includes/tool_installation/image_data_formats_conda_env.yml
+          conda-remove-defaults: "true"
+      - name: install common conda dependencies
+        run: conda install -n test -c conda-forge pytest -y
+      - name: linux test
+        if: matrix.os == 'ubuntu-latest'
+        shell: bash -l {0}
+        run: xvfb-run --server-args="-screen 0 1024x768x24" conda run -n test pytest -v test_python/test_unix.py
+      - name: osx test
+        if: matrix.os == 'macos-latest'
+        shell: bash -l {0}
+        run: conda run -n test pytest -v test_python/test_unix.py

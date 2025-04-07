@@ -1,0 +1,7 @@
+- Open the Google Chrome webbrowser
+- Open the below web address to launch vizarr to visualise an OME-Zarr image
+  - `https://hms-dbmi.github.io/vizarr/?source=https://s3.embl.de/yeast-clem/hela/images/ome-zarr/em-overview.ome.zarr`
+  - Note that you may replace the part after `?source=` with another OME-Zarr URL that you may be interested in testing.
+- Google Chrome: [ View > Developer > JavaScript Console ] and then choose the "Network" tab.
+- Now, in vizarr, move around, e.g., zoom in and out; this should trigger the loading of additional OME-Zarr chunks, which can be observed in the Network tab, where you can see how large each chunk and how long it took to read it.
+- Typical, in our experience, is a few hundred ms for a few hundred KB.
