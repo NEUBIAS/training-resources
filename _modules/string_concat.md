@@ -3,7 +3,7 @@ title: Strings and paths
 layout: module
 tags: ["scripting"]
 prerequisites: 
-  - "[Variables](../variables)"
+  - "[Variables](../script_variables)"
 
 objectives:
   - "Construct complex strings, e.g. to produce log messages and create file paths"
