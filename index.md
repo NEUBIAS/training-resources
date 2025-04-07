@@ -37,9 +37,12 @@ Learn essential concepts of image analysis, such as segmenation, intensity measu
 #### [Basic Batch Analysis](basic-batch-analysis-course/index.html)
 Learn how to automatically process perfom image analysis tasks on multiple images. The course contains 5 modules which last ~45 minutes each, i.e. 3.75 hours or 0.125 CP.
 
-
 #### [Cloud Based Bioimage Analysis](cloud-based-analysis-course/index.html)
-Learn how to run your code on a cluster. 
+Learn about executing bioimage analysis on remote compute resources. 
+
+#### [Bioimage Batch Analysis Essentials (Crash Course)](batch-analysis-essentials-crash-course/index.html)
+Very minimal crash course to learn how to automatically perform a simple image analysis tasks on multiple images.
+
 
 <br><br><br>
 
