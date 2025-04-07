@@ -26,8 +26,8 @@ napari_viewer.add_image(image, name='incenp_t1')
 image_binary = image > 25
 napari_viewer.add_image(image_binary, name='binary', opacity = 0.3)
 
-# %% [markdown]
-# **Learning opportunity** explore [automatic thresholding](https://scikit-image.org/docs/stable/api/skimage.filters.html), e.g. `skimage.filters.threshold_li`
+# %%
+# Learning opportunity: explore [automatic thresholding](https://scikit-image.org/docs/stable/api/skimage.filters.html), e.g. `skimage.filters.threshold_li`
 
 # %%
 # Perform connected components analysis (i.e create labels)
@@ -41,8 +41,8 @@ properties = regionprops_table(
     properties = {'label', 'area'}
 )
 
-# %% [markdown]
-# **Learning opportunity** Try also different measurements. See documentation of [skimage regionsprops](https://scikit-image.org/docs/stable/api/skimage.measure.html#skimage.measure.regionprops)
+# %%
+# Learning opportunity: Try also different measurements. See documentation of [skimage regionsprops](https://scikit-image.org/docs/stable/api/skimage.measure.html#skimage.measure.regionprops)
 
 # %%
 # Print areas for each cell
@@ -50,10 +50,10 @@ properties = regionprops_table(
 properties_dataframe = pd.DataFrame(properties)
 print(properties_dataframe)
 
-# %% [markdown]
-# ### Learing opportunity - Generalize the workflow for many images
+# %%
+# Learing opportunity: Generalize the workflow for many images
 #
-# * **for loop** allows to extend the workflow to many more images and fully automate it. Here the backbone of code
+# A "for loop*"" allows to extend the workflow to many more images and fully automate it. Here the backbone of code
 # ```
 # image_paths = ["https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__mitocheck_incenp_t1.tif", "https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__mitocheck_incenp_t70.tif"]
 #
@@ -63,6 +63,6 @@ print(properties_dataframe)
 #     # More code here
 # ```
 #
-# * *save the data*. Ideally one would like to save the results of each processed image.  For saving the label image you can use [`skimage.io.imsave`](https://scikit-image.org/docs/stable/api/skimage.io.html#skimage.io.imsave) for saving the table you can use e.g. [`pandas.DataFrame.to_csv`](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_csv.html), i.e. `properties_dataframe.to_csv`. You can add these functions within the for loop. 
+# Save the data: Ideally one would like to save the results of each processed image.  For saving the label image you can use [`skimage.io.imsave`](https://scikit-image.org/docs/stable/api/skimage.io.html#skimage.io.imsave) for saving the table you can use e.g. [`pandas.DataFrame.to_csv`](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_csv.html), i.e. `properties_dataframe.to_csv`. You can add these functions within the for loop. 
 #
-# * To save the data one need unique names. For instance one could extract the name of the image using [`os.path`](https://docs.python.org/3/library/os.path.html) functionality and then add some additional identifiers. 
+# To save the data one needs unique names. For instance one could extract the name of the image using [`os.path`](https://docs.python.org/3/library/os.path.html) functionality and then add some additional identifiers. 

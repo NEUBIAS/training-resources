@@ -1,17 +1,7 @@
 - [Run Fiji with MoBIE](https://github.com/mobie/mobie-viewer-fiji#install)
-- Open OME-Zarr from S3 in BigDataViewer:
-  - `[ Plugins › BigDataViewer › OME ZARR › Open OME ZARR From S3... ]`
-    - `S3 URL`: Choose one of the above example URLs
-    - [X] Log chunk loading
-- Examine the IJ Log window to see:
-  - image scale levels
-  - transformations from data space to global space
-- One OME-Zarr URL may contain multiple images, you can toggle them on and off:
-  - BDV: Press `P` and use the `active` checkbox
-- Examine multi-scale chunk loading:
-  - `[ Fiji > Window > Console ]`
-  - Move around to load different chunks, e.g.:
-    - BDV: `Mouse scroll` to move along the current viewing axis
-    - BDV: `Shift x` to view along the x-axis.
-  - Zoom in to load higher resolution data:
-    - BDV: `Arrow up`
+- Open OME-Zar with labels and label table in MoBIE:
+  - `[ Plugins › MoBIE › Open › Open OME ZARR... ]`
+    - Image URI: `https://s3.embl.de/i2k-2020/platy-raw.ome.zarr` (8 TB)
+    - Labels URI: `https://s3.embl.de/i2k-2020/platy-raw.ome.zarr/labels/cells` 
+    - Labels Table URI: `https://raw.githubusercontent.com/mobie/platybrowser-project/refs/heads/main/data/1.0.1/tables/sbem-6dpf-1-whole-segmented-cells/default.tsv`
+      - Note that the labels table is not integrated within the OME-Zarr, because a specification for this does not, despite hard work, yet exist. MoBIE supports a number of table formats and column names (see [here](https://github.com/mobie/mobie-viewer-fiji/tree/main/src/main/java/org/embl/mobie/lib/table/columns)).

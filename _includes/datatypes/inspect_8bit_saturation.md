@@ -1,4 +1,4 @@
-<h4 id="saturation_8bit"><a href="#saturation_8bit">Find saturated pixels in an 8-bit image</a></h4> 
+<h4 id="saturation_8bit"><a href="#saturation_8bit">Inspect an 8-bit image</a></h4> 
 
 Saturation, i.e. pixel value at the upper end of the datatype, is a typical problem in fluorescence microscopy images.
 

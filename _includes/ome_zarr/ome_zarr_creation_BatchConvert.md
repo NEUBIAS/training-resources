@@ -1,34 +1,60 @@
-**First check out what data we have the s3 end:**
-```
-mc tree -d 2 s3/ome-zarr-course/
-```
+#### Perform parallelised conversion of image data collections to OME-Zarr using BatchConvert
 
-There are multiple conversion modes. Let's try each of them.
+**Important note: BatchConvert is currently only supported on unix-based systems**
+
+As input, use the `tiff_series` dataset.
 
 **Perform parallelised, independent conversion:**
+```bash
+batchconvert omezarr \
+/path/to/tiff_series \
+/path/to/output_dir 
 ```
-batchconvert omezarr -st s3 -dt s3 --drop_series data/MFF data/ZARR/$USER;
+This command maps each input file in the `tiff_series` folder to a single OME-Zarr, 
+which is then transferred to the `output_dir` folder.
+
+Check the content of the `output_dir` folder:
+```bash 
+ls /path/to/output_dir
 ```
-This command maps each input file in the `data/MFF` folder to a single OME-Zarr series, which is then transferred to a user-specific folder.
-Note that the `-st s3` option makes sure that the input path is searched for in the s3 bucket, while `-dt s3` triggers the output files to be transferred to the s3 bucket under the output path.
+Optional: Inspect the created OME-Zarr. 
 
 **Perform grouped conversion:**
 
+```bash
+batchconvert omezarr \
+--merge_files \
+/path/to/tiff_series \
+/path/to/concatenated_output_dir
 ```
-batchconvert omezarr -st s3 -dt s3 --drop_series --merge_files --concatenation_order t data/JPEG data/ZARR/$USER;
-```
-This conversion mode assumes that the input files are part of the same series and thus will merge them along a specific axis during the conversion process.
-The `--merge_files` flag specifies the grouped conversion option and the `--concatenation_order t` option allows the files to be merged along the time channel. 
+This conversion mode assumes that the input files are part of the same image and thus will merge them along a specific axis during the conversion process.
+The `--merge_files` flag specifies the grouped conversion option.
 
-**Check what has changed at the s3 end after the conversion:**
+Check the content of the `output_dir` folder:
+```bash 
+ls /path/to/concatenated_output_dir
 ```
-mc tree -d 2 s3/ome-zarr-course/
-```
-```
-mc ls s3/ome-zarr-course/data/ZARR/$USER/
-```
+Optional: Inspect the created OME-Zarr. 
 
-**Optional: Copy the converted Zarr data to the home folder:**
+
+**Perform grouped conversion with specific chunking, downscaling and compression parameters:**
+
+```bash
+batchconvert omezarr \
+--merge_files \
+--compression_zarr zlib \
+-ms 32 \
+-cx 32 \
+-cy 32 \
+-cz 6 \
+/path/to/tiff_series \
+/path/to/concatenated_rechunked_output_dir
 ```
-mc mirror s3/ome-zarr-course/data/ZARR/$USER ~/data/ZARR;
+Here we do not only concatenate images, but we create a resolution pyramid and
+specify chunk sizes in x, y and z dimensions.
+
+Check the content of the `zarr_series_concatenated_rechunked` folder:
+```bash 
+ls /path/to/concatenated_rechunked_output_dir
 ```
+Optional: Inspect the created OME-Zarr. Compare it to the one created earlier.
