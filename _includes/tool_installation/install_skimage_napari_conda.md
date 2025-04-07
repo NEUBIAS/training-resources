@@ -10,12 +10,12 @@
 	 source ~/miniconda3/bin/activate
 	```
 
-1. Write 
-```
-conda create -n skimage-napari-tutorial --override-channels -c conda-forge -c euro-bioimaging -c nodefaults python=3.10 napari=0.4.17 notebook matplotlib jupytext "scikit-image>=0.20" openijtiff "numpy<2"
-```
- and press enter to create an environment named `skimage-napari-tutorial` with the necessary packages for the course.
-1. create a directory called `skimage-napari-tutorial` (e.g. on your Desktop)
+  1. Write 
+  ```
+    conda create -n skimage-napari-tutorial --override-channels -c conda-forge -c euro-bioimaging -c nodefaults python=3.10 napari=0.4.17 notebook matplotlib jupytext "scikit-image>=0.20" openijtiff "numpy<2" napari-plot-profile
+  ```
+    and press enter to create an environment named `skimage-napari-tutorial` with the necessary packages for the course.
+  1. create a directory called `skimage-napari-tutorial` (e.g. on your Desktop)
 
 #### Test installation (only once)
 1. download [test_installation_skimage_napari.py](https://neubias.github.io/training-resources/functions/test_installation_skimage_napari.py) to
