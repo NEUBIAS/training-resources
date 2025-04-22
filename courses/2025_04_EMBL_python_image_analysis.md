@@ -58,22 +58,22 @@ The whole course will be guided hands-on sessions.
 Three trainers: Christian Tischer, Julian Hennies, Felix Schneider
 
 1. [Digital image basics](https://neubias.github.io/training-resources/pixels/index.html)
-    - Felix
+    - T: Felix, A: Julian, Christian
 1. [Lookup tables](https://neubias.github.io/training-resources/lut/index.html)
-    - Felix
+    - T: Felix, A: Julian, Christian
 1. [Spatial image calibration](https://neubias.github.io/training-resources/spatial_calibration/index.html) 
-    - Julian
+    - T: Julian, A: Christian, Felix
     - Activities
        - [3-D spatial calibration](https://neubias.github.io/training-resources/spatial_calibration/index.html#explore3D)
 1. [N-dimensional images](https://neubias.github.io/training-resources/multidimensional_image_basics/index.html)
-    - Julian
+    - T: Julian, A: Christian, Felix
 1. [Image data types](https://neubias.github.io/training-resources/datatypes/index.html) 
-    - Christian
+    - T: Christian, A: Julian, Felix
     - Activities
        - [Inspect an 8 bit image](https://neubias.github.io/training-resources/datatypes/index.html#saturation_8bit)
        - [Inspect a 12 bit image](https://neubias.github.io/training-resources/datatypes/index.html#saturation_12bit)
 1. [Image projections](https://neubias.github.io/training-resources/projections/index.html)
-    - Christian
+    - T: Christian, A: Julian, Felix
     - [Max and sum projections of an anisotropic image]()
 
 ### Image analysis basics (day 2, 29. April 2025)

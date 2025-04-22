@@ -40,9 +40,8 @@ Learn how to automatically process perfom image analysis tasks on multiple image
 #### [Cloud Based Bioimage Analysis](cloud-based-analysis-course/index.html)
 Learn about executing bioimage analysis on remote compute resources. 
 
-#### [Bioimage Batch Analysis Essentials (Crash Course)](batch-analysis-essentials-crash-course/index.html)
-Very minimal crash course to learn how to automatically perform a simple image analysis tasks on multiple images.
-
+#### [Bioimage Batch Analysis Essentials](batch-analysis-essentials-crash-course/index.html)
+Crash course to learn the essentials of how to automatically perform a simple image analysis task on multiple images.
 
 <br><br><br>
 

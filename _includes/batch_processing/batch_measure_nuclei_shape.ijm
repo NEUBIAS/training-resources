@@ -5,12 +5,15 @@
  *   - Update site: IJPB-Plugins (MorpholibJ)
  */
 
-// Scijava script parameters
+// Scijava script UI parameters
 // Use the [ Batch ] button in the Fiji script editor to automatically analyse multiple files
 #@ File (label="Input image") inputImageFile
 #@ File (label="Output directory", style="directory") outputDir
 
 // Processing parameters
+// Note that one could decide to expose the below parameters in the above UI, too.
+// But then one would need to somehow document their values for each run of the script.
+// Like this, one could save the whole script with the analysis results for documentation purposes.
 threshold = 25;
 
 // Clean up and avoid popping up of image windows during run
