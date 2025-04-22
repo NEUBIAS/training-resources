@@ -47,6 +47,7 @@ As there are 6 modules per day that makes ~45 minutes per module.
 - Christian Tischer (EMBL)
 - Arif Khan (EMBL)
 - Julian Hennies (EMBL)
+- Alessandro Ulivi (Uni Heidelberg)
 
 ## Teaching content
 
