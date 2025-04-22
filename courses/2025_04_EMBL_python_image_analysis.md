@@ -113,9 +113,9 @@ Three trainers: Severina Klaus (in the morning), Arif Khan, Alessandro Ulivi
 1. [Local background subtraction](https://neubias.github.io/training-resources/local_background_correction/index.html)
     - Alessandro 
 1. [Morphological filters](https://neubias.github.io/training-resources/filter_morphological/index.html)
-    - ?
+    - Arif
 1. [Workflow: 2D noisy object segmentation and filtering](https://neubias.github.io/training-resources/workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape/index.html)
-    - Ask students to work through themselves...
+    - Arif, Ask students to work through themselves...
 
 
 ### Batch image analysis basics (day 4, 6. May 2025)
@@ -123,10 +123,10 @@ Three trainers: Severina Klaus (in the morning), Arif Khan, Alessandro Ulivi
 Three trainers: Dominik Kutra, Ehud Sivan, Arif Khan
 
 1. Introduce the general idea of batch processing
-    - ?
+    - Arif
     - Ingredients: Loops, File paths, Functions, Data management, Results QC
 1. [Loops](https://neubias.github.io/training-resources/script_for_loop/index.html)
-    - ?
+    - Arif
 1. [String and path manipulations](https://neubias.github.io/training-resources/string_concat/index.html)
     - ?
 1. [Functions](https://neubias.github.io/training-resources/script_functions/index.html)
