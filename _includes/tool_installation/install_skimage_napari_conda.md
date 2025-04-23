@@ -11,7 +11,7 @@
 	```
 #### CRITICAL (For users who cannot access the links above)
 
-1. install [conda](https://github.com/conda-forge/miniforge) according to your own system following the instructions given in the link.
+		- install [conda](https://github.com/conda-forge/miniforge) according to your own system following the instructions given in the link.
 
   1. Write
   ```
