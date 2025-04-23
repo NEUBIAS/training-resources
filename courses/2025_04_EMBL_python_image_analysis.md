@@ -120,7 +120,7 @@ Three trainers: Severina Klaus (in the morning), Arif Khan, Alessandro Ulivi
 
 ### Batch image analysis basics (day 4, 6. May 2025)
 
-Three trainers: Dominik Kutra, Ehud Sivan, Arif Khan
+Three trainers: Dominik Kutra, Ehud Sivan, Arif Khan, Alessandro Ulivi
 
 1. Introduce the general idea of batch processing
     - Arif
@@ -128,9 +128,9 @@ Three trainers: Dominik Kutra, Ehud Sivan, Arif Khan
 1. [Loops](https://neubias.github.io/training-resources/script_for_loop/index.html)
     - Arif
 1. [String and path manipulations](https://neubias.github.io/training-resources/string_concat/index.html)
-    - ?
+    - Alessandro
 1. [Functions](https://neubias.github.io/training-resources/script_functions/index.html)
-    - ?
+    - Alessandro
 1. Discuss good practices for file and folder names
     - Dominik 
     - Discuss https://git.embl.de/grp-cba/astrocyte-differentiations/-/blob/main/data_management.md
