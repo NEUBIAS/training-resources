@@ -26,11 +26,11 @@ figure_legend: Multichannel image. Example for three 2D (xy) channels. Left - Ea
   Note that the array shape of (x,y,c) is just an example of channel order. The order may vary depending upon the data structure used to read image
 
 activity_preface: |
-  - Open a [sample multichannel image](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__hela-cells.tif)
-    - This is a 16-bits/channel composite color image of HeLa cells with red lysosomes, green mitochondria and blue nucleus. Image courtesy of Tony Collins, creator of the ImageJ for Microscopy collection of plugins at <http://www.macbiophotonics.ca/imagej/>
+  - Open a [sample multichannel image](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__cell_dna_nup_mts_actin.tif)
+    - This is a 16-bits/channel composite color image of HeLa cells with stained dna, nuclear pore complexes, microtubules and actine respectively. Image courtesy of Monica Gobran, MPI-NAT, Göttingen.
   - Explore how different channels can be viewed and selected
   - Learn to adjust look up tables and brightness/contrast settings
-  - Learn to select channels and make an RGB image
+  - Learn to select channels and make an image for export and presentation (e.g. RGB)
 
 activities:
     - ["ImageJ GUI - Inspect/view channels", "multichannel_images/activity1_imagejgui.md", "markdown"]
@@ -63,5 +63,10 @@ assessment: >
 learn_next:
 
 external_links:
-
+ - "[forum.image.sc: Colourblind friendly combinations](https://forum.image.sc/t/colourblind-friendly-colour-combinations/92567)"
 ---
+## Color combinations for multi channel images
+The choice of look-up tables to display a multi-channel image should fulfill following points:
+ * Distinct color separation so to maximize the visual separation between channels.
+ * Color blindness
+ * ...
