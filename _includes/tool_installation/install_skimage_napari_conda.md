@@ -2,15 +2,18 @@
 
 1. install [miniconda](https://www.anaconda.com/docs/getting-started/miniconda/main) see also [here](https://www.anaconda.com/docs/getting-started/miniconda/install). It is best to install as local user.
 	* Windows: the graphical installer works well. You can get it from the [repo](https://repo.anaconda.com/miniconda/) directly
-	* OSX: install using the `MacOS terminal installer`. This is the version that allows a local install. Install in the suggested path `~/miniconda3` 
+	* OSX: install using the `MacOS terminal installer`. This is the version that allows a local install. Install in the suggested path `~/miniconda3`
 1. open a (new) terminal window
 	* Windows: *Anaconda Prompt (Miniconda3)*, e.g. type `Anaconda` in the search bar
 	* OSX: Open a `terminal` window. If conda is active you see `(base)` left of the shell prompt. If you do not see `(base)` you may have to manually activate the environment as described [here](https://www.anaconda.com/docs/getting-started/miniconda/install#quickstart-install-instructions) by typing
 	```
 	 source ~/miniconda3/bin/activate
 	```
+#### CRITICAL (For users who cannot access the links above)
 
-  1. Write 
+1. install [conda](https://github.com/conda-forge/miniforge) according to your own system following the instructions given in the link.
+
+  1. Write
   ```
   	conda create -n skimage-napari-tutorial --override-channels -c conda-forge -c euro-bioimaging -c nodefaults python=3.10 napari=0.4.17 numpy notebook matplotlib jupytext scikit-image openijtiff napari-plot-profile
   ```
