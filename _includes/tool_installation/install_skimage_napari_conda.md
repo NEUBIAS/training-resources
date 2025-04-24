@@ -85,3 +85,20 @@ To run code either:
  * (with package `jupytext`) create an empty file, e.g. `my_code.py` in the `skimage-napari-tutorial` directory.
 	Copy the activity code to this file and save the file. From the `jupyter` main landing page right-click on the file and choose _Open with -> Notebook_.
  *  Create a new notebook `New > Python 3` and copy the code in the activity into the notebook.
+
+### Troubleshooting
+
+#### Ubuntu: Napari fails to show 3D viewer
+
+We've encountered an OpenGL error for the napari 3D viewer on a Ubuntu machine when using the conda environment installed as described above. 
+
+This installation procedure got it to work (Note: not yet tested for all modules):
+
+```
+conda create -n skimage-napari-tutorial --override-channels -c conda-forge python=3.9
+conda activate skimage-napari-tutorial
+pip install napari[all]
+pip install notebook
+pip install jupytext
+conda install --override-channels -c conda-forge -c euro-bioimaging -c nodefaults openijtiff
+```
