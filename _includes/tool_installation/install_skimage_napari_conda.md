@@ -4,9 +4,8 @@
 
 If you already have a conda package manager you can skip this step.
 
-##### Troubleshooting (CRITICAL for users who cannot install miniconda with the above instructions)
 
-CRITICAL: If you cannot open the [miniconda](https://www.anaconda.com/docs/getting-started/miniconda/main) website, please install [conda](https://github.com/conda-forge/miniforge) according to your own system following the instructions. If you can access the link follow the below instructions.
+**Important**: If you cannot open the [miniconda](https://www.anaconda.com/docs/getting-started/miniconda/main) website, please install [conda](https://github.com/conda-forge/miniforge) according to your own system following the instructions. If you can access the link follow the below instructions.
 
 
 1. Install [miniconda](https://www.anaconda.com/docs/getting-started/miniconda/main) see also [here](https://www.anaconda.com/docs/getting-started/miniconda/install). It is best to install as local user.
