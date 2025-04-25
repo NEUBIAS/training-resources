@@ -33,6 +33,58 @@ external_links:
 
 ---
 
-## Installation instructions
+## Running bioimage analysis software
 
-To visualise the installation instructions, please select the required platform in the activity list.
+### Hardware
+
+Bioimage analysis software can be run either locally on your own computer or remotely on a cloud-based system. Each approach has its advantages and limitations:
+
+### Local (Your Computer)
+
+- **Pros**:
+  - No internet connection required.
+  - Smooth interaction with screen, mouse, and keyboard.
+- **Cons**:
+  - Limited hardware resources.
+  - Potential challenges with software installation.
+
+### Remote (Cloud-Based)
+
+- **Pros**:
+  - Access to powerful, dedicated hardware.
+  - Preinstalled and ready-to-use software.
+- **Cons**:
+  - Requires network access.
+  - Limited ability to modify or install additional software.
+  - Screen rendering may be slower due to network latency.
+ 
+### Sofware
+
+#### Package managers
+
+Package managers are software that can install libraries (packages) on your computer that are needed to develop and run bioimage analysis appllications. Prominent examples are `maven` and `conda`, which manage Java and Python libraries, respectively.
+
+##### Conda
+
+- Conda is a software that you need to install on your computer
+- Conda is a so-called package manager that will download software packages onto your computer
+- Initially, conda was mainly for downloading python packages, thus the "snake" name
+- Now, there are  many variants of conda (mamba, micromamba, miniforge, ...); those will all install the same software packages on your computer, but will do this more or less fast and well
+
+###### Example use with explanations
+
+`conda create -n skimage-napari-tutorial --override-channels -c conda-forge -c euro-bioimaging -c nodefaults python=3.10 napari=0.4.17 notebook matplotlib jupytext "scikit-image>=0.20" openijtiff "numpy<2"`
+
+- `conda create -n skimage-napari-tutorial`: Asks `conda` to `create` a new "environment" on your computer with the name (`-n`) `skimage-napari-tutorial`
+  - This simply creates a folder on your computer called `skimage-napari-tutorial` into which conda will download stuff
+- `--override-channels -c conda-forge -c euro-bioimaging -c nodefaults`: Tells conda from where to download the software, a "channel" `-c` is one place that hosts conda packages
+  - ` -c nodefaults`: The reason to adding this was that the licensing of the default distribution channel for conda packages changed such that even academic institutions are not allowed anymore to use them
+- `python=3.10 napari=0.4.17`: We require specific versions of those packages, the versions of other packages that don't have the `=` will be chosen automatically by conda such that, hopefully, everything is compatible 
+- "scikit-image>=0.20" & "numpy<2": Limits the range of versions to be above or below a certain version
+  - `scikit-image>=0.20` this was done here to make sure that the installation contains a nice new feature of `scikit-image` that was only available from version `0.20` on and, back then, the version that conda would download by default was lower than this
+  - `numpy<2`: Typically, if the so-called major version changes, e.g. `1.9` goes to `2.0`, there are "breaking changes"; this was also the case for `numpy` and, back then, many other packages that use `numpy` were not yet ready to use the new `2.0` version leading to errors.
+
+General notes:
+
+- The specific software that is downloaded by an identical conda command will differ depending on your operating system and on your hardware (e.g. newer Mac computers have a different chip for which conda will need to download other packages than for older Mac)
+  - As a consequence, unfortunately, the same conda command may produce a working environment on some computers while it may not work on others
