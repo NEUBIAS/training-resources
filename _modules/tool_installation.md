@@ -62,13 +62,13 @@ Bioimage analysis software can be run either locally on your own computer or rem
 
 #### Package managers
 
-Package managers are software that can install libraries (packages) on your computer that are needed to develop and run bioimage analysis appllications. Prominent examples are `maven` and `conda`, which manage Java and Python libraries, respectively.
+Package managers are software that can install libraries (packages) on your computer that are needed to develop and run bioimage analysis appllications. Prominent examples are `maven` for managing Java and `conda` for managing Python and other libraries; `pip` is a relatively old and well-known package manager, specific to Python; we have heard good things about `vu` as a modern Python package manager. Generally, the landscape of Python package managers is evolving and hard to keep track of.
 
 ##### Conda
 
 - Conda is a software that you need to install on your computer
 - Conda is a so-called package manager that will download software packages onto your computer
-- Initially, conda was mainly for downloading python packages, thus the "snake" name
+- Initially, conda was mainly for downloading python packages, thus the "snake" name, but now `conda` evolved to be a general purpose package manager
 - Now, there are  many variants of conda (mamba, micromamba, miniforge, ...); those will all install the same software packages on your computer, but will do this more or less fast and well
 
 ###### Example use with explanations
