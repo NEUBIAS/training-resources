@@ -55,8 +55,12 @@ The whole course will be guided hands-on sessions.
 
 ### Image inspection basics (day 1, 28. April 2025)
 
-Three trainers: Christian Tischer, Julian Hennies, Felix Schneider
+Trainers: Christian Tischer, Julian Hennies, Felix Schneider
 
+1. Welcome & trainer introduction
+    - Felix, Julian, Christian
+1. [Installing python software via conda](https://neubias.github.io/training-resources/tool_installation/index.html)
+    - T: Christian, A: Felix, Julian, 
 1. [Digital image basics](https://neubias.github.io/training-resources/pixels/index.html)
     - T: Felix, A: Julian, Christian
 1. [Lookup tables](https://neubias.github.io/training-resources/lut/index.html)
@@ -78,7 +82,7 @@ Three trainers: Christian Tischer, Julian Hennies, Felix Schneider
 
 ### Image analysis basics (day 2, 29. April 2025)
 
-Three trainers: Felix Schneider, Julian Hennies, Severina Klaus
+Trainers: Felix Schneider, Julian Hennies, Severina Klaus
 
 1. [Segmentation](https://neubias.github.io/training-resources/segmentation/index.html)
     - Julian
@@ -102,7 +106,7 @@ Three trainers: Felix Schneider, Julian Hennies, Severina Klaus
 
 ### Image analysis basics (day 3, 5. May 2025)
 
-Three trainers: Severina Klaus (in the morning), Arif Khan, Alessandro Ulivi
+Trainers: Severina Klaus (in the morning), Arif Khan, Alessandro Ulivi
 
 1. [Object intensity measurements](https://neubias.github.io/training-resources/measure_intensities/index.html)
     - Severina 
@@ -120,7 +124,7 @@ Three trainers: Severina Klaus (in the morning), Arif Khan, Alessandro Ulivi
 
 ### Batch image analysis basics (day 4, 6. May 2025)
 
-Three trainers: Dominik Kutra, Ehud Sivan, Arif Khan, Alessandro Ulivi
+Trainers: Dominik Kutra, Ehud Sivan, Arif Khan, Alessandro Ulivi
 
 1. Introduce the general idea of batch processing
     - Arif
