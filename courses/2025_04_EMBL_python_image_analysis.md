@@ -142,7 +142,8 @@ Trainers: Dominik Kutra, Ehud Sivan, Arif Khan, Alessandro Ulivi
     - Dominik 
     - Discuss https://git.embl.de/grp-cba/astrocyte-differentiations/-/blob/main/data_management.md
 1. [Batch analysis](https://neubias.github.io/training-resources/batch_processing/index.html)
-    - Dominik 
+    - Dominik
+    - Ehud
 1. Batch inspection with MoBIE
     - Dominik 
     - [Install Fiji/MoBIE](https://github.com/mobie/mobie-viewer-fiji?tab=readme-ov-file#install)
