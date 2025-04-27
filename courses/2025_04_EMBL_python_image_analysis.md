@@ -131,10 +131,13 @@ Trainers: Dominik Kutra, Ehud Sivan, Arif Khan, Alessandro Ulivi
     - Ingredients: Loops, File paths, Functions, Data management, Results QC
 1. [Loops](https://neubias.github.io/training-resources/script_for_loop/index.html)
     - Arif
+    - Ehud
 1. [String and path manipulations](https://neubias.github.io/training-resources/string_concat/index.html)
     - Alessandro
+    - Ehud
 1. [Functions](https://neubias.github.io/training-resources/script_functions/index.html)
     - Alessandro
+    - Ehud
 1. Discuss good practices for file and folder names
     - Dominik 
     - Discuss https://git.embl.de/grp-cba/astrocyte-differentiations/-/blob/main/data_management.md
