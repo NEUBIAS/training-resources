@@ -1,34 +1,32 @@
 # %% 
-# Check for saturation in an 8-bit image 
+# Inspect and visualise an RBG images
 
 # %%
 # Import libraries and instantiate napari
 import napari
 import numpy as np
-import matplotlib.pyplot as plt
-from OpenIJTIFF import open_ij_tiff
+from skimage import io # OpenIJTiff cannot open RGB images
 
 viewer = napari.Viewer()
 
 # %%
-# Open an image and view it
-image, *_ = open_ij_tiff('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_intensity_clipping_issue_a.tif')
-viewer.add_image(image)
-
-# TODO: This would be nice https://forum.image.sc/t/add-hilo-colormap-to-napari/95601
-
-# %% 
-# Check the image's datatype
-print(image.dtype)
-print(np.iinfo(image.dtype)) # Useful as it also prints the value range
+# Open and inspect the image 
+image = io.imread('image_data/xy_rgb__cells.tif')
+print(image.dtype) # The datatype is uint8 (not rgb)
+print(image.shape) # The RGB components are represented as a third dimension
 
 # %%
-# Check for clipping, i.e. pixels values at the limits of the value range
-# This is important for many reasons, for example: 
-# - Pixel values at the limit of the value range typically cannot be used for intensity quantification 
-# - Important algorithms, e.g. for spot detection, do not work well in regions with intensity clipping
-print("Min:", image.min()) # Are there any clipped pixels?
-print("Max:", image.max()) # Are there any clipped pixels?
-print("Number of 0 pixels:", np.sum(image==0)) # How many clipped pixels are there?
-print("Number of 255 pixels:", np.sum(image==255))
-plt.hist(image.flatten(), bins=np.arange(image.min(), image.max() + 1));
+# View the image
+
+# By default, if the last dimension of an image is of size 3 or 4, 
+# napari will interpret the image as an RGB or RGBA image
+viewer.add_image(image) 
+
+# If you don't want to treat it as RGB 
+# you have to set rgb=False
+viewer.add_image(image, rgb=False) 
+
+# After opening the image, use the napari UI 
+# to change the axes order such that you can see the image
+# There's now a slider below the image to change which color component
+# of the RGB image you are looking at
