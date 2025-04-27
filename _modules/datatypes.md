@@ -70,10 +70,17 @@ external_links:
 
 The pixels in an image have a certain data type. The data type limits the values that pixels can take.
 
-For example, unsigned N-bit integer images can represent values from 0 to 2^N -1, e.g.
-  - 8-bit unsigned integer: 0 - 255
-  - 12-bit unsigned integer: 0 - 4095
-  - 16-bit unsigned integer: 0 - 65535
+### Unsigned integer data types
+
+Many microscopes save their data in the unsigned integer datatype.
+
+A pixel of an N-bit unsigned integer data can be between `0` and `2^N - 1`.
+
+For example
+
+- 8-bit unsigned integer: 0 - 255
+- 12-bit unsigned integer: 0 - 4095
+- 16-bit unsigned integer: 0 - 65535
 
 ### Intensity clipping (saturation)
 
