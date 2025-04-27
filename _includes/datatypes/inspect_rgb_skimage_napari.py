@@ -11,7 +11,7 @@ viewer = napari.Viewer()
 
 # %%
 # Open and inspect the image 
-image = io.imread('image_data/xy_rgb__cells.tif')
+image = io.imread('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_rgb__cells.tif')
 print(image.dtype) # The datatype is uint8 (not rgb)
 print(image.shape) # The RGB components are represented as a third dimension
 
