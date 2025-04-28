@@ -25,18 +25,11 @@ figure_legend: Multichannel image. Example for three 2D (xy) channels. Left - Ea
   Right - All channels overlaid to display a composite image.
   Note that the array shape of (x,y,c) is just an example of channel order. The order may vary depending upon the data structure used to read image
 
-activity_preface: |
-  - Open a [sample multichannel image](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__cell_dna_nup_mts_actin.tif)
-    - This is a 16-bits/channel composite color image of HeLa cells with stained dna, nuclear pore complexes, microtubules and actine respectively. Image courtesy of Monica Gobran, MPI-NAT, Göttingen.
-  - Explore how different channels can be viewed and selected
-  - Learn to adjust look up tables and brightness/contrast settings
-  - Learn to select channels and make an image for export and presentation (e.g. RGB)
+multiactivities:
+  - ["multichannel_images/activity1_multichannel_images.md", [["ImageJ GUI", "multichannel_images/activity1_imagejgui.md"],["skimage napari", "multichannel_images/activity1_skimage_napari.py", "python"], ["Galaxy Napari", "multichannel_images/activity1_galaxy.md", "markdown"]]]
+  - ["multichannel_images/activity2_save_multichannel_images.md", [["ImageJ GUI", "multichannel_images/activity2_imagejgui.md"], ["ImageJ Macro", "multichannel_images/activity2_imagejmacro.ijm", "java"], 
+  ["skimage napari", "multichannel_images/activity2_skimage_napari.py", "py"]]]
 
-activities:
-    - ["ImageJ GUI - Inspect/view channels", "multichannel_images/activity1_imagejgui.md", "markdown"]
-    #- ["binarization/binarization_act1.md", [["ImageJ GUI", "binarization/binarization_act1_imagejgui.md"], ["ImageJ Macro", "binarization/binarization_act1_imagejmacro.ijm"], ["ImageJ Jython", "binarization/binarization_act1_jython.py"], ["skimage napari", "binarization/binarization_act1_skimage_napari.py", "python"]]]
-    - ["ImageJ GUI - Save channels as Tiff/RGB image", "multichannel_images/activity2_imagejgui.md", "markdown"]
-    - ["Galaxy Napari - Inspect/view channels", "multichannel_images/activity1_galaxy.md", "markdown"]
 
 assessment: >
 
