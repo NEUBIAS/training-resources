@@ -130,8 +130,14 @@ This is not a loop, but a condition for which some code is executed. `if` a cond
 
 Example `if/else` in python:
 ```python
+condition = True
+
 if condition:
-  result = value_if_true
+    result = 10
+    print("condition is True")
 else:
-  result  = value_if_false
+    result  = 20
+    print("condition is False")
+
+print(result)
 ```
