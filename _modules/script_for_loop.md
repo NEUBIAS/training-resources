@@ -119,7 +119,7 @@ Example `while` loop in python:
 ```python 
 counter = 5
 while counter > 0:
-  print(count)
+  print(counter)
   counter = counter - 1 
   # More code
 print("End of while loop")
