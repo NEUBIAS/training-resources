@@ -93,7 +93,7 @@ for (i = 0; i <10; i++) { // loop header
 
 Example `for` loop in python, note that you can iterate over any type of list:
 ```python
-my_fruits = ["apple", "banana", "cherry|]
+my_fruits = ["apple", "banana", "cherry"]
 for fruit in my_fruits:
   print(fruit)
   # more code
