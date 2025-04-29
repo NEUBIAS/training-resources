@@ -49,7 +49,6 @@ As there are n modules per day that makes ~XX minutes per module.
 ## Trainers and organisers
 
 - Christian Tischer (EMBL)
-- Arif Khan (EMBL)
 
 
 ## Teaching content
@@ -58,10 +57,10 @@ The whole course will be guided hands-on sessions.
 
 ### Image inspection basics (day 1)
 
-Trainers: Christian Tischer, Julian Hennies, Felix Schneider
+Trainers:
 
 1. Welcome & trainer introduction
-    - Christian, Arif
+    -
 1. [Installing image analysis software](https://neubias.github.io/training-resources/tool_installation/index.html)
     -
 1. [Digital image basics](https://neubias.github.io/training-resources/pixels/index.html)
@@ -82,7 +81,7 @@ Trainers: Christian Tischer, Julian Hennies, Felix Schneider
 
 ### Image analysis basics (day 2)
 
-Trainers: Christian, Arif
+Trainers:
 
 1. [Segmentation](https://neubias.github.io/training-resources/segmentation/index.html)
     -
@@ -101,7 +100,7 @@ Trainers: Christian, Arif
 
 ### Image analysis basics (day 3)
 
-Trainers: Christian, Arif
+Trainers:
 
 1. [Object intensity measurements](https://neubias.github.io/training-resources/measure_intensities/index.html)
     -
@@ -119,7 +118,7 @@ Trainers: Christian, Arif
 
 ### Batch image analysis basics (day 4)
 
-Trainers: Christian, Arif
+Trainers:
 
 1. Introduce the general idea of batch processing
     - Ingredients: Loops, File paths, Functions, Data management, Results QC
