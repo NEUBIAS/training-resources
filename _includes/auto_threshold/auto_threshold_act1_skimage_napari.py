@@ -40,8 +40,8 @@ thr2 = 75
 manual_thresholded1 = image1>thr1
 manual_thresholded2 = image2>thr2
 
-viewer.add_label(manual_thresholded1, name='manual_thresholded1', opacity = 0.4, colormap='magenta')
-viewer.add_label(manual_thresholded2, name='manual_thresholded2', opacity = 0.4, colormap='magenta')
+viewer.add_labels(manual_thresholded1, name='manual_thresholded1', opacity = 0.4)
+viewer.add_labels(manual_thresholded2, name='manual_thresholded2', opacity = 0.4)
 # Identify possible problems with this solution
 
 # %% [markdown]
@@ -62,8 +62,8 @@ mean_thresholded2 = image2>thr2
 
 # %%
 # Visualize auto-thresholded images
-viewer.add_label(mean_thresholded1, name='mean_thresholded1', opacity = 0.4, colormap='magenta')
-viewer.add_label(mean_thresholded2, name='mean_thresholded2', opacity = 0.4, colormap='magenta')
+viewer.add_labels(mean_thresholded1, name='mean_thresholded1', opacity = 0.4)
+viewer.add_labels(mean_thresholded2, name='mean_thresholded2', opacity = 0.4)
 
 # %% 
 # Explore other thresholding options
