@@ -64,19 +64,19 @@ learn_next:
 external_links:
  - "[forum.image.sc: Colourblind friendly combinations](https://forum.image.sc/t/colourblind-friendly-colour-combinations/92567)"
  - "[ASCB: How to make scientific figures accessible to readers with color blindness](https://www.ascb.org/diversity-equity-and-inclusion/how-to-make-scientific-figures-accessible-to-readers-with-color-blindness/)"
- - "[Fiji/Biop LUT for more than 3 colors](https://imagej.net/plugins/biop-lookup-tables)
+ - "[Fiji/Biop LUT for more than 3 colors](https://imagej.net/plugins/biop-lookup-tables)"
 ---
 ## Color combinations for multi channel images
 The choice of look-up tables to display a multi-channel image should fulfill following points:
  * Distinct color separation so to maximize the visual separation between channels.
  * Avoidance of problematic color combinations that can't be distinguished with color vision deficiency (e.g. red/green)
- * Test color combinations using a "color-blind mode". For example in ImageJ `Image > Color > Dichromacy`
+ * If unsure test color combinations using a "color-blind mode". For example in ImageJ `Image > Color > Simulate Color Blindness`
  * It is strongly recommended to show the single channels next to the merged channel for better clarity
 
 ### Suggested color combinations
 * **Two channels**: Several combniatons are possible. For example Green/Magenta, Blue/Yellow, Red/Cyan, Blue/Red 
 * **Three channels**: For example Magenta/Green/Blue, Megenta/Yellow/Cyan, Red/Cyan/Yellow
-* **More than three channels**: Displaying a pseudo-color image with enough contrast when there are more than 3 channels is challenging. It depends on the structure that have been stained. Different color combinations should be tried out. One possibiility is Magenta/Green/Yellow/Cyan. One can also use of a grayscale LUT for one of the reference channels. 
+* **More than three channels**: Displaying the merged image with enough contrast is challenging. It depends on the structure that have been stained and how much they overlap. Different color combinations should be tried out. One possibiility is Magenta/Green/Yellow/Cyan. One can also use of a grayscale LUT for one of the reference channels. 
 
 
 
