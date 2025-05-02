@@ -24,20 +24,10 @@ viewer.layers.clear()
 viewer.add_image(image, channel_axis = ch_axis, name = ch_names, contrast_limits=
     [[105, 450], [100, 500], [100,5000]], # contrast limits for each channel
     colormap = ['blue', 'green', 'magenta'], # colormaps for each channel
-    blending = ['translucent_no_depth', 'additive', 'additive'], # blending mode
-    scale = ax_scales[1:] #scaling for XY dimensions
+    blending = ['translucent_no_depth', 'additive', 'additive'] # blending mode
 )
 
 viewer.grid.enabled = False # Make sure we are not in grid mode
-
-# %%
-# Add and configure a scale bar 
-viewer.scale_bar.visible = True
-viewer.scale_bar.unit = 'um'
-viewer.scale_bar.length = 10
-viewer.scale_bar.ticks  = False # Remove the ticks at end of scale bar
-viewer.scale_bar.font_size = 0  # Hack to remove text
-viewer.scale_bar.position = 'bottom_right'
 
 # %%
 # Export image composite image
@@ -62,14 +52,12 @@ viewer.layers.clear()
 viewer.add_image(image, channel_axis = ch_axis, name = ch_names, contrast_limits=
     [[105, 450], [100, 500], [100,5000]], # contrast limits for each channel
     colormap = ['gray', 'gray', 'gray'], # colormaps for each channel
-    blending = ['translucent_no_depth', 'translucent_no_depth', 'translucent_no_depth'], # blending mode
-    scale = ax_scales[1:] #scaling for XY dimensions
+    blending = ['translucent_no_depth', 'translucent_no_depth', 'translucent_no_depth'] # blending mode
 )
-viewer.add_image(composite, scale = ax_scales[1:])
+viewer.add_image(composite)
 viewer.grid.enabled = True
 viewer.grid.stride = -1 # ensure order of images Ch1, Ch2, Ch3
 viewer.grid.shape = (1,4)
-viewer.scale_bar.visible = False # we already have  scale bar for the composite!
 viewer.reset_view()
 
 
