@@ -49,7 +49,7 @@ assessment: >
   ###  Discuss with your neighbor
 
     1. How can multichannel images be used to improve machine learning models for image/object classification?
-    1. Is RGB image always a 3(4)-dimensional image?
+    1. Is RGB image always a 3-dimensional image?
     1. What is a potential challenge when analyzing multichannel images?
 
     > ## Solution
@@ -67,16 +67,18 @@ external_links:
  - "[Fiji/Biop LUT for more than 3 colors](https://imagej.net/plugins/biop-lookup-tables)"
 ---
 ## Color combinations for multi channel images
-The choice of look-up tables to display a multi-channel image should fulfill following points:
- * Distinct color separation so to maximize the visual separation between channels.
- * Avoidance of problematic color combinations that can't be distinguished with color vision deficiency (e.g. red/green)
+
+### General recommendationas
+The choice of lookup tables to display a merged multi-channel image should fulfill:
+ * **Distinct color separation** so to maximize the visual separation between channels.
+ * Avoidance of **problematic color combinations** that can't be distinguished with **color vision deficiency** (e.g. red/green)
  * If unsure test color combinations using a "color-blind mode". For example in ImageJ `Image > Color > Simulate Color Blindness`
- * It is strongly recommended to show the single channels next to the merged channel for better clarity
+ * If possible show the single channels next to the merged channel for better clarity
 
 ### Suggested color combinations
-* **Two channels**: Several combniatons are possible. For example Green/Magenta, Blue/Yellow, Red/Cyan, Blue/Red 
+* **Two channels**:For example Green/Magenta, Blue/Yellow, Red/Cyan, Blue/Red 
 * **Three channels**: For example Magenta/Green/Blue, Megenta/Yellow/Cyan, Red/Cyan/Yellow
-* **More than three channels**: Displaying the merged image with enough contrast is challenging. It depends on the structure that have been stained and how much they overlap. Different color combinations should be tried out. One possibiility is Magenta/Green/Yellow/Cyan. One can also use of a grayscale LUT for one of the reference channels. 
+* **More than three channels**: Displaying the merged image with enough contrast is challenging. It depends on the structures that have been stained and how much they overlap. Different color combinations should be tried out. One possibiility is Magenta/Green/Yellow/Cyan, or a grayscale LUT for one or more of the reference (less important) channels. 
 
 
 
