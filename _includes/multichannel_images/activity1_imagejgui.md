@@ -4,4 +4,4 @@
   - _Note:_ The color of the subtitle changes when you switch to a different channel
 - Open the `Channels` tool using `Image > Color > Channels Tool` or by pressing `shift-z` to select/deselect channels to display
 - Use the `B & C` tool using `Image > Adjust > Brightness/Contrast` or press `shift-c` to adjust the brightness and contrast of the current channel. _Note:_ The slider bar decides your active channel for changing brightness and contrast settings
-- Try changing the channel color by selecting a LUT from the `Image > Lookup Tables` menu
+- Try changing the channel color by selecting a LUT from the `Image > Lookup Tables` menu. Try different modes of blending e.g. `Composite invert`

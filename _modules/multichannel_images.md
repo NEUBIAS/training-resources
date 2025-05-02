@@ -7,8 +7,13 @@ prerequisites:
   - "[Lookup tables](../lut)"
 objectives:
   - Understand/visualize different image channels.
-motivation: >
-  Typically, multichannel imaging involves using a fluorescence microscope equipped with multiple filter sets or detectors, each specific to a particular fluorophore's emission wavelength. In fluorescence microscopy, fluorescence signal of different dyes (at different wavelengths) can be registered simultaneously to one set of image spatial coordinates. Each signal then represents one channel and this information can be used to study/analyze various cellular and molecular processes e.g. colocalization.
+
+motivation: |
+  
+  **Multichannel imaging** typically involves using a **fluorescence microscope** equipped with  multiple filter sets or detectors, each specific to a particular **fluorophore’s emission wavelength** (_Note_ that this differs from images acquired with color cameras e.g. histological stains)
+  - The fluorescence signal of different dyes (at different wavelengths) can be **registered simultaneously** (or quasi) to one set of image spatial coordinates
+  - Each signal then represents one **channel** 
+  - Proper **inspection** and **rendering** of multichannel images is important to understand the spatial relationship between the different structures (e.g. colocalization)
 
 concept_map: >
   graph TD
@@ -19,11 +24,9 @@ concept_map: >
     F --> CN("Channel n")
 
 
-figure: /figures/multichannel_2d_image.png
+figure: /figures/multichannel_images.png
 
-figure_legend: Multichannel image. Example for three 2D (xy) channels. Left - Each individual image is a channel shown in blue, red and green lookup tables.
-  Right - All channels overlaid to display a composite image.
-  Note that the array shape of (x,y,c) is just an example of channel order. The order may vary depending upon the data structure used to read image
+figure_legend: Multichannel image. Left - Scheme of array organization for a multichannel image. Center - Example of three 2D (XY) images shown with grey look up table.  Right - All 3 channels overlaid to display a composite image using Cyan, Magenta, and Yellow look up tables, respectively. Note that the array shape of (X,Y,C) is just an example. The position of the channel dimension may differ depending on the data and the reader. 
 
 multiactivities:
   - ["multichannel_images/activity1_multichannel_images.md", [["ImageJ GUI", "multichannel_images/activity1_imagejgui.md"],["skimage napari", "multichannel_images/activity1_skimage_napari.py", "python"], ["Galaxy Napari", "multichannel_images/activity1_galaxy.md", "markdown"]]]
@@ -35,31 +38,46 @@ assessment: >
 
   ### True of false?
 
-    1. In a multichannel image, each channel is a grayscale image that represents different data
-
+    1. In a multichannel image, each channel is an image that represents different data/stains
+    1. There is no restriction in the choice of color for a merged image
+    
     > ## Solution
-    >   1. True
+    > 1. True
+    > 1. False. Some color combinations may not be perceived as different colors by persons with color vision deficiency
     {: .solution}
 
   ###  Discuss with your neighbor
 
     1. How can multichannel images be used to improve machine learning models for image/object classification?
-    1. Is RGB image always a 3-dimensional image?
+    1. Is RGB image always a 3(4)-dimensional image?
     1. What is a potential challenge when analyzing multichannel images?
 
     > ## Solution
     > 1. By providing additional context and information that can be leveraged by the model
-    > 1. Not necessarily. In Fiji, one can have an RGB data type without alteration of the image array dimensions (still 2D for xy-images). However, in MALTAB and Python, for an RGB, an image array must be at least 3-dimensional
-    > 1. Correcting for crosstalk or bleed-through between channels
+    > 1. Yes. In fact some software use 4 dimensions where the 4th dimension is transparency. If all channels are identical the image may render as a gray scale image.
+    > 1. Crosstalk or bleed-through between channels. This typically should be corrected
     {: .solution}
 
 learn_next:
+ - "[N Dimensional Images](../multidimensional_image_basics)"
 
 external_links:
  - "[forum.image.sc: Colourblind friendly combinations](https://forum.image.sc/t/colourblind-friendly-colour-combinations/92567)"
+ - "[ASCB: How to make scientific figures accessible to readers with color blindness](https://www.ascb.org/diversity-equity-and-inclusion/how-to-make-scientific-figures-accessible-to-readers-with-color-blindness/)"
+ - "[Fiji/Biop LUT for more than 3 colors](https://imagej.net/plugins/biop-lookup-tables)
 ---
 ## Color combinations for multi channel images
 The choice of look-up tables to display a multi-channel image should fulfill following points:
  * Distinct color separation so to maximize the visual separation between channels.
- * Color blindness
- * ...
+ * Avoidance of problematic color combinations that can't be distinguished with color vision deficiency (e.g. red/green)
+ * Test color combinations using a "color-blind mode". For example in ImageJ `Image > Color > Dichromacy`
+ * It is strongly recommended to show the single channels next to the merged channel for better clarity
+
+### Suggested color combinations
+* **Two channels**: Several combniatons are possible. For example Green/Magenta, Blue/Yellow, Red/Cyan, Blue/Red 
+* **Three channels**: For example Magenta/Green/Blue, Megenta/Yellow/Cyan, Red/Cyan/Yellow
+* **More than three channels**: Displaying a pseudo-color image with enough contrast when there are more than 3 channels is challenging. It depends on the structure that have been stained. Different color combinations should be tried out. One possibiility is Magenta/Green/Yellow/Cyan. One can also use of a grayscale LUT for one of the reference channels. 
+
+
+
+ 
