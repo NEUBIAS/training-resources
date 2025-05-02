@@ -31,14 +31,14 @@ print(ax_names)
 viewer.layers.clear()
 ch_axis = 0
 ch_names = ['DNA', 'MTS', 'ACTIN']
-viewer.add_image(image, channel_axis = 0, name = ch_names)
+viewer.add_image(image, channel_axis = ch_axis, name = ch_names)
 # Now the channels render correctly 
 
 # %%
 # play with contrast and brightness sliders and find ranges that matches for your eyes
 # play with colormap/LUT and find settings that you like
 viewer.layers.clear()
-viewer.add_image(image, channel_axis = 0, name = ch_names, contrast_limits=
+viewer.add_image(image, channel_axis = ch_axis, name = ch_names, contrast_limits=
     [[105, 450], [100, 500], [100,5000]], # contrast limits for each channel
     colormap = ['blue', 'green', 'magenta'], # colormaps for each channel
     blending = ['translucent_no_depth', 'additive', 'additive'] # blending mode

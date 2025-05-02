@@ -6,6 +6,7 @@
 - Next we create an image montage of all single channels (gray) and the composite RGB image.
 - Go to the original image `xyc_16bit__cell_dna_mts_actin.tif` or reopen it if needed.
 - Use the `Image > Color > Channel Tools` and change from `Composite` to `Grayscale`
-- Make a montage with  `Image > Stack > Make Montage ...` and following parameters. `Columns =3, Rows =1, scale factor = 1`. Note that the montage is transformed to a RGB.
-- Combine the two RGB images, montage and color image respectively, to a final image, `Image > Stacks > Tools > Combine`.
+- Make a montage with  `Image > Stack > Make Montage ...` and following parameters: `Columns = 3, Rows = 1, scale factor = 1`. Note that the montage is transformed to a RGB.
+- Combine the two RGB images, single channel montage and merged color image respectively, to a final image, `Image > Stacks > Tools > Combine`.
+- Add a scale bar ` Analyze › Tools › Scale Bar...`
 - Use `File > Save As > Tiff` to save as a TIFF.
