@@ -93,7 +93,7 @@ for (i = 0; i <10; i++) { // loop header
 
 Example `for` loop in python, note that you can iterate over any type of list:
 ```python
-my_fruits = ["apple", "banana", "cherry|]
+my_fruits = ["apple", "banana", "cherry"]
 for fruit in my_fruits:
   print(fruit)
   # more code
@@ -119,7 +119,7 @@ Example `while` loop in python:
 ```python 
 counter = 5
 while counter > 0:
-  print(count)
+  print(counter)
   counter = counter - 1 
   # More code
 print("End of while loop")
@@ -130,8 +130,14 @@ This is not a loop, but a condition for which some code is executed. `if` a cond
 
 Example `if/else` in python:
 ```python
+condition = True
+
 if condition:
-  result = value_if_true
+    result = 10
+    print("condition is True")
 else:
-  result  = value_if_false
+    result  = 20
+    print("condition is False")
+
+print(result)
 ```
