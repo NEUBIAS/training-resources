@@ -47,6 +47,7 @@ As there are 6 modules per day that makes ~45 minutes per module.
 - Christian Tischer (EMBL)
 - Arif Khan (EMBL)
 - Julian Hennies (EMBL)
+- Alessandro Ulivi (Uni Heidelberg)
 
 ## Teaching content
 
@@ -54,30 +55,34 @@ The whole course will be guided hands-on sessions.
 
 ### Image inspection basics (day 1, 28. April 2025)
 
-Three trainers: Christian Tischer, Julian Hennies, Felix Schneider
+Trainers: Christian Tischer, Julian Hennies, Felix Schneider
 
+1. Welcome & trainer introduction
+    - Felix, Julian, Christian
+1. [Installing python software via conda](https://neubias.github.io/training-resources/tool_installation/index.html)
+    - T: Christian, A: Felix, Julian, 
 1. [Digital image basics](https://neubias.github.io/training-resources/pixels/index.html)
-    - Felix
+    - T: Felix, A: Julian, Christian
 1. [Lookup tables](https://neubias.github.io/training-resources/lut/index.html)
-    - Felix
+    - T: Felix, A: Julian, Christian
 1. [Spatial image calibration](https://neubias.github.io/training-resources/spatial_calibration/index.html) 
-    - Julian
+    - T: Julian, A: Christian, Felix
     - Activities
        - [3-D spatial calibration](https://neubias.github.io/training-resources/spatial_calibration/index.html#explore3D)
 1. [N-dimensional images](https://neubias.github.io/training-resources/multidimensional_image_basics/index.html)
-    - Julian
+    - T: Julian, A: Christian, Felix
 1. [Image data types](https://neubias.github.io/training-resources/datatypes/index.html) 
-    - Christian
+    - T: Christian, A: Julian, Felix
     - Activities
        - [Inspect an 8 bit image](https://neubias.github.io/training-resources/datatypes/index.html#saturation_8bit)
        - [Inspect a 12 bit image](https://neubias.github.io/training-resources/datatypes/index.html#saturation_12bit)
 1. [Image projections](https://neubias.github.io/training-resources/projections/index.html)
-    - Christian
+    - T: Christian, A: Julian, Felix
     - [Max and sum projections of an anisotropic image]()
 
 ### Image analysis basics (day 2, 29. April 2025)
 
-Three trainers: Felix Schneider, Julian Hennies, Severina Klaus
+Trainers: Felix Schneider, Julian Hennies, Severina Klaus
 
 1. [Segmentation](https://neubias.github.io/training-resources/segmentation/index.html)
     - Julian
@@ -101,7 +106,7 @@ Three trainers: Felix Schneider, Julian Hennies, Severina Klaus
 
 ### Image analysis basics (day 3, 5. May 2025)
 
-Three trainers: Severina Klaus (in the morning), Arif Khan, Alessandro Ulivi
+Trainers: Severina Klaus (in the morning), Arif Khan, Alessandro Ulivi
 
 1. [Object intensity measurements](https://neubias.github.io/training-resources/measure_intensities/index.html)
     - Severina 
@@ -112,29 +117,33 @@ Three trainers: Severina Klaus (in the morning), Arif Khan, Alessandro Ulivi
 1. [Local background subtraction](https://neubias.github.io/training-resources/local_background_correction/index.html)
     - Alessandro 
 1. [Morphological filters](https://neubias.github.io/training-resources/filter_morphological/index.html)
-    - ?
+    - Arif
 1. [Workflow: 2D noisy object segmentation and filtering](https://neubias.github.io/training-resources/workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape/index.html)
-    - Ask students to work through themselves...
+    - Arif, Ask students to work through themselves...
 
 
 ### Batch image analysis basics (day 4, 6. May 2025)
 
-Three trainers: Dominik Kutra, Ehud Sivan, Arif Khan
+Trainers: Dominik Kutra, Ehud Sivan, Arif Khan, Alessandro Ulivi
 
 1. Introduce the general idea of batch processing
-    - ?
+    - Arif
     - Ingredients: Loops, File paths, Functions, Data management, Results QC
 1. [Loops](https://neubias.github.io/training-resources/script_for_loop/index.html)
-    - ?
+    - Arif
+    - Ehud
 1. [String and path manipulations](https://neubias.github.io/training-resources/string_concat/index.html)
-    - ?
+    - Alessandro
+    - Ehud
 1. [Functions](https://neubias.github.io/training-resources/script_functions/index.html)
-    - ?
+    - Alessandro
+    - Ehud
 1. Discuss good practices for file and folder names
     - Dominik 
     - Discuss https://git.embl.de/grp-cba/astrocyte-differentiations/-/blob/main/data_management.md
 1. [Batch analysis](https://neubias.github.io/training-resources/batch_processing/index.html)
-    - Dominik 
+    - Dominik
+    - Ehud
 1. Batch inspection with MoBIE
     - Dominik 
     - [Install Fiji/MoBIE](https://github.com/mobie/mobie-viewer-fiji?tab=readme-ov-file#install)

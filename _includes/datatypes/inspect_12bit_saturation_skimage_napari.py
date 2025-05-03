@@ -40,7 +40,7 @@ print("12 bit max:", 2**12-1)
 print("16 bit max:", 2**16-1)
 
 # %% 
-# Check how many satured pixels we have
+# Check how many satured pixels we have in the 12 bit image
 print("Number of 4095 pixels:", np.sum(image==4095))
 
 # %%

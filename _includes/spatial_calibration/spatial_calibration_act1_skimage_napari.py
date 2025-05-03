@@ -58,12 +58,12 @@ napari_viewer.add_image(image, scale=voxel_size)
 
 # %%
 # Extract the point coordinates
-points = viewer.layers['Points'].data
+points = napari_viewer.layers['Points'].data
 print(points) # unscaled => not very useful for physical measurements
 
 # %%
 # Scale the points
-scale = viewer.layers['Points'].scale # same as voxel_size
+scale = napari_viewer.layers['Points'].scale # same as voxel_size
 print("Points scale: ", scale)
 print("Voxel size: ", voxel_size)
 points_cal = points * scale 
