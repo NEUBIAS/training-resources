@@ -26,7 +26,7 @@ viewer.add_image(image, scale=scales)
 # Create and view a maximum projection along z-axis, i.e. axis = 0
 # - Observe how the maximum gives a nice "quick overview" of the data content
 # - In order to see it at the same scale as the original image we need to scale in in x&y 
-# - Napari: observe that the image layer context menu also allows one to create projections
+# - Napari: Observe that the image layer context menu also allows one to create projections
 # - Napari: *Toggle grid mode (Ctrl + G)* to view images side by side
 max_z_image = np.max(image, axis=0)
 viewer.add_image(max_z_image, scale=[scales[1], scales[2]])
@@ -47,14 +47,15 @@ print("max projection:", max_z_image.dtype)
 print("sum projection:", sum_z_image.dtype)
 
 # %%
-# Compute the maximum value that could occur during sum projection of this image 
-# and compare this to what it actually is and what would be supported
+# Compute the maximum value that could occur during a sum projection of this image 
+# and compare this to what it actually is and what would be supported by
+# the data type of the sum projection
 max_per_slice = np.iinfo(image.dtype).max
 num_slices = image.shape[0]
 max_sum_value = num_slices * max_per_slice
-print("max sum possible for this image:", max_sum_value)
-print("actual max sum in this image:", sum_z_image.max())
-print("max sum supported by projection:", np.iinfo(sum_z_image.dtype).max)
+print("max sum value that could occur for this image:", max_sum_value)
+print("actual max sum value in this image:", sum_z_image.max())
+print("max sum value supported by projection:", np.iinfo(sum_z_image.dtype).max)
 
 # %%
 # Compute maximum projection along x-axis and y-axis

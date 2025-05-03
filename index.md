@@ -25,15 +25,23 @@ The modules are meant to be taught hands-on, i.e. following the teacher's guidan
 
 The above training modules have been used in various contexts and compiled into various courses ([see here for past courses](https://github.com/NEUBIAS/training-resources/tree/master/courses)). Below is a selection of consolidated courses that have been taught multiple times already.
 
-#### [Basic bioimage inspection](basic-image-inspection-course/index.html)
+#### [Basic Bioimage Inspection](basic-image-inspection-course/index.html)
+Learn to inspect your images and visualize your data. The course contains 6 modules which last ~45 minutes each, i.e. 4.5 hours or 0.15 credit points (CP)
 
-#### [Image data formats](image-data-formats-course/index.html)
+#### [Image Data Formats](image-data-formats-course/index.html)
+Learn how to open and handle different data formats. The course contains 5 modules which last ~45 minutes each, i.e. 3.75 hours or 0.125 credit points CP.
 
-#### [Basic bioimage analysis](basic-image-analysis-course/index.html)
+#### [Basic Bioimage Analysis](basic-image-analysis-course/index.html)
+Learn essential concepts of image analysis, such as segmenation, intensity measurements, filtering. The course contains 12 modules which last ~45 minutes each, i.e. 9 hours or 0.3 CP.
 
-#### [Basic batch analysis](basic-batch-analysis-course/index.html)
+#### [Basic Batch Analysis](basic-batch-analysis-course/index.html)
+Learn how to automatically process perfom image analysis tasks on multiple images. The course contains 5 modules which last ~45 minutes each, i.e. 3.75 hours or 0.125 CP.
 
-#### [Cloud based bioimage analysis](cloud-based-analysis-course/index.html)
+#### [Cloud Based Bioimage Analysis](cloud-based-analysis-course/index.html)
+Learn about executing bioimage analysis on remote compute resources. 
+
+#### [Bioimage Batch Analysis Essentials](batch-analysis-essentials-crash-course/index.html)
+Crash course to learn the essentials of how to automatically perform a simple image analysis task on multiple images.
 
 <br><br><br>
 
