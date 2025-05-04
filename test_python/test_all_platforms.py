@@ -31,6 +31,7 @@ known_failures = {
     "spatial_calibration_act1_skimage_napari.py": "Requires manual interaction to pass.",
     "volume_slicing_act1_python-napari.py": "Not supposed to be run in a script, but in the napari viewer itself.",
     "batch_measure_nuclei_shape.py": "Requires image download.",
+    "parque_pyarrow.py": "Unfinished script/module"
 }
 
 

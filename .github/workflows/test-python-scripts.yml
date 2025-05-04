@@ -29,7 +29,7 @@ jobs:
           miniforge-version: latest
           conda-remove-defaults: "true"
       - name: install common conda dependencies
-        run: conda install -n test -c conda-forge -c euro-bioimaging python=3.13 napari=0.6.0 pytest notebook matplotlib jupytext "scikit-image>=0.20" openijtiff napari-plot-profile -y
+        run: conda install -n test -c conda-forge -c euro-bioimaging python=3.13 napari=0.5.6 pyqt pytest notebook matplotlib jupytext "scikit-image>=0.20" openijtiff napari-plot-profile -y
       - name: linux test
         if: matrix.os == 'ubuntu-latest'
         shell: bash -l {0}
