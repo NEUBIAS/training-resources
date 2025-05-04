@@ -4,8 +4,7 @@
 # %%
 from OpenIJTIFF import open_ij_tiff
 from napari.viewer import Viewer
-from skimage.morphology import square, disk
-from skimage.morphology import erosion, dilation
+from skimage.morphology import erosion
 
 # Create a napari_viewer and visualize image and labels.
 napari_viewer = Viewer()

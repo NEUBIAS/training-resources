@@ -27,9 +27,10 @@ viewer.add_image(image, name='image', scale=scales)
 # %%
 # Obtain threshold value using Otsu's algorithm
 from skimage.filters import threshold_otsu
+from napari.utils.colormaps import DirectLabelColormap
 thresholded_otsu = image > threshold_otsu(image)
 
-viewer.add_labels(thresholded_otsu, name='otsu', num_colors=1, color={1: 'green'},  scale=scales)
+viewer.add_labels(thresholded_otsu, name='otsu',  colormap = {None: None, 1: 'green'},  scale=scales)
 
 # %% [markdown]
 # **Napari GUI** Explore the results in the napari viewer. For 3D data one can change the order 
@@ -40,7 +41,7 @@ viewer.add_labels(thresholded_otsu, name='otsu', num_colors=1, color={1: 'green'
 # Additional threshold methods
 from skimage.filters import threshold_li
 thresholded_li = image > threshold_li(image)
-
-viewer.add_labels(thresholded_li, name='li', num_colors=1, color={1: 'orange'}, scale=scales)
+viewer.add_labels(thresholded_li, name='li', colormap = {None: None, 1: 'orange'}, 
+                  scale=scales, opacity = 0.5)
 
 # %%

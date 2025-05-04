@@ -1,11 +1,12 @@
-# %% 
+# %%
 # Dilation and erosion of a binary image
 
 # %%
 # Import python packages.
 from OpenIJTIFF import open_ij_tiff
 from napari.viewer import Viewer
-from skimage.morphology import square, disk
+from skimage.morphology import footprint_rectangle as rectangle
+from skimage.morphology import disk
 from skimage.morphology import erosion, dilation
 import numpy as np
 
@@ -46,9 +47,9 @@ napari_viewer.add_labels(dilated)
 
 # %%
 # Now try with a structuring element with connectivity 2 (3x3 square).
-print(square(3))
-eroded_square3 = erosion(image, footprint = square(3))
-dilated_square3 = dilation(image, footprint = square(3))
+print(rectangle((3,3)))
+eroded_square3 = erosion(image, footprint = rectangle((3,3)))
+dilated_square3 = dilation(image, footprint = rectangle((3,3)))
 
 # %%
 # View images in napari
@@ -58,6 +59,6 @@ napari_viewer.add_labels(dilated_square3)
 
 # %%
 # Learning opportunity:
-# Try with a bigger square (e.g. square(5))
+# Try with a bigger square (e.g. rectangle((5,5)))
 # or a different structuring element (e.g. disk(1))
 # Also refer to https://scikit-image.org/docs/stable/api/skimage.morphology.html

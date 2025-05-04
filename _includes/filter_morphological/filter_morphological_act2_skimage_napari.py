@@ -7,7 +7,8 @@
 # Import python packages.
 from OpenIJTIFF import open_ij_tiff
 from napari.viewer import Viewer
-from skimage.morphology import square, disk
+from skimage.morphology import footprint_rectangle as rectangle
+from skimage.morphology import disk
 from skimage.morphology import erosion, dilation
 from skimage.morphology import opening, closing
 
@@ -24,8 +25,8 @@ napari_viewer.add_image(image)
 
 # %%
 # Opening operation
-eroded = erosion(image, footprint = square(3))
-opened = dilation(eroded, footprint = square(3))
+eroded = erosion(image, footprint = rectangle((3,3)))
+opened = dilation(eroded, footprint = rectangle((3,3)))
 napari_viewer.add_labels(eroded)
 napari_viewer.add_labels(opened)
 
@@ -34,7 +35,7 @@ napari_viewer.add_labels(opened)
 
 # %%
 # Opening operations are so common that often they have their own command
-opened_1step = opening(image, square(3))
+opened_1step = opening(image, rectangle((3,3)))
 print((opened==opened_1step).all())
 
 
@@ -43,14 +44,14 @@ print((opened==opened_1step).all())
 
 # %%
 # Closing: fill holes, connect gaps.
-dilated = dilation(image, footprint = square(3))
-closed = erosion(dilated, square(3))
+dilated = dilation(image, footprint = rectangle((3,3)))
+closed = erosion(dilated, rectangle((3,3)))
 napari_viewer.add_labels(dilated)
 napari_viewer.add_labels(closed)
 
 # %%
 # Closing operations are so common that often they have their own command
-closed_1step = closing(image, square(3))
+closed_1step = closing(image, rectangle((3,3)))
 print((closed==closed_1step).all())
 
 # %% [markdown]
