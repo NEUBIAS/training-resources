@@ -27,12 +27,14 @@ napari_viewer.add_image(image, scale = scales)
 # Napari GUI: Delete the image.
 
 # %%
-# Create images as separate channels
+# Extract the 3D scale
 # Axes order is ZCYX [0,1,2,3]
+# Thus we skip the channel axis (1)
 scale_3D = [scales[0], scales[2], scales[3]]
-print("Scale 3D:\n", scale_3D)
+print("3D Scale:", scale_3D)
 
 # %%
+# Extract the two channels
 image_ch0 = image[:,0,:,:]
 image_ch1 = image[:,1,:,:]
 print(image.shape)
@@ -41,8 +43,8 @@ print(image_ch1.shape)
 
 # %%
 # View images as separate channels
-napari_viewer.add_image(image_ch0, name = 'Ch0_ns', colormap = 'magenta')
-napari_viewer.add_image(image_ch1, name = 'Ch1_ns', colormap = 'green', blending='additive')
+napari_viewer.add_image(image_ch0, name = 'ch0', colormap = 'magenta', scales = scale_3D, blending='additive')
+napari_viewer.add_image(image_ch1, name = 'ch1', colormap = 'green', scales = scale_3D, blending='additive')
 
 # %%
 # Napari GUI: Explore different blending modes and LUTs.
