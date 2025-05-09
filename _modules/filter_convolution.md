@@ -25,7 +25,7 @@ figure_legend: Convolutional filtering example, using a 3x3 vertical edge detect
 
 multiactivities:
   - ["filter_convolution/gaussian.md", [["ImageJ GUI", "filter_convolution/gaussian_imagejgui.md"], ["skimage napari", "filter_convolution/gaussian_skimage_napari.py"]]]
-  - ["filter_convolution/laplacian.md", [["ImageJ GUI", "filter_convolution/laplacian_imagejgui.md"], ["skimage napari", "filter_convolution/laplacian_skimage_napari.py"]]]
+  - ["filter_convolution/laplacian.md", [["ImageJ GUI", "filter_convolution/laplacian_imagejgui.md"], ["ImageJ Macro", "filter_convolution/laplacian_imagejmacro.md"], ["skimage napari", "filter_convolution/laplacian_skimage_napari.py"]]]
   - ["filter_convolution/log.md", [["ImageJ GUI", "filter_convolution/log_imagejgui.md"], ["skimage napari", "filter_convolution/log_skimage_napari.py"]]]
 
 assessment: >
@@ -48,5 +48,6 @@ learn_next:
 external_links:
   - "[Wikipedia: Image processing kernels](https://en.wikipedia.org/wiki/Kernel_(image_processing))"
   - "[Laplacian filter](https://homepages.inf.ed.ac.uk/rbf/HIPR2/log.htm)"
+  - "[What is a convolution? (Video)](https://www.youtube.com/watch?v=KuXjwB4LzSA)"
 ---
 
