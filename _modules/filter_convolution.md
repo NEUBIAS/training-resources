@@ -24,22 +24,22 @@ figure: /figures/filter_convolution.png
 figure_legend: Convolutional filtering example, using a 3x3 vertical edge detection filter.
 
 multiactivities:
-  - ["filter_convolution/gaussian.md", [["ImageJ GUI", "filter_convolution/gaussian_imagejgui.md"], ["skimage napari", "filter_convolution/gaussian_skimage_napari.py"]]]
-  - ["filter_convolution/laplacian.md", [["ImageJ GUI", "filter_convolution/laplacian_imagejgui.md"], ["ImageJ Macro", "filter_convolution/laplacian_imagejmacro.ijm"], ["skimage napari", "filter_convolution/laplacian_skimage_napari.py"]]]
-  - ["filter_convolution/log.md", [["ImageJ GUI", "filter_convolution/log_imagejgui.md"], ["ImageJ Macro", "filter_convolution/log_imagejmacro.ijm"], ["skimage napari", "filter_convolution/log_skimage_napari.py"]]]
+  - ["filter_convolution/gaussian.md", [["ImageJ Macro", "filter_convolution/gaussian_imagejmacro.ijm"], ["skimage napari", "filter_convolution/gaussian_skimage_napari.py"]]]
+  - ["filter_convolution/laplacian.md", [["ImageJ Macro", "filter_convolution/laplacian_imagejmacro.ijm"], ["skimage napari", "filter_convolution/laplacian_skimage_napari.py"]]]
+  - ["filter_convolution/log.md", [["ImageJ Macro", "filter_convolution/log_imagejmacro.ijm"], ["skimage napari", "filter_convolution/log_skimage_napari.py"]]]
 
 assessment: >
 
   ### Fill in the blanks
 
-    1. What are the entries of a convolutional kernel that computed a sum?
-    1. The entries of a convolutional kernel repesenting a gaussian blur are \_\_\_ in the centre of the kernel.
-    1. The entries of a convolutional kernel implementing an edge detection typically also contains \_\_\_ numbers such that the numbers sum up to \_\_\_.
+    1. What are the entries of a convolutional kernel that computes a local sum?
+    1. You want to enhance horizontal filamentous structures in an image, how would a convolutional kernel for this look like?
+    1. The entries of a convolutional kernel implementing an edge detection typically sum up to \_\_\_.
     
     > ## Solution
     >   1. The entries are all **1**. 
-    >   1. The entries are **larger** in the centre.
-    >   1. There are **negative** numbers and they sum up to **zero**, such that the result of the convolution in image regions without edges is zero.
+    >   1. A simple kernel to enhance horizontal lines could be: [[-1,-1,-1],[2,2,2],[-1,-1,-1]]
+    >   1. The entries sum up to **zero**, such that the result of the convolution in image regions without edges is zero.
     {: .solution}
 
 learn_next:

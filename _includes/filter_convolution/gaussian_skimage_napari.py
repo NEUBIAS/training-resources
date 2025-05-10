@@ -11,8 +11,8 @@ image[size // 2, size // 2] = 1
 print(image)
 
 # %%
-# Apply a Gaussian blur to the delta image
-# in order to see the Gaussian convolution kernel
+# Apply a Gaussian blur with sigma 1 to the delta peak image
+# in order to see the values of the Gaussian convolution kernel
 sigma = 1
 kernel = gaussian(image, sigma=sigma)
 print(np.round(kernel, 2))
@@ -32,7 +32,22 @@ viewer.add_image(image)
 
 # %%
 # Use the Gaussian kernel to convolve the image
+# - Observe that the smoothing did not really work for this image
+# - Observe that the output of the convolve function has differnt datatype than the input
 gaussian_image = convolve(image, kernel)
 viewer.add_image(gaussian_image)
-print(image.dtype, gaussian_image.dtype)
+print(image.dtype, gaussian_image.dtype)  
+
+# %%
+# Use a Gaussian kernel with a larger sigma 
+# to better smooth the image.
+# This time, for simplicity, 
+# we directly use the gaussian function.
+gaussian_sigma7_image = gaussian(image, sigma=7)
+viewer.add_image(gaussian_sigma7_image)
+
+# %%
+# Learning opportunities
+# - Inspect the values of the gaussian kernel with sigma 7,
+#   using again the trick to apply it to a delta peak image 
 
