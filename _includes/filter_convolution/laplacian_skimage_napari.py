@@ -22,5 +22,3 @@ viewer.add_image(image)
 from scipy.ndimage import convolve
 laplacian_image = convolve(image, laplacian_kernel)
 viewer.add_image(laplacian_image)
-
-
