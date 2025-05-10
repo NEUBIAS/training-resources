@@ -24,8 +24,8 @@ figure: /figures/filter_convolution.png
 figure_legend: Convolutional filtering example, using a 3x3 vertical edge detection filter.
 
 multiactivities:
-  - ["filter_convolution/gaussian.md", [["ImageJ Macro", "filter_convolution/gaussian_imagejmacro.ijm"], ["skimage napari", "filter_convolution/gaussian_skimage_napari.py"]]]
   - ["filter_convolution/laplacian.md", [["ImageJ Macro", "filter_convolution/laplacian_imagejmacro.ijm"], ["skimage napari", "filter_convolution/laplacian_skimage_napari.py"]]]
+  - ["filter_convolution/gaussian.md", [["ImageJ Macro", "filter_convolution/gaussian_imagejmacro.ijm"], ["skimage napari", "filter_convolution/gaussian_skimage_napari.py"]]]
   - ["filter_convolution/log.md", [["ImageJ Macro", "filter_convolution/log_imagejmacro.ijm"], ["skimage napari", "filter_convolution/log_skimage_napari.py"]]]
 
 assessment: >
