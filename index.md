@@ -1,47 +1,157 @@
 ---
-title:     Welcome
+title:     Bioimage Analysis Training Resources
 layout:    page
 permalink: /index.html
 ---
 
-### Overview
+<br>
 
-This is a resource for image analysis training material, with a focus on research in the life sciences. Currently, this resource is mainly meant to serve image analysis trainers, helping them to design courses. However, we might add more text (or videos) to the material such that it could also be used by students for self-directed study. Please note that this material is under constant development and help is very much appreciated. 
+This resource consists of a collection of **[bioimage analysis  training modules](all-modules)** that have been used for several years to teach **[a number of courses](https://github.com/NEUBIAS/training-resources/tree/master/courses)**.
 
-Please see our [contributors guide](CONTRIBUTING.md).
+The material is divided into small modules, where the teaching of each module should take about 30 minutes. Each module covers a specific aspect of image analysis. At the beginning of each module there is a list of modules containing prerequisite topics. At the end of each module there are suggestions of what could be taught next. This provides trainers guidance on how to combine modules into a longer workshop.
 
-Please get in touch by [writing an issue](https://github.com/NEUBIAS/training-resources/issues)
-
-### Training modules 
-
-The material is divided into small modules, where the teaching of each module should take about 30 minutes. Each module covers a specific aspect of image analysis. At the beginning of each module there is a list of modules containing prerequisite topics. At the end of each module there are suggestions of what could be taught next. This provides trainers guidance on how to combine modules into a longer workshop. See also below for courses that have been taught already.
+Please see our **[teaching tips](TEACHING_TIPS.md)**.
 
 The modules are meant to be taught hands-on, i.e. following the teacher's guidance, students execute the relevant steps in an image analysis software on their computers. The modules provide those steps for several major image analysis platforms, such as ImageJ GUI, ImageJ Macro, Python and Galaxy.
 
-#### [Module overview](all-modules/index.html)
+We are a **[community of developers and trainers](https://github.com/NEUBIAS/training-resources/graphs/contributors)** and we welcome any kind of collaboration! Please see our **[contributors guide](CONTRIBUTING.md)** and get in touch by **[writing an issue](https://github.com/NEUBIAS/training-resources/issues)**.
 
+To get a sense for how this material may be used we compiled a selection of consolidated courses that we have been teaching already multiple times:
 
-### Example courses 
+<div class="course-cards">
+  <div class="course-card">
+    <div class="course-icon"><i class="fas fa-eye"></i></div>
+    <h4><a href="basic-image-inspection-course">Basic Bioimage Inspection</a></h4>
+    <p>Learn to inspect your images and visualize your data.</p>
+    <div class="course-meta">
+      <span class="course-modules">6 modules</span>
+      <span class="course-duration">4.5 hours</span>
+      <span class="course-credits">0.15 CP</span>
+    </div>
+  </div>
+  
+  <div class="course-card">
+    <div class="course-icon"><i class="fas fa-file-image"></i></div>
+    <h4><a href="image-data-formats-course">Image Data Formats</a></h4>
+    <p>Learn how to open and handle different data formats.</p>
+    <div class="course-meta">
+      <span class="course-modules">5 modules</span>
+      <span class="course-duration">3.75 hours</span>
+      <span class="course-credits">0.125 CP</span>
+    </div>
+  </div>
+  
+  <div class="course-card">
+    <div class="course-icon"><i class="fas fa-microscope"></i></div>
+    <h4><a href="basic-image-analysis-course">Basic Bioimage Analysis</a></h4>
+    <p>Learn essential concepts of image analysis, such as segmentation, intensity measurements, filtering.</p>
+    <div class="course-meta">
+      <span class="course-modules">12 modules</span>
+      <span class="course-duration">9 hours</span>
+      <span class="course-credits">0.3 CP</span>
+    </div>
+  </div>
 
-The above training modules have been used in various contexts and compiled into various courses ([see here for past courses](https://github.com/NEUBIAS/training-resources/tree/master/courses)). Below is a selection of consolidated courses that have been taught multiple times already.
+  <div class="course-card">
+    <div class="course-icon"><i class="fas fa-tasks"></i></div>
+    <h4><a href="basic-batch-analysis-course">Basic Batch Analysis</a></h4>
+    <p>Learn how to automatically process image analysis tasks on multiple images.</p>
+    <div class="course-meta">
+      <span class="course-modules">5 modules</span>
+      <span class="course-duration">3.75 hours</span>
+      <span class="course-credits">0.125 CP</span>
+    </div>
+  </div>
+  
+  <div class="course-card">
+    <div class="course-icon"><i class="fas fa-cloud"></i></div>
+    <h4><a href="cloud-based-analysis-course">Cloud Based Bioimage Analysis</a></h4>
+    <p>Learn about executing bioimage analysis on remote compute resources.</p>
+    <div class="course-meta">
+      <span class="course-modules">Various modules</span>
+      <span class="course-duration">Flexible</span>
+    </div>
+  </div>
+  
+  <div class="course-card">
+    <div class="course-icon"><i class="fas fa-bolt"></i></div>
+    <h4><a href="batch-analysis-essentials-crash-course">Bioimage Batch Analysis Essentials</a></h4>
+    <p>Crash course to learn the essentials of how to automatically perform a simple image analysis task on multiple images.</p>
+    <div class="course-meta">
+      <span class="course-modules">Crash course</span>
+    </div>
+  </div>
+</div>
 
-#### [Basic Bioimage Inspection](courses/basic-image-inspection-course/index.html)
-Learn to inspect your images and visualize your data. The course contains 6 modules which last ~45 minutes each, i.e. 4.5 hours or 0.15 credit points (CP)
+<style>
+.course-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 30px 0;
+}
 
-#### [Image Data Formats](courses/image-data-formats-course/index.html)
-Learn how to open and handle different data formats. The course contains 5 modules which last ~45 minutes each, i.e. 3.75 hours or 0.125 credit points CP.
+.course-card {
+  flex: 1 1 300px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;
+}
 
-#### [Basic Bioimage Analysis](courses/basic-image-analysis-course/index.html)
-Learn essential concepts of image analysis, such as segmenation, intensity measurements, filtering. The course contains 12 modules which last ~45 minutes each, i.e. 9 hours or 0.3 CP.
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
 
-#### [Basic Batch Analysis](courses/basic-batch-analysis-course/index.html)
-Learn how to automatically process perfom image analysis tasks on multiple images. The course contains 5 modules which last ~45 minutes each, i.e. 3.75 hours or 0.125 CP.
+.course-icon {
+  font-size: 2em;
+  color: #0366d6;
+  margin-bottom: 15px;
+}
 
-#### [Cloud Based Bioimage Analysis](courses/cloud-based-analysis-course/index.html)
-Learn about executing bioimage analysis on remote compute resources. 
+.course-card h4 {
+  margin-top: 0;
+  font-size: 1.3em;
+}
 
-#### [Bioimage Batch Analysis Essentials](courses/batch-analysis-essentials-crash-course/index.html)
-Crash course to learn the essentials of how to automatically perform a simple image analysis task on multiple images.
+.course-card p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.course-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  font-size: 0.9em;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
+.course-meta span {
+  display: inline-flex;
+  align-items: center;
+  color: #666;
+}
+
+.course-modules::before {
+  content: "📚";
+  margin-right: 5px;
+}
+
+.course-duration::before {
+  content: "⏱️";
+  margin-right: 5px;
+}
+
+.course-credits::before {
+  content: "🏆";
+  margin-right: 5px;
+}
+</style>
 
 <br><br><br>
 

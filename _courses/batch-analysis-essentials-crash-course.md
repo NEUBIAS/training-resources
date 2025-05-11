@@ -1,5 +1,5 @@
 ---
-title: Bioimage Batch Analysis Essentials Crash Course
+title: Bioimage Batch Analysis Crash Course
 module_order: ["workflow_segment_2d_nuclei_measure_shape", "batch_processing" ]
 ---
 
