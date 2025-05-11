@@ -47,8 +47,9 @@ viewer.add_image(median_filtered, name="Median (r=2)")
 # %% 
 # Apply Variance filter
 # - Highlights areas with high intensity variation
-variance_filtered = rank.variance(image, disk(2))
-viewer.add_image(variance_filtered, name="Variance (r=2)")
+var_image = generic_filter(image, function=np.var, size=11)
+
+viewer.add_image(variance_filtered, name="Entropy (r=2)")
 
 # %%
 # Manual activity:

@@ -79,13 +79,15 @@ module_order:
 repository: <USERNAME>/<PROJECT>
 cc_by_human: "https://creativecommons.org/licenses/by/4.0/"
 
-
-# Specify that things in the episodes collection should be output.
+# Specify which folders to compile
 collections:
   modules:
     output: true
     permalink: /:path/index.html
   extras:
+    output: true
+    permalink: /:path/index.html
+  courses:
     output: true
     permalink: /:path/index.html
 

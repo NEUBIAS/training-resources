@@ -1,6 +1,5 @@
 ---
 title: Cloud Based Bioimage Analysis
-permalink: /cloud-based-analysis-course/index.html
 module_order: ["cloud_based_bioimage_analysis_course",  "cloud_based_interactive_analysis", "cloud_based_batch_analysis"]
 ---
 
