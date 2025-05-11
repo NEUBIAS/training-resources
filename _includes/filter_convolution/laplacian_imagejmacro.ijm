@@ -1,5 +1,5 @@
 // IJ-Macro that demonstrates the effects of a sipmle 
-// Laplacian convolutional filter on prepared example data
+// Laplacian convolutional filter on an example image
 
 // Open an input image
 open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__laplacian_test_input.tif");

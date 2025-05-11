@@ -47,6 +47,7 @@ module_order:
 - measure_intensities
 - global_background_correction
 - filter_neighbourhood
+- filter_statistical
 - filter_convolution
 - filter_rank
 - median_filter
