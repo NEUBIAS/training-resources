@@ -28,6 +28,12 @@ multiactivities:
     ["Galaxy", "filter_statistical/median_filter_galaxy.md"]
     ]
     ]
+  - ["filter_statistical/statistical_filters.md", 
+    [
+    ["ImageJ Macro", "filter_statistical/statistical_filters_imagejmacro.ijm"], 
+    ["skimage napari", "filter_statistical/statistical_filters_skimage_napari.py"]
+    ]
+    ]
   
 assessment: >
 

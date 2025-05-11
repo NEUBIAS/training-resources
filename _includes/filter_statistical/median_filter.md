@@ -1,4 +1,4 @@
-<h4 id="2d"><a href="#2d">Median filter exploration</a></h4>
+<h4 id="median"><a href="#median">Median filter exploration</a></h4>
 
 Explore the effect of the median filter on various example images. Explore how changing the size (structural element) of the filter affects the result.
 
