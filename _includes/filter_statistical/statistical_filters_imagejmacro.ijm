@@ -1,8 +1,7 @@
 run("Close All");
 
 // File > Open...
-//open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__statistical_filter_test_input.tif");
-open("/Users/tischer/Documents/training-resources/image_data/xy_8bit__statistical_filter_test_input.tif");
+open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__statistical_filter_test_input.tif");
 zoom();
 
 // Manual activity:
