@@ -18,7 +18,7 @@ concept_map: >
     NS -->  FP("filtered pixel value")
 
 figure: /figures/filter_statistical.png
-figure_legend: TODO
+figure_legend: "Shows the effect of a radius 2 disk shaped kernel statistical filter on an image. Top left: Input; Top middle: Minimum; Top right: Maximum; Bottom left: Mean; Bottom middle: Median; Bottom right: Variance." 
 
 multiactivities:
   - ["filter_statistical/median_filter.md", 

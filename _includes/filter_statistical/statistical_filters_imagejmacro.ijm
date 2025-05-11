@@ -8,7 +8,7 @@ zoom();
 // Choose one interesting 5x5 region
 // in the image and manually compute
 // the below statistical filters.
-// Note down the number and later check
+// Note down the resulting numbers and later check
 // whether they agree with the below
 // automated analysis.
 
