@@ -33,7 +33,7 @@ To get a sense for how this material may be used we compiled a selection of cons
   <div class="course-card">
     <div class="course-icon"><i class="fas fa-file-image"></i></div>
     <h4><a href="image-data-formats-course">Image Data Formats</a></h4>
-    <p>Learn how to open and handle different data formats.</p>
+    <p>Learn how to open and handle different image data formats.</p>
     <div class="course-meta">
       <span class="course-modules">5 modules</span>
       <span class="course-duration">3.75 hours</span>
@@ -44,7 +44,7 @@ To get a sense for how this material may be used we compiled a selection of cons
   <div class="course-card">
     <div class="course-icon"><i class="fas fa-microscope"></i></div>
     <h4><a href="basic-image-analysis-course">Basic Bioimage Analysis</a></h4>
-    <p>Learn essential concepts of image analysis, such as segmentation, intensity measurements, filtering.</p>
+    <p>Learn essential concepts of image analysis, such as segmentation, intensity measurements, and filtering.</p>
     <div class="course-meta">
       <span class="course-modules">12 modules</span>
       <span class="course-duration">9 hours</span>
@@ -68,17 +68,20 @@ To get a sense for how this material may be used we compiled a selection of cons
     <h4><a href="cloud-based-analysis-course">Cloud Based Bioimage Analysis</a></h4>
     <p>Learn about executing bioimage analysis on remote compute resources.</p>
     <div class="course-meta">
-      <span class="course-modules">Various modules</span>
-      <span class="course-duration">Flexible</span>
+      <span class="course-modules">2 modules</span>
+      <span class="course-duration">1.5 hours</span>
+      <span class="course-credits">??? CP</span>
     </div>
   </div>
   
   <div class="course-card">
     <div class="course-icon"><i class="fas fa-bolt"></i></div>
     <h4><a href="batch-analysis-essentials-crash-course">Bioimage Batch Analysis Essentials</a></h4>
-    <p>Crash course to learn the essentials of how to automatically perform a simple image analysis task on multiple images.</p>
+    <p>Crash course to learn the essentials of how to devise a basic image analysis workflow and how automatically apply it on multiple images.</p>
     <div class="course-meta">
-      <span class="course-modules">Crash course</span>
+      <span class="course-modules">2 modules</span>
+      <span class="course-duration">3 hours</span>
+      <span class="course-credits">??? CP</span>
     </div>
   </div>
 </div>
