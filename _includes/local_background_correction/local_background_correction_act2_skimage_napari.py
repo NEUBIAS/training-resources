@@ -39,3 +39,7 @@ plt.hist(foreground.flatten(), bins=np.arange(foreground.min(), foreground.max()
 plt.yscale('log')
 binary_polyp = foreground < -25
 viewer.add_image(binary_polyp)
+
+# %% 
+# Close the viewer (CI test requires this)
+viewer.close()

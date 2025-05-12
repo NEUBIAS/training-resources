@@ -29,4 +29,6 @@ print(len(np.unique(labels_3D_conn2_image))-1) # the number of objects (minus ba
 print(np.max(labels_3D_conn2_image)) # the number of objects (minus background) (if the labels are consecutive!)
 np.sum(labels_3D_conn2_image==2) # the number of pixels (~volume) in object number 2
 
-# %%
+# %% 
+# Close the viewer (CI test requires this)
+viewer.close()

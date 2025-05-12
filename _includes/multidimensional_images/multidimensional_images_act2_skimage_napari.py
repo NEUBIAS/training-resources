@@ -19,8 +19,8 @@ print("Units:",units)
 
 # %%
 # View the image
-napari_viewer = Viewer()
-napari_viewer.add_image(image, scale = scales)
+viewer = Viewer()
+viewer.add_image(image, scale = scales)
 
 # %%
 # Napari GUI: Explore different sliders and values in the bottom left part.
@@ -41,8 +41,12 @@ print(image_ch1.shape)
 
 # %%
 # View images as separate channels
-napari_viewer.add_image(image_ch0, name = 'Ch0_ns', colormap = 'magenta')
-napari_viewer.add_image(image_ch1, name = 'Ch1_ns', colormap = 'green', blending='additive')
+viewer.add_image(image_ch0, name = 'Ch0_ns', colormap = 'magenta')
+viewer.add_image(image_ch1, name = 'Ch1_ns', colormap = 'green', blending='additive')
 
 # %%
 # Napari GUI: Explore different blending modes and LUTs.
+
+# %% 
+# Close the viewer (CI test requires this)
+viewer.close()

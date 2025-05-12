@@ -17,3 +17,7 @@ print(distance_map.dtype)
 
 viewer.add_image(image)
 viewer.add_image(distance_map)
+
+# %% 
+# Close the viewer (CI test requires this)
+viewer.close()

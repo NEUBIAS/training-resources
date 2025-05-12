@@ -12,12 +12,12 @@ import numpy as np
 
 # %%
 # Create a napari_viewer 
-napari_viewer = Viewer()
+viewer = Viewer()
 
 # %%
 # Open and view image
 image, *_ = open_ij_tiff("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__three_spots_different_size.tif")
-napari_viewer.add_image(image)
+viewer.add_image(image)
 
 # %%
 # Check datatype and pixel values 
@@ -42,8 +42,8 @@ dilated = dilation(image, footprint = disk(1))
 # - The single pixel disappeared with erosion
 # - The single pixel became a cross with dilation. This is in fact the form of the structuring element
 # - For the dilation no pixels have been added (diagonally) at corners, because the disk(1) has only horizontal and vertical "1" connectivity
-napari_viewer.add_labels(eroded)
-napari_viewer.add_labels(dilated)
+viewer.add_labels(eroded)
+viewer.add_labels(dilated)
 
 # %%
 # Now try with a structuring element with connectivity 2 (3x3 square).
@@ -54,11 +54,15 @@ dilated_square3 = dilation(image, footprint = rectangle((3,3)))
 # %%
 # View images in napari
 #
-napari_viewer.add_labels(eroded_square3)
-napari_viewer.add_labels(dilated_square3)
+viewer.add_labels(eroded_square3)
+viewer.add_labels(dilated_square3)
 
 # %%
 # Learning opportunity:
 # Try with a bigger square (e.g. rectangle((5,5)))
 # or a different structuring element (e.g. disk(1))
 # Also refer to https://scikit-image.org/docs/stable/api/skimage.morphology.html
+
+# %% 
+# Close the viewer (CI test requires this)
+viewer.close()

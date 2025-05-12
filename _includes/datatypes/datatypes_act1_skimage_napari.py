@@ -48,6 +48,6 @@ print(np.iinfo(image.dtype))
 # Check the image's minimum and maximum intensity
 print(np.min(image),np.max(image))
 
-# %%
-
-# %%
+# %% 
+# Close the viewer (CI test requires this)
+viewer.close()

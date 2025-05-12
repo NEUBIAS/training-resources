@@ -54,3 +54,7 @@ viewer.add_image(mean_image_3)
 # Now the nuclei can be segmented by a simple threshold :)
 binary_image_3 = mean_image_3 > 32
 viewer.add_image(binary_image_3)
+
+# %% 
+# Close the viewer (CI test requires this)
+viewer.close()

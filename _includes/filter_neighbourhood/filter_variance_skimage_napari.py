@@ -71,3 +71,7 @@ plt.yscale('log')
 # - It can be interesting to also try some auto-threshold method here
 binary_var_image = var_image > 100
 viewer.add_image(binary_var_image)
+
+# %% 
+# Close the viewer (CI test requires this)
+viewer.close()

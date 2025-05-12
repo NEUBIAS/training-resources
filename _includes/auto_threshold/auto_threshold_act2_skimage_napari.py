@@ -42,4 +42,6 @@ from skimage.filters import threshold_li
 thresholded_li = image > threshold_li(image)
 viewer.add_labels(thresholded_li, name='li', colormap = {None: None, 1: 'orange'}, scale=scales)
 
-# %%
+# %% 
+# Close the viewer (CI test requires this)
+viewer.close()

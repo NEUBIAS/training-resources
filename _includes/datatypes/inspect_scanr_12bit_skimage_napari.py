@@ -36,3 +36,7 @@ image_rescaled = image - 2**15  # remove offset due to misinterpretation of the 
 print(image_rescaled.min(), image_rescaled.max()) 
 print(0, 2**12-1) # print uint12 data range, which is the range of the camera the image was acquired with
 print(np.sum(image_rescaled == 2**12-1)) # check number of saturated pixels
+
+# %% 
+# Close the viewer (CI test requires this)
+viewer.close()

@@ -11,20 +11,20 @@ import pandas as pd
 
 # %%
 # Instantiate the napari viewer
-napari_viewer = napari.Viewer()
+viewer = napari.Viewer()
 
 # %%
 # Open and inspect the image
 # Learning opportunity: change file_path and the name of the image to analyse a different image: https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__mitocheck_incenp_t70.tif
 file_path = "https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__mitocheck_incenp_t1.tif"
 image, axes, scales, units = open_ij_tiff(file_path)
-napari_viewer.add_image(image, name='incenp_t1')
+viewer.add_image(image, name='incenp_t1')
 
 # %%
 # Binarize the image
 # Learning opportunity: explore different threshold values 
 image_binary = image > 25
-napari_viewer.add_image(image_binary, name='binary', opacity = 0.3)
+viewer.add_image(image_binary, name='binary', opacity = 0.3)
 
 # %%
 # Learning opportunity: explore [automatic thresholding](https://scikit-image.org/docs/stable/api/skimage.filters.html), e.g. `skimage.filters.threshold_li`
@@ -32,7 +32,7 @@ napari_viewer.add_image(image_binary, name='binary', opacity = 0.3)
 # %%
 # Perform connected components analysis (i.e create labels)
 image_labels = label(image_binary)
-napari_viewer.add_labels(image_labels, name='labels')
+viewer.add_labels(image_labels, name='labels')
 
 # %%
 # Measure nuclei shapes
@@ -66,3 +66,7 @@ print(properties_dataframe)
 # Save the data: Ideally one would like to save the results of each processed image.  For saving the label image you can use [`skimage.io.imsave`](https://scikit-image.org/docs/stable/api/skimage.io.html#skimage.io.imsave) for saving the table you can use e.g. [`pandas.DataFrame.to_csv`](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_csv.html), i.e. `properties_dataframe.to_csv`. You can add these functions within the for loop. 
 #
 # To save the data one needs unique names. For instance one could extract the name of the image using [`os.path`](https://docs.python.org/3/library/os.path.html) functionality and then add some additional identifiers. 
+
+# %% 
+# Close the viewer (CI test requires this)
+viewer.close()

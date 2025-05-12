@@ -59,3 +59,6 @@ viewer.add_image(image)
 image_without_speckles = filters.median(image, disk(radius=15))
 viewer.add_image(image_without_speckles)
 
+# %% 
+# Close the viewer (CI test requires this)
+viewer.close()

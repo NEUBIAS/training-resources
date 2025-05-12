@@ -1,5 +1,5 @@
 # !First start Napari and drag and drop the image (https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_16bit_calibrated__dna_metaphase.tif) in the Napari viewer.
-
+# TODO: Fix it!
 # Access the 3D array in the image layer
 image = viewer.layers[0].data # assuming the image is in the first layer
 shape = image.shape

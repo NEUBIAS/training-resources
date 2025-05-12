@@ -68,3 +68,7 @@ viewer.add_image(image2)
 # %%
 # Learning opportunity: 
 # Modify the function such that it also shows the image in napari
+
+# %% 
+# Close the viewer (CI test requires this)
+viewer.close()

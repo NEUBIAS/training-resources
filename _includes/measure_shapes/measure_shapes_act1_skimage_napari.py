@@ -41,3 +41,7 @@ print(df['label'][0]) # i.e. df['label'][df['area'].idxmax()]
 #%%
 # Save the table as a CSV
 df.to_csv('shape_measurements.csv', sep='\t', index=False)
+
+# %% 
+# Close the viewer (CI test requires this)
+viewer.close()
