@@ -1,10 +1,12 @@
-- Open a [sample multichannel image](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__hela-cells.tif)
-- Check the image data type using `Image > Type`. It is 16-bit. Convert it into RGB by selecting `Image > Type > RGB Color`
-- Use `File > Save As > Tiff` to save as a 48-bit TIFF
-- Now, reopen [sample multichannel image](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__hela-cells.tif)
-- Split the channels using `Image > Color > Split Channels`
-- Select any two channels, adjust the brightness and contrast and change their look up table according to your own choice
-- Now merge the channels using `Image > Color > Merge Channels...` and select the channels in `C1` and `C2` fields and leave other channels set to `*None*`
-  - _Note:_ Keep these settings: [x] - Create composite, [] Keep source images, [] Ignore source LUTs
-- Convert this image to RGB using `Image > Type > RGB Color`
-- Use `File > Save As > Tiff` to save as a TIFF
+- Open a [sample multichannel image](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__cell_dna_mts_actin.tif)
+- Use the channel tools `Image > Color > Channel Tools` and set use following settings 
+  - _Note:_ Composite: [x] - Channel 1, [x] Channel 2, [x] Channel 3
+- Check the image data type using `Image > Type`. It is 16-bit. Convert it into RGB by selecting `Image > Type > RGB Color`. This will create a second image with the title `xyc_16bit__cell_dna_mts_actin.tif (RGB)`. 
+- Use `File > Save As > Tiff` to save as a 8-bit RGB TIFF. This image can be loaded for example into a presentation.
+- Next we create an image montage of all single channels (gray) and the composite RGB image.
+- Go to the original image `xyc_16bit__cell_dna_mts_actin.tif` or reopen it if needed.
+- Use the `Image > Color > Channel Tools` and change from `Composite` to `Grayscale`
+- Make a montage with  `Image > Stack > Make Montage ...` and following parameters: `Columns = 3, Rows = 1, scale factor = 1`. Note that the montage is transformed to a RGB.
+- Combine the two RGB images, single channel montage and merged color image respectively, to a final image, `Image > Stacks > Tools > Combine`.
+- Add a scale bar ` Analyze › Tools › Scale Bar...`
+- Use `File > Save As > Tiff` to save as a TIFF.

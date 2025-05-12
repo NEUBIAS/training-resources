@@ -1,6 +1,7 @@
+- Open a [sample multichannel image](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__cell_dna_mts_actin.tif)
 - Use the slider bar under the image to select the channel to be processed/analyzed
-  - The number of bar positions are equal to the number of channels
+- The number of bar positions are equal to the number of channels
   - _Note:_ The color of the subtitle changes when you switch to a different channel
 - Open the `Channels` tool using `Image > Color > Channels Tool` or by pressing `shift-z` to select/deselect channels to display
-  - Use the `B & C` tool using `Image > Adjust > Brightness/Contrast` or press `shift-c` to adjust the brightness and contrast of the current channel. _Note:_ The slider bar decides your active channel for changing brightness and contrast settings
-  - Try changing the channel color by selecting a LUT from the `Image > Lookup Tables` menu
+- Use the `B & C` tool using `Image > Adjust > Brightness/Contrast` or press `shift-c` to adjust the brightness and contrast of the current channel. _Note:_ The slider bar decides your active channel for changing brightness and contrast settings
+- Try changing the channel color by selecting a LUT from the `Image > Lookup Tables` menu. Try different modes of blending e.g. `Composite invert`
