@@ -38,3 +38,7 @@ viewer.add_image(log_sigma10_image)
 # %%
 # Learning opportunities:
 # - Explore how different values for the gaussian_sigma change the result
+
+# %% 
+# Close the viewer (CI test requires this)
+viewer.close()

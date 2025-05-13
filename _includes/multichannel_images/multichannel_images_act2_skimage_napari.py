@@ -1,4 +1,7 @@
 # %%
+# Save a multichannel image
+
+# %%
 # Initial imports
 import numpy as np
 from skimage import filters
@@ -99,4 +102,6 @@ plt.savefig(export_path + 'montage_plt.png', format = 'png', bbox_inches='tight'
 plt.show()
 
 
-# %%
+# %% 
+# Close the viewer (CI test requires this)
+viewer.close()

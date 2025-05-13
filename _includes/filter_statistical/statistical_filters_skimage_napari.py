@@ -47,9 +47,10 @@ viewer.add_image(median_filtered, name="Median (r=2)")
 # %% 
 # Apply Variance filter
 # - Highlights areas with high intensity variation
+from scipy.ndimage import generic_filter
 var_image = generic_filter(image, function=np.var, size=11)
 
-viewer.add_image(variance_filtered, name="Entropy (r=2)")
+viewer.add_image(var_image, name="Entropy (r=2)")
 
 # %%
 # Manual activity:
@@ -60,3 +61,7 @@ viewer.add_image(variance_filtered, name="Entropy (r=2)")
 # Learning opportunity:
 # - Compare the effect of different radii on the filter results
 # - Observe how different filters affect noise and edges in the image
+
+# %% 
+# Close the viewer (CI test requires this)
+viewer.close()

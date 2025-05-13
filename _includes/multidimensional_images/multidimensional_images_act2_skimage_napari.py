@@ -43,8 +43,8 @@ print(image_ch1.shape)
 
 # %%
 # View images as separate channels
-viewer.add_image(image_ch0, name = 'ch0', colormap = 'magenta', scales = scale_3D, blending='additive')
-viewer.add_image(image_ch1, name = 'ch1', colormap = 'green', scales = scale_3D, blending='additive')
+viewer.add_image(image_ch0, name = 'ch0', colormap = 'magenta', scale = scale_3D, blending='additive')
+viewer.add_image(image_ch1, name = 'ch1', colormap = 'green', scale = scale_3D, blending='additive')
 
 # %%
 # Napari GUI: Explore different blending modes and LUTs.

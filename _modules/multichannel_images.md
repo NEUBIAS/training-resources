@@ -29,9 +29,9 @@ figure: /figures/multichannel_images.png
 figure_legend: Multichannel image. Left - Scheme of array organization for a multichannel image. Center - Example of three 2D (XY) images shown with grey look up table.  Right - All 3 channels overlaid to display a composite image using Cyan, Magenta, and Yellow look up tables, respectively. Note that the array shape of (X,Y,C) is just an example. The position of the channel dimension may differ depending on the data and the reader. 
 
 multiactivities:
-  - ["multichannel_images/activity1_multichannel_images.md", [["ImageJ GUI", "multichannel_images/activity1_imagejgui.md"],["skimage napari", "multichannel_images/activity1_skimage_napari.py", "python"], ["Galaxy Napari", "multichannel_images/activity1_galaxy.md", "markdown"]]]
-  - ["multichannel_images/activity2_save_multichannel_images.md", [["ImageJ GUI", "multichannel_images/activity2_imagejgui.md"], ["ImageJ Macro", "multichannel_images/activity2_imagejmacro.ijm", "java"], 
-  ["skimage napari", "multichannel_images/activity2_skimage_napari.py", "py"]]]
+  - ["multichannel_images/multichannel_images_act1.md", [["ImageJ GUI", "multichannel_images/multichannel_images_act1_imagejgui.md"],["skimage napari", "multichannel_images/multichannel_images_act1_skimage_napari.py", "python"], ["Galaxy Napari", "multichannel_images/multichannel_images_act1_galaxy.md", "markdown"]]]
+  - ["multichannel_images/multichannel_images_act2.md", [["ImageJ GUI", "multichannel_images/multichannel_images_act2_imagejgui.md"], ["ImageJ Macro", "multichannel_images/multichannel_images_act2_imagejmacro.ijm", "java"], 
+  ["skimage napari", "multichannel_images/multichannel_images_act2_skimage_napari.py", "python"]]]
 
 
 assessment: >
