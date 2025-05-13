@@ -18,8 +18,7 @@ viewer = napari.Viewer()
 
 # %%
 # Read and view the image
-#image, *_ = open_ij_tiff('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__statistical_filter_test_input.tif')
-image, *_ = open_ij_tiff('/Users/tischer/Documents/training-resources/image_data/xy_8bit__statistical_filter_test_input.tif')
+image, *_ = open_ij_tiff('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__statistical_filter_test_input.tif')
 viewer.add_image(image, name="Original")
 
 # %%
