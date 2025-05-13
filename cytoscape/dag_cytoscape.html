@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Cytoscape.js DAG Image + Link</title>
+  <script src="https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js"></script>
+  <script src="https://unpkg.com/dagre@0.8.5/dist/dagre.min.js"></script>
+  <script src="https://unpkg.com/cytoscape-dagre@2.4.0/cytoscape-dagre.js"></script>
+  <style>
+    #cy { width: 800px; height: 600px; border: 1px solid #ccc; }
+  </style>
+</head>
+<body>
+<div id="cy"></div>
+<script>
+  const cy = cytoscape({
+    container: document.getElementById('cy'),
+    elements: [
+      { data: { id: 'a', label: 'Node A', img: 'https://neubias.github.io/training-resources/figures/pixels.jpg', url: 'https://neubias.github.io/training-resources/pixels/index.html' } },
+      { data: { id: 'b', label: 'Node B', img: 'https://via.placeholder.com/60/af5', url: 'https://example.com/b' } },
+      { data: { id: 'c', label: 'Node C', img: 'https://via.placeholder.com/60/f5a', url: 'https://example.com/c' } },
+      { data: { id: 'ab', source: 'a', target: 'b' } },
+      { data: { id: 'ac', source: 'a', target: 'c' } }
+    ],
+    style: [
+      {
+        selector: 'node',
+        style: {
+          'background-image': 'data(img)',
+          'background-fit': 'cover',
+          'shape': 'ellipse',
+          'width': 62,
+          'height': 62,
+          'label': 'data(label)',
+          'text-valign': 'bottom',
+          'text-margin-y': 12,
+          'font-size': 18,
+          'text-background-color': '#fff',
+          'text-background-opacity': 0.8,
+          'text-background-padding': '3',
+          'text-halign': 'center'
+        }
+      },
+      {
+        selector: 'edge',
+        style: {
+          'width': 3,
+          'line-color': '#888',
+          'target-arrow-shape': 'triangle',
+          'target-arrow-color': '#888',
+          'curve-style': 'bezier'
+        }
+      }
+    ],
+    layout: {
+      name: 'dagre',
+      rankDir: 'TB'
+    }
+  });
+
+  // Clicking a node navigates to the URL specified in node data (if exists)
+  cy.on('tap', 'node', function(evt){
+    const url = evt.target.data('url');
+    if (url) {
+      window.open(url, '_blank');
+    }
+  });
+</script>
+</body>
+</html>
