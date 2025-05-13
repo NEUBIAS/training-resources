@@ -73,16 +73,15 @@ Package managers are software that can install libraries (packages) on your comp
 
 ###### Example use with explanations
 
-`conda create -n skimage-napari-tutorial --override-channels -c conda-forge -c euro-bioimaging -c nodefaults python=3.10 napari=0.4.17 notebook matplotlib jupytext "scikit-image>=0.20" openijtiff "numpy<2"`
+`conda create -n skimage-napari-tutorial --override-channels -c conda-forge -c euro-bioimaging -c nodefaults python=3.12 pyqt napari=0.6.0 notebook matplotlib jupytext "scikit-image>=0.20" openijtiff`
 
 - `conda create -n skimage-napari-tutorial`: Asks `conda` to `create` a new "environment" on your computer with the name (`-n`) `skimage-napari-tutorial`
   - This simply creates a folder on your computer called `skimage-napari-tutorial` into which conda will download stuff
 - `--override-channels -c conda-forge -c euro-bioimaging -c nodefaults`: Tells conda from where to download the software, a "channel" `-c` is one place that hosts conda packages
   - ` -c nodefaults`: The reason to adding this was that the licensing of the default distribution channel for conda packages changed such that even academic institutions are not allowed anymore to use them
-- `python=3.10 napari=0.4.17`: We require specific versions of those packages, the versions of other packages that don't have the `=` will be chosen automatically by conda such that, hopefully, everything is compatible 
-- "scikit-image>=0.20" & "numpy<2": Limits the range of versions to be above or below a certain version
+- `python=3.12 napari=0.6.0`: We require specific versions of those packages, the versions of other packages that don't have the `=` will be chosen automatically by conda such that, hopefully, everything is compatible 
+- "scikit-image>=0.20": Limits the range of versions to be above or below a certain version
   - `scikit-image>=0.20` this was done here to make sure that the installation contains a nice new feature of `scikit-image` that was only available from version `0.20` on and, back then, the version that conda would download by default was lower than this
-  - `numpy<2`: Typically, if the so-called major version changes, e.g. `1.9` goes to `2.0`, there are "breaking changes"; this was also the case for `numpy` and, back then, many other packages that use `numpy` were not yet ready to use the new `2.0` version leading to errors.
 
 General notes:
 
