@@ -1,5 +1,5 @@
 # %%
-# Multi channel images filtering
+# Display a multichannel image
 
 # %%
 # import modules
@@ -52,3 +52,6 @@ viewer.add_image(image, channel_axis = 0, name = ch_names, contrast_limits=
     blending = ['translucent_no_depth', 'minimum', 'minimum'] # blending mode
 )
 
+# %% 
+# Close the viewer (CI test requires this)
+viewer.close()

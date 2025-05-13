@@ -22,8 +22,8 @@ print(image)
 # %%
 # Create a napari viewer and add the image
 from napari.viewer import Viewer
-napari_viewer = Viewer()
-napari_viewer.add_image(image)
+viewer = Viewer()
+viewer.add_image(image)
 
 # %%
 # Napari: 
@@ -43,3 +43,7 @@ print(image.min(), image.max())
 import matplotlib.pyplot as plt
 import numpy as np
 plt.hist(image.flatten(), bins=np.arange(image.min(), image.max() + 1));
+
+# %% 
+# Close the viewer (CI test requires this)
+viewer.close()

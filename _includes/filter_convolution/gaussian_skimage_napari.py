@@ -51,3 +51,6 @@ viewer.add_image(gaussian_sigma7_image)
 # - Inspect the values of the gaussian kernel with sigma 7,
 #   using again the trick to apply it to a delta peak image 
 
+# %% 
+# Close the viewer (CI test requires this)
+viewer.close()

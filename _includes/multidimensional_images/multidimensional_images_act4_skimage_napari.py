@@ -20,8 +20,8 @@ print("Units:", units)
 
 # %%
 # Display image in napari
-napari_viewer = Viewer()
-napari_viewer.add_image(image, scale = scales)
+viewer = Viewer()
+viewer.add_image(image, scale = scales)
 
 # %%
 # Napari GUI: Explore different sliders and values in the bottom left part.
@@ -38,8 +38,8 @@ print("Scales TZYX: ", scales_tzyx)
 
 # %%
 # Add image as separate channels
-napari_viewer.add_image(image[:,:,0,:,:], scale = scales_tzyx, name = 'Ch0', colormap = 'magenta')
-napari_viewer.add_image(image[:,:,1,:,:], scale = scales_tzyx, name = 'Ch1', colormap = 'green', blending='additive')
+viewer.add_image(image[:,:,0,:,:], scale = scales_tzyx, name = 'Ch0', colormap = 'magenta')
+viewer.add_image(image[:,:,1,:,:], scale = scales_tzyx, name = 'Ch1', colormap = 'green', blending='additive')
 
 # %%
 # Napari GUI: Explore different sliders and values in the bottom left part.
@@ -47,7 +47,7 @@ napari_viewer.add_image(image[:,:,1,:,:], scale = scales_tzyx, name = 'Ch1', col
 
 # %%
 # View image as separate channels in one step
-napari_viewer.add_image(image, channel_axis = 2, scale = scales_tzyx, name = ['Ch0', 'Ch1'])
+viewer.add_image(image, channel_axis = 2, scale = scales_tzyx, name = ['Ch0', 'Ch1'])
 
 # %%
 # Napari GUI: delete image.
@@ -56,7 +56,11 @@ napari_viewer.add_image(image, channel_axis = 2, scale = scales_tzyx, name = ['C
 # Loading with numpy transpose
 image_transpose = np.transpose(image, (2, 0, 1, 3, 4))
 scales_transpose = [scales[2],scales[0],scales[1],scales[3],scales[4]]
-napari_viewer.add_image(image_transpose, scale = scales_transpose)
+viewer.add_image(image_transpose, scale = scales_transpose)
 
 # %%
 # Napari GUI: Right mouse click on image and `split stack`. This will generate visible two channels.
+
+# %% 
+# Close the viewer (CI test requires this)
+viewer.close()

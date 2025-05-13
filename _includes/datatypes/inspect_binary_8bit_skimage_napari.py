@@ -33,3 +33,7 @@ print(image.shape, binary_image.shape) # ensure we did not mess up the shape
 # np.iinfo is not implemented for bool
 print(binary_image.dtype)
 print(np.unique(binary_image))
+
+# %% 
+# Close the viewer (CI test requires this)
+viewer.close()

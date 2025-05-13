@@ -48,3 +48,7 @@ print("Number of 4095 pixels:", np.sum(image==4095))
 # you can try to inspect the image metadata
 # - If you open the image in Fiji you can do: Image > Show Info
 # - TODO: find out how to do this in python
+
+# %% 
+# Close the viewer (CI test requires this)
+viewer.close()

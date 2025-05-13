@@ -54,3 +54,7 @@ viewer.add_image(binary_image_speckles, opacity=0.8)
 # to only select the boundary of cells
 binary_image_boundary = (image < 5) & (image >= 4)
 viewer.add_image(binary_image_boundary, opacity=0.8)
+
+# %% 
+# Close the viewer (CI test requires this)
+viewer.close()

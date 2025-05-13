@@ -30,3 +30,7 @@ viewer.add_image(image, rgb=False)
 # to change the axes order such that you can see the image
 # There's now a slider below the image to change which color component
 # of the RGB image you are looking at
+
+# %% 
+# Close the viewer (CI test requires this)
+viewer.close()

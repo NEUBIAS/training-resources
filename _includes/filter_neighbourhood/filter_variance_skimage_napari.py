@@ -63,3 +63,7 @@ viewer.grid.enabled = True
 # Learning opportunity:
 # - Check the output of the variance filter without converting to float datatype
 # - Explore how changing the size of the filter kernels affects the output
+
+# %% 
+# Close the viewer (CI test requires this)
+viewer.close()

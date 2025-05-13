@@ -1,0 +1,41 @@
+name: image_data_formats
+channels:
+  - conda-forge
+  - bioconda
+  - ome
+  - euro-bioimaging
+dependencies:
+  - python =3.12.*
+  - napari=0.5.6
+  - pyqt
+  - ome-zarr
+  - napari-ome-zarr
+  - tifffile
+  - pandas
+  - dask
+  - h5py
+  - scyjava
+  - zarr
+  - scikit-image
+  - lxml
+  - hdf5
+  - batchconvert-minimal
+  - jgo
+  - elementpath
+  - ome-types
+  - imageio
+  - imageio-ffmpeg
+  - pip
+  - pip:
+    - bioio
+    - bioio-base
+    - bioio-czi
+    - bioio-imageio
+    - bioio-lif
+    - bioio-nd2
+    - bioio-ome-tiff
+    - bioio-ome-zarr
+    - bioio-tifffile
+    - bioio-bioformats
+
+

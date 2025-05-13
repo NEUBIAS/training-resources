@@ -28,3 +28,7 @@ viewer.add_image(image, name="image_turbo", colormap="turbo", contrast_limits=[0
 viewer.add_image(image, name="image_gray_1", colormap="gray", contrast_limits=[0,100])
 viewer.add_image(image, name="image_gray_2", colormap="gray", contrast_limits=[0,255])
 viewer.grid.enabled = True # turn on the grid mode to see the images side by side
+
+# %% 
+# Close the viewer (CI test requires this)
+viewer.close()

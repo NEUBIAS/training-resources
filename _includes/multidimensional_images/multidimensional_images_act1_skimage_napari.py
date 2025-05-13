@@ -11,8 +11,8 @@ from napari.viewer import Viewer
 image, axes, scales, units = open_ij_tiff("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit__chromosomes.tif")
 
 # View the image in napari
-napari_viewer = Viewer()
-napari_viewer.add_image(image)
+viewer = Viewer()
+viewer.add_image(image)
 
 # [markdown]
 # Napari GUI: Explore different sliders and values in the bottom left part.
@@ -27,7 +27,11 @@ print("Units: ", units)
 
 # %%
 # Add image with scaling.
-napari_viewer.add_image(image, name = "Scaled image", scale = scales)
+viewer.add_image(image, name = "Scaled image", scale = scales)
 
 # %%
 # Napari GUI: View scaled image in 3D. Note that the scaling is now correct.
+
+# %% 
+# Close the viewer (CI test requires this)
+viewer.close()
