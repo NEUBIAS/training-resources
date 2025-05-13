@@ -266,4 +266,3 @@ def save_ij_tiff(
         metadata=metadata,
     )
     return metadata
-
