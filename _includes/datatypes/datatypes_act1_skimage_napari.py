@@ -51,3 +51,4 @@ print(np.min(image),np.max(image))
 # %% 
 # Close the viewer (CI test requires this)
 viewer.close()
+plt.close('all')

@@ -44,6 +44,8 @@ print("Min:", image.min()) # check minimum pixel value
 print("Max:", image.max()) # check maximum pixel value
 
 # %%
+viewer.close()
+# %%
 # Part 2: Write a function to perform above tasks
 # NOTE: Please manually close any opened Napari Viewer Windows
 viewer = napari.Viewer()
@@ -72,3 +74,4 @@ viewer.add_image(image2)
 # %% 
 # Close the viewer (CI test requires this)
 viewer.close()
+plt.close('all')

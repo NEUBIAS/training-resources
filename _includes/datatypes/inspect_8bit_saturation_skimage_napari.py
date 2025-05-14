@@ -36,3 +36,4 @@ plt.hist(image.flatten(), bins=np.arange(image.min(), image.max() + 1));
 # %% 
 # Close the viewer (CI test requires this)
 viewer.close()
+plt.close('all')

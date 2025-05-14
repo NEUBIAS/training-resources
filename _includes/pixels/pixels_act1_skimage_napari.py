@@ -81,3 +81,4 @@ print(image.shape)
 # %% 
 # Close the viewer (CI test requires this)
 viewer.close()
+plt.close('all')

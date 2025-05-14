@@ -43,3 +43,4 @@ viewer.add_image(binary_polyp)
 # %% 
 # Close the viewer (CI test requires this)
 viewer.close()
+plt.close('all')

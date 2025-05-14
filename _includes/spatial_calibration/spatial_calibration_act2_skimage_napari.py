@@ -50,8 +50,8 @@ print("Units: ", units_image_3D)
 
 # %%
 # Open napari and add the 3D image with voxel_size
-napari_viewer = Viewer()
-napari_viewer.add_image(image_3D, scale=voxel_size_image_3D, name='image_3D')
+viewer = Viewer()
+viewer.add_image(image_3D, scale=voxel_size_image_3D, name='image_3D')
 
 # %%
 # Napari GUI: Use the 3D viewer button to render the image in 3D.
@@ -85,3 +85,7 @@ save_ij_tiff(
 # %%
 # from scipy.spatial import distance
 # distance.euclidean(points_cal[0], points_cal[1])
+
+# %%
+# Close the viewer (CI test requires this)
+viewer.close()
