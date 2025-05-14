@@ -25,7 +25,6 @@ figure_legend: Image filtering with a pixel neighborhood. (a) Raw intensity imag
 
 multiactivities:
   - ["filter_neighbourhood/filter_mean.md", [["ImageJ GUI", "filter_neighbourhood/filter_mean_imagejgui.md"], ["skimage napari", "filter_neighbourhood/filter_mean_skimage_napari.py"]]]
-  - ["filter_neighbourhood/filter_variance.md", [["ImageJ GUI", "filter_neighbourhood/filter_variance_imagejgui.md"], ["ImageJ Macro", "filter_neighbourhood/filter_variance_imagejmacro.md"], ["skimage napari", "filter_neighbourhood/filter_variance_skimage_napari.py"]]]
 
 assessment: >
   #### Fill in the blanks
