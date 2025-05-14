@@ -20,7 +20,7 @@ image, *_ = open_ij_tiff('https://github.com/NEUBIAS/training-resources/raw/mast
 # %%
 # View the image
 # - Appreciate that due to the strong uneven background it is impossible to segment the spots with a simple threshold
-viewer.add_image(image, name='original image')
+viewer.add_image(image)
 
 # %% 
 # Compute background image using a large median filter to remove the small foreground objects
@@ -38,7 +38,7 @@ print(foreground.dtype, foreground.min(), foreground.max())
 # Add the image to napari and 
 # inspect the intensity image values in order to identify a threshold
 # that segments the foreground dots
-viewer.add_image(foreground, name='foreground')
+viewer.add_image(foreground)
 
 # %%
 # Threshold the foreground image
@@ -46,3 +46,6 @@ binary_image_spots = foreground > 8
 # Overlay the binary image
 viewer.add_image(binary_image_spots)
 
+# %% 
+# Close the viewer (CI test requires this)
+viewer.close()

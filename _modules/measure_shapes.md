@@ -10,12 +10,7 @@ objectives:
   - Perform shape measurements on objects
   
 motivation: >
- Our eyes are extremely good in distinguishing forms and patterns and this has proven to be a powerful tool for characterizing different 
- cell-types, functions, phenotypes, and more. In image processing, we use shape measurements (e.g. area, 
- volume, elongation, ...) for an automated and objective characterization of forms. Consequently, one can address
- scientific questions or filter objects that should be used for further processing. 
- Typically, we apply shape measurements on a labeled image. The labeled image, as obtained after a connected component analysis, 
- defines a set of objects in 2D/3D. However, for a quick manual analysis delineating objects by drawing so-called ROIs (regions of interest) is another possibility. 
+  Our eyes are extremely good in distinguishing forms and patterns and this has proven to be a powerful tool for characterizing different  cell-types, functions, phenotypes, and more. In image processing, we use shape measurements (e.g. area,  volume, elongation, ...) for an automated and objective characterization of forms. Consequently, one can address scientific questions or filter objects that should be used for further processing.
 
 concept_map: >
   graph TD

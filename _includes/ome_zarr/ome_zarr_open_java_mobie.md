@@ -1,0 +1,5 @@
+- [Open Fiji with MoBIE](https://github.com/mobie/mobie-viewer-fiji#install)
+- [ Plugins > MoBIE > Open > Open OME ZARR... ]
+    - `Image URI`: `https://s3.embl.de/i2k-2020/platy-raw.ome.zarr`
+    - `( Labels URI )`: `https://s3.embl.de/i2k-2020/platy-raw.ome.zarr/labels/cells`
+    - `( Labels Table URI )`: TODO

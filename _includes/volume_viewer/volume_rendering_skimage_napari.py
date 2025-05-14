@@ -53,3 +53,7 @@ print(np.min(screenshot), np.max(screenshot))
 print(screenshot.shape)
 
 # Napari GUI: use napari-animation (https://github.com/napari/napari-animation) to create an animation of the volume
+
+# %% 
+# Close the viewer (CI test requires this)
+viewer.close()

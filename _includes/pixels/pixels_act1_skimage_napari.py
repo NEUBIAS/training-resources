@@ -22,7 +22,7 @@ print(image.shape)
 # %%
 # Create a napari viewer for looking at the image
 from napari.viewer import Viewer
-napari_viewer = Viewer()
+viewer = Viewer()
 
 # %%
 # Jupyter notebook exercise:
@@ -31,7 +31,7 @@ napari_viewer = Viewer()
 
 # %%
 # Add the image the viewer 
-napari_viewer.add_image(image)
+viewer.add_image(image)
 
 # %%
 # Pixel value inspection in napari: 
@@ -60,10 +60,11 @@ print(image[7:30,10:26])
 print(image.min(), image.max())
 
 # %%
-# Compute the image histogram
+# Compute and show the image histogram
 import matplotlib.pyplot as plt
 import numpy as np
-plt.hist(image.flatten(), bins=np.arange(image.min(), image.max() + 1));
+plt.hist(image.flatten(), bins=np.arange(image.min(), image.max() + 1))
+plt.show() # instead, we could end the above line with ";"
 
 # %%
 # Napari:
@@ -74,5 +75,10 @@ plt.hist(image.flatten(), bins=np.arange(image.min(), image.max() + 1));
 
 # %%
 # Fetch the image data from napari and check its shape
-image = napari_viewer.layers['image'].data
+image = viewer.layers['image'].data
 print(image.shape)
+
+# %% 
+# Close the viewer (CI test requires this)
+viewer.close()
+plt.close('all')

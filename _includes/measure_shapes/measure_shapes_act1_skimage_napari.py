@@ -1,96 +1,47 @@
-#%% [markdown]
-# # Measure shapes in 2D
+#%% 
+# Measure shapes in 2D
 
 #%%
 from OpenIJTIFF import open_ij_tiff
 import napari
-from skimage.measure import regionprops
 
 #%%
-# Read and display the label-image from https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__four_objects.tif
-image, axes_image, scales_image, units_image = open_ij_tiff(
-    "https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__four_objects.tif"
-)
+# Open a label image with a few objects
+labels, axes, scales, units = open_ij_tiff("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__four_objects.tif")
 
 #%%
+# Show the label image in napari 
 viewer = napari.Viewer()
-viewer.add_labels(image)
-
-#%% [markdown]
-# - Perform shape measurements and discuss their meanings
-
-#%%
-shape_measurements = regionprops(image)
-
-#%%
-# how many regions are in the image
-print(len(shape_measurements))
-
-#%%
-# what measurements do you get?
-# see also https://scikit-image.org/docs/stable/api/skimage.measure.html#regionprops
-list(shape_measurements[0])
-
-#%%
-# print some features of the first region
-print(shape_measurements[0].area, shape_measurements[0].eccentricity)
-
-#%%
-# print the area and eccentricity of each region
-for region in shape_measurements:
-    print(region.label, region.area, region.eccentricity)
-
-#%% [markdown]
-# - Add a calibration of 2 micrometer to the image and check which shape measurements are affected.
-# - Note: requires skimage>=0.20.0
-
-#%%
-spacing = (2, 2)
-shape_measurements = regionprops(image, spacing=spacing)
-# print some features of first object
-print(shape_measurements[0].area, shape_measurements[0].eccentricity)
-
-#%% [markdown]
-# ### Perform a shape analysis for 3D image
-
-#%%
-# Read https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_16bit_labels__spindle_spots.tif
-image, axes_image, scales_image, units_image = open_ij_tiff(
-    "https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_16bit_labels__spindle_spots.tif"
-)
-
-#%%
-viewer = napari.Viewer()
-viewer.add_labels(image)
+viewer.add_labels(labels)
 
 #%%
 # Perform shape measurements and discuss their meanings
-shape_measurements = regionprops(image)
+# See: https://scikit-image.org/docs/stable/api/skimage.measure.html#skimage.measure.regionprops
+from skimage.measure import regionprops_table
+import pandas as pd
+properties = [ 'label', 'area', 'perimeter', 'eccentricity', 'major_axis_length', 'minor_axis_length', 'solidity']
+table = regionprops_table(labels, properties = properties)
+print(type(table))
+df = pd.DataFrame(table)
+print(type(df))
+print(df)
 
 #%%
-# how many regions are in the image
-print(len(shape_measurements))
+# Perform scaled (calibrated) shape measurement
+# - Observe which shape measurements are changing due to the scaling
+df = pd.DataFrame(regionprops_table(labels, properties = properties, spacing=scales))
+print(df)
 
 #%%
-# what measurements do you get?
-# see also https://scikit-image.org/docs/stable/api/skimage.measure.html#regionprops
-list(shape_measurements[0])
+# Find the object with the biggest area
+print(df['area'].max())
+print(df['area'].idxmax())
+print(df['label'][0]) # i.e. df['label'][df['area'].idxmax()]
 
 #%%
-# print some features of the first region
-print(shape_measurements[0].area, shape_measurements[0].num_pixels)
+# Save the table as a CSV
+df.to_csv('shape_measurements.csv', sep='\t', index=False)
 
-#%%
-# print the area of each region
-for region in shape_measurements:
-    print(region.label, region.area)
-
-#%% [markdown]
-# - Use calibration from the scales_image and perform measurements using this information.
-# - Check which shape measurements are affected.
-# - Note: requires skimage>=0.20.0
-
-#%%
-shape_measurements = regionprops(image, spacing=scales_image)
-# print some features of first object
-print(shape_measurements[0].area, shape_measurements[0].num_pixels)
+# %% 
+# Close the viewer (CI test requires this)
+viewer.close()

@@ -1,7 +1,7 @@
 ---
 title: Correlative image rendering
 layout: module
-tags: ["draft", "visualisation"]
+tags: ["visualisation"]
 prerequisites:
   - "[Spatial calibration](../spatial_calibration)"
   - "[Digital image basics](../pixels)"
@@ -17,7 +17,7 @@ concept_map: >
     DC2("Image data 2") -->|"transform (dgt_2)"| GC
     GC -->|"transform (gvt)"| VC("Viewer (screen) coordinates")
 
-figure: /figures/correlative_image_rendering.png
+figure: /figures/registration_visualization.svg
 figure_legend: "Depiction of how the data (array) spaces of two hetero-dimensional images are mapped onto a computer screen. Note that even though the first image is 2-D, it is depicted 3-D in data space by means of adding a singleton dimension. In practice, the computer can loop through all screen pixels (viewer space) and use the given formula to fetch the corresponding values from the data spaces. If there are several values (in this example there are two), then a blending and coloring scheme must be applied to produce the final RGB value that is displayed on the computer screen (this will be discussed in other teaching modules). NOTE: probably it is better to speak of array space rather than data space, because the actual data may live below the array in some other space, like a series of time-tagged measurements in a point-scanning confocal. Then there also is the storage space, which is probably linear, e.g. on a hard-disk, and may be chunked."
 
 multiactivities:

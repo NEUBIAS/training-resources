@@ -1,15 +1,13 @@
-# %% [markdown]
-# ### Morphological internal gradient of binary
-# Activity is part of the teaching module [Morphological filtering](https://neubias.github.io/training-resources/filter_morphological/index.html#gradient)
+# %% 
+# Morphological internal gradient of a binary image
 
 # %%
 from OpenIJTIFF import open_ij_tiff
 from napari.viewer import Viewer
-from skimage.morphology import square, disk
-from skimage.morphology import erosion, dilation
+from skimage.morphology import erosion
 
 # Create a napari_viewer and visualize image and labels.
-napari_viewer = Viewer()
+viewer = Viewer()
 
 # %%
 # Explore internal gradient.
@@ -22,9 +20,9 @@ internal_gradient = image - eroded
 
 # %%
 # Create a napari_viewer and visualize images.
-napari_viewer.add_image(image)
-napari_viewer.add_labels(eroded)
-napari_viewer.add_labels(internal_gradient, name='internal_gradient')
+viewer.add_image(image)
+viewer.add_labels(eroded)
+viewer.add_labels(internal_gradient)
 
 # %% [markdown]
 # The internal gradient represents the inner edge of the object.\
@@ -36,3 +34,7 @@ napari_viewer.add_labels(internal_gradient, name='internal_gradient')
 # * Try different sized structuring elements for the dilation
 # * What controls the thickness of the edge?
 # * Compute the central gradient (dilation - erosion)
+
+# %% 
+# Close the viewer (CI test requires this)
+viewer.close()

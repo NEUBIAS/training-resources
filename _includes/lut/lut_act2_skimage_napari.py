@@ -30,3 +30,7 @@ print(viewer.layers['treated'].contrast_limits)
 # Apply the same contrast to both images
 viewer.layers['control'].contrast_limits=(0, 2500)
 viewer.layers['treated'].contrast_limits=(0, 2500)
+
+# %% 
+# Close the viewer (CI test requires this)
+viewer.close()

@@ -29,4 +29,6 @@ print(np.unique(labels_2D_conn1_image)) # the object indices
 print(len(np.unique(labels_2D_conn1_image))-1) # the number of objects (minus background)
 print(np.max(labels_2D_conn1_image)) # the number of objects (minus background) (if the labels are consecutive!)
 
-# %%
+# %% 
+# Close the viewer (CI test requires this)
+viewer.close()

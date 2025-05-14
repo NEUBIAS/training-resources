@@ -1,4 +1,4 @@
-title: "Image Analysis Training Resources"
+title: "Bioimage Analysis Training Resources"
 email: "image-analysis-support@embl.de"
 description: > # this means to ignore newlines until "baseurl:"
   A collection of material for teaching image analysis.
@@ -19,32 +19,39 @@ default-platform: "NONE"
 life_cycle: "stable"
 kind: "lesson"
 
+
 module_order:
 - tool_installation
 - pixels
-- lut
-- multichannel_images
+- binarization
+- filter_morphological
+- connected_components
+- measure_shapes
 - spatial_calibration
 - multidimensional_image_basics
 - datatypes
 - image_file_formats
+- big_image_file_formats
+- ome_tiff
+- remote_data_access
+- ome_zarr
+- table_file_formats
 - image_inspection_and_presentation
+- correlative_image_rendering
 - volume_slicing
 - projections
 - volume_viewer
 - segmentation
-- binarization
-- auto_threshold
-- connected_components
-- measure_shapes
 - workflow_segment_2d_nuclei_measure_shape
 - image_formation_fluo_mic
 - measure_intensities
 - global_background_correction
 - filter_neighbourhood
+- filter_statistical
+- filter_convolution
+- filter_rank
 - median_filter
 - workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape
-- filter_morphological
 - local_background_correction
 - filter_objects
 - distance_transform
@@ -52,36 +59,35 @@ module_order:
 - workflow_nuclei_and_cells_segmentation
 - skeletonization
 - similarity_transforms
-- ome_zarr
 - script_run
 - coding_with_llms
 - script_record
 - script_variables
 - string_concat
 - output_saving
-- batch_processing
-- fetching_user_input
-- commenting
-- script_env
 - script_functions
 - script_for_loop
-- correlative_image_rendering
+- batch_processing
+- batch_qc_and_exploration
+- fetching_user_input
+- script_env
 - deep_learning_run_segmentation
 - manual_segmentation
 - workflow_golgi_per_cell
-- big_image_file_formats
 
 # Sites
 repository: <USERNAME>/<PROJECT>
 cc_by_human: "https://creativecommons.org/licenses/by/4.0/"
 
-
-# Specify that things in the episodes collection should be output.
+# Specify which folders to compile
 collections:
   modules:
     output: true
     permalink: /:path/index.html
   extras:
+    output: true
+    permalink: /:path/index.html
+  courses:
     output: true
     permalink: /:path/index.html
 

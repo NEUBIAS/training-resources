@@ -1,8 +1,19 @@
-- Go to the openAI chatGPT website: https://chat.openai.com/
-  - You may have to log in, e.g. using your Google account, but it should be for free.
-- To get started, enter the following prompt: `Which programming language and which libraries would you recommend for bioimage analysis?`
-  - You may get an answer such as: "For bioimage analysis, Python is a popular choice due to its versatility, extensive libraries, and ease of use. Here are some recommended libraries: **1. scikit-image**: This library provides a collection of algorithms for image processing. It's user-friendly and efficient, making it suitable for various tasks in bioimage analysis. **2. OpenCV**: OpenCV is a powerful library for computer vision tasks, including image processing and analysis. It offers a wide range of functionalities for tasks such as image segmentation, feature extraction, and object detection. **3. NumPy**: NumPy is essential for scientific computing in Python. It provides support for large, multi-dimensional arrays and matrices, along with a collection of mathematical functions to operate on these arrays efficiently...".
-  - Check whether your answer differs from this, also compare what other course participants got.
-- Now ask it to create some code: `Write python code that opens and displays the image at https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_high_dynamic_range.tif`
-  - Depending on the python environment that you are working with you may need to specify which library to use to open the image also how to display it.
-- Continue by asking it to write code for more complex image analysis workflows as are suggested in the activity preface.   
+- Go to the openAI chatGPT website: [https://chat.openai.com/](https://chat.openai.com/)
+  - You may have to log in, e.g. using your Google account, but it should be for free
+  - You may also have to solve some annoying puzzles to prove that you are human
+- Get started:
+  - Prompt: Which programming languages and which libraries would you recommend for bioimage analysis?
+  - Compare what other course participants got; is it identical?
+- Now ask it to write some code: 
+  - Prompt: Hi, please write python code that opens and displays the image at https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_high_dynamic_range.tif
+  - Execute the code in a python environment (e.g. [the one described here](https://neubias.github.io/training-resources/tool_installation/index.html#skimage_napari)) and check whether it runs!
+    - If it does not run, you may need to tell which libraries you have in your environment, e.g. let it know how you installed your conda environment
+    - You may also ask it how to install the libraries needed to run the code (often it tells you anyway)
+  - Even if it runs, you may want to ask it to use different libraries for certain tasks 
+  - Ask it to explain you some lines of code in detail
+- Experiment with different prompts for the same task, e.g.
+  - Tell it that you are a beginner and would like to have everything explained in detail
+  - Tell it you don't have much time and you only want the most concise code, no explanations
+  - Tell it that you would like to see three different implementations of the same task
+  - ...
+- Continue by asking it to write code for more complex image analysis workflows as suggested in the activity preface   

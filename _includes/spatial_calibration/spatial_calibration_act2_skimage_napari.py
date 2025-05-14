@@ -1,14 +1,12 @@
-# %% [markdown]
+# %%
 # ## Spatial image calibration
-# #### Requirements
-# - [skimage and napari](https://neubias.github.io/training-resources/tool_installation/index.html#skimage_napari)
 
 # %%
 # Import python packages.
 import os
 from OpenIJTIFF import open_ij_tiff, save_ij_tiff
-import numpy as np
 from napari.viewer import Viewer
+import numpy as np
 
 # %%
 # Open a 2D image and its axes metadata
@@ -17,7 +15,7 @@ image_2D, axes_image_2D, voxel_size_image_2D, units_image_2D = open_ij_tiff(
 )
 
 # %%
-# Inspect the image axes metadata
+# Inspect the image metadata
 print("Shape: ", image_2D.shape)
 print("Axes: ", axes_image_2D)
 print("Scale: ", voxel_size_image_2D)
@@ -39,9 +37,9 @@ print("Units: ", units_image_3D)
 # %%
 # Note that the 3D image does not have calibrated metadata.
 # Let's add spatial calibration using the x&y voxel_size from the 2D image
-# and also add a z scaling 
+# and also add a z scaling
 voxel_size_image_3D = [0.52, voxel_size_image_2D[1], voxel_size_image_2D[0]]
-units_image_3D = ["um","um","um"]
+units_image_3D = ["um", "um", "um"]
 
 # %%
 # Inspect the metadata for the 3D image
@@ -51,13 +49,11 @@ print("Scale: ", voxel_size_image_3D)
 print("Units: ", units_image_3D)
 
 # %%
-# Open napari and add the images with their voxel sizes as scaling
-napari_viewer = Viewer()
-napari_viewer.add_image(image_2D, scale=voxel_size_image_2D, name='image_2D')
-napari_viewer.add_image(image_3D, scale=voxel_size_image_3D, name='image_3D')
+# Open napari and add the 3D image with voxel_size
+viewer = Viewer()
+viewer.add_image(image_3D, scale=voxel_size_image_3D, name='image_3D')
 
-# %% [markdown]
-# Napari GUI: Change the axes order using the corresponding button. \
+# %%
 # Napari GUI: Use the 3D viewer button to render the image in 3D.
 
 # %%
@@ -73,3 +69,23 @@ save_ij_tiff(
 
 # %%
 # Open the above file in FIJI and verify image scales were properly saved.
+
+# %%
+# Measure the length of the nucleus (as exercise)
+# Napari GUI: use the `New points layer button` to create a new points layer.
+# Napari GUI: use `Add points` to add two points along the longest axis
+
+# %%
+# points = napari_viewer.layers['Points'].data
+# scale = napari_viewer.layers['Points'].scale
+# points_cal = points * scale
+# print("Points :\n", points)
+# print("Calibrated points :\n", points_cal)
+
+# %%
+# from scipy.spatial import distance
+# distance.euclidean(points_cal[0], points_cal[1])
+
+# %%
+# Close the viewer (CI test requires this)
+viewer.close()

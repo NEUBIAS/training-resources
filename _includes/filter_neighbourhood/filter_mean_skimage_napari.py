@@ -13,7 +13,7 @@ image, *_ = open_ij_tiff('https://github.com/NEUBIAS/training-resources/raw/mast
 
 # %%
 # View the image 
-# - Appreciate that is is quite noisy
+# - Appreciate that it is quite noisy
 # - Inspect the pixel values to find a threshold that separates the nuclei from the background
 viewer.add_image(image)
 
@@ -36,7 +36,7 @@ mean_image_1 = mean(image, disk_radius_1)
 
 # Add the filtered image to napari
 # Napari:
-# - Zoom in to appreciate that the filtered image contains the local mean values of the raw image
+# - Zoom in and inspect the pixel values to check that the filtered image indeed contains the local mean values of the raw image
 viewer.add_image(mean_image_1)
 
 # %%
@@ -51,6 +51,10 @@ mean_image_3 = mean(image, disk(3))
 viewer.add_image(mean_image_3)
 
 # %%
-# Now the nuclei can be segmented
+# Now the nuclei can be segmented by a simple threshold :)
 binary_image_3 = mean_image_3 > 32
 viewer.add_image(binary_image_3)
+
+# %% 
+# Close the viewer (CI test requires this)
+viewer.close()

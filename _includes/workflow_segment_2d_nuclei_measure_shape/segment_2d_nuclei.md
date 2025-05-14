@@ -1,4 +1,4 @@
-<h4 id="2dnuclei"><a href="#2dnuclei">Segment 2D nuclei</a></h4>
+<h4 id="2dnuclei"><a href="#2dnuclei">Segment 2D nuclei and measure their shapes</a></h4>
 - Input images
   - [xy_8bit__mitocheck_incenp_t1.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__mitocheck_incenp_t1.tif)
   - [xy_8bit__mitocheck_incenp_t70.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__mitocheck_incenp_t70.tif)
