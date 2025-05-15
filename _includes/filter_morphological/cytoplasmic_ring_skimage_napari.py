@@ -39,6 +39,9 @@ ring_labels = expand_labels(labels, 10) - expand_labels(labels, 2)
 viewer.add_labels(ring_labels)
 
 # %%
-# prevent napari from quitting when exectuing from a scripting environment
+# prevent napari from quitting when executing from a scripting environment
 # napari.run()
 
+# %%
+# Close the viewer (CI test requires this)
+viewer.close()

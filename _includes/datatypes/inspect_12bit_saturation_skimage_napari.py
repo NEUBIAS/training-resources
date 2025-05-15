@@ -52,3 +52,4 @@ print("Number of 4095 pixels:", np.sum(image==4095))
 # %% 
 # Close the viewer (CI test requires this)
 viewer.close()
+plt.close('all')
