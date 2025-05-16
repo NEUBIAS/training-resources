@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>cytoscape-dagre.js demo</title>
+
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+    <!-- for testing with local version of cytoscape.js -->
+    <!--<script src="../cytoscape.js/build/cytoscape.js"></script>-->
+
+
+    <script src="https://unpkg.com/klayjs@0.4.1/klay.js"></script>
+    <script src="https://cytoscape.org/cytoscape.js-klay/cytoscape-klay.js"></script>
+    <style>
+        body {
+            font-family: helvetica;
+            font-size: 14px;
+        }
+        #cy {
+            width: 1600px;
+            height: 1200px;
+            display: block;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+<div id="cy"></div>
+
+<script>
+    // Function to fetch the JSON data and render the graph
+    async function renderGraph() {
+        try {
+            // Fetch the JSON data from the file
+            const response = await fetch('cytoscape_data.json'); // Make sure the path is correct
+            const data = await response.json();
+            //console.log('Fetched data:', data_in);
+            //const data = {elements: data_in,
+            //        layout: {
+            //            name: 'klay' // Use preset layout.
+            //        }};
+            console.log('Fetched data:', data.layout); // Add this line for debugging
+
+            // Initialize Cytoscape with the fetched data and ELK layout
+            const cy = cytoscape({
+                container: document.getElementById('cy'),
+                elements: data.elements, //  use the elements key from the loaded data
+                layout: data.layout, //  and the layout key.
+                style: [
+                    {
+                     selector: 'node',
+                        style: {
+                            'label': 'data(label)',
+                            'shape': 'rectangle', // Make nodes squares
+                            'background-color': '#90EE90',
+                            'border-color': '#228B22',
+                            'border-width': 2,
+                            'font-size': '14px',
+                            'color': '#006400',
+                            'padding': '10px',             // Add padding for label space
+                            'text-valign': 'center',
+                            'text-halign': 'center',
+                            'width': 'label', // Make width fit label
+                            'height': 'label', // Make height fit label
+                            'text-max-width': 100, // Add a max width
+                            'white-space': 'pre-wrap', // Enable line breaks
+                            'overflow': 'hidden',       //hide overflow
+                            'text-wrap': 'wrap'
+
+                        }
+                    },
+                    {
+                        selector: 'edge',
+                        style: {
+                            'width': 2,
+                            'line-color': '#B2B2B2',
+                            'target-arrow-color': '#B2B2B2',
+                            'target-arrow-shape': 'triangle',
+                            'curve-style': 'bezier',
+                            'label': 'data(label)', // Display edge labels
+                            'font-size': '10px',       // Adjust font size as needed
+                            'text-rotation': 'autorotate', // Rotate label with edge
+                            'text-background-color': '#FFFFFF', // Optional: Background for label
+                            'text-background-opacity': 0.7             // Optional: Label background opacity
+                        }
+                    }
+                ]
+            });
+
+
+        } catch (error) {
+            console.error('Error fetching or rendering graph:', error);
+        }
+    }
+
+    // Call the function to render the graph when the page loads
+    renderGraph();
+</script>
+</body>
+</html>

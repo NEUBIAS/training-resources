@@ -89,16 +89,16 @@
                         { data: { source: 'multichannel', target: 'N Dimensional images' } }
                     ]
                 }
-            
+
             });
-        
+
         });
         cy.on('tap', 'node', function(evt){
             const url = evt.target.data('url');
             if (url) {
             window.open(url, '_blank');
             }
-        }); 
+        });
     </script>
 
 </body>

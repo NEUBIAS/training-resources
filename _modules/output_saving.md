@@ -1,6 +1,6 @@
 ---
-title:     Output saving
-layout:    module
+title: Output saving
+layout: module
 tags: ["scripting"]
 prerequisites:
   - "[Binarize an image](../binarization)"
@@ -64,7 +64,7 @@ assessment: >
     {: .solution}
 
 learn_next:
-[comment]: <> (Open a pre-saved data set, ROI set or label image and try to modify it)
+#  - [comment]: <> (Open a pre-saved data set, ROI set or label image and try to modify it)
 
 external_links:
 

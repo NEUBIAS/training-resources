@@ -5,7 +5,6 @@ layout:    module
 prerequisites:
   - "[Basic properties of images and pixels](../pixels)"
   - "[Data types](../datatypes)"
-  - "[Image math](../image_math)"
 
 objectives:
   - Measure the background in an image
