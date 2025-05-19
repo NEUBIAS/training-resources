@@ -19,19 +19,20 @@ print("Units:", units)
 
 # %%
 # View the image in napari
-Viewer().add_image(image)
+viewer = Viewer()
+viewer.add_image(image)
 
 # Napari: 
 # - Change the axes order to look at the image "from the side" using the corresponding button
 # - Look at the image in 3-D using the corresponding button
 # - Conclude that the physical shape does not look correct
 # - Important: close this viewer before proceeding, not to confuse yourself
-
+viewer.close()
 
 # %%
 # Open napari and add the image with its voxel size.
-napari_viewer = Viewer()
-napari_viewer.add_image(image, scale=voxel_size)
+viewer = Viewer()
+viewer.add_image(image, scale=voxel_size)
 
 # %%
 # Napari GUI: Change the viewer dimension order using the corresponding button.
@@ -58,12 +59,12 @@ napari_viewer.add_image(image, scale=voxel_size)
 
 # %%
 # Extract the point coordinates
-points = napari_viewer.layers['Points'].data
+points = viewer.layers['Points'].data
 print(points) # unscaled => not very useful for physical measurements
 
 # %%
 # Scale the points
-scale = napari_viewer.layers['Points'].scale # same as voxel_size
+scale = viewer.layers['Points'].scale # same as voxel_size
 print("Points scale: ", scale)
 print("Voxel size: ", voxel_size)
 points_cal = points * scale 
@@ -76,3 +77,7 @@ print("First point:" , points_cal[0])
 print("Second point:" , points_cal[1])
 from scipy.spatial import distance
 distance.euclidean(points_cal[0], points_cal[1])
+
+# %%
+# Close the viewer (CI test requires this)
+viewer.close()

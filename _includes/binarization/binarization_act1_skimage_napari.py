@@ -43,3 +43,8 @@ viewer.add_labels(binary_image_two_cells, opacity=0.8)
 # and also add this to the viewer
 binary_image_one_cell = image > 100
 viewer.add_labels(binary_image_one_cell, opacity=0.8)
+
+# %% 
+# Close the viewer (CI test requires this)
+viewer.close()
+plt.close('all')

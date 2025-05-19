@@ -51,4 +51,8 @@ colors = plt.cm.viridis(shape_measurements_table["eccentricity"])
 label_layer.color_mode = "direct"
 label_layer.color = dict(zip(shape_measurements_table["label"], colors))
 
+# %% 
+# Close the viewer (CI test requires this)
+viewer.close()
+plt.close('all')
 

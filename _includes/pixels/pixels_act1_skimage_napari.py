@@ -22,7 +22,7 @@ print(image.shape)
 # %%
 # Create a napari viewer for looking at the image
 from napari.viewer import Viewer
-napari_viewer = Viewer()
+viewer = Viewer()
 
 # %%
 # Jupyter notebook exercise:
@@ -31,7 +31,7 @@ napari_viewer = Viewer()
 
 # %%
 # Add the image the viewer 
-napari_viewer.add_image(image)
+viewer.add_image(image)
 
 # %%
 # Pixel value inspection in napari: 
@@ -75,5 +75,10 @@ plt.show() # instead, we could end the above line with ";"
 
 # %%
 # Fetch the image data from napari and check its shape
-image = napari_viewer.layers['image'].data
+image = viewer.layers['image'].data
 print(image.shape)
+
+# %% 
+# Close the viewer (CI test requires this)
+viewer.close()
+plt.close('all')

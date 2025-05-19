@@ -17,6 +17,10 @@ print(axes_image)
 print(voxel_image)
 
 # Create a napari_viewer and visualize image and labels
-napari_viewer1 = Viewer()
-napari_viewer1.add_image(image[0], name='brightfield')
-napari_viewer1.add_image(image[1], name='fluo', colormap='magenta', opacity=0.5)
+viewer = Viewer()
+viewer.add_image(image[0], name='brightfield')
+viewer.add_image(image[1], name='fluo', colormap='magenta', opacity=0.5)
+
+# %% 
+# Close the viewer (CI test requires this)
+viewer.close()

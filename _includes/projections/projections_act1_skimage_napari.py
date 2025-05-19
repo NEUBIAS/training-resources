@@ -71,3 +71,7 @@ viewer.add_image(max_y_image, scale=[scales[0], scales[2]])
 # Convert sum projection to float to properly visualize it
 sum_z_image_float = sum_z_image.astype(float)
 viewer.add_image(sum_z_image_float, scale=scales[1:3]) 
+
+# %% 
+# Close the viewer (CI test requires this)
+viewer.close()

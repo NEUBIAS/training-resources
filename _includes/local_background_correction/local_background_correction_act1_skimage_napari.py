@@ -46,3 +46,6 @@ binary_image_spots = foreground > 8
 # Overlay the binary image
 viewer.add_image(binary_image_spots)
 
+# %% 
+# Close the viewer (CI test requires this)
+viewer.close()

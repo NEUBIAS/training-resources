@@ -1,3 +1,4 @@
+*.iml
 image_data_big/local_data
 .Rhistory
 *.DS_Store

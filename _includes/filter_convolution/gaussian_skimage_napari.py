@@ -26,8 +26,7 @@ viewer = napari.Viewer()
 # Load an example image
 # Observe that it is quite noisy
 from OpenIJTIFF import open_ij_tiff
-image, *_ = open_ij_tiff('/Users/tischer/Documents/training-resources/image_data/xy_8bit__spots_local_background_with_noise.tif')
-#image, *_ = open_ij_tiff('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__spots_local_background_with_noise.tif')
+image, *_ = open_ij_tiff('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__spots_local_background_with_noise.tif')
 viewer.add_image(image)
 
 # %%
@@ -51,3 +50,7 @@ viewer.add_image(gaussian_sigma7_image)
 # - Inspect the values of the gaussian kernel with sigma 7,
 #   using again the trick to apply it to a delta peak image 
 
+# %% 
+# Close the viewer (CI test requires this)
+viewer.close()
+plt.close('all')

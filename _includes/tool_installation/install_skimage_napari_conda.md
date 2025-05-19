@@ -23,7 +23,7 @@ If you already have a conda package manager you can skip this step.
 Within a terminal window execute
   
 ```
-conda create -n skimage-napari-tutorial --override-channels -c conda-forge -c euro-bioimaging -c nodefaults python=3.10 napari=0.4.17 numpy notebook matplotlib jupytext scikit-image openijtiff napari-plot-profile
+conda create -n skimage-napari-tutorial --override-channels -c conda-forge -c euro-bioimaging -c nodefaults python=3.12 napari=0.6.0 pyqt notebook matplotlib jupytext scikit-image openijtiff -y
 ```
 
 This will create an environment named `skimage-napari-tutorial` with the necessary packages for the course.

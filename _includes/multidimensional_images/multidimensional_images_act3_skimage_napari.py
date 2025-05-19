@@ -19,9 +19,13 @@ print("Units:", units)
 
 # %%
 # View the image
-napari_viewer = Viewer()
-napari_viewer.add_image(image, scale = scales)
+viewer = Viewer()
+viewer.add_image(image, scale = scales)
 
 # %%
 # Napari GUI: Explore different axes sliders and values in the bottom left part.
 # Napari GUI: Show in 3D.
+
+# %% 
+# Close the viewer (CI test requires this)
+viewer.close()

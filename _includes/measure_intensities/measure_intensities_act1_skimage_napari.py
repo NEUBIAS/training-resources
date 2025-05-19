@@ -18,9 +18,9 @@ print("labels", np.unique(labels))
 
 # %%
 # Create a napari_viewer and visualize image and labels
-napari_viewer = Viewer()
-napari_viewer.add_image(image)
-napari_viewer.add_labels(labels)
+viewer = Viewer()
+viewer.add_image(image)
+viewer.add_labels(labels)
 
 # %% 
 # Napari:
@@ -68,3 +68,7 @@ df.to_csv("intensity_measurements.csv")
 # %%
 # Optional: Repeat the above with "https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__h2b_dilate_labels.tif"
 # - Discuss how the measurements are affected by the larger object regions
+
+# %% 
+# Close the viewer (CI test requires this)
+viewer.close()

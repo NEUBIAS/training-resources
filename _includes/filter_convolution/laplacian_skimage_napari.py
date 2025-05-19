@@ -7,6 +7,7 @@ viewer = napari.Viewer()
 # %%
 # Create a Laplacian kernel
 from scipy.ndimage import convolve
+import numpy as np
 laplacian_kernel = np.array([[0,-1,0],[-1,4,-1],[0,-1,0]])
 print(laplacian_kernel)
 
@@ -29,3 +30,7 @@ viewer.add_image(image)
 from scipy.ndimage import convolve
 laplacian_image = convolve(image, laplacian_kernel)
 viewer.add_image(laplacian_image)
+
+# %% 
+# Close the viewer (CI test requires this)
+viewer.close()

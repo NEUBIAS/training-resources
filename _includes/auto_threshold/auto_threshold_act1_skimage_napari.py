@@ -68,3 +68,8 @@ viewer.add_labels(mean_thresholded2, name='mean_thresholded2', opacity = 0.4)
 # %% 
 # Explore other thresholding options
 # Note that there exists a threshold_multiotsu function to handle cases with multi-peaks histograms
+
+# %%
+# Close the viewer (CI test requires this)
+viewer.close()
+plt.close('all')
