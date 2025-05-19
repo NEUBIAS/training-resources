@@ -17,13 +17,13 @@ You will learn how to use python for image analysis and take advantage of the la
 * Ideally, you should know all the topics mentioned in the **Learn the Basics** section of the [Learn Python](https://www.learnpython.org/en/Welcome) website (you may skip "Classes and Objects" and "Modules and Packages").
 * If you have time, please practice running code in a Jupyter Notebook. You can follow this [guide](https://jupyter.org/try-jupyter/retro/notebooks/?path=notebooks/Intro.ipynb).
 
-#### IT Setup
+### IT Setup
 Please, before the course use the `conda` platform to install skimage and napari on your laptop, following [these instructions](https://neubias.github.io/training-resources/tool_installation/index.html#skimage_napari).
 
 
 ### Fiji macro/GUI
 
-#### IT Setup
+### IT Setup
 
 ## Course overview
 
@@ -46,9 +46,7 @@ The course is also [announced on the EMBL bio-it website](https://bio-it.embl.de
 
 
 ### Breaks
-- This includes a lunch break (X hrs) and two coffee breaks (XX minutes), resulting in approximately X hr of teaching time.
-
-As there are n modules per day that makes ~XX minutes per module.
+- This includes a lunch break (X hrs) and two coffee breaks (XX minutes), resulting in approximately X hr of teaching time. Ss there are n modules per day that makes ~XX minutes per module.
 
 ## Venue
 
