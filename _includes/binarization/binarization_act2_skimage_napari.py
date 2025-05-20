@@ -58,3 +58,4 @@ viewer.add_image(binary_image_boundary, opacity=0.8)
 # %% 
 # Close the viewer (CI test requires this)
 viewer.close()
+plt.close('all')

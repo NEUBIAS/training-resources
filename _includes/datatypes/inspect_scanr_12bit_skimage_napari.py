@@ -40,3 +40,4 @@ print(np.sum(image_rescaled == 2**12-1)) # check number of saturated pixels
 # %% 
 # Close the viewer (CI test requires this)
 viewer.close()
+plt.close('all')

@@ -19,6 +19,7 @@ requirements:
   build:
     - {{ python_requirement }}
     - pip
+    - setuptools
   run:
     - {{ python_requirement }}
     {% for dep in pyproject.get('project').get('dependencies') %}

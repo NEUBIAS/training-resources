@@ -37,3 +37,4 @@ print(np.unique(binary_image))
 # %% 
 # Close the viewer (CI test requires this)
 viewer.close()
+plt.close('all')

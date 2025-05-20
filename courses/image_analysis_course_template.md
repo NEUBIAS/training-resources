@@ -4,8 +4,11 @@
 
 In this course, you will be introduced to essential concepts of image analysis.
 
-
+### Motivation for python-based course
 You will learn how to use python for image analysis and take advantage of the large and growing number of specialized python libraries. Learning python is useful in general because it is currently the most popular language for scientific computing and data science. In addition, since a few years a python based image visualisation tool, namely napari, exists that allows powerful and flexible n-dimensional image data visualisation, including overlay of segmentation and annotation layers.
+
+
+### Motivation for Fiji-based course
 
 ## Prerequisites
 
@@ -14,11 +17,16 @@ You will learn how to use python for image analysis and take advantage of the la
 * Ideally, you should know all the topics mentioned in the **Learn the Basics** section of the [Learn Python](https://www.learnpython.org/en/Welcome) website (you may skip "Classes and Objects" and "Modules and Packages").
 * If you have time, please practice running code in a Jupyter Notebook. You can follow this [guide](https://jupyter.org/try-jupyter/retro/notebooks/?path=notebooks/Intro.ipynb).
 
-#### IT Setup
+### IT Setup
 Please, before the course use the `conda` platform to install skimage and napari on your laptop, following [these instructions](https://neubias.github.io/training-resources/tool_installation/index.html#skimage_napari).
 
 
 ### Fiji macro/GUI
+
+### IT Setup
+
+## Course overview
+
 
 
 ## Schedule
@@ -32,15 +40,13 @@ The course is comprised of:
 The course is also [announced on the EMBL bio-it website](https://bio-it.embl.de/events/).  (Replace this with correct web address after creating a BIO IT course event)
 
 - Day, hh:mm – hh:mm, Month DD, Year day 1
-- Day, hh:mm – 16:00, Month DD, workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape day 2
+- Day, hh:mm – 16:00, Month DD, Year day 2
   .....
   .....
 
 
 ### Breaks
-- This includes a lunch break (X hrs) and two coffee breaks (XX minutes), resulting in approximately X hr of teaching time.
-
-As there are n modules per day that makes ~XX minutes per module.
+- This includes a lunch break (X hrs) and two coffee breaks (XX minutes), resulting in approximately X hr of teaching time. Ss there are n modules per day that makes ~XX minutes per module.
 
 ## Venue
 
@@ -56,6 +62,8 @@ As there are n modules per day that makes ~XX minutes per module.
 The whole course will be guided hands-on sessions.
 
 ### Image inspection basics (day 1)
+
+Overview:
 
 Trainers:
 
@@ -81,6 +89,8 @@ Trainers:
 
 ### Image analysis basics (day 2)
 
+Overview:
+
 Trainers:
 
 1. [Segmentation](https://neubias.github.io/training-resources/segmentation/index.html)
@@ -100,6 +110,8 @@ Trainers:
 
 ### Image analysis basics (day 3)
 
+Overview:
+
 Trainers:
 
 1. [Object intensity measurements](https://neubias.github.io/training-resources/measure_intensities/index.html)
@@ -117,6 +129,8 @@ Trainers:
 
 
 ### Batch image analysis basics (day 4)
+
+Overview:
 
 Trainers:
 

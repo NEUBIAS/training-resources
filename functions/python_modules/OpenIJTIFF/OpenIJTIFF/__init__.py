@@ -8,6 +8,7 @@ import requests
 import tifffile
 
 
+
 def _fetch_data(uri: str) -> Path:
     """Downloads a given file from a uri to a temporary directory
 
@@ -91,7 +92,7 @@ def open_ij_tiff(
         ax_names: The available axes, can be any combination of T, C, Z, Y, X.
         ax_scales: Voxel scales along each dimension. Float for T, Z, Y and X and 'na' for channel.
         ax_units: Voxel scale units along each dimension ('na' for channel).
-        extra_metadata, optional (returned only if fetch_extra_metadata is True).
+        extra_metadata (optional, returned only if fetch_extra_metadata is True)):
           Extra ImageJ-specific metadata, such as LUTs, brightness-contrast adjustments, etc.
     """
     ############################# download the image if path is a url ###############################
@@ -103,7 +104,7 @@ def open_ij_tiff(
     ax_names = tiff.series[0].axes.upper()  ### This gives the axis order
     # Second, parse, time, channel and z
     image_metadata = tiff.imagej_metadata  ### ImageJ metadata object
-    # get z informtion
+    # Get z informtion
     if "Z" in ax_names:
         if "spacing" in image_metadata:
             voxel_sizes["z"] = image_metadata["spacing"]
@@ -112,7 +113,7 @@ def open_ij_tiff(
             print("Z scaling missing or is exactly 1 spatial unit; Setting to 1 pixel.")
             voxel_sizes["z"] = 1
             voxel_units["z"] = "Slice"
-    # get time information
+    # Get time information
     if "T" in ax_names:  ### imagej metadata does not seem to store time increment unit other than seconds ?!
         if "finterval" in image_metadata:
             finterval = image_metadata["finterval"]
@@ -132,12 +133,12 @@ def open_ij_tiff(
         voxel_units["t"] = (
             timeunit  ### imagej metadata does not seem to store time increment unit other than seconds ?!
         )
-    # get channel information
+    # Get channel information
     if "C" in ax_names:
         voxel_sizes["c"] = 1
         voxel_units["c"] = "na"
 
-    # third, parse x and y
+    # Third, parse x and y
     tags = tiff.pages[0].tags
     if "YResolution" in tags:
         num_pixels, units = tags["YResolution"].value
@@ -173,37 +174,64 @@ def open_ij_tiff(
 def save_ij_tiff(
     tiffdest: Union[str, Path],
     image_array: np.ndarray,
-    ax_names: Sequence[str],
-    ax_scales: Sequence[float],
-    ax_units: Sequence[str],
+    ax_names: Optional[Sequence[str]] = None,
+    ax_scales: Optional[Sequence[float]] = None,
+    ax_units: Optional[Sequence[str]] = None,
     extra_metadata: Optional[dict] = None,
 ) -> Dict[str, Any]:
     """
-    Args:
-        tiffdest: location to save tiff file to.
-        image_array: image data to write
-        ax_names: Axis names in as uppercase letters, e.g. ["Z", "Y", "X"]
-        ax_scales: Real numbers that specify scale per axis e.g. [5.0, 1.0, 1.0]
-        ax_units: String denoting the unit of the data. See
-          https://imagej.net/ij/docs/guide/146-28.html#toc-Subsection-28.4
-          for possible values.
-        extra_metadata: Contains further metadata, such as display metadata.
-          This can be used, for instance, to update, or keep the existing display
-          information in the tiff metadata.
+    Writes an image array to a TIFF file with metadata.
 
-    Returns
-        Metadata dictionary
+    Args:
+        tiffdest (str or Path): Path to save the TIFF file.
+        image_array (np.ndarray): Image data to write. Boolean arrays are converted to
+            8-bit unsigned integer arrays with values 0 and 255 before saving.
+        ax_names (list of str, optional): Axis names as uppercase letters (e.g., ["Z", "Y", "X"]).
+            If not provided, axes are inferred from the default 'TCZYX' order based on the number
+            of dimensions in `image_array`. For example, 'ZYX' for 3D, 'CZYX' for 4D, etc.
+        ax_scales (list of float, optional): Physical scale for each axis (e.g., [5.0, 1.0, 1.0]).
+            Defaults to 1.0 for all axes if not provided.
+        ax_units (list of str, optional): Units for each axis. Refer to:
+            https://imagej.net/ij/docs/guide/146-28.html#toc-Subsection-28.4
+            If not provided, defaults to: ['Frame', 'na', 'Slice', 'Slice', 'Slice'] for 'TCZYX'.
+        extra_metadata (dict, optional): Additional metadata such as display settings. Can be
+            used to preserve or modify existing TIFF metadata.
+
+    Returns:
+        dict: Metadata dictionary written to the TIFF file.
     """
 
+    _full_axes = 'TCZYX'
+    _full_units = ['Frame', 'na', 'Slice', 'Pixel', 'Pixel']
+    axis_units = dict(zip(_full_axes, _full_units))
+
+    if ax_names is None:
+        ax_names = _full_axes[-image_array.ndim:]
+    if ax_units is None:
+        ax_units = [axis_units[ax] for ax in ax_names]
+    if ax_scales is None:
+        ax_scales = [1] * image_array.ndim
+    ax_names = ''.join([ax.upper() for ax in ax_names]).upper()
+    if len(ax_names) != image_array.ndim:
+        raise ValueError(f"The length of 'ax_names', which is {len(ax_names)}, must match the number of dimensions, which is {image_array.ndim}")
+    if len(ax_units) != image_array.ndim:
+        raise ValueError(f"The length of 'ax_units', which is {len(ax_units)}, must match the number of dimensions, which is {image_array.ndim}")
+    if len(ax_scales) != image_array.ndim:
+        raise ValueError(f"The length of 'ax_scales', which is {len(ax_scales)}, must match the number of dimensions, which is {image_array.ndim}")
+
     metadata = {
-        "axes": ax_names,
+        "axes": ax_names
     }
+
+    if image_array.dtype == np.dtype(bool):
+        image_array = image_array.astype(np.uint8) * 255
 
     if "Y" in ax_names:
         y_idx = ax_names.index("Y")
+        metadata["unit"] = ax_units[y_idx]
     if "X" in ax_names:
         x_idx = ax_names.index("X")
-        metadata["unit"] = encode_unicode(ax_units[x_idx])
+        metadata["unit"] = ax_units[x_idx]
     if "Z" in ax_names:
         z_idx = ax_names.index("Z")
         if ax_units[z_idx] != "Slice":  ### TODO: This checkpoint might be improved

@@ -141,6 +141,7 @@ print(bioimage.physical_pixel_sizes)
 # save file in the same directory as this notebook
 # - Observe that BioImage chooses the correct reader plugin
 # - Observe that the return object has a z dimension
+# TODO FIX THIS!!
 bioimage = BioImage('/Users/fschneider/skimage-napari-tutorial/ExampleImages/xyz__multiple_images.czi')
 print(bioimage)
 print(type(bioimage))

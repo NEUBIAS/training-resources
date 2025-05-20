@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "OpenIJTIFF"
 description = "NEUBIAS image analysis training utilities"
-version = "2024.4.0"
+version = "2025.5.0"
 requires-python = ">= 3.8"
 dependencies = [
     "numpy",
