@@ -9,6 +9,7 @@ image, *_ = open_ij_tiff(image_url)
 
 # %%
 # Inspect what the image actually is
+# - numpy arrays are generally used in python to represent arrays of numbers
 print(type(image))
 
 # %%
@@ -34,7 +35,7 @@ viewer = Viewer()
 viewer.add_image(image)
 
 # %%
-# Pixel value inspection in napari: 
+# Napari: 
 # However with the mouse over the image and observe the pixel indices and values
 
 # %%
@@ -44,14 +45,16 @@ print(image[31, 42]) # inside a nucleus
 
 # %%
 # Extract a line of pixel values across the objects
+# Observe how the pixel values go: low(bg) .. high(nucleus) .. low(bg) .. high(nucleus)
 print(image[20,:])
 
-# %% 
-# Napari:
-# Use the plot profile plugin to inspect a line of pixel values
- 
 # %%
-# Extract one object as a square of pixel values
+# Napari:
+# Identify the boundaries (top left, bottom right) of a region of one nucleus
+# Remember those numbers and use them below
+
+# %%
+# Extract the pixel values of one object using the above manually found coordinates
 print(image[7:30,10:26])
 
 # %%
@@ -60,24 +63,19 @@ print(image[7:30,10:26])
 print(image.min(), image.max())
 
 # %%
-# Compute and show the image histogram
-import matplotlib.pyplot as plt
-import numpy as np
-plt.hist(image.flatten(), bins=np.arange(image.min(), image.max() + 1))
-plt.show() # instead, we could end the above line with ";"
-
-# %%
-# Napari:
-# Alternative loading of data
-# Remove the currently shown image
-# Drag and drop image from browser onto napari
-# Rename the layer to: image
-
-# %%
-# Fetch the image data from napari and check its shape
-image = viewer.layers['image'].data
-print(image.shape)
+# Get a handle on the image array from napari 
+# and check whether it is the same that we originally added
+image_from_napari = viewer.layers['image'].data
+print(image_from_napari is image) # it is the same object, not just a copy
 
 # %% 
 # Close the viewer (CI test requires this)
 viewer.close()
+
+# %%
+# Compute and show the image histogram
+# (there's many things happening here, no need to understand everything right now)
+import matplotlib.pyplot as plt
+import numpy as np
+plt.hist(image.flatten(), bins=np.arange(image.min(), image.max() + 1))
+plt.show() # instead, we could end the above line with ";"
