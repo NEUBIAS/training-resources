@@ -3,10 +3,10 @@ title: "2D noisy object segmentation and filtering"
 layout: module
 tags: ["workflow"]
 prerequisites:
-  - "[Neighbourhood filters](../filter_neighbourhood)"
-  - "[Binarization](../binarization)"
+  - "[Neighborhood filters](../filter_neighbourhood)"
+  - "[Thresholding](../binarization)"
   - "[Connected component labeling](../connected_components)"
-  - "[Object filters](../filter_objects)"
+  - "[Object filtering](../filter_objects)"
   - "[Object shape measurements](../measure_shapes)"
 objectives:
   - "Create an image analysis workflow comprising image denoising and object filtering."

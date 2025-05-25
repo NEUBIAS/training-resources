@@ -2,8 +2,8 @@
 title: Object filtering
 layout: module
 prerequisites:
-  - "[Connected components labeling](../connected_components)"
-  - "[Object shape measurement](../measure_shapes)"
+  - "[Connected component labeling](../connected_components)"
+  - "[Object shape measurements](../measure_shapes)"
 objectives:
   - Remove objects from a label mask image.
 motivation: >

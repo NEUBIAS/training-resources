@@ -3,7 +3,7 @@ title: Connected component labeling
 layout:  module
 tags: ["label mask","instance segmentation"]
 prerequisites:
-  - "[Binarization](../binarization)"
+  - "[Thresholding](../binarization)"
   - "[Lookup tables](../lut)"
   - "[Data types](../datatypes)"
 

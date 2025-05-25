@@ -2,7 +2,7 @@
 title: Volume rendering
 layout: module
 prerequisites:
-  - "[Volume projections](../projections)"
+  - "[Projections](../projections)"
   - "[Volume slicing](../volume_slicing)"
 
 objectives:

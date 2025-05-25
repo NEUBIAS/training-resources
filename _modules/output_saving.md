@@ -3,9 +3,9 @@ title: Output saving
 layout: module
 tags: ["scripting"]
 prerequisites:
-  - "[Binarize an image](../binarization)"
-  - "[Connected components labeling](../connected_components)"
-  - "[Simple 2D object analysis](../workflow_segment_2d_nuclei_measure_shape)"
+  - "[Thresholding](../binarization)"
+  - "[Connected component labeling](../connected_components)"
+  - "[Nuclei segmentation and shape measurement](../workflow_segment_2d_nuclei_measure_shape)"
   - "Generating results tables"
   - "Defining regions of interest (ROIs)"
 

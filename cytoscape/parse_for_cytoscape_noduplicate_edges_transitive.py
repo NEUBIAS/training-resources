@@ -69,6 +69,9 @@ def extract_link_and_title(entry):
     if match:
         title = match.group(1).strip()
         link = match.group(2).strip()
+                
+        link = link.replace('../', "")
+        link = link.replace('./', "")
         return link, title
     else:
         return "", ""
@@ -179,12 +182,13 @@ def create_cytoscape_json(files_data):
             'name': 'klay',  # Use the Klay layout algorithm
              'klay': {
                  'nodeLayering': 'NETWORK_SIMPLEX',  # Options: 'NETWORK_SIMPLEX', 'LONGEST_PATH', 'INTERACTIVE'
-                 'aspectRatio': 1000,
+                 'aspectRatio': 0.2,
                  'compactComponents': True,
                  'direction': 'DOWN',
-                 'edgeRouting': 'SPLINES',
-                 'edgeSpacingFactor':1.2,
-                 'nodePlacement':'LINEAR_SEGMENTS', # options 'LINEAR_SEGMENTS', 'BRANDES_KOEPF'
+                 'edgeRouting': 'ORTHOGONAL',
+                 'edgeSpacingFactor':0.2,
+                 'crossingMinimization': 'LAYER_SWEEP', # // Add this for edge crossing reduction  
+                 'nodePlacement':'BRANDES_KOEPF' , # options 'LINEAR_SEGMENTS', 'BRANDES_KOEPF'
                  'randomizationSeed': 1, # 0 will change the graph at every reload
                  'spacing': 40,
                  'thoroughness': 10,
@@ -223,6 +227,8 @@ def process_markdown_files(directory):
                 original_filepath = filepath
                 # Modify the filepath for use as key in files_data
                 filepath_key = os.path.splitext(filepath.replace('\\', '/').replace('_modules/', ''))[0]
+                filepath_key = filepath_key.replace('../', '')
+                filepath_key = filepath_key.replace('./', '')
 
                 file_data = parse_markdown_file(original_filepath)
                 if file_data:  # Only add if parsing was successful
@@ -234,14 +240,14 @@ def process_markdown_files(directory):
 
 if __name__ == "__main__":
     # Specify the directory containing your Markdown files.
-    markdown_directory = ('../_modules')  # Replace with the actual path to your directory
+    markdown_directory = ('./_modules')  # Replace with the actual path to your directory
     # changed to './' so it works in any directory
 
     files_data = process_markdown_files(markdown_directory)
     if files_data:
         cytoscape_data = create_cytoscape_json(files_data)
         # Output the Cytoscape.js JSON data to a file.
-        output_file = './cytoscape_data.json'
+        output_file = './cytoscape/cytoscape_data.json'
         try:
             with open(output_file, 'w', encoding='utf-8') as outfile:
                 json.dump(cytoscape_data, outfile, indent=2)

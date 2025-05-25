@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>cytoscape-dagre.js demo</title>
+
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <!--<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+    <script src="https://unpkg.com/klayjs@0.4.1/klay.js"></script>
+    <script src="https://cytoscape.org/cytoscape.js-klay/cytoscape-klay.js"></script>-->
+    <script src="./cytoscape.min.js"></script>
+    <script src="./klay.js"></script>
+    <script src="./cytoscape-klay.js"></script>
+
+    <style>
+                body {
+            font-family: helvetica;
+            font-size: 14px;
+        }
+        #cy {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #ccc;
+            background-color: #f0f0f0;
+        }
+        .highlighted {
+            background-color: #90EE90 !important;
+            border-color: #228B22 !important;
+            border-width: 3px !important;
+            color: #000000 !important;
+        }
+        .highlighted-edge {
+            line-color: #90EE90 !important;
+            width: 3px !important;
+            color: #000000 !important;
+        }
+        #preview-container {
+            position: absolute;
+            top: 600px; /* Adjust as needed */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            max-height: 300px;
+            border: 1px solid #ccc;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: auto;
+            display: none; /* Initially hidden */
+            z-index: 1000;
+            padding: 10px;
+        }
+        #preview-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+<div id="cy"></div>
+
+<script>
+    // Function to fetch the JSON data and render the graph
+    async function renderGraph() {
+        try {
+            // Fetch the JSON data from the file
+            const response = await fetch('cytoscape_data.json');
+            const data = await response.json();
+
+            // Initialize Cytoscape with the fetched data and Klay layout
+            const cy = cytoscape({
+                container: document.getElementById('cy'),
+                elements: data.elements,
+                layout: data.layout,
+                style: [
+                    {
+                        selector: 'node',
+                        style: {
+                            'label': 'data(label)',
+                            'shape': 'rectangle',
+                            'background-color': '#FFFFFF', /* Default node color: white */
+                            'border-color': '#228B22',
+                            'border-width': 2,
+                            'font-size':'30px',
+                            'color': '#006400',
+                            'padding': '10px',
+                            'text-valign': 'center',
+                            'text-halign': 'center',
+                            'width': 'label',
+                            'height': 'label',
+                            'text-max-width': 200,
+                            'overflow': 'hidden',
+                            'text-wrap': 'wrap'
+                        }
+                    },
+                    {
+                        selector: 'edge',
+                        style: {
+                            'width': 3,
+                            'line-color':'#658a65',
+                            'curve-style': 'bezier',
+                            'font-size': '12px',
+                            'text-rotation': 'autorotate',
+                            'text-background-color': '#FFFFFF',
+                            'text-background-opacity': 0.7,
+                            'display': 'element' // Ensure edges are displayed
+                        }
+                    }
+                ]
+            });
+            // Function to get prerequisites of a node.
+            function getPrerequisites(nodeId, graph) {
+                    const prereqNodes = new Set();
+                    const prereqEdges = new Set();
+
+                    function findPrereqs(node) {
+                        prereqNodes.add(node.id());
+                        const incomers = graph.collection('edge[target = "' + node.id() + '"]');
+                        incomers.forEach(edge => {
+                            prereqEdges.add(edge.id());
+                            const sourceNode = edge.source();
+                            if (sourceNode && !prereqNodes.has(sourceNode.id())) {
+                                findPrereqs(sourceNode);
+                            }
+                        });
+                    }
+
+                    const startNode = graph.getElementById(nodeId);
+                    if (startNode) {
+                        findPrereqs(startNode);
+                    }
+                    return { nodes: prereqNodes, edges: prereqEdges };
+            }
+                            // Get the preview container and iframe
+            const previewContainer = document.getElementById('preview-container');
+            const previewFrame = document.getElementById('preview-frame');
+
+            // Event listener for node click
+            cy.on('tap', 'node', function (evt) {
+
+                const clickedNode = evt.target;
+                const clickedNodeId = clickedNode.id();
+                // Check if the shift key is pressed
+                if (evt.originalEvent.shiftKey) {
+                    console.log("Shift key:", evt);
+                    const url = clickedNode.data('url');
+                    if (url) {
+                        console.log("Is url");
+                        // Display the preview
+                        if (previewContainer) {
+                            console.log("PreviewContainer");
+                            previewContainer.style.display = 'block';
+                            previewFrame.src = url;
+                        }
+                    }
+                } else {
+                const { nodes: prereqNodeIds, edges: prereqEdgeIds } = getPrerequisites(clickedNodeId, cy);
+                // Reset previous highlighting
+                cy.elements().removeClass('highlighted');
+                cy.elements().removeClass('highlighted-edge');
+                // Reset all node colors to default
+                cy.nodes().style('background-color', '#FFFFFF'); // Reset to default white
+
+                // Highlight nodes
+                prereqNodeIds.forEach(nodeId => {
+                    const node = cy.getElementById(nodeId);
+                    if (node) {
+                        node.addClass('highlighted');
+                        node.style('background-color', '#90EE90'); // Color the prerequisites green
+                    }
+                });
+                // Highlight edges
+                prereqEdgeIds.forEach(edgeId => {
+                    const edge = cy.getElementById(edgeId);
+                    if (edge) {
+                        edge.addClass('highlighted-edge');
+                    }
+                });
+                }
+            });
+                
+
+        } catch (error) {
+            console.error('Error fetching or rendering graph:', error);
+        }
+    }
+
+    // Call the function to render the graph when the page loads
+    renderGraph();
+</script>
+</body>
+</html>

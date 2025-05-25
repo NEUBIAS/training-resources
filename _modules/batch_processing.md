@@ -4,7 +4,7 @@ layout: module
 tags: ["scripting"]
 prerequisites:
   - "[Strings and paths](../string_concat)"
-  - "[For loops](../script_for_loop)"
+  - "[Loops](../script_for_loop)"
 objectives:
   - "Automatically process a number of images"
 motivation: |

@@ -3,7 +3,7 @@ title: Deep learning instance segmentation
 layout: module
 tags: ["draft"]
 prerequisites:
-  - "[Image segmentation](../segmentation)"
+  - "[Segmentation](../segmentation)"
   - "[Connected component labeling](../connected_components)"
 objectives:
   - Run a deep learning model for instance segmentation
