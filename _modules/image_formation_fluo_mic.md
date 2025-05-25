@@ -37,7 +37,7 @@ assessment: >
     {: .solution}
 
 learn_next:
-  - "[Intensity measurements of fluorescent objects](../measure_intensities)"
+  - "[Object intensity measurements](../measure_intensities)"
 
 external_links:
 ---

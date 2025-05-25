@@ -1,5 +1,5 @@
 ---
-title: Template
+title: Table file formats (DRAFT)
 layout: module
 tags: ["draft"]
 prerequisites:
@@ -32,7 +32,7 @@ assessment: >
     {: .solution}
 
 learn_next:
-  - "[Automatic threshold for binarization](../auto_threshold)"
+  - "[TODO](../auto_threshold)"
 
 external_links:
   - "[Wikipedia: Binary image](https://en.wikipedia.org/wiki/Binary_image)"

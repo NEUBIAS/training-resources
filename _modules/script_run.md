@@ -60,8 +60,8 @@ assessment: >
     {: .solution}
 
 learn_next:
-  - "[Script recording](../script_record)"
-  - "[Using variables](../script_variables)"
+  - "[Recording a script](../script_record)"
+  - "[Variables](../script_variables)"
 
 external_links:
   - "[ImageJ Macro Functions](https://imagej.nih.gov/ij/developer/macro/functions.html)"

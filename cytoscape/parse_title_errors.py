@@ -119,15 +119,12 @@ if __name__ == "__main__":
 
     files_data = process_markdown_files(markdown_directory)
     if files_data:
-        print("--- All Parsed Files Data ---")
-        print(json.dumps(files_data, indent=2)) # Nicely formatted output
-
-        print("\n--- Cross-referencing Titles ---")
-        print("\n--- Cross-referencing Titles ---")
         for current_path, data in files_data.items():
             current_module_title = data.get('title', 'NO_TITLE')
             #print(current_module_title)
             prerequisites = data.get('prerequisites', [])
+            learn_next = data.get('learn_next', [])
+
             if prerequisites is not None  and len(prerequisites) > 0:
                 for prereq_entry in prerequisites:
                     #print(prereq_entry)
@@ -141,9 +138,16 @@ if __name__ == "__main__":
                             print(f"  Referenced Module: {linked_path}")
                             print(f"  Title in Link: '{linked_title}'")
                             print(f"  Actual Module Title: '{actual_prereq_title}'")
-
-            #data.get('prerequisites', [])
-            # Check prerequisites
-            #for prereq_entry in data.get('prerequisites', []):
-            #    print(prereq_entry)
-                #linked_path, linked_title = extract_link_and_title(prereq_entry)
+            if learn_next is not None  and len(learn_next) > 0:
+                for learn_next_entry in learn_next:
+                    #print(prereq_entry)
+                    linked_path, linked_title = extract_link_and_title(learn_next_entry)
+                    if 'TODO' in linked_title:
+                        continue
+                    if linked_path in files_data: 
+                        actual_learn_next_title = files_data[linked_path].get('title', 'NO_TITLE')
+                        if actual_learn_next_title != linked_title:
+                            print(f"Mismatch in learn_next for '{current_path}':")
+                            print(f"  Referenced Module: {linked_path}")
+                            print(f"  Title in Link: '{linked_title}'")
+                            print(f"  Actual Module Title: '{actual_learn_next_title}'")

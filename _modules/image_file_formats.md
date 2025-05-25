@@ -2,9 +2,9 @@
 title: Image data formats
 layout: module
 prerequisites:
-  - "[Basic properties of images and pixels](../pixels)"
+  - "[Digital image basics](../pixels)"
   - "[Data types](../datatypes)"
-  - "[Image calibration](../spatial_calibration)"
+  - "[Spatial calibration](../spatial_calibration)"
 objectives:
   - Open various image files formats
   - Understand the difference between image data and metadata

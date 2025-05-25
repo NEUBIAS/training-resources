@@ -62,7 +62,7 @@ assessment: >
     {: .solution}
 
 learn_next:
-   - "[Measure object shapes](measure_shapes)"
+   - "[Object shape measurements](measure_shapes)"
 external_links:
   - "[Wikipedia: Connected components labeling](https://en.wikipedia.org/wiki/Connected-component_labeling)"
 ---

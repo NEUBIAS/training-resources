@@ -2,7 +2,7 @@
 title: Segmentation
 layout:  module
 prerequisites:
-  - "[Basic properties of images and pixels](../pixels)"
+  - "[Digital image basics](../pixels)"
 objectives:
   - "Understand the difference between instance and semantic segmentation"
 motivation: |
@@ -20,7 +20,7 @@ figure_legend: Left - Semantic segmentation of nuclei, membranes and mitochondri
 
 
 learn_next:
-  - "[Image thresholding](../binarization)"
+  - "[Thresholding](../binarization)"
 
 external_links:
   - "[Wikipedia: Segmentation](https://en.wikipedia.org/wiki/Image_segmentation#Groups_of_image_segmentation)"

@@ -37,7 +37,7 @@ assessment: >
     {: .solution}
 
 learn_next:
-  - "[Automatic threshold for binarization](../auto_threshold)"
+  - "[Automatic thresholding](../auto_threshold)"
 
 external_links:
   - "[Wikipedia: Similarity transformation](https://en.wikipedia.org/wiki/Similarity_(geometry))"

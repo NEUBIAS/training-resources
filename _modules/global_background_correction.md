@@ -3,7 +3,7 @@ title:     Global background correction
 layout:    module
 
 prerequisites:
-  - "[Basic properties of images and pixels](../pixels)"
+  - "[Digital image basics](../pixels)"
   - "[Data types](../datatypes)"
 
 objectives:

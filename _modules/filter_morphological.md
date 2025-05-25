@@ -7,7 +7,7 @@ prerequisites:
   - "[Segmentation](../segmentation)"
   - "[Median filter](../median_filter)"
   - "[Connected component labeling](../connected_components)"
-  - "[Neighbourhood filters](../filter_neighbourhood)"
+  - "[Neighborhood filters](../filter_neighbourhood)"
 
 objectives:
   - "Understand how to design morphological filters using rank filters"

@@ -3,7 +3,7 @@ title: Distance transform
 layout: module
 tags: [""]
 prerequisites:
-  - "[Basic properties of images and pixels](../pixels)"
+  - "[Digital image basics](../pixels)"
   - "[Data types](../datatypes)"
   - "[Segmentation](../segmentation)"
 objectives:

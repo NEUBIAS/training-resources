@@ -48,7 +48,7 @@ assessment: >
     {: .solution}
 
 learn_next:
-  - "[Morphological filtering](../filter_morphological)"
+  - "[Morphological filters](../filter_morphological)"
   
 external_links:
 ---

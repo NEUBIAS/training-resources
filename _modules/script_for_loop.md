@@ -69,7 +69,7 @@ assessment: |
       > The correct answer is a)
       {: .solution}
 learn_next:
-  - "[String and paths](../string_concat)"
+  - "[Strings and paths](../string_concat)"
   - "[Functions](../script_functions)"
   - "[Batch processing](../batch_processing)"
 

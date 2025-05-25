@@ -2,7 +2,7 @@
 title:     Volume slicing
 layout:    module
 prerequisites:
-  - "[Basic properties of images and pixels](../pixels)"
+  - "[Digital image basics](../pixels)"
   - "[Spatial calibration](../spatial_calibration)"
 objectives:
 - "Create slice views of volumetric image data"
@@ -51,8 +51,8 @@ assessment: >
     {: .solution}
 
 learn_next:
-  - "[Projections of 3D data](../projections)"
-  - "[Volume viewer](../volume_viewer)"
+  - "[Projections](../projections)"
+  - "[Volume rendering](../volume_viewer)"
 
 external_links:
   - "[ImageJ: Z-functions](https://imagej.net/imaging/z-functions)"

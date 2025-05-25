@@ -2,7 +2,7 @@
 title: Cloud based batch analysis
 layout: module
 prerequisites:
-  - "[Bioimage interactive analysis ](../cloud_based_interactive_analysis)"
+  - "[Cloud based interactive analysis](../cloud_based_interactive_analysis)"
 objectives:
   - "Understand how to leverage cloud computing platforms, such as Galaxy, for efficient bioimage batch analysis"
 
