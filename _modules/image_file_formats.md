@@ -59,6 +59,8 @@ assessment: >
     {: .solution}
 
 learn_next:
+  - "[OME-TIF](../ome-tif)"
+  - "[Big image data formats](../big_image_file_formats)"
 
 external_links:
   - "[Bio-Formats](https://www.openmicroscopy.org/bio-formats/)"

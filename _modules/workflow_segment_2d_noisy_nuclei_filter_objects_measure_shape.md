@@ -6,7 +6,7 @@ prerequisites:
   - "[Neighborhood filters](../filter_neighbourhood)"
   - "[Thresholding](../binarization)"
   - "[Connected component labeling](../connected_components)"
-  - "[Object filtering](../filter_objects)"
+  - "[Object filtering](../object_filtering)"
   - "[Object shape measurements](../measure_shapes)"
 objectives:
   - "Create an image analysis workflow comprising image denoising and object filtering."

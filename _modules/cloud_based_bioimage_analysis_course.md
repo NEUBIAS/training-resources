@@ -1,6 +1,7 @@
 ---
 title: Cloud based bioimage analysis course overview
 layout: module
+tags: ["course"]
 prerequisites:
   - "Basic knowledge of desktop based image analysis tools, e.g. Fiji"
   - "Basic shell command-line skills"

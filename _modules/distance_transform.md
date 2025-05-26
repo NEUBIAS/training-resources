@@ -6,6 +6,8 @@ prerequisites:
   - "[Digital image basics](../pixels)"
   - "[Data types](../datatypes)"
   - "[Segmentation](../segmentation)"
+  - "[Thresholding](../binarization)"
+  - "[Neighborhood filters](../filter_neighbourhood)"
 objectives:
   - Understand how to use distance transform to quantify morphology of objects 
   - Understand how to use distance transform to quantify distance between objects

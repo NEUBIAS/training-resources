@@ -47,6 +47,7 @@ assessment: >
 learn_next:
   - "[Nuclei segmentation and shape measurement](../workflow_segment_2d_nuclei_measure_shape)"
   - "[Object intensity measurements](../measure_intensities)"
+  - "[Object filtering](../object_filtering)"
 
 external_links:
   - "[ImageJ: Measurements](https://imagej.net/ij/docs/menus/analyze.html#set)"

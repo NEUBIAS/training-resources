@@ -5,7 +5,7 @@ tags: ["Rank filters","Dilation","Erosion","Opening"]
 
 prerequisites:
   - "[Segmentation](../segmentation)"
-  - "[Median filter](../median_filter)"
+  - "[Thresholding](../binarization)"
   - "[Connected component labeling](../connected_components)"
   - "[Neighborhood filters](../filter_neighbourhood)"
 

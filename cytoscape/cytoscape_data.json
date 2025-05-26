@@ -5,7 +5,7 @@
         "data": {
           "id": "workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape",
           "label": "2D noisy object segmentation and filtering",
-          "file_path": "workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape"
+          "url": "../workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape"
         }
       },
       {
@@ -13,392 +13,349 @@
           "id": "big_image_file_formats",
           "label": "Big image data formats",
           "url": "../big_image_file_formats"
-          
         }
       },
       {
         "data": {
           "id": "script_run",
           "label": "Running a script",
-          "file_path": "script_run"
+          "url": "../script_run"
         }
       },
       {
         "data": {
           "id": "spatial_calibration",
           "label": "Spatial calibration",
-          "file_path": "spatial_calibration"
+          "url": "../spatial_calibration"
         }
       },
       {
         "data": {
           "id": "object_filtering",
           "label": "Object filtering",
-          "file_path": "object_filtering"
+          "url": "../object_filtering"
         }
       },
       {
         "data": {
           "id": "lut",
           "label": "Lookup tables",
-          "file_path": "lut"
-        }
-      },
-      {
-        "data": {
-          "id": "basic_image_analysis_course",
-          "label": "Basic image analysis course overview",
-          "file_path": "basic_image_analysis_course"
+          "url": "../lut"
         }
       },
       {
         "data": {
           "id": "batch_processing",
           "label": "Batch processing",
-          "file_path": "batch_processing"
+          "url": "../batch_processing"
         }
       },
       {
         "data": {
           "id": "script_functions",
           "label": "Functions",
-          "file_path": "script_functions"
+          "url": "../script_functions"
         }
       },
       {
         "data": {
           "id": "string_concat",
           "label": "Strings and paths",
-          "file_path": "string_concat"
+          "url": "../string_concat"
         }
       },
       {
         "data": {
           "id": "volume_viewer",
           "label": "Volume rendering",
-          "file_path": "volume_viewer"
+          "url": "../volume_viewer"
         }
       },
       {
         "data": {
           "id": "output_saving",
           "label": "Output saving",
-          "file_path": "output_saving"
+          "url": "../output_saving"
         }
       },
       {
         "data": {
           "id": "watershed",
           "label": "Watershed",
-          "file_path": "watershed"
-        }
-      },
-      {
-        "data": {
-          "id": "filter_objects",
-          "label": "Object filtering",
-          "file_path": "filter_objects"
+          "url": "../watershed"
         }
       },
       {
         "data": {
           "id": "multichannel_images",
           "label": "Multichannel images",
-          "file_path": "multichannel_images"
+          "url": "../multichannel_images"
         }
       },
       {
         "data": {
           "id": "datatypes",
           "label": "Data types",
-          "file_path": "datatypes"
+          "url": "../datatypes"
         }
       },
       {
         "data": {
           "id": "fetching_user_input",
           "label": "Handling input parameters",
-          "file_path": "fetching_user_input"
+          "url": "../fetching_user_input"
         }
       },
       {
         "data": {
           "id": "batch_qc_and_exploration",
           "label": "Batch exploration of segmentation results",
-          "file_path": "batch_qc_and_exploration"
+          "url": "../batch_qc_and_exploration"
         }
       },
       {
         "data": {
           "id": "median_filter",
           "label": "Median filter",
-          "file_path": "median_filter"
+          "url": "../median_filter"
         }
       },
       {
         "data": {
           "id": "volume_slicing",
           "label": "Volume slicing",
-          "file_path": "volume_slicing"
+          "url": "../volume_slicing"
         }
       },
       {
         "data": {
           "id": "workflow_nuclei_and_cells_segmentation",
           "label": "Nuclei and cells segmentation",
-          "file_path": "workflow_nuclei_and_cells_segmentation"
+          "url": "../workflow_nuclei_and_cells_segmentation"
         }
       },
       {
         "data": {
           "id": "segmentation",
           "label": "Segmentation",
-          "file_path": "segmentation"
+          "url": "../segmentation"
         }
       },
       {
         "data": {
           "id": "skeletonization",
           "label": "Skeletonization",
-          "file_path": "skeletonization"
+          "url": "../skeletonization"
         }
       },
       {
         "data": {
           "id": "filter_neighbourhood",
           "label": "Neighborhood filters",
-          "file_path": "filter_neighbourhood"
+          "url": "../filter_neighbourhood"
         }
       },
       {
         "data": {
           "id": "script_variables",
           "label": "Variables",
-          "file_path": "script_variables"
+          "url": "../script_variables"
         }
       },
       {
         "data": {
           "id": "correlative_image_rendering",
           "label": "Correlative image rendering",
-          "file_path": "correlative_image_rendering"
+          "url": "../correlative_image_rendering"
         }
       },
       {
         "data": {
           "id": "coding_with_llms",
           "label": "Coding with LLMs",
-          "file_path": "coding_with_llms"
+          "url": "../coding_with_llms"
         }
       },
       {
         "data": {
           "id": "cloud_based_interactive_analysis",
           "label": "Cloud based interactive analysis",
-          "file_path": "cloud_based_interactive_analysis"
-        }
-      },
-      {
-        "data": {
-          "id": "basic_batch_analysis_course",
-          "label": "Basic batch analysis course overview",
-          "file_path": "basic_batch_analysis_course"
+          "url": "../cloud_based_interactive_analysis"
         }
       },
       {
         "data": {
           "id": "ome_zarr",
           "label": "OME-Zarr",
-          "file_path": "ome_zarr"
+          "url": "../ome_zarr"
         }
       },
       {
         "data": {
           "id": "script_record",
           "label": "Recording a script",
-          "file_path": "script_record"
+          "url": "../script_record"
         }
       },
       {
         "data": {
           "id": "projections",
           "label": "Projections",
-          "file_path": "projections"
+          "url": "../projections"
         }
       },
       {
         "data": {
           "id": "workflow_segment_2d_nuclei_measure_shape",
           "label": "Nuclei segmentation and shape measurement",
-          "file_path": "workflow_segment_2d_nuclei_measure_shape"
+          "url": "../workflow_segment_2d_nuclei_measure_shape"
         }
       },
       {
         "data": {
           "id": "image_inspection_and_presentation",
           "label": "Quantitative image inspection and presentation",
-          "file_path": "image_inspection_and_presentation"
+          "url": "../image_inspection_and_presentation"
         }
       },
       {
         "data": {
           "id": "ome_tiff",
           "label": "OME-TIFF",
-          "file_path": "ome_tiff"
+          "url": "../ome_tiff"
         }
       },
       {
         "data": {
           "id": "pixels",
           "label": "Digital image basics",
-          "file_path": "pixels"
+          "url": "../pixels"
         }
       },
       {
         "data": {
           "id": "filter_statistical",
           "label": "Statistical (rank) filters",
-          "file_path": "filter_statistical"
+          "url": "../filter_statistical"
         }
       },
       {
         "data": {
           "id": "measure_intensities",
           "label": "Object intensity measurements",
-          "file_path": "measure_intensities"
+          "url": "../measure_intensities"
         }
       },
       {
         "data": {
           "id": "cloud_based_batch_analysis",
           "label": "Cloud based batch analysis",
-          "file_path": "cloud_based_batch_analysis"
+          "url": "../cloud_based_batch_analysis"
         }
       },
       {
         "data": {
           "id": "filter_morphological",
           "label": "Morphological filters",
-          "file_path": "filter_morphological"
+          "url": "../filter_morphological"
         }
       },
       {
         "data": {
           "id": "global_background_correction",
           "label": "Global background correction",
-          "file_path": "global_background_correction"
+          "url": "../global_background_correction"
         }
       },
       {
         "data": {
           "id": "script_for_loop",
           "label": "Loops",
-          "file_path": "script_for_loop"
-        }
-      },
-      {
-        "data": {
-          "id": "image_data_formats_course",
-          "label": "Image data formats course",
-          "file_path": "image_data_formats_course"
+          "url": "../script_for_loop"
         }
       },
       {
         "data": {
           "id": "filter_convolution",
           "label": "Convolutional filters",
-          "file_path": "filter_convolution"
+          "url": "../filter_convolution"
         }
       },
       {
         "data": {
           "id": "local_background_correction",
           "label": "Local background correction",
-          "file_path": "local_background_correction"
+          "url": "../local_background_correction"
         }
       },
       {
         "data": {
           "id": "tool_installation",
           "label": "Tool installation",
-          "file_path": "tool_installation"
+          "url": "../tool_installation"
         }
       },
       {
         "data": {
           "id": "distance_transform",
           "label": "Distance transform",
-          "file_path": "distance_transform"
-        }
-      },
-      {
-        "data": {
-          "id": "cloud_based_bioimage_analysis_course",
-          "label": "Cloud based bioimage analysis course overview",
-          "file_path": "cloud_based_bioimage_analysis_course"
+          "url": "../distance_transform"
         }
       },
       {
         "data": {
           "id": "measure_shapes",
           "label": "Object shape measurements",
-          "file_path": "measure_shapes"
-        }
-      },
-      {
-        "data": {
-          "id": "fetch_user_input",
-          "label": "fetch_user_input",
-          "file_path": "fetch_user_input"
+          "url": "../measure_shapes"
         }
       },
       {
         "data": {
           "id": "auto_threshold",
           "label": "Automatic thresholding",
-          "file_path": "auto_threshold"
+          "url": "../auto_threshold"
         }
       },
       {
         "data": {
           "id": "binarization",
           "label": "Thresholding",
-          "file_path": "binarization"
+          "url": "../binarization"
         }
       },
       {
         "data": {
           "id": "image_formation_fluo_mic",
           "label": "Fluorescence microscopy image formation",
-          "file_path": "image_formation_fluo_mic"
+          "url": "../image_formation_fluo_mic"
         }
       },
       {
         "data": {
           "id": "image_file_formats",
           "label": "Image data formats",
-          "file_path": "image_file_formats"
+          "url": "../image_file_formats"
         }
       },
       {
         "data": {
           "id": "connected_components",
           "label": "Connected component labeling",
-          "file_path": "connected_components"
+          "url": "../connected_components"
         }
       },
       {
         "data": {
           "id": "multidimensional_image_basics",
           "label": "N-dimensional images",
-          "file_path": "multidimensional_image_basics"
+          "url": "../multidimensional_image_basics"
         }
       }
     ],
     "edges": [
       {
         "data": {
-          "source": "filter_objects",
+          "source": "object_filtering",
           "target": "workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape",
           "label": "Dependency"
         }
@@ -407,6 +364,13 @@
         "data": {
           "source": "filter_neighbourhood",
           "target": "workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape",
+          "label": "Dependency"
+        }
+      },
+      {
+        "data": {
+          "source": "image_file_formats",
+          "target": "big_image_file_formats",
           "label": "Dependency"
         }
       },
@@ -440,22 +404,29 @@
       },
       {
         "data": {
-          "source": "script_functions",
+          "source": "script_for_loop",
           "target": "batch_processing",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "script_for_loop",
+          "source": "script_variables",
           "target": "script_functions",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "script_for_loop",
+          "source": "script_variables",
           "target": "string_concat",
+          "label": "Dependency"
+        }
+      },
+      {
+        "data": {
+          "source": "volume_slicing",
+          "target": "volume_viewer",
           "label": "Dependency"
         }
       },
@@ -489,21 +460,14 @@
       },
       {
         "data": {
-          "source": "measure_shapes",
-          "target": "filter_objects",
-          "label": "Dependency"
-        }
-      },
-      {
-        "data": {
-          "source": "lut",
+          "source": "datatypes",
           "target": "multichannel_images",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "datatypes",
+          "source": "lut",
           "target": "multichannel_images",
           "label": "Dependency"
         }
@@ -538,7 +502,7 @@
       },
       {
         "data": {
-          "source": "multidimensional_image_basics",
+          "source": "spatial_calibration",
           "target": "volume_slicing",
           "label": "Dependency"
         }
@@ -559,13 +523,6 @@
       },
       {
         "data": {
-          "source": "binarization",
-          "target": "skeletonization",
-          "label": "Dependency"
-        }
-      },
-      {
-        "data": {
           "source": "filter_morphological",
           "target": "skeletonization",
           "label": "Dependency"
@@ -573,7 +530,7 @@
       },
       {
         "data": {
-          "source": "binarization",
+          "source": "datatypes",
           "target": "filter_neighbourhood",
           "label": "Dependency"
         }
@@ -615,7 +572,7 @@
       },
       {
         "data": {
-          "source": "volume_slicing",
+          "source": "multidimensional_image_basics",
           "target": "projections",
           "label": "Dependency"
         }
@@ -636,7 +593,7 @@
       },
       {
         "data": {
-          "source": "pixels",
+          "source": "image_file_formats",
           "target": "ome_tiff",
           "label": "Dependency"
         }
@@ -650,14 +607,7 @@
       },
       {
         "data": {
-          "source": "image_formation_fluo_mic",
-          "target": "measure_intensities",
-          "label": "Dependency"
-        }
-      },
-      {
-        "data": {
-          "source": "measure_shapes",
+          "source": "connected_components",
           "target": "measure_intensities",
           "label": "Dependency"
         }
@@ -671,13 +621,6 @@
       },
       {
         "data": {
-          "source": "local_background_correction",
-          "target": "filter_morphological",
-          "label": "Dependency"
-        }
-      },
-      {
-        "data": {
           "source": "connected_components",
           "target": "filter_morphological",
           "label": "Dependency"
@@ -685,14 +628,7 @@
       },
       {
         "data": {
-          "source": "filter_statistical",
-          "target": "filter_morphological",
-          "label": "Dependency"
-        }
-      },
-      {
-        "data": {
-          "source": "segmentation",
+          "source": "filter_neighbourhood",
           "target": "filter_morphological",
           "label": "Dependency"
         }
@@ -734,14 +670,14 @@
       },
       {
         "data": {
-          "source": "segmentation",
+          "source": "filter_neighbourhood",
           "target": "distance_transform",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "datatypes",
+          "source": "binarization",
           "target": "distance_transform",
           "label": "Dependency"
         }
@@ -755,15 +691,15 @@
       },
       {
         "data": {
-          "source": "coding_with_llms",
+          "source": "binarization",
           "target": "auto_threshold",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "binarization",
-          "target": "auto_threshold",
+          "source": "datatypes",
+          "target": "binarization",
           "label": "Dependency"
         }
       },
@@ -777,7 +713,7 @@
       {
         "data": {
           "source": "datatypes",
-          "target": "binarization",
+          "target": "image_file_formats",
           "label": "Dependency"
         }
       },
@@ -790,20 +726,6 @@
       },
       {
         "data": {
-          "source": "datatypes",
-          "target": "image_file_formats",
-          "label": "Dependency"
-        }
-      },
-      {
-        "data": {
-          "source": "lut",
-          "target": "connected_components",
-          "label": "Dependency"
-        }
-      },
-      {
-        "data": {
           "source": "binarization",
           "target": "connected_components",
           "label": "Dependency"
@@ -811,8 +733,8 @@
       },
       {
         "data": {
-          "source": "multichannel_images",
-          "target": "multidimensional_image_basics",
+          "source": "lut",
+          "target": "connected_components",
           "label": "Dependency"
         }
       },

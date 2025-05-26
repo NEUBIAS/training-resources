@@ -22,8 +22,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            border: 1px solid #ccc;
-            background-color: #f0f0f0;
+            border: 0px solid #ccc;
+            background-color: #ffffff;
         }
         .highlighted {
             background-color: #90EE90 !important;
@@ -80,7 +80,7 @@
                         style: {
                             'label': 'data(label)',
                             'shape': 'rectangle',
-                            'background-color': '#FFFFFF', /* Default node color: white */
+                            'background-color': '#e9e7e7', /* Default node color: white */
                             'border-color': '#228B22',
                             'border-width': 2,
                             'font-size':'30px',
@@ -98,13 +98,17 @@
                     {
                         selector: 'edge',
                         style: {
-                            'width': 3,
+                            'width': 5,
                             'line-color':'#658a65',
-                            'curve-style': 'bezier',
+                            'curve-style': 'unbundled-bezier',
+                            'control-point-distances': 40, // A single value for a single control point. Adjust as needed.
+                            'control-point-weights': 0.5,
                             'font-size': '12px',
                             'text-rotation': 'autorotate',
                             'text-background-color': '#FFFFFF',
                             'text-background-opacity': 0.7,
+                            'target-arrow-shape': 'triangle',
+                            'arrow-scale': 1,
                             'display': 'element' // Ensure edges are displayed
                         }
                     }
@@ -134,8 +138,6 @@
                     return { nodes: prereqNodes, edges: prereqEdges };
             }
                             // Get the preview container and iframe
-            const previewContainer = document.getElementById('preview-container');
-            const previewFrame = document.getElementById('preview-frame');
 
             // Event listener for node click
             cy.on('tap', 'node', function (evt) {
@@ -144,16 +146,14 @@
                 const clickedNodeId = clickedNode.id();
                 // Check if the shift key is pressed
                 if (evt.originalEvent.shiftKey) {
-                    console.log("Shift key:", evt);
                     const url = clickedNode.data('url');
                     if (url) {
                         console.log("Is url");
                         // Display the preview
-                        if (previewContainer) {
-                            console.log("PreviewContainer");
-                            previewContainer.style.display = 'block';
-                            previewFrame.src = url;
-                        }
+    
+                        // Open the URL in the same window
+                        window.open(url, '_self').focus();
+                        
                     }
                 } else {
                 const { nodes: prereqNodeIds, edges: prereqEdgeIds } = getPrerequisites(clickedNodeId, cy);
@@ -161,7 +161,7 @@
                 cy.elements().removeClass('highlighted');
                 cy.elements().removeClass('highlighted-edge');
                 // Reset all node colors to default
-                cy.nodes().style('background-color', '#FFFFFF'); // Reset to default white
+                cy.nodes().style('background-color', '#e9e7e7'); // Reset to default white
 
                 // Highlight nodes
                 prereqNodeIds.forEach(nodeId => {

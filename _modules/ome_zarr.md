@@ -3,6 +3,7 @@ title: OME-Zarr
 layout: module
 tags: ["format"]
 prerequisites:
+  - "[Image data formats](../image_file_formats)"
   - "[Big image data formats](../big_image_file_formats)"
 objectives:
   - Understand the OME-Zarr image file format
