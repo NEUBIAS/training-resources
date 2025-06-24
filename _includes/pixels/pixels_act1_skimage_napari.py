@@ -66,9 +66,8 @@ print(image.min(), image.max())
 # Get a handle on the image array from napari 
 # and check whether it is the same that we originally added
 image_from_napari = viewer.layers['image'].data
-print(image_from_napari is image) # it is the same object, not just a copy
-
-
+print(np.array_equal(image_from_napari, image)) # the two images have identical entries
+print(image_from_napari is image) # they are even the same object, not just a copy
 
 # %%
 # Compute and show the image histogram
@@ -79,6 +78,6 @@ plt.hist(image.flatten(), bins=np.arange(image.min(), image.max() + 1))
 plt.show() # instead, we could end the above line with ";"
 
 # %% 
-# Close the viewer (CI test requires this)
+# Close (CI test requires this)
 viewer.close()
 plt.close('all')
