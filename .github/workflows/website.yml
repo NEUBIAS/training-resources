@@ -34,6 +34,7 @@ jobs:
       - name: Create the cytoscape network
         run: |
           python3 -m .cytoscape/parse_for_cytoscape_noduplicate_edges_transitive_prerequisites.py 
+     
       - name: Checkout the lesson
         uses: actions/checkout@master
         with:
