@@ -7,6 +7,9 @@
 
 
 // Get input and output directories from the user
+// Note that one could also just specify the folders in the script, without the GUI elements
+// Pro: Better for documentation 
+// Con: Maybe less user friendly
 inputDir = getDirectory("Choose Input Directory");
 if (inputDir == "") exit("User cancelled input directory selection.");
 outputDir = getDirectory("Choose Output Directory");

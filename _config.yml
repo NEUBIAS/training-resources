@@ -74,6 +74,7 @@ module_order:
 - deep_learning_run_segmentation
 - manual_segmentation
 - workflow_golgi_per_cell
+- smart_microscopy_low_zoom_high_zoom
 
 # Sites
 repository: <USERNAME>/<PROJECT>
