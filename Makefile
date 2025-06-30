@@ -122,8 +122,7 @@ HTML_DST = \
   $(patsubst _episodes/%.md,${DST}/%/index.html,$(sort $(wildcard _episodes/*.md))) \
   ${DST}/reference.html \
   $(patsubst _extras/%.md,${DST}/%/index.html,$(sort $(wildcard _extras/*.md))) \
-  ${DST}/license/index.html \
-  ${DST}/cytoscape/cytoscape_model_network.html
+  ${DST}/license/index.html
 
 ## * install-rmd-deps : Install R packages dependencies to build the RMarkdown lesson
 install-rmd-deps:
