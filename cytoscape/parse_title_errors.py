@@ -111,6 +111,37 @@ def process_markdown_files(directory):
     return files_data
 
 
+def order_modules_by_title(files_data):
+    """
+    Orders module paths based on their titles alphabetically.
+    Modules with 'Draft' in their tags are moved to the end.
+
+    Args:
+        files_data (dict): A dictionary where keys are module paths and values
+                           are dictionaries containing 'title' and 'tags'.
+
+    Returns:
+        list: A list of module paths, ordered by title, with Draft modules last.
+    """
+    # Create a list of (title, is_draft, path) tuples
+    modules_for_sorting = []
+    for path, data in files_data.items():
+        title = data.get('title', '')
+        # Ensure tags is a list and check if 'Draft' is in it (case-insensitive)
+        if data.get('tags') is None:
+            is_draft = True
+        else:
+            is_draft = 'Draft' in [tag.capitalize() for tag in data.get('tags', [])]
+        modules_for_sorting.append((title.lower(), is_draft, path)) # Sort by lowercased title
+
+    # Sort the list:
+    # 1. By 'is_draft' (False comes before True, so non-drafts come first)
+    # 2. Then by 'title' (alphabetically)
+    modules_for_sorting.sort(key=lambda x: (x[1], x[0]))
+
+    # Extract just the ordered paths
+    ordered_paths = [path for _, _, path in modules_for_sorting]
+    return ordered_paths
 
 if __name__ == "__main__":
     # Specify the directory containing your Markdown files.
@@ -118,6 +149,8 @@ if __name__ == "__main__":
     # changed to './' so it works in any directory
 
     files_data = process_markdown_files(markdown_directory)
+    print(order_modules_by_title(files_data))
+
     if files_data:
         for current_path, data in files_data.items():
             current_module_title = data.get('title', 'NO_TITLE')
