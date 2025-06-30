@@ -57,8 +57,6 @@ site : lesson-md
 	else \
 		echo "Warning: ./cytoscape/cyto.json not found. Skipping copy."; \
 	fi
-# Copy the generated JSON file to the output directory
-	cp ./cytoscape/cytoscape_data.json ${DST}/cytoscape/cytoscape_data.json
 
 ## * docker-serve     : use Docker to serve the site
 docker-serve :
