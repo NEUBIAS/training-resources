@@ -48,6 +48,10 @@ serve : lesson-md
 ## * site             : build website but do not run a server
 site : lesson-md
 	${JEKYLL} build
+	# Ensure the directory exists in the output
+    mkdir -p _site/cytoscape
+    # Copy the generated JSON file to the output directory
+    cp ./cytoscape/cytoscape_data.json _site/cytoscape/cytoscape_data.json
 
 ## * docker-serve     : use Docker to serve the site
 docker-serve :
