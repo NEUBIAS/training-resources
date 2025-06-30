@@ -13,9 +13,13 @@ jobs:
       run:
         shell: bash
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4 # Action to checkout your code
 
+      - name: Checkout the lesson
+        uses: actions/checkout@master
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha }}
+      
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -40,10 +44,4 @@ jobs:
           ls -l ./cytoscape/
         continue-on-error: true
       
-      - name: Checkout the lesson
-        uses: actions/checkout@master
-        with:
-          fetch-depth: 0
-          ref: ${{ github.event.pull_request.head.sha }}
-
       - run: make site
