@@ -68,7 +68,7 @@ To get a sense for how this material may be used we compiled a selection of cons
     <div class="course-meta">
       <span class="course-modules">2 modules</span>
       <span class="course-duration">1.5 hours</span>
-      <span class="course-credits">??? CP</span>
+      <span class="course-credits">0.05 CP</span>
     </div>
   </div>
   
@@ -79,7 +79,7 @@ To get a sense for how this material may be used we compiled a selection of cons
     <div class="course-meta">
       <span class="course-modules">2 modules</span>
       <span class="course-duration">3 hours</span>
-      <span class="course-credits">??? CP</span>
+      <span class="course-credits">0.1 CP</span>
     </div>
   </div>
 </div>
