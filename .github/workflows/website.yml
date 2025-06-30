@@ -46,5 +46,5 @@ jobs:
       
       - name: Make the site
         run: | 
-            make site
-            ls -l _site/cytoscape/
+          make site
+          ls -l _site/cytoscape/
