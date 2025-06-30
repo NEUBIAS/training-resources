@@ -37,6 +37,7 @@ jobs:
       - name: Create the cytoscape network
         run: |
           python3 ./cytoscape/generate_cytoscape_json.py 
+          ls -l ./cytoscape/
         continue-on-error: true
       
       - name: Checkout the lesson

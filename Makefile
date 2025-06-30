@@ -44,6 +44,14 @@ endif
 ## * serve            : render website and run a local server
 serve : lesson-md
 	${JEKYLL} serve
+	# Check if cyto.json exists before copying
+	 @if [ -f ./cytoscape/cytoscape_data.json ]; then \
+		echo "Copying ./cytoscape/cytoscape_data.json to ${DST}/cytoscape/cytoscape_data.json"; \
+		cp ./cytoscape/cytoscape_data.json ${DST}/cytoscape/cytoscape_data.json; \
+	else \
+		echo "Warning: ./cytoscape/cytoscape_data.json not found. Skipping copy."; \
+	fi
+	cp ./cytoscape/cytoscape_data.json ${DST}/cytoscape/cytoscape_data.json
 
 ## * site             : build website but do not run a server
 site : lesson-md
