@@ -7,7 +7,7 @@ prerequisites:
   - Know how to operate a microscope
   - "[Segmentation](../segmentation)" 
   - "[Thresholding](../binarization)" 
-  - "[Connected component labelling](../connected_components)" 
+  - "[Connected component labeling](../connected_components)" 
 objectives:
   - Understand basic feedback microscopy workflow for automatically finding target objects and re-imaging them at high resolution
   - Understand essential steps in constructing and testing such a workflow
@@ -42,7 +42,7 @@ assessment: >
     {: .solution}
 
 learn_next:
-  - "[Automatic threshold for binarization](../auto_threshold)"
+  - "[Automatic thresholding](../auto_threshold)"
 
 external_links:
   - "[Wikipedia: Binary image](https://en.wikipedia.org/wiki/Binary_image)"

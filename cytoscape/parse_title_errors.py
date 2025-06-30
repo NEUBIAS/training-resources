@@ -129,18 +129,27 @@ def order_modules_by_title(files_data):
         title = data.get('title', '')
         # Ensure tags is a list and check if 'Draft' is in it (case-insensitive)
         if data.get('tags') is None:
-            is_draft = True
+            is_draft = False
+            is_workflow = False
+            is_scripting = False
+            is_course = False
         else:
             is_draft = 'Draft' in [tag.capitalize() for tag in data.get('tags', [])]
-        modules_for_sorting.append((title.lower(), is_draft, path)) # Sort by lowercased title
+            is_workflow = 'Workflow' in [tag.capitalize() for tag in data.get('tags', [])]
+            is_scripting = 'Scripting' in [tag.capitalize() for tag in data.get('tags', [])]
+            is_course = 'Course' in [tag.capitalize() for tag in data.get('tags', [])]
+        if is_course:
+            continue    
+        
+        modules_for_sorting.append((title.lower(), is_scripting, is_workflow, is_draft,  path)) # Sort by lowercased title
 
     # Sort the list:
     # 1. By 'is_draft' (False comes before True, so non-drafts come first)
     # 2. Then by 'title' (alphabetically)
-    modules_for_sorting.sort(key=lambda x: (x[1], x[0]))
+    modules_for_sorting.sort(key=lambda x: (x[3], x[2], x[1], x[0]))
 
     # Extract just the ordered paths
-    ordered_paths = [path for _, _, path in modules_for_sorting]
+    ordered_paths = [path for _, _, _, _, path in modules_for_sorting]
     return ordered_paths
 
 if __name__ == "__main__":
@@ -149,8 +158,13 @@ if __name__ == "__main__":
     # changed to './' so it works in any directory
 
     files_data = process_markdown_files(markdown_directory)
-    print(order_modules_by_title(files_data))
+    ordered_module_paths = order_modules_by_title(files_data)
 
+    for path in ordered_module_paths:
+        # Extract just the filename/module name from the path
+        # Assuming paths look like 'path/to/module_name' and you want 'module_name'
+        module_name = os.path.basename(path) # This gets 'module_name' from 'path/to/module_name'
+        print(f"- {module_name}")
     if files_data:
         for current_path, data in files_data.items():
             current_module_title = data.get('title', 'NO_TITLE')

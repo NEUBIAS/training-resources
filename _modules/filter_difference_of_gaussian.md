@@ -1,6 +1,7 @@
 ---
-title:     Difference of Gaussian (DRAFT)
+title:     Difference of Gaussian
 layout:    module
+tags: ["draft"]
 ---
 
 ## Difference of Gaussian (DoG)

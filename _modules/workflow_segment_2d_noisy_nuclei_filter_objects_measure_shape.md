@@ -1,5 +1,5 @@
 ---
-title: "2D noisy object segmentation and filtering"
+title: "Noisy object segmentation and filtering in 2D"
 layout: module
 tags: ["workflow"]
 prerequisites:
