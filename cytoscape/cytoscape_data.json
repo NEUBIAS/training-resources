@@ -355,14 +355,14 @@
     "edges": [
       {
         "data": {
-          "source": "object_filtering",
+          "source": "filter_neighbourhood",
           "target": "workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "filter_neighbourhood",
+          "source": "object_filtering",
           "target": "workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape",
           "label": "Dependency"
         }
@@ -397,14 +397,14 @@
       },
       {
         "data": {
-          "source": "string_concat",
+          "source": "script_for_loop",
           "target": "batch_processing",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "script_for_loop",
+          "source": "string_concat",
           "target": "batch_processing",
           "label": "Dependency"
         }
@@ -656,14 +656,14 @@
       },
       {
         "data": {
-          "source": "median_filter",
+          "source": "projections",
           "target": "local_background_correction",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "projections",
+          "source": "median_filter",
           "target": "local_background_correction",
           "label": "Dependency"
         }
@@ -698,13 +698,6 @@
       },
       {
         "data": {
-          "source": "datatypes",
-          "target": "binarization",
-          "label": "Dependency"
-        }
-      },
-      {
-        "data": {
           "source": "segmentation",
           "target": "binarization",
           "label": "Dependency"
@@ -713,13 +706,20 @@
       {
         "data": {
           "source": "datatypes",
-          "target": "image_file_formats",
+          "target": "binarization",
           "label": "Dependency"
         }
       },
       {
         "data": {
           "source": "spatial_calibration",
+          "target": "image_file_formats",
+          "label": "Dependency"
+        }
+      },
+      {
+        "data": {
+          "source": "datatypes",
           "target": "image_file_formats",
           "label": "Dependency"
         }
