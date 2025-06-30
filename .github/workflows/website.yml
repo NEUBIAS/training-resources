@@ -37,7 +37,8 @@ jobs:
       - name: Create the cytoscape network
         run: |
           python3 generate_cytoscape_json.py 
-     
+        continue-on-error: true
+      
       - name: Checkout the lesson
         uses: actions/checkout@master
         with:
