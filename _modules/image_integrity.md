@@ -1,6 +1,7 @@
 ---
-title:  Image data integrity (DRAFT)
+title:  Image data integrity
 layout: module
+tags: ["draft"]
 ---
 
 #### Prerequisites
