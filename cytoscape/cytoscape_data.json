@@ -4,7 +4,7 @@
       {
         "data": {
           "id": "workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape",
-          "label": "2D noisy object segmentation and filtering",
+          "label": "Noisy object segmentation and filtering in 2D",
           "url": "../workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape"
         }
       },
@@ -160,6 +160,13 @@
           "id": "script_variables",
           "label": "Variables",
           "url": "../script_variables"
+        }
+      },
+      {
+        "data": {
+          "id": "smart_microscopy_low_zoom_high_zoom",
+          "label": "Smart microscopy targeted imaging",
+          "url": "../smart_microscopy_low_zoom_high_zoom"
         }
       },
       {
@@ -355,14 +362,14 @@
     "edges": [
       {
         "data": {
-          "source": "filter_neighbourhood",
+          "source": "object_filtering",
           "target": "workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "object_filtering",
+          "source": "filter_neighbourhood",
           "target": "workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape",
           "label": "Dependency"
         }
@@ -425,14 +432,14 @@
       },
       {
         "data": {
-          "source": "volume_slicing",
+          "source": "projections",
           "target": "volume_viewer",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "projections",
+          "source": "volume_slicing",
           "target": "volume_viewer",
           "label": "Dependency"
         }
@@ -446,13 +453,6 @@
       },
       {
         "data": {
-          "source": "connected_components",
-          "target": "watershed",
-          "label": "Dependency"
-        }
-      },
-      {
-        "data": {
           "source": "distance_transform",
           "target": "watershed",
           "label": "Dependency"
@@ -460,14 +460,21 @@
       },
       {
         "data": {
-          "source": "datatypes",
-          "target": "multichannel_images",
+          "source": "connected_components",
+          "target": "watershed",
           "label": "Dependency"
         }
       },
       {
         "data": {
           "source": "lut",
+          "target": "multichannel_images",
+          "label": "Dependency"
+        }
+      },
+      {
+        "data": {
+          "source": "datatypes",
           "target": "multichannel_images",
           "label": "Dependency"
         }
@@ -539,6 +546,13 @@
         "data": {
           "source": "script_run",
           "target": "script_variables",
+          "label": "Dependency"
+        }
+      },
+      {
+        "data": {
+          "source": "connected_components",
+          "target": "smart_microscopy_low_zoom_high_zoom",
           "label": "Dependency"
         }
       },
@@ -621,14 +635,14 @@
       },
       {
         "data": {
-          "source": "filter_neighbourhood",
+          "source": "connected_components",
           "target": "filter_morphological",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "connected_components",
+          "source": "filter_neighbourhood",
           "target": "filter_morphological",
           "label": "Dependency"
         }
@@ -656,13 +670,6 @@
       },
       {
         "data": {
-          "source": "median_filter",
-          "target": "local_background_correction",
-          "label": "Dependency"
-        }
-      },
-      {
-        "data": {
           "source": "projections",
           "target": "local_background_correction",
           "label": "Dependency"
@@ -670,14 +677,21 @@
       },
       {
         "data": {
-          "source": "binarization",
-          "target": "distance_transform",
+          "source": "median_filter",
+          "target": "local_background_correction",
           "label": "Dependency"
         }
       },
       {
         "data": {
           "source": "filter_neighbourhood",
+          "target": "distance_transform",
+          "label": "Dependency"
+        }
+      },
+      {
+        "data": {
+          "source": "binarization",
           "target": "distance_transform",
           "label": "Dependency"
         }
@@ -698,14 +712,14 @@
       },
       {
         "data": {
-          "source": "datatypes",
+          "source": "segmentation",
           "target": "binarization",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "segmentation",
+          "source": "datatypes",
           "target": "binarization",
           "label": "Dependency"
         }
@@ -726,14 +740,14 @@
       },
       {
         "data": {
-          "source": "binarization",
+          "source": "lut",
           "target": "connected_components",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "lut",
+          "source": "binarization",
           "target": "connected_components",
           "label": "Dependency"
         }
