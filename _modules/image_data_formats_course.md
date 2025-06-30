@@ -1,14 +1,17 @@
 ---
-title: Image data formats course
+title: Image data formats course overview
 layout: module
+tags: ["course"]
 prerequisites:
   - "Familiarity with using [Fiji](https://fiji.sc/)'s graphical user interface"
   - "[Basics of python scripting](https://swcarpentry.github.io/python-novice-inflammation/)"
-  - "[Digital image basics](https://neubias.github.io/training-resources/pixels/index.html)"
-  - "[Spatial calibration](https://neubias.github.io/training-resources/spatial_calibration/index.html)"
-  - "[Image data types](https://neubias.github.io/training-resources/datatypes/index.html)"
-  - "[Volume slicing](https://neubias.github.io/training-resources/volume_slicing/index.html)"
-  - "[Label mask (segmentation) images](https://neubias.github.io/training-resources/connected_components/index.html)"
+  - "[Digital image basics](../pixels)"
+  - "[Spatial calibration](../spatial_calibration)"
+  - "[Data types](../datatypes)"
+  - "[N-dimensional images](../multidimensional_image_basics)"
+  - "[Volume slicing](../volume_slicing)"
+
+  - "[Connected components labeling](https://neubias.github.io/training-resources/connected_components/index.html)(label mask from segmentation)"
 objectives:
   - "Know and open various common image files formats"
   - "Understand important concepts and implementations of big image file formats: lazy-loading, chunking and scale pyramids"
@@ -27,6 +30,7 @@ figure: /figures/image_data_formats_course.png
 figure_legend: "Microscopy image data can be represented as a number of different file formats. OME-TIFF and OME-Zarr are two standard formats used in bioimaging."
 
 learn_next:
+  - "[Image data formats](../image_file_formats)"
 
 external_links:
   - "[Bio-Formats](https://www.openmicroscopy.org/bio-formats/)"

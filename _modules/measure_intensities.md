@@ -3,7 +3,7 @@ title:  Object intensity measurements
 layout: module
 
 prerequisites:
-  - "[Connected component analysis](../connected_components)"
+  - "[Connected component labeling](../connected_components)"
 
 objectives:
   - Understand the correct biophysical interpretation of the most common object intensity measurements

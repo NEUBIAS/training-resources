@@ -3,6 +3,10 @@ layout: page
 title: Setup
 ---
 
+### Tool installtion
+
+For a detailed installtion instruction see the [Tool installation moodule](tool_installation)
+
 ### ImageJ/Fiji
 
 We recommend installing Fiji, which is a distribution of ImageJ which includes many useful plugins.

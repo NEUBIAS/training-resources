@@ -35,6 +35,7 @@ assessment: >
     {: .solution}
 
 learn_next:
+  - "[Connected component labeling](../connected_components)"
 
 external_links:
 - Some common automatic thresholding methods can be studied here [Imagej.net Auto-threshold](https://imagej.net/plugins/auto-threshold)

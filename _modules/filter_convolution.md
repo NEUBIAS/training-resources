@@ -2,7 +2,7 @@
 title: Convolutional filters
 layout: module
 prerequisites:
-  - "[Neighbourhood filtering](../filter_neighbourhood)"
+  - "[Neighborhood filters](../filter_neighbourhood)"
 objectives:
   - Understand the basic principle of a convolutional filter.
   - Apply convolutional filters to an image.

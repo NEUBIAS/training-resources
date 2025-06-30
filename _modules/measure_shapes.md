@@ -3,7 +3,7 @@ title:     Object shape measurements
 layout:    module
 
 prerequisites:
-  - "[Connected component analysis](../connected_components)(for practicals that use label masks)"
+  - "[Connected component labeling](../connected_components)(for practicals that use label masks)"
     
 objectives:
   - Understand shape measurements and their limitations
@@ -45,8 +45,9 @@ assessment: >
      {: .solution}
 
 learn_next:
-  - "[Workflow: Simple 2D object analysis](../workflow_segment_2d_nuclei_measure_shape)"
+  - "[Nuclei segmentation and shape measurement](../workflow_segment_2d_nuclei_measure_shape)"
   - "[Object intensity measurements](../measure_intensities)"
+  - "[Object filtering](../object_filtering)"
 
 external_links:
   - "[ImageJ: Measurements](https://imagej.net/ij/docs/menus/analyze.html#set)"

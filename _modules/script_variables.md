@@ -78,7 +78,7 @@ assessment: >
     {: .solution}
 
 learn_next:
-    - "[Working with strings](../string_concat)"
+    - "[Strings and paths](../string_concat)"
 
 external_links:
 

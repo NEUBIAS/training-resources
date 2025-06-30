@@ -3,6 +3,7 @@ title: Big image data formats
 layout: module
 tags: ["chunking","multi-scale"]
 prerequisites:
+  - "[Image data formats](../image_file_formats)"
   - "[Slice viewing](../volume_slicing.md)"
 objectives:
   - "Understand the concepts of lazy-loading, chunking and scale pyramids"
@@ -49,7 +50,7 @@ assessment: >
     {: .solution}
 
 learn_next:
-
+  - "[OME-Zarr](../ome_zarr)"
 external_links:
   - "[Imaris file format](https://imaris.oxinst.com/support/imaris-file-format)"
 ---

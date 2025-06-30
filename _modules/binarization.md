@@ -3,9 +3,9 @@ title: Thresholding
 layout: module
 tags: ["segmentation", "binarization"]
 prerequisites:
-  - "[Image segmentation](../segmentation)"
-  - "[Basic properties of images and pixels](../pixels)"
+  - "[Digital image basics](../pixels)"
   - "[Data types](../datatypes)"
+  - "[Segmentation](../segmentation)"
 objectives:
   - "Describe the relationship between an intensity image and a derived binary image"
   - "Apply threshold to segment an image into foreground and background regions"
@@ -54,8 +54,8 @@ assessment: >
     {: .solution}
 
 learn_next:
-  - "[Automatic threshold for binarization](../auto_threshold)"
-  - "[Finding objects in a binary image](../connected_components)"
+  - "[Automatic thresholding](../auto_threshold)"
+  - "[Connected component labeling](../connected_components)"
 
 external_links:
   - "[Wikipedia: Binary image](https://en.wikipedia.org/wiki/Binary_image)"

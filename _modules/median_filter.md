@@ -2,8 +2,8 @@
 title:     Median filter
 layout:    module
 prerequisites:
-    - "[Pixels](../pixels)"
-    - "[Neighbourhood image filters](../filter_neighbourhood)"
+    - "[Digital image basics](../pixels)"
+    - "[Neighborhood filters](../filter_neighbourhood)"
 
 objectives:
   - "Understand in detail what happens when applying a median filter to an image"

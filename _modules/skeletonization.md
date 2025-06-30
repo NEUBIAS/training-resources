@@ -3,10 +3,10 @@ title: Skeletonization
 layout: module
 tags: ["segmentation", "binarization"]
 prerequisites:
-  - "[Basic properties of images and pixels](../pixels)"
-  - "[Data types (unsigned 8-bit)](../datatypes)"
-  - "[Binarization](../binarization)"
-  - "[Image segmentation](../segmentation)"
+  - "[Digital image basics](../pixels)"
+  - "[Data types](../datatypes)"
+  - "[Thresholding](../binarization)"
+  - "[Segmentation](../segmentation)"
   - "[Morphological filters](../filter_morphological)"
 
 objectives:

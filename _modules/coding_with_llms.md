@@ -34,7 +34,7 @@ assessment: >
     {: .solution}
 
 learn_next:
-  - "[Automatic threshold for binarization](../auto_threshold)"
+  - "[Automatic thresholding](../auto_threshold)"
 
 external_links:
   - "[bia-bob](https://github.com/haesleinhuepf/bia-bob)"

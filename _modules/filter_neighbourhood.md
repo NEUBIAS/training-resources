@@ -2,8 +2,8 @@
 title:     Neighborhood filters
 layout:    module
 prerequisites:
-  - "[Basic properties of images and pixels](../pixels)"
-  - "[Binarization](../binarization)"
+  - "[Digital image basics](../pixels)"
+  - "[Data types](../datatypes)"
 
 objectives:
   - Understand the basic principle of a neighborhood filter.

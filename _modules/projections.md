@@ -2,7 +2,7 @@
 title: Projections
 layout: module
 prerequisites:
-  - "[Basic properties of images and pixels](../pixels)"
+  - "[Digital image basics](../pixels)"
   - "[N-dimensional images](../multidimensional_image_basics)"
 
 objectives:
