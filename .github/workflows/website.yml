@@ -45,3 +45,4 @@ jobs:
         continue-on-error: true
       
       - run: make site
+            ls -l _site/cytoscape/

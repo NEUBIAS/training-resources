@@ -51,7 +51,6 @@ serve : lesson-md
 	else \
 		echo "Warning: ./cytoscape/cytoscape_data.json not found. Skipping copy."; \
 	fi
-	cp ./cytoscape/cytoscape_data.json ${DST}/cytoscape/cytoscape_data.json
 
 ## * site             : build website but do not run a server
 site : lesson-md
@@ -65,7 +64,7 @@ site : lesson-md
 	else \
 		echo "Warning: ./cytoscape/cytoscape_data.json not found. Skipping copy."; \
 	fi
-	cp ./cytoscape/cytoscape_data.json ${DST}/cytoscape/cytoscape_data.json
+
 ## * docker-serve     : use Docker to serve the site
 docker-serve :
 	docker pull carpentries/lesson-docker:latest
