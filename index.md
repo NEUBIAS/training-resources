@@ -86,7 +86,7 @@ To get a sense for how this material may be used we compiled a selection of cons
 <div class="course-cards">
 <div class="course-card">
 <h4 id="module_network"><a href="#module_network">Module dependecies network</a></h4>
-<p>Prerequiste dependencies between modules. <strong>Click</strong> on a module to highlight all his prerequisites. <strong>Shift-Click</strong> on a module to go the respective module</p>
+<p>Prerequiste dependencies between modules. <strong>Click</strong> on a module to highlight all his prerequisites. <strong>Ctrl-Click</strong> on a module to open a module in a new window/tab. <strong>Shift-Click</strong> to open a module in this subwindow.</p>
 <iframe src="./cytoscape/cytoscape_module_network.html" width="100%" height="800px" style="border:1px solid #ccc;"></iframe>
 </div>
 </div>
