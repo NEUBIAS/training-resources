@@ -145,6 +145,15 @@
                 const clickedNode = evt.target;
                 const clickedNodeId = clickedNode.id();
                 // Check if the shift key is pressed
+                                // Check if the Ctrl key is pressed
+                if (evt.originalEvent.ctrlKey) {
+                    const url = clickedNode.data('url');
+                    if (url) {
+                        console.log("Ctrl-clicked with URL:", url);
+                        // Open the URL in a new tab/window
+                        window.open(url, '_blank').focus();
+                    }
+                }
                 if (evt.originalEvent.shiftKey) {
                     const url = clickedNode.data('url');
                     if (url) {
