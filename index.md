@@ -82,6 +82,16 @@ To get a sense for how this material may be used we compiled a selection of cons
       <span class="course-credits">0.1 CP</span>
     </div>
   </div>
+    <div class="course-card">
+    <div class="course-icon"><i class="fas fa-bolt"></i></div>
+    <h4><a href="imagej-macro-course">ImageJ Macro</a></h4>
+    <p>Learn how to generate and modify scripts for image analysis workflows using the ImageJ macro language.</p>
+    <div class="course-meta">
+      <span class="course-modules">8 modules</span>
+      <span class="course-duration">6 hours</span>
+      <span class="course-credits">0.2 CP</span>
+    </div>
+  </div>
 </div>
 <div class="course-cards">
 <div class="course-card">
