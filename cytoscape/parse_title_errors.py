@@ -133,12 +133,14 @@ def order_modules_by_title(files_data):
             is_workflow = False
             is_scripting = False
             is_course = False
+            is_outdated = False
         else:
             is_draft = 'Draft' in [tag.capitalize() for tag in data.get('tags', [])]
             is_workflow = 'Workflow' in [tag.capitalize() for tag in data.get('tags', [])]
             is_scripting = 'Scripting' in [tag.capitalize() for tag in data.get('tags', [])]
             is_course = 'Course' in [tag.capitalize() for tag in data.get('tags', [])]
-        if is_course:
+            is_outdated = 'Outdated' in [tag.capitalize() for tag in data.get('tags', [])]
+        if is_course or is_outdated:
             continue    
         
         modules_for_sorting.append((title.lower(), is_scripting, is_workflow, is_draft,  path)) # Sort by lowercased title

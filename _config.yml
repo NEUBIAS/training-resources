@@ -47,10 +47,8 @@ module_order:
 - measure_shapes
 - ome_tiff
 - ome_zarr
-- pixel_processing
 - projections
 - segmentation
-- machine_learning_semantic_segmentation
 - skeletonization
 - smart_microscopy_low_zoom_high_zoom
 - spatial_calibration
@@ -63,7 +61,6 @@ module_order:
 - batch_processing
 - coding_with_llms
 - script_functions
-- fetching_user_input
 - script_for_loop
 - output_saving
 - script_record
@@ -76,9 +73,6 @@ module_order:
 - image_inspection_and_presentation
 - containers
 - deep_learning_run_segmentation
-- filter_difference_of_gaussian
-- image_integrity
-- enhance_image_features
 - image_registration
 - manual_segmentation
 - remote_data_access

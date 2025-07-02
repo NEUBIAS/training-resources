@@ -1,7 +1,7 @@
 ---
 title:  Image feature enhancement
 layout: module
-tags : ["draft"]
+tags : ["draft", "outdated"]
 ---
 
 <img src='https://g.gravizo.com/svg?

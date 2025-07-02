@@ -1,6 +1,7 @@
 ---
 title:  Semantic image segmentation using machine learning (DRAFT)
 layout: module
+tags: ['draft', 'outdated']
 ---
 
 <img src='https://g.gravizo.com/svg?
