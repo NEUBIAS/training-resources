@@ -5,9 +5,9 @@ tags: ["Rank filters","Dilation","Erosion","Opening"]
 
 prerequisites:
   - "[Segmentation](../segmentation)"
-  - "[Median filter](../median_filter)"
+  - "[Thresholding](../binarization)"
   - "[Connected component labeling](../connected_components)"
-  - "[Neighbourhood filters](../filter_neighbourhood)"
+  - "[Neighborhood filters](../filter_neighbourhood)"
 
 objectives:
   - "Understand how to design morphological filters using rank filters"

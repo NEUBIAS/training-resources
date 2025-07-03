@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>cytoscape-dagre.js demo</title>
+
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <script src="./cytoscape.min.js"></script>
+    <script src="./klay.js"></script>
+    <script src="./cytoscape-klay.js"></script>
+
+    <style>
+                body {
+            font-family: helvetica;
+            font-size: 14px;
+        }
+        #cy {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 0px solid #ccc;
+            background-color: #ffffff;
+        }
+        .highlighted {
+            background-color: #90EE90 !important;
+            border-color: #228B22 !important;
+            border-width: 3px !important;
+            color: #000000 !important;
+        }
+        .highlighted-edge {
+            line-color: #90EE90 !important;
+            width: 3px !important;
+            color: #000000 !important;
+        }
+        #preview-container {
+            position: absolute;
+            top: 600px; /* Adjust as needed */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            max-height: 300px;
+            border: 1px solid #ccc;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: auto;
+            display: none; /* Initially hidden */
+            z-index: 1000;
+            padding: 10px;
+        }
+        #preview-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+<div id="cy"></div>
+
+<script>
+    // Function to fetch the JSON data and render the graph
+    async function renderGraph() {
+        try {
+            // Fetch the JSON data from the file
+            const response = await fetch('cytoscape_data.json');
+            const data = await response.json();
+
+            // Initialize Cytoscape with the fetched data and Klay layout
+            const cy = cytoscape({
+                container: document.getElementById('cy'),
+                elements: data.elements,
+                layout: data.layout,
+                style: [
+                    {
+                        selector: 'node',
+                        style: {
+                            'label': 'data(label)',
+                            'shape': 'rectangle',
+                            'background-color': '#e9e7e7', /* Default node color: white */
+                            'border-color': '#228B22',
+                            'border-width': 2,
+                            'font-size':'30px',
+                            'color': '#006400',
+                            'padding': '10px',
+                            'text-valign': 'center',
+                            'text-halign': 'center',
+                            'width': 'label',
+                            'height': 'label',
+                            'text-max-width': 200,
+                            'overflow': 'hidden',
+                            'text-wrap': 'wrap'
+                        }
+                    },
+                    {
+                        selector: 'edge',
+                        style: {
+                            'width': 5,
+                            'line-color':'#658a65',
+                            'curve-style': 'unbundled-bezier',
+                            'control-point-distances': 40, // A single value for a single control point. Adjust as needed.
+                            'control-point-weights': 0.5,
+                            'font-size': '12px',
+                            'text-rotation': 'autorotate',
+                            'text-background-color': '#FFFFFF',
+                            'text-background-opacity': 0.7,
+                            'target-arrow-shape': 'triangle',
+                            'arrow-scale': 1,
+                            'display': 'element' // Ensure edges are displayed
+                        }
+                    }
+                ]
+            });
+
+            // Variable to store the ID of the currently highlighted node
+            let currentHighlightedNodeId = null;
+
+            // Function to get prerequisites of a node.
+            function getPrerequisites(nodeId, graph) {
+                const prereqNodes = new Set();
+                const prereqEdges = new Set();
+
+                function findPrereqs(node) {
+                    prereqNodes.add(node.id());
+                    const incomers = graph.collection('edge[target = "' + node.id() + '"]');
+                    incomers.forEach(edge => {
+                        prereqEdges.add(edge.id());
+                        const sourceNode = edge.source();
+                        if (sourceNode && !prereqNodes.has(sourceNode.id())) {
+                            findPrereqs(sourceNode);
+                        }
+                    });
+                }
+
+                const startNode = graph.getElementById(nodeId);
+                if (startNode) {
+                    findPrereqs(startNode);
+                }
+                return { nodes: prereqNodes, edges: prereqEdges };
+            }
+
+            // Function to clear all highlighting
+            function clearHighlighting() {
+                cy.elements().removeClass('highlighted');
+                cy.elements().removeClass('highlighted-edge');
+                cy.nodes().style('background-color', '#e9e7e7'); // Reset all node colors to default
+                currentHighlightedNodeId = null;
+            }
+
+            // Event listener for node click
+            cy.on('tap', 'node', function (evt) {
+                const clickedNode = evt.target;
+                const clickedNodeId = clickedNode.id();
+                const url = clickedNode.data('url');
+
+                // If Ctrl key is pressed, open URL in new tab/window
+                if (evt.originalEvent.ctrlKey) {
+                    if (url) {
+                        console.log("Ctrl-clicked with URL:", url);
+                        window.open(url, '_blank').focus();
+                    }
+                    return; // Exit function after handling Ctrl-click
+                }
+                // If Shift key is pressed, open URL in same window
+                else if (evt.originalEvent.shiftKey) {
+                    if (url) {
+                        console.log("Shift-clicked with URL:", url);
+                        window.open(url, '_self').focus();
+                    }
+                    return; // Exit function after handling Shift-click
+                }
+
+                // Normal click behavior: toggle highlighting
+                if (clickedNodeId === currentHighlightedNodeId) {
+                    // If the same node is clicked again, clear highlighting
+                    clearHighlighting();
+                } else {
+                    // Clear previous highlighting
+                    clearHighlighting();
+
+                    // Get prerequisites for the new clicked node
+                    const { nodes: prereqNodeIds, edges: prereqEdgeIds } = getPrerequisites(clickedNodeId, cy);
+
+                    // Highlight nodes
+                    prereqNodeIds.forEach(nodeId => {
+                        const node = cy.getElementById(nodeId);
+                        if (node) {
+                            node.addClass('highlighted');
+                            node.style('background-color', '#90EE90'); // Color the prerequisites green
+                        }
+                    });
+                    // Highlight edges
+                    prereqEdgeIds.forEach(edgeId => {
+                        const edge = cy.getElementById(edgeId);
+                        if (edge) {
+                            edge.addClass('highlighted-edge');
+                        }
+                    });
+
+                    // Update the currently highlighted node ID
+                    currentHighlightedNodeId = clickedNodeId;
+                }
+            });
+
+            // Optional: Click on background to clear highlighting
+            cy.on('tap', function(evt){
+                if( evt.target === cy ){
+                    clearHighlighting();
+                }
+            });
+
+        } catch (error) {
+            console.error('Error fetching or rendering graph:', error);
+        }
+    }
+
+    // Call the function to render the graph when the page loads
+    renderGraph();
+</script>
+</body>
+</html>

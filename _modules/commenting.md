@@ -3,7 +3,7 @@ title: Commenting
 layout: module
 tags: ["scripting", "draft"]
 prerequisites:
-  - "[Binarization](../binarization)"
+  - "[Thresholding](../binarization)"
   - "[Connected component labeling](../connected_components)"
 objectives:
   - "Understand the concept and purpose of commenting."

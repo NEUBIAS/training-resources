@@ -37,7 +37,7 @@ assessment: >
     {: .solution}
 
 learn_next:
-  - "[Batch analysis](../batch_processing)"
+  - "[Batch processing](../batch_processing)"
 
 external_links:
   - "[Wikipedia: Subroutine](https://en.wikipedia.org/wiki/Subroutine)"

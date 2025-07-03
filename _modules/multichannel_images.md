@@ -59,7 +59,7 @@ assessment: >
     {: .solution}
 
 learn_next:
- - "[N Dimensional Images](../multidimensional_image_basics)"
+ - "[N-dimensional images](../multidimensional_image_basics)"
 
 external_links:
  - "[forum.image.sc: Colourblind friendly combinations](https://forum.image.sc/t/colourblind-friendly-colour-combinations/92567)"

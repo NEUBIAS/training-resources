@@ -3,7 +3,7 @@ title:  Spatial calibration
 layout: module
 
 prerequisites:
-  - "[Basics properties of images and pixels](../pixels)"
+  - "[Digital image basics](../pixels)"
 
 objectives:
   - Understand that a pixel index is related to a physical coordinate.

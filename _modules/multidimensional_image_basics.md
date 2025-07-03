@@ -55,6 +55,6 @@ assessment: >
 
 learn_next:
   - "[Projections](../projections)"
-  - "[Volume subsetting and slicing](../volume_slicing)"
+  - "[Volume slicing](../volume_slicing)"
   - "[Volume rendering](../volume_viewer)"
 ---

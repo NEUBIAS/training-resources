@@ -2,12 +2,12 @@
 title: Convolutional filters
 layout: module
 prerequisites:
-  - "[Neighbourhood filtering](../filter_neighbourhood)"
+  - "[Neighborhood filters](../filter_neighbourhood)"
 objectives:
   - Understand the basic principle of a convolutional filter.
   - Apply convolutional filters to an image.
 motivation: |
-  Convolutional filters are very important, because
+  Convolutional filters, also called linear filters, are very important, because
   - the widely used Gaussian blur smoothing often is implemented as a convolutional filter.
   - the widedly used Laplacian of Gaussian (Log) or Difference of Gaussian (DoG) spot detection filters often are implemented as a convolutional filters.
   - famous edge detection filters (Sobel) are convolutional filters.

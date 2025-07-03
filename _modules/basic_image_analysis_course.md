@@ -1,8 +1,12 @@
 ---
 title: Basic image analysis course overview
 layout: module
+tags: ["course"]
 prerequisites:
-  - "[Basics of bioimage data inspection and visualisation](https://neubias.github.io/training-resources/basic-image-inspection-course/index.html)"
+  - "[Digital image basics](../pixels)"
+  - "[Data types](../datatypes)"
+  - "[Lookup tables](../lut)"
+  - "[Spatial calibration](../spatial_calibration)"
 objectives:
   - Automatically extract biophysically meaningful numbers from microscopy images of biological samples.
 motivation: |
@@ -19,6 +23,7 @@ figure_legend: ""
 multiactivities:
 
 learn_next:
+  - "[Segmentation](../segmentation)"
 
 external_links:
 

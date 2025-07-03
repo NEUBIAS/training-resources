@@ -6,9 +6,9 @@ permalink: /index.html
 
 <br>
 
-This resource consists of a collection of **[bioimage analysis  training modules](all-modules)** that have been used for several years to teach **[a number of courses](https://github.com/NEUBIAS/training-resources/tree/master/courses)**.
+This resource consists of a collection of **[training modules](all-modules)** that have been used to teach **[a number of courses](https://github.com/NEUBIAS/training-resources/tree/master/courses)**.
 
-The material is divided into small modules, where the teaching of each module should take about 30 minutes. Each module covers a specific aspect of image analysis. At the beginning of each module there is a list of modules containing prerequisite topics. At the end of each module there are suggestions of what could be taught next. This provides trainers guidance on how to combine modules into a longer workshop.
+Each module can be tought in 30-45 min and covers a specific aspect of image analysis. Links to prerequisite and suggestions what could be tought next are give for each module. This provides trainers guidance on how to combine modules into a longer workshop. See also the **[module dependencies network](#module_network)**.
 
 The modules are meant to be taught hands-on, i.e. following the teacher's guidance, students execute the relevant steps in an image analysis software on their computers. The modules provide those steps for several major image analysis platforms, such as ImageJ GUI, ImageJ Macro, Python and Galaxy. Please see our **[teaching tips](TEACHING_TIPS.md)**.
 
@@ -68,7 +68,7 @@ To get a sense for how this material may be used we compiled a selection of cons
     <div class="course-meta">
       <span class="course-modules">2 modules</span>
       <span class="course-duration">1.5 hours</span>
-      <span class="course-credits">??? CP</span>
+      <span class="course-credits">0.05 CP</span>
     </div>
   </div>
   
@@ -79,9 +79,26 @@ To get a sense for how this material may be used we compiled a selection of cons
     <div class="course-meta">
       <span class="course-modules">2 modules</span>
       <span class="course-duration">3 hours</span>
-      <span class="course-credits">??? CP</span>
+      <span class="course-credits">0.1 CP</span>
     </div>
   </div>
+    <div class="course-card">
+    <div class="course-icon"><i class="fas fa-bolt"></i></div>
+    <h4><a href="imagej-macro-course">ImageJ Macro</a></h4>
+    <p>Learn how to generate and modify scripts for image analysis workflows using the ImageJ macro language.</p>
+    <div class="course-meta">
+      <span class="course-modules">8 modules</span>
+      <span class="course-duration">6 hours</span>
+      <span class="course-credits">0.2 CP</span>
+    </div>
+  </div>
+</div>
+<div class="course-cards">
+<div class="course-card">
+<h4 id="module_network"><a href="#module_network">Module dependecies network</a></h4>
+<p>Prerequiste dependencies between modules. <strong>Click</strong> on a module to highlight all his prerequisites. <strong>Ctrl-Click</strong> on a module to open a module in a new window/tab. <strong>Shift-Click</strong> to open a module in this subwindow.</p>
+<iframe src="./cytoscape/cytoscape_module_network.html" width="100%" height="800px" style="border:1px solid #ccc;"></iframe>
+</div>
 </div>
 
 <style>

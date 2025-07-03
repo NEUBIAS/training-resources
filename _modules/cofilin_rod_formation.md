@@ -1,5 +1,5 @@
 ---
-title: Cofilin rod formation
+title: Cofilin rod formation (DRAFT)
 layout: module
 permalink: /cofilin_rod_formation/
 tags: ["draft", "workflow"]

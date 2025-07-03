@@ -2,7 +2,7 @@
 title: Statistical (rank) filters
 layout: module
 prerequisites:
-  - "[Neighbourhood filters](../filter_neighbourhood)"
+  - "[Neighborhood filters](../filter_neighbourhood)"
 objectives:
   - Understand conceptually how local statistical (rank) filter work
   - Apply statistical filters to images

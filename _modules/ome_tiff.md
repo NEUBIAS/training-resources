@@ -3,6 +3,7 @@ title: OME-TIFF
 layout: module
 prerequisites:
   - "[Digital image basics](../pixels)"
+  - "[Image data formats](../image_file_formats)"
 objectives:
   - "Understand the basic concept of the TIFF image data format"
   - "Understand that there are various TIFF variants, such as ImageJ-TIFF and OME-TIFF"
@@ -45,6 +46,7 @@ assessment: >
     {: .solution}
 
 learn_next:
+  - "[Big image data formats](../big_image_file_formats)"
   - "[OME-Zarr](../ome-zarr)"
 
 external_links:

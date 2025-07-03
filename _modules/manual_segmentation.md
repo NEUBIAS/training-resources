@@ -3,8 +3,8 @@ title: Manual segmentation
 layout: module
 tags: ["draft"]
 prerequisites:
-  - "[Label mask images](../connected_components)"
-  - "[Segmenation](../segmentation)"
+  - "[Connected component labeling](../connected_components)"
+  - "[Segmentation](../segmentation)"
 objectives:
   - "Manually segment parts of a 2-D (3-D) image."
 motivation: |

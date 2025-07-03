@@ -3,7 +3,8 @@ title: OME-Zarr
 layout: module
 tags: ["format"]
 prerequisites:
-  - "[Big image data file formats](../big_image_file_formats)"
+  - "[Image data formats](../image_file_formats)"
+  - "[Big image data formats](../big_image_file_formats)"
 objectives:
   - Understand the OME-Zarr image file format
   - Render cloud (S3 object store) hosted OME-Zarr image data

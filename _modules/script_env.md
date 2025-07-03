@@ -32,7 +32,7 @@ exercises:
 assessment: >
 
 learn_next:
-  - "[Running an image analysis script](../script_run)"
+  - "[Running a script](../script_run)"
 
 external_links:
   - "[Using the Fiji script editor](https://imagej.net/scripting/script-editor)"
