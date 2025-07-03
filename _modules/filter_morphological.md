@@ -4,7 +4,7 @@ layout: module
 tags: ["Rank filters","Dilation","Erosion","Opening"]
 
 prerequisites:
-  - "[Segmentation](../segmentation)"
+  - "[Segmentation overview](../segmentation)"
   - "[Thresholding](../binarization)"
   - "[Connected component labeling](../connected_components)"
   - "[Neighborhood filters](../filter_neighbourhood)"

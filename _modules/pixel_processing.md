@@ -1,7 +1,7 @@
 ---
 title:     Pixel processing (topic is treated in global background)
 layout:    module
-tags: ['Draft', 'Outdated']
+tags: ['draft', 'outdated']
 ---
 
 ## Pixel processing

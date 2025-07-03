@@ -44,6 +44,7 @@ assessment: >
 
 learn_next:
   - "[Statistical neighborhood filters](../filter_rank)"
+  - "[Noisy object segmentation and filtering in 2D](../workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape)"
 
 external_links:
   - "[Wikipedia: Image processing kernels](https://en.wikipedia.org/wiki/Kernel_(image_processing))"

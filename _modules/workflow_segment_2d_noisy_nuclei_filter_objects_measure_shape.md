@@ -4,10 +4,12 @@ layout: module
 tags: ["workflow"]
 prerequisites:
   - "[Neighborhood filters](../filter_neighbourhood)"
+  - "[Convolutional filters](../filter_convolution)"
   - "[Thresholding](../binarization)"
   - "[Connected component labeling](../connected_components)"
   - "[Object filtering](../object_filtering)"
   - "[Object shape measurements](../measure_shapes)"
+
 objectives:
   - "Create an image analysis workflow comprising image denoising and object filtering."
 

@@ -25,11 +25,11 @@ figure_legend:
 
 multiactivities:
   - ["lut/lut_act1.md", [["ImageJ GUI", "lut/lut_act1_imagejgui.md", "markdown"], 
-	["ImageJ Macro", "lut/lut_act1_imagejmacro.ijm", "java"], 
-	["skimage napari", "lut/lut_act1_skimage_napari.py", "python"],["Galaxy Napari","lut/lut_act1_galaxy.md"]]]
+  ["ImageJ Macro", "lut/lut_act1_imagejmacro.ijm", "java"], 
+  ["skimage napari", "lut/lut_act1_skimage_napari.py", "python"],["Galaxy Napari","lut/lut_act1_galaxy.md"]]]
   - ["lut/lut_act2.md", [["ImageJ GUI", "lut/lut_act2_imagejgui.md"], 
   ["ImageJ Macro", "lut/lut_act2_imagejmacro.ijm", "java"], 
-	["skimage napari", "lut/lut_act2_skimage_napari.py", "python"],["Galaxy Napari","lut/lut_act2_galaxy.md"]]]
+  ["skimage napari", "lut/lut_act2_skimage_napari.py", "python"],["Galaxy Napari","lut/lut_act2_galaxy.md"]]]
 
 keypoints:
   - LUT stands for "look-up table"; it defines how numeric pixel values are mapped to colors for display.

@@ -5,7 +5,7 @@ tags: ["segmentation", "binarization"]
 prerequisites:
   - "[Digital image basics](../pixels)"
   - "[Data types](../datatypes)"
-  - "[Segmentation](../segmentation)"
+  - "[Segmentation overview](../segmentation)"
 objectives:
   - "Describe the relationship between an intensity image and a derived binary image"
   - "Apply threshold to segment an image into foreground and background regions"

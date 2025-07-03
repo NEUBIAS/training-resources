@@ -3,7 +3,7 @@ title: Fluorescence microscopy image formation
 layout: module
 tags: ["image formation"]
 prerequisites:
-  - "[Digital image](../pixels.md)"
+  - "[Digital image basics](../pixels)"
 objectives:
   - Understand how the intensities in a digital image that was acquired with a fluorescence microscope are formed
   - Understand how this image formation process has critical influence on the interpretation of intensity measurements

@@ -4,7 +4,7 @@ layout: module
 tags: ["scripting"]
 prerequisites:
   - "[Running a script](../script_run)"
-  - "[Using variables](../script_variables)"
+  - "[Variables](../script_variables)"
 objectives:
   - "Organise script parameters in the code such that can be easliy adapted"
   - "Create dialog boxes for fetching script parameters"

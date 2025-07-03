@@ -22,9 +22,9 @@ To get a sense for how this material may be used we compiled a selection of cons
     <h4><a href="basic-image-inspection-course">Basic Bioimage Inspection</a></h4>
     <p>Learn to inspect your images and visualize your data.</p>
     <div class="course-meta">
-      <span class="course-modules">6 modules</span>
-      <span class="course-duration">4.5 hours</span>
-      <span class="course-credits">0.15 CP</span>
+      <span class="course-modules">7 modules</span>
+      <span class="course-duration">5.25 hours</span>
+      <span class="course-credits">0.175 CP</span>
     </div>
   </div>
   
@@ -97,7 +97,7 @@ To get a sense for how this material may be used we compiled a selection of cons
 <div class="course-card">
 <h4 id="module_network"><a href="#module_network">Module dependecies network</a></h4>
 <p>Prerequiste dependencies between modules. <strong>Click</strong> on a module to highlight all his prerequisites. <strong>Ctrl-Click</strong> on a module to open a module in a new window/tab. <strong>Shift-Click</strong> to open a module in this subwindow.</p>
-<iframe src="./cytoscape/cytoscape_module_network.html" width="100%" height="800px" style="border:1px solid #ccc;"></iframe>
+<iframe src="./cytoscape/cytoscape_module_network.html" width="100%" height="600px" style="border:1px solid #ccc;"></iframe>
 </div>
 </div>
 

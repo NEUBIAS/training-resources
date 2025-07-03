@@ -152,7 +152,7 @@ def order_modules_by_title(files_data):
 
     # Extract just the ordered paths
     ordered_paths = [path for _, _, _, _, path in modules_for_sorting]
-    return ordered_paths
+    return ordered_paths, modules_for_sorting
 
 if __name__ == "__main__":
     # Specify the directory containing your Markdown files.
@@ -160,13 +160,20 @@ if __name__ == "__main__":
     # changed to './' so it works in any directory
 
     files_data = process_markdown_files(markdown_directory)
-    ordered_module_paths = order_modules_by_title(files_data)
+    ordered_module_paths, sorted_modules = order_modules_by_title(files_data)
+    print(sorted_modules)
 
-    for path in ordered_module_paths:
-        # Extract just the filename/module name from the path
-        # Assuming paths look like 'path/to/module_name' and you want 'module_name'
-        module_name = os.path.basename(path) # This gets 'module_name' from 'path/to/module_name'
-        print(f"- {module_name}")
+    open('cytoscape/ordered_modules.txt', 'w').write('- ')
+    open('cytoscape/ordered_modules.txt', 'a').write('\n- '.join(ordered_module_paths))
+
+    f = open('cytoscape/ordered_modules_title_links.csv', 'w')
+    f.write("Title, is_scripting, is_workflow, is_draft, Path\n")
+    for title, is_scripting, is_workflow, is_draft, path in sorted_modules:
+        if is_draft:
+            continue
+        f.write(f"{title.capitalize()}, {is_scripting}, {is_workflow},https://neubias.github.io/training-resources/{path}\n")
+    f.close()
+
     if files_data:
         for current_path, data in files_data.items():
             current_module_title = data.get('title', 'NO_TITLE')
