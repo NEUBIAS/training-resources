@@ -3,7 +3,7 @@ title: Batch exploration of segmentation results
 layout: module
 tags:
 prerequisites:
-  - "[Segment and measure nuclei shapes](../workflow_segment_2d_nuclei_measure_shape)"
+  - "[Batch processing](../batch_processing)"
 objectives:
   - "Use various tools to efficiently inspect segmented images and corresponding object measurements."
 motivation: |

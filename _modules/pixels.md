@@ -4,12 +4,14 @@ layout: module
 prerequisites:
 
 objectives:
-  - Understand that a digital image is typically stored as an N-dimensional array.
-  - Learn that the image array elements are called pixels (2D) or voxels (3D).
-  - Examine the values and locations of pixels/voxels in an image.
+  - Understand that a digital image is represented as an N-dimensional array.
+  - Practically visualise an image.
+  - Practically quantitatively inspect the image (array) elements (pixels, voxels).
 
-motivation: >
-  Digital images are a very important subset of the more general [mathematical definition](https://mathworld.wolfram.com/Image.html) of an image. The vast majority of available algorithms and visualisation tools operate on digital images and all (as far as we know) scientific microscopes output digital images. Thus, for microscopy based science, it is crucial to understand the basic properties of digitial images and how to effectively inspect their content.
+motivation: |
+  - Digital images are a very important subset of the more general [mathematical definition](https://mathworld.wolfram.com/Image.html) of an image. 
+  - The vast majority of available algorithms and visualisation tools operate on digital images and all (as far as we know) scientific microscopes output digital images. 
+  - For microscopy based science, it is crucial to understand the basic properties of digitial images and how to effectively inspect their content.
 
 
 concept_map: >

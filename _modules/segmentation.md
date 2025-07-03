@@ -1,5 +1,5 @@
 ---
-title: Segmentation
+title: Segmentation overview
 layout:  module
 prerequisites:
   - "[Basic properties of images and pixels](../pixels)"
