@@ -1,13 +1,8 @@
 ---
 title: Batch exploration of segmentation results
 layout: module
-tags:
 prerequisites:
-<<<<<<< HEAD
   - "[Batch processing](../batch_processing)"
-=======
-  - "[Nuclei segmentation and shape measurement](../workflow_segment_2d_nuclei_measure_shape)"
->>>>>>> f0198ee5d3d1e6b3835560fc65bce3ee0adfbead
 objectives:
   - "Use various tools to efficiently inspect segmented images and corresponding object measurements."
 motivation: |
@@ -29,18 +24,6 @@ multiactivities:
   - ["batch_qc_and_exploration/batch_explore_segmented_images.md", [["Fiji MoBIE", "batch_qc_and_exploration/batch_explore_segmented_images_fiji_mobie.md"], ["napari (TODO)", "batch_qc_and_exploration/batch_explore_segmented_images_napari.py"]]]
   - ["batch_qc_and_exploration/batch_explore_segmented_images_and_object_measurements.md", [["Explore Images & Labels & Tables - Fiji MoBIE", "batch_qc_and_exploration/batch_explore_segmented_images_and_object_measurements_fiji_mobie.md"], ["Explore Objects Table - Fiji MoBIE", "batch_qc_and_exploration/batch_explore_objects_table_fiji_mobie.md"]]]
   - ["batch_qc_and_exploration/batch_explore_ilastik_output.md", [["Explore ilastik tracking results - Fiji MoBIE", "batch_qc_and_exploration/batch_explore_ilastik_tracking_results_fiji_mobie.md"]]]
-
-assessment: >
-
-  ### Fill in the blanks
-
-    1. TODO ___ .
-    1. TODO ___ .
-    
-    > ## Solution
-    >   1. TODO
-    >   1. TODO
-    {: .solution}
 
 learn_next:
   - 
