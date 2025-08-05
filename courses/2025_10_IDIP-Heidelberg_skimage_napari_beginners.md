@@ -2,7 +2,7 @@
 
 ## Why take this course
 
-Fiji and the ImageJ macro language have served the life sciences for many years very well in terms of bioimage data inspection and analysis. However, there are some downsides to this ecosystem. One issue being that the ImageJ macro language is very specific to ImageJ and will not help you anywhere else. In addition, the ImageJ macro language misses many features of standard programming languages. Another issue is that many new image analysis algorithms, especially deep-learning based, are implemented in python, which is outside the Java based Fiji eco-system.
+Fiji and the ImageJ macro language have served the life sciences for many years very well in terms of bioimage data inspection and analysis. However, there are some downsides to this ecosystem. One issue being that the ImageJ macro language is very specific to ImageJ and will not help you anywhere else. In addition, the ImageJ macro language misses many features of standard programming languages. Another issue is that many new image analysis algorithms, especially deep-learning based, are usually first implemented in python, which is outside the Java based Fiji eco-system.
 
 In this course, you will be introduced to essential concepts of image analysis. You will learn how to use python for image analysis and take advantage of the large and growing number of specialized python libraries. Learning python is useful in general because it is currently the most popular language for scientific computing and data science. In addition, since a few years a python based image visualisation tool, namely napari, exists that allows powerful and flexible n-dimensional image data visualisation, including overlay of segmentation and annotation layers.
 
@@ -21,10 +21,10 @@ If you are already proficient with python and do not need to revisit the basics,
 
 The whole course will be guided hands-on sessions.
 
-- Monday 01.07.2024 10:00 - 17:00
-- Tuesday 02.07.2024 10:00 - 17:00
-- Monday 08.07.2024 10:00 - 17:00
-- Tuesday 09.07.2024 10:00 - 17:00 
+- Monday 06.10.2025 10:00 - 17:00
+- Tuesday 07.10.2025 10:00 - 17:00
+- Monday 13.10.2025 10:00 - 17:00
+- Tuesday 14.10.2025 10:00 - 17:00 
 
 This includes a lunch break (1 hr) and two coffee breaks (20 minutes), resulting in approximately 5 hr of teaching time.
 As there are 6 modules per day that makes ~45 minutes per module.
@@ -38,6 +38,7 @@ As there are 6 modules per day that makes ~45 minutes per module.
 
 - Severina Klaus (Uni Heidelberg)
 - Charlotte Kaplan (Uni Heidelberg)
+- Alessandro Ulivi (Uni Heidelberg)
 - Felix Schneider (EMBL)
 - Christian Tischer (EMBL)
 - Arif Khan (EMBL)
@@ -68,59 +69,59 @@ The first day is an onboarding day to bring everyone to the same level on basic 
 1. Introduction
     - Trainers introduce themselves, where they work and how they are competent
 1. [Digital image basics](https://neubias.github.io/training-resources/pixels/index.html)
-    - Felix Schneider 
+    - tbd
 1. [Lookup tables](https://neubias.github.io/training-resources/lut/index.html)
-    - Felix Schneider
+    - tbd
 1. [Spatial image calibration](https://neubias.github.io/training-resources/spatial_calibration/index.html) 
-    - Christian Tischer
+    - tbd
     - Activities
        - [3-D spatial calibration](https://neubias.github.io/training-resources/spatial_calibration/index.html#explore3D)
 1. [N-dimensional images](https://neubias.github.io/training-resources/multidimensional_image_basics/index.html)
-    - Arif Khan
+    - tbd
 1. [Image data types](https://neubias.github.io/training-resources/datatypes/index.html) 
-    - Christian Tischer
+    - tbd
     - Activities
        - [Inspect an 8 bit image](https://neubias.github.io/training-resources/datatypes/index.html#saturation_8bit)
        - [Inspect a 12 bit image](https://neubias.github.io/training-resources/datatypes/index.html#saturation_12bit)
 1. [Image projections](https://neubias.github.io/training-resources/projections/index.html)
-    - Christian Tischer
+    - tbd
     - [Max and sum projections of an anisotropic image]()
 
 ### Image analysis basics (day 2)
 1. [Segmentation](https://neubias.github.io/training-resources/segmentation/index.html)
-    - Arif Khan
+    - tbd
 1. [Workflow: Basic 2D object analysis](https://neubias.github.io/training-resources/workflow_segment_2d_nuclei_measure_shape/index.html)
-    - Arif Khan
+    - tbd
     - Only discuss the figure:
         - The most basic segmentation workflow
         - The components of this workflow will be taught now
 1. [Manual thresholding](https://neubias.github.io/training-resources/binarization/index.html)
-    - Arif Khan
+    - tbd
 1. [Automated thresholding](https://neubias.github.io/training-resources/auto_threshold/index.html) 
-    - Julian Hennies
+    - tbd
 1. [Connected component labeling](https://neubias.github.io/training-resources/connected_components/index.html)
-    - Julian Hennies
+    - tbd
 1. [Object shape measurements](https://neubias.github.io/training-resources/measure_shapes/index.html)
-    - Christian Tischer
+    - tbd
 1. [Workflow: Basic 2D object analysis](https://neubias.github.io/training-resources/workflow_segment_2d_nuclei_measure_shape/index.html)
-    - Christian Tischer
+    - tbd
 
 ### Image analysis basics (day 3)
 
 1. [Object intensity measurements](https://neubias.github.io/training-resources/measure_intensities/index.html)
-    - Severina Klaus
+    - tbd
 1. [Image neighborhood filtering](https://neubias.github.io/training-resources/filter_neighbourhood/index.html)
-    - Severina Klaus
+    - tbd
 1. [Median filter](https://neubias.github.io/training-resources/median_filter/index.html)
-    - Julian Hennies
+    - tbd
 1. [Local background subtraction](https://neubias.github.io/training-resources/local_background_correction/index.html)
-    - Julian Hennies 
+    - tbd
 1. [Morphological filters](https://neubias.github.io/training-resources/filter_morphological/index.html)
-    - Julian Hennies
+    - tbd
 1. [Batch processing](https://neubias.github.io/training-resources/batch_processing/index.html)
-    - Julian Hennies
+    - tbd
 1. [Workflow: 2D noisy object segmentation and filtering](https://neubias.github.io/training-resources/workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape/index.html)
-    - Julian Hennies
+    - tbd
 
 
 
