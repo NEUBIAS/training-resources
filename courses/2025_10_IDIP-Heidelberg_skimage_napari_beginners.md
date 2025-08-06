@@ -9,13 +9,13 @@ In this course, you will be introduced to essential concepts of image analysis. 
 ## Prerequisites
 
 * Ideally, you should know all the topics mentioned in the **Learn the Basics** section of the [Learn Python](https://www.learnpython.org/en/Welcome) website (you may skip "Classes and Objects" and "Modules and Packages").
-* If you have time, please practice running code in a Jupyter Notebook. You can follow this [guide](https://jupyter.org/try-jupyter/retro/notebooks/?path=notebooks/Intro.ipynb).
+* If you have time, please practice running code in a Jupyter Notebook. 
 
 ### IT Setup
 
 You will be guided on how to set up your python platform and how to install the necessary modules on day 0 of the course.  
 
-If you are already proficient with python and do not need to revisit the basics, please make sure to use the `conda` platform to install skimage and napari on your laptop before the course, following [these instructions](https://neubias.github.io/training-resources/tool_installation/index.html#skimage_napari). 
+If you are already proficient with python and do not need to revisit the basics, please make sure to use the `conda` platform to install skimage and napari on your laptop before the course, following [these instructions (Install skimage & napari)](https://neubias.github.io/training-resources/tool_installation/index.html#skimage_napari). 
 
 ## Schedule
 
@@ -26,8 +26,7 @@ The whole course will be guided hands-on sessions.
 - Monday 13.10.2025 10:00 - 17:00
 - Tuesday 14.10.2025 10:00 - 17:00 
 
-This includes a lunch break (1 hr) and two coffee breaks (20 minutes), resulting in approximately 5 hr of teaching time.
-As there are 6 modules per day that makes ~45 minutes per module.
+This includes a lunch break (1 hr) and two coffee breaks (20 minutes), resulting in approximately 5 hr of teaching time, covering 5-7 modules of different lengths.
 
 ## Venue
 
@@ -48,7 +47,7 @@ As there are 6 modules per day that makes ~45 minutes per module.
 
 ### Python and image inspection basics (day 1)
 
-The first half of the day is organized as an onboarding session to bring everyone to the same level on basic python programming. If you are already proficient with python, you may skip this part. In this case, please make sure to use the `conda` platform to install skimage and napari on your laptop before the course, following [these instructions](https://neubias.github.io/training-resources/tool_installation/index.html#skimage_napari). 
+The first half of the day is organized as an onboarding and refresh session to bring everyone to the same level on basic python programming. If you are already proficient with python, you may skip this part. In this case, please make sure to use the `conda` platform to install skimage and napari on your laptop before the course, following [these instructions (Install skimage & napari)](https://neubias.github.io/training-resources/tool_installation/index.html#skimage_napari). 
 
 1. Participants introduce themselves, where they work, why they joined the course, and what previous experience they have
 1. Trainers introduce themselves, where they work and how they are competent
@@ -66,16 +65,13 @@ The first half of the day is organized as an onboarding session to bring everyon
     - tbd
 1. [Image data types](https://neubias.github.io/training-resources/datatypes/index.html) 
     - tbd
-    - Activities
-       - [Inspect an 8 bit image](https://neubias.github.io/training-resources/datatypes/index.html#saturation_8bit)
-       - [Inspect a 12 bit image](https://neubias.github.io/training-resources/datatypes/index.html#saturation_12bit)
 1. [Lookup tables](https://neubias.github.io/training-resources/lut/index.html)
     - tbd
 
 ### Image inspection and analysis basics (day 2)
 
 1. Introduction
-    - Trainers introduce themselves, where they work and how they are competent
+    - New trainers introduce themselves at the start of their modules
 1. [Spatial image calibration](https://neubias.github.io/training-resources/spatial_calibration/index.html) 
     - tbd
 1. [N-dimensional images](https://neubias.github.io/training-resources/multidimensional_image_basics/)
@@ -90,6 +86,8 @@ The first half of the day is organized as an onboarding session to bring everyon
     - tbd
 
 ### Image analysis basics (day 3)
+1. Introduction
+    - New trainers introduce themselves at the start of their modules
 1. [Segmentation](https://neubias.github.io/training-resources/segmentation/index.html)
     - tbd
 1. [Workflow: Basic 2D object analysis](https://neubias.github.io/training-resources/workflow_segment_2d_nuclei_measure_shape/index.html)
@@ -113,7 +111,8 @@ The first half of the day is organized as an onboarding session to bring everyon
     - tbd
 
 ### Image analysis and batch processing (day 4)
-
+1. Introduction
+    - New trainers introduce themselves at the start of their modules
 1. [Batch processing](https://neubias.github.io/training-resources/batch_processing/index.html)
     - Introduce the general idea of batch processing
     - tbd
