@@ -46,11 +46,12 @@ As there are 6 modules per day that makes ~45 minutes per module.
 
 ## Teaching content
 
-### Python basics (day 0)
+### Python and image inspection basics (day 1)
 
-The first day is an onboarding day to bring everyone to the same level on basic python programming. If you are already proficient with python, you may skip this day. In this case, please make sure to use the `conda` platform to install skimage and napari on your laptop before the course, following [these instructions](https://neubias.github.io/training-resources/tool_installation/index.html#skimage_napari). 
+The first half of the day is organized as an onboarding session to bring everyone to the same level on basic python programming. If you are already proficient with python, you may skip this part. In this case, please make sure to use the `conda` platform to install skimage and napari on your laptop before the course, following [these instructions](https://neubias.github.io/training-resources/tool_installation/index.html#skimage_napari). 
 
 1. Participants introduce themselves, where they work, why they joined the course, and what previous experience they have
+1. Trainers introduce themselves, where they work and how they are competent
 1. Introduction to python and basic environment management
 1. [Tool installations](https://neubias.github.io/training-resources/tool_installation/index.html#skimage_napari).
    - Severina Klaus
@@ -60,34 +61,35 @@ The first day is an onboarding day to bring everyone to the same level on basic 
        - Data types: integer, float, lists
        - Basic operations
        - Variables
-       - Built-in functions
        - Modules
-       - For-loop
-
-### Image inspection basics (day 1)
-
-1. Introduction
-    - Trainers introduce themselves, where they work and how they are competent
 1. [Digital image basics](https://neubias.github.io/training-resources/pixels/index.html)
-    - tbd
-1. [Lookup tables](https://neubias.github.io/training-resources/lut/index.html)
-    - tbd
-1. [Spatial image calibration](https://neubias.github.io/training-resources/spatial_calibration/index.html) 
-    - tbd
-    - Activities
-       - [3-D spatial calibration](https://neubias.github.io/training-resources/spatial_calibration/index.html#explore3D)
-1. [N-dimensional images](https://neubias.github.io/training-resources/multidimensional_image_basics/index.html)
     - tbd
 1. [Image data types](https://neubias.github.io/training-resources/datatypes/index.html) 
     - tbd
     - Activities
        - [Inspect an 8 bit image](https://neubias.github.io/training-resources/datatypes/index.html#saturation_8bit)
        - [Inspect a 12 bit image](https://neubias.github.io/training-resources/datatypes/index.html#saturation_12bit)
+1. [Lookup tables](https://neubias.github.io/training-resources/lut/index.html)
+    - tbd
+
+### Image inspection and analysis basics (day 2)
+
+1. Introduction
+    - Trainers introduce themselves, where they work and how they are competent
+1. [Spatial image calibration](https://neubias.github.io/training-resources/spatial_calibration/index.html) 
+    - tbd
+1. [N-dimensional images](https://neubias.github.io/training-resources/multidimensional_image_basics/)
+    - tbd
 1. [Image projections](https://neubias.github.io/training-resources/projections/index.html)
     - tbd
-    - [Max and sum projections of an anisotropic image]()
+1. [Image neighborhood filtering](https://neubias.github.io/training-resources/filter_neighbourhood/index.html)
+    - tbd
+1. [Statistical (rank) filtering](https://neubias.github.io/training-resources/filter_statistical/index.html)
+    - tbd
+1. [Local background subtraction](https://neubias.github.io/training-resources/local_background_correction/index.html)
+    - tbd
 
-### Image analysis basics (day 2)
+### Image analysis basics (day 3)
 1. [Segmentation](https://neubias.github.io/training-resources/segmentation/index.html)
     - tbd
 1. [Workflow: Basic 2D object analysis](https://neubias.github.io/training-resources/workflow_segment_2d_nuclei_measure_shape/index.html)
@@ -101,27 +103,32 @@ The first day is an onboarding day to bring everyone to the same level on basic 
     - tbd
 1. [Connected component labeling](https://neubias.github.io/training-resources/connected_components/index.html)
     - tbd
-1. [Object shape measurements](https://neubias.github.io/training-resources/measure_shapes/index.html)
-    - tbd
-1. [Workflow: Basic 2D object analysis](https://neubias.github.io/training-resources/workflow_segment_2d_nuclei_measure_shape/index.html)
-    - tbd
-
-### Image analysis basics (day 3)
-
-1. [Object intensity measurements](https://neubias.github.io/training-resources/measure_intensities/index.html)
-    - tbd
-1. [Image neighborhood filtering](https://neubias.github.io/training-resources/filter_neighbourhood/index.html)
-    - tbd
-1. [Median filter](https://neubias.github.io/training-resources/median_filter/index.html)
-    - tbd
-1. [Local background subtraction](https://neubias.github.io/training-resources/local_background_correction/index.html)
-    - tbd
 1. [Morphological filters](https://neubias.github.io/training-resources/filter_morphological/index.html)
     - tbd
+1. [Object shape measurements](https://neubias.github.io/training-resources/measure_shapes/index.html)
+    - tbd
+1. [Object intensity measurements](https://neubias.github.io/training-resources/measure_intensities/index.html)
+    - tbd
+1. [Practical exercise - Workflow: Basic 2D object analysis](https://neubias.github.io/training-resources/workflow_segment_2d_nuclei_measure_shape/index.html)
+    - tbd
+
+### Image analysis and batch processing (day 4)
+
 1. [Batch processing](https://neubias.github.io/training-resources/batch_processing/index.html)
+    - Introduce the general idea of batch processing
     - tbd
-1. [Workflow: 2D noisy object segmentation and filtering](https://neubias.github.io/training-resources/workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape/index.html)
+1. [Loops](https://neubias.github.io/training-resources/script_for_loop/index.html)
     - tbd
+1. [Strings and path manipulation](https://neubias.github.io/training-resources/string_concat/index.html)
+    - tbd
+1. [Functions](https://neubias.github.io/training-resources/script_functions/index.html)
+    - tbd
+1. [Saving images]
+    - tbd
+1. [Practical exercise - Workflow: Batch processing](https://neubias.github.io/training-resources/batch_processing/index.html)
+    - tbd
+1. [Summary of what was learned]
+
 
 
 
