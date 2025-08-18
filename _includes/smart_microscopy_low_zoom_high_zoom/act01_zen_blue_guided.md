@@ -36,8 +36,8 @@ Within the workflow, the overview scan serves first and foremost the detection o
 
 ***Image Analysis***
 
-For the detection of events or phenotypes, the GA module employs the ZEN-internal Image Analysis Wizard.
-
+For the detection of events or phenotypes, the GA module employs the ZEN-internal Image Analysis. This gives the user many choices concerning segmentation methods, object hierarchies and feature filtering. Hence, it offers high flexibility in pursuing hard-to-detect phenotypes or events. The wizard-like tool will lead the user through the setup in a step-wise fashion.
+- [Segmentation Method] When creating a new analysis setup, the user can choose between default 2D segmentation methods, Zone-of-influence (an automatic detection of nuclei and cell bodies) and 3D segmentation.
 - 
 
 
