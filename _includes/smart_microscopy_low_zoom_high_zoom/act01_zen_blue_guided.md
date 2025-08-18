@@ -34,4 +34,10 @@ Within the workflow, the overview scan serves first and foremost the detection o
 - only acquire a number of tiles that guarantees detecting your desired number of ROIs / phenotypes, not more
 - avoid large stacks
 
+***Image Analysis***
+
+For the detection of events or phenotypes, the GA module employs the ZEN-internal Image Analysis Wizard.
+
+- 
+
 
