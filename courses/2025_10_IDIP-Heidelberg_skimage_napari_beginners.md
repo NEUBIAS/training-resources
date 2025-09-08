@@ -24,7 +24,7 @@ The whole course will be guided hands-on sessions.
 - Monday 06.10.2025 10:00 - 17:00
 - Tuesday 07.10.2025 10:00 - 17:00
 - Monday 13.10.2025 10:00 - 17:00
-- Thursday 16.10.2025 10:00 - 17:00 
+- Tuesday 14.10.2025 10:00 - 17:00 (this day will be held at Bioquant)
 
 This includes a lunch break (1 hr) and two coffee breaks (20 minutes), resulting in approximately 5 hr of teaching time, covering 5-7 modules of different lengths.
 
