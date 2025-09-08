@@ -2,7 +2,7 @@
 # Introduction
 
 <p>
-    <img width="3319" height="1810" alt="Guided_Acquisition_UI_two_columns" src="https://github.com/user-attachments/assets/3f9c151c-6833-4b0c-a41c-7e594ea6e7f2" />
+    <img width="3319" height="1810" alt="Guided_Acquisition_UI_two_columns" src="/figures/" />
     <em>Figure 1: User interface of Guided Acquisition tool in ZEN blue.</em>
 </p>
 
