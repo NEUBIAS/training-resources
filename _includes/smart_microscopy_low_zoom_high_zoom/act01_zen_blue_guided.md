@@ -22,7 +22,7 @@ ___
 
 # Detailed guidelines
 <p>
-    <img width="3124" height="1144" alt="Graphical_workflow" src="https://github.com/user-attachments/assets/99144364-3ac0-4ca2-994b-28d7bcabf2dd" />
+    <img width="3124" height="1144" alt="Graphical_workflow" src="/_includes/smart_microscopy_low_zoom_high_zoom/figures/Graphical_workflow.png" />
     <em>Figure 2: Guided Acquisition is configured by first configuring the individual acquisition and analysis settings, and then incorporating them into the GA setup. </em>
 </p>
 
