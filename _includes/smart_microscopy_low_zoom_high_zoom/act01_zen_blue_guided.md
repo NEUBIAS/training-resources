@@ -2,7 +2,7 @@
 # Introduction
 
 <p>
-    <img width="3319" height="1810" alt="Guided_Acquisition_UI_two_columns" src="/figures/Guided_Acquisition_UI_two_columns.png" />
+    <img width="3319" height="1810" alt="Guided_Acquisition_UI_two_columns" src="/_includes/smart_microscopy_low_zoom_high_zoom/figures/Guided_Acquisition_UI_two_columns.png" />
     <em>Figure 1: User interface of Guided Acquisition tool in ZEN blue.</em>
 </p>
 
