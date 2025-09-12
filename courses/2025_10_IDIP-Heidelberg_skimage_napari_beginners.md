@@ -122,7 +122,7 @@ The first half of the day is organized as an onboarding and refresh session to b
     - tbd
 1. [Functions](https://neubias.github.io/training-resources/script_functions/index.html)
     - tbd
-1. [Saving images]
+1. [Data inspection and visualisation]
     - tbd
 1. [Practical exercise - Workflow: Batch processing](https://neubias.github.io/training-resources/batch_processing/index.html)
     - tbd
