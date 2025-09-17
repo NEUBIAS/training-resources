@@ -62,70 +62,72 @@ The first half of the day is organized as an onboarding and refresh session to b
        - Variables
        - Modules
 1. [Digital image basics](https://neubias.github.io/training-resources/pixels/index.html)
-    - tbd
+    - IDIP
 1. [Image data types](https://neubias.github.io/training-resources/datatypes/index.html) 
-    - tbd
+    - IDIP
 1. [Lookup tables](https://neubias.github.io/training-resources/lut/index.html)
-    - tbd
+    - IDIP
 
 ### Image inspection and analysis basics (day 2)
 
 1. Introduction
     - New trainers introduce themselves at the start of their modules
 1. [Spatial image calibration](https://neubias.github.io/training-resources/spatial_calibration/index.html) 
-    - tbd
+    - Felix
 1. [N-dimensional images](https://neubias.github.io/training-resources/multidimensional_image_basics/)
-    - tbd
+    - Felix
 1. [Image projections](https://neubias.github.io/training-resources/projections/index.html)
-    - tbd
+    - Arif
 1. [Image neighborhood filtering](https://neubias.github.io/training-resources/filter_neighbourhood/index.html)
-    - tbd
+    - Arif
 1. [Statistical (rank) filtering](https://neubias.github.io/training-resources/filter_statistical/index.html)
-    - tbd
+    - Alessandro
 1. [Local background subtraction](https://neubias.github.io/training-resources/local_background_correction/index.html)
-    - tbd
+    - Alessandro
 
 ### Image analysis basics (day 3)
 1. Introduction
     - New trainers introduce themselves at the start of their modules
 1. [Segmentation](https://neubias.github.io/training-resources/segmentation/index.html)
-    - tbd
+    - Severina
 1. [Workflow: Basic 2D object analysis](https://neubias.github.io/training-resources/workflow_segment_2d_nuclei_measure_shape/index.html)
-    - tbd
+    - Severina
     - Only discuss the figure:
         - The most basic segmentation workflow
         - The components of this workflow will be taught now
 1. [Manual thresholding](https://neubias.github.io/training-resources/binarization/index.html)
-    - tbd
+    - Severina
 1. [Automated thresholding](https://neubias.github.io/training-resources/auto_threshold/index.html) 
-    - tbd
+    - Severina
 1. [Connected component labeling](https://neubias.github.io/training-resources/connected_components/index.html)
-    - tbd
+    - Felix
 1. [Morphological filters](https://neubias.github.io/training-resources/filter_morphological/index.html)
-    - tbd
+    - Felix
 1. [Object shape measurements](https://neubias.github.io/training-resources/measure_shapes/index.html)
-    - tbd
+    - Alessandro
 1. [Object intensity measurements](https://neubias.github.io/training-resources/measure_intensities/index.html)
-    - tbd
+    - Alessandro
 1. [Practical exercise - Workflow: Basic 2D object analysis](https://neubias.github.io/training-resources/workflow_segment_2d_nuclei_measure_shape/index.html)
-    - tbd
+    - IDIP
 
 ### Image analysis and batch processing (day 4)
 1. Introduction
     - New trainers introduce themselves at the start of their modules
 1. [Batch processing](https://neubias.github.io/training-resources/batch_processing/index.html)
     - Introduce the general idea of batch processing
-    - tbd
+    - Julian
 1. [Loops](https://neubias.github.io/training-resources/script_for_loop/index.html)
-    - tbd
+    - Julian
 1. [Strings and path manipulation](https://neubias.github.io/training-resources/string_concat/index.html)
-    - tbd
+    - Arif
 1. [Functions](https://neubias.github.io/training-resources/script_functions/index.html)
-    - tbd
+    - Arif
 1. [Data inspection and visualisation]
-    - tbd
+    - Charlotte
 1. [Practical exercise - Workflow: Batch processing](https://neubias.github.io/training-resources/batch_processing/index.html)
-    - tbd
+    - Introduce LLM for image analysis
+    - Understand how LLMs help with coding problems and where they have pitfalls 
+    - IDIP
 1. [Summary of what was learned]
 
 
