@@ -122,7 +122,7 @@ The first half of the day is organized as an onboarding and refresh session to b
     - Arif
 1. [Functions](https://neubias.github.io/training-resources/script_functions/index.html)
     - Arif
-1. [Data inspection and visualisation]
+1. [Data inspection and visualisation](https://heibox.uni-heidelberg.de/f/a87f2d394cf442be8a7d/?dl=1)
     - Charlotte
 1. [Practical exercise - Workflow: Batch processing](https://neubias.github.io/training-resources/batch_processing/index.html)
     - Introduce LLM for image analysis
