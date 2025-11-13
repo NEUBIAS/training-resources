@@ -2,10 +2,10 @@
 
 ```python
 import zarr, os
-import numcodecs
 from ome_zarr import writer, scale
 from ome_zarr.io import parse_url
 from skimage.data import astronaut
+from zarr.codecs import BloscCodec
 ```
 
 **Create fake data:**
@@ -80,11 +80,11 @@ to each axis. The `compression` parameter requires compressor object from
 the `Numcodecs` package, which is a dependency of `zarr-python`.
 
 ```python
-storage_options=dict(
-                    chunks=(1, 64, 64),  # Output chunk shape
-                    compression = numcodecs.Zlib(), # Compressor to be used, defaults to numcodecs.Blosc()
-                    overwrite = True # Overwrite the output path
-                )
+storage_options = dict(
+    chunks=(1, 64, 64), # Output chunk size
+    compressor=BloscCodec(cname="blosclz"), # Compressor to be used, choose one: ['blosclz', 'lz4', 'lz4hc', 'zlib', 'zstd']
+    overwrite=True  # Overwrite existing data if any
+)
 ```
 
 **Save the array:**
