@@ -2,6 +2,8 @@
 
 - Visualise S3 hosted OME-Zarr images
 - Appreciate that the data can be multi-scale and chunked
+
+#### Example data
 - Example data:
   - URL: https://s3.embl.de/ome-zarr-course/data/ZARR/$USER/xyzct_8bit__mitosis.ome.zarr
     - Content: Small fluorescence microscopy image. Just replace $USER with your user name. \
