@@ -1,0 +1,8 @@
+- Ensure you have access to [CellProfiler](https://cellprofiler.org/) version 4.2.8 
+- Download the above two input images
+- Download this [CellProfiler project](https://github.com/NEUBIAS/training-resources/raw/master/scripts/cellprofiler/segment_2d_nuclei_measure_shape_cp4.2.8.cpproj)
+- Open the downloaded CellProfiler project in the CellProfiler application
+- Adapt the paths to the input images
+- Go through the pipeline to understand all steps
+- Make use of the Test Run functionality 
+- Some of the steps are saving data; there you have to adapt the output folders
