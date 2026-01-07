@@ -4,6 +4,7 @@ layout: module
 
 prerequisites:
   - "[Median filter](../median_filter)"
+  - "[Statisical (rank) filters](../filter_statistical)"
   - "[Projections](../projections)"
 
 objectives:
@@ -25,13 +26,8 @@ figure: /figures/local_background_correction.png
 figure_legend: Local background correction using a median filter. Left - Raw data. Middle - Median filtered image (background). Right - Difference image (foreground).
 
 multiactivities:
-- ["local_background_correction/local_background_correction_act1.md", [["ImageJ GUI", "local_background_correction/local_background_correction_act1_imagejgui.md", "markdown"], 
-																			["ImageJ Macro", "local_background_correction/local_background_correction_act1_imagejmacro.ijm", "java"], 
-																			["skimage napari", "local_background_correction/local_background_correction_act1_skimage_napari.py", "python"]]]					
-- ["local_background_correction/local_background_correction_act2.md", [["ImageJ GUI", "local_background_correction/local_background_correction_act2_imagejgui.md", "markdown"], 
-																			["ImageJ Macro", "local_background_correction/local_background_correction_act2_imagejmacro.ijm", "java"], 
-																			["ImageJ Jython", "local_background_correction/local_background_correction_act2_jython.py", "python"], 
-																			["skimage napari", "local_background_correction/local_background_correction_act2_skimage_napari.py", "python"]]]
+  - ["local_background_correction/local_background_correction_act1.md", [["ImageJ GUI", "local_background_correction/local_background_correction_act1_imagejgui.md", "markdown"], ["ImageJ Macro", "local_background_correction/local_background_correction_act1_imagejmacro.ijm", "java"], ["skimage napari", "local_background_correction/local_background_correction_act1_skimage_napari.py", "python"]]]
+  - ["local_background_correction/local_background_correction_act2.md", [["ImageJ GUI", "local_background_correction/local_background_correction_act2_imagejgui.md", "markdown"], ["ImageJ Macro", "local_background_correction/local_background_correction_act2_imagejmacro.ijm", "java"], ["ImageJ Jython", "local_background_correction/local_background_correction_act2_jython.py", "python"], ["skimage napari", "local_background_correction/local_background_correction_act2_skimage_napari.py", "python"]]]
 
 assessment: >
 

@@ -176,16 +176,16 @@ def create_cytoscape_json(files_data):
              'klay': {
                  'nodeLayering': 'NETWORK_SIMPLEX',  # Options: 'NETWORK_SIMPLEX', 'LONGEST_PATH', 'INTERACTIVE'
                  'aspectRatio': 0.2,
-                 'compactComponents': True,
+                 'compactComponents': False,
                  'direction': 'DOWN',
                  'edgeRouting': 'ORTHOGONAL',
-                 'edgeSpacingFactor':0.2,
+                 'edgeSpacingFactor':0.5,
+                 'thoroughness': 10, 
+                 'layoutHierarchy': True,
                  'crossingMinimization': 'LAYER_SWEEP', # // Add this for edge crossing reduction  
                  'nodePlacement':'BRANDES_KOEPF' , # options 'LINEAR_SEGMENTS', 'BRANDES_KOEPF'
                  'randomizationSeed': 1, # 0 will change the graph at every reload
-                 'spacing': 40,
-                 'thoroughness': 10,
-
+                 'spacing': 50
              },
         }
 

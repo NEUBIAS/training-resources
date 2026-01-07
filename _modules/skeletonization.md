@@ -6,7 +6,7 @@ prerequisites:
   - "[Digital image basics](../pixels)"
   - "[Data types](../datatypes)"
   - "[Thresholding](../binarization)"
-  - "[Segmentation](../segmentation)"
+  - "[Segmentation overview](../segmentation)"
   - "[Morphological filters](../filter_morphological)"
 
 objectives:

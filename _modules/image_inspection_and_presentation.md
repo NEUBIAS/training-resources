@@ -5,6 +5,7 @@ tags: ["workflow"]
 prerequisites:
   - "[Digital image basics](../pixels)"
   - "[Lookup tables](../lut)"
+  - "[Spatial calibration](../spatial_calibration)"
 objectives:
   - "Quantitatively inspect and present fluorescent microscopy images."
 motivation: |

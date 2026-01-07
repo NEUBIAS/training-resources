@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>cytoscape-dagre.js demo</title>
+    <title>cytoscape bioimage trainig resource module network</title>
 
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <script src="./klay.js"></script> 
     <script src="./cytoscape.min.js"></script>
     <script src="./klay.js"></script>
     <script src="./cytoscape-klay.js"></script>
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
     <style>
-                body {
+        body {
             font-family: helvetica;
             font-size: 14px;
         }
@@ -29,7 +35,9 @@
             color: #000000 !important;
         }
         .highlighted-edge {
-            line-color: #90EE90 !important;
+            /* To change the edge line color, use Cytoscape's stylesheet, not CSS classes. 
+               The 'line-color' property should be set in the Cytoscape style section in your JavaScript, not here. 
+               This CSS class is not used for edge color. */
             width: 3px !important;
             color: #000000 !important;
         }
@@ -53,10 +61,17 @@
             height: 100%;
             border: none;
         }
+        #savePdfButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-bottom: 20px; /* Space below button */
+        }
     </style>
 </head>
 <body>
 <div id="cy"></div>
+<button id="savePdfButton">Save as PDF</button>
 
 <script>
     // Function to fetch the JSON data and render the graph
@@ -80,7 +95,7 @@
                             'background-color': '#e9e7e7', /* Default node color: white */
                             'border-color': '#228B22',
                             'border-width': 2,
-                            'font-size':'30px',
+                            'font-size':'60px',
                             'color': '#006400',
                             'padding': '10px',
                             'text-valign': 'center',
@@ -96,22 +111,68 @@
                         selector: 'edge',
                         style: {
                             'width': 5,
-                            'line-color':'#658a65',
+                            'line-color':'#658a65', //#228B22, 
                             'curve-style': 'unbundled-bezier',
-                            'control-point-distances': 40, // A single value for a single control point. Adjust as needed.
+                            'control-point-distances': 60, // A single value for a single control point. Adjust as needed.
                             'control-point-weights': 0.5,
                             'font-size': '12px',
                             'text-rotation': 'autorotate',
                             'text-background-color': '#FFFFFF',
                             'text-background-opacity': 0.7,
                             'target-arrow-shape': 'triangle',
-                            'arrow-scale': 1,
-                            'display': 'element' // Ensure edges are displayed
+                            'arrow-scale': 2,
+                            'display': 'element', // Ensure edges are displayed
+                            'target-arrow-color': '#658a65'
                         }
                     }
                 ]
             });
+        // Add PDF save functionality
+            cy.ready(function() {
+                document.getElementById('savePdfButton').addEventListener('click', () => {
+                    const input = document.getElementById('cy');
 
+                    // Optionally fit the graph to the view before capturing for better screenshot
+                    cy.fit(cy.elements(), 50); // Fit all elements with 50px padding
+
+                    html2canvas(input, {
+                        scale: 2, // Higher scale for better resolution
+                        useCORS: true // Important if you have images/fonts loaded from other domains
+                    }).then((canvas) => {
+                        const imgData = canvas.toDataURL('image/png');
+                        const { jsPDF } = window.jspdf; // Get jsPDF from window object
+                        const pdf = new jsPDF({
+                            orientation: 'landscape',
+                            unit: 'mm', // Changed to mm for standard sizing
+                            format: 'a4'
+                        });
+
+                        const pdfWidth = pdf.internal.pageSize.getWidth();
+                        const pdfHeight = pdf.internal.pageSize.getHeight();
+
+                        // Calculate image dimensions to fit within PDF page while maintaining aspect ratio
+                        const imgAspectRatio = canvas.width / canvas.height;
+                        let imgPdfWidth = pdfWidth;
+                        let imgPdfHeight = pdfWidth / imgAspectRatio;
+
+                        if (imgPdfHeight > pdfHeight) {
+                            imgPdfHeight = pdfHeight;
+                            imgPdfWidth = pdfHeight * imgAspectRatio;
+                        }
+
+                        // Center the image on the PDF page
+                        const xOffset = (pdfWidth - imgPdfWidth) / 2;
+                        const yOffset = (pdfHeight - imgPdfHeight) / 2;
+
+                        pdf.addImage(imgData, 'PNG', xOffset, yOffset, imgPdfWidth, imgPdfHeight);
+                        pdf.save('cytoscape_graph.pdf');
+                        console.log('Graph saved as PDF (image-based)!');
+                    }).catch(error => {
+                        console.error('Error saving graph as PDF:', error);
+                        alert('Error saving graph as PDF. Check console for details.');
+                    });
+                });
+            });
             // Variable to store the ID of the currently highlighted node
             let currentHighlightedNodeId = null;
 

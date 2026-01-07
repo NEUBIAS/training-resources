@@ -4,7 +4,7 @@ layout: module
 tags: ["draft"]
 prerequisites:
   - "[Connected component labeling](../connected_components)"
-  - "[Segmentation](../segmentation)"
+  - "[Segmentation overview](../segmentation)"
 objectives:
   - "Manually segment parts of a 2-D (3-D) image."
 motivation: |

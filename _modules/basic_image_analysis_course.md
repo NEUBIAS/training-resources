@@ -23,7 +23,7 @@ figure_legend: ""
 multiactivities:
 
 learn_next:
-  - "[Segmentation](../segmentation)"
+  - "[Segmentation overview](../segmentation)"
 
 external_links:
 

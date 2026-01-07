@@ -5,7 +5,7 @@ tags: [""]
 prerequisites:
   - "[Digital image basics](../pixels)"
   - "[Data types](../datatypes)"
-  - "[Segmentation](../segmentation)"
+  - "[Segmentation overview](../segmentation)"
   - "[Thresholding](../binarization)"
   - "[Neighborhood filters](../filter_neighbourhood)"
 objectives:

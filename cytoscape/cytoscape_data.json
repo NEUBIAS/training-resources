@@ -137,7 +137,7 @@
       {
         "data": {
           "id": "segmentation",
-          "label": "Segmentation",
+          "label": "Segmentation overview",
           "url": "../segmentation"
         }
       },
@@ -362,14 +362,14 @@
     "edges": [
       {
         "data": {
-          "source": "object_filtering",
+          "source": "filter_convolution",
           "target": "workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "filter_neighbourhood",
+          "source": "object_filtering",
           "target": "workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape",
           "label": "Dependency"
         }
@@ -404,14 +404,14 @@
       },
       {
         "data": {
-          "source": "string_concat",
+          "source": "script_for_loop",
           "target": "batch_processing",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "script_for_loop",
+          "source": "string_concat",
           "target": "batch_processing",
           "label": "Dependency"
         }
@@ -432,14 +432,14 @@
       },
       {
         "data": {
-          "source": "projections",
+          "source": "volume_slicing",
           "target": "volume_viewer",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "volume_slicing",
+          "source": "projections",
           "target": "volume_viewer",
           "label": "Dependency"
         }
@@ -467,14 +467,14 @@
       },
       {
         "data": {
-          "source": "lut",
+          "source": "datatypes",
           "target": "multichannel_images",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "datatypes",
+          "source": "lut",
           "target": "multichannel_images",
           "label": "Dependency"
         }
@@ -488,14 +488,14 @@
       },
       {
         "data": {
-          "source": "script_run",
+          "source": "script_variables",
           "target": "fetching_user_input",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "workflow_segment_2d_nuclei_measure_shape",
+          "source": "batch_processing",
           "target": "batch_qc_and_exploration",
           "label": "Dependency"
         }
@@ -607,6 +607,13 @@
       },
       {
         "data": {
+          "source": "spatial_calibration",
+          "target": "image_inspection_and_presentation",
+          "label": "Dependency"
+        }
+      },
+      {
+        "data": {
           "source": "image_file_formats",
           "target": "ome_tiff",
           "label": "Dependency"
@@ -635,14 +642,14 @@
       },
       {
         "data": {
-          "source": "connected_components",
+          "source": "filter_neighbourhood",
           "target": "filter_morphological",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "filter_neighbourhood",
+          "source": "connected_components",
           "target": "filter_morphological",
           "label": "Dependency"
         }
@@ -670,7 +677,7 @@
       },
       {
         "data": {
-          "source": "projections",
+          "source": "filter_statistical",
           "target": "local_background_correction",
           "label": "Dependency"
         }
@@ -678,6 +685,13 @@
       {
         "data": {
           "source": "median_filter",
+          "target": "local_background_correction",
+          "label": "Dependency"
+        }
+      },
+      {
+        "data": {
+          "source": "projections",
           "target": "local_background_correction",
           "label": "Dependency"
         }
@@ -712,6 +726,13 @@
       },
       {
         "data": {
+          "source": "datatypes",
+          "target": "binarization",
+          "label": "Dependency"
+        }
+      },
+      {
+        "data": {
           "source": "segmentation",
           "target": "binarization",
           "label": "Dependency"
@@ -719,8 +740,8 @@
       },
       {
         "data": {
-          "source": "datatypes",
-          "target": "binarization",
+          "source": "pixels",
+          "target": "image_formation_fluo_mic",
           "label": "Dependency"
         }
       },
@@ -766,15 +787,16 @@
     "klay": {
       "nodeLayering": "NETWORK_SIMPLEX",
       "aspectRatio": 0.2,
-      "compactComponents": true,
+      "compactComponents": false,
       "direction": "DOWN",
       "edgeRouting": "ORTHOGONAL",
-      "edgeSpacingFactor": 0.2,
+      "edgeSpacingFactor": 0.5,
+      "thoroughness": 10,
+      "layoutHierarchy": true,
       "crossingMinimization": "LAYER_SWEEP",
       "nodePlacement": "BRANDES_KOEPF",
       "randomizationSeed": 1,
-      "spacing": 40,
-      "thoroughness": 10
+      "spacing": 50
     }
   }
 }
