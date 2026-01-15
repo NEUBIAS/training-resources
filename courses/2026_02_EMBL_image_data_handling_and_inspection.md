@@ -20,7 +20,7 @@ Scientists that may use microscopy data in their research.
 
 ### EMBL/ALMF/Bioimage Analysis Service Team Microscopy Course 2025
 
-2025 February 02,03
+2026 February 02,03
 
 ## Schedule
 
