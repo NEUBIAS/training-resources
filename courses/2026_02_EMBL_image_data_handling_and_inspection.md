@@ -18,20 +18,24 @@ Scientists that may use microscopy data in their research.
 
 ## Dates
 
-### EMBL/ALMF/Bioimage Analysis Service Team Microscopy Course 2025
+### EMBL/ALMF/Bioimage Analysis Service Team Microscopy Course 2026
 
 2026 February 02,03
 
 ## Schedule
 
-10:00 - 15:00 in-person click-along sessions
+10:00 - 15:00 in-person click-along
+
+## Venue
+
+Day 1 - ATC Meeting Room A23
+Day 2 - IC Lecture Hall
 
 ## Trainers
 
 - Arif Khan (EMBL Heidelberg)
-- Ziqiang Huang (EMBL Heidelberg)
 - Manuel Gunkel (EMBL Heidelberg)
-- Julian Hennies (EMBL Heidelberg) ?
+- Julian Hennies (EMBL Heidelberg)
 - Aliaksandr Halavatyi (EMBL Heidelberg) ?
 - Matt Benton (EMBL Heidelberg) ?
 - Leila Abbaspour (EMBL Heidelberg) ?
@@ -39,7 +43,9 @@ Scientists that may use microscopy data in their research.
 ## Teaching content
 
 1. [Digital image basics](https://neubias.github.io/training-resources/pixels/index.html)
+  - Arif Khan
 1. [Image data types](https://neubias.github.io/training-resources/datatypes/index.html)
+  - Arif Khan
 1. Image visualization & presentation
   - Fiji: Open 16/8-bit image, B&C, Save as TIFF no problem, Save as PNG, Save as JPEG problem, Open again => Changed values, Scientific fraud to the analyse
 1. [Lookup tables](https://neubias.github.io/training-resources/lut/index.html)
@@ -49,6 +55,7 @@ Scientists that may use microscopy data in their research.
 1. [Image file formats](https://neubias.github.io/training-resources/image_file_formats/index.html)
 1. [Microscopy image formation](https://neubias.github.io/training-resources/image_formation_fluo_mic/index.html)
 1. [Projections](https://neubias.github.io/training-resources/projections/index.html)
+  - Arif Khan
 
 ### Timing
 
