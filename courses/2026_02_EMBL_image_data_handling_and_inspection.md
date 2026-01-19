@@ -28,8 +28,8 @@ Scientists that may use microscopy data in their research.
 
 ## Venue
 
-Day 1 - ATC Meeting Room A23
-Day 2 - IC Lecture Hall
+- Day 1 - ATC Meeting Room A23
+- Day 2 - IC Lecture Hall
 
 ## Trainers
 
@@ -43,9 +43,9 @@ Day 2 - IC Lecture Hall
 ## Teaching content
 
 1. [Digital image basics](https://neubias.github.io/training-resources/pixels/index.html)
-  - Arif Khan
+    - Arif Khan
 1. [Image data types](https://neubias.github.io/training-resources/datatypes/index.html)
-  - Arif Khan
+    - Arif Khan
 1. Image visualization & presentation
   - Fiji: Open 16/8-bit image, B&C, Save as TIFF no problem, Save as PNG, Save as JPEG problem, Open again => Changed values, Scientific fraud to the analyse
 1. [Lookup tables](https://neubias.github.io/training-resources/lut/index.html)
@@ -55,7 +55,7 @@ Day 2 - IC Lecture Hall
 1. [Image file formats](https://neubias.github.io/training-resources/image_file_formats/index.html)
 1. [Microscopy image formation](https://neubias.github.io/training-resources/image_formation_fluo_mic/index.html)
 1. [Projections](https://neubias.github.io/training-resources/projections/index.html)
-  - Arif Khan
+    - Arif Khan
 
 ### Timing
 
