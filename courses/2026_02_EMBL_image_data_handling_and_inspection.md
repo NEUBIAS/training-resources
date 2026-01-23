@@ -47,8 +47,11 @@ Scientists that may use microscopy data in their research.
 1. [Image data types](https://neubias.github.io/training-resources/datatypes/index.html)
     - Arif Khan
 1. [Lookup tables](https://neubias.github.io/training-resources/lut/index.html)
+    - Julian Hennies
 1. [Spatial image calibration](https://neubias.github.io/training-resources/spatial_calibration/index.html)
+    - Julian Hennies
 1. [Multichannel images](https://neubias.github.io/training-resources/multichannel_images/index.html)
+    - Julian Hennies
 1. [Volume slicing](https://neubias.github.io/training-resources/volume_slicing/index.html)
 1. [Image file formats](https://neubias.github.io/training-resources/image_file_formats/index.html)
     - [Open tiff](https://neubias.github.io/training-resources/image_file_formats/index.html#open_tif)
