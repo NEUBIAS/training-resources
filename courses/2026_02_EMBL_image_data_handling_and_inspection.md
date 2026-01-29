@@ -37,7 +37,6 @@ Scientists that may use microscopy data in their research.
 - Manuel Gunkel (EMBL Heidelberg)
 - Julian Hennies (EMBL Heidelberg)
 - Aliaksandr Halavatyi (EMBL Heidelberg) ?
-- Matt Benton (EMBL Heidelberg) ?
 
 
 ## Teaching content
