@@ -36,15 +36,15 @@ Scientists that may use microscopy data in their research.
 - Arif Khan (EMBL Heidelberg)
 - Manuel Gunkel (EMBL Heidelberg)
 - Julian Hennies (EMBL Heidelberg)
-- Aliaksandr Halavatyi (EMBL Heidelberg) ?
+
 
 
 ## Teaching content
 
 1. [Digital image basics](https://neubias.github.io/training-resources/pixels/index.html)
-    - Arif Khan
+    - Manuel
 1. [Image data types](https://neubias.github.io/training-resources/datatypes/index.html)
-    - Arif Khan
+    - Manuel
 1. [Lookup tables](https://neubias.github.io/training-resources/lut/index.html)
     - Julian Hennies
 1. [Spatial image calibration](https://neubias.github.io/training-resources/spatial_calibration/index.html)
@@ -52,16 +52,16 @@ Scientists that may use microscopy data in their research.
 1. [Multichannel images](https://neubias.github.io/training-resources/multichannel_images/index.html)
     - Julian Hennies
 1. [Volume slicing](https://neubias.github.io/training-resources/volume_slicing/index.html)
-    - Manuel, Alex?
+    - Arif
 1. [Image file formats](https://neubias.github.io/training-resources/image_file_formats/index.html)
     - [Open tiff](https://neubias.github.io/training-resources/image_file_formats/index.html#open_tif)
     - [All resaving activities](https://neubias.github.io/training-resources/image_file_formats/index.html#save)
       - - Fiji: Open 16/8-bit image, B&C, Save as TIFF no problem, Save as PNG, Save as JPEG problem, Open again => Changed values, Scientific fraud to the analyse
-        - Manuel
+        - Arif
 1. [Microscopy image formation](https://neubias.github.io/training-resources/image_formation_fluo_mic/index.html)
     - Manuel
 1. [Projections](https://neubias.github.io/training-resources/projections/index.html)
-    - Arif Khan
+    - Arif 
 
 ### Timing
 
