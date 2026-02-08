@@ -15,6 +15,7 @@ motivation: |
 
 concept_map: >
   graph TD
+    
     FFC("Flat-field Correction") --- Components("Input Frames")
     FFC --- Process("Mathematical Operations")
     
