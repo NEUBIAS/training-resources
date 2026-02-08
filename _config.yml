@@ -61,6 +61,7 @@ module_order:
 - batch_processing
 - coding_with_llms
 - script_functions
+- fetching_user_input
 - script_for_loop
 - output_saving
 - script_record
@@ -79,6 +80,8 @@ module_order:
 - similarity_transforms
 - table_file_formats
 - template
+- illumination_artefact
+- flatfield_correction
 - commenting
 - user_input
 - script_env
