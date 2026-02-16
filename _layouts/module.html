@@ -237,6 +237,11 @@ layout: base
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
   </header>
+
+  <br>
+  {{ page.motivation | markdownify }}
+  <br>
+
   {% if page.prerequisites %}
     <blockquote class="prereq">
       <h2>Prerequisites</h2>
@@ -249,6 +254,8 @@ layout: base
     </blockquote>
   {% endif %}
 
+  <br>
+
   <blockquote class="objectives">
     <h2>Learning Objectives</h2>
     After completing this lesson, learners should be able to:
@@ -259,9 +266,9 @@ layout: base
     </ul>
   </blockquote>
 
-  <h2>Motivation</h2>
+  <!-- <h2>Motivation</h2>
 
-  {{ page.motivation | markdownify }}
+  {{ page.motivation | markdownify }} -->
 
   <h2>Concept map</h2>
   <font size="+1">
@@ -269,10 +276,6 @@ layout: base
       {{ page.concept_map }}
     </div>
   </font>
-
-  <br>
-  <br>
-  <br>
 
   <h2>Figure</h2>
   <figure>
@@ -287,14 +290,11 @@ layout: base
 
   <br>
   <br>
-  <br>
 
   <div class="module-content">
     {{ content }}
   </div>
 
-  <br>
-  <br>
   <br>
 
   {% if page.multiactivities %}

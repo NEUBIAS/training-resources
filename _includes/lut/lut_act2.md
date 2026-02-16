@@ -1,8 +1,10 @@
-<h4 id="configure_luts"><a href="#configure_luts">Display several images with same LUT settings</a></h4>
+<h4 id="configure_luts"><a href="#configure_luts">Correctly display a set of images</a></h4>
 
-Display image sets with the same gray scale LUT and the same contrast settings. 
-Visualise the LUT as an inset in both images (you may also attempt to visualise the LUT only once outside the images).
-This is what one typically should do for a presentation or publication for data that were acquired with the same microscope settings.
+Very often, one has a set of images that represent different biological conditions and that have been acquired with the same microscopy settings. In order to be able to judge whether there is a difference between the biologic conditions, it is critical to display them with the same color mapping settings.
+
+In this activity, we will explore important ways how to achieve such comparable visualisation:
+- Display image sets with the same color map and the same contrast settings
+- Visualise the color map and its settings 
 
 ##### Example data
 
