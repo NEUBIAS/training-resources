@@ -6,12 +6,13 @@ prerequisites:
   - "[Digital image basics](../pixels)"
 
 objectives:
-  - "Understand how the numerical values in an image are transformed into colourful images."
-  - "Understand what a lookup table (LUT) is and how to adjust it."
-  - "Appreciate that choosing the correct LUT is a very serious responsibility when preparing images for a talk or publication."
+  - "Understand how the numerical values in an image are transformed into colorful images that you see on display screen."
+  - "Understand what a lookup table (LUT) is and why adjusting it is useful."
+  - "Understand how perception about image content changes on viewing it by altering LUT "
+  - "Use LUTs responsibly for scientific purposes."
 
 motivation: |
-  Images are a collection of a lot (millions) of values, which is information that is hard to process for our human brains. Thus, one typically assigns a color to each distinct value, by means of a lookup table (LUT). There is no fix recipe for how to adjust this mapping from numbers to colors. It is easy to chose a mapping that hides certain information in an image, while emphasising other information. Thus, configuring this mapping properly is a great responsibility that scientists have to take on when presenting their image data. 
+  Images are a collection of a lot (millions) of values, which is information that is hard to process for our human brains. Thus, one typically assigns a color to each distinct value, by means of a mapping table i.e. lookup table (LUT). There is no fix recipe for how to adjust this mapping from numbers to colors. It is easy to choose a mapping that hides certain information in an image, while emphasizing other information. Thus, configuring this mapping properly is a great responsibility that scientists have to take on when presenting their image data.
 
 concept_map: >
   graph TD
@@ -19,24 +20,24 @@ concept_map: >
     L --> |does not change|V
     L --> |changes|C("Displayed pixel color & brightness")
 
-figure: /figures/lut.png
+figure: /figures/lut2.png
 figure_legend:
-  "Left: Image displayed with a grey LUT and the color mapping as an inset. Right: Image shown with several different LUTs."
+  "Left: Image displayed with a grey LUT and the color mapping as an inset. Right: Same image shown with several different LUTs."
 
 multiactivities:
-  - ["lut/lut_act1.md", [["ImageJ GUI", "lut/lut_act1_imagejgui.md", "markdown"], 
-  ["ImageJ Macro", "lut/lut_act1_imagejmacro.ijm", "java"], 
+  - ["lut/lut_act1.md", [["ImageJ GUI", "lut/lut_act1_imagejgui.md", "markdown"],
+  ["ImageJ Macro", "lut/lut_act1_imagejmacro.ijm", "java"],
   ["skimage napari", "lut/lut_act1_skimage_napari.py", "python"],["Galaxy Napari","lut/lut_act1_galaxy.md"]]]
-  - ["lut/lut_act2.md", [["ImageJ GUI", "lut/lut_act2_imagejgui.md"], 
-  ["ImageJ Macro", "lut/lut_act2_imagejmacro.ijm", "java"], 
+  - ["lut/lut_act2.md", [["ImageJ GUI", "lut/lut_act2_imagejgui.md"],
+  ["ImageJ Macro", "lut/lut_act2_imagejmacro.ijm", "java"],
   ["skimage napari", "lut/lut_act2_skimage_napari.py", "python"],["Galaxy Napari","lut/lut_act2_galaxy.md"]]]
 
 keypoints:
-  - LUT stands for "look-up table"; it defines how numeric pixel values are mapped to colors for display.
-  - A LUT has configurable contrast limits that determine the pixel value range that is rendered linearly.
+  - LUT stands for "look-up table"; it is a mapping table that tells software how to turn numeric pixel values into colors/brightness on your screen.
+  - A LUT has configurable contrast limits that determine the pixel value range that is rendered linearly to display image.
   - LUT settings must be responsibly chosen to convey the intended scientific message and not to hide relevant information.
-  - A gray scale LUT is usually preferable over a colour LUT, especially blue and red are not well visible for many people. 
-  - For high dynamic range images multi-color LUTs may be useful to visualise a wider range of pixel values.
+  - A gray scale LUT is usually preferable over a color LUT, especially blue and red are not well visible for many people.
+  - For high dynamic range images multi-color LUTs may be useful to visualize a wider range of pixel values.
 assessment: |
 
   ### Compute how the contrast limits affect the rendered pixel brightness
@@ -70,18 +71,18 @@ external_links:
 
 ---
 
-Lookup tables do the mapping from a numeric pixel value to a color. This is the main mechanism how we visualise microscopy image data. In case of doubt, it is always a good idea to show the mapping as an inset in the image (or next to the image).
+Lookup tables do the mapping from a numeric pixel value to a color. This is the main mechanism how we visualize microscopy image data. In case of doubt, it is always a good idea to show the mapping as an inset in the image (or next to the image).
 
 #### Single color lookup tables
 
-Single color lookup tables are typically configured by chosing one color such as, e.g., grey or green, and choosing a `min` and `max` value that determine the brightness of this color depending on the `value` of the respective pixel in the following way:
+Single color lookup tables are typically configured by choosing one color such as, e.g., grey or green, and choosing a `min` and `max` value that determine the brightness of this color depending on the `value` of the respective pixel in the following way:
 
 `brightness( value ) = ( value - min ) / ( max - min )`
 
 In this formula, 1 corresponds to the maximal brightness and 0 corresponds to the minimal brightness that, e.g., your computer monitor can produce.
 
-Depending on the values of `value`, `min` and `max` it can be that the formula yields values that are less than 0 or larger than 1. 
-This is handled by assinging a brightness of 0 even if the formula yields values < 0 and assigning a brightness of 1 even if the formula yields values 
+Depending on the values of `value`, `min` and `max` it can be that the formula yields values that are less than 0 or larger than 1.
+This is handled by assigning a brightness of 0 even if the formula yields values < 0 and assigning a brightness of 1 even if the formula yields values
 larger than `1`. In such cases one speaks of "clipping", because one looses ("clips") information about the pixel value (see below for an example).
 
 ##### Clipping example
@@ -96,7 +97,7 @@ Both pixel values will be painted with the same brightness as a brightness large
 
 #### Multi color lookup tables
 
-As the name suggestes multi color lookup tables map pixel gray values to different colors.
+As the name suggests multi color lookup tables map pixel gray values to different colors.
 
 For example:
 
