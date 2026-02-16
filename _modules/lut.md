@@ -20,7 +20,7 @@ concept_map: >
     L --> |does not change|V
     L --> |changes|C("Displayed pixel color & brightness")
 
-figure: /figures/lut1.png
+figure: /figures/lut2.png
 figure_legend:
   "Left: Image displayed with a grey LUT and the color mapping as an inset. Right: Same image shown with several different LUTs."
 
