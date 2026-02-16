@@ -18,37 +18,50 @@ Scientists that may use microscopy data in their research.
 
 ## Dates
 
-### EMBL/ALMF/Bioimage Analysis Service Team Microscopy Course 2025
+### EMBL/ALMF/Bioimage Analysis Service Team Microscopy Course 2026
 
-2025 February 02,03
+2026 February 02,03
 
 ## Schedule
 
-10:00 - 15:00 in-person click-along sessions
+10:00 - 15:00 in-person click-along
+
+## Venue
+
+- Day 1 - ATC Meeting Room A23
+- Day 2 - IC Lecture Hall
 
 ## Trainers
 
 - Arif Khan (EMBL Heidelberg)
-- Ziqiang Huang (EMBL Heidelberg)
 - Manuel Gunkel (EMBL Heidelberg)
-- Julian Hennies (EMBL Heidelberg) ?
-- Aliaksandr Halavatyi (EMBL Heidelberg) ?
-- Matt Benton (EMBL Heidelberg) ?
-- Leila Abbaspour (EMBL Heidelberg) ?
+- Julian Hennies (EMBL Heidelberg)
+
+
 
 ## Teaching content
 
 1. [Digital image basics](https://neubias.github.io/training-resources/pixels/index.html)
+    - Manuel
 1. [Image data types](https://neubias.github.io/training-resources/datatypes/index.html)
-1. Image visualization & presentation
-  - Fiji: Open 16/8-bit image, B&C, Save as TIFF no problem, Save as PNG, Save as JPEG problem, Open again => Changed values, Scientific fraud to the analyse
+    - Manuel
 1. [Lookup tables](https://neubias.github.io/training-resources/lut/index.html)
+    - Julian Hennies
 1. [Spatial image calibration](https://neubias.github.io/training-resources/spatial_calibration/index.html)
+    - Julian Hennies
 1. [Multichannel images](https://neubias.github.io/training-resources/multichannel_images/index.html)
+    - Julian Hennies
 1. [Volume slicing](https://neubias.github.io/training-resources/volume_slicing/index.html)
+    - Arif
 1. [Image file formats](https://neubias.github.io/training-resources/image_file_formats/index.html)
+    - [Open tiff](https://neubias.github.io/training-resources/image_file_formats/index.html#open_tif)
+    - [All resaving activities](https://neubias.github.io/training-resources/image_file_formats/index.html#save)
+      - - Fiji: Open 16/8-bit image, B&C, Save as TIFF no problem, Save as PNG, Save as JPEG problem, Open again => Changed values, Scientific fraud to the analyse
+        - Arif
 1. [Microscopy image formation](https://neubias.github.io/training-resources/image_formation_fluo_mic/index.html)
+    - Manuel
 1. [Projections](https://neubias.github.io/training-resources/projections/index.html)
+    - Arif 
 
 ### Timing
 
