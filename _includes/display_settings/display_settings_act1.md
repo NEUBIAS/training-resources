@@ -2,18 +2,18 @@
 
 To visualize an image there are several lookup tables to choose from.
 Depending upon the use-case, one can be more appropriate than another.
-In this activity, we will look at commonly used LUTs and discuss how and when to use them.
+In this activity, we will look at commonly used colormaps and discuss how and when to use them.
 
 
 
 - Open the image [xy_8bit__nuclei_high_dynamic_range.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_high_dynamic_range.tif)
-- Adjust contrast settings to highlight certain objects
+- Adjust contrast settings to highlight certain regions
   1. See only brightest objects & observe pixel values
     - Keep `max` value fixed at highest number
-    - Set `min` value to a higher number
+    - Set `min` value to a higher number to see high pixel value regions
   1. Look at dim objects
     - Keep `min` value fixed at lowest number
-    - Set `max` value to a lower number until you see dimmest ones
+    - Set `max` value to a lower number until you see dimmest objects
 - Select appropriate color map
   1. Single color
     - Do not use red/blue color (hard to see/some people have color-blindness)    

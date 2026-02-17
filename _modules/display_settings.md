@@ -1,15 +1,15 @@
 ---
-title: Lookup tables
+title: Display settings
 layout: module
 
 prerequisites:
   - "[Digital image basics](../pixels)"
 
 objectives:
-  - "Understand how the numerical values in an image are transformed into colorful images that you see on display screen."
-  - "Understand what a lookup table (LUT) is and why adjusting it is useful."
-  - "Understand how perception about image content changes on viewing it by altering LUT "
-  - "Use LUTs responsibly for scientific purposes."
+  - "Understand how the numerical values in an image are transformed into bright and colorful images that you see on display screen."
+  - "Understand what a colormap is and why adjusting it is useful."
+  - "Understand how perception about image content changes on viewing it by altering contrast and colormaps "
+  - "Use display settings responsibly for scientific purposes."
 
 motivation: |
   Images are a collection of a lot (millions) of values, which is information that is hard to process for our human brains. Thus, one typically assigns a color to each distinct value, by means of a mapping table i.e. lookup table (LUT). There is no fix recipe for how to adjust this mapping from numbers to colors. It is easy to choose a mapping that hides certain information in an image, while emphasizing other information. Thus, configuring this mapping properly is a great responsibility that scientists have to take on when presenting their image data.
@@ -22,7 +22,7 @@ concept_map: >
 
 figure: /figures/lut.png
 figure_legend:
-  "Left: Image displayed with a grey LUT and the color mapping as an inset. Right: Same image shown with several different LUTs."
+  "Left: Image displayed with a grey colormap using complete intensity display range (i.e. full bit depth). Middle: Same image and same colormap but using a different intensity display range. Right: Same image shown with a multicolor colormap. All images have color mapping bar as an inset."
 
 multiactivities:
   - ["lut/lut_act1.md", [["ImageJ GUI", "lut/lut_act1_imagejgui.md", "markdown"],
@@ -58,7 +58,7 @@ assessment: |
 
   Fill in the blanks using those words: larger than, smaller than
   1. Pixels with values _____ `max` will appear saturated.
-  2. Pixels with values _____ the `min` will appear black (using a single color LUT).
+  2. Pixels with values _____ the `min` will appear black (using a single color colormap).
 
   > ## Solution
   > 1. larger than
@@ -73,9 +73,9 @@ external_links:
 
 Lookup tables do the mapping from a numeric pixel value to a color. This is the main mechanism how we visualize microscopy image data. In case of doubt, it is always a good idea to show the mapping as an inset in the image (or next to the image).
 
-#### Single color lookup tables
+#### Single color colormaps
 
-Single color lookup tables are typically configured by choosing one color such as, e.g., grey or green, and choosing a `min` and `max` value that determine the brightness of this color depending on the `value` of the respective pixel in the following way:
+Single color colormaps are typically configured by choosing one color such as, e.g., grey or green, and choosing a `min` and `max` value that determine the brightness of this color depending on the `value` of the respective pixel in the following way:
 
 `brightness( value ) = ( value - min ) / ( max - min )`
 
@@ -95,9 +95,9 @@ larger than `1`. In such cases one speaks of "clipping", because one looses ("cl
 
 Both pixel values will be painted with the same brightness as a brightness larger than `1` is not possible (see above).
 
-#### Multi color lookup tables
+#### Multi color colormaps
 
-As the name suggests multi color lookup tables map pixel gray values to different colors.
+As the name suggests multi color colormaps map pixel gray values to different colors.
 
 For example:
 
@@ -109,6 +109,6 @@ For example:
 
 `3 -> ...`
 
-Typical use cases for multi color LUTs are images of a high dynamic range (large differences in gray values) and label mask images (where the pixel values encode object IDs).
+Typical use cases for multicolor colormaps are images of a high dynamic range (large differences in gray values) and label mask images (where the pixel values encode object IDs).
 
-Sometimes, also multi color LUTs can be configured in terms of a `min` and `max` value. The reason is that multi colors LUTs only have a limited amount of colors, e.g. 256 different colors. For instance, if you have an image that contains a pixel with a value of 300 it is not immediately obvious which color it should get; the `min` and `max` settings allow you to configure how to map your larger value range into a limited amount of colors.
+Sometimes, also multicolor colormaps can be configured in terms of a `min` and `max` value. The reason is that multicolor colormaps only have a limited amount of colors, e.g. 256 different colors. For instance, if you have an image that contains a pixel with a value of 300 it is not immediately obvious which color it should get; the `min` and `max` settings allow you to configure how to map your larger value range into a limited amount of colors.
