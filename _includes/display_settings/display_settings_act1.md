@@ -1,4 +1,4 @@
-<h4 id="explore"><a href="#explore">Learn about important lookup tables</a></h4>
+<h4 id="explore"><a href="#explore">Learn about contrast settings and colormaps</a></h4>
 
 To visualize an image there are several lookup tables to choose from.
 Depending upon the use-case, one can be more appropriate than another.
@@ -14,13 +14,13 @@ In this activity, we will look at commonly used colormaps and discuss how and wh
   1. Look at dim objects
     - Keep `min` value fixed at lowest number
     - Set `max` value to a lower number until you see dimmest objects
-- Select appropriate color map
+- Select appropriate colormap
   1. Single color
     - Do not use red/blue color (hard to see/some people have color-blindness)    
     - Safe choice is "gray"
   1. Multicolor
-    - Do not select LUTs with no biological meaning (??)
+    - Do not select LUTs with no biological meaning (For example, rainbow colormaps)
 
   1.
 - Display extreme pixel values using a single colormap
-  - Change to multicolor map that shows extreme values e.g.,"HiLo" -> shows clipping
+  - Use multicolor colormap that shows extreme values e.g.,"HiLo" -> shows clipping

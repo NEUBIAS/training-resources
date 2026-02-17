@@ -12,11 +12,11 @@ objectives:
   - "Use display settings responsibly for scientific purposes."
 
 motivation: |
-  Images are a collection of a lot (millions) of values, which is information that is hard to process for our human brains. Thus, one typically assigns a color to each distinct value, by means of a mapping table i.e. lookup table (LUT). There is no fix recipe for how to adjust this mapping from numbers to colors. It is easy to choose a mapping that hides certain information in an image, while emphasizing other information. Thus, configuring this mapping properly is a great responsibility that scientists have to take on when presenting their image data.
+  Images are a collection of a lot (millions) of values, which is information that is hard to process for our human brains. Thus, one typically assigns a color to each distinct value, by means of a mapping. There is no fix recipe for how to adjust this mapping from numbers to colors. It is easy to choose a mapping that hides certain information in an image, while emphasizing other information. Thus, configuring this mapping properly is a great responsibility that scientists have to take on when presenting their image data.
 
 concept_map: >
   graph TD
-    V("Image pixel value") --> L("Lookup table (LUT)")
+    V("Image pixel value") --> L("Colormap")
     L --> |does not change|V
     L --> |changes|C("Displayed pixel color & brightness")
 
@@ -25,12 +25,12 @@ figure_legend:
   "Left: Image displayed with a grey colormap using complete intensity display range (i.e. full bit depth). Middle: Same image and same colormap but using a different intensity display range. Right: Same image shown with a multicolor colormap. All images have color mapping bar as an inset."
 
 multiactivities:
-  - ["lut/lut_act1.md", [["ImageJ GUI", "lut/lut_act1_imagejgui.md", "markdown"],
-  ["ImageJ Macro", "lut/lut_act1_imagejmacro.ijm", "java"],
-  ["skimage napari", "lut/lut_act1_skimage_napari.py", "python"],["Galaxy Napari","lut/lut_act1_galaxy.md"]]]
-  - ["lut/lut_act2.md", [["ImageJ GUI", "lut/lut_act2_imagejgui.md"],
-  ["ImageJ Macro", "lut/lut_act2_imagejmacro.ijm", "java"],
-  ["skimage napari", "lut/lut_act2_skimage_napari.py", "python"],["Galaxy Napari","lut/lut_act2_galaxy.md"]]]
+  - ["display_settings/display_settings_act1.md", [["ImageJ GUI", "display_settings/display_settings_act1_imagejgui.md", "markdown"],
+  ["ImageJ Macro", "display_settings/display_settings_act1_imagejmacro.ijm", "java"],
+  ["skimage napari", "display_settings/display_settings_act1_skimage_napari.py", "python"],["Galaxy Napari","display_settings/display_settings_act1_galaxy.md"]]]
+  - ["display_settings/display_settings_act2.md", [["ImageJ GUI", "display_settings/display_settings_act2_imagejgui.md"],
+  ["ImageJ Macro", "display_settings/display_settings_act2_imagejmacro.ijm", "java"],
+  ["skimage napari", "display_settings/display_settings_act2_skimage_napari.py", "python"],["Galaxy Napari","display_settings/display_settings_act2_galaxy.md"]]]
 
 keypoints:
   - LUT stands for "look-up table"; it is a mapping table that tells software how to turn numeric pixel values into colors/brightness on your screen.
@@ -71,7 +71,7 @@ external_links:
 
 ---
 
-Lookup tables do the mapping from a numeric pixel value to a color. This is the main mechanism how we visualize microscopy image data. In case of doubt, it is always a good idea to show the mapping as an inset in the image (or next to the image).
+Colormaps do the mapping from a numeric pixel value to a color. This is the main mechanism how we visualize microscopy image data. In case of doubt, it is always a good idea to show the mapping as an inset in the image (or next to the image).
 
 #### Single color colormaps
 

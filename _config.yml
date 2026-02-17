@@ -36,7 +36,7 @@ module_order:
 - global_background_correction
 - image_file_formats
 - local_background_correction
-- lut
+- display_settings
 - median_filter
 - filter_morphological
 - multichannel_images
