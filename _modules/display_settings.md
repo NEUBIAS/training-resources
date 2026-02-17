@@ -72,7 +72,11 @@ external_links:
 ---
 
 Colormaps do the mapping from a numeric pixel value to a color. This is the main mechanism how we visualize microscopy image data. In case of doubt, it is always a good idea to show the mapping as an inset in the image (or next to the image).
+
+
 #### Nomenclature
+
+Color mapping can have a different name depending upon the software. Fiji uses term "Look-up table (LUT)", whereas MATLAB sticks to "colormap". In some other communities/software, it is also called as "color transfer function".
 
 #### Single color colormaps
 
@@ -96,7 +100,7 @@ larger than `1`. In such cases one speaks of "clipping", because one looses ("cl
 
 Both pixel values will be painted with the same brightness as a brightness larger than `1` is not possible (see above).
 
-#### Multi color colormaps
+#### Multicolor colormaps
 
 As the name suggests multi color colormaps map pixel gray values to different colors.
 
