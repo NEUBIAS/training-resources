@@ -5,7 +5,7 @@ tags: ["course"]
 prerequisites:
   - "[Digital image basics](../pixels)"
   - "[Data types](../datatypes)"
-  - "[Lookup tables](../lut)"
+  - "[Display settings](../display_settings)"
   - "[Spatial calibration](../spatial_calibration)"
 objectives:
   - Automatically extract biophysically meaningful numbers from microscopy images of biological samples.

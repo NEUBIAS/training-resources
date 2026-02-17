@@ -3,7 +3,7 @@
 	- [ Image › Adjust › Brightness/Contrast... ]
 	- Explore different min and max values
 		- To highlight bright regions keep the `Maximum` at 255 and slide the `Minimum` bar towards right until you see very bright regions e.g., `Minimum` = `130`
-  		- To highlight dull regions keep the `Maximum` at 255 and slide the `Minimum` bar towards right until you see very bright regions e.g., `Minimum` = `130`
+  		- To highlight dull regions keep the `Minimum` at 0 and slide the `Maximum` bar towards left until you highlight very dim regions e.g., `Minimum` = `130`
 	- Appreciate that at certain settings a very dim nucleus becomes visible
 	- Check that the pixel values did not change
 	- __Critical:__ Never click [ Apply ]

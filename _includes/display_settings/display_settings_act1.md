@@ -8,7 +8,7 @@ In this activity, we will look at commonly used colormaps and discuss how and wh
 
 - Open the image [xy_8bit__nuclei_high_dynamic_range.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_high_dynamic_range.tif)
 - Adjust contrast settings to highlight certain regions
-  1. See only brightest objects & observe pixel values
+  1. See only bright regions & observe pixel values
     - Keep `max` value fixed at highest number
     - Set `min` value to a higher number to see high pixel value regions
   1. Look at dim objects

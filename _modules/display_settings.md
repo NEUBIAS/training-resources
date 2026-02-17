@@ -33,11 +33,11 @@ multiactivities:
   ["skimage napari", "display_settings/display_settings_act2_skimage_napari.py", "python"],["Galaxy Napari","display_settings/display_settings_act2_galaxy.md"]]]
 
 keypoints:
-  - LUT stands for "look-up table"; it is a mapping table that tells software how to turn numeric pixel values into colors/brightness on your screen.
-  - A LUT has configurable contrast limits that determine the pixel value range that is rendered linearly to display image.
-  - LUT settings must be responsibly chosen to convey the intended scientific message and not to hide relevant information.
-  - A gray scale LUT is usually preferable over a color LUT, especially blue and red are not well visible for many people.
-  - For high dynamic range images multi-color LUTs may be useful to visualize a wider range of pixel values.
+  - Colormap turns numeric pixel values into colors/brightness on your screen.
+  - A colormap has configurable contrast limits that determine the pixel value range that is rendered linearly to display image.
+  - Colormap settings must be responsibly chosen to convey the intended scientific message and not to hide relevant information.
+  - A gray scale colormap is usually preferable over blue and red are not well visible for many people.
+  - For high dynamic range images multicolor colormaps may be useful to visualize a wider range of pixel values.
 assessment: |
 
   ### Compute how the contrast limits affect the rendered pixel brightness
@@ -72,6 +72,7 @@ external_links:
 ---
 
 Colormaps do the mapping from a numeric pixel value to a color. This is the main mechanism how we visualize microscopy image data. In case of doubt, it is always a good idea to show the mapping as an inset in the image (or next to the image).
+#### Nomenclature
 
 #### Single color colormaps
 
