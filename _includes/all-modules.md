@@ -8,7 +8,30 @@ open an issue: https://github.com/carpentries/styles/issues/new
 
 <style>
   h2 {text-align: center;}
+  #module-search {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    display: block;
+  }
+  #module-search:focus {
+    outline: none;
+    border-color: #4CAF50;
+  }
+  .search-container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
 </style>
+
+<div class="search-container">
+  <input type="text" id="module-search" placeholder="Search modules by title or tags...">
+</div>
+
 <h3> </h3>
 
 
@@ -28,7 +51,7 @@ open an issue: https://github.com/carpentries/styles/issues/new
 
 
 <div class="container-fluid">
-<div class="row">
+<div class="row" id="modules-container">
 
 {% for e in episodes %}
 
@@ -48,7 +71,10 @@ open an issue: https://github.com/carpentries/styles/issues/new
   {% assign title_prefix = "Scripting: " %}
 {% endif %}
 
-<div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-1">
+<div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-1 module-card" 
+     data-title="{{ title_prefix}}{{ e.title | downcase }}" 
+     data-tags="{{ tags | join: ' ' | downcase }}"
+     data-url="{{ e.url | relative_url }}">
   <div class="panel panel-default">
     <div class="panel-heading">
       <a href="{{ e.url | relative_url }}">
@@ -65,3 +91,61 @@ open an issue: https://github.com/carpentries/styles/issues/new
 {% endfor %}
 </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const searchInput = document.getElementById('module-search');
+  const moduleCards = document.querySelectorAll('.module-card');
+  const contentCache = {};
+
+  // Fetch module content
+  async function fetchModuleContent(url) {
+    if (contentCache[url]) {
+      return contentCache[url];
+    }
+    
+    try {
+      const response = await fetch(url);
+      const html = await response.text();
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, 'text/html');
+      const content = doc.body.textContent.toLowerCase();
+      contentCache[url] = content;
+      return content;
+    } catch (error) {
+      console.error('Error fetching module content:', error);
+      return '';
+    }
+  }
+
+  searchInput.addEventListener('input', async function() {
+    const searchTerm = this.value.toLowerCase().trim();
+
+    if (searchTerm === '') {
+      moduleCards.forEach(card => card.style.display = '');
+      return;
+    }
+
+    for (const card of moduleCards) {
+      const title = card.getAttribute('data-title');
+      const tags = card.getAttribute('data-tags');
+      const url = card.getAttribute('data-url');
+      
+      // First check title and tags for quick filtering
+      const quickSearch = title + ' ' + tags;
+      
+      if (quickSearch.includes(searchTerm)) {
+        card.style.display = '';
+      } else {
+        // If not found in title/tags, search the content
+        const content = await fetchModuleContent(url);
+        if (content.includes(searchTerm)) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      }
+    }
+  });
+});
+</script>
