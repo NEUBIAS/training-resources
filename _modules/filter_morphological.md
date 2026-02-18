@@ -1,7 +1,7 @@
 ---
 title:  Morphological filters
 layout: module
-tags: ["Rank filters","Dilation","Erosion","Opening"]
+tags: ["Rank filters","Dilation","Erosion","Opening", "Granulometry"]
 
 prerequisites:
   - "[Segmentation overview](../segmentation)"

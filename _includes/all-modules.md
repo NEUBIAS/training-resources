@@ -20,7 +20,7 @@ open an issue: https://github.com/carpentries/styles/issues/new
   }
 </style>
 
-<input type="text" id="module-search" placeholder="Search modules by title...">
+<input type="text" id="module-search" placeholder="Search modules...">
 
 <h3> </h3>
 
@@ -62,7 +62,8 @@ open an issue: https://github.com/carpentries/styles/issues/new
 {% endif %}
 
 <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-1 module-card" 
-     data-title="{{ title_prefix}}{{ e.title | downcase }}">
+     data-title="{{ title_prefix}}{{ e.title | downcase }}"
+     data-tags="{{ tags | join: ' ' | downcase }}">
   <div class="panel panel-default">
     <div class="panel-heading">
       <a href="{{ e.url | relative_url }}">
@@ -90,7 +91,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     moduleCards.forEach(card => {
       const title = card.getAttribute('data-title');
-      if (title.includes(searchTerm)) {
+      const tags = card.getAttribute('data-tags');
+
+      if (title.includes(searchTerm)
+          || (tags && tags.includes(searchTerm))) {
         card.style.display = '';
       } else {
         card.style.display = 'none';
