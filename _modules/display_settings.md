@@ -6,7 +6,7 @@ prerequisites:
   - "[Digital image basics](../pixels)"
 
 objectives:
-  - "Understand how the numerical values in an image are transformed into bright and colorful images that you see on display screen."
+  - "Understand how the numerical pixel values of an image are transformed into bright and colorful images that you see on display screen."
   - "Understand what a colormap is and why adjusting it is useful."
   - "Understand how perception about image content changes on viewing it by altering contrast and colormaps "
   - "Use display settings responsibly for scientific purposes."
@@ -34,9 +34,9 @@ multiactivities:
 
 keypoints:
   - Colormap turns numeric pixel values into colors/brightness on your screen.
-  - A colormap has configurable contrast limits that determine the pixel value range that is rendered linearly to display image.
+  - A colormap has configurable contrast limits that determine the pixel value range that is rendered linearly to display the image.
   - Colormap settings must be responsibly chosen to convey the intended scientific message and not to hide relevant information.
-  - A gray scale colormap is usually preferable over blue and red are not well visible for many people.
+  - A gray scale colormap is usually preferable; especially blue and red colormaps are not well visible for many people.
   - For high dynamic range images multicolor colormaps may be useful to visualize a wider range of pixel values.
 assessment: |
 
@@ -76,7 +76,7 @@ Colormaps do the mapping from a numeric pixel value to a color. This is the main
 
 #### Nomenclature
 
-Color mapping can have a different name depending upon the software. Fiji uses term "Look-up table (LUT)", whereas MATLAB sticks to "colormap". In some other communities/software, it is also called as "color transfer function".
+Color mapping may have different names depending upon the software. Fiji uses the term "Look-up table (LUT)", whereas MATLAB sticks to "colormap". In some other communities/software, it is also called as "color transfer function".
 
 #### Single color colormaps
 
