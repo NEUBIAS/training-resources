@@ -1,3 +1,107 @@
+'''
+Module for parsing Markdown training module files, validating internal links,
+and producing ordered lists of modules for use with Cytoscape or site generation.
+This module provides utilities to:
+- Parse Markdown files with YAML front matter to extract metadata (title,
+    prerequisites, learn_next, tags).
+- Normalize and validate Markdown link entries against the discovered
+    modules, reporting mismatches between linked titles and actual module titles.
+- Collect and normalize module paths from a directory tree.
+- Order modules primarily by draft status, then by workflow/scripting flags,
+    and finally alphabetically by title.
+- Emit simple output artifacts (ordered module list and a CSV of titles/links)
+    when run as a script.
+Functions and behaviors
+- parse_markdown_file(filepath) -> dict | None
+        Reads a Markdown file and attempts to extract YAML front matter bounded by
+        '---' lines. Before parsing, tabs inside YAML are replaced with two spaces.
+        YAML is parsed with yaml.safe_load(). Returns:
+            - None if the file is not found or YAML parsing fails (an error is printed).
+            - A dict with keys:
+                    - 'title' (str): title from front matter, or "" if missing.
+                    - 'prerequisites' (list): list from front matter, or [] if missing.
+                    - 'learn_next' (list): list from front matter, or [] if missing.
+                    - 'tags' (list): list from front matter, or [] if missing.
+        Notes:
+            - The function tolerates missing front matter (treats as empty dict).
+            - YAML parsing errors are printed and cause the function to return None.
+- extract_link_and_title(entry) -> (str, str)
+        Accepts a single Markdown link string like "[Title](path/to/module)" and
+        returns a tuple (link, title). Behavior:
+            - If entry is not a str, returns ("", "").
+            - If the entry matches the pattern [text](url), returns (normalized_url, text)
+                where normalization removes leading "../" and "./" segments.
+            - If the entry does not match, returns ("", "").
+- process_markdown_files(directory) -> dict
+        Walks directory (and subdirectories) for files ending with ".md". For each
+        file:
+            - Uses parse_markdown_file to extract metadata.
+            - Builds a normalized key for the module by:
+                    - Converting OS path separators to '/'.
+                    - Removing a leading '_modules/' segment if present.
+                    - Stripping file extensions.
+                    - Removing '../' and './' occurrences.
+            - Only files successfully parsed (parse_markdown_file returned a dict)
+                are included.
+        Returns a mapping {normalized_path_key: metadata_dict}. Returns an empty
+        dict if none are found.
+- order_modules_by_title(files_data) -> (ordered_paths, modules_for_sorting)
+        Given the mapping produced by process_markdown_files, produces two outputs:
+            - ordered_paths: list of module path keys ordered according to the sort
+                strategy (see below).
+            - modules_for_sorting: list of tuples used for sorting in the form
+                (title_lowercase, is_scripting, is_workflow, is_draft, path).
+        Filtering and sorting rules:
+            - Modules whose tags contain 'Course' or 'Outdated' (case-insensitive by
+                way of .capitalize() normalization) are excluded entirely.
+            - Tag flags are determined for 'Draft', 'Workflow', 'Scripting' and
+                'Outdated' by capitalizing each tag and checking membership.
+            - The sort key used is (is_draft, is_workflow, is_scripting, title_lowercase),
+                which places non-draft modules before drafts, then orders by workflow
+                flag, scripting flag, then alphabetically by title.
+        Notes:
+            - The function returns both the ordered list of paths and the internal
+                tuples for any further processing.
+Script behavior (when run as __main__)
+- Sets markdown_directory = './_modules' and processes Markdown files there.
+- Prints the internal sorted module tuples to stdout.
+- Writes cytoscape/ordered_modules.txt:
+        - Starts by writing '- ' then appends the ordered module paths joined with
+            '\n- ' so the file becomes a bulleted list.
+- Writes cytoscape/ordered_modules_title_links.csv with a header and then one
+    line per module (skipping draft-marked modules in the CSV). Each line
+    contains title, scripting/workflow flags and a constructed absolute URL
+    prefixing the normalized path with a site base URL.
+- For every module, compares each entry in 'prerequisites' and 'learn_next'
+    (if present) against the actual module titles resolved from files_data:
+        - Uses extract_link_and_title to parse each list entry.
+        - Skips entries with 'TODO' in the link title.
+        - If the referenced path exists in files_data but the linked title differs
+            from the actual module title, prints a mismatch message showing:
+                - current module path
+                - referenced module path
+                - title in the link
+                - actual module title
+Side effects and error reporting
+- Prints error messages when files are not found or when YAML parsing fails.
+- Prints mismatch reports for broken/inconsistent link titles.
+- Writes two output files under the 'cytoscape' directory when executed as a
+    script: ordered_modules.txt and ordered_modules_title_links.csv.
+- Normalizes paths in keys and removes certain path prefixes; callers that
+    rely on raw file system paths should be aware of this normalization.
+Assumptions and caveats
+- Tag matching is performed by calling .capitalize() on each tag string;
+    this provides a simple case-insensitive match for single-word tags but may
+    not correctly handle multi-word or differently-cased tag variants.
+- Link extraction expects standard Markdown link syntax; nonconforming entries
+    are treated as empty.
+- YAML front matter must be enclosed between '---' lines; other forms of
+    metadata are not parsed.
+- The module attempts to be fault-tolerant (returns defaults or None and
+    prints errors) rather than raising for every parse/IO issue, to allow batch
+    processing across many files.
+'''
+
 import os
 import re
 import json
