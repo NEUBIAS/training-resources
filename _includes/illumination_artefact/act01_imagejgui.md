@@ -2,8 +2,8 @@
 
  - Drag and drop [xyc_16bit__hoechst_phalloidin_tile_01.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/shading_tiling/xyc_16bit__hoechst_phalloidin_tile_01.tif)
  to ImageJ
- - Draw a line across the diagonal of the image
- - Plot a profile  `Ctrl-K` [ Analyze › Plot Profile] 
+ - Draw a line across the diagonal of the image, if possible increase the width of the line to 50 pixels (this makes the graph more clear)
+ - Plot a profile  `Ctrl-K` [Analyze › Plot Profile] 
  - Press `Live` in the Plot window
  - Change between channels and also on different lines across the image
  - You should notice a difference in intensities between the center and border of the image?
