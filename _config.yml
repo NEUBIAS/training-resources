@@ -22,6 +22,7 @@ kind: "lesson"
 # Module order is alphabetical based on title and tag (scripting, workflow, drafts)
 module_order:
 - psf
+- sampling
 - auto_threshold
 - batch_qc_and_exploration
 - big_image_file_formats
