@@ -6,10 +6,10 @@ permalink: /index.html
 
 <br>
 
-This resource consists of a collection of **[training modules](all-modules)** that have been used to teach **[a number of courses](https://github.com/NEUBIAS/training-resources/tree/master/courses)**. The content of the training resource is explained in the  **[
-Bioimage analysis training resources: How to use](https://www.youtube.com/watch?v=IcSBmoMRA20)** video
+This resource consists of a collection of **[training modules](all-modules)** that have been used to teach **[a number of courses](https://github.com/NEUBIAS/training-resources/tree/master/courses)**. The content of the training resource is explained in this video: **[
+Bioimage analysis training resources: How to use](https://www.youtube.com/watch?v=IcSBmoMRA20)**.
 
-Each module can be tought in 30-45 min and covers a specific aspect of image analysis. Links to prerequisite and suggestions what could be tought next are given for each module and are used to define a **[module dependencies network](#module_network)**. The network can be used to guide instructors in the choice of modules for a course.
+Each module can be taught in 30-45 min and covers a specific aspect of image analysis. Links to prerequisites and suggestions what could be taught next are given for each module and are used to define a **[module dependencies network](#module_network)**. The network can be used to guide instructors in the choice of modules for a course.
 
 The modules are meant to be taught hands-on, i.e. following the teacher's guidance, students execute the relevant steps in an image analysis software on their computers. The modules provide those steps for several major image analysis platforms, such as ImageJ GUI, ImageJ Macro, Python and Galaxy. Please see our **[teaching tips](TEACHING_TIPS.md)** and the video for the **[Digital image basics](https://www.youtube.com/watch?v=Felvc8zvFeU&list=PLnnMnuibzkscxztDDOZCyXjWfgIqYFobM)** module. 
 
