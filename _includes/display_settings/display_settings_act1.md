@@ -21,6 +21,5 @@ In this activity, we will look at commonly used colormaps and discuss how and wh
   1. Multicolor
     - Do not select LUTs with no biological meaning (For example, rainbow colormaps)
 
-  1.
 - Display extreme pixel values using a single colormap
   - Use multicolor colormap that shows extreme values e.g.,"HiLo" -> shows clipping
