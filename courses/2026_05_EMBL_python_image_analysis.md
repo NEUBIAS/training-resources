@@ -42,8 +42,10 @@ As there are 6 modules per day that makes ~45 minutes per module.
 
 - Severina Klaus (Uni Heidelberg)
 - Felix Schneider (EMBL)
-- Dominik Kutra (EMBL)
-- Christian Tischer (EMBL)
+- Dominik Kutra (EMBL) ??
+- Sofia Torchia ??
+- Matt Benton ??
+- Julian Gurgo ??
 - Arif Khan (EMBL)
 - Julian Hennies (EMBL)
 - Alessandro Ulivi (Uni Heidelberg)
