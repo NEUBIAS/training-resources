@@ -23,7 +23,7 @@ The course is combining these three courses:
 - https://neubias.github.io/training-resources/basic-image-analysis-course/index.html
 - https://neubias.github.io/training-resources/basic-batch-analysis-course/index.html
 
-The course is also [announced on the EMBL bio-it website](https://bio-it.embl.de/events/basics-of-bioimage-analysis-in-python-xxx/).
+The course is also [announced on the EMBL bio-it website](https://bio-it.embl.de/basics-of-bioimage-analysis-in-python-4/).
 
 - Monday, 9:30 – 16:00, May 04, 2026 day 1
 - Tuesday, 9:30 – 16:00, May 05, 2026 day 2
