@@ -42,10 +42,7 @@ As there are 6 modules per day that makes ~45 minutes per module.
 
 - Severina Klaus (Uni Heidelberg)
 - Felix Schneider (EMBL)
-- Dominik Kutra (EMBL) ??
-- Sofia Torchia ??
-- Matt Benton ??
-- Julian Gurgo ??
+- Matt Benton (EMBL)
 - Arif Khan (EMBL)
 - Julian Hennies (EMBL)
 - Alessandro Ulivi (Uni Heidelberg)
@@ -58,14 +55,14 @@ The whole course will be guided hands-on sessions.
 
 Trainers:
 
-1. Welcome & trainer introduction
-    -
+1. Welcome & introduction to bioimage analysis
+    - Matt Benton
 1. [Installing python software via conda](https://neubias.github.io/training-resources/tool_installation/index.html)
     -
 1. [Digital image basics](https://neubias.github.io/training-resources/pixels/index.html)
     -
 1. [Lookup tables](https://neubias.github.io/training-resources/lut/index.html)
-    -
+    - Arif Khan
 1. [Spatial image calibration](https://neubias.github.io/training-resources/spatial_calibration/index.html)
     -
     - Activities
