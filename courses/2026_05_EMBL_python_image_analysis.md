@@ -28,7 +28,7 @@ The course is also [announced on the EMBL bio-it website](https://bio-it.embl.de
 - Monday, 9:30 – 16:00, May 04, 2026 day 1
 - Tuesday, 9:30 – 16:00, May 05, 2026 day 2
 - Monday, 9:30 – 16:00, May 11, 2026 day 3
-- Monday, 9:30 – 16:00, May 12, 2026 day 4
+- Tuesday, 9:30 – 16:00, May 12, 2026 day 4
 
 This includes a lunch break (1 hr) and two coffee breaks (20 minutes), resulting in approximately 5 hr of teaching time.
 
