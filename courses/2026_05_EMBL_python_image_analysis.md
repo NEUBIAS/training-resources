@@ -46,6 +46,7 @@ As there are 6 modules per day that makes ~45 minutes per module.
 - Arif Khan (EMBL)
 - Julian Hennies (EMBL)
 - Alessandro Ulivi (Uni Heidelberg)
+- Andrea Zanon (EMBL)
 
 ## Teaching content
 
@@ -75,7 +76,7 @@ Trainers:
        - [Inspect an 8 bit image](https://neubias.github.io/training-resources/datatypes/index.html#saturation_8bit)
        - [Inspect a 12 bit image](https://neubias.github.io/training-resources/datatypes/index.html#saturation_12bit)
 1. [Image projections](https://neubias.github.io/training-resources/projections/index.html)
-    -
+    - Andrea Zanon
     - [Max and sum projections of an anisotropic image]()
 
 ### Image analysis basics (day 2, 05. May 2026)
