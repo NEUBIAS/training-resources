@@ -50,6 +50,17 @@ To get a sense for how this material may be used we compiled a selection of cons
       <span class="course-credits">0.3 CP</span>
     </div>
   </div>
+  
+  <div class="course-card">
+    <div class="course-icon"><i class="fas fa-microscope"></i></div>
+    <h4><a href="image_formation_and_artefacts">Image formation and imaging artefacts (DRAFT)</a></h4>
+    <p>Learn some essential concepts on what determines quality and resolution of images, how this affects quantifications, and how to  mitigate imaging artefacts.</p>
+    <div class="course-meta">
+      <span class="course-modules">xx modules</span>
+      <span class="course-duration">x hours</span>
+      <span class="course-credits">xx CP</span>
+    </div>
+  </div>
 
   <div class="course-card">
     <div class="course-icon"><i class="fas fa-tasks"></i></div>
