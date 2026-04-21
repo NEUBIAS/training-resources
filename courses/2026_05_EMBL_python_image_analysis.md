@@ -85,16 +85,16 @@ Trainers: Arif, Severina & Julian
 Trainers: Arif, Severina, Felix
 
 1. [Segmentation](https://neubias.github.io/training-resources/segmentation/index.html)
-    -
+    - Severina
     - Just show the figure!
 1. [Workflow: Basic 2D object analysis](https://neubias.github.io/training-resources/workflow_segment_2d_nuclei_measure_shape/index.html)
-    -
+    - Severina
     - Just show the figure!
     - Only discuss the figure to motivate the day:
         - The most basic segmentation workflow
         - The components of this workflow will be taught now
 1. [Manual thresholding](https://neubias.github.io/training-resources/binarization/index.html)
-    -
+    - Severina
 1. [Automated thresholding](https://neubias.github.io/training-resources/auto_threshold/index.html)
     -
 1. [Connected component labeling](https://neubias.github.io/training-resources/connected_components/index.html)
