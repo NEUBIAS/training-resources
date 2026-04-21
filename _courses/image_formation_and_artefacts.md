@@ -1,6 +1,6 @@
 ---
 title: Image formation and imaging artefacts (DRAFT)
-module_order: ["pixels", "filter_neighbourhood", "projections", "illumination_artefact", "flatfield_correction"]
+module_order: ["pixels", "filter_neighbourhood", "projections", "psf", "sampling",  "illumination_artefact", "flatfield_correction", "stitching"]
 ---
 
 {% include base_path.html %}

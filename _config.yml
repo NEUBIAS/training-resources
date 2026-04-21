@@ -21,8 +21,7 @@ kind: "lesson"
 
 # Module order is alphabetical based on title and tag (scripting, workflow, drafts)
 module_order:
-- psf
-- sampling
+
 - auto_threshold
 - batch_qc_and_exploration
 - big_image_file_formats
@@ -51,12 +50,15 @@ module_order:
 - measure_shapes
 - ome_tiff
 - ome_zarr
+- psf
 - projections
+- sampling
 - segmentation
 - skeletonization
 - smart_microscopy_low_zoom_high_zoom
 - spatial_calibration
 - filter_statistical
+- stitching
 - binarization
 - tool_installation
 - volume_viewer
