@@ -54,24 +54,25 @@ The whole course will be guided hands-on sessions.
 
 ### Image inspection basics (day 1, 04. May 2026)
 
-Trainers:
+Trainers: Arif, Severina & Julian
+
 
 1. Welcome & introduction to bioimage analysis
     - Matt Benton
 1. [Installing python software via conda](https://neubias.github.io/training-resources/tool_installation/index.html)
-    -
+    - Arif Khan
 1. [Digital image basics](https://neubias.github.io/training-resources/pixels/index.html)
-    -
+    - Julian
 1. [Lookup tables](https://neubias.github.io/training-resources/lut/index.html)
     - Arif Khan
 1. [Spatial image calibration](https://neubias.github.io/training-resources/spatial_calibration/index.html)
-    -
+    - Severina
     - Activities
        - [3-D spatial calibration](https://neubias.github.io/training-resources/spatial_calibration/index.html#explore3D)
 1. [N-dimensional images](https://neubias.github.io/training-resources/multidimensional_image_basics/index.html)
-    -
+    - Severina
 1. [Image data types](https://neubias.github.io/training-resources/datatypes/index.html)
-    -
+    - Julian
     - Activities
        - [Inspect an 8 bit image](https://neubias.github.io/training-resources/datatypes/index.html#saturation_8bit)
        - [Inspect a 12 bit image](https://neubias.github.io/training-resources/datatypes/index.html#saturation_12bit)
@@ -81,19 +82,19 @@ Trainers:
 
 ### Image analysis basics (day 2, 05. May 2026)
 
-Trainers:
+Trainers: Arif, Severina, Felix
 
 1. [Segmentation](https://neubias.github.io/training-resources/segmentation/index.html)
-    -
+    - Severina
     - Just show the figure!
 1. [Workflow: Basic 2D object analysis](https://neubias.github.io/training-resources/workflow_segment_2d_nuclei_measure_shape/index.html)
-    -
+    - Severina
     - Just show the figure!
     - Only discuss the figure to motivate the day:
         - The most basic segmentation workflow
         - The components of this workflow will be taught now
 1. [Manual thresholding](https://neubias.github.io/training-resources/binarization/index.html)
-    -
+    - Severina
 1. [Automated thresholding](https://neubias.github.io/training-resources/auto_threshold/index.html)
     -
 1. [Connected component labeling](https://neubias.github.io/training-resources/connected_components/index.html)
@@ -105,7 +106,7 @@ Trainers:
 
 ### Image analysis basics (day 3, 11. May 2026)
 
-Trainers:
+Trainers: Julian, Alessandro, Felix
 
 1. [Object intensity measurements](https://neubias.github.io/training-resources/measure_intensities/index.html)
     -
@@ -123,7 +124,7 @@ Trainers:
 
 ### Batch image analysis basics (day 4, 12. May 2026)
 
-Trainers:
+Trainers: Arif, Alessandro, Julian
 
 1. Introduce the general idea of batch processing
     -
@@ -144,7 +145,7 @@ Trainers:
     -
     -
 1. Batch inspection with MoBIE
-    -
+    - Julian
     - [Install Fiji/MoBIE](https://github.com/mobie/mobie-viewer-fiji?tab=readme-ov-file#install)
     - Ideally use the results from the above "batch analysis" module, alternatively [download and unzip these files](https://github.com/NEUBIAS/training-resources/raw/master/image_data/batch_process/inputs_and_outputs.zip)
     - Inspect the results table (e.g., drag and drop onto Fiji)
