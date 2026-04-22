@@ -1,3 +1,4 @@
+We will use the [basic stitching plugin](https://imagej.net/plugins/image-stitching) in ImageJ 
 - Start the stitching plugin [Plugins › Stitching › Grid/Collection stitching]
 - Set `Type` to **Grid: snake by rows** and `Order` to **Right & Down**
 - We have 4 tiles set `Grid size x:` and `Grid size y` to **2**

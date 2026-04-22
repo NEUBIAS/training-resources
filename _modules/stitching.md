@@ -26,7 +26,7 @@ concept_map: >
     %% Define the Core Process
     subgraph Stitching_Core [Stitching Algorithm]
         direction TB
-        Align(Step 1: Alignment)
+        Align(Step 1: Alignment and registration)
         Blend(Step 2: Blending/Merging)
     end
 
@@ -55,23 +55,37 @@ figure_legend: TODO
 
 multiactivities:
   - ["stitching/act01.md", [["ImageJ GUI", "stitching/act01_imagejgui.md"], ["ImageJ Macro", "stitching/act01_imagejmacro.ijm"]]]
-
+  - ["stitching/act02.md", [["ImageJ GUI", "stitching/act02_imagejgui.md"]]]
 assessment: >
 
-  ### Fill in the blanks
 
-    1. TODO ___ .
-    1. TODO ___ .
+  ### Why is it standard practice to include an overlap (typically 10-20%) between adjacent tiles during acquisition?
+
+    1. To increase the overall magnification of the final mosaic
+    2. To provide redundant information used by registration algorithms to calculate the exact alignment
+    3. To compensate for the low light sensitivity of the detector
+    4. To ensure that the file size of each tile remains constant
     
     > ## Solution
-    >   1. TODO
-    >   1. TODO
+    >   2 Registration algorithms (like phase correlation or feature matching) require a shared region to identify corresponding 
     {: .solution}
 
-learn_next:
-  - "[TODO](../auto_threshold)"
+  ### Illumination Artifacts
+  If individual tiles exhibit "vignetting" (darker edges) and are stitched together without prior correction, what is the most likely result in the final large image?
+    1. The image will appear perfectly seamless.
+    2. The resolution of the image will decrease by 50%.
+    3. A visible "checkerboard" pattern or grid-like intensity variations will appear across the mosaic.
+    4. The colors in the center of the image will shift toward the red spectrum.
+    
+    > ## Solution
+    >   3  Uneven illumination causes "shading" at the tile borders. To avoid this, flat-field correction must be applied to each tile before the stitching process to ensure intensity homogeneity.
+    {: .solution}
+  
+
 
 external_links:
-  - "[Wikipedia: Binary image](https://en.wikipedia.org/wiki/Binary_image)"
+  - "[BigStitcher: OpenSource to sticht very large data sets](https://imagej.net/plugins/bigstitcher/index)"
+  - "[Imaris stitcher: commercial software](https://imaris.oxinst.com/learning/view/article/imaris-stitcher-technology)"
+  - "[Image registration in general](https://imagej.net/imaging/registration)"
 ---
 
