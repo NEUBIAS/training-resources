@@ -21,6 +21,8 @@ kind: "lesson"
 
 # Module order is alphabetical based on title and tag (scripting, workflow, drafts)
 module_order:
+- psf
+- sampling
 - auto_threshold
 - batch_qc_and_exploration
 - big_image_file_formats
@@ -33,8 +35,10 @@ module_order:
 - pixels
 - distance_transform
 - image_formation_fluo_mic
+- flatfield_correction
 - global_background_correction
 - image_file_formats
+- illumination_artefact
 - local_background_correction
 - lut
 - median_filter
@@ -80,8 +84,6 @@ module_order:
 - similarity_transforms
 - table_file_formats
 - template
-- illumination_artefact
-- flatfield_correction
 - commenting
 - user_input
 - script_env
