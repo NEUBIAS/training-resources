@@ -5,7 +5,6 @@ tags: ["microscopy, image formation"]
 prerequisites:
   - "[Digital image basics](../pixels)"
   - "[Projections](../projections)"
-  - "[Image registration](../image_registration)"
 objectives:
   - Learn how to stitch tiled images into a single large image
   - Learn which parameters affect the quality of the results

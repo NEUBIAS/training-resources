@@ -1,7 +1,7 @@
 ---
 title: Point spread function 
 layout: module
-tags: ["draft", "microscopy", "image formation", "psf"]
+tags: ["microscopy", "image formation", "psf"]
 prerequisites:
   - "[Digital image basics](../pixels)"
 objectives:
