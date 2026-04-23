@@ -24,6 +24,13 @@
       },
       {
         "data": {
+          "id": "stitching",
+          "label": "Stitching of tiled images",
+          "url": "../stitching"
+        }
+      },
+      {
+        "data": {
           "id": "spatial_calibration",
           "label": "Spatial calibration",
           "url": "../spatial_calibration"
@@ -76,6 +83,13 @@
           "id": "output_saving",
           "label": "Output saving",
           "url": "../output_saving"
+        }
+      },
+      {
+        "data": {
+          "id": "spherical_aberrations",
+          "label": "Spherical aberrations",
+          "url": "../spherical_aberrations"
         }
       },
       {
@@ -150,6 +164,13 @@
       },
       {
         "data": {
+          "id": "illumination_artefact",
+          "label": "Illumination and shading artefacts",
+          "url": "../illumination_artefact"
+        }
+      },
+      {
+        "data": {
           "id": "filter_neighbourhood",
           "label": "Neighborhood filters",
           "url": "../filter_neighbourhood"
@@ -160,6 +181,13 @@
           "id": "script_variables",
           "label": "Variables",
           "url": "../script_variables"
+        }
+      },
+      {
+        "data": {
+          "id": "flatfield_correction",
+          "label": "Flat-field correction",
+          "url": "../flatfield_correction"
         }
       },
       {
@@ -318,6 +346,13 @@
       },
       {
         "data": {
+          "id": "psf",
+          "label": "Point spread function",
+          "url": "../psf"
+        }
+      },
+      {
+        "data": {
           "id": "auto_threshold",
           "label": "Automatic thresholding",
           "url": "../auto_threshold"
@@ -362,14 +397,14 @@
     "edges": [
       {
         "data": {
-          "source": "filter_convolution",
+          "source": "object_filtering",
           "target": "workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "object_filtering",
+          "source": "filter_convolution",
           "target": "workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape",
           "label": "Dependency"
         }
@@ -378,6 +413,13 @@
         "data": {
           "source": "image_file_formats",
           "target": "big_image_file_formats",
+          "label": "Dependency"
+        }
+      },
+      {
+        "data": {
+          "source": "projections",
+          "target": "stitching",
           "label": "Dependency"
         }
       },
@@ -404,14 +446,14 @@
       },
       {
         "data": {
-          "source": "script_for_loop",
+          "source": "string_concat",
           "target": "batch_processing",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "string_concat",
+          "source": "script_for_loop",
           "target": "batch_processing",
           "label": "Dependency"
         }
@@ -432,14 +474,14 @@
       },
       {
         "data": {
-          "source": "volume_slicing",
+          "source": "projections",
           "target": "volume_viewer",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "projections",
+          "source": "volume_slicing",
           "target": "volume_viewer",
           "label": "Dependency"
         }
@@ -448,6 +490,20 @@
         "data": {
           "source": "workflow_segment_2d_nuclei_measure_shape",
           "target": "output_saving",
+          "label": "Dependency"
+        }
+      },
+      {
+        "data": {
+          "source": "psf",
+          "target": "spherical_aberrations",
+          "label": "Dependency"
+        }
+      },
+      {
+        "data": {
+          "source": "multidimensional_image_basics",
+          "target": "spherical_aberrations",
           "label": "Dependency"
         }
       },
@@ -537,6 +593,13 @@
       },
       {
         "data": {
+          "source": "pixels",
+          "target": "illumination_artefact",
+          "label": "Dependency"
+        }
+      },
+      {
+        "data": {
           "source": "datatypes",
           "target": "filter_neighbourhood",
           "label": "Dependency"
@@ -546,6 +609,20 @@
         "data": {
           "source": "script_run",
           "target": "script_variables",
+          "label": "Dependency"
+        }
+      },
+      {
+        "data": {
+          "source": "filter_convolution",
+          "target": "flatfield_correction",
+          "label": "Dependency"
+        }
+      },
+      {
+        "data": {
+          "source": "illumination_artefact",
+          "target": "flatfield_correction",
           "label": "Dependency"
         }
       },
@@ -600,14 +677,14 @@
       },
       {
         "data": {
-          "source": "lut",
+          "source": "spatial_calibration",
           "target": "image_inspection_and_presentation",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "spatial_calibration",
+          "source": "lut",
           "target": "image_inspection_and_presentation",
           "label": "Dependency"
         }
@@ -642,14 +719,14 @@
       },
       {
         "data": {
-          "source": "filter_neighbourhood",
+          "source": "connected_components",
           "target": "filter_morphological",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "connected_components",
+          "source": "filter_neighbourhood",
           "target": "filter_morphological",
           "label": "Dependency"
         }
@@ -684,14 +761,14 @@
       },
       {
         "data": {
-          "source": "median_filter",
+          "source": "projections",
           "target": "local_background_correction",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "projections",
+          "source": "median_filter",
           "target": "local_background_correction",
           "label": "Dependency"
         }
@@ -714,6 +791,13 @@
         "data": {
           "source": "connected_components",
           "target": "measure_shapes",
+          "label": "Dependency"
+        }
+      },
+      {
+        "data": {
+          "source": "pixels",
+          "target": "psf",
           "label": "Dependency"
         }
       },
@@ -747,14 +831,14 @@
       },
       {
         "data": {
-          "source": "datatypes",
+          "source": "spatial_calibration",
           "target": "image_file_formats",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "spatial_calibration",
+          "source": "datatypes",
           "target": "image_file_formats",
           "label": "Dependency"
         }

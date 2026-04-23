@@ -5,6 +5,7 @@ tags: ["microscopy", "image formation"]
 prerequisites:
   - "[Digital image basics](./pixels)"
   - "[N-dimensional images](./multidimensional_image_basics)"
+  - "[Point spread function](./psf)"
 objectives:
   - "Intensity Loss (Dimming): Understand why light fails to converge at a single focal point, leading to a  dimmer and less contrasty signal"
   - "Learn how the difference between your immersion oil and your sample environment triggers these aberrations."
