@@ -82,7 +82,7 @@ Trainers: Arif, Severina & Julian
 
 ### Image analysis basics (day 2, 05. May 2026)
 
-Trainers: Arif, Severina, Felix
+Trainers: Alessandro, Arif, Severina, Felix
 
 1. [Segmentation](https://neubias.github.io/training-resources/segmentation/index.html)
     - Severina
@@ -106,12 +106,12 @@ Trainers: Arif, Severina, Felix
 
 ### Image analysis basics (day 3, 11. May 2026)
 
-Trainers: Julian, Alessandro, Felix
+Trainers: Julian, Arif, Felix
 
 1. [Object intensity measurements](https://neubias.github.io/training-resources/measure_intensities/index.html)
-    -
+    - Arif 
 1. [Image neighborhood filtering](https://neubias.github.io/training-resources/filter_neighbourhood/index.html)
-    -
+    - Arif
 1. [Median filter](https://neubias.github.io/training-resources/median_filter/index.html)
     -
 1. [Local background subtraction](https://neubias.github.io/training-resources/local_background_correction/index.html)
@@ -127,7 +127,7 @@ Trainers: Julian, Alessandro, Felix
 Trainers: Arif, Alessandro, Julian
 
 1. Introduce the general idea of batch processing
-    -
+    - 
     - Ingredients: Loops, File paths, Functions, Data management, Results QC
 1. [Loops](https://neubias.github.io/training-resources/script_for_loop/index.html)
     -
