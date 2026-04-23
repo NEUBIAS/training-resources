@@ -57,6 +57,7 @@ module_order:
 - skeletonization
 - smart_microscopy_low_zoom_high_zoom
 - spatial_calibration
+- spherical_aberrations
 - filter_statistical
 - stitching
 - binarization
