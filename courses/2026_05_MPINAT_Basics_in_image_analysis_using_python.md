@@ -30,7 +30,7 @@ see https://events.gwdg.de/e/bioimage_python_2026
 * You should know all the topics mentioned in the **Learn the Basics** section of the [Learn Python](https://www.learnpython.org/en/Welcome) website (you may skip "Classes and Objects" and "Modules and Packages").
 * Please practice running code in a Jupyter Notebook following this Jupyter Lab [guide](https://jupyter.org/try-jupyter/lab/) path [notebooks> Intro.ipynb]. 
 * For the course you will need to bring your laptop (you will need WiFi and eduroam).
-* Please, before the course use the `conda` platform to install skimage and napari on your laptop, following [these instructions](https://neubias.github.io/training-resources/tool_installation/index.html#skimage_napari). Do also install a recent version of FiJi following [these instructions](https://neubias.github.io/training-resources/tool_installation/index.html#imagej).
+* Please, before the course use the `conda` platform to install skimage and napari on your laptop, following [these instructions](https://neubias.github.io/training-resources/tool_installation/index.html?id_activity_platform-1=conda-activity-1&id_activity_platform-0=null-activity-0#skimage_napari). Do also install a recent version of FiJi following [these instructions](https://neubias.github.io/training-resources/tool_installation/index.html?id_activity_platform-1=null-activity-1&id_activity_platform-0=fiji-activity-0#skimage_napari).
 
 ## Modules
 The teaching will use the online material https://neubias.github.io/training-resources/all-modules/. 
