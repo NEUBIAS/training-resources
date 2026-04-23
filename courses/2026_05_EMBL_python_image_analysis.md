@@ -96,11 +96,11 @@ Trainers: Alessandro, Arif, Severina, Felix
 1. [Manual thresholding](https://neubias.github.io/training-resources/binarization/index.html)
     - Severina
 1. [Automated thresholding](https://neubias.github.io/training-resources/auto_threshold/index.html)
-    -
+    - Alessandro
 1. [Connected component labeling](https://neubias.github.io/training-resources/connected_components/index.html)
-    -
+    - Alessandro
 1. [Object shape measurements](https://neubias.github.io/training-resources/measure_shapes/index.html)
-    -
+    - Alessandro
 1. [Workflow: Basic 2D object analysis](https://neubias.github.io/training-resources/workflow_segment_2d_nuclei_measure_shape/index.html)
     - : Ask students to try on their own!
 
@@ -136,13 +136,13 @@ Trainers: Arif, Alessandro, Julian
     -
     -
 1. [Functions](https://neubias.github.io/training-resources/script_functions/index.html)
-    -
-    -
+    - Alessandro
+    - 
 1. Discuss good practices for file and folder names
-    -
+    - Alessandro
     - Discuss https://git.embl.de/grp-cba/astrocyte-differentiations/-/blob/main/data_management.md
 1. [Batch analysis](https://neubias.github.io/training-resources/batch_processing/index.html)
-    -
+    - Alessandro
     -
 1. Batch inspection with MoBIE
     - Julian
