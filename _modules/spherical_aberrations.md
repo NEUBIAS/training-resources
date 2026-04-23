@@ -1,9 +1,10 @@
 ---
-title: Spherical aberrations (DRAFT)
+title: Spherical aberrations
 layout: module
-tags: ["microscopy", "image formation", "DRAFT"]
+tags: ["microscopy", "image formation"]
 prerequisites:
-  - ""
+  - "[Digital image basics](./pixels)"
+  - "[N-dimensional images](./multidimensional_image_basics)"
 objectives:
   - "Intensity Loss (Dimming): Understand why light fails to converge at a single focal point, leading to a  dimmer and less contrasty signal"
   - "Learn how the difference between your immersion oil and your sample environment triggers these aberrations."
@@ -62,23 +63,44 @@ figure: /figures/spherical_aberrations.png
 figure_legend: Spherical aberrations occurr when oblique light rays entering a lens are focused in a different plane than the central rays. The result is that ray of light coming from the same source are out of focus relative to each other. This causes change in dimension of the object, blur, and loss in intensity. The effect is particularly visible deeper in a sample.
 
 multiactivities:
-  - ["spherical_aberrations/act01.md", [["ImageJ GUI", "spherical_aberrations/act01_imagejgui.md"], ["skimage napari", "spherical_aberrations/act01_skimage_napari.py"]]]
+  - ["spherical_aberrations/act01.md", [["ImageJ GUI", "spherical_aberrations/act01_imagejgui.md"]]]
 
 
 assessment: >
+  ### Intensity and refractive index matching
 
-  ### Fill in the blanks
+  You compare two images of a sample deep within a tissue block. Image 1 (mounted in a high-RI clearing agent and using an oil objective) appears significantly brighter than Image 2 (mounted in PBS and using a water objectvive), despite using identical laser power and gain settings. Why does the RI-matched sample appear brighter?
 
-    1. TODO ___ .
-    1. TODO ___ .
+  1. Clearing agents physically move the sample closer to the lens.
+
+  2. PBS causes rapid fluorescence quenching.
+  
+  3. Better RI matching ensures light rays converge at a tighter focal point rather than smearing axially.
+  
+  4. The clearing agent increases the light-gathering capacity (NA) of the objective.
     
     > ## Solution
-    >   1. TODO
-    >   1. TODO
+    > Correct Answer: 3., When spherical aberration is reduced, the Point Spread Function (PSF) is tighter, concentrating the same number of photons into a smaller volume, which increases the peak intensity.
+    {: .solution}
+
+  ### Apparent vs. Physical Depth
+
+  When imaging through a medium with a lower refractive index than the objective's immersion medium (e.g., imaging into water with an oil objective), how does the apparent depth of a structure compare to its real physical depth?
+    
+    A. The structure appears at its exact physical depth
+    
+    B. The structure appears deeper than it actually is (Axial Scaling Error)
+    
+    C. The structure appears shallower than it actually is
+    
+    D. The structure appears wider in XY but its Z position remains accurate
+    
+    > ## Solution
+    > Correct Answer: C, Refractive index mismatch causes light rays to bend, creating a "focal shift" that leads to axial scaling errors where structures appear at a different depth in the Z-stack than in physical reality.
     {: .solution}
 
 learn_next:
-  - "[TODO](../auto_threshold)"
+  - ""
 
 external_links:
   - "[SVI - Spherical aberrations](https://svi.nl/SphericalAberration)"
