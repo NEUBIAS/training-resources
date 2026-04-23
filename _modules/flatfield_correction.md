@@ -1,7 +1,7 @@
 ---
 title: Flat-field correction
 layout: module
-tags: ["microscopy"]
+tags: ["image formation, microscopy"]
 prerequisites:
   - "[Illumination and shading artefacts](../illumination_artefact)"
   - "[Convolutional filters](../filter_convolution)"

@@ -1,10 +1,11 @@
 ---
 title: Stitching of tiled images
 layout: module
-tags: ["draft"]
+tags: ["microscopy, image formation"]
 prerequisites:
   - "[Digital image basics](../pixels)"
   - "[Projections](../projections)"
+  - "[Image registration](../image_registration)"
 objectives:
   - Learn how to stitch tiled images into a single large image
   - Learn which parameters affect the quality of the results
@@ -16,8 +17,18 @@ motivation: |
 concept_map: >
   graph LR
     %% Define Inputs
+    subgraph Imaging [Imaging]
+      direction LR
+        LargeObject(Large object)
+        Tile1(Tile 1)
+        Tile_dot(...)
+        TileN(Tile N)
+    end
+
     subgraph Input_Data [Input Data]
       direction TB
+        B( ) 
+        style B fill:none,stroke:none,width:0px,height:0px
         RawImages(Image Tiles)
         StageCoords(Grid Positions)
         Overlap(Overlap)
@@ -26,19 +37,35 @@ concept_map: >
     %% Define the Core Process
     subgraph Stitching_Core [Stitching Algorithm]
         direction TB
-        Align(Step 1: Alignment and registration)
-        Blend(Step 2: Blending/Merging)
+        C( ) 
+        style C fill:none,stroke:none,width:0px,height:0px
+        Align(Step 1: Alignment)
+        Register(Step 2: Registration)
+        Blend(Step 3: Blending/Merging)
     end
 
     %% Define the Final Output
     LargeImage(Final Large Stitched Image)
 
     %% Define Connections/Flow
-    RawImages --> Align
-    StageCoords --> Align
-    Overlap --> Align
+    LargeObject-->Tile1
+    LargeObject-->Tile_dot
+    LargeObject-->TileN
+    
+    Tile1 --- B
+    Tile_dot --- B
+    TileN --- B
 
-    Align --> Blend
+    B --- RawImages
+    
+    RawImages --- C
+    StageCoords --- C
+    Overlap --- C
+
+    C --> Align
+
+    Align --> Register
+    Register-->Blend
     Blend --> LargeImage
 
     %% Styling for clarity (Optional but helpful)
@@ -46,12 +73,12 @@ concept_map: >
     classDef input fill:#ccf,stroke:#333,stroke-width:1px;
     classDef output fill:#cfc,stroke:#333,stroke-width:2px,stroke-dasharray: 5 5;
 
-    class Align,Blend process;
+    class Align,Blend,Register process;
     class RawImages,StageCoords,Overlap input;
     class LargeImage output;
 
 figure: /figures/stitching.png
-figure_legend: TODO
+figure_legend: The stitching workflow
 
 multiactivities:
   - ["stitching/act01.md", [["ImageJ GUI", "stitching/act01_imagejgui.md"], ["ImageJ Macro", "stitching/act01_imagejmacro.ijm"]]]
@@ -81,7 +108,8 @@ assessment: >
     >   3  Uneven illumination causes "shading" at the tile borders. To avoid this, flat-field correction must be applied to each tile before the stitching process to ensure intensity homogeneity.
     {: .solution}
   
-
+learn_next:
+  - "[Flat field correction](../flatfield_correction)"
 
 external_links:
   - "[BigStitcher: OpenSource to sticht very large data sets](https://imagej.net/plugins/bigstitcher/index)"
