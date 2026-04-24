@@ -72,7 +72,7 @@ concept_map: >
     class Proc,BC,FFC,Decon,Final corr;
 
 figure: /figures/image_formation_and_artefacts_course.png
-figure_legend: TODO
+figure_legend: The quality of the results depends on sample preparation, mode of acquisition, and analysis pipeline. 
 
 multiactivities:
 
