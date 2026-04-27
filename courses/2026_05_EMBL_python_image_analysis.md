@@ -113,7 +113,7 @@ Trainers: Julian, Arif, Felix
 1. [Image neighborhood filtering](https://neubias.github.io/training-resources/filter_neighbourhood/index.html)
     - Arif
 1. [Median filter](https://neubias.github.io/training-resources/median_filter/index.html)
-    -
+    - Julian
 1. [Local background subtraction](https://neubias.github.io/training-resources/local_background_correction/index.html)
     -
 1. [Morphological filters](https://neubias.github.io/training-resources/filter_morphological/index.html)
@@ -133,7 +133,7 @@ Trainers: Arif, Alessandro, Julian
     -
     -
 1. [String and path manipulations](https://neubias.github.io/training-resources/string_concat/index.html)
-    -
+    - Julian
     -
 1. [Functions](https://neubias.github.io/training-resources/script_functions/index.html)
     - Alessandro
