@@ -115,11 +115,12 @@ Trainers: Julian, Arif, Felix
 1. [Median filter](https://neubias.github.io/training-resources/median_filter/index.html)
     - Julian
 1. [Local background subtraction](https://neubias.github.io/training-resources/local_background_correction/index.html)
-    -
+    - Felix
 1. [Morphological filters](https://neubias.github.io/training-resources/filter_morphological/index.html)
-    -
+    - Felix
 1. [Workflow: 2D noisy object segmentation and filtering](https://neubias.github.io/training-resources/workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape/index.html)
     - , Ask students to work through themselves...
+   - Felix, include quick infor/demo about using AI
 
 
 ### Batch image analysis basics (day 4, 12. May 2026)
