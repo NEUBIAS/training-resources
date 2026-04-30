@@ -63,7 +63,7 @@ Trainers: Arif, Severina & Julian
     - Arif Khan
 1. [Digital image basics](https://neubias.github.io/training-resources/pixels/index.html)
     - Julian
-1. [Lookup tables](https://neubias.github.io/training-resources/lut/index.html)
+1. [Display settings](https://neubias.github.io/training-resources/display_settings/index.html)
     - Arif Khan
 1. [Spatial image calibration](https://neubias.github.io/training-resources/spatial_calibration/index.html)
     - Severina
@@ -109,7 +109,7 @@ Trainers: Alessandro, Arif, Severina, Felix
 Trainers: Julian, Arif, Felix
 
 1. [Object intensity measurements](https://neubias.github.io/training-resources/measure_intensities/index.html)
-    - Arif 
+    - Arif
 1. [Image neighborhood filtering](https://neubias.github.io/training-resources/filter_neighbourhood/index.html)
     - Arif
 1. [Median filter](https://neubias.github.io/training-resources/median_filter/index.html)
@@ -128,7 +128,7 @@ Trainers: Julian, Arif, Felix
 Trainers: Arif, Alessandro, Julian
 
 1. Introduce the general idea of batch processing
-    - 
+    -
     - Ingredients: Loops, File paths, Functions, Data management, Results QC
 1. [Loops](https://neubias.github.io/training-resources/script_for_loop/index.html)
     -
@@ -138,7 +138,7 @@ Trainers: Arif, Alessandro, Julian
     -
 1. [Functions](https://neubias.github.io/training-resources/script_functions/index.html)
     - Alessandro
-    - 
+    -
 1. Discuss good practices for file and folder names
     - Alessandro
     - Discuss https://git.embl.de/grp-cba/astrocyte-differentiations/-/blob/main/data_management.md
