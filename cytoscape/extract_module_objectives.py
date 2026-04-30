@@ -1,3 +1,111 @@
+"""
+Extract module learning objectives from Markdown files with YAML front-matter
+and write them into an Excel workbook.
+
+This script scans the repository's _modules directory for Markdown (*.md)
+files that contain YAML front-matter. For each file it attempts to parse the
+YAML metadata and, if present and not excluded by tags, collects the module
+title, learning objectives, tags and filename. The collected modules are
+sorted according to tag-based rules and written to an Excel workbook with a
+hyperlink to the module page.
+
+Functions
+---------
+extract_metadata_from_md(md_path)
+    Parse YAML front-matter from the Markdown file at md_path.
+
+    Parameters
+    ----------
+    md_path : str or os.PathLike
+        Filesystem path to a Markdown file expected to start with '---' and
+        contain YAML between the opening and closing '---' markers.
+
+    Returns
+    -------
+    dict or None
+        On success, returns a dictionary with keys:
+            - 'title' (str): title from YAML or filename fallback
+            - 'objectives' (str): objectives as a single string (each item
+              normalized to end with a period); empty string if missing
+            - 'tags' (list[str]): list of lower-cased tags
+            - 'filename' (str): filename without extension
+        Returns None if the file has no YAML front-matter, if the YAML is
+        empty, or if the module is explicitly excluded (see Filtering).
+        If YAML parsing fails, the exception is caught, an error is printed
+        and None is returned.
+
+    Notes
+    -----
+    - Accepts 'tags' as either a string or a list; normalizes to a list.
+    - Accepts 'objectives' as either a string or a list; normalizes to a
+      single sentence-per-item string.
+    - Files with tags containing any of ['draft', 'outdated', 'course']
+      (case-insensitive) are excluded.
+
+sort_key(module)
+    Compute a sorting key for a module dictionary.
+
+    Parameters
+    ----------
+    module : dict
+        Module dictionary as returned by extract_metadata_from_md.
+
+    Returns
+    -------
+    tuple
+        A tuple used for sorting:
+            - First element is an integer priority: 1 (default), 2 ('workflow'),
+              3 ('scripting').
+            - Second element is the module title lower-cased for
+              alphabetical ordering within the priority.
+
+    Discover Markdown module files, extract metadata, sort modules and write
+    an Excel workbook named "module_objectives.xlsx" containing the results.
+
+    Behavior and side effects
+    -------------------------
+    - The script assumes the _modules directory is located one level up from
+      the script's directory (../_modules).
+    - All *.md files in that directory are processed.
+    - Uses openpyxl to create an Excel workbook with a single sheet "Objectives".
+      Columns written:
+        1. "Module title" — the title text with a hyperlink to the module page
+           constructed as:
+           https://neubias.github.io/training-resources/{filename}
+        2. "Learning objectives" — the normalized objectives string.
+    - Saves the workbook to "module_objectives.xlsx" in the current working
+      directory.
+
+Dependencies
+------------
+- PyYAML (yaml) for parsing YAML front-matter.
+- openpyxl for writing Excel files.
+
+Example
+-------
+If a module file contains YAML like:
+
+---
+title: Example Module
+tags: [analysis, workflow]
+objectives:
+  - Understand X
+  - Learn Y
+---
+
+extract_metadata_from_md will return a dict with:
+    {
+      'title': 'Example Module',
+      'objectives': 'Understand X. Learn Y.',
+      'tags': ['analysis', 'workflow'],
+      'filename': 'example-module'
+
+Notes
+-----
+- Parsing errors are printed to stdout; the script continues processing other
+  files rather than raising.
+- The output file name and URL base are currently hard-coded.
+"""
 import os
 import glob
 import yaml

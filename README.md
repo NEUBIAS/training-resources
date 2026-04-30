@@ -14,6 +14,7 @@ that can be useful when planning/delivering training in image analysis.
 
 ## About 
 
+- [Publication PDF](https://zenodo.org/records/14710820)
 - [Google slides presentation](https://docs.google.com/presentation/d/1x5euj3p4hoAdOONQbzFA5xf3rnsNeTjC1rpadCbwbQk/edit?usp=sharing)
 - [Recorded webinar](https://www.youtube.com/watch?v=xtm7DAiXtr0)
 

@@ -21,6 +21,7 @@ kind: "lesson"
 
 # Module order is alphabetical based on title and tag (scripting, workflow, drafts)
 module_order:
+
 - auto_threshold
 - batch_qc_and_exploration
 - big_image_file_formats
@@ -33,8 +34,10 @@ module_order:
 - pixels
 - distance_transform
 - image_formation_fluo_mic
+- flatfield_correction
 - global_background_correction
 - image_file_formats
+- illumination_artefact
 - local_background_correction
 - display_settings
 - median_filter
@@ -47,12 +50,16 @@ module_order:
 - measure_shapes
 - ome_tiff
 - ome_zarr
+- psf
 - projections
+- sampling
 - segmentation
 - skeletonization
 - smart_microscopy_low_zoom_high_zoom
 - spatial_calibration
+- spherical_aberrations
 - filter_statistical
+- stitching
 - binarization
 - tool_installation
 - volume_viewer
@@ -61,6 +68,7 @@ module_order:
 - batch_processing
 - coding_with_llms
 - script_functions
+- fetching_user_input
 - script_for_loop
 - output_saving
 - script_record

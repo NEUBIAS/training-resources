@@ -6,10 +6,10 @@ permalink: /index.html
 
 <br>
 
-This resource consists of a collection of **[training modules](all-modules)** that have been used to teach **[a number of courses](https://github.com/NEUBIAS/training-resources/tree/master/courses)**. The content of the training resource is explained in the  **[
-Bioimage analysis training resources: How to use](https://www.youtube.com/watch?v=IcSBmoMRA20)** video
+This resource consists of a collection of **[training modules](all-modules)** that have been used to teach **[a number of courses](https://github.com/NEUBIAS/training-resources/tree/master/courses)**. The content of the training resource is explained in this video: **[
+Bioimage analysis training resources: How to use](https://www.youtube.com/watch?v=IcSBmoMRA20)**.
 
-Each module can be tought in 30-45 min and covers a specific aspect of image analysis. Links to prerequisite and suggestions what could be tought next are given for each module and are used to define a **[module dependencies network](#module_network)**. The network can be used to guide instructors in the choice of modules for a course.
+Each module can be taught in 30-45 min and covers a specific aspect of image analysis. Links to prerequisites and suggestions what could be taught next are given for each module and are used to define a **[module dependencies network](#module_network)**. The network can be used to guide instructors in the choice of modules for a course.
 
 The modules are meant to be taught hands-on, i.e. following the teacher's guidance, students execute the relevant steps in an image analysis software on their computers. The modules provide those steps for several major image analysis platforms, such as ImageJ GUI, ImageJ Macro, Python and Galaxy. Please see our **[teaching tips](TEACHING_TIPS.md)** and the video for the **[Digital image basics](https://www.youtube.com/watch?v=Felvc8zvFeU&list=PLnnMnuibzkscxztDDOZCyXjWfgIqYFobM)** module. 
 
@@ -48,6 +48,17 @@ To get a sense for how this material may be used we compiled a selection of cons
       <span class="course-modules">12 modules</span>
       <span class="course-duration">9 hours</span>
       <span class="course-credits">0.3 CP</span>
+    </div>
+  </div>
+  
+  <div class="course-card">
+    <div class="course-icon"><i class="fas fa-microscope"></i></div>
+    <h4><a href="image_formation_and_artefacts">Image formation and imaging artefacts (DRAFT)</a></h4>
+    <p>Learn some essential concepts on what determines quality and resolution of images, how this affects quantifications, and how to  mitigate imaging artefacts.</p>
+    <div class="course-meta">
+      <span class="course-modules">xx modules</span>
+      <span class="course-duration">x hours</span>
+      <span class="course-credits">xx CP</span>
     </div>
   </div>
 

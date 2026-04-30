@@ -17,3 +17,7 @@ Thumbs.db
 **/__pycache__/
 Untitl*
 .vscode
+scripts/_includes
+module_objectives.xlsx
+cytoscape/ordered_modules_title_links.csv
+cytoscape/ordered_modules.txt

@@ -5,10 +5,10 @@
 If you already have a conda package manager you can skip this step.
 
 
-**Important**: If you cannot open the [miniconda](https://www.anaconda.com/docs/getting-started/miniconda/main) website, please install [miniforge](https://github.com/conda-forge/miniforge) following the instructions; if you however can access miniconda please follow the below instructions.
+**Important**: If you cannot open the [miniconda](https://www.anaconda.com/docs/getting-started/miniconda/main) website, please install [miniforge](https://github.com/conda-forge/miniforge) following the instructions; if you however can access miniconda please follow the below instructions. 
 
 
-1. Install [miniconda](https://www.anaconda.com/docs/getting-started/miniconda/main) see also [here](https://www.anaconda.com/docs/getting-started/miniconda/install). It is best to install as local user.
+1. Install [miniconda](https://www.anaconda.com/docs/getting-started/miniconda/main) see also [here](https://www.anaconda.com/docs/getting-started/miniconda/install). Install locally in a directory that you have read and write access (e.g. in your home directory)
 	* Windows: the graphical installer works well. You can get it from the [repo](https://repo.anaconda.com/miniconda/) directly
 	* OSX: install using the `MacOS terminal installer`. This is the version that allows a local install. Install in the suggested path `~/miniconda3`
 1. Open a (new) terminal window
