@@ -102,7 +102,7 @@ Trainers: Alessandro, Arif, Severina, Felix
 1. [Object shape measurements](https://neubias.github.io/training-resources/measure_shapes/index.html)
     - Alessandro
 1. [Workflow: Basic 2D object analysis](https://neubias.github.io/training-resources/workflow_segment_2d_nuclei_measure_shape/index.html)
-    - : Ask students to try on their own!
+    - Arif: Ask students to try on their own!
 
 ### Image analysis basics (day 3, 11. May 2026)
 
@@ -128,10 +128,10 @@ Trainers: Julian, Arif, Felix
 Trainers: Arif, Alessandro, Julian
 
 1. Introduce the general idea of batch processing
-    -
+    - Arif
     - Ingredients: Loops, File paths, Functions, Data management, Results QC
 1. [Loops](https://neubias.github.io/training-resources/script_for_loop/index.html)
-    -
+    - 
     -
 1. [String and path manipulations](https://neubias.github.io/training-resources/string_concat/index.html)
     - Julian
