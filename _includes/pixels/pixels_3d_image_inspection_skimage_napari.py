@@ -41,7 +41,6 @@ print(image.min(), image.max())
 # %%
 # Compute the image histogram
 import matplotlib.pyplot as plt
-import numpy as np
 plt.hist(image.flatten(), bins='auto');
 
 # %% 
