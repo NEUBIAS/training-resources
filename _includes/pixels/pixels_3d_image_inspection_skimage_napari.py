@@ -42,7 +42,7 @@ print(image.min(), image.max())
 # Compute the image histogram
 import matplotlib.pyplot as plt
 import numpy as np
-plt.hist(image.flatten(), bins=np.arange(image.min(), image.max() + 1));
+plt.hist(image.flatten(), bins='auto');
 
 # %% 
 # Close the viewer (CI test requires this)
