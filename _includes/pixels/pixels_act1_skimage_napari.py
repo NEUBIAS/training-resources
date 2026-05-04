@@ -78,7 +78,7 @@ print(image_from_napari is image) # they are even the same object, not just a co
 # Compute and show the image histogram
 # (there's many things happening here, no need to understand everything right now)
 import matplotlib.pyplot as plt
-plt.hist(image.flatten(), bins=np.arange(image.min(), image.max() + 1))
+plt.hist(image.flatten(), bins='auto')
 plt.show() # instead, we could end the above line with ";"
 
 # %% 
