@@ -131,7 +131,7 @@ Trainers: Arif, Alessandro, Julian
     - Arif
     - Ingredients: Loops, File paths, Functions, Data management, Results QC
 1. [Loops](https://neubias.github.io/training-resources/script_for_loop/index.html)
-    - 
+    - Julian
     -
 1. [String and path manipulations](https://neubias.github.io/training-resources/string_concat/index.html)
     - Julian
