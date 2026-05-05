@@ -134,7 +134,7 @@ Trainers: Arif, Alessandro, Julian
     - Julian
     -
 1. [String and path manipulations](https://neubias.github.io/training-resources/string_concat/index.html)
-    - Julian
+    - Alessandro
     -
 1. [Functions](https://neubias.github.io/training-resources/script_functions/index.html)
     - Alessandro
@@ -143,7 +143,7 @@ Trainers: Arif, Alessandro, Julian
     - Alessandro
     - Discuss https://git.embl.de/grp-cba/astrocyte-differentiations/-/blob/main/data_management.md
 1. [Batch analysis](https://neubias.github.io/training-resources/batch_processing/index.html)
-    - Alessandro
+    - Julian
     -
 1. Batch inspection with MoBIE
     - Julian
