@@ -151,6 +151,6 @@ Trainers: Arif, Alessandro, Julian
     - Ideally use the results from the above "batch analysis" module, alternatively [download and unzip these files](https://github.com/NEUBIAS/training-resources/raw/master/image_data/batch_process/inputs_and_outputs.zip)
     - Inspect the results table (e.g., drag and drop onto Fiji)
     - Open the data with MoBIE
-        - `Plugins › MoBIE › Open › Open Table...`
+        - `Plugins › MoBIE › Open › Special › Open Table...`
         - If you downloaded the results you need to apply a path mapping
         - `IJ.run("Open Table...", "table=/Users/tischer/Downloads/batch_processing_in_and_output/batch_processing_results.csv images=image labels=labels pathmapping=/media/julian/Data/courses/2024_3_batch_processing,/Users/tischer/Downloads/batch_processing_in_and_output spatialcalibration=FromImage gridtype=Transformed");`
