@@ -129,12 +129,12 @@ Trainers: Arif, Alessandro, Julian
 1. SOTA segmentation methods
     - Arif
     - CellposeSAM
-      - [Download image](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_large.tif)
+      - Download [large image](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_large.tif) & [small image](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_small.tif)
       - Open https://www.cellpose.org/ , upload the image and run the model
 
 1. Introduce the general idea of batch processing
     - Arif
-    - Ingredients: Loops, File paths, Functions, Data management, Results QC
+    - Show an [example project](https://git.embl.org/grp-cba/brain-transcription-factor-expression) that includes loops, file paths, functions, data management, results QC
 1. [Loops](https://neubias.github.io/training-resources/script_for_loop/index.html)
     - Julian
     -
