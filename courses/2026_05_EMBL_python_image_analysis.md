@@ -30,7 +30,7 @@ The course is also [announced on the EMBL bio-it website](https://bio-it.embl.de
 - Monday, 9:30 – 16:00, May 11, 2026 day 3
 - Tuesday, 9:30 – 16:00, May 12, 2026 day 4
 
-This includes a lunch break (1 hr) and two coffee breaks (20 minutes), resulting in approximately 5 hr of teaching time.
+This includes a lunch break (1 hr) and two coffee breaks (10 minutes), resulting in approximately 5 hr of teaching time.
 
 As there are 6 modules per day that makes ~45 minutes per module.
 
@@ -119,13 +119,18 @@ Trainers: Julian, Arif, Felix
 1. [Morphological filters](https://neubias.github.io/training-resources/filter_morphological/index.html)
     - Felix
 1. [Workflow: 2D noisy object segmentation and filtering](https://neubias.github.io/training-resources/workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape/index.html)
-    - , Ask students to work through themselves...
-   - Felix, include quick infor/demo about using AI
+    - Felix: Ask students to work through themselves...
+   - Felix: Include quick info/demo about using AI
 
 
 ### Batch image analysis basics (day 4, 12. May 2026)
 
 Trainers: Arif, Alessandro, Julian
+1. SOTA segmentation methods
+    - Arif
+    - CellposeSAM
+      - [Download image](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_large.tif)
+      - Open https://www.cellpose.org/ , upload the image and run the model
 
 1. Introduce the general idea of batch processing
     - Arif
