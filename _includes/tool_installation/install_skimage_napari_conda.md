@@ -4,7 +4,7 @@
 
 If you already have a conda package manager you can skip this step.
 
-Due to updates in the licensing conditions affecting Anaconda and Miniconda installations, we recommend the usage of miniforge instead. For installation follow the respective instructions for your operating system on the [miniforge github page](https://github.com/conda-forge/miniforge).
+Due to updates in the licensing conditions affecting Anaconda and Miniconda installations, we recommend the usage of miniforge instead. For installation follow the respective instructions for your operating system [here](https://conda-forge.org/download/).
 
 OSX and linux: Note that for the following installation instructions the base environment needs to be activated. This is the case if you see `(base)` left of the shell prompt. If you do not see this you may use 
 
