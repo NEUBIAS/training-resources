@@ -4,19 +4,15 @@
 
 If you already have a conda package manager you can skip this step.
 
+Due to updates in the licensing conditions affecting Anaconda and Miniconda installations, we recommend the usage of miniforge instead. For installation follow the respective instructions for your operating system on the [miniforge github page](https://github.com/conda-forge/miniforge).
 
-**Important**: If you cannot open the [miniconda](https://www.anaconda.com/docs/getting-started/miniconda/main) website, please install [miniforge](https://github.com/conda-forge/miniforge) following the instructions; if you however can access miniconda please follow the below instructions. 
+OSX and linux: Note that for the following installation instructions the base environment needs to be activated. This is the case if you see `(base)` left of the shell prompt. If you do not see this you may use 
 
+```
+source ~/miniforge/bin/activate
+```
 
-1. Install [miniconda](https://www.anaconda.com/docs/getting-started/miniconda/main) see also [here](https://www.anaconda.com/docs/getting-started/miniconda/install). Install locally in a directory that you have read and write access (e.g. in your home directory)
-	* Windows: the graphical installer works well. You can get it from the [repo](https://repo.anaconda.com/miniconda/) directly
-	* OSX: install using the `MacOS terminal installer`. This is the version that allows a local install. Install in the suggested path `~/miniconda3`
-1. Open a (new) terminal window
-	* Windows: *Anaconda Prompt (Miniconda3)*, e.g. type `Anaconda` in the search bar
-	* OSX: Open a `terminal` window. If conda is active you see `(base)` left of the shell prompt. If you do not see `(base)` you may have to manually activate the environment as described [here](https://www.anaconda.com/docs/getting-started/miniconda/install#quickstart-install-instructions) by typing
-	```
-	 source ~/miniconda3/bin/activate
-	```
+to activate it.
 
 #### Install the course environment 
 
