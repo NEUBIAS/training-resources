@@ -9,7 +9,7 @@ Due to updates in the licensing conditions affecting Anaconda and Miniconda inst
 OSX and linux: Note that for the following installation instructions the base environment needs to be activated. This is the case if you see `(base)` left of the shell prompt. If you do not see this you may use 
 
 ```
-source ~/miniforge/bin/activate
+source ~/miniforge3/bin/activate
 ```
 
 to activate it.
