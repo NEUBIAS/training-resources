@@ -1,5 +1,5 @@
 ---
-title: Basic image analysis course overview
+title: Image analysis course overview
 layout: module
 tags: ["course"]
 prerequisites:

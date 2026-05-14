@@ -21,7 +21,6 @@ kind: "lesson"
 
 # Module order is alphabetical based on title and tag (scripting, workflow, drafts)
 module_order:
-
 - auto_threshold
 - batch_qc_and_exploration
 - big_image_file_formats
@@ -32,14 +31,14 @@ module_order:
 - correlative_image_rendering
 - datatypes
 - pixels
-- distance_transform
-- image_formation_fluo_mic
-- flatfield_correction
-- global_background_correction
-- image_file_formats
-- illumination_artefact
-- local_background_correction
 - display_settings
+- distance_transform
+- flatfield_correction
+- image_formation_fluo_mic
+- global_background_correction
+- illumination_artefact
+- image_file_formats
+- local_background_correction
 - median_filter
 - filter_morphological
 - multichannel_images
@@ -52,7 +51,6 @@ module_order:
 - ome_zarr
 - psf
 - projections
-- sampling
 - segmentation
 - skeletonization
 - smart_microscopy_low_zoom_high_zoom
@@ -82,6 +80,7 @@ module_order:
 - containers
 - deep_learning_run_segmentation
 - image_registration
+- sampling
 - manual_segmentation
 - remote_data_access
 - similarity_transforms
