@@ -5,10 +5,11 @@ source 'http://rubygems.org'
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
 # Synchronize with https://pages.github.com/versions
-ruby '>=2.7.1'
+# As for 14.05.2026 "commonmarker" is not compatible with ruby >= 4.0.0
+ruby '>=2.7.1', '<4.0.0' 
 
 gem 'github-pages', group: :jekyll_plugins
-
+gem "bigdecimal"
 gem "webrick", "~> 1.7"
 
 gem "jekyll-commonmark-ghpages", "~> 0.5.1"
