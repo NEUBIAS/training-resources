@@ -63,33 +63,7 @@ To get a sense for how this material may be used we compiled a selection of cons
       <span class="course-credits">0.125 CP</span>
     </div>
   </div>
-<<<<<<< HEAD
-  
-  <div class="course-card">
-    <div class="course-icon"><i class="fas fa-microscope"></i></div>
-    <h4><a href="basic-image-analysis-course">Basic Bioimage Analysis</a></h4>
-    <p>Learn essential concepts of image analysis, such as segmentation, intensity measurements, and filtering.</p>
-    <div class="course-meta">
-      <span class="course-modules">12 modules</span>
-      <span class="course-duration">9 hours</span>
-      <span class="course-credits">0.3 CP</span>
-    </div>
-  </div>
-  
-  <div class="course-card">
-    <div class="course-icon"><i class="fas fa-microscope"></i></div>
-    <h4><a href="image_formation_and_artefacts">Image formation and imaging artefacts (DRAFT)</a></h4>
-    <p>Learn essential concepts on what determines quality and resolution of images, how this affects quantifications, and how to  mitigate imaging artefacts.</p>
-    <div class="course-meta">
-      <span class="course-modules">xx modules</span>
-      <span class="course-duration">x hours</span>
-      <span class="course-credits">xx CP</span>
-    </div>
-  </div>
-=======
 
-
->>>>>>> master
 
   <div class="course-card">
     <div class="course-icon"><i class="fas fa-tasks"></i></div>
