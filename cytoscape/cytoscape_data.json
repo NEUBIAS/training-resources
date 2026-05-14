@@ -397,14 +397,14 @@
     "edges": [
       {
         "data": {
-          "source": "object_filtering",
+          "source": "filter_convolution",
           "target": "workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "filter_convolution",
+          "source": "object_filtering",
           "target": "workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape",
           "label": "Dependency"
         }
@@ -614,14 +614,14 @@
       },
       {
         "data": {
-          "source": "illumination_artefact",
+          "source": "filter_convolution",
           "target": "flatfield_correction",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "filter_convolution",
+          "source": "illumination_artefact",
           "target": "flatfield_correction",
           "label": "Dependency"
         }
@@ -719,14 +719,14 @@
       },
       {
         "data": {
-          "source": "filter_neighbourhood",
+          "source": "connected_components",
           "target": "filter_morphological",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "connected_components",
+          "source": "filter_neighbourhood",
           "target": "filter_morphological",
           "label": "Dependency"
         }
@@ -761,13 +761,6 @@
       },
       {
         "data": {
-          "source": "filter_statistical",
-          "target": "local_background_correction",
-          "label": "Dependency"
-        }
-      },
-      {
-        "data": {
           "source": "median_filter",
           "target": "local_background_correction",
           "label": "Dependency"
@@ -775,14 +768,21 @@
       },
       {
         "data": {
-          "source": "filter_neighbourhood",
-          "target": "distance_transform",
+          "source": "filter_statistical",
+          "target": "local_background_correction",
           "label": "Dependency"
         }
       },
       {
         "data": {
           "source": "binarization",
+          "target": "distance_transform",
+          "label": "Dependency"
+        }
+      },
+      {
+        "data": {
+          "source": "filter_neighbourhood",
           "target": "distance_transform",
           "label": "Dependency"
         }
@@ -831,14 +831,14 @@
       },
       {
         "data": {
-          "source": "datatypes",
+          "source": "spatial_calibration",
           "target": "image_file_formats",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "spatial_calibration",
+          "source": "datatypes",
           "target": "image_file_formats",
           "label": "Dependency"
         }
