@@ -108,7 +108,7 @@ assessment: >
     {: .solution}
   
 learn_next:
-  - "[Flat field correction](../flatfield_correction)"
+  - "[Flat-field correction](../flatfield_correction)"
 
 external_links:
   - "[BigStitcher: OpenSource to sticht very large data sets](https://imagej.net/plugins/bigstitcher/index)"

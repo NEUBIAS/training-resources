@@ -30,7 +30,7 @@ The course is also [announced on the EMBL bio-it website](https://bio-it.embl.de
 - Monday, 9:30 – 16:00, May 11, 2026 day 3
 - Tuesday, 9:30 – 16:00, May 12, 2026 day 4
 
-This includes a lunch break (1 hr) and two coffee breaks (20 minutes), resulting in approximately 5 hr of teaching time.
+This includes a lunch break (1 hr) and two coffee breaks (10 minutes), resulting in approximately 5 hr of teaching time.
 
 As there are 6 modules per day that makes ~45 minutes per module.
 
@@ -119,17 +119,22 @@ Trainers: Julian, Arif, Felix
 1. [Morphological filters](https://neubias.github.io/training-resources/filter_morphological/index.html)
     - Felix
 1. [Workflow: 2D noisy object segmentation and filtering](https://neubias.github.io/training-resources/workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape/index.html)
-    - , Ask students to work through themselves...
-   - Felix, include quick infor/demo about using AI
+    - Felix: Ask students to work through themselves...
+   - Felix: Include quick info/demo about using AI
 
 
 ### Batch image analysis basics (day 4, 12. May 2026)
 
 Trainers: Arif, Alessandro, Julian
+1. SOTA segmentation methods
+    - Arif
+    - CellposeSAM
+      - Download [large image](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_large.tif) & [small image](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_noisy_small.tif)
+      - Open https://www.cellpose.org/ , upload the image and run the model
 
 1. Introduce the general idea of batch processing
     - Arif
-    - Ingredients: Loops, File paths, Functions, Data management, Results QC
+    - Show an [example project](https://git.embl.org/grp-cba/brain-transcription-factor-expression) that includes loops, file paths, functions, data management, results QC
 1. [Loops](https://neubias.github.io/training-resources/script_for_loop/index.html)
     - Julian
     -
@@ -151,6 +156,6 @@ Trainers: Arif, Alessandro, Julian
     - Ideally use the results from the above "batch analysis" module, alternatively [download and unzip these files](https://github.com/NEUBIAS/training-resources/raw/master/image_data/batch_process/inputs_and_outputs.zip)
     - Inspect the results table (e.g., drag and drop onto Fiji)
     - Open the data with MoBIE
-        - `Plugins › MoBIE › Open › Open Table...`
+        - `Plugins › MoBIE › Open › Special › Open Table...`
         - If you downloaded the results you need to apply a path mapping
         - `IJ.run("Open Table...", "table=/Users/tischer/Downloads/batch_processing_in_and_output/batch_processing_results.csv images=image labels=labels pathmapping=/media/julian/Data/courses/2024_3_batch_processing,/Users/tischer/Downloads/batch_processing_in_and_output spatialcalibration=FromImage gridtype=Transformed");`

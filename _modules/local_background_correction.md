@@ -4,7 +4,7 @@ layout: module
 
 prerequisites:
   - "[Median filter](../median_filter)"
-  - "[Statisical (rank) filters](../filter_statistical)"
+  - "[Statistical (rank) filters](../filter_statistical)"
   - "[Projections](../projections)"
 
 objectives:
