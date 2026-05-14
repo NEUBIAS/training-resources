@@ -45,9 +45,9 @@
       },
       {
         "data": {
-          "id": "lut",
-          "label": "Lookup tables",
-          "url": "../lut"
+          "id": "display_settings",
+          "label": "Display settings",
+          "url": "../display_settings"
         }
       },
       {
@@ -440,20 +440,20 @@
       {
         "data": {
           "source": "pixels",
-          "target": "lut",
-          "label": "Dependency"
-        }
-      },
-      {
-        "data": {
-          "source": "string_concat",
-          "target": "batch_processing",
+          "target": "display_settings",
           "label": "Dependency"
         }
       },
       {
         "data": {
           "source": "script_for_loop",
+          "target": "batch_processing",
+          "label": "Dependency"
+        }
+      },
+      {
+        "data": {
+          "source": "string_concat",
           "target": "batch_processing",
           "label": "Dependency"
         }
@@ -474,14 +474,14 @@
       },
       {
         "data": {
-          "source": "projections",
+          "source": "volume_slicing",
           "target": "volume_viewer",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "volume_slicing",
+          "source": "projections",
           "target": "volume_viewer",
           "label": "Dependency"
         }
@@ -495,14 +495,14 @@
       },
       {
         "data": {
-          "source": "psf",
+          "source": "multidimensional_image_basics",
           "target": "spherical_aberrations",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "multidimensional_image_basics",
+          "source": "psf",
           "target": "spherical_aberrations",
           "label": "Dependency"
         }
@@ -530,7 +530,7 @@
       },
       {
         "data": {
-          "source": "lut",
+          "source": "display_settings",
           "target": "multichannel_images",
           "label": "Dependency"
         }
@@ -614,14 +614,14 @@
       },
       {
         "data": {
-          "source": "filter_convolution",
+          "source": "illumination_artefact",
           "target": "flatfield_correction",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "illumination_artefact",
+          "source": "filter_convolution",
           "target": "flatfield_correction",
           "label": "Dependency"
         }
@@ -684,7 +684,7 @@
       },
       {
         "data": {
-          "source": "lut",
+          "source": "display_settings",
           "target": "image_inspection_and_presentation",
           "label": "Dependency"
         }
@@ -719,14 +719,14 @@
       },
       {
         "data": {
-          "source": "connected_components",
+          "source": "filter_neighbourhood",
           "target": "filter_morphological",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "filter_neighbourhood",
+          "source": "connected_components",
           "target": "filter_morphological",
           "label": "Dependency"
         }
@@ -754,14 +754,14 @@
       },
       {
         "data": {
-          "source": "filter_statistical",
+          "source": "projections",
           "target": "local_background_correction",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "projections",
+          "source": "filter_statistical",
           "target": "local_background_correction",
           "label": "Dependency"
         }
@@ -810,14 +810,14 @@
       },
       {
         "data": {
-          "source": "datatypes",
+          "source": "segmentation",
           "target": "binarization",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "segmentation",
+          "source": "datatypes",
           "target": "binarization",
           "label": "Dependency"
         }
@@ -831,13 +831,6 @@
       },
       {
         "data": {
-          "source": "spatial_calibration",
-          "target": "image_file_formats",
-          "label": "Dependency"
-        }
-      },
-      {
-        "data": {
           "source": "datatypes",
           "target": "image_file_formats",
           "label": "Dependency"
@@ -845,14 +838,21 @@
       },
       {
         "data": {
-          "source": "lut",
-          "target": "connected_components",
+          "source": "spatial_calibration",
+          "target": "image_file_formats",
           "label": "Dependency"
         }
       },
       {
         "data": {
           "source": "binarization",
+          "target": "connected_components",
+          "label": "Dependency"
+        }
+      },
+      {
+        "data": {
+          "source": "display_settings",
           "target": "connected_components",
           "label": "Dependency"
         }

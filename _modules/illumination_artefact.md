@@ -31,7 +31,7 @@ multiactivities:
 
 
 learn_next:
-  - "[Flat field correction](../flatfield_correction)"
+  - "[Flat-field correction](../flatfield_correction)"
 
 external_links:
 ---

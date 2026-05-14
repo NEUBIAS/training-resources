@@ -1,5 +1,6 @@
 ---
-title: Image formation and imaging artefacts (DRAFT)
+title: Image formation and imaging artefacts 
+
 module_order: ["image_formation_and_artefacts_course", "image_formation_fluo_mic", "psf", "sampling",  "illumination_artefact", "flatfield_correction", "stitching", "spherical_aberrations"]
 ---
 

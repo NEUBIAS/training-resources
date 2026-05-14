@@ -4,7 +4,7 @@ layout: module
 prerequisites:
   - "[Digital image basics](../pixels)"
   - "[Data types](../datatypes)"
-  - "[Lookup tables](../lut)"
+  - "[Display settings](../display_settings)"
 objectives:
   - Understand/visualize different image channels.
 
