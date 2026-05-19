@@ -19,7 +19,7 @@ motivation: |
 concept_map: >
   graph TD
     R("Raw image") --> V("Visual inspection")
-    L("Label masks") --> V
+    L("Label masks (incl. ground truth)") --> V
     L --> S("Semantic comparison")
     S --> M("IoU")
     L --> I("Instance comparison")
@@ -29,9 +29,9 @@ figure: /figures/segmentation_inspection.png
 figure_legend: Segmentation can be inspected qualitatively (overlay) and quantitatively (semantic and instance metrics).
 
 multiactivities:
-  - ["segmentation_inspection/visual_inspection.md", [["skimage napari", "segmentation_inspection/visual_inspection_skimage_napari.py", "python"]]]
-  - ["segmentation_inspection/semantic_comparison.md", [["skimage napari", "segmentation_inspection/semantic_comparison_skimage_napari.py", "python"]]]
-  - ["segmentation_inspection/instance_comparison.md", [["skimage napari", "segmentation_inspection/instance_comparison_skimage_napari.py", "python"]]]
+  - ["segmentation_inspection/visual_inspection.md", [["ImageJ GUI", "segmentation_inspection/visual_inspection_imagejgui.md"], ["skimage napari", "segmentation_inspection/visual_inspection_skimage_napari.py", "python"]]]
+  - ["segmentation_inspection/semantic_comparison.md", [["ImageJ GUI", "segmentation_inspection/semantic_comparison_imagejgui.md"], ["skimage napari", "segmentation_inspection/semantic_comparison_skimage_napari.py", "python"]]]
+  - ["segmentation_inspection/instance_comparison.md", [["ImageJ GUI", "segmentation_inspection/instance_comparison_imagejgui.md"], ["skimage napari", "segmentation_inspection/instance_comparison_skimage_napari.py", "python"]]]
 
 assessment: >
 
