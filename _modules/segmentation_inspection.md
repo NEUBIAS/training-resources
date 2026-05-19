@@ -26,7 +26,7 @@ concept_map: >
     I --> C("Object count and features")
     
 figure: /figures/segmentation_inspection.png
-figure_legend: Segmentation can be inspected qualitatively (overlay) and quantitatively (semantic and instance metrics).
+figure_legend: Intensity image and label mask images obtained at different intensity thresholds.
 
 multiactivities:
   - ["segmentation_inspection/visual_inspection.md", [["ImageJ GUI", "segmentation_inspection/visual_inspection_imagejgui.md"], ["skimage napari", "segmentation_inspection/visual_inspection_skimage_napari.py", "python"]]]
