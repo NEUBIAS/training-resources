@@ -3,13 +3,8 @@
 Very often, one has a set of images that represent different biological conditions and that have been acquired with the same microscopy settings. In order to be able to judge whether there is a difference between the biologic conditions, it is critical to display them with the same color mapping settings.
 
 In this activity, we will explore important ways how to achieve such comparable visualisation:
-- Display image sets with the same color map and the same contrast settings
-<<<<<<< HEAD:_includes/lut/display_settings_act2.md
+- Display image sets with the same color map and the same contrast settings 
 - Visualise the color map and its settings
-=======
-- Visualise the color map and its settings 
->>>>>>> 8380267fefada088c63b44d0d86c12ed750fea2c:_includes/lut/lut_act2.md
-
 ##### Example data
 
 - Collagen secretion
