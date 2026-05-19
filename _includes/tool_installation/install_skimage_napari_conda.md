@@ -15,7 +15,7 @@ We recommend the usage of [miniforge](https://conda-forge.org/download/) for lic
 Within a terminal window execute
   
 ```
-conda create -n skimage-napari-tutorial --override-channels -c conda-forge -c euro-bioimaging -c nodefaults python=3.12 napari=0.6.0 pyqt notebook matplotlib jupytext scikit-image openijtiff -y
+conda create -n skimage-napari-tutorial --override-channels -c conda-forge -c euro-bioimaging -c nodefaults python=3.12 napari=0.6.6 pyqt notebook matplotlib jupytext scikit-image openijtiff -y
 ```
 
 This will create an environment named `skimage-napari-tutorial` with the necessary packages for the course.
