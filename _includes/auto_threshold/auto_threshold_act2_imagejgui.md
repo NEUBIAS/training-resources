@@ -1,0 +1,20 @@
+- Open [xyz_8bit__nuclei_autothresh.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit__nuclei_autothresh.tif)
+- Try all available methods
+  - **[ Image > Adjust > Auto Threshold ]**
+    - `Method = Try all`
+    - **[X]** `White objects on black background`
+    - **[X]** `Stack`
+    - **[X]** `Use stack histogram`
+    - Press `OK`
+  - Observe that the different methods give different outputs
+  - Appreciate that this montage view is not suited for further analysis of the binary output 
+- Apply one method to properly segment the stack, e.g. Otsu
+  - **[ Image > Duplicate... ]**
+    - `Title = Otsu`
+    - **[X]** `Duplicate stack`
+  - **[ Image > Adjust > Auto Threshold ]** 
+    - `Method = Otsu`
+    - **[X]** `Stack`
+    - **[X]** `Use stack histogram`
+    - **[X]** `Show threshold values in log window`
+    - Press `OK`

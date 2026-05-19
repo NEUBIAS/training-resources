@@ -1,0 +1,8 @@
+- Open [xy_8bit__two_cells.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__two_cells.tif)
+- Draw a squared ROI
+- **[Analyze > Measure]** or **[Ctrl-M}**
+- Eventually add `[x] Mean gray value` and `[x] Standard deviation` to your result table, **[Results > Set Measurements]**
+- Note the value of `Mean` and `StdDev` and compute their sum
+- Choose a multiple of this sum for the threshold
+- Test your choice **[Image > Adjust > Threshold...]** 
+- Press `Apply` to create a binary image

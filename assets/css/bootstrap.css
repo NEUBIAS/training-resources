@@ -1300,7 +1300,7 @@ p {
     font-size: 21px;
   }
 }
-small,
+/small,
 .small {
   font-size: 85%;
 }
@@ -1610,6 +1610,8 @@ pre code {
 .row {
   margin-right: -10px;
   margin-left: -10px;
+  display: flex; /* MODIFIED */
+  flex-wrap: wrap; /* MODIFIED */
 }
 .row-no-gutters {
   margin-right: 0;
@@ -2540,6 +2542,11 @@ th {
 .table-responsive {
   min-height: 0.01%;
   overflow-x: auto;
+}
+@media (min-width: 1600px) { /* Adjust this value as needed */
+  .col-xl-1 {
+      width: 12.5%; /* 100 / 8 = 12.5% for 8 columns */
+  }
 }
 @media screen and (max-width: 767px) {
   .table-responsive {
@@ -5530,6 +5537,7 @@ button.list-group-item-danger.active:focus {
   border-radius: 4px;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  flex: 1; /* MODIFIED */
 }
 .panel-body {
   padding: 15px;
@@ -5539,14 +5547,16 @@ button.list-group-item-danger.active:focus {
   border-bottom: 1px solid transparent;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .panel-heading > .dropdown .dropdown-toggle {
   color: inherit;
 }
 .panel-title {
+  font-size: clamp(10px, 1.5vw, 16px) !important;  
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 16px;
   color: inherit;
 }
 .panel-title > a,

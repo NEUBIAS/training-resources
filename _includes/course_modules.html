@@ -1,0 +1,103 @@
+{% if page.module_order %}
+    {% assign lesson_episodes = page.module_order %}
+{% else %}
+    {% assign lesson_episodes = site.modules%}
+{% endif %}
+
+{% comment %}
+    If 'module_order' is defined, we need to determine
+    - previous episode object ('previous_module')
+    - and next episode object ('next_module')
+{% endcomment %}
+
+{% if page.module_order %}
+  {% for lesson_episode in lesson_episodes %}
+
+    {% comment %}
+        We iterate over the specified lesson episodes using
+        a 'for' loop because we can use
+        'forloop.first', 'forloop.last', and 'forloop.index0'.
+    {% endcomment %}
+
+    {% unless lesson_episode == page.slug %} {% continue %} {% endunless %}
+
+    {% if forloop.first %}
+      {% assign previous_episode = nil %}
+    {% else %}
+      {% assign p_idx = forloop.index0 | minus: 1 %}
+      {% assign p_name = lesson_episodes[p_idx] %}
+      {% assign previous_episode = site.modules| where: "slug", p_name | first %}
+    {% endif %}
+
+    {% if forloop.last == true %}
+      {% assign next_episode = nil %}
+    {% else %}
+      {% assign n_idx = forloop.index0 | plus: 1 %}
+      {% assign n_name = lesson_episodes[n_idx] %}
+      {% assign next_episode = site.modules| where: "slug", n_name | first %}
+    {% endif %}
+  {% endfor %}
+{% else %}
+  {% assign previous_episode = page.previous %}
+  {% assign next_episode  = page.next %}
+{% endif %}
+
+
+{% comment %}
+Manual ordering of Extras begins here
+{% endcomment %}
+
+{% if site.extras_order %}
+    {% assign lesson_extras = site.extras_order %}
+{% else %}
+    {% assign lesson_extras = site.extras %}
+{% endif %}
+
+{% comment %}
+    We do not need to determine "previous" or "next" extra.
+{% endcomment %}
+
+
+<style>
+  h2 {text-align: center;}
+</style>
+<h3> </h3>
+
+
+{% for lesson_episode in lesson_episodes %}
+{{ lesson_episode.title }}
+{% endfor %}
+
+{% assign episodes = "" | split:"," %}
+{% for lesson_episode in lesson_episodes %}
+{% if site.module_order %}
+  {% assign e = site.modules | where: "slug", lesson_episode | first %}
+{% else %}
+  {% assign e = lesson_episode %}
+{% endif %}
+{% assign episodes = episodes | push: e %}
+{% endfor %}
+
+
+<div class="container-fluid">
+<div class="row">
+
+{% for e in episodes %}
+
+<div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-1">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <a href="{{ e.url | relative_url }}">
+        <h4>{{ e.title }}</h4>
+      </a>
+    </div>
+    <div class="panel-body">
+      <img src="{{ e.figure | relative_url }}" alt="">
+    </div>
+  </div>
+</div>
+
+{% endfor %}
+</div>
+</div>
+

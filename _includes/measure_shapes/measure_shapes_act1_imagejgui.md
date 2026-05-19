@@ -1,0 +1,6 @@
+- Open image [xy_8bit_labels__four_objects.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_labels__four_objects.tif)
+- Perform shape measurements and discuss their meanings **[Plugins > MorphoLibJ > Analyze > Analyze Regions]**
+  - see also [MorphoLibJ Documentation](https://imagej.net/MorphoLibJ#Region_analysis)
+- Explore results visualisation **[Plugins > MorphoLibJ > Label Images > Assign Measure to Label]**
+- Add a calibration of 2 micrometer to the image and check which shape measurements are affected.
+- Perform a shape analysis for 3D image [xyz_16bit_labels__spindle_spots.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_16bit_labels__spindle_spots.tif) and **[Plugins > MorphoLibJ > Analyze > Analyze Regions 3D]**

@@ -3,7 +3,7 @@ title: Watershed
 layout: module
 
 prerequisites:
-  - "[Connected-component analysis](../connected_components)"
+  - "[Connected component labeling](../connected_components)"
   - "[Distance transform](../distance_transform)"
 objectives:
   - "Understand the concept of watersheds in image analysis."

@@ -1,0 +1,15 @@
+- Install `napari standalone app` as described in [tools installation](https://neubias.github.io/training-resources/tool_installation/index.html#activities)
+- Open `napari`
+- Load an image using `File > Open File(s)...` or press `Ctrl+O`. One can also `drag and drop` an image into the GUI area to open it
+- Change viewer from 2D to 3D
+  - zoom in and out (mouse scroll)
+  - rotate the volume (pressing and holding left-click of mouse)
+  - pan (Shift + pressing and holding left-click of mouse)
+- Add axes by clicking on `View > Axes > Axes Visible`
+- Add scale bar by clicking on `View > Scale Bar > Scale Bar Visible`
+- Open the same image in Fiji and note down the calibration given in `Image > Properties...`
+- Add the scale by opening a console within `napari` GUI and type this:
+  - `viewer.layers[viewer.layers[0].name].scale = [z, y, x]`
+    - where, `x` , `y` and `z` are scaling factors in their respective dimensions. Set this according to the metadata (i.e. the calibration noted down in the previous step) of the image.
+    - _Note(IMPORTANT):_ the above command `viewer.layers[0].name` only works if you have loaded just one image in `napari`
+- Try different `rendering` modes: `mip`, `iso`, `attenuated_mip`

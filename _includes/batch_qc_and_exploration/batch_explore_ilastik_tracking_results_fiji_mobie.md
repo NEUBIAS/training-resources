@@ -1,0 +1,16 @@
+- Open Fiji with the [MoBIE update site installed](https://github.com/mobie/mobie-viewer-fiji?tab=readme-ov-file#install).
+- [Download 2 GB ilastik tracking example data](https://oc.embl.de/index.php/s/gZHiO94I8wApbeB) and unzip
+   - Corresponding [publication](https://www.biorxiv.org/content/10.1101/2024.01.12.575373v1)
+- [ Plugins › MoBIE › Open › Open Image and Labels... ]
+   - Image URI: [ Browse ] to a file ending with `--raw.tif` and then, to open all data, replace the text in the filename before `--raw.tif` by `.*` such that it reads `.../.*--raw.tif` (do not change the folder names)
+   - Label Mask URI: [ Browse ] to a file ending with `--tracking-oids.h5` and, as above, change the path to `.../.*--tracking-oids.h5`
+   - Label Mask Table URI: [ Browse ] to a file ending with `--tracking-table.csv` and, as above, change the path to `.../.*--tracking-table.csv`
+   - SpatialCalibration: `UsePixelUnits`; this is important, because the raw.tif images are calibrated, but, unfortunately, ilastik does not persist this calibration in the output data.
+   - Grid: `Transformed`
+   - Click [ OK ]
+- The MoBIE UI and BigDataViewer will open allowing you to conveniently browse all data
+- Browsing suggestions
+   - Table menu: Color by Column: `lineage_id` with `glasbey`
+   - Use the BDV time slider to go through the movie
+   - Look for particular shape measurements and check that the appearance of the worm corresponds to this
+ 

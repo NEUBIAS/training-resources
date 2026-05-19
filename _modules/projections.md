@@ -2,17 +2,17 @@
 title: Projections
 layout: module
 prerequisites:
-  - "[Basic properties of images and pixels](../pixels)"
-  - "Volume slicing (TODO)"
+  - "[Digital image basics](../pixels)"
+  - "[N-dimensional images](../multidimensional_image_basics)"
 
 objectives:
   - "Project multi-dimensional image data into lower dimensions"
   - "Understand the differences between projection modes such as max, sum, and mean"
 
 motivation: |
-  Viewing image data that has more than two dimensions is difficult, because computer monitors are 2-D. 
-  Thus, it often is very useful to project the data into a 2-D representation. 
-  Of course, doing such a projection will loose information. Thus, performing projections without compromising the scientific 
+  Viewing image data that has more than two dimensions is difficult, because computer monitors are 2-D.
+  Thus, it often is very useful to project the data into a 2-D representation.
+  Of course, doing such a projection will loose information. Thus, performing projections without compromising the scientific
   integrity of the data is not easy and should only be done with a sufficient understanding of the various methods.
 
 concept_map: >
@@ -23,7 +23,7 @@ concept_map: >
     PM -->|creates| LD("N-1 dimensional image")
 
 figure: /figures/projections.png
-figure_legend: 
+figure_legend:
 
 activity_preface: |
   - Open [xyz_16bit__spots.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_16bit__spots.tif)
@@ -35,15 +35,20 @@ activity_preface: |
 
   ![](/figures/projections_activity.png)
 
-activities:
-  - ["ImageJ GUI Reslice", "projections/activities/projections_imagejgui_reslice.md", "markdown"]
-  - ["ImageJ GUI CLIJ2", "projections/activities/projections_imagejgui_clij2.md", "markdown"]
-  - ["ImageJ GUI TransformJ", "projections/activities/projections_imagejgui_transformj.md", "markdown"]
-  - ["skimage napari", "projections/activities/projections_skimage_napari.py", "python"] 
-
-exercises:
-  - ["ImageJ GUI Reslice", "projections/exercises/projections_imagejgui_reslice.md"]
-  - ["ImageJ GUI CLIJ2", "projections/exercises/projections_imagejgui_clij2.md"]
+multiactivities:
+  - ["projections/projections_act1.md",
+      [
+        ["ImageJ GUI Reslice", "projections/projections_act1_imagejgui_reslice.md", "markdown"],
+        ["ImageJ GUI CLIJ2", "projections/projections_act1_imagejgui_clij2.md", "markdown"],
+        ["ImageJ GUI TransformJ", "projections/projections_act1_imagejgui_transformj.md", "markdown"],
+        ["skimage napari", "projections/projections_act1_skimage_napari.py", "python"]
+  ]]
+  - ["projections/projections_act2.md",
+      [
+        ["ImageJ GUI Reslice", "projections/projections_act2_imagejgui_reslice.md"],
+        ["ImageJ GUI CLIJ2", "projections/projections_act2_imagejgui_clij2.md", "markdown"],
+        ["skimage napari", "projections/projections_act2_skimage_napari.py", "python"]
+  ]]
 
 assessment: >
 
@@ -68,11 +73,11 @@ assessment: >
   ### True or False
     1. Image projections are always along the z-axis.
     1. The data type of the projected image must be the same as the data type of the original image.
-    
+
     > ## Solution
     >   1. **False**, you can project along any axis.
-    >   1. **False**, in sum projections the pixel values are larger than in the original data and a different data type might 
-    be needed to represent them. For maximum projections however the data type needs not be changed. 
+    >   1. **False**, in sum projections the pixel values are larger than in the original data and a different data type might
+    be needed to represent them. For maximum projections however the data type needs not be changed.
     For mean projections it depends on the accuracy your science requires (decimal places need a floating point data type, 32-bit in IJ).
     {: .solution}
 

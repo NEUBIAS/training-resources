@@ -1,0 +1,10 @@
+- Open the file mentioned in the activity using:
+  - [Plugins > Bio-Formats > Bio-Formats Importer]
+    - [ ] Open all series (you can check this to open all series automatically)
+    - Colormode: **Composite**
+    - [X] Display metadata
+    - [X] Display OME-XML Metadata
+  - Press [OK]
+  - Select both series
+  - Look at the images
+  - Inspect the different metadata for these two images.

@@ -1,0 +1,25 @@
+<h4 id="explore"><a href="#explore">Learn about contrast settings and colormaps</a></h4>
+
+To visualize an image there are several colormaps to choose from.
+Depending upon the use-case, one can be more appropriate than another.
+In this activity, we will look at commonly used colormaps and discuss how and when to use them.
+
+
+
+- Open the image [xy_8bit__nuclei_high_dynamic_range.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_high_dynamic_range.tif)
+- Adjust contrast settings to highlight certain regions
+  1. Highlight bright regions
+    - Keep `max` value fixed at highest number
+    - Increase `min` value to a higher number to see high pixel value regions
+  1. Highlight dim regions
+    - Keep `min` value fixed at lowest number
+    - Decrease `max` value until you see the dimmest objects
+- Select appropriate colormap
+  1. Single color
+    - Do not use red/blue color (hard to see/some people have color-blindness)    
+    - Safe choice is "gray"
+  1. Multicolor
+    - Do not select LUTs with no biological meaning (For example, rainbow colormaps)
+
+- Display extreme pixel values using a single colormap
+  - Use multicolor colormap that shows extreme values e.g.,"HiLo" -> shows clipping

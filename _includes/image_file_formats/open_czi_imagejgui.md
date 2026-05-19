@@ -1,0 +1,9 @@
+- Open the file mentioned in the activity using:
+  - [Plugins > Bio-Formats > Bio-Format Importer]
+    - [X] Display metadata
+    - [X] Display OME-XML Metadata
+  - Press [OK]
+  - Select both "Series"
+  - Look at the images
+  - Inspect the metadata
+- Note that opening the CZI file via drag and drop also triggers the Bio-Formats plugin; this is not always the case(!); this is only true if ImageJ itself does not want to open the image itself (see the above activity about TIFF files where this can become confusing).

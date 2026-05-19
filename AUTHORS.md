@@ -13,6 +13,7 @@ This material is the product of contributions from the following people:
 * Dominik Kutra
 * Constantin Pape
 * Christian Tischer
+* Antonio Politi
 
 The material also owes much to [The Carpentries](https://carpentries.org):
 the site theme is based on

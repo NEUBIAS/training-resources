@@ -1,9 +1,12 @@
-title: "Image Analysis Training Resources"
+title: "Bioimage Analysis Training Resources"
 email: "image-analysis-support@embl.de"
 description: > # this means to ignore newlines until "baseurl:"
   A collection of material for teaching image analysis.
   Includes concept maps, exercises, example data
 contributing: CONTRIBUTING
+
+baseurl: "/training-resources" # this should be the name of your repository
+url: "https://neubias.github.io" # this should be the base hostname & protocol for your site
 
 # Build settings
 # Turn on built-in syntax highlighting.
@@ -16,64 +19,92 @@ default-platform: "NONE"
 life_cycle: "stable"
 kind: "lesson"
 
+# Module order is alphabetical based on title and tag (scripting, workflow, drafts)
 module_order:
-- tool_installation
-- pixels
-- image_formation_confocal
-- lut
-- spatial_calibration
-- multidimensional_image_basics
-- datatypes
-- image_file_formats
-- big_image_file_formats
-- volume_slicing
-- projections
-- volume_viewer
-- segmentation
-- binarization
 - auto_threshold
+- batch_qc_and_exploration
+- big_image_file_formats
+- cloud_based_batch_analysis
+- cloud_based_interactive_analysis
 - connected_components
-- measure_shapes
-- workflow_segment_2d_nuclei_measure_shape
-- measure_intensities
+- filter_convolution
+- correlative_image_rendering
+- datatypes
+- pixels
+- display_settings
+- distance_transform
+- flatfield_correction
+- image_formation_fluo_mic
 - global_background_correction
-- filter_neighbourhood
+- illumination_artefact
+- image_file_formats
+- local_background_correction
 - median_filter
 - filter_morphological
-- local_background_correction
-- filter_objects
-- workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape
-- distance_transform
-- watershed
+- multichannel_images
+- multidimensional_image_basics
+- filter_neighbourhood
+- object_filtering
+- measure_intensities
+- measure_shapes
+- ome_tiff
+- ome_zarr
+- psf
+- projections
+- segmentation
+- segmentation_inspection
 - skeletonization
-- workflow_nuclei_and_cells_segmentation
-- workflow_golgi_per_cell
-- manual_segmentation
-- deep_learning_run_segmentation
-- script_env
-- script_run
-- script_record
-- script_variables
-- script_for_loop
-- commenting
-- string_concat
-- output_saving
+- smart_microscopy_low_zoom_high_zoom
+- spatial_calibration
+- spherical_aberrations
+- filter_statistical
+- stitching
+- binarization
+- tool_installation
+- volume_viewer
+- volume_slicing
+- watershed
 - batch_processing
+- coding_with_llms
 - script_functions
 - fetching_user_input
-- ome_zarr_s3
-- correlative_image_rendering
-
+- script_for_loop
+- output_saving
+- script_record
+- script_run
+- string_concat
+- script_variables
+- workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape
+- workflow_nuclei_and_cells_segmentation
+- workflow_segment_2d_nuclei_measure_shape
+- image_inspection_and_presentation
+- containers
+- deep_learning_run_segmentation
+- image_registration
+- sampling
+- manual_segmentation
+- remote_data_access
+- similarity_transforms
+- table_file_formats
+- template
+- commenting
+- user_input
+- script_env
+- cofilin_rod_formation
+- workflow_golgi_per_cell
 # Sites
 repository: <USERNAME>/<PROJECT>
 cc_by_human: "https://creativecommons.org/licenses/by/4.0/"
 
-# Specify that things in the episodes collection should be output.
+# Specify which folders to compile
 collections:
   modules:
     output: true
     permalink: /:path/index.html
   extras:
+    output: true
+    permalink: /:path/index.html
+  courses:
     output: true
     permalink: /:path/index.html
 

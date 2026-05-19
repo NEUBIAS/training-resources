@@ -1,0 +1,23 @@
+run("Close All");
+
+//File > Open...
+open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__two_noisy_squares_different_size.tif");
+// Image > Duplicate...
+run("Duplicate...", "title=Median_1");
+// Image > Duplicate...
+run("Duplicate...", "title=Median_2");
+// Image > Duplicate...
+run("Duplicate...", "title=Median_5");
+
+selectWindow("Median_1");
+// Process › Filters › Median...
+run("Median...", "radius=1");
+
+selectWindow("Median_2");
+// Process › Filters › Median...
+run("Median...", "radius=2");
+
+selectWindow("Median_5");
+// Process › Filters › Median...
+run("Median...", "radius=5");
+run("Tile")

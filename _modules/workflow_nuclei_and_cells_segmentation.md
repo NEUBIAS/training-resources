@@ -3,7 +3,7 @@ title: Nuclei and cells segmentation
 layout: module
 tags: ["workflow"]
 prerequisites:
-  - "[Watershed transform](../watershed)"
+  - "[Watershed](../watershed)"
 objectives:
   - "Segment cells and nuclei, using nuclei as seeds for watershed segmentation of the cells."
 motivation: |

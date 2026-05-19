@@ -1,0 +1,7 @@
+- [Run Fiji with MoBIE](https://github.com/mobie/mobie-viewer-fiji#install)
+- Open OME-Zar with labels and label table in MoBIE:
+  - `[ Plugins › MoBIE › Open › Open OME ZARR... ]`
+    - Image URI: `https://s3.embl.de/i2k-2020/platy-raw.ome.zarr` (8 TB)
+    - Labels URI: `https://s3.embl.de/i2k-2020/platy-raw.ome.zarr/labels/cells` 
+    - Labels Table URI: `https://raw.githubusercontent.com/mobie/platybrowser-project/refs/heads/main/data/1.0.1/tables/sbem-6dpf-1-whole-segmented-cells/default.tsv`
+      - Note that the labels table is not integrated within the OME-Zarr, because a specification for this does not, despite hard work, yet exist. MoBIE supports a number of table formats and column names (see [here](https://github.com/mobie/mobie-viewer-fiji/tree/main/src/main/java/org/embl/mobie/lib/table/columns)).

@@ -1,0 +1,16 @@
+- Open Fiji
+- [ File › Open Samples › Fluorescent Cells ]
+- Add a sensible spatial calibration
+    - [ Image > Properties ]
+    - Set the pixel size to 0.1 micrometer (or so)
+- Save as OME-TIFF
+    - [ Plugins › Bio-Formats › Bio-Formats Exporter ]
+    - File Name: `fluo_cells.ome.tif`
+        - It is critical to add the `ome.tif` or `ome.tiff` extension!
+    - Files of Type: Due to inconsistent behaviour (e.g., PNG extension is automatically added, OME-TIFF extensions are not added) we recommended not to select anything here, but rather manually specify the respective extension in the "File Name"
+    - Observe that there are **useful options**, allowing you to
+        - split the image into multiple files
+        - compress the image data
+- Open the file again in Fiji and check which metadata has been preserved
+    - For us, the channel LUTs were not preserved (January 2025)
+    

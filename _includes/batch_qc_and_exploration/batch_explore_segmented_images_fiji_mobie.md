@@ -1,0 +1,23 @@
+- Open Fiji with the [MoBIE update site installed](https://github.com/mobie/mobie-viewer-fiji?tab=readme-ov-file#install).
+- Open `Well_1_C0.tif` and `Well_1_nuclei_labels.tif` in Fiji
+  - Optional: Change the LUT for the labels to `glasbey_inverted`
+- Check for segmentation errors
+- Appreciate that manually inspecting all nuclei segmentations like this would be tedious 
+- Close the two images in Fiji
+- Now use MoBIE to open all images and segmentations
+- [ Plugins › MoBIE › Open › Open Image and Labels... ]
+   - Image URI: [ Browse ] to `Well_1_C0.tif` and then, to open all wells, replace `_1_` by `_.*_` such that it reads `.../Well_.*_C0.tif`
+   - Label Mask URI: [ Browse ] to `Well_1_nuclei_labels.tif` and, same as above, replace `_1_` by `_.*_`
+   - Label Mask Table URI: Leave empty
+   - SpatialCalibration: Does not matter here, because the images are only in pixel units anyway
+   - Grid: Transformed (Stitched performs better if you have >100 images)
+   - Click [ OK ]
+- The MoBIE UI and BigDataViewer will open allowing you to conveniently browse all data
+- Browsing suggestions
+   - Use [ Ctrl L ] to shuffle the nuclei label colors
+   - Use the table to move between images
+   - Table Menu: Table > Add text column, call it "Notes" and add comments while browsing through the table
+   - Explore the MoBIE layers UI, e.g.
+      - Fit to page button
+      - Toggle layers on and off
+      - Change the labels layer opacity
