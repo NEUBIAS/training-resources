@@ -10,7 +10,7 @@ from skimage.transform import rescale
 import matplotlib.pyplot as plt
 
 # %%
-image, axes, scales, units = open_ij_tiff("xyz_calibrated_16bit__golgi_bfa.tif")
+image, axes, scales, units = open_ij_tiff("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_calibrated_16bit__golgi_bfa.tif")
 print(image.shape)
 print(axes)
 print(scales)
