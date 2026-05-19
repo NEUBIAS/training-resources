@@ -52,6 +52,7 @@ module_order:
 - psf
 - projections
 - segmentation
+- segmentation_inspection
 - skeletonization
 - smart_microscopy_low_zoom_high_zoom
 - spatial_calibration

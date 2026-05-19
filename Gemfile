@@ -12,7 +12,9 @@ gem 'github-pages', group: :jekyll_plugins
 gem "bigdecimal"
 gem "webrick", "~> 1.7"
 
-gem "jekyll-commonmark-ghpages", "~> 0.5.1"
+# Issues for some compilers
+gem "jekyll-commonmark-ghpages", "~> 0.4.0"
+#gem "jekyll-commonmark-ghpages", "~> 0.5.1"
 gem "commonmarker", "~> 0.23.12"
 gem "faraday-retry", "~> 2.4"
 gem "wdm", ">= 0.1.0"
