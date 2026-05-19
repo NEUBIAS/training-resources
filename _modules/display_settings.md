@@ -1,0 +1,119 @@
+---
+title: Display settings
+layout: module
+
+prerequisites:
+  - "[Digital image basics](../pixels)"
+
+objectives:
+  - "Understand how the numerical pixel values of an image are transformed into bright and colorful images that you see on display screen."
+  - "Understand what a colormap is and why adjusting it is useful."
+  - "Understand how perception about image content changes on viewing it by altering contrast and colormaps "
+  - "Use display settings responsibly for scientific purposes."
+
+motivation: |
+  Images are a collection of a lot (millions) of values, which is information that is hard to process for our human brains. Thus, one typically assigns a color to each distinct value, by means of a mapping. There is no fix recipe for how to adjust this mapping from numbers to colors. It is easy to choose a mapping that hides certain information in an image, while emphasizing other information. Thus, configuring this mapping properly is a great responsibility that scientists have to take on when presenting their image data.
+
+concept_map: >
+  graph TD
+    V("Image pixel value") --> L("Colormap")
+    L --> |does not change|V
+    L --> |changes|C("Displayed pixel color & brightness")
+
+figure: /figures/lut.png
+figure_legend:
+  "Left: Image displayed with a grey colormap using complete intensity display range (i.e. full bit depth). Middle: Same image and same colormap but using a different intensity display range. Right: Same image shown with a multicolor colormap. All images have color mapping bar as an inset."
+
+multiactivities:
+  - ["display_settings/display_settings_act1.md", [["ImageJ GUI", "display_settings/display_settings_act1_imagejgui.md", "markdown"],
+  ["ImageJ Macro", "display_settings/display_settings_act1_imagejmacro.ijm", "java"],
+  ["skimage napari", "display_settings/display_settings_act1_skimage_napari.py", "python"],["Galaxy Napari","display_settings/display_settings_act1_galaxy.md"]]]
+  - ["display_settings/display_settings_act2.md", [["ImageJ GUI", "display_settings/display_settings_act2_imagejgui.md"],
+  ["ImageJ Macro", "display_settings/display_settings_act2_imagejmacro.ijm", "java"],
+  ["skimage napari", "display_settings/display_settings_act2_skimage_napari.py", "python"],["Galaxy Napari","display_settings/display_settings_act2_galaxy.md"]]]
+
+keypoints:
+  - Colormap turns numeric pixel values into colors/brightness on your screen.
+  - A colormap has configurable contrast limits that determine the pixel value range that is rendered linearly to display the image.
+  - Colormap settings must be responsibly chosen to convey the intended scientific message and not to hide relevant information.
+  - A gray scale colormap is usually preferable; especially blue and red colormaps are not well visible for many people.
+  - For high dynamic range images multicolor colormaps may be useful to visualize a wider range of pixel values.
+assessment: |
+
+  ### Compute how the contrast limits affect the rendered pixel brightness
+
+  Read the below section "Explanations: Single color lookup tables" and use the formula that is given there to compute the rendered pixel brightness for the following scenarios:
+
+  1. `value =  49, min = 10,  max = 50, brightness = ?`
+  2. `value = 100, min =  0,  max = 65, brightness = ?`
+  3. `value =  10, min = 20,  max = 65, brightness = ?`
+
+  > ## Solution
+  > 1. `0.975`
+  > 2. `1.538 -> 1.0`
+  > 3. `-0.22  -> 0.0`  
+  {: .solution}
+
+  ### Fill in the blanks
+
+  Fill in the blanks using those words: larger than, smaller than
+  1. Pixels with values _____ `max` will appear saturated.
+  2. Pixels with values _____ the `min` will appear black (using a single color colormap).
+
+  > ## Solution
+  > 1. larger than
+  > 2. smaller than
+  {: .solution}
+
+learn_next:
+
+external_links:
+
+---
+
+Colormaps do the mapping from a numeric pixel value to a color. This is the main mechanism how we visualize microscopy image data. In case of doubt, it is always a good idea to show the mapping as an inset in the image (or next to the image).
+
+
+#### Nomenclature
+
+Color mapping may have different names depending upon the software. Fiji uses the term "Look-up table (LUT)", whereas MATLAB sticks to "colormap". In some other communities/software, it is also called as "color transfer function".
+
+#### Single color colormaps
+
+Single color colormaps are typically configured by choosing one color such as, e.g., grey or green, and choosing a `min` and `max` value that determine the brightness of this color depending on the `value` of the respective pixel in the following way:
+
+`brightness( value ) = ( value - min ) / ( max - min )`
+
+In this formula, 1 corresponds to the maximal brightness and 0 corresponds to the minimal brightness that, e.g., your computer monitor can produce.
+
+Depending on the values of `value`, `min` and `max` it can be that the formula yields values that are less than 0 or larger than 1.
+This is handled by assigning a brightness of 0 even if the formula yields values < 0 and assigning a brightness of 1 even if the formula yields values
+larger than `1`. In such cases one speaks of "clipping", because one looses ("clips") information about the pixel value (see below for an example).
+
+##### Clipping example
+
+`min = 20, max = 100, v1 = 100, v2 = 200`
+
+`brightness( v1 ) = ( 100 - 20 ) / ( 100 - 20 ) = 1`
+
+`brightness( v2 ) = ( 200 - 20 ) / ( 100 - 20 ) = 2.25`
+
+Both pixel values will be painted with the same brightness as a brightness larger than `1` is not possible (see above).
+
+#### Multicolor colormaps
+
+As the name suggests multi color colormaps map pixel gray values to different colors.
+
+For example:
+
+`0 -> black`
+
+`1 -> green`
+
+`2 -> blue`
+
+`3 -> ...`
+
+Typical use cases for multicolor colormaps are images of a high dynamic range (large differences in gray values) and label mask images (where the pixel values encode object IDs).
+
+Sometimes, also multicolor colormaps can be configured in terms of a `min` and `max` value. The reason is that multicolor colormaps only have a limited amount of colors, e.g. 256 different colors. For instance, if you have an image that contains a pixel with a value of 300 it is not immediately obvious which color it should get; the `min` and `max` settings allow you to configure how to map your larger value range into a limited amount of colors.

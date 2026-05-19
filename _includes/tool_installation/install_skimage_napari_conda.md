@@ -4,6 +4,7 @@
 
 If you already have a conda package manager you can skip this step.
 
+<<<<<<< HEAD
 **Important**: If you cannot open the [miniconda](https://www.anaconda.com/docs/getting-started/miniconda/main) website, please install [miniforge](https://github.com/conda-forge/miniforge) following the instructions; if you however can access miniconda please follow the below instructions.
 
 1. Install [miniconda](https://www.anaconda.com/docs/getting-started/miniconda/main) see also [here](https://www.anaconda.com/docs/getting-started/miniconda/install). It is best to install as local user.
@@ -15,6 +16,17 @@ If you already have a conda package manager you can skip this step.
 	```
 	 source ~/miniconda3/bin/activate
 	```
+=======
+Due to updates in the licensing conditions affecting Anaconda and Miniconda installations, we recommend the usage of miniforge instead. For installation follow the respective instructions for your operating system [here](https://conda-forge.org/download/).
+
+OSX and linux: Note that for the following installation instructions the base environment needs to be activated. This is the case if you see `(base)` left of the shell prompt. If you do not see this you may use 
+
+```
+source ~/miniforge3/bin/activate
+```
+
+to activate it.
+>>>>>>> 14d504bb7d8692a99c0dcd40ee1716bd91a91774
 
 #### Install the course environment 
 

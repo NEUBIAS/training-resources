@@ -139,6 +139,8 @@ It is important to test locally whether the website builds correctly before subm
 
 ### Building locally OSX
 
+Current version tested of ruby 3.4.9 (14.05.2026), jekyll 4.4.1, bundler 4.0.11. Ruby version 4.0.4 conflicts with `gem "commonmarker", "~> 0.23.12"` in Gemfile
+
 To test your changes locally, install `jekyll` on your system. Instructions for Mac OSX are here: [https://jekyllrb.com/docs/installation/macos/](https://jekyllrb.com/docs/installation/macos/). 
 
 Install bundler
@@ -147,11 +149,20 @@ Install bundler
 gem install bundler
 ```
 
+
 Once you have `jekyll` and `bundler` setup,
-clone and move into this repository,
-and run:
+clone the repo and move into the repository directory.
+
+Run the first time
 
 ```bash
+bundle install
+```
+
+Every time you want to create the site
+
+```bash
+
 make serve
 ```
 

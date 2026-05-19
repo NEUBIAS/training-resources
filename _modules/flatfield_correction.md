@@ -1,11 +1,10 @@
 ---
 title: Flat-field correction
 layout: module
-tags: 
+tags: ["image formation, microscopy"]
 prerequisites:
   - "[Illumination and shading artefacts](../illumination_artefact)"
   - "[Convolutional filters](../filter_convolution)"
-  - "[Object intensity measurements](../measure_intensities)"
 objectives:
   - Formulate the mathematical relationship between the raw image and the corrected image
   - Evaluate methods to obtain a flat-field reference (calibration slide or retroscpective computation)

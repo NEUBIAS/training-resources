@@ -4,7 +4,7 @@ layout:  module
 tags: ["label mask","instance segmentation"]
 prerequisites:
   - "[Thresholding](../binarization)"
-  - "[Lookup tables](../lut)"
+  - "[Display settings](../display_settings)"
   - "[Data types](../datatypes)"
 
 objectives:

@@ -3,8 +3,8 @@
 
 # Settings
 MAKEFILES=Makefile $(wildcard *.mk)
-JEKYLL=bundle config --local set path .vendor/bundle && bundle install && bundle update && bundle exec jekyll
-JEKYLL=bundle config --local set path .vendor/bundle && bundle install --local && bundle exec jekyll
+JEKYLL=bundle config set --local path .vendor/bundle && bundle install && bundle update && bundle exec jekyll
+JEKYLL=bundle config set --local path .vendor/bundle && bundle install --local && bundle exec jekyll
 PARSER=bin/markdown_ast.rb
 DST=_site
 

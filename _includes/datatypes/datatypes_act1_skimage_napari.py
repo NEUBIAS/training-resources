@@ -31,7 +31,7 @@ print("Min:", image.min()) # Are there any clipped pixels?
 print("Max:", image.max()) # Are there any clipped pixels?
 print("Number of 0 pixels:", np.sum(image==0)) # How many clipped pixels are there?
 print("Number of 255 pixels:", np.sum(image==255))
-plt.hist(image.flatten(), bins=np.arange(image.min(), image.max() + 1));
+plt.hist(image.flatten(), bins='auto');
 
 
 #image, *_ = open_ij_tiff('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__h2b.tif')

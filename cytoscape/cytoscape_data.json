@@ -24,6 +24,13 @@
       },
       {
         "data": {
+          "id": "stitching",
+          "label": "Stitching of tiled images",
+          "url": "../stitching"
+        }
+      },
+      {
+        "data": {
           "id": "spatial_calibration",
           "label": "Spatial calibration",
           "url": "../spatial_calibration"
@@ -38,9 +45,9 @@
       },
       {
         "data": {
-          "id": "lut",
-          "label": "Lookup tables",
-          "url": "../lut"
+          "id": "display_settings",
+          "label": "Display settings",
+          "url": "../display_settings"
         }
       },
       {
@@ -76,6 +83,13 @@
           "id": "output_saving",
           "label": "Output saving",
           "url": "../output_saving"
+        }
+      },
+      {
+        "data": {
+          "id": "spherical_aberrations",
+          "label": "Spherical aberrations",
+          "url": "../spherical_aberrations"
         }
       },
       {
@@ -150,6 +164,13 @@
       },
       {
         "data": {
+          "id": "illumination_artefact",
+          "label": "Illumination and shading artefacts",
+          "url": "../illumination_artefact"
+        }
+      },
+      {
+        "data": {
           "id": "filter_neighbourhood",
           "label": "Neighborhood filters",
           "url": "../filter_neighbourhood"
@@ -160,6 +181,13 @@
           "id": "script_variables",
           "label": "Variables",
           "url": "../script_variables"
+        }
+      },
+      {
+        "data": {
+          "id": "flatfield_correction",
+          "label": "Flat-field correction",
+          "url": "../flatfield_correction"
         }
       },
       {
@@ -318,6 +346,13 @@
       },
       {
         "data": {
+          "id": "psf",
+          "label": "Point spread function",
+          "url": "../psf"
+        }
+      },
+      {
+        "data": {
           "id": "auto_threshold",
           "label": "Automatic thresholding",
           "url": "../auto_threshold"
@@ -383,6 +418,13 @@
       },
       {
         "data": {
+          "source": "projections",
+          "target": "stitching",
+          "label": "Dependency"
+        }
+      },
+      {
+        "data": {
           "source": "pixels",
           "target": "spatial_calibration",
           "label": "Dependency"
@@ -398,7 +440,7 @@
       {
         "data": {
           "source": "pixels",
-          "target": "lut",
+          "target": "display_settings",
           "label": "Dependency"
         }
       },
@@ -453,6 +495,20 @@
       },
       {
         "data": {
+          "source": "multidimensional_image_basics",
+          "target": "spherical_aberrations",
+          "label": "Dependency"
+        }
+      },
+      {
+        "data": {
+          "source": "psf",
+          "target": "spherical_aberrations",
+          "label": "Dependency"
+        }
+      },
+      {
+        "data": {
           "source": "distance_transform",
           "target": "watershed",
           "label": "Dependency"
@@ -474,7 +530,7 @@
       },
       {
         "data": {
-          "source": "lut",
+          "source": "display_settings",
           "target": "multichannel_images",
           "label": "Dependency"
         }
@@ -537,6 +593,13 @@
       },
       {
         "data": {
+          "source": "pixels",
+          "target": "illumination_artefact",
+          "label": "Dependency"
+        }
+      },
+      {
+        "data": {
           "source": "datatypes",
           "target": "filter_neighbourhood",
           "label": "Dependency"
@@ -546,6 +609,20 @@
         "data": {
           "source": "script_run",
           "target": "script_variables",
+          "label": "Dependency"
+        }
+      },
+      {
+        "data": {
+          "source": "filter_convolution",
+          "target": "flatfield_correction",
+          "label": "Dependency"
+        }
+      },
+      {
+        "data": {
+          "source": "illumination_artefact",
+          "target": "flatfield_correction",
           "label": "Dependency"
         }
       },
@@ -600,14 +677,14 @@
       },
       {
         "data": {
-          "source": "lut",
+          "source": "spatial_calibration",
           "target": "image_inspection_and_presentation",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "spatial_calibration",
+          "source": "display_settings",
           "target": "image_inspection_and_presentation",
           "label": "Dependency"
         }
@@ -642,14 +719,14 @@
       },
       {
         "data": {
-          "source": "filter_neighbourhood",
+          "source": "connected_components",
           "target": "filter_morphological",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "connected_components",
+          "source": "filter_neighbourhood",
           "target": "filter_morphological",
           "label": "Dependency"
         }
@@ -677,7 +754,7 @@
       },
       {
         "data": {
-          "source": "filter_statistical",
+          "source": "projections",
           "target": "local_background_correction",
           "label": "Dependency"
         }
@@ -691,21 +768,21 @@
       },
       {
         "data": {
-          "source": "projections",
+          "source": "filter_statistical",
           "target": "local_background_correction",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "filter_neighbourhood",
+          "source": "binarization",
           "target": "distance_transform",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "binarization",
+          "source": "filter_neighbourhood",
           "target": "distance_transform",
           "label": "Dependency"
         }
@@ -719,6 +796,13 @@
       },
       {
         "data": {
+          "source": "pixels",
+          "target": "psf",
+          "label": "Dependency"
+        }
+      },
+      {
+        "data": {
           "source": "binarization",
           "target": "auto_threshold",
           "label": "Dependency"
@@ -726,14 +810,14 @@
       },
       {
         "data": {
-          "source": "datatypes",
+          "source": "segmentation",
           "target": "binarization",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "segmentation",
+          "source": "datatypes",
           "target": "binarization",
           "label": "Dependency"
         }
@@ -747,13 +831,6 @@
       },
       {
         "data": {
-          "source": "datatypes",
-          "target": "image_file_formats",
-          "label": "Dependency"
-        }
-      },
-      {
-        "data": {
           "source": "spatial_calibration",
           "target": "image_file_formats",
           "label": "Dependency"
@@ -761,14 +838,21 @@
       },
       {
         "data": {
-          "source": "lut",
-          "target": "connected_components",
+          "source": "datatypes",
+          "target": "image_file_formats",
           "label": "Dependency"
         }
       },
       {
         "data": {
           "source": "binarization",
+          "target": "connected_components",
+          "label": "Dependency"
+        }
+      },
+      {
+        "data": {
+          "source": "display_settings",
           "target": "connected_components",
           "label": "Dependency"
         }

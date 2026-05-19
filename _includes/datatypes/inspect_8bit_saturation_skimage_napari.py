@@ -31,7 +31,7 @@ print("Min:", image.min()) # Are there any clipped pixels?
 print("Max:", image.max()) # Are there any clipped pixels?
 print("Number of 0 pixels:", np.sum(image==0)) # How many clipped pixels are there?
 print("Number of 255 pixels:", np.sum(image==255))
-plt.hist(image.flatten(), bins=np.arange(image.min(), image.max() + 1));
+plt.hist(image.flatten(), bins=np.arange(int(image.min()), int(image.max()) + 1));
 
 # %% 
 # Close the viewer (CI test requires this)

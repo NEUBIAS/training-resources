@@ -52,6 +52,8 @@
         <li class="dropdown">
           <a href="{{ relative_root_path }}/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Modules <span class="caret"></span></a>
           <ul class="dropdown-menu">
+            <li><a href="{{ relative_root_path }}{% link all-modules.md %}">Module overview</a></li>
+            <li role="separator" class="divider"></li>
             {% for lesson_episode in lesson_episodes %}
             {% if site.module_order %}
               {% assign episode = site.modules | where: "slug", lesson_episode | first %}
@@ -60,8 +62,6 @@
             {% endif %}
             <li><a href="{{ relative_root_path }}{{ episode.url }}">{{ episode.title }}</a></li>
             {% endfor %}
-	    <li role="separator" class="divider"></li>
-            <li><a href="{{ relative_root_path }}{% link all-modules.md %}">Module overview</a></li>
           </ul>
         </li>
 	{% endif %}

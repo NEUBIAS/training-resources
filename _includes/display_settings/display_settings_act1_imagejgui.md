@@ -1,0 +1,22 @@
+- Open [an image](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_high_dynamic_range.tif)
+- Adjust contrast settings
+	- [ Image › Adjust › Brightness/Contrast... ]
+	- Explore different min and max values
+		- To highlight bright regions keep the `Maximum` at 255 and slide the `Minimum` bar towards right until you see very bright regions e.g., `Minimum` = `130`
+  		- To highlight dull regions keep the `Minimum` at 0 and slide the `Maximum` bar towards left until you highlight very dim regions e.g., `Maximum` = `50`
+	- Appreciate that at certain settings a very dim nucleus becomes visible
+	- Check that the pixel values did not change
+	- __Critical:__ Never click [ Apply ]
+- Explore various single color colormaps, e.g.
+	- [ Image › Lookup Tables › Green ]
+	- [ Image › Lookup Tables › Blue ]
+	- [ Image › Lookup Tables › Red ]
+		- Avoid red! 15% of males cannot see anything here!
+		- Magenta can be a better alternative.
+- Display extreme values using a single colormap
+	- [ Image › Lookup Tables › HiLo ]
+		- Good to see extreme values
+- Show the LUT calibration bar
+	- Especially useful for multi-color LUTs
+	- [ Analyze › Tools › Calibration Bar... ]
+	- Explore the various settings
