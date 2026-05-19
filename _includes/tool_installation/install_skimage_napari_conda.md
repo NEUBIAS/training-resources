@@ -1,18 +1,14 @@
 ### Installation
 
 #### Install a conda package manager
+We recommend the usage of [miniforge](https://conda-forge.org/download/) for licensing reasons. GUI based packege manage (like Anaconda) may not allow to install specific version as required here. 
+ 1. **OSX and linux**:  Start the termina. If in the terminal you do not see `(base)` left of the shell prompt you need to activate conda. Assuming you installed on your home directory under `miniforge3` 
 
-If you already have a conda package manager you can skip this step. We discourage to use the full Anaconda package and use the GUI for the installation (this does not allow to pin the versions). 
+	```
+	source ~/miniforge3/bin/activate
+	```
 
-Due to updates in the licensing conditions affecting Anaconda and [miniconda](https://www.anaconda.com/docs/getting-started/miniconda/main), we recommend the usage of miniforge instead. For installation follow the respective instructions for your operating system [here](https://conda-forge.org/download/).
-
-1. OSX and linux:  Start the termina. If in the terminal you do not see `(base)` left of the shell prompt you need to activate conda. Assuming you installed on your home directory under `miniforge3` 
-
-```
-source ~/miniforge3/bin/activate
-```
-
-2. Windows: Serach `Miniforge3` in the command prompt and start the standard command tool (not the powershell, as this often does not starts properly).
+ 2. **Windows**: Search `Miniforge3` in the command prompt and start the standard command tool (not the powershell, as this often does not works properly).
 
 #### Install the course environment 
 
