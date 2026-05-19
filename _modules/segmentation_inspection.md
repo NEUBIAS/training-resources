@@ -19,14 +19,13 @@ motivation: |
 concept_map: >
   graph TD
     R("Raw image") --> V("Visual inspection")
-    R --> S("Semantic comparison")
-    R --> I("Instance comparison")
-    S --> B("Binary masks")
-    B --> M("IoU")
-    I --> C("Object count")
-    I --> A("Mean object area")
-
-figure: /figures/segmentation.png
+    L("Label masks") --> V
+    L --> S("Semantic comparison")
+    S --> M("IoU")
+    L --> I("Instance comparison")
+    I --> C("Object count and features")
+    
+figure: /figures/segmentation_inspection.png
 figure_legend: Segmentation can be inspected qualitatively (overlay) and quantitatively (semantic and instance metrics).
 
 multiactivities:
