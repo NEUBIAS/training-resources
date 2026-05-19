@@ -6,14 +6,19 @@ permalink: /index.html
 
 <br>
 
-This resource consists of a collection of **[training modules](all-modules)** that have been used to teach **[a number of courses](https://github.com/NEUBIAS/training-resources/tree/master/courses)**. The content of the training resource is explained in this video: **[
-Bioimage analysis training resources: How to use](https://www.youtube.com/watch?v=IcSBmoMRA20)**.
+This resource consists of a collection of **[training modules](all-modules)** that have been used to teach **[a number of courses](https://github.com/NEUBIAS/training-resources/tree/master/courses)**. 
 
 Each module can be taught in 30-45 min and covers a specific aspect of image analysis. Links to prerequisites and suggestions what could be taught next are given for each module and are used to define a **[module dependencies network](#module_network)**. The network can be used to guide instructors in the choice of modules for a course.
 
 The modules are meant to be taught hands-on, i.e. following the teacher's guidance, students execute the relevant steps in an image analysis software on their computers. The modules provide those steps for several major image analysis platforms, such as ImageJ GUI, ImageJ Macro, Python and Galaxy. Please see our **[teaching tips](TEACHING_TIPS.md)** and the video for the **[Digital image basics](https://www.youtube.com/watch?v=Felvc8zvFeU&list=PLnnMnuibzkscxztDDOZCyXjWfgIqYFobM)** module. 
 
 We are a **[community of developers and trainers](https://github.com/NEUBIAS/training-resources/graphs/contributors)** and we welcome any kind of collaboration! Please see our **[contributors guide](CONTRIBUTING.md)** and get in touch by **[writing an issue](https://github.com/NEUBIAS/training-resources/issues)**.
+
+More information:
+
+- **[Publication preprint](https://zenodo.org/records/17669862)**
+- **[Video: "Bioimage analysis training resources: How to use"](https://www.youtube.com/watch?v=IcSBmoMRA20)**
+
 
 To get a sense for how this material may be used we compiled a selection of consolidated courses:
 
