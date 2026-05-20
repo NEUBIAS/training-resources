@@ -65,3 +65,4 @@ print(f'Max value in sum projection: {max_y_value_2}')
 
 # %%
 viewer.close()
+plt.close('all')
