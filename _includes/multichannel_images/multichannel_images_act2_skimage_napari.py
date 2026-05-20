@@ -99,7 +99,7 @@ plt.subplots_adjust(wspace=0.01, hspace=0.1)
 # save data
 plt.savefig(export_path + 'montage_plt.png', format = 'png', bbox_inches='tight', pad_inches=0)
 # show the montage
-plt.show()
+
 
 
 # %% 
