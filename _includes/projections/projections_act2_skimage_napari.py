@@ -1,4 +1,4 @@
-# %% 
+# %%
 # Explore Max and Sum Projections
 
 # %%
@@ -16,7 +16,7 @@ print(axes)
 print(scales)
 print(units)
 
-# %% 
+# %%
 # As this is an anisotropic image, we view it scaled
 # - Napari: Use 3-D rendering see all the spots
 viewer = Viewer()
@@ -33,7 +33,7 @@ plt.hist(sum_z_image_float.ravel(), bins=256, log=True)
 max_z_value = np.max(sum_z_image_float)
 print(f'Max value in sum projection: {max_z_value}')
 plt.axvline(max_z_value, color='r', linestyle='dashed', linewidth=1)
-plt.show()
+
 
 # %%
 sum_y_image_float = np.sum(image, axis=1).astype(float)
@@ -45,7 +45,7 @@ plt.hist(sum_y_image_float.ravel(), bins=256, log=True)
 max_y_value = np.max(sum_y_image_float)
 print(f'Max value in sum projection: {max_y_value}')
 plt.axvline(max_y_value, color='r', linestyle='dashed', linewidth=1)
-plt.show()
+
 
 # %%
 max_z_image_float = np.max(image, axis=0).astype(float)
@@ -64,5 +64,7 @@ max_y_value_2 = np.max(max_y_image_float)
 print(f'Max value in sum projection: {max_y_value_2}')
 
 # %%
-viewer.close()
 plt.close('all')
+viewer.close()
+
+# %%

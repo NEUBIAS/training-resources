@@ -60,6 +60,8 @@ def find_plt_close(directory):
                         #    print(f"Found 'napari' and 'viewer.close()' in: {file_path}")
                         if "matplotlib" in content and not "plt.close('all')" in content:
                             print(f"Found 'matplotlib' but no 'plt.close('all')' in: {file_path}")
+                        if "plt.show()" in content:
+                            print(f"Found 'plt.show()' in: {file_path}")
                 except Exception as e:
                     print(f"Error reading file {file_path}: {e}")
 

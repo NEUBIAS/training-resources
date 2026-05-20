@@ -79,7 +79,6 @@ print(image_from_napari is image) # they are even the same object, not just a co
 # (there's many things happening here, no need to understand everything right now)
 import matplotlib.pyplot as plt
 plt.hist(image.flatten(), bins='auto')
-plt.show() # instead, we could end the above line with ";"
 
 # %% 
 # Close (CI test requires this)
