@@ -65,7 +65,8 @@ def find_plt_close(directory):
 
 if __name__ == "__main__":
     # Replace this with the directory you want to search
-    search_directory = "../_includes"  # Current directory
+    search_directory = "../_includes/"  # Current directory
+    print(search_directory)
     count_napari_calls_per_file(search_directory)
     find_plt_close(search_directory)
 
