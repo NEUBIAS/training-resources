@@ -1,39 +1,21 @@
 ### Installation
 
 #### Install a conda package manager
+We recommend the usage of [miniforge](https://conda-forge.org/download/) for licensing reasons. GUI based packege manage (like Anaconda) may not allow to install specific version as required here. 
+ 1. **OSX and linux**:  Start the termina. If in the terminal you do not see `(base)` left of the shell prompt you need to activate conda. Assuming you installed on your home directory under `miniforge3` 
 
-If you already have a conda package manager you can skip this step.
-
-<<<<<<< HEAD
-**Important**: If you cannot open the [miniconda](https://www.anaconda.com/docs/getting-started/miniconda/main) website, please install [miniforge](https://github.com/conda-forge/miniforge) following the instructions; if you however can access miniconda please follow the below instructions.
-
-1. Install [miniconda](https://www.anaconda.com/docs/getting-started/miniconda/main) see also [here](https://www.anaconda.com/docs/getting-started/miniconda/install). It is best to install as local user.
-	* Windows: the graphical installer works well. You can get it from the [repo](https://repo.anaconda.com/miniconda/) directly
-	* OSX: install using the `MacOS terminal installer`. This is the version that allows a local install. Install in the suggested path `~/miniconda3`
-1. Open a (new) terminal window
-	* Windows: *Anaconda Prompt (Miniconda3)*, e.g. type `Anaconda` in the search bar
-	* OSX: Open a `terminal` window. If conda is active you see `(base)` left of the shell prompt. If you do not see `(base)` you may have to manually activate the environment as described [here](https://www.anaconda.com/docs/getting-started/miniconda/install#quickstart-install-instructions) by typing
 	```
-	 source ~/miniconda3/bin/activate
+	source ~/miniforge3/bin/activate
 	```
-=======
-Due to updates in the licensing conditions affecting Anaconda and Miniconda installations, we recommend the usage of miniforge instead. For installation follow the respective instructions for your operating system [here](https://conda-forge.org/download/).
 
-OSX and linux: Note that for the following installation instructions the base environment needs to be activated. This is the case if you see `(base)` left of the shell prompt. If you do not see this you may use 
-
-```
-source ~/miniforge3/bin/activate
-```
-
-to activate it.
->>>>>>> 14d504bb7d8692a99c0dcd40ee1716bd91a91774
+ 2. **Windows**: Search `Miniforge3` in the command prompt and start the standard command tool (not the powershell, as this often does not works properly).
 
 #### Install the course environment 
 
 Within a terminal window execute
   
 ```
-conda create -n skimage-napari-tutorial --override-channels -c conda-forge -c euro-bioimaging -c nodefaults python=3.12 napari=0.6.0 pyqt notebook matplotlib jupytext scikit-image openijtiff -y
+conda create -n skimage-napari-tutorial --override-channels -c conda-forge -c euro-bioimaging -c nodefaults python=3.12 napari=0.6.6 pyqt notebook matplotlib jupytext scikit-image openijtiff -y
 ```
 
 This will create an environment named `skimage-napari-tutorial` with the necessary packages for the course.
