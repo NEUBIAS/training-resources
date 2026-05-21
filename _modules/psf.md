@@ -26,7 +26,6 @@ figure_legend: "Image formation in a confocal microscope: central longitudinal (
 
 multiactivities:
   - ["psf/fluorescent_beads.md", [["ImageJ GUI", "psf/fluorescent_beads_imagejgui.md"]]]
-  - ["psf/image_formation_wf_vs_confocal.md", [["ImageJ GUI", "psf/image_formation_wf_vs_confocal_imagej_gui.md"]]]
   
 
 assessment: >

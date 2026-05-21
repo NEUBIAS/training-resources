@@ -72,7 +72,6 @@ To get a sense for how this material may be used we compiled a selection of cons
   </div>
 
 
-
   <div class="course-card">
     <div class="course-icon"><i class="fas fa-tasks"></i></div>
     <h4><a href="basic-batch-analysis-course">Bioimage Batch Analysis</a></h4>

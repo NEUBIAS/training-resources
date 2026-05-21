@@ -318,6 +318,13 @@
       },
       {
         "data": {
+          "id": "segmentation_inspection",
+          "label": "Segmentation inspection",
+          "url": "../segmentation_inspection"
+        }
+      },
+      {
+        "data": {
           "id": "local_background_correction",
           "label": "Local background correction",
           "url": "../local_background_correction"
@@ -397,14 +404,14 @@
     "edges": [
       {
         "data": {
-          "source": "filter_convolution",
+          "source": "object_filtering",
           "target": "workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "object_filtering",
+          "source": "filter_convolution",
           "target": "workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape",
           "label": "Dependency"
         }
@@ -446,14 +453,14 @@
       },
       {
         "data": {
-          "source": "script_for_loop",
+          "source": "string_concat",
           "target": "batch_processing",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "string_concat",
+          "source": "script_for_loop",
           "target": "batch_processing",
           "label": "Dependency"
         }
@@ -474,14 +481,14 @@
       },
       {
         "data": {
-          "source": "volume_slicing",
+          "source": "projections",
           "target": "volume_viewer",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "projections",
+          "source": "volume_slicing",
           "target": "volume_viewer",
           "label": "Dependency"
         }
@@ -495,14 +502,14 @@
       },
       {
         "data": {
-          "source": "multidimensional_image_basics",
+          "source": "psf",
           "target": "spherical_aberrations",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "psf",
+          "source": "multidimensional_image_basics",
           "target": "spherical_aberrations",
           "label": "Dependency"
         }
@@ -754,14 +761,21 @@
       },
       {
         "data": {
-          "source": "projections",
-          "target": "local_background_correction",
+          "source": "connected_components",
+          "target": "segmentation_inspection",
           "label": "Dependency"
         }
       },
       {
         "data": {
           "source": "median_filter",
+          "target": "local_background_correction",
+          "label": "Dependency"
+        }
+      },
+      {
+        "data": {
+          "source": "projections",
           "target": "local_background_correction",
           "label": "Dependency"
         }
@@ -775,14 +789,14 @@
       },
       {
         "data": {
-          "source": "binarization",
+          "source": "filter_neighbourhood",
           "target": "distance_transform",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "filter_neighbourhood",
+          "source": "binarization",
           "target": "distance_transform",
           "label": "Dependency"
         }
@@ -831,13 +845,6 @@
       },
       {
         "data": {
-          "source": "spatial_calibration",
-          "target": "image_file_formats",
-          "label": "Dependency"
-        }
-      },
-      {
-        "data": {
           "source": "datatypes",
           "target": "image_file_formats",
           "label": "Dependency"
@@ -845,14 +852,21 @@
       },
       {
         "data": {
-          "source": "binarization",
-          "target": "connected_components",
+          "source": "spatial_calibration",
+          "target": "image_file_formats",
           "label": "Dependency"
         }
       },
       {
         "data": {
           "source": "display_settings",
+          "target": "connected_components",
+          "label": "Dependency"
+        }
+      },
+      {
+        "data": {
+          "source": "binarization",
           "target": "connected_components",
           "label": "Dependency"
         }
