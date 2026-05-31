@@ -6,8 +6,7 @@ permalink: /index.html
 
 <br>
 
-This resource consists of a collection of **[training modules](all-modules)** that have been used to teach **[a number of courses](https://github.com/NEUBIAS/training-resources/tree/master/courses)**. The content of the training resource is explained in this video: **[
-Bioimage analysis training resources: How to use](https://www.youtube.com/watch?v=IcSBmoMRA20)**.
+This resource consists of a collection of **[training modules](all-modules)** that have been used to teach **[a number of courses](https://github.com/NEUBIAS/training-resources/tree/master/courses)**. 
 
 Each module can be taught in 30-45 min and covers a specific aspect of image analysis. Links to prerequisites and suggestions what could be taught next are given for each module and are used to define a **[module dependencies network](#module_network)**. The network can be used to guide instructors in the choice of modules for a course.
 
@@ -15,17 +14,47 @@ The modules are meant to be taught hands-on, i.e. following the teacher's guidan
 
 We are a **[community of developers and trainers](https://github.com/NEUBIAS/training-resources/graphs/contributors)** and we welcome any kind of collaboration! Please see our **[contributors guide](CONTRIBUTING.md)** and get in touch by **[writing an issue](https://github.com/NEUBIAS/training-resources/issues)**.
 
+More information:
+
+- **[Publication preprint](https://zenodo.org/records/17669862)**
+- **[Video: "Bioimage analysis training resources: How to use"](https://www.youtube.com/watch?v=IcSBmoMRA20)**
+- **[Module Video: "Digital Image Basics: Introduction"](https://www.youtube.com/watch?v=Felvc8zvFeU&list=PLnnMnuibzkscxztDDOZCyXjWfgIqYFobM)**
+- **[Module Video: "Digital image basics: Inspect 2d image with python and napari"](https://www.youtube.com/watch?v=-fN5OxGnfck&list=PLnnMnuibzkscxztDDOZCyXjWfgIqYFobM&index=2)**
+
+
 To get a sense for how this material may be used we compiled a selection of consolidated courses:
 
 <div class="course-cards">
   <div class="course-card">
     <div class="course-icon"><i class="fas fa-eye"></i></div>
-    <h4><a href="basic-image-inspection-course">Basic Bioimage Inspection</a></h4>
+    <h4><a href="basic-image-inspection-course">Bioimage Inspection</a></h4>
     <p>Learn to inspect your images and visualize your data.</p>
     <div class="course-meta">
       <span class="course-modules">7 modules</span>
       <span class="course-duration">5.25 hours</span>
       <span class="course-credits">0.175 CP</span>
+    </div>
+  </div>
+  
+  <div class="course-card">
+    <div class="course-icon"><i class="fas fa-microscope"></i></div>
+    <h4><a href="basic-image-analysis-course">Bioimage Analysis</a></h4>
+    <p>Learn essential concepts of image analysis, such as segmentation, intensity measurements, and filtering.</p>
+    <div class="course-meta">
+      <span class="course-modules">12 modules</span>
+      <span class="course-duration">9 hours</span>
+      <span class="course-credits">0.3 CP</span>
+    </div>
+  </div>
+
+  <div class="course-card">
+    <div class="course-icon"><i class="fas fa-microscope"></i></div>
+    <h4><a href="advanced-image-analysis-course">Advanced Topics in Bioimage Analysis (DRAFT)</a></h4>
+    <p>Further improve your skills in image analysis.</p>
+    <div class="course-meta">
+      <span class="course-modules">xxx</span>
+      <span class="course-duration">xxx</span>
+      <span class="course-credits">xxx</span>
     </div>
   </div>
   
@@ -39,48 +68,15 @@ To get a sense for how this material may be used we compiled a selection of cons
       <span class="course-credits">0.125 CP</span>
     </div>
   </div>
-  
-  <div class="course-card">
-    <div class="course-icon"><i class="fas fa-microscope"></i></div>
-    <h4><a href="basic-image-analysis-course">Basic Bioimage Analysis</a></h4>
-    <p>Learn essential concepts of image analysis, such as segmentation, intensity measurements, and filtering.</p>
-    <div class="course-meta">
-      <span class="course-modules">12 modules</span>
-      <span class="course-duration">9 hours</span>
-      <span class="course-credits">0.3 CP</span>
-    </div>
-  </div>
-  
-  <div class="course-card">
-    <div class="course-icon"><i class="fas fa-microscope"></i></div>
-    <h4><a href="image_formation_and_artefacts">Image formation and imaging artefacts (DRAFT)</a></h4>
-    <p>Learn essential concepts on what determines quality and resolution of images, how this affects quantifications, and how to  mitigate imaging artefacts.</p>
-    <div class="course-meta">
-      <span class="course-modules">xx modules</span>
-      <span class="course-duration">x hours</span>
-      <span class="course-credits">xx CP</span>
-    </div>
-  </div>
 
   <div class="course-card">
     <div class="course-icon"><i class="fas fa-tasks"></i></div>
-    <h4><a href="basic-batch-analysis-course">Basic Batch Analysis</a></h4>
+    <h4><a href="basic-batch-analysis-course">Bioimage Batch Analysis</a></h4>
     <p>Learn how to automatically process image analysis tasks on multiple images.</p>
     <div class="course-meta">
       <span class="course-modules">5 modules</span>
       <span class="course-duration">3.75 hours</span>
       <span class="course-credits">0.125 CP</span>
-    </div>
-  </div>
-  
-  <div class="course-card">
-    <div class="course-icon"><i class="fas fa-cloud"></i></div>
-    <h4><a href="cloud-based-analysis-course">Cloud Based Bioimage Analysis</a></h4>
-    <p>Learn about executing bioimage analysis on remote compute resources.</p>
-    <div class="course-meta">
-      <span class="course-modules">2 modules</span>
-      <span class="course-duration">1.5 hours</span>
-      <span class="course-credits">0.05 CP</span>
     </div>
   </div>
   
@@ -94,7 +90,19 @@ To get a sense for how this material may be used we compiled a selection of cons
       <span class="course-credits">0.1 CP</span>
     </div>
   </div>
-    <div class="course-card">
+
+  <div class="course-card">
+    <div class="course-icon"><i class="fas fa-cloud"></i></div>
+    <h4><a href="cloud-based-analysis-course">Cloud Based Bioimage Analysis</a></h4>
+    <p>Learn about executing bioimage analysis on remote compute resources.</p>
+    <div class="course-meta">
+      <span class="course-modules">2 modules</span>
+      <span class="course-duration">1.5 hours</span>
+      <span class="course-credits">0.05 CP</span>
+    </div>
+  </div>
+  
+  <div class="course-card">
     <div class="course-icon"><i class="fas fa-bolt"></i></div>
     <h4><a href="imagej-macro-course">ImageJ Macro</a></h4>
     <p>Learn how to generate and modify scripts for image analysis workflows using the ImageJ macro language.</p>
@@ -102,6 +110,17 @@ To get a sense for how this material may be used we compiled a selection of cons
       <span class="course-modules">8 modules</span>
       <span class="course-duration">6 hours</span>
       <span class="course-credits">0.2 CP</span>
+    </div>
+  </div>
+
+  <div class="course-card">
+    <div class="course-icon"><i class="fas fa-microscope"></i></div>
+    <h4><a href="image_formation_and_artefacts">Image formation and imaging artefacts</a></h4>
+    <p>Learn some essential concepts on what determines quality and resolution of images, how this affects quantifications, and how to  mitigate imaging artefacts.</p>
+    <div class="course-meta">
+      <span class="course-modules">xx modules</span>
+      <span class="course-duration">x hours</span>
+      <span class="course-credits">xx CP</span>
     </div>
   </div>
 </div>
