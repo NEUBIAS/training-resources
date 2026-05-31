@@ -41,9 +41,12 @@ assessment: >
     {: .solution}
 
 learn_next:
-  - "[TODO](../auto_threshold)"
+  - "[Imaging thick biological samples](../image_formation_fluo_mic)"
+  - "[Optical sectioning](../optical_sectioning)"
 
 external_links:
   - "[Wikipedia: Point spread function](https://en.wikipedia.org/wiki/Point_spread_function)"
+  - "[iBiology Video: Huygens Wavelets Constructive/Destructive Interference, and Diffraction](https://www.ibiology.org/talks/diffraction/)"
+  - "[iBiology Video: Point spread function](https://www.ibiology.org/talks/point-spread-function/)"
 ---
 

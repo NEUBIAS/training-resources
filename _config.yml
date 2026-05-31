@@ -49,6 +49,7 @@ module_order:
 - measure_shapes
 - ome_tiff
 - ome_zarr
+- optical_sectioning
 - psf
 - projections
 - segmentation
