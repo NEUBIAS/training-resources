@@ -220,6 +220,13 @@
       },
       {
         "data": {
+          "id": "resolution",
+          "label": "Resolution",
+          "url": "../resolution"
+        }
+      },
+      {
+        "data": {
           "id": "ome_zarr",
           "label": "OME-Zarr",
           "url": "../ome_zarr"
@@ -406,19 +413,26 @@
           "label": "N-dimensional images",
           "url": "../multidimensional_image_basics"
         }
+      },
+      {
+        "data": {
+          "id": "sample_preparation",
+          "label": "Sample preparation",
+          "url": "../sample_preparation"
+        }
       }
     ],
     "edges": [
       {
         "data": {
-          "source": "object_filtering",
+          "source": "filter_convolution",
           "target": "workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "filter_convolution",
+          "source": "object_filtering",
           "target": "workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape",
           "label": "Dependency"
         }
@@ -460,14 +474,14 @@
       },
       {
         "data": {
-          "source": "string_concat",
+          "source": "script_for_loop",
           "target": "batch_processing",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "script_for_loop",
+          "source": "string_concat",
           "target": "batch_processing",
           "label": "Dependency"
         }
@@ -488,14 +502,14 @@
       },
       {
         "data": {
-          "source": "volume_slicing",
+          "source": "projections",
           "target": "volume_viewer",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "projections",
+          "source": "volume_slicing",
           "target": "volume_viewer",
           "label": "Dependency"
         }
@@ -509,14 +523,14 @@
       },
       {
         "data": {
-          "source": "psf",
+          "source": "multidimensional_image_basics",
           "target": "spherical_aberrations",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "multidimensional_image_basics",
+          "source": "psf",
           "target": "spherical_aberrations",
           "label": "Dependency"
         }
@@ -663,6 +677,13 @@
       },
       {
         "data": {
+          "source": "psf",
+          "target": "resolution",
+          "label": "Dependency"
+        }
+      },
+      {
+        "data": {
           "source": "big_image_file_formats",
           "target": "ome_zarr",
           "label": "Dependency"
@@ -691,14 +712,14 @@
       },
       {
         "data": {
-          "source": "spatial_calibration",
+          "source": "display_settings",
           "target": "image_inspection_and_presentation",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "display_settings",
+          "source": "spatial_calibration",
           "target": "image_inspection_and_presentation",
           "label": "Dependency"
         }
@@ -782,7 +803,7 @@
       },
       {
         "data": {
-          "source": "filter_statistical",
+          "source": "median_filter",
           "target": "local_background_correction",
           "label": "Dependency"
         }
@@ -796,7 +817,7 @@
       },
       {
         "data": {
-          "source": "median_filter",
+          "source": "filter_statistical",
           "target": "local_background_correction",
           "label": "Dependency"
         }
@@ -873,14 +894,14 @@
       },
       {
         "data": {
-          "source": "binarization",
+          "source": "display_settings",
           "target": "connected_components",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "display_settings",
+          "source": "binarization",
           "target": "connected_components",
           "label": "Dependency"
         }
@@ -889,6 +910,13 @@
         "data": {
           "source": "spatial_calibration",
           "target": "multidimensional_image_basics",
+          "label": "Dependency"
+        }
+      },
+      {
+        "data": {
+          "source": "pixels",
+          "target": "sample_preparation",
           "label": "Dependency"
         }
       }

@@ -49,7 +49,7 @@ To get a sense for how this material may be used we compiled a selection of cons
 
   <div class="course-card">
     <div class="course-icon"><i class="fas fa-microscope"></i></div>
-    <h4><a href="advanced-image-analysis-course">Advanced Topics in Bioimage Analysis (DRAFT)</a></h4>
+    <h4><a href="advanced-image-analysis-course">Advanced Topics in Bioimage Analysis</a></h4>
     <p>Further improve your skills in image analysis.</p>
     <div class="course-meta">
       <span class="course-modules">xxx</span>
@@ -118,7 +118,7 @@ To get a sense for how this material may be used we compiled a selection of cons
     <h4><a href="image_formation_and_artefacts">Image formation and imaging artefacts</a></h4>
     <p>Learn some essential concepts on what determines quality and resolution of images, how this affects quantifications, and how to  mitigate imaging artefacts.</p>
     <div class="course-meta">
-      <span class="course-modules">xx modules</span>
+      <span class="course-modules">11 modules</span>
       <span class="course-duration">x hours</span>
       <span class="course-credits">xx CP</span>
     </div>
