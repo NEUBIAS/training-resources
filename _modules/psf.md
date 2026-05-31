@@ -4,6 +4,7 @@ layout: module
 tags: ["microscopy", "image formation", "psf"]
 prerequisites:
   - "[Digital image basics](../pixels)"
+
 objectives:
   - Identify PSF-induced artifacts in microscopy images, specifically axial elongation (Z-distortion) and lateral blurring.
   - Predict the impact of the PSF on quantitative measurements, including how it inflates object size and dilutes signal intensity.

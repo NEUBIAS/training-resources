@@ -4,8 +4,8 @@ layout: module
 tags: ["image formation"]
 prerequisites:
   - "[Digital image basics](../pixels)"
-  - "[Optical sectioning](../optical_sectioning)"
   - "[Point spread function](../psf)"
+  - "[Optical sectioning](../optical_sectioning)"
 objectives:
   - Understand that the geometry and optical properties of your biological specimen can have a large influence on the measured intensities
 motivation: |

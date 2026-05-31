@@ -1,7 +1,7 @@
 ---
 title: Optical sectioning
 layout: module
-tags: ["draft"]
+tags: ["image formation", "confocaility", "psf"]
 prerequisites:
   - "[Point spread function](../psf)"
 objectives:
@@ -50,9 +50,10 @@ assessment: >
     {: .solution}
 
 learn_next:
-  - 
+  - "[Imaging thick biological samples](../image_formation_fluo_mic)"
+  - "[Spherical aberrations](../spherical_aberrations)"
 
 external_links:
-  - "[Optical sectioning methods in three-dimensional bioimaging](https://www.nature.com/articles/s41377-024-01677-x)"
+  - "[Optical sectioning methods in three-dimensional bioimaging (Zhang et al. 2025)](https://www.nature.com/articles/s41377-024-01677-x)"
 ---
 
