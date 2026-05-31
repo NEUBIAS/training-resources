@@ -36,8 +36,6 @@ To get a sense for how this material may be used we compiled a selection of cons
     </div>
   </div>
   
-
-  
   <div class="course-card">
     <div class="course-icon"><i class="fas fa-microscope"></i></div>
     <h4><a href="basic-image-analysis-course">Bioimage Analysis</a></h4>
@@ -49,7 +47,7 @@ To get a sense for how this material may be used we compiled a selection of cons
     </div>
   </div>
 
-   <div class="course-card">
+  <div class="course-card">
     <div class="course-icon"><i class="fas fa-microscope"></i></div>
     <h4><a href="advanced-image-analysis-course">Advanced Topics in Bioimage Analysis (DRAFT)</a></h4>
     <p>Further improve your skills in image analysis.</p>
@@ -70,8 +68,6 @@ To get a sense for how this material may be used we compiled a selection of cons
       <span class="course-credits">0.125 CP</span>
     </div>
   </div>
-
-
 
   <div class="course-card">
     <div class="course-icon"><i class="fas fa-tasks"></i></div>
@@ -106,8 +102,6 @@ To get a sense for how this material may be used we compiled a selection of cons
     </div>
   </div>
   
-
-
   <div class="course-card">
     <div class="course-icon"><i class="fas fa-bolt"></i></div>
     <h4><a href="imagej-macro-course">ImageJ Macro</a></h4>
@@ -118,6 +112,7 @@ To get a sense for how this material may be used we compiled a selection of cons
       <span class="course-credits">0.2 CP</span>
     </div>
   </div>
+
   <div class="course-card">
     <div class="course-icon"><i class="fas fa-microscope"></i></div>
     <h4><a href="image_formation_and_artefacts">Image formation and imaging artefacts</a></h4>

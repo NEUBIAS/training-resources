@@ -304,6 +304,13 @@
       },
       {
         "data": {
+          "id": "optical_sectioning",
+          "label": "Optical sectioning",
+          "url": "../optical_sectioning"
+        }
+      },
+      {
+        "data": {
           "id": "script_for_loop",
           "label": "Loops",
           "url": "../script_for_loop"
@@ -314,6 +321,13 @@
           "id": "filter_convolution",
           "label": "Convolutional filters",
           "url": "../filter_convolution"
+        }
+      },
+      {
+        "data": {
+          "id": "segmentation_inspection",
+          "label": "Segmentation inspection",
+          "url": "../segmentation_inspection"
         }
       },
       {
@@ -368,7 +382,7 @@
       {
         "data": {
           "id": "image_formation_fluo_mic",
-          "label": "Fluorescence microscopy image formation",
+          "label": "Imaging thick biological samples",
           "url": "../image_formation_fluo_mic"
         }
       },
@@ -397,14 +411,14 @@
     "edges": [
       {
         "data": {
-          "source": "filter_convolution",
+          "source": "object_filtering",
           "target": "workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "object_filtering",
+          "source": "filter_convolution",
           "target": "workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape",
           "label": "Dependency"
         }
@@ -446,14 +460,14 @@
       },
       {
         "data": {
-          "source": "script_for_loop",
+          "source": "string_concat",
           "target": "batch_processing",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "string_concat",
+          "source": "script_for_loop",
           "target": "batch_processing",
           "label": "Dependency"
         }
@@ -495,13 +509,6 @@
       },
       {
         "data": {
-          "source": "multidimensional_image_basics",
-          "target": "spherical_aberrations",
-          "label": "Dependency"
-        }
-      },
-      {
-        "data": {
           "source": "psf",
           "target": "spherical_aberrations",
           "label": "Dependency"
@@ -509,8 +516,8 @@
       },
       {
         "data": {
-          "source": "distance_transform",
-          "target": "watershed",
+          "source": "multidimensional_image_basics",
+          "target": "spherical_aberrations",
           "label": "Dependency"
         }
       },
@@ -523,14 +530,21 @@
       },
       {
         "data": {
-          "source": "datatypes",
-          "target": "multichannel_images",
+          "source": "distance_transform",
+          "target": "watershed",
           "label": "Dependency"
         }
       },
       {
         "data": {
           "source": "display_settings",
+          "target": "multichannel_images",
+          "label": "Dependency"
+        }
+      },
+      {
+        "data": {
+          "source": "datatypes",
           "target": "multichannel_images",
           "label": "Dependency"
         }
@@ -740,6 +754,13 @@
       },
       {
         "data": {
+          "source": "psf",
+          "target": "optical_sectioning",
+          "label": "Dependency"
+        }
+      },
+      {
+        "data": {
           "source": "script_variables",
           "target": "script_for_loop",
           "label": "Dependency"
@@ -754,6 +775,20 @@
       },
       {
         "data": {
+          "source": "connected_components",
+          "target": "segmentation_inspection",
+          "label": "Dependency"
+        }
+      },
+      {
+        "data": {
+          "source": "filter_statistical",
+          "target": "local_background_correction",
+          "label": "Dependency"
+        }
+      },
+      {
+        "data": {
           "source": "projections",
           "target": "local_background_correction",
           "label": "Dependency"
@@ -762,13 +797,6 @@
       {
         "data": {
           "source": "median_filter",
-          "target": "local_background_correction",
-          "label": "Dependency"
-        }
-      },
-      {
-        "data": {
-          "source": "filter_statistical",
           "target": "local_background_correction",
           "label": "Dependency"
         }
@@ -824,7 +852,7 @@
       },
       {
         "data": {
-          "source": "pixels",
+          "source": "optical_sectioning",
           "target": "image_formation_fluo_mic",
           "label": "Dependency"
         }

@@ -67,6 +67,7 @@ multiactivities:
   - ["spherical_aberrations/act01.md", [["ImageJ GUI", "spherical_aberrations/act01_imagejgui.md"]]]
 
 
+
 assessment: >
   ### Intensity and refractive index matching
 
@@ -105,5 +106,8 @@ learn_next:
 
 external_links:
   - "[SVI - Spherical aberrations](https://svi.nl/SphericalAberration)"
+  - "[Tissue clearing and its applications in neuroscience (Ueda et al 2020)](https://www.nature.com/articles/s41583-019-0250-1)"
+  - "[A tunable refractive index matching medium for live imaging cells, tissues and model organisms (Boothe et al. 2017)]( https://doi.org/10.7554/eLife.27240)"
+  - "[Tutorial: practical considerations for tissue clearing and imaging (Weiss et al. 2021)](https://doi.org/10.1038/s41596-021-00502-8)"
 ---
 
