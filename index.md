@@ -18,6 +18,8 @@ More information:
 
 - **[Publication preprint](https://zenodo.org/records/17669862)**
 - **[Video: "Bioimage analysis training resources: How to use"](https://www.youtube.com/watch?v=IcSBmoMRA20)**
+- **[Module Video: "Digital Image Basics: Introduction"](https://www.youtube.com/watch?v=Felvc8zvFeU&list=PLnnMnuibzkscxztDDOZCyXjWfgIqYFobM)**
+- **[Module Video: "Digital image basics: Inspect 2d image with python and napari"](https://www.youtube.com/watch?v=-fN5OxGnfck&list=PLnnMnuibzkscxztDDOZCyXjWfgIqYFobM&index=2)**
 
 
 To get a sense for how this material may be used we compiled a selection of consolidated courses:
