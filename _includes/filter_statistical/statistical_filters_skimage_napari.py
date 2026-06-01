@@ -43,25 +43,3 @@ viewer.add_image(mean_filtered, name="Mean (r=2)")
 # - Removes noise while preserving edges
 median_filtered = rank.median(image, disk(2))
 viewer.add_image(median_filtered, name="Median (r=2)")
-
-# %% 
-# Apply Variance filter
-# - Highlights areas with high intensity variation
-from scipy.ndimage import generic_filter
-var_image = generic_filter(image, function=np.var, size=11)
-
-viewer.add_image(var_image, name="Entropy (r=2)")
-
-# %%
-# Manual activity:
-# Choose one interesting 5x5 region in the image and manually compute
-# the statistical filters. Compare with the automated results.
-
-# %%
-# Learning opportunity:
-# - Compare the effect of different radii on the filter results
-# - Observe how different filters affect noise and edges in the image
-
-# %% 
-# Close the viewer (CI test requires this)
-viewer.close()
