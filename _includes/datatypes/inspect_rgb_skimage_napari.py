@@ -4,14 +4,14 @@
 # %%
 # Import libraries and instantiate napari
 import napari
-import numpy as np
-from skimage import io # OpenIJTiff cannot open RGB images
+from bioio import BioImage
 
 viewer = napari.Viewer()
 
 # %%
 # Open and inspect the image 
-image = io.imread('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_rgb__cells.tif')
+image = BioImage('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_rgb__cells.tif')
+image = image.data.squeeze()
 print(image.dtype) # The datatype is uint8 (not rgb)
 print(image.shape) # The RGB components are represented as a third dimension
 

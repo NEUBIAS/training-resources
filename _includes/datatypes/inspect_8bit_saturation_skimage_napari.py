@@ -6,13 +6,14 @@
 import napari
 import numpy as np
 import matplotlib.pyplot as plt
-from OpenIJTIFF import open_ij_tiff
+from bioio import BioImage
 
 viewer = napari.Viewer()
 
 # %%
 # Open an image and view it
-image, *_ = open_ij_tiff('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_intensity_clipping_issue_a.tif')
+image = BioImage('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_intensity_clipping_issue_a.tif')
+image = image.data.squeeze()
 viewer.add_image(image)
 
 # TODO: This would be nice https://forum.image.sc/t/add-hilo-colormap-to-napari/95601
@@ -31,9 +32,12 @@ print("Min:", image.min()) # Are there any clipped pixels?
 print("Max:", image.max()) # Are there any clipped pixels?
 print("Number of 0 pixels:", np.sum(image==0)) # How many clipped pixels are there?
 print("Number of 255 pixels:", np.sum(image==255))
-plt.hist(image.flatten(), bins=np.arange(int(image.min()), int(image.max()) + 1));
+plt.hist(image.flatten(), bins=np.arange(int(image.min()), int(image.max()) + 1).tolist())
+plt.show()
 
 # %% 
 # Close the viewer (CI test requires this)
 viewer.close()
 plt.close('all')
+
+# %%

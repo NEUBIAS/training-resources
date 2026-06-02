@@ -6,13 +6,14 @@
 import napari
 import numpy as np
 import matplotlib.pyplot as plt
-from OpenIJTIFF import open_ij_tiff
+from bioio import BioImage
 
 viewer = napari.Viewer()
 
 # %%
 # Open image and view it
-image, *_ = open_ij_tiff('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit__scanR_datatype_issue.tif')
+image = BioImage('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit__scanR_datatype_issue.tif')
+image = image.data.squeeze()
 viewer.add_image(image)
 
 # %% 
@@ -25,8 +26,9 @@ print(dtype_min, dtype_max)
 
 print(image.min(), image.max())
 
-plt.hist(image.flatten(), bins=np.arange(dtype_min, dtype_max+1))
+plt.hist(image.flatten(), bins=np.arange(dtype_min, dtype_max+1).tolist())
 plt.yscale("log")
+plt.show()
 
 # %%
 # This is a bit advanced/annoying 

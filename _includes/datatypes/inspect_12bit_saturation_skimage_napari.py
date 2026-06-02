@@ -6,11 +6,12 @@
 import napari
 import numpy as np
 import matplotlib.pyplot as plt
-from OpenIJTIFF import open_ij_tiff
+from bioio import BioImage
 
 # %%
 # Open an image and view it in napari
-image, *_ = open_ij_tiff('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_12bit__saturated_plant.tif')
+image = BioImage('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_12bit__saturated_plant.tif')
+image = image.data.squeeze()
 viewer = napari.Viewer()
 viewer.add_image(image)
 
