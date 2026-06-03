@@ -6,7 +6,7 @@ prerequisites:
   - "[Running a script](../script_run)"
   - "[Variables](../script_variables)"
 objectives:
-  - "Organise script parameters in the code such that can be easliy adapted"
+  - "Organize script parameters in the code such that can be easily adapted"
   - "Create dialog boxes for fetching script parameters"
 
 motivation: |

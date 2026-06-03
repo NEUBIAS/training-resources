@@ -1,7 +1,7 @@
 ---
 title: Image sampling
 layout: module
-tags: ["draft", "microscopy", "image formation", "sampling"]
+tags: ["microscopy", "image formation", "sampling"]
 prerequisites:
   - "[Digital image basics](../pixels)"
   - "[Point spread function](../psf)"
@@ -9,7 +9,7 @@ objectives:
   - Explain how spatial and axial sampling discretize a continuous optical image.
   - Identify under-sampling artifacts such as aliasing and loss of structural information.
   - Recognize over-sampling and its practical costs (data volume, phototoxicity, acquisition time).
-  - Understand the optimal sampling depends on the biological question.
+  - Understand that the biological question guides the required sampling. 
 motivation: |
   In microscopy, image quality is not only limited by optics, but also by how finely the image is sampled.
   Even a perfect microscope can produce misleading data if the sampling is inappropriate.

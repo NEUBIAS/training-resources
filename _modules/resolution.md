@@ -5,9 +5,10 @@ tags: ["image formation"]
 prerequisites:
   - "[Point spread function](../psf)"
 objectives:
-  - "TODO"
+  - "Understand how resolution is affected by the size of the PSF"
+  - "Understand how physical parameters of the microscope affect the resolution"
 motivation: |
-  TODO
+  A microscope does not deliver a perfect picture of the biological structure. Due to the law of diffraction, we observe a blurred version of it. If part of the structure is too close we will not be able resolve its detail. The so called resolution limit is a distance below which the microscope can't resolve adjacent structures. The final effective resolution depends on a combination of the width of the PSF, signal to background, signal to noise, and sample preparation. 
 
 concept_map: >
   graph TD

@@ -1,13 +1,14 @@
 ---
-title: Sample preparation
+title: Sample preparation artefacts
 layout: module
 tags: ["image formation"]
 prerequisites:
   - "[Digital image basics](../pixels)"
 objectives:
-  - "TODO"
+  - "Understand that sample preparation will affect the final imaging result"
+  - "Understand which type of artefacts come from sample preparation"
 motivation: |
-  TODO
+  When preparing samples for imaging a series of steps to preserve and label the structure of interest are often applied. Those protocols are rarely perfect and depending on the type of fixation and labelling strategy one obtain variable results. For example, certain structure may change their appearance, the biological sample may shrink, or some of the labels may not penetrate the sample. It is important to be aware how the sample preparation can affect the final imaging result. 
 
 concept_map: >
   graph TD

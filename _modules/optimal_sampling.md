@@ -1,5 +1,5 @@
 ---
-title: Optimal sampling (DRAFT)
+title: Optimal sampling
 layout: module
 tags: ["image formation"]
 prerequisites:
@@ -7,10 +7,11 @@ prerequisites:
   - "[Image sampling](../sampling)"
   - "[Resolution](../resolution)"
 objectives:
-  - "TODO"
+  - "Be able to compute the optimal pixel size according to Nyquist given a resolution limit"
+  - "Decide which pixel size is required to visualize a structure of a specific size"
 motivation: |
-  TODO
-
+  In order to resolve a specific structure we need enough spatial resolution and we need to record sufficient spatial information. The Nyquist-Shannon sampling theorem, often referred to Nyquist sampling, gives a simple mathematical relationship between the resolution 
+  and image sampling (i.e. pixel size). This is a useful guideline to balance acquisition speed, bleaching, and resolving power. 
 concept_map: >
   graph TD
     T1("TODO1") --> T2("TODO2")
@@ -38,6 +39,6 @@ learn_next:
   - "[TODO](../auto_threshold)"
 
 external_links:
-  - "[Wikipedia: Binary image](https://en.wikipedia.org/wiki/Binary_image)"
+  - "[Wikipedia: Nyquist–Shannon sampling theorem](https://en.wikipedia.org/wiki/Nyquist–Shannon_sampling_theorem)"
 ---
 

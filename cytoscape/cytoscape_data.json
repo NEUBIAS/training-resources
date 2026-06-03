@@ -5,424 +5,590 @@
         "data": {
           "id": "workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape",
           "label": "Noisy object segmentation and filtering in 2D",
-          "url": "../workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape"
+          "url": "../workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape",
+          "tags": [
+            "workflow"
+          ]
+        }
+      },
+      {
+        "data": {
+          "id": "sampling",
+          "label": "Image sampling",
+          "url": "../sampling",
+          "tags": [
+            "microscopy",
+            "image formation",
+            "sampling"
+          ]
         }
       },
       {
         "data": {
           "id": "big_image_file_formats",
           "label": "Big image data formats",
-          "url": "../big_image_file_formats"
+          "url": "../big_image_file_formats",
+          "tags": [
+            "chunking",
+            "multi-scale"
+          ]
         }
       },
       {
         "data": {
           "id": "script_run",
           "label": "Running a script",
-          "url": "../script_run"
+          "url": "../script_run",
+          "tags": [
+            "scripting"
+          ]
         }
       },
       {
         "data": {
           "id": "stitching",
           "label": "Stitching of tiled images",
-          "url": "../stitching"
+          "url": "../stitching",
+          "tags": [
+            "microscopy, image formation"
+          ]
         }
       },
       {
         "data": {
           "id": "spatial_calibration",
           "label": "Spatial calibration",
-          "url": "../spatial_calibration"
+          "url": "../spatial_calibration",
+          "tags": []
         }
       },
       {
         "data": {
           "id": "object_filtering",
           "label": "Object filtering",
-          "url": "../object_filtering"
+          "url": "../object_filtering",
+          "tags": []
         }
       },
       {
         "data": {
           "id": "display_settings",
           "label": "Display settings",
-          "url": "../display_settings"
+          "url": "../display_settings",
+          "tags": []
         }
       },
       {
         "data": {
           "id": "batch_processing",
           "label": "Batch processing",
-          "url": "../batch_processing"
+          "url": "../batch_processing",
+          "tags": [
+            "scripting"
+          ]
         }
       },
       {
         "data": {
           "id": "script_functions",
           "label": "Functions",
-          "url": "../script_functions"
+          "url": "../script_functions",
+          "tags": [
+            "scripting"
+          ]
         }
       },
       {
         "data": {
           "id": "string_concat",
           "label": "Strings and paths",
-          "url": "../string_concat"
+          "url": "../string_concat",
+          "tags": [
+            "scripting"
+          ]
         }
       },
       {
         "data": {
           "id": "volume_viewer",
           "label": "Volume rendering",
-          "url": "../volume_viewer"
+          "url": "../volume_viewer",
+          "tags": []
         }
       },
       {
         "data": {
           "id": "output_saving",
           "label": "Output saving",
-          "url": "../output_saving"
+          "url": "../output_saving",
+          "tags": [
+            "scripting"
+          ]
         }
       },
       {
         "data": {
           "id": "spherical_aberrations",
           "label": "Spherical aberrations",
-          "url": "../spherical_aberrations"
+          "url": "../spherical_aberrations",
+          "tags": [
+            "microscopy",
+            "image formation"
+          ]
         }
       },
       {
         "data": {
           "id": "watershed",
           "label": "Watershed",
-          "url": "../watershed"
+          "url": "../watershed",
+          "tags": []
+        }
+      },
+      {
+        "data": {
+          "id": "optimal_sampling",
+          "label": "Optimal sampling",
+          "url": "../optimal_sampling",
+          "tags": [
+            "image formation"
+          ]
         }
       },
       {
         "data": {
           "id": "multichannel_images",
           "label": "Multichannel images",
-          "url": "../multichannel_images"
+          "url": "../multichannel_images",
+          "tags": []
         }
       },
       {
         "data": {
           "id": "datatypes",
           "label": "Data types",
-          "url": "../datatypes"
+          "url": "../datatypes",
+          "tags": []
         }
       },
       {
         "data": {
           "id": "fetching_user_input",
           "label": "Handling input parameters",
-          "url": "../fetching_user_input"
+          "url": "../fetching_user_input",
+          "tags": [
+            "scripting"
+          ]
         }
       },
       {
         "data": {
           "id": "batch_qc_and_exploration",
           "label": "Batch exploration of segmentation results",
-          "url": "../batch_qc_and_exploration"
+          "url": "../batch_qc_and_exploration",
+          "tags": []
         }
       },
       {
         "data": {
           "id": "median_filter",
           "label": "Median filter",
-          "url": "../median_filter"
+          "url": "../median_filter",
+          "tags": []
         }
       },
       {
         "data": {
           "id": "volume_slicing",
           "label": "Volume slicing",
-          "url": "../volume_slicing"
+          "url": "../volume_slicing",
+          "tags": []
         }
       },
       {
         "data": {
           "id": "workflow_nuclei_and_cells_segmentation",
           "label": "Nuclei and cells segmentation",
-          "url": "../workflow_nuclei_and_cells_segmentation"
+          "url": "../workflow_nuclei_and_cells_segmentation",
+          "tags": [
+            "workflow"
+          ]
         }
       },
       {
         "data": {
           "id": "segmentation",
           "label": "Segmentation overview",
-          "url": "../segmentation"
+          "url": "../segmentation",
+          "tags": []
         }
       },
       {
         "data": {
           "id": "skeletonization",
           "label": "Skeletonization",
-          "url": "../skeletonization"
+          "url": "../skeletonization",
+          "tags": [
+            "segmentation",
+            "binarization"
+          ]
         }
       },
       {
         "data": {
           "id": "illumination_artefact",
           "label": "Illumination and shading artefacts",
-          "url": "../illumination_artefact"
+          "url": "../illumination_artefact",
+          "tags": [
+            "microscopy"
+          ]
         }
       },
       {
         "data": {
           "id": "filter_neighbourhood",
           "label": "Neighborhood filters",
-          "url": "../filter_neighbourhood"
+          "url": "../filter_neighbourhood",
+          "tags": []
         }
       },
       {
         "data": {
           "id": "script_variables",
           "label": "Variables",
-          "url": "../script_variables"
+          "url": "../script_variables",
+          "tags": [
+            "scripting"
+          ]
         }
       },
       {
         "data": {
           "id": "flatfield_correction",
           "label": "Flat-field correction",
-          "url": "../flatfield_correction"
+          "url": "../flatfield_correction",
+          "tags": [
+            "image formation, microscopy"
+          ]
         }
       },
       {
         "data": {
           "id": "smart_microscopy_low_zoom_high_zoom",
           "label": "Smart microscopy targeted imaging",
-          "url": "../smart_microscopy_low_zoom_high_zoom"
+          "url": "../smart_microscopy_low_zoom_high_zoom",
+          "tags": []
         }
       },
       {
         "data": {
           "id": "correlative_image_rendering",
           "label": "Correlative image rendering",
-          "url": "../correlative_image_rendering"
+          "url": "../correlative_image_rendering",
+          "tags": [
+            "visualisation"
+          ]
         }
       },
       {
         "data": {
           "id": "coding_with_llms",
           "label": "Coding with LLMs",
-          "url": "../coding_with_llms"
+          "url": "../coding_with_llms",
+          "tags": [
+            "scripting"
+          ]
         }
       },
       {
         "data": {
           "id": "cloud_based_interactive_analysis",
           "label": "Cloud based interactive analysis",
-          "url": "../cloud_based_interactive_analysis"
+          "url": "../cloud_based_interactive_analysis",
+          "tags": []
         }
       },
       {
         "data": {
           "id": "resolution",
           "label": "Resolution",
-          "url": "../resolution"
+          "url": "../resolution",
+          "tags": [
+            "image formation"
+          ]
         }
       },
       {
         "data": {
           "id": "ome_zarr",
           "label": "OME-Zarr",
-          "url": "../ome_zarr"
+          "url": "../ome_zarr",
+          "tags": [
+            "format"
+          ]
         }
       },
       {
         "data": {
           "id": "script_record",
           "label": "Recording a script",
-          "url": "../script_record"
+          "url": "../script_record",
+          "tags": [
+            "scripting"
+          ]
         }
       },
       {
         "data": {
           "id": "projections",
           "label": "Projections",
-          "url": "../projections"
+          "url": "../projections",
+          "tags": []
         }
       },
       {
         "data": {
           "id": "workflow_segment_2d_nuclei_measure_shape",
           "label": "Nuclei segmentation and shape measurement",
-          "url": "../workflow_segment_2d_nuclei_measure_shape"
+          "url": "../workflow_segment_2d_nuclei_measure_shape",
+          "tags": [
+            "workflow"
+          ]
         }
       },
       {
         "data": {
           "id": "image_inspection_and_presentation",
           "label": "Quantitative image inspection and presentation",
-          "url": "../image_inspection_and_presentation"
+          "url": "../image_inspection_and_presentation",
+          "tags": [
+            "workflow"
+          ]
         }
       },
       {
         "data": {
           "id": "ome_tiff",
           "label": "OME-TIFF",
-          "url": "../ome_tiff"
+          "url": "../ome_tiff",
+          "tags": []
         }
       },
       {
         "data": {
           "id": "pixels",
           "label": "Digital image basics",
-          "url": "../pixels"
+          "url": "../pixels",
+          "tags": []
         }
       },
       {
         "data": {
           "id": "filter_statistical",
           "label": "Statistical (rank) filters",
-          "url": "../filter_statistical"
+          "url": "../filter_statistical",
+          "tags": []
         }
       },
       {
         "data": {
           "id": "measure_intensities",
           "label": "Object intensity measurements",
-          "url": "../measure_intensities"
+          "url": "../measure_intensities",
+          "tags": []
         }
       },
       {
         "data": {
           "id": "cloud_based_batch_analysis",
           "label": "Cloud based batch analysis",
-          "url": "../cloud_based_batch_analysis"
+          "url": "../cloud_based_batch_analysis",
+          "tags": []
         }
       },
       {
         "data": {
           "id": "filter_morphological",
           "label": "Morphological filters",
-          "url": "../filter_morphological"
+          "url": "../filter_morphological",
+          "tags": [
+            "Rank filters",
+            "Dilation",
+            "Erosion",
+            "Opening",
+            "Granulometry"
+          ]
         }
       },
       {
         "data": {
           "id": "global_background_correction",
           "label": "Global background correction",
-          "url": "../global_background_correction"
+          "url": "../global_background_correction",
+          "tags": []
         }
       },
       {
         "data": {
           "id": "optical_sectioning",
           "label": "Optical sectioning",
-          "url": "../optical_sectioning"
+          "url": "../optical_sectioning",
+          "tags": [
+            "image formation",
+            "confocaility",
+            "psf"
+          ]
         }
       },
       {
         "data": {
           "id": "script_for_loop",
           "label": "Loops",
-          "url": "../script_for_loop"
+          "url": "../script_for_loop",
+          "tags": [
+            "scripting"
+          ]
         }
       },
       {
         "data": {
           "id": "filter_convolution",
           "label": "Convolutional filters",
-          "url": "../filter_convolution"
+          "url": "../filter_convolution",
+          "tags": []
         }
       },
       {
         "data": {
           "id": "segmentation_inspection",
           "label": "Segmentation inspection",
-          "url": "../segmentation_inspection"
+          "url": "../segmentation_inspection",
+          "tags": [
+            "segmentation"
+          ]
         }
       },
       {
         "data": {
           "id": "local_background_correction",
           "label": "Local background correction",
-          "url": "../local_background_correction"
+          "url": "../local_background_correction",
+          "tags": []
         }
       },
       {
         "data": {
           "id": "tool_installation",
           "label": "Tool installation",
-          "url": "../tool_installation"
+          "url": "../tool_installation",
+          "tags": []
         }
       },
       {
         "data": {
           "id": "distance_transform",
           "label": "Distance transform",
-          "url": "../distance_transform"
+          "url": "../distance_transform",
+          "tags": [
+            ""
+          ]
         }
       },
       {
         "data": {
           "id": "measure_shapes",
           "label": "Object shape measurements",
-          "url": "../measure_shapes"
+          "url": "../measure_shapes",
+          "tags": []
         }
       },
       {
         "data": {
           "id": "psf",
           "label": "Point spread function",
-          "url": "../psf"
+          "url": "../psf",
+          "tags": [
+            "microscopy",
+            "image formation",
+            "psf"
+          ]
         }
       },
       {
         "data": {
           "id": "auto_threshold",
           "label": "Automatic thresholding",
-          "url": "../auto_threshold"
+          "url": "../auto_threshold",
+          "tags": []
         }
       },
       {
         "data": {
           "id": "binarization",
           "label": "Thresholding",
-          "url": "../binarization"
+          "url": "../binarization",
+          "tags": [
+            "segmentation",
+            "binarization"
+          ]
         }
       },
       {
         "data": {
           "id": "image_formation_fluo_mic",
           "label": "Imaging thick biological samples",
-          "url": "../image_formation_fluo_mic"
+          "url": "../image_formation_fluo_mic",
+          "tags": [
+            "image formation"
+          ]
         }
       },
       {
         "data": {
           "id": "image_file_formats",
           "label": "Image data formats",
-          "url": "../image_file_formats"
+          "url": "../image_file_formats",
+          "tags": []
         }
       },
       {
         "data": {
           "id": "connected_components",
           "label": "Connected component labeling",
-          "url": "../connected_components"
+          "url": "../connected_components",
+          "tags": [
+            "label mask",
+            "instance segmentation"
+          ]
         }
       },
       {
         "data": {
           "id": "multidimensional_image_basics",
           "label": "N-dimensional images",
-          "url": "../multidimensional_image_basics"
+          "url": "../multidimensional_image_basics",
+          "tags": []
         }
       },
       {
         "data": {
           "id": "sample_preparation",
           "label": "Sample preparation",
-          "url": "../sample_preparation"
+          "url": "../sample_preparation",
+          "tags": [
+            "image formation"
+          ]
         }
       }
     ],
     "edges": [
+      {
+        "data": {
+          "source": "object_filtering",
+          "target": "workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape",
+          "label": "Dependency"
+        }
+      },
       {
         "data": {
           "source": "filter_convolution",
@@ -432,8 +598,8 @@
       },
       {
         "data": {
-          "source": "object_filtering",
-          "target": "workflow_segment_2d_noisy_nuclei_filter_objects_measure_shape",
+          "source": "psf",
+          "target": "sampling",
           "label": "Dependency"
         }
       },
@@ -523,22 +689,8 @@
       },
       {
         "data": {
-          "source": "multidimensional_image_basics",
-          "target": "spherical_aberrations",
-          "label": "Dependency"
-        }
-      },
-      {
-        "data": {
           "source": "psf",
           "target": "spherical_aberrations",
-          "label": "Dependency"
-        }
-      },
-      {
-        "data": {
-          "source": "connected_components",
-          "target": "watershed",
           "label": "Dependency"
         }
       },
@@ -551,14 +703,35 @@
       },
       {
         "data": {
-          "source": "display_settings",
-          "target": "multichannel_images",
+          "source": "connected_components",
+          "target": "watershed",
+          "label": "Dependency"
+        }
+      },
+      {
+        "data": {
+          "source": "sampling",
+          "target": "optimal_sampling",
+          "label": "Dependency"
+        }
+      },
+      {
+        "data": {
+          "source": "resolution",
+          "target": "optimal_sampling",
           "label": "Dependency"
         }
       },
       {
         "data": {
           "source": "datatypes",
+          "target": "multichannel_images",
+          "label": "Dependency"
+        }
+      },
+      {
+        "data": {
+          "source": "display_settings",
           "target": "multichannel_images",
           "label": "Dependency"
         }
@@ -642,14 +815,14 @@
       },
       {
         "data": {
-          "source": "filter_convolution",
+          "source": "illumination_artefact",
           "target": "flatfield_correction",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "illumination_artefact",
+          "source": "filter_convolution",
           "target": "flatfield_correction",
           "label": "Dependency"
         }
@@ -712,14 +885,14 @@
       },
       {
         "data": {
-          "source": "display_settings",
+          "source": "spatial_calibration",
           "target": "image_inspection_and_presentation",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "spatial_calibration",
+          "source": "display_settings",
           "target": "image_inspection_and_presentation",
           "label": "Dependency"
         }
@@ -754,14 +927,14 @@
       },
       {
         "data": {
-          "source": "connected_components",
+          "source": "filter_neighbourhood",
           "target": "filter_morphological",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "filter_neighbourhood",
+          "source": "connected_components",
           "target": "filter_morphological",
           "label": "Dependency"
         }
@@ -803,7 +976,7 @@
       },
       {
         "data": {
-          "source": "median_filter",
+          "source": "filter_statistical",
           "target": "local_background_correction",
           "label": "Dependency"
         }
@@ -817,21 +990,21 @@
       },
       {
         "data": {
-          "source": "filter_statistical",
+          "source": "median_filter",
           "target": "local_background_correction",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "binarization",
+          "source": "filter_neighbourhood",
           "target": "distance_transform",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "filter_neighbourhood",
+          "source": "binarization",
           "target": "distance_transform",
           "label": "Dependency"
         }
@@ -859,14 +1032,14 @@
       },
       {
         "data": {
-          "source": "segmentation",
+          "source": "datatypes",
           "target": "binarization",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "datatypes",
+          "source": "segmentation",
           "target": "binarization",
           "label": "Dependency"
         }
@@ -880,14 +1053,14 @@
       },
       {
         "data": {
-          "source": "spatial_calibration",
+          "source": "datatypes",
           "target": "image_file_formats",
           "label": "Dependency"
         }
       },
       {
         "data": {
-          "source": "datatypes",
+          "source": "spatial_calibration",
           "target": "image_file_formats",
           "label": "Dependency"
         }
