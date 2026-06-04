@@ -27,12 +27,10 @@ assessment: >
 
   ### Fill in the blanks
 
-    1. TODO ___ .
-    1. TODO ___ .
+    1. If the pixel size is larger than half the width of the PSF, the image is \_\_\_\_\_-sampled and fine spatial detail is \_\_\_\_\_.
     
     > ## Solution
-    >   1. TODO
-    >   1. TODO
+    >  1. under; lost
     {: .solution}
 
 learn_next:
