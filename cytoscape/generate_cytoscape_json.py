@@ -112,6 +112,7 @@ def create_cytoscape_json(files_data):
                 'id': node_id,
                 'label': node_title,
                 'url': '../'+filepath,
+                'tags': tags if tags is not None else []
             }
         })
     # 2.  Build adjacency list (dependencies) first just all elemenet
@@ -151,7 +152,6 @@ def create_cytoscape_json(files_data):
         reduced_adj_list = {node: set(neighbors) for node, neighbors in adj_list.items()}
         for node in adj_list:
             for neighbor in list(adj_list[node]):  # Iterate over a copy
-                print(neighbor, adj_list[neighbor])
                 for other_neighbor in adj_list[neighbor]:
                     if other_neighbor in reduced_adj_list[node]:
                         reduced_adj_list[node].remove(other_neighbor)

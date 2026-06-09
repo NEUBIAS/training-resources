@@ -22,7 +22,7 @@ More information:
 - **[Module Video: "Digital image basics: Inspect 2d image with python and napari"](https://www.youtube.com/watch?v=-fN5OxGnfck&list=PLnnMnuibzkscxztDDOZCyXjWfgIqYFobM&index=2)**
 
 
-To get a sense for how this material may be used we compiled a selection of consolidated courses:
+To get a sense for how this material may be used we compiled a selection of consolidated courses. The course duration is estimated when teaching using coding (e.g. python), the teaching when using a GUI (e.g. FiJi) is about 2/3 of the given time. The credit points (1 ECTS = 30h workload) are estimated from the course duration and an equal amount of self-study (additional activities, further reading).
 
 <div class="course-cards">
   <div class="course-card">
@@ -30,9 +30,9 @@ To get a sense for how this material may be used we compiled a selection of cons
     <h4><a href="basic-image-inspection-course">Bioimage Inspection</a></h4>
     <p>Learn to inspect your images and visualize your data.</p>
     <div class="course-meta">
-      <span class="course-modules">7 modules</span>
-      <span class="course-duration">5.25 hours</span>
-      <span class="course-credits">0.175 CP</span>
+      <span class="course-modules">8 modules</span>
+      <span class="course-duration">6 hours</span>
+      <span class="course-credits">0.4 CP</span>
     </div>
   </div>
   
@@ -41,20 +41,20 @@ To get a sense for how this material may be used we compiled a selection of cons
     <h4><a href="basic-image-analysis-course">Bioimage Analysis</a></h4>
     <p>Learn essential concepts of image analysis, such as segmentation, intensity measurements, and filtering.</p>
     <div class="course-meta">
-      <span class="course-modules">12 modules</span>
+      <span class="course-modules">13 modules</span>
       <span class="course-duration">9 hours</span>
-      <span class="course-credits">0.3 CP</span>
+      <span class="course-credits">0.6 CP</span>
     </div>
   </div>
 
   <div class="course-card">
     <div class="course-icon"><i class="fas fa-microscope"></i></div>
-    <h4><a href="advanced-image-analysis-course">Advanced Topics in Bioimage Analysis (DRAFT)</a></h4>
+    <h4><a href="advanced-image-analysis-course">Advanced Topics in Bioimage Analysis</a></h4>
     <p>Further improve your skills in image analysis.</p>
     <div class="course-meta">
-      <span class="course-modules">xxx</span>
-      <span class="course-duration">xxx</span>
-      <span class="course-credits">xxx</span>
+      <span class="course-modules">6 modules</span>
+      <span class="course-duration">4.5 hours</span>
+      <span class="course-credits">0.3 CP</span>
     </div>
   </div>
   
@@ -64,8 +64,8 @@ To get a sense for how this material may be used we compiled a selection of cons
     <p>Learn how to open and handle different image data formats.</p>
     <div class="course-meta">
       <span class="course-modules">5 modules</span>
-      <span class="course-duration">3.75 hours</span>
-      <span class="course-credits">0.125 CP</span>
+      <span class="course-duration">3 hours</span>
+      <span class="course-credits">0.2 CP</span>
     </div>
   </div>
 
@@ -74,9 +74,9 @@ To get a sense for how this material may be used we compiled a selection of cons
     <h4><a href="basic-batch-analysis-course">Bioimage Batch Analysis</a></h4>
     <p>Learn how to automatically process image analysis tasks on multiple images.</p>
     <div class="course-meta">
-      <span class="course-modules">5 modules</span>
+      <span class="course-modules">6 modules</span>
       <span class="course-duration">3.75 hours</span>
-      <span class="course-credits">0.125 CP</span>
+      <span class="course-credits">0.25 CP</span>
     </div>
   </div>
   
@@ -86,8 +86,8 @@ To get a sense for how this material may be used we compiled a selection of cons
     <p>Crash course to learn the essentials of how to devise a basic image analysis workflow and how automatically apply it on multiple images.</p>
     <div class="course-meta">
       <span class="course-modules">2 modules</span>
-      <span class="course-duration">3 hours</span>
-      <span class="course-credits">0.1 CP</span>
+      <span class="course-duration"> 2 hours</span>
+      <span class="course-credits">0.13 CP</span>
     </div>
   </div>
 
@@ -96,9 +96,9 @@ To get a sense for how this material may be used we compiled a selection of cons
     <h4><a href="cloud-based-analysis-course">Cloud Based Bioimage Analysis</a></h4>
     <p>Learn about executing bioimage analysis on remote compute resources.</p>
     <div class="course-meta">
-      <span class="course-modules">2 modules</span>
+      <span class="course-modules">3 modules</span>
       <span class="course-duration">1.5 hours</span>
-      <span class="course-credits">0.05 CP</span>
+      <span class="course-credits">0.1 CP</span>
     </div>
   </div>
   
@@ -109,7 +109,7 @@ To get a sense for how this material may be used we compiled a selection of cons
     <div class="course-meta">
       <span class="course-modules">8 modules</span>
       <span class="course-duration">6 hours</span>
-      <span class="course-credits">0.2 CP</span>
+      <span class="course-credits">0.4 CP</span>
     </div>
   </div>
 
@@ -118,9 +118,9 @@ To get a sense for how this material may be used we compiled a selection of cons
     <h4><a href="image_formation_and_artefacts">Image formation and imaging artefacts</a></h4>
     <p>Learn some essential concepts on what determines quality and resolution of images, how this affects quantifications, and how to  mitigate imaging artefacts.</p>
     <div class="course-meta">
-      <span class="course-modules">xx modules</span>
-      <span class="course-duration">x hours</span>
-      <span class="course-credits">xx CP</span>
+      <span class="course-modules">12 modules</span>
+      <span class="course-duration">9 hours</span>
+      <span class="course-credits">0.6 CP</span>
     </div>
   </div>
 </div>

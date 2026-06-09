@@ -34,10 +34,10 @@ module_order:
 - display_settings
 - distance_transform
 - flatfield_correction
-- image_formation_fluo_mic
 - global_background_correction
 - illumination_artefact
 - image_file_formats
+- image_formation_fluo_mic
 - local_background_correction
 - median_filter
 - filter_morphological
@@ -50,10 +50,13 @@ module_order:
 - ome_tiff
 - ome_zarr
 - optical_sectioning
+- optimal_sampling
 - psf
 - projections
-- segmentation
+- resolution
+- sample_preparation
 - segmentation_inspection
+- segmentation
 - skeletonization
 - smart_microscopy_low_zoom_high_zoom
 - spatial_calibration
