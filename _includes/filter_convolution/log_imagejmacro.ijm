@@ -1,4 +1,4 @@
-open("/Users/tischer/Documents/training-resources/image_data/xy_8bit__spots_local_background_with_noise.tif");
+open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__spots_local_background_with_noise.tif");
 rename("input");
 
 // Compuate Laplacian of the image to enhance spots and edges
