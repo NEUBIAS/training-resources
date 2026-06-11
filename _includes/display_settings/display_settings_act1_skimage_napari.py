@@ -8,8 +8,9 @@ viewer = napari.Viewer()
 
 # %%
 # Read an image and its metadata
-from OpenIJTIFF import open_ij_tiff
-image, *_ = open_ij_tiff("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_high_dynamic_range.tif")
+from bioio import BioImage
+img = BioImage("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_high_dynamic_range.tif")
+image = img.get_image_data()
 
 # %%
 # Add the image
@@ -17,10 +18,10 @@ viewer.add_image(image)
 
 # %%
 # Napari:
-# Activity: Adjust the contrast limits and colormap to see dim and bright objects in the same image
-# Right click on "contrast limits" and adjust to see the brightest objects & dim nuclei
+# Activity: Adjust the contrast limits and colormap to see dim and bright regions in the same image
+# Right click on "contrast limits" and adjust to see the brightest regions & dim nuclei
 #
-# Appreciate the such a multi-color LUT can be useful to see dim and bright objects
+# Appreciate the such a multi-color LUT can be useful to see dim and bright regions
 
 # %%
 # Programatically show the image several times with different LUT settings
