@@ -6,13 +6,14 @@
 import napari
 import numpy as np
 import matplotlib.pyplot as plt
-from OpenIJTIFF import open_ij_tiff
+from bioio import BioImage
 
 viewer = napari.Viewer()
 
 # %%
 # Open an image and view it
-image, *_ = open_ij_tiff('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_intensity_clipping_issue_a.tif')
+image = BioImage('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_intensity_clipping_issue_a.tif')
+image = image.data.squeeze()
 viewer.add_image(image)
 
 # https://forum.image.sc/t/add-hilo-colormap-to-napari/95601
@@ -31,12 +32,13 @@ print("Min:", image.min()) # Are there any clipped pixels?
 print("Max:", image.max()) # Are there any clipped pixels?
 print("Number of 0 pixels:", np.sum(image==0)) # How many clipped pixels are there?
 print("Number of 255 pixels:", np.sum(image==255))
-plt.hist(image.flatten(), bins='auto');
+plt.hist(image.flatten(), bins='auto')
+plt.show()
 
 
-#image, *_ = open_ij_tiff('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__h2b.tif')
-#image, *_ = open_ij_tiff('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit__autophagosomes.tif')
-image, *_ = open_ij_tiff('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit__scanR_datatype_issue.tif')
+#image = BioImage('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit_binary__h2b.tif').data.squeeze()
+#image = BioImage('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit__autophagosomes.tif').data.squeeze()
+image = BioImage('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_16bit__scanR_datatype_issue.tif').data.squeeze()
 
 # View the image
 viewer.add_image(image)
