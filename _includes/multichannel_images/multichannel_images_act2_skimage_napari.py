@@ -9,19 +9,23 @@ from skimage.filters import rank
 from skimage.morphology import disk # Structuring element
 from OpenIJTIFF import open_ij_tiff
 import napari
+from bioio import BioImage
 # %%
 # Instantiate the napari viewer
 viewer = napari.Viewer()
 
 # %%
 # Load the image and check axis names
-image, ax_names, ax_scales, ax_units = open_ij_tiff('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__cell_dna_mts_actin.tif')
-print(f"axis names {ax_names}")
+# image, ax_names, ax_scales, ax_units = open_ij_tiff('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__cell_dna_mts_actin.tif')
+# print(f"axis names {ax_names}")
+img = BioImage("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__cell_dna_mts_actin.tif")
+image = img.get_image_data()
+print(img.dims.order)
 
 # %%
 # Display the image
 viewer.layers.clear()
-ch_axis = 0
+ch_axis = img.dims.order.find("C")
 ch_names = ['DNA', 'MTS', 'ACTIN']
 viewer.layers.clear()
 viewer.add_image(image, channel_axis = ch_axis, name = ch_names, contrast_limits=
@@ -29,6 +33,14 @@ viewer.add_image(image, channel_axis = ch_axis, name = ch_names, contrast_limits
     colormap = ['blue', 'green', 'magenta'], # colormaps for each channel
     blending = ['translucent_no_depth', 'additive', 'additive'] # blending mode
 )
+
+# Add bounding boxes and colorbars for each channel
+viewer.layers['DNA'].bounding_box.visible = True
+viewer.layers['DNA'].colorbar.visible = True
+viewer.layers['MTS'].bounding_box.visible = True
+viewer.layers['MTS'].colorbar.visible = True
+viewer.layers['ACTIN'].bounding_box.visible = True
+viewer.layers['ACTIN'].colorbar.visible = True
 
 viewer.grid.enabled = False # Make sure we are not in grid mode
 
@@ -40,17 +52,16 @@ composite = viewer.export_figure(export_path + 'composite.png', scale_factor = 1
 
 # %%
 # Shape checks
-print(f'original image shape {image.shape} type {image.dtype}') 
-print(f'composite image shape {composite.shape} type {composite.dtype}') 
+print(f'original image shape {image.shape} type {image.dtype}')
+print(f'composite image shape {composite.shape} type {composite.dtype}')
 # Note the change of dimension order and type
-# The image we save is a RGB image 
+# The image we save is a RGB image
 # The XYC, where the channels are Red, Green, Blue and Transparency
 
 
 # %%
-# Advanced 
+# Advanced
 # Create a montage with the 3 channels and the composite
-viewer.layers.clear()
 viewer.layers.clear()
 viewer.add_image(image, channel_axis = ch_axis, name = ch_names, contrast_limits=
     [[105, 450], [100, 500], [100,5000]], # contrast limits for each channel
@@ -66,12 +77,9 @@ viewer.reset_view()
 
 # %%
 # Export the image
-composite_montage = viewer.export_figure(export_path + 'composite_montage.png', scale_factor = 1) 
+composite_montage = viewer.export_figure(export_path + 'composite_montage.png', scale_factor = 1)
 print(composite_montage.shape)
-# Obtained shape is (350,350,4)
-# Expected shape should be ~ (350*4, 350, 4)
-# Note that as for version Napari 0.5.6 the output size as the same XY shape as the original image. 
-# This is a bug and should hopefuly be fixed
+# Obtained shape is (1400,350,4)
 
 
 # %%
@@ -102,7 +110,7 @@ plt.savefig(export_path + 'montage_plt.png', format = 'png', bbox_inches='tight'
 
 
 
-# %% 
+# %%
 # Close the viewer (CI test requires this)
 viewer.close()
 plt.close('all')
