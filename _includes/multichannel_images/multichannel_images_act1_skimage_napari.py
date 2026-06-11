@@ -8,7 +8,7 @@ import numpy as np
 from skimage import filters
 from skimage.filters import rank
 from skimage.morphology import disk # Structuring element
-from OpenIJTIFF import open_ij_tiff
+# from OpenIJTIFF import open_ij_tiff
 from bioio import BioImage
 
 # %%
