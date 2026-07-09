@@ -10,27 +10,28 @@ from bioio import BioImage
 
 # %%
 # Open an image and view it in napari
-image = BioImage('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_12bit__saturated_plant.tif')
-image = image.data.squeeze()
+image_object = BioImage('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_12bit__saturated_plant.tif')
+image_data = image_object.data.squeeze()
 viewer = napari.Viewer()
-viewer.add_image(image)
+viewer.add_image(image_data)
 
 # %%
 # Napari:
 # - Hover with the mouse to look for saturation
+# - Change colormap to "HiLo" to better see saturation
 
 # %% 
 # Check the image's datatype
-print(image.dtype)
-print(np.iinfo(image.dtype)) # Useful as it also prints the value range
+print(image_data.dtype)
+print(np.iinfo(image_data.dtype)) # Useful as it also prints the value range
 
 # %%
 # Check for clipping, i.e. pixels values at the limits of the value range
 # This is important for many reasons, for example: 
 # - Pixel values at the limit of the value range typically cannot be used for intensity quantification 
 # - Important algorithms, e.g. for spot detection, do not work well in regions with intensity clipping
-print("Min:", image.min()) # Are there any clipped pixels?
-print("Max:", image.max()) # Are there any clipped pixels?
+print("Min:", image_data.min()) # Are there any clipped pixels?
+print("Max:", image_data.max()) # Are there any clipped pixels?
 
 # %% 
 # Compute the maximal value of various data types,
@@ -42,7 +43,7 @@ print("16 bit max:", 2**16-1)
 
 # %% 
 # Check how many satured pixels we have in the 12 bit image
-print("Number of 4095 pixels:", np.sum(image==4095))
+print("Number of 4095 pixels:", np.sum(image_data==4095))
 
 # %%
 # To double check that this really is a 12 bit image 
@@ -54,3 +55,4 @@ print("Number of 4095 pixels:", np.sum(image==4095))
 # Close the viewer (CI test requires this)
 viewer.close()
 plt.close('all')
+# %%
