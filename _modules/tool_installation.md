@@ -74,12 +74,16 @@ Package managers are software that can install libraries (packages) on your comp
 ###### Example use with explanations
 
 
-- Use [this](https://github.com/NEUBIAS/training-resources/blob/tool_installation_arif/skimage_napari_env.yaml) environment file to create a conda environment.
-- In terminal window, type:
-  `conda create -f https://github.com/NEUBIAS/training-resources/blob/tool_installation_arif/skimage_napari_env.yaml`
+- Use [skimage_napari_env.yaml](https://github.com/NEUBIAS/training-resources/blob/tool_installation_arif/skimage_napari_env.yaml) environment file to create a conda environment.
+
+- Download this file locally by typing:
+``` python -c "from urllib.request import urlretrieve; urlretrieve('https://raw.githubusercontent.com/NEUBIAS/training-resources/tool_installation_arif/skimage_napari_env.yaml', 'skimage_napari_env.yaml')"
+```
+
+- Create a conda environment from a local file by typing: `conda env create -f skimage_napari_env.yaml`
 
 
-- This file simply `conda` to `create` a new "environment" on your computer with the name (**name**) `skimage-napari-tutorial`
+- The yaml file tells `conda` to `create` a new "environment" on your computer with the name (**name**) `skimage-napari-tutorial`
   - This simply creates a folder on your computer called `skimage-napari-tutorial` into which conda will download stuff
 - **channels:** tells conda from where to download the software, a "channel" is one place that hosts conda packages
   - `nodefaults`: The reason to adding this was that the licensing of the default distribution channel for conda packages changed such that even academic institutions are not allowed anymore to use them
