@@ -80,7 +80,7 @@ Package managers are software that can install libraries (packages) on your comp
 ``` python -c "from urllib.request import urlretrieve; urlretrieve('https://raw.githubusercontent.com/NEUBIAS/training-resources/tool_installation_arif/skimage_napari_env.yaml', 'skimage_napari_env.yaml')"
 ```
 
-- Create a conda environment from a local file by typing: `conda env create -f skimage_napari_env.yaml`
+- Create a conda environment from a local file by typing: `conda create -f skimage_napari_env.yaml`
 
 
 - The yaml file tells `conda` to `create` a new "environment" on your computer with the name (**name**) `skimage-napari-tutorial`
