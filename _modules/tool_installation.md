@@ -74,14 +74,14 @@ Package managers are software that can install libraries (packages) on your comp
 ###### Example use with explanations
 
 
-- Use [this]() environment file to create a conda environment.
+- Use [this](https://github.com/NEUBIAS/training-resources/blob/tool_installation_arif/skimage_napari_env.yaml) environment file to create a conda environment.
 - In terminal window, type:
-  `conda create -f /path/to/this/yaml/file`
+  `conda create -f https://github.com/NEUBIAS/training-resources/blob/tool_installation_arif/skimage_napari_env.yaml`
 
 
-- This file simply `conda` to `create` a new "environment" on your computer with the name (`-n`) `skimage-napari-tutorial`
+- This file simply `conda` to `create` a new "environment" on your computer with the name (**name**) `skimage-napari-tutorial`
   - This simply creates a folder on your computer called `skimage-napari-tutorial` into which conda will download stuff
-- **Channels:** tells conda from where to download the software, a "channel" is one place that hosts conda packages
+- **channels:** tells conda from where to download the software, a "channel" is one place that hosts conda packages
   - `nodefaults`: The reason to adding this was that the licensing of the default distribution channel for conda packages changed such that even academic institutions are not allowed anymore to use them
 - `python=3.12 napari>=0.7.0`: We require specific versions of those packages, the versions of other packages that don't have the `=` will be chosen automatically by conda such that, hopefully, everything is compatible
 
