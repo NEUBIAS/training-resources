@@ -19,7 +19,7 @@ viewer = napari.Viewer()
 # image, ax_names, ax_scales, ax_units = open_ij_tiff('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__cell_dna_mts_actin.tif')
 # print(f"axis names {ax_names}")
 img = BioImage("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__cell_dna_mts_actin.tif")
-image = img.get_image_data()
+img_data = img.get_image_data()
 print(img.dims.order)
 
 # %%
@@ -28,7 +28,7 @@ viewer.layers.clear()
 ch_axis = img.dims.order.find("C")
 ch_names = ['DNA', 'MTS', 'ACTIN']
 viewer.layers.clear()
-viewer.add_image(image, channel_axis = ch_axis, name = ch_names, contrast_limits=
+viewer.add_image(img_data, channel_axis = ch_axis, name = ch_names, contrast_limits=
     [[105, 450], [100, 500], [100,5000]], # contrast limits for each channel
     colormap = ['blue', 'green', 'magenta'], # colormaps for each channel
     blending = ['translucent_no_depth', 'additive', 'additive'] # blending mode
@@ -52,7 +52,7 @@ composite = viewer.export_figure(export_path + 'composite.png', scale_factor = 1
 
 # %%
 # Shape checks
-print(f'original image shape {image.shape} type {image.dtype}')
+print(f'original image shape {img_data.shape} type {img_data.dtype}')
 print(f'composite image shape {composite.shape} type {composite.dtype}')
 # Note the change of dimension order and type
 # The image we save is a RGB image
@@ -63,7 +63,7 @@ print(f'composite image shape {composite.shape} type {composite.dtype}')
 # Advanced
 # Create a montage with the 3 channels and the composite
 viewer.layers.clear()
-viewer.add_image(image, channel_axis = ch_axis, name = ch_names, contrast_limits=
+viewer.add_image(img_data, channel_axis = ch_axis, name = ch_names, contrast_limits=
     [[105, 450], [100, 500], [100,5000]], # contrast limits for each channel
     colormap = ['gray', 'gray', 'gray'], # colormaps for each channel
     blending = ['translucent_no_depth', 'translucent_no_depth', 'translucent_no_depth'] # blending mode
@@ -91,8 +91,8 @@ fig, axes = plt.subplots(1, image.shape[0] + 1 , figsize=(12, 3)) # Adjust figsi
 axes = axes.ravel()  # Flatten the 1x4 array of axes
 
 # Display the grayscale images
-for iC in range(image.shape[0]):
-    axes[iC].imshow(image[iC,:,:], cmap='gray' )
+for iC in range(img_data.shape[0]):
+    axes[iC].imshow(img_data[iC,:,:], cmap='gray' )
     #axes[iC].imshow(image[iC,:,:], cmap='gray', vmin = 100,vmax = 500) # You can also adjust the contrast
     axes[iC].set_title(ch_names[iC])
     axes[iC].axis('off')
