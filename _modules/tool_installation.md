@@ -77,7 +77,9 @@ Package managers are software that can install libraries (packages) on your comp
 - Use [skimage_napari_env.yaml](https://github.com/NEUBIAS/training-resources/blob/tool_installation_arif/skimage_napari_env.yaml) environment file to create a conda environment.
 
 - Download this file locally by typing:
-``` python -c "from urllib.request import urlretrieve; urlretrieve('https://raw.githubusercontent.com/NEUBIAS/training-resources/tool_installation_arif/skimage_napari_env.yaml', 'skimage_napari_env.yaml')"
+
+```
+python -c "from urllib.request import urlretrieve; urlretrieve('https://raw.githubusercontent.com/NEUBIAS/training-resources/tool_installation_arif/skimage_napari_env.yaml', 'skimage_napari_env.yaml')"
 ```
 
 - Create a conda environment from a local file by typing: `conda create -f skimage_napari_env.yaml`
