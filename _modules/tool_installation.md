@@ -85,7 +85,7 @@ python -c "from urllib.request import urlretrieve; urlretrieve('https://raw.gith
 - Create a conda environment from a local file by typing: `conda create -f skimage_napari_env.yaml`
 
 
-- The yaml file tells `conda` to `create` a new "environment" on your computer with the name (**name**) `skimage-napari-tutorial`
+- The yaml file tells `conda` to `create` a new "environment" on your computer with the **name** `skimage-napari-tutorial`
   - This simply creates a folder on your computer called `skimage-napari-tutorial` into which conda will download stuff
 - **channels:** tells conda from where to download the software, a "channel" is one place that hosts conda packages
   - `nodefaults`: The reason to adding this was that the licensing of the default distribution channel for conda packages changed such that even academic institutions are not allowed anymore to use them
