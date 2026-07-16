@@ -12,10 +12,6 @@ from skimage.morphology import disk # Structuring element
 from bioio import BioImage
 
 # %%
-# Instantiate the napari viewer
-viewer = napari.Viewer()
-
-# %%
 # Read the image
 #image, ax_names, ax_scales, ax_units = open_ij_tiff('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__cell_dna_mts_actin.tif')
 img_obj = BioImage("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyc_16bit__cell_dna_mts_actin.tif")
@@ -32,10 +28,10 @@ viewer.add_image(img)
 
 # %%
 # Print the order of image dimensions
-print(img.dims.order)
+print(f'Axes order = {img_obj.dims.order}')
 
 # Print the names of channels
-print(img.channel_names)
+print(f'Channel names = {img_obj.channel_names}')
 # NOTE: The channel names have not been saved in the metadata.
 # Therefore, we will name channels manually
 ch_names = ['DNA', 'MTS', 'ACTIN']
@@ -44,7 +40,7 @@ ch_names = ['DNA', 'MTS', 'ACTIN']
 # %%
 viewer.layers.clear()
 # Find the channel axis index automatically
-ch_axis = img.dims.order.find("C")
+ch_axis = img_obj.dims.order.find("C")
 viewer.add_image(img, channel_axis = ch_axis, name = ch_names)
 
 # Add bounding boxes and colorbars for each channel
