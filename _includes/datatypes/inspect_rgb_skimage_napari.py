@@ -10,21 +10,26 @@ viewer = napari.Viewer()
 
 # %%
 # Open and inspect the image 
-image_object = BioImage('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_rgb__cells.tif')
-image_data = image_object.data.squeeze()
-print(image_data.dtype) # The datatype is uint8 (not rgb)
-print(image_data.shape) # The RGB components are represented as a third dimension
+img_obj = BioImage('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_rgb__cells.tif')
+img = img_obj.data
+print(f"Axes order : {img_obj.dims.order}")
+print(f"Shape      : {img_obj.dims}")
+print(f"Data type  : {img.dtype}")
+print(f"Pixel size : {img_obj.physical_pixel_sizes}")
+img = img.squeeze()
+print(img.dtype) # The datatype is uint8 (not rgb)
+print(img.shape) # The RGB components are represented as a third dimension
 
 # %%
 # View the image
 
 # By default, if the last dimension of an image is of size 3 or 4, 
 # napari will interpret the image as an RGB or RGBA image
-viewer.add_image(image_data) 
+viewer.add_image(img) 
 
 # If you don't want to treat it as RGB 
 # you have to set rgb=False
-viewer.add_image(image_data, rgb=False) 
+viewer.add_image(img, rgb=False) 
 
 # After opening the image, use the napari UI 
 # to change the axes order such that you can see the image

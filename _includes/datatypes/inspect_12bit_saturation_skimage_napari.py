@@ -10,10 +10,15 @@ from bioio import BioImage
 
 # %%
 # Open an image and view it in napari
-img = BioImage('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_12bit__saturated_plant.tif')
-img_data = img.data.squeeze()
+img_obj = BioImage('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_12bit__saturated_plant.tif')
+img = img_obj.data
+print(f"Axes order : {img_obj.dims.order}")
+print(f"Shape      : {img_obj.dims}")
+print(f"Data type  : {img.dtype}")
+print(f"Pixel size : {img_obj.physical_pixel_sizes}")
+img = img.squeeze()
 viewer = napari.Viewer()
-viewer.add_image(img_data)
+viewer.add_image(img)
 
 # %%
 # Napari:
@@ -22,16 +27,16 @@ viewer.add_image(img_data)
 
 # %% 
 # Check the image's datatype
-print(img_data.dtype)
-print(np.iinfo(img_data.dtype)) # Useful as it also prints the value range
+print(img.dtype)
+print(np.iinfo(img.dtype)) # Useful as it also prints the value range
 
 # %%
 # Check for clipping, i.e. pixels values at the limits of the value range
 # This is important for many reasons, for example: 
 # - Pixel values at the limit of the value range typically cannot be used for intensity quantification 
 # - Important algorithms, e.g. for spot detection, do not work well in regions with intensity clipping
-print("Min:", img_data.min()) # Are there any clipped pixels?
-print("Max:", img_data.max()) # Are there any clipped pixels?
+print("Min:", img.min()) # Are there any clipped pixels?
+print("Max:", img.max()) # Are there any clipped pixels?
 
 # %% 
 # Compute the maximal value of various data types,
@@ -43,7 +48,7 @@ print("16 bit max:", 2**16-1)
 
 # %% 
 # Check how many satured pixels we have in the 12 bit image
-print("Number of 4095 pixels:", np.sum(img_data==4095))
+print("Number of 4095 pixels:", np.sum(img==4095))
 
 # %%
 # To double check that this really is a 12 bit image 
