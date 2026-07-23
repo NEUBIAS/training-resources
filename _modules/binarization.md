@@ -10,14 +10,11 @@ objectives:
   - "Describe the relationship between an intensity image and a derived binary image"
   - "Apply threshold to segment an image into foreground and background regions"
 motivation: |
-  One strategy to detect objects or specific regions in images is to first distinguish so-called background pixels,
-  which do not contain objects or interesting regions from foreground pixels, which mark the areas of interest.
-  This process is called **two class semantic segmentation** and is often referred to as **image binarization**.
-  The foreground regions can then be further processed, e.g. to detect objects or perform intensity measurements.
+  Finding objects/regions of interest in an image is one of the most common goals in image analysis. Since an image is an array of pixel values, one can assign certain pixel values to objects/regions of interest.  One strategy to achieve this, is to first distinguish so-called background pixels, which do not contain objects or interesting regions from foreground pixels, which mark the areas of interest, by means of a single **threshold** value. This process is called **two class semantic segmentation** and is often referred to as **image binarization**. The foreground regions can then be further processed, e.g. to detect objects or perform intensity measurements.
 
 concept_map: >
   graph TD
-    I("Image") --> T("Threshold")
+    I("Image") --> T("Threshold (value)")
     T --> BI("Binary image / Binary mask")
     BI --- BG("Background pixels (false, 0)")
     BI --- FG("Foreground pixels (true, 1, 255)")
@@ -69,7 +66,6 @@ Depending on the software the foreground value can be different (e.g. 1 in MATLA
 
 `p_im(x,y) >= t` `->` `p_bin(x,y) = 1`
 
-where, p_im and p_bin are the intensity and binary images respectively.
+where, `p_im` and `p_bin` are the intensity and binary images respectively.
 
-It is also possible to define an interval of threshold values, i.e. a lower and upper threshold value. Pixels with intensity values
-within this interval belong to the foreground and vice versa.
+For binarization, it is also possible to define an interval of threshold values, i.e. a lower and upper threshold value. Pixels with intensity values within this interval belong to the foreground and vice versa.
