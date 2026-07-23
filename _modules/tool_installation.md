@@ -57,7 +57,7 @@ Bioimage analysis software can be run either locally on your own computer or rem
   - Requires network access.
   - Limited ability to modify or install additional software.
   - Screen rendering may be slower due to network latency.
- 
+
 ### Sofware
 
 #### Package managers
@@ -73,15 +73,24 @@ Package managers are software that can install libraries (packages) on your comp
 
 ###### Example use with explanations
 
-`conda create -n skimage-napari-tutorial --override-channels -c conda-forge -c euro-bioimaging -c nodefaults python=3.12 pyqt napari=0.6.0 notebook matplotlib jupytext "scikit-image>=0.20" openijtiff`
 
-- `conda create -n skimage-napari-tutorial`: Asks `conda` to `create` a new "environment" on your computer with the name (`-n`) `skimage-napari-tutorial`
+- Use [skimage_napari_env.yaml](https://github.com/NEUBIAS/training-resources/blob/tool_installation_arif/skimage_napari_env.yaml) environment file to create a conda environment.
+
+- Download this file locally by typing:
+
+```
+python -c "from urllib.request import urlretrieve; urlretrieve('https://raw.githubusercontent.com/NEUBIAS/training-resources/tool_installation_arif/skimage_napari_env.yaml', 'skimage_napari_env.yaml')"
+```
+
+- Create a conda environment from a local file by typing: `conda create -f skimage_napari_env.yaml`
+
+
+- The yaml file tells `conda` to `create` a new "environment" on your computer with the **name** `skimage-napari-tutorial`
   - This simply creates a folder on your computer called `skimage-napari-tutorial` into which conda will download stuff
-- `--override-channels -c conda-forge -c euro-bioimaging -c nodefaults`: Tells conda from where to download the software, a "channel" `-c` is one place that hosts conda packages
-  - ` -c nodefaults`: The reason to adding this was that the licensing of the default distribution channel for conda packages changed such that even academic institutions are not allowed anymore to use them
-- `python=3.12 napari=0.6.0`: We require specific versions of those packages, the versions of other packages that don't have the `=` will be chosen automatically by conda such that, hopefully, everything is compatible 
-- "scikit-image>=0.20": Limits the range of versions to be above or below a certain version
-  - `scikit-image>=0.20` this was done here to make sure that the installation contains a nice new feature of `scikit-image` that was only available from version `0.20` on and, back then, the version that conda would download by default was lower than this
+- **channels:** tells conda from where to download the software, a "channel" is one place that hosts conda packages
+  - `nodefaults`: The reason to adding this was that the licensing of the default distribution channel for conda packages changed such that even academic institutions are not allowed anymore to use them
+- `python=3.12 napari>=0.7.0`: We require specific versions of those packages, the versions of other packages that don't have the `=` will be chosen automatically by conda such that, hopefully, everything is compatible
+
 
 General notes:
 
