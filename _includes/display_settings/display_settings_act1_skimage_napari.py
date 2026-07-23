@@ -24,10 +24,10 @@ viewer.add_image(img)
 
 # %%
 # Napari:
-# Activity: Adjust the contrast limits and colormap to see dim and bright objects in the same image
-# Right click on "contrast limits" and adjust to see the brightest objects & dim nuclei
+# Activity: Adjust the contrast limits and colormap to see dim and bright regions in the same image
+# Right click on "contrast limits" and adjust to see the brightest regions & dim nuclei
 #
-# Appreciate the such a multi-color LUT can be useful to see dim and bright objects
+# Appreciate the such a multi-color LUT can be useful to see dim and bright regions
 
 # %%
 # Programatically show the image several times with different LUT settings
