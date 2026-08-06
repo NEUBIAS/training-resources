@@ -46,8 +46,8 @@ viewer.layers["image_gray_2"].colorbar.visible = True
 
 ## Display dim objects
 viewer.add_image(img, name="image_gray_3", colormap="gray", contrast_limits=[0,50])
-viewer.layers["image_gray_2"].bounding_box.visible = True
-viewer.layers["image_gray_2"].colorbar.visible = True
+viewer.layers["image_gray_3"].bounding_box.visible = True
+viewer.layers["image_gray_3"].colorbar.visible = True
 
 ## Display extreme values using a multi-color LUT
 viewer.add_image(img, name="image_hilo", colormap="HiLo")

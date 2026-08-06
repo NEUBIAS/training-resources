@@ -18,7 +18,8 @@ concept_map: >
   graph TD
     V("Image pixel value") --> L("Colormap")
     L --> |does not change|V
-    L --> |changes|C("Displayed pixel color & brightness")
+    L -->|changes| C("Displayed pixel color & brightness")
+
 
 figure: /figures/lut.png
 figure_legend:
