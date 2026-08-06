@@ -54,7 +54,7 @@ viewer.add_labels(binary_image_two_cells, opacity=0.8)
 # and also add this to the viewer
 binary_image_one_cell = img > 100
 viewer.add_labels(binary_image_one_cell, opacity=0.8)
-viewer.layer['binary_image_two_cells'].new_colormap() # to get a new (different) colormap
+viewer.layers['binary_image_two_cells'].new_colormap() # to get a new (different) colormap
 
 # %%
 # Close the viewer (CI test requires this)
