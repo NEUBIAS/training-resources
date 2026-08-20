@@ -2,7 +2,7 @@
 
 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/neubias/training-resources)
 
-[![DOI](https://zenodo.org)](https://doi.org)
+DOI: [10.5281/zenodo.14710820](https://doi.org/10.5281/zenodo.14710820)
 
 **[Module overview](https://neubias.github.io/training-resources/all-modules)**
 
