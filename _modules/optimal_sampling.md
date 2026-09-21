@@ -1,0 +1,42 @@
+---
+title: Optimal sampling
+layout: module
+tags: ["image formation"]
+prerequisites:
+  - "[Point spread function](../psf)"
+  - "[Image sampling](../sampling)"
+  - "[Resolution](../resolution)"
+objectives:
+  - "Be able to compute the optimal pixel size according to Nyquist given a resolution limit"
+  - "Decide which pixel size is required to visualize a structure of a specific size"
+motivation: |
+  In order to resolve a specific structure we need enough spatial resolution and we need to record sufficient spatial information. The Nyquist-Shannon sampling theorem, often referred to Nyquist sampling, gives a simple mathematical relationship between the resolution 
+  and image sampling (i.e. pixel size). This is a useful guideline to balance acquisition speed, bleaching, and resolving power. 
+concept_map: >
+  graph TD
+    T1("TODO1") --> T2("TODO2")
+    T2 --> T3("TODO3")
+
+figure: /figures/optimal_sampling.png
+figure_legend: TODO
+
+multiactivities:
+  - ["optimal_sampling/act01.md", [["ImageJ GUI", "optimal_sampling/act01_imagejgui.md"], ["skimage napari", "optimal_sampling/act01_skimage_napari.py"]]]
+
+assessment: >
+
+  ### Fill in the blanks
+
+    1. If the pixel size is larger than half the width of the PSF, the image is \_\_\_\_\_-sampled and fine spatial detail is \_\_\_\_\_.
+    
+    > ## Solution
+    >  1. under; lost
+    {: .solution}
+
+learn_next:
+  - "[TODO](../auto_threshold)"
+
+external_links:
+  - "[Wikipedia: Nyquist–Shannon sampling theorem](https://en.wikipedia.org/wiki/Nyquist–Shannon_sampling_theorem)"
+---
+

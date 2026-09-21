@@ -1,4 +1,8 @@
-<h4 id="explore"><a href="#explore">Explore LUTs</a></h4>
+<h4 id="explore"><a href="#explore">Learn about important lookup tables</a></h4>
+
+To visualize an image there are several lookup tables to choose from. 
+Depending on the use-case, one can be more appropriate than another.
+In this activity, we will look at commonly used LUTs and discuss how and when to use them.
 
   - Open the image [xy_8bit__nuclei_high_dynamic_range.tif](https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_high_dynamic_range.tif)
   - Explore different contrast settings

@@ -4,7 +4,7 @@ layout: module
 tags: ["workflow"]
 prerequisites:
   - "[Digital image basics](../pixels)"
-  - "[Lookup tables](../lut)"
+  - "[Display settings](../display_settings)"
   - "[Spatial calibration](../spatial_calibration)"
 objectives:
   - "Quantitatively inspect and present fluorescent microscopy images."

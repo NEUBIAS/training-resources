@@ -36,7 +36,7 @@ multiactivities:
     ]
   - ["filter_statistical/filter_variance.md", 
     [
-    ["ImageJ GUI", "filter_statistical/filter_variance_imagejgui.md"], ["ImageJ Macro", "filter_statistical/filter_variance_imagejmacro.md"], ["skimage napari", "filter_statistical/filter_variance_skimage_napari.py"]]
+    ["ImageJ GUI", "filter_statistical/filter_variance_imagejgui.md"], ["ImageJ Macro", "filter_statistical/filter_variance_imagejmacro.ijm"], ["skimage napari", "filter_statistical/filter_variance_skimage_napari.py"]]
     ]
   
 assessment: >

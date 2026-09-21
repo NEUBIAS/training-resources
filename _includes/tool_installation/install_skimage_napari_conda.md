@@ -1,36 +1,37 @@
 ### Installation
 
 #### Install a conda package manager
+We recommend the usage of [miniforge](https://conda-forge.org/download/) for licensing reasons. GUI based packege manage (like Anaconda) may not allow to install specific version as required here.
+ 1. **OSX and linux**:  Start the termina. If in the terminal you do not see `(base)` left of the shell prompt you need to activate conda. Assuming you installed on your home directory under `miniforge3`
 
-If you already have a conda package manager you can skip this step.
-
-
-**Important**: If you cannot open the [miniconda](https://www.anaconda.com/docs/getting-started/miniconda/main) website, please install [miniforge](https://github.com/conda-forge/miniforge) following the instructions; if you however can access miniconda please follow the below instructions.
-
-
-1. Install [miniconda](https://www.anaconda.com/docs/getting-started/miniconda/main) see also [here](https://www.anaconda.com/docs/getting-started/miniconda/install). It is best to install as local user.
-	* Windows: the graphical installer works well. You can get it from the [repo](https://repo.anaconda.com/miniconda/) directly
-	* OSX: install using the `MacOS terminal installer`. This is the version that allows a local install. Install in the suggested path `~/miniconda3`
-1. Open a (new) terminal window
-	* Windows: *Anaconda Prompt (Miniconda3)*, e.g. type `Anaconda` in the search bar
-	* OSX: Open a `terminal` window. If conda is active you see `(base)` left of the shell prompt. If you do not see `(base)` you may have to manually activate the environment as described [here](https://www.anaconda.com/docs/getting-started/miniconda/install#quickstart-install-instructions) by typing
 	```
-	 source ~/miniconda3/bin/activate
+	source ~/miniforge3/bin/activate
 	```
 
-#### Install the course environment 
+ 2. **Windows**: Search `Miniforge3` in the command prompt and start the standard command tool (not the powershell, as this often does not works properly).
 
-Within a terminal window execute
-  
+#### Install the course environment
+
+Within a terminal window execute:
+
 ```
-conda create -n skimage-napari-tutorial --override-channels -c conda-forge -c euro-bioimaging -c nodefaults python=3.12 napari=0.6.0 pyqt notebook matplotlib jupytext scikit-image openijtiff -y
+python -c "from urllib.request import urlretrieve; urlretrieve('https://raw.githubusercontent.com/NEUBIAS/training-resources/tool_installation_arif/skimage_napari_env.yaml', 'skimage_napari_env.yaml')"
+
+```
+
+This will locally download the environment file that would be used to create a conda environment.
+
+
+Now copy and paste the following in the terminal window:
+```
+conda create -f skimage_napari_env.yaml
 ```
 
 This will create an environment named `skimage-napari-tutorial` with the necessary packages for the course.
 
 ### Use the course environment
 
-#### Activate the environment and open a notebook 
+#### Activate the environment and open a notebook
 
 1. Create a directory called `skimage-napari-tutorial` (e.g. on your Desktop)
 1. Open a terminal window (see above)
@@ -70,11 +71,12 @@ image = imread(fpath)
 viewer.add_image(image)
 
 # %%
-# Read via OpenIJTIFF (OpenIJTiff.py must be in the same folder as the notebook path)
-from OpenIJTIFF import open_ij_tiff
-image_opentiff, axes, scales, units = open_ij_tiff(fpath)
+# Read via bioio library
+from bioio import BioImage
+img = BioImage(fpath)
+img_data = img.get_image_data()
 # View the intensity image
-viewer.add_image(image_opentiff)
+viewer.add_image(img_data)
 ```
 
 ### Run code in the environment
@@ -86,11 +88,12 @@ To run code either:
 	Copy the activity code to this file and save the file. From the `jupyter` main landing page right-click on the file and choose _Open with -> Notebook_.
  *  Create a new notebook `New > Python 3` and copy the code in the activity into the notebook.
 
-### Troubleshooting
+<!--
+### Troubleshooting (deprecated)
 
 #### Ubuntu: Napari fails to show 3D viewer
 
-We've encountered an OpenGL error for the napari 3D viewer on a Ubuntu machine when using the conda environment installed as described above. 
+We've encountered an OpenGL error for the napari 3D viewer on a Ubuntu machine when using the conda environment installed as described above.
 
 This installation procedure got it to work (Note: not yet tested for all modules):
 
@@ -101,4 +104,4 @@ pip install napari[all]
 pip install notebook
 pip install jupytext
 conda install --override-channels -c conda-forge -c euro-bioimaging -c nodefaults openijtiff
-```
+``` -->

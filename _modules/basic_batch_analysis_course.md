@@ -1,5 +1,5 @@
 ---
-title: Basic batch analysis course overview
+title: Batch analysis course overview
 layout: module
 tags: ["course"]
 prerequisites:

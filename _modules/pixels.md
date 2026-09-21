@@ -43,7 +43,7 @@ assessment: |
   {: .solution} 
 
 learn_next:
-   - "[Lookup tables](../lut)"
+   - "[Display settings](../display_settings)"
    - "[Spatial calibration](../spatial_calibration)"
    - "[N-dimensional images](../multidimensional_image_basics)"
    - "[Data types](../datatypes)"

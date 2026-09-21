@@ -8,7 +8,20 @@ open an issue: https://github.com/carpentries/styles/issues/new
 
 <style>
   h2 {text-align: center;}
+  #module-search {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    display: block;
+  }
 </style>
+
+<input type="text" id="module-search" placeholder="Search modules...">
+
 <h3> </h3>
 
 
@@ -28,7 +41,7 @@ open an issue: https://github.com/carpentries/styles/issues/new
 
 
 <div class="container-fluid">
-<div class="row">
+<div class="row" id="modules-container">
 
 {% for e in episodes %}
 
@@ -48,7 +61,9 @@ open an issue: https://github.com/carpentries/styles/issues/new
   {% assign title_prefix = "Scripting: " %}
 {% endif %}
 
-<div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-1">
+<div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-1 module-card" 
+     data-title="{{ title_prefix}}{{ e.title | downcase }}"
+     data-tags="{{ tags | join: ' ' | downcase }}">
   <div class="panel panel-default">
     <div class="panel-heading">
       <a href="{{ e.url | relative_url }}">
@@ -65,3 +80,26 @@ open an issue: https://github.com/carpentries/styles/issues/new
 {% endfor %}
 </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const searchInput = document.getElementById('module-search');
+  const moduleCards = document.querySelectorAll('.module-card');
+
+  searchInput.addEventListener('input', function(e) {
+    const searchTerm = e.target.value.toLowerCase();
+
+    moduleCards.forEach(card => {
+      const title = card.getAttribute('data-title');
+      const tags = card.getAttribute('data-tags');
+
+      if (title.includes(searchTerm)
+          || (tags && tags.includes(searchTerm))) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+});
+</script>

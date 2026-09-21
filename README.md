@@ -2,7 +2,7 @@
 
 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/neubias/training-resources)
 
-[![DOI](https://zenodo.org/badge/258132380.svg)](https://doi.org/10.5281/zenodo.14264508)
+DOI: [10.5281/zenodo.14710820](https://doi.org/10.5281/zenodo.14710820)
 
 **[Module overview](https://neubias.github.io/training-resources/all-modules)**
 
@@ -14,6 +14,7 @@ that can be useful when planning/delivering training in image analysis.
 
 ## About 
 
+- [Publication preprint](https://zenodo.org/records/17669862)
 - [Google slides presentation](https://docs.google.com/presentation/d/1x5euj3p4hoAdOONQbzFA5xf3rnsNeTjC1rpadCbwbQk/edit?usp=sharing)
 - [Recorded webinar](https://www.youtube.com/watch?v=xtm7DAiXtr0)
 

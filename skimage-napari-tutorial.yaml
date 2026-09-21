@@ -1,0 +1,25 @@
+name: skimage-napari-tutorial
+channels:
+  - conda-forge
+  - nodefaults
+  - euro-bioimaging
+
+dependencies:
+- python>=3.11
+- napari>=0.7.0
+- pyside6
+- notebook
+- jupytext
+- matplotlib
+- scikit-image
+- openijtiff
+- bioio
+- bioio-tifffile
+- pip
+
+- pip:
+  # Additional bioio reader plugins
+  - bioio-ome-zarr
+  - bioio-imageio
+  - bioio-nd2
+  - bioio-lif

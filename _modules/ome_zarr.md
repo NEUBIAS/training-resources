@@ -15,8 +15,9 @@ motivation: |
 
 concept_map: >
   graph TD
-    OME("OME-Zarr image data") ---|is| WWW("Web compatible")
-    OME ---|is| CR("Chunked multi-resolution")
+    OME("OME-Zarr image data") --- WWW("HTTP compatible")
+    OME --- CR("Chunked and multi-resolution")
+    OME --- CS("Community standard)
 
 figure: /figures/ome-zarr.png
 figure_legend: 
@@ -58,6 +59,7 @@ learn_next:
 
 external_links:
   - "[OME-NGFF, Nature Methods, 2021](https://www.nature.com/articles/s41592-021-01326-w)"
+  - "[OME-Zarr, Histochem. Cell Biol., 2023](https://pmc.ncbi.nlm.nih.gov/articles/PMC10492740/)"
 
 ---
 
