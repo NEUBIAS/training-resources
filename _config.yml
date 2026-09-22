@@ -59,6 +59,7 @@ module_order:
 - segmentation
 - skeletonization
 - smart_microscopy_low_zoom_high_zoom
+- smart_microscopy_acquisition_parameters
 - spatial_calibration
 - spherical_aberrations
 - filter_statistical
