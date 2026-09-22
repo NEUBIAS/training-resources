@@ -25,10 +25,10 @@ concept_map: >
     M --> L
 
 figure: /figures/smart_microscopy_low_zoom_high_zoom.png
-figure_legend: TODO
+figure_legend: HeLa cells stably expressing GFP–tubulin and labelled with Hoechst 33342 to visualize nuclei. Multiple cells in metaphase were identified and imaged at high resolution. Courtesy of Tobias Kletter (*Kletter et al.*, 2025, *Nature Cell Biology*).
 
 multiactivities:
-  - ["smart_microscopy_low_zoom_high_zoom/act01.md", [["Automic Tools with Zen Blue", "smart_microscopy_low_zoom_high_zoom/act01_automictools.md"], ["Zen Blue Guided Acquisition", "smart_microscopy_low_zoom_high_zoom/act01_zen_blue_guided.md"]]]
+  - ["smart_microscopy_low_zoom_high_zoom/act01.md", [["Automic Tools with Zeiss ZEN", "smart_microscopy_low_zoom_high_zoom/act01_automictools.md"], ["Zeiss ZEN Guided Acquisition", "smart_microscopy_low_zoom_high_zoom/act01_zen_blue_guided.md"], ["Nikon JOBS", "smart_microscopy_low_zoom_high_zoom/act01_nikon_jobs.md"]]]
 
 assessment: >
 
