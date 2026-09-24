@@ -124,6 +124,8 @@ The first half of the day is organized as an onboarding and refresh session to b
     - tbd
 1. [Data inspection and visualisation](https://heibox.uni-heidelberg.de/f/a87f2d394cf442be8a7d/?dl=1)
     - tbd
+1. [Outlook: Topics for advanced image analysis in Python]
+    - Victor
 1. [Practical exercise - Workflow: Batch processing](https://neubias.github.io/training-resources/batch_processing/index.html)
     - Introduce LLM for image analysis
     - Understand how LLMs help with coding problems and where they have pitfalls 
