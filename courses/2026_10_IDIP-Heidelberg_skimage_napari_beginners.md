@@ -65,7 +65,7 @@ The first half of the day is organized as an onboarding and refresh session to b
     - Severina
 1. [Image data types](https://neubias.github.io/training-resources/datatypes/index.html) 
     - Severina
-1. [Lookup tables](https://neubias.github.io/training-resources/lut/index.html)
+1. [Display settings](https://neubias.github.io/training-resources/display_settings/index.html)
     - Severina
 
 ### Image inspection and analysis basics (day 2) 6. October
