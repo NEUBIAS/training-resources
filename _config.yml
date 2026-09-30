@@ -98,6 +98,7 @@ module_order:
 - script_env
 - cofilin_rod_formation
 - workflow_golgi_per_cell
+- smart_microscopy_photomanipulation
 # Sites
 repository: <USERNAME>/<PROJECT>
 cc_by_human: "https://creativecommons.org/licenses/by/4.0/"
