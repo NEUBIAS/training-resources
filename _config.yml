@@ -85,6 +85,7 @@ module_order:
 - image_inspection_and_presentation
 - containers
 - deep_learning_run_segmentation
+- virtual_teaching_microscope
 - image_registration
 - sampling
 - manual_segmentation
