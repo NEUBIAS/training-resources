@@ -77,9 +77,9 @@ The first half of the day is organized as an onboarding and refresh session to b
 1. [N-dimensional images](https://neubias.github.io/training-resources/multidimensional_image_basics/)
     - Julian
 1. [Image projections](https://neubias.github.io/training-resources/projections/index.html)
-    - Julian
+    - Arif
 1. [Image neighborhood filtering](https://neubias.github.io/training-resources/filter_neighbourhood/index.html)
-    - Severina
+    - Arif
 1. [Statistical (rank) filtering](https://neubias.github.io/training-resources/filter_statistical/index.html)
     - Severina
 1. [Local background subtraction](https://neubias.github.io/training-resources/local_background_correction/index.html)
