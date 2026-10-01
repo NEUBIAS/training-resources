@@ -85,6 +85,7 @@ module_order:
 - image_inspection_and_presentation
 - containers
 - deep_learning_run_segmentation
+- virtual_teaching_microscope
 - image_registration
 - sampling
 - manual_segmentation
@@ -97,6 +98,7 @@ module_order:
 - script_env
 - cofilin_rod_formation
 - workflow_golgi_per_cell
+- smart_microscopy_photomanipulation
 # Sites
 repository: <USERNAME>/<PROJECT>
 cc_by_human: "https://creativecommons.org/licenses/by/4.0/"
