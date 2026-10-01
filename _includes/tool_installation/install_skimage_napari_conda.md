@@ -1,32 +1,37 @@
 ### Installation
 
 #### Install a conda package manager
+We recommend the usage of [miniforge](https://conda-forge.org/download/) for licensing reasons. GUI based packege manage (like Anaconda) may not allow to install specific version as required here.
+ 1. **OSX and linux**:  Start the termina. If in the terminal you do not see `(base)` left of the shell prompt you need to activate conda. Assuming you installed on your home directory under `miniforge3`
 
-If you already have a conda package manager you can skip this step.
+	```
+	source ~/miniforge3/bin/activate
+	```
 
-Due to updates in the licensing conditions affecting Anaconda and Miniconda installations, we recommend the usage of miniforge instead. For installation follow the respective instructions for your operating system [here](https://conda-forge.org/download/).
+ 2. **Windows**: Search `Miniforge3` in the command prompt and start the standard command tool (not the powershell, as this often does not works properly).
 
-OSX and linux: Note that for the following installation instructions the base environment needs to be activated. This is the case if you see `(base)` left of the shell prompt. If you do not see this you may use 
+#### Install the course environment
+
+Within a terminal window execute:
 
 ```
-source ~/miniforge3/bin/activate
+python -c "from urllib.request import urlretrieve; urlretrieve('https://raw.githubusercontent.com/NEUBIAS/training-resources/tool_installation_arif/skimage_napari_env.yaml', 'skimage_napari_env.yaml')"
+
 ```
 
-to activate it.
+This will locally download the environment file that would be used to create a conda environment.
 
-#### Install the course environment 
 
-Within a terminal window execute
-  
+Now copy and paste the following in the terminal window:
 ```
-conda create -n skimage-napari-tutorial --override-channels -c conda-forge -c euro-bioimaging -c nodefaults python=3.12 napari=0.6.0 pyqt notebook matplotlib jupytext scikit-image openijtiff -y
+conda create -f skimage_napari_env.yaml
 ```
 
 This will create an environment named `skimage-napari-tutorial` with the necessary packages for the course.
 
 ### Use the course environment
 
-#### Activate the environment and open a notebook 
+#### Activate the environment and open a notebook
 
 1. Create a directory called `skimage-napari-tutorial` (e.g. on your Desktop)
 1. Open a terminal window (see above)
@@ -66,11 +71,12 @@ image = imread(fpath)
 viewer.add_image(image)
 
 # %%
-# Read via OpenIJTIFF (OpenIJTiff.py must be in the same folder as the notebook path)
-from OpenIJTIFF import open_ij_tiff
-image_opentiff, axes, scales, units = open_ij_tiff(fpath)
+# Read via bioio library
+from bioio import BioImage
+img = BioImage(fpath)
+img_data = img.get_image_data()
 # View the intensity image
-viewer.add_image(image_opentiff)
+viewer.add_image(img_data)
 ```
 
 ### Run code in the environment
@@ -82,11 +88,12 @@ To run code either:
 	Copy the activity code to this file and save the file. From the `jupyter` main landing page right-click on the file and choose _Open with -> Notebook_.
  *  Create a new notebook `New > Python 3` and copy the code in the activity into the notebook.
 
-### Troubleshooting
+<!--
+### Troubleshooting (deprecated)
 
 #### Ubuntu: Napari fails to show 3D viewer
 
-We've encountered an OpenGL error for the napari 3D viewer on a Ubuntu machine when using the conda environment installed as described above. 
+We've encountered an OpenGL error for the napari 3D viewer on a Ubuntu machine when using the conda environment installed as described above.
 
 This installation procedure got it to work (Note: not yet tested for all modules):
 
@@ -97,4 +104,4 @@ pip install napari[all]
 pip install notebook
 pip install jupytext
 conda install --override-channels -c conda-forge -c euro-bioimaging -c nodefaults openijtiff
-```
+``` -->

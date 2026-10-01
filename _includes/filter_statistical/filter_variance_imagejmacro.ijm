@@ -1,7 +1,7 @@
 // File > Close All
 run("Close All");
-// File > Open...
-open("C:/Users/akhan/training-resources/image_data/xy_8bit__em_mitochondria_er.tif");
+// File > Open
+open("https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__em_mitochondria_er.tif");
 
 // Image › Duplicate...
 run("Duplicate...", "title=variance_5");
@@ -12,14 +12,22 @@ run("16-bit");
 // Process › Filters › Variance...
 run("Variance...", "radius=5");
 
+// Image › Duplicate…
+run("Duplicate...", "title=binary");
+
 // Image › Adjust › Threshold...   ([x] Dark Background)
 setAutoThreshold("Default dark");
 
 //Press `Set` button (example upper and lower threshold values are (113, 255))
-setThreshold(113, 255);
+setThreshold(90, 1e30);
 
 // Press `Apply` button
 run("Convert to Mask");
 
 // Image › Lookup Tables › InvertLUT... (if highest values are darker and lowest brighter)
 run("Invert LUT");
+
+
+// Window > Tile
+run("Tile");
+

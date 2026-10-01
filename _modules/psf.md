@@ -4,6 +4,7 @@ layout: module
 tags: ["microscopy", "image formation", "psf"]
 prerequisites:
   - "[Digital image basics](../pixels)"
+
 objectives:
   - Identify PSF-induced artifacts in microscopy images, specifically axial elongation (Z-distortion) and lateral blurring.
   - Predict the impact of the PSF on quantitative measurements, including how it inflates object size and dilutes signal intensity.
@@ -26,7 +27,6 @@ figure_legend: "Image formation in a confocal microscope: central longitudinal (
 
 multiactivities:
   - ["psf/fluorescent_beads.md", [["ImageJ GUI", "psf/fluorescent_beads_imagejgui.md"]]]
-  - ["psf/image_formation_wf_vs_confocal.md", [["ImageJ GUI", "psf/image_formation_wf_vs_confocal_imagej_gui.md"]]]
   
 
 assessment: >
@@ -42,9 +42,12 @@ assessment: >
     {: .solution}
 
 learn_next:
-  - "[TODO](../auto_threshold)"
+  - "[Imaging thick biological samples](../image_formation_fluo_mic)"
+  - "[Optical sectioning](../optical_sectioning)"
 
 external_links:
   - "[Wikipedia: Point spread function](https://en.wikipedia.org/wiki/Point_spread_function)"
+  - "[iBiology Video: Huygens Wavelets Constructive/Destructive Interference, and Diffraction](https://www.ibiology.org/talks/diffraction/)"
+  - "[iBiology Video: Point spread function](https://www.ibiology.org/talks/point-spread-function/)"
 ---
 

@@ -11,5 +11,6 @@
 - Understand that projections along the x or y axis typically yield anisotropic images (due to an initial xy/z anisotropy)
 - Resample or rescale the x and y projections for correct appearance in physical space
 
-![](/figures/projections_activity.png)
+<img src="https://github.com/NEUBIAS/training-resources/raw/master/figures/projections_activity.png"  align ="center" width="40%" >
+
 

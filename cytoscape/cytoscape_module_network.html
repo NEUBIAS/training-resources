@@ -108,6 +108,26 @@
                         }
                     },
                     {
+                        selector: 'node',
+                        style: {
+                            'shape': function(node) {
+                                const tags = node.data('tags');
+                                if (tags && tags.includes('workflow')) {
+                                    return 'round-rectangle'; // Change to 'ellipse', 'hexagon', etc.
+                                }
+                                return 'rectangle'; // Fallback to default shape
+                            },
+                            // Optional: Adjust the crispness of the rounded corners
+                            'corner-radius': function(node) {
+                                const tags = node.data('tags');
+                                if (tags && tags.includes('workflow')) {
+                                    return 50; // Higher number = more rounded. Default is 8.
+                                }
+                                return 0;
+                            }
+                        }
+                    },
+                    {
                         selector: 'edge',
                         style: {
                             'width': 5,

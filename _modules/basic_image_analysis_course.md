@@ -10,7 +10,7 @@ prerequisites:
 objectives:
   - Automatically extract biophysically meaningful numbers from microscopy images of biological samples.
 motivation: |
-  - Automated image analysis is more objective, reproducible and scalable than manual analysis.
+  Automated image analysis is more objective, reproducible and scalable than manual analysis. Learn essential concepts of image analysis, such as segmentation, intensity measurements, and filtering.
 
 concept_map: >
   graph TD

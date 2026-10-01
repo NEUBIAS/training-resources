@@ -7,7 +7,7 @@ prerequisites:
   - "[Convolutional filters](../filter_convolution)"
 objectives:
   - Formulate the mathematical relationship between the raw image and the corrected image
-  - Evaluate methods to obtain a flat-field reference (calibration slide or retroscpective computation)
+  - Evaluate methods to obtain a flat-field reference (calibration slide or retrospective computation)
   - Perform a flat-field correction and evaluate the results
 motivation: |
   In quantitative fluorescence microscopy, we assume that the pixel intensity is proportional to the concentration of the fluorophore. However, uneven illumination (vignetting) and optical obstructions (dust) violate this assumption. Without correction we may have (1) *Intensity bias*, where cells may appear brighter in the middle than on the edge, (2) *Segmentation errors* segmentation algorithms may fail in certain part of an image. Therefore it is important to learn methods on how to mitigate illumination artefatcs. 

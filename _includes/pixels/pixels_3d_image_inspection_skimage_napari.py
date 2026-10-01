@@ -3,27 +3,28 @@
 
 # %%
 # Load an image
-from OpenIJTIFF import open_ij_tiff
+from bioio import BioImage
 image_url = "https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit__mri_head.tif"
-image, axes, *_ = open_ij_tiff(image_url)
+img_obj = BioImage(image_url)
+img = img_obj.data.squeeze()
 
 # %%
 # Inspect the image shape
-print(image.shape)
+print(img.shape)
 
 # %%
 # Inspect the image axes
-print(axes)
+print(img_obj.dims)
 
 # %%
 # Inspect all image pixel values, and appreciate that this is not useful for larger 3D data
-print(image)
+print(img)
 
 # %%
 # Create a napari viewer and add the image
 from napari.viewer import Viewer
 viewer = Viewer()
-viewer.add_image(image)
+viewer.add_image(img)
 
 # %%
 # Napari: 
@@ -32,16 +33,17 @@ viewer.add_image(image)
 
 # %%
 # Extract the pixels that belong to the tip of the nose
-print(image[1, 9:19, 89:102])
+print(img[1, 9:19, 89:102])
 
 # %%
 # Compute the image min and max
-print(image.min(), image.max())
+print(img.min(), img.max())
 
 # %%
 # Compute the image histogram
 import matplotlib.pyplot as plt
-plt.hist(image.flatten(), bins='auto');
+plt.hist(img.flatten(), bins='auto')
+plt.show()
 
 # %% 
 # Close the viewer (CI test requires this)

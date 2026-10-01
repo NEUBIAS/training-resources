@@ -112,6 +112,7 @@ def create_cytoscape_json(files_data):
                 'id': node_id,
                 'label': node_title,
                 'url': '../'+filepath,
+                'tags': tags if tags is not None else []
             }
         })
     # 2.  Build adjacency list (dependencies) first just all elemenet

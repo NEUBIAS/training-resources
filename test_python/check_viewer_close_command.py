@@ -60,12 +60,15 @@ def find_plt_close(directory):
                         #    print(f"Found 'napari' and 'viewer.close()' in: {file_path}")
                         if "matplotlib" in content and not "plt.close('all')" in content:
                             print(f"Found 'matplotlib' but no 'plt.close('all')' in: {file_path}")
+                        if "plt.show()" in content:
+                            print(f"Found 'plt.show()' in: {file_path}")
                 except Exception as e:
                     print(f"Error reading file {file_path}: {e}")
 
 if __name__ == "__main__":
     # Replace this with the directory you want to search
-    search_directory = "../_includes"  # Current directory
+    search_directory = "../_includes/"  # Current directory
+    print(search_directory)
     count_napari_calls_per_file(search_directory)
     find_plt_close(search_directory)
 
