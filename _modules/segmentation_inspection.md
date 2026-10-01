@@ -13,8 +13,7 @@ objectives:
 motivation: |
   Segmentation quality should be inspected both visually and quantitatively.
   In this module we compare segmentation outputs against a reference segmentation
-  using a minimal and practical set of checks that are easy to apply in teaching
-  and in daily analysis workflows.
+  using a minimal and practical set of checks that are easy to apply in daily analysis workflows.
 
 concept_map: >
   graph TD
