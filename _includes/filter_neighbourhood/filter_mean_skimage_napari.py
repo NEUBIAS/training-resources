@@ -4,8 +4,8 @@
 # %%
 # Instantiate the napari viewer
 import napari
-from OpenIJTIFF import open_ij_tiff
-viewer = napari.Viewer()
+from bioio import BioImage
+
 
 ##
 
