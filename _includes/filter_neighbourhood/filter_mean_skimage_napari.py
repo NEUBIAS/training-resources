@@ -1,5 +1,5 @@
-# %% 
-# Apply mean filters to an image to aid foreground background segmentation 
+# %%
+# Apply mean filters to an image to aid foreground background segmentation
 
 # %%
 # Instantiate the napari viewer
@@ -7,15 +7,27 @@ import napari
 from OpenIJTIFF import open_ij_tiff
 viewer = napari.Viewer()
 
-# %%
-# Read the intensity image
-image, *_ = open_ij_tiff('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_very_noisy.tif')
+##
+
 
 # %%
-# View the image 
+# Read an image and its metadata
+# from OpenIJTIFF import open_ij_tiff
+# image, *_ = open_ij_tiff('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_very_noisy.tif')
+
+img_obj = BioImage('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_very_noisy.tif')
+img = img_obj.data    # or img_data = img_obj.data
+
+print(f'Axes order = {img_obj.dims.order}')
+
+# %%
+# Instantiate the napari viewer and view the image
 # - Appreciate that it is quite noisy
 # - Inspect the pixel values to find a threshold that separates the nuclei from the background
-viewer.add_image(image)
+viewer = napari.Viewer()
+viewer.add_image(img)
+viewer.layers["img"].bounding_box.visible = True
+viewer.layers["img"].colorbar.visible = True
 
 # %%
 # Binarise the image
@@ -23,7 +35,7 @@ viewer.add_image(image)
 binary_image = image > 40
 viewer.add_image(binary_image)
 
-# %% 
+# %%
 # Prepare filtering the image by defining a circular structural element with a radius of 1 pixel
 from skimage.morphology import disk
 disk_radius_1 = disk(1)
@@ -45,7 +57,7 @@ viewer.add_image(mean_image_1)
 binary_image_1 = mean_image_1 > 35
 viewer.add_image(binary_image_1)
 
-# %% 
+# %%
 # Apply mean filter with a disk of radius 3
 mean_image_3 = mean(image, disk(3))
 viewer.add_image(mean_image_3)
@@ -55,6 +67,6 @@ viewer.add_image(mean_image_3)
 binary_image_3 = mean_image_3 > 32
 viewer.add_image(binary_image_3)
 
-# %% 
+# %%
 # Close the viewer (CI test requires this)
 viewer.close()
