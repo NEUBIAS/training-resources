@@ -25,9 +25,7 @@ print(f"Pixel size : {img_obj.physical_pixel_sizes}")
 img = img.squeeze()
 scales = list(img_obj.physical_pixel_sizes)
 print(scales)
-match = re.search(r'unit=(.+)', img_obj.metadata)
-unit = match.group(1).encode().decode('unicode_escape')
-print(unit)
+
 
 # %%
 # Instantiate the napari viewer and view the image
