@@ -2,7 +2,6 @@
 # Apply mean filters to an image to aid foreground background segmentation
 
 # %%
-# Instantiate the napari viewer
 import napari
 from bioio import BioImage
 
@@ -21,11 +20,7 @@ img = img_obj.data    # or img_data = img_obj.data
 print(f"Axes order : {img_obj.dims.order}")
 print(f"Shape      : {img_obj.dims}")
 print(f"Data type  : {img.dtype}")
-print(f"Pixel size : {img_obj.physical_pixel_sizes}")
 img = img.squeeze()
-scales = list(img_obj.physical_pixel_sizes)
-print(scales)
-
 
 # %%
 # Instantiate the napari viewer and view the image
