@@ -32,7 +32,7 @@ viewer.layers["img"].colorbar.visible = True
 # %%
 # Binarise the image
 # - Appreciate that one cannot segment the nuclei by a simple intensity threshold
-binary_image = image > 40
+binary_image = img > 40
 viewer.add_image(binary_image)
 
 # %%
@@ -44,7 +44,7 @@ print(disk_radius_1)
 # %%
 # Apply a mean filter to the image with the above structural element
 from skimage.filters.rank import mean
-mean_image_1 = mean(image, disk_radius_1)
+mean_image_1 = mean(img, disk_radius_1)
 
 # Add the filtered image to napari
 # Napari:
@@ -59,7 +59,7 @@ viewer.add_image(binary_image_1)
 
 # %%
 # Apply mean filter with a disk of radius 3
-mean_image_3 = mean(image, disk(3))
+mean_image_3 = mean(img, disk(3))
 viewer.add_image(mean_image_3)
 
 # %%
