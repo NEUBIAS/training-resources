@@ -18,7 +18,16 @@ from bioio import BioImage
 img_obj = BioImage('https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nuclei_very_noisy.tif')
 img = img_obj.data    # or img_data = img_obj.data
 
-print(f'Axes order = {img_obj.dims.order}')
+print(f"Axes order : {img_obj.dims.order}")
+print(f"Shape      : {img_obj.dims}")
+print(f"Data type  : {img.dtype}")
+print(f"Pixel size : {img_obj.physical_pixel_sizes}")
+img = img.squeeze()
+scales = list(img_obj.physical_pixel_sizes)
+print(scales)
+match = re.search(r'unit=(.+)', img_obj.metadata)
+unit = match.group(1).encode().decode('unicode_escape')
+print(unit)
 
 # %%
 # Instantiate the napari viewer and view the image
