@@ -32,12 +32,13 @@ viewer.add_image(img, scale=scales)
 viewer.layers['img'].bounding_box.visible=True
 
 # %%
+# Do sum projection along Z
 sum_z_image_float = np.sum(img, axis=0).astype(float)
-viewer.add_image(sum_z_image_float, scale=scales[1:3]) 
+viewer.add_image(sum_z_image_float, scale=scales[1:3])
 viewer.layers['sum_z_image_float'].bounding_box.visible=True
 
 # %%
-#plot histogram of the sum projection and find the highest value
+# Plot histogram of the sum projection along Z and find the highest value
 plt.hist(sum_z_image_float.ravel(), bins=256, log=True)
 max_z_value = np.max(sum_z_image_float)
 print(f'Max value in sum projection: {max_z_value}')
@@ -45,12 +46,13 @@ plt.axvline(max_z_value, color='r', linestyle='dashed', linewidth=1)
 
 
 # %%
+# Do sum projection along Y
 sum_y_image_float = np.sum(img, axis=1).astype(float)
 viewer.add_image(sum_y_image_float, scale=[scales[0], scales[2]])
 viewer.layers['sum_y_image_float'].bounding_box.visible=True
 
 # %%
-#plot histogram of the sum projection and find the highest value
+# Plot histogram of the sum projection along Y and find the highest value
 plt.hist(sum_y_image_float.ravel(), bins=256, log=True)
 max_y_value = np.max(sum_y_image_float)
 print(f'Max value in sum projection: {max_y_value}')
@@ -58,22 +60,26 @@ plt.axvline(max_y_value, color='r', linestyle='dashed', linewidth=1)
 
 
 # %%
+# Do max projection along Z
 max_z_image_float = np.max(img, axis=0).astype(float)
-viewer.add_image(max_z_image_float, scale=scales[1:3]) 
+viewer.add_image(max_z_image_float, scale=scales[1:3])
 viewer.layers['max_z_image_float'].bounding_box.visible=True
 
 # %%
+# Print the highest value in max projection along Z
 max_z_value_2 = np.max(max_z_image_float)
-print(f'Max value in sum projection: {max_z_value_2}')
+print(f'Max value in max projection: {max_z_value_2}')
 
 # %%
+# Do max projection along Y
 max_y_image_float = np.max(img, axis=1).astype(float)
-viewer.add_image(max_y_image_float, scale=[scales[0], scales[2]]) 
+viewer.add_image(max_y_image_float, scale=[scales[0], scales[2]])
 viewer.layers['max_y_image_float'].bounding_box.visible=True
 
 # %%
+# Print the highest value in max projection along Y
 max_y_value_2 = np.max(max_y_image_float)
-print(f'Max value in sum projection: {max_y_value_2}')
+print(f'Max value in max projection: {max_y_value_2}')
 
 # %%
 plt.close('all')

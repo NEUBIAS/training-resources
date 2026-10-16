@@ -1,4 +1,4 @@
-# %% 
+# %%
 # Explore Max and Sum Projections
 
 # %%
@@ -33,8 +33,8 @@ viewer.layers['img'].bounding_box.visible=True
 # %%
 # Create and view a maximum projection along z-axis, i.e. axis = 0
 # - Observe how the maximum gives a nice "quick overview" of the data content
-# - In order to see it at the same scale as the original image we need to scale in in x&y 
-# - Napari: Observe that the image layer context menu also allows one to create projections
+# - In order to see it at the same scale as the original image we need to scale in in x&y
+# - Napari: Observe that the image layer context menu also allows one to create projections. This scales the image automatically if required
 # - Napari: *Toggle grid mode (Ctrl + G)* to view images side by side
 max_z_image = np.max(img, axis=0)
 viewer.add_image(max_z_image, scale=[scales[1], scales[2]])
@@ -50,13 +50,13 @@ viewer.layers['sum_z_image'].bounding_box.visible=True
 # %%
 # Observe that the data type changed during the sum projection
 # but not during the maximum projection
-# - Understand why this make sense 
-print("orig:", img.dtype) 
+# - Understand why this make sense
+print("orig:", img.dtype)
 print("max projection:", max_z_image.dtype)
 print("sum projection:", sum_z_image.dtype)
 
 # %%
-# Compute the maximum value that could occur during a sum projection of this image 
+# Compute the maximum value that could occur during a sum projection of this image
 # and compare this to what it actually is and what would be supported by
 # the data type of the sum projection
 max_per_slice = np.iinfo(img.dtype).max
@@ -77,7 +77,6 @@ viewer.layers['max_x_image'].bounding_box.visible=True
 viewer.layers['max_y_image'].bounding_box.visible=True
 
 
-# %% 
+# %%
 # Close the viewer (CI test requires this)
 viewer.close()
-
