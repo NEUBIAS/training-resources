@@ -44,24 +44,20 @@ viewer.add_image(img, scale=voxel_size)
 # %%
 # Napari GUI: Change the viewer dimension order using the corresponding button.
 # Napari GUI: Use the 3D viewer button to render the image in 3D.
-
-# %%
-# Compute distances between points
-#
-# Napari GUI: use the `New points layer button` to create a new points layer.
-# Napari GUI: use `Add points` to add two points somewhere on the meta-phase plate.
-
-# %%
 # Napari: 
 # - Again look at the image from the side and in 3-D
 # - Observe that, thanks to the "scale", the 3-D physical shape looks correct now
 # - Observe that napari added interpolated data to make the image appear scaled
 
 # %%
+# Compute distances between points
 # In the following, we will compute distances between 3-D points
 # This is interesting, as you will learn:
 # - How to use drawing layers in napari
 # - How to use image scaling (voxel_size) information for physical measurements
+
+# Napari GUI: use the `New points layer button` to create a new points layer.
+# Napari GUI: use `Add points` to add two points somewhere on the meta-phase plate.
 
 
 # %%
