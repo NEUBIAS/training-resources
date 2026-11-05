@@ -4,35 +4,46 @@
 # %%
 # Import python packages.
 import os
-from OpenIJTIFF import open_ij_tiff, save_ij_tiff
+from OpenIJTIFF import save_ij_tiff
+from bioio import BioImage
 from napari.viewer import Viewer
-import numpy as np
 
 # %%
 # Open a 2D image and its axes metadata
-image_2D, axes_image_2D, voxel_size_image_2D, units_image_2D = open_ij_tiff(
-    "https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nucleus_calibrated.tif"
-)
+image_url = "https://github.com/NEUBIAS/training-resources/raw/master/image_data/xy_8bit__nucleus_calibrated.tif"
+img_obj_2D = BioImage(image_url)
+img_2D = img_obj_2D.data.squeeze()
+
 
 # %%
 # Inspect the image metadata
-print("Shape: ", image_2D.shape)
-print("Axes: ", axes_image_2D)
-print("Scale: ", voxel_size_image_2D)
-print("Units: ", units_image_2D)
+print("Shape:", img_2D.shape)
+print("Axes:", img_obj_2D.dims)
+print("Scale:", img_obj_2D.physical_pixel_sizes)
+voxel_size_image_2D = list(img_obj_2D.physical_pixel_sizes)
+# Load voxel units from metadata (in this specific case)
+import re
+unit = re.search(r"^unit=(.*)$", img_obj_2D.metadata, re.M).group(1)  # '\\u00B5m' (literal escape)
+unit = unit.encode().decode("unicode_escape")
+print("Units:", unit)
 
 # %%
 # Open a 3D image and its axes metadata
-image_3D, axes_image_3D, voxel_size_image_3D, units_image_3D = open_ij_tiff(
-    "https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit__nucleus.tif"
-)
+image_url = "https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit__nucleus.tif"
+img_obj_3D = BioImage(image_url)
+img_3D = img_obj_3D.data.squeeze()
 
 # %%
 # Inspect the image axes metadata.
-print("Shape: ", image_3D.shape)
-print("Axes: ", axes_image_3D)
-print("Scale: ", voxel_size_image_3D)
-print("Units: ", units_image_3D)
+print("Shape:", img_3D.shape)
+print("Axes:", img_obj_3D.dims)
+print("Scale:", img_obj_3D.physical_pixel_sizes)
+voxel_size_image_3D = list(img_obj_3D.physical_pixel_sizes)
+# Load voxel units from metadata (in this specific case)
+import re
+unit = re.search(r"^unit=(.*)$", img_obj_3D.metadata, re.M).group(1)  # '\\u00B5m' (literal escape)
+unit = unit.encode().decode("unicode_escape")
+print("Units:", unit)
 
 # %%
 # Note that the 3D image does not have calibrated metadata.
@@ -43,15 +54,15 @@ units_image_3D = ["um", "um", "um"]
 
 # %%
 # Inspect the metadata for the 3D image
-print("Shape: ", image_3D.shape)
-print("Axes: ", axes_image_3D)
+print("Shape: ", img_3D.shape)
+print("Axes: ", img_obj_3D.dims)
 print("Scale: ", voxel_size_image_3D)
 print("Units: ", units_image_3D)
 
 # %%
 # Open napari and add the 3D image with voxel_size
 viewer = Viewer()
-viewer.add_image(image_3D, scale=voxel_size_image_3D, name='image_3D')
+viewer.add_image(img_3D, scale=voxel_size_image_3D, name='image_3D')
 
 # %%
 # Napari GUI: Use the 3D viewer button to render the image in 3D.
@@ -61,8 +72,8 @@ viewer.add_image(image_3D, scale=voxel_size_image_3D, name='image_3D')
 save_ij_tiff(
      # during trainings this Path should be replaced by the user's desktop, e.g. C:/Users/dominik/Desktop
      os.path.join(os.path.expanduser("~"), "image_3D_calibrated.tif"),
-     image_3D,
-     axes_image_3D,
+     img_3D,
+     ['z', 'y', 'x'],
      voxel_size_image_3D,
      units_image_3D
 )

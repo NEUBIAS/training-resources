@@ -3,36 +3,43 @@
 
 # %%
 # Import python packages
-from OpenIJTIFF import open_ij_tiff
-import numpy as np
+from bioio import BioImage
 from napari.viewer import Viewer
 
 # %%
 # Open a 3-D image of metaphase chromosomes and inspect the metadata
-image, axes, voxel_size, units = open_ij_tiff(
-    "https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit__mitotic_plate_calibrated.tif"
-)
-print("Shape:", image.shape)
-print("Axes:", axes)
-print("Scale:", voxel_size) # anisotropy!
-print("Units:", units)
+image_url = "https://github.com/NEUBIAS/training-resources/raw/master/image_data/xyz_8bit__mitotic_plate_calibrated.tif"
+img_obj = BioImage(image_url)
+img = img_obj.data.squeeze()
+print("Shape:", img.shape)
+print("Axes:", img_obj.dims)
+print("Scale:", img_obj.physical_pixel_sizes)
+voxel_size = list(img_obj.physical_pixel_sizes)
+# Load voxel units from metadata (in this specific case)
+import re
+unit = re.search(r"^unit=(.*)$", img_obj.metadata, re.M).group(1)  # '\\u00B5m' (literal escape)
+unit = unit.encode().decode("unicode_escape")
+print("Units:", unit)
 
 # %%
 # View the image in napari
 viewer = Viewer()
-viewer.add_image(image)
+viewer.add_image(img)
 
 # Napari: 
 # - Change the axes order to look at the image "from the side" using the corresponding button
 # - Look at the image in 3-D using the corresponding button
 # - Conclude that the physical shape does not look correct
 # - Important: close this viewer before proceeding, not to confuse yourself
+
+# %%
+# Close the image in napari
 viewer.close()
 
 # %%
 # Open napari and add the image with its voxel size.
 viewer = Viewer()
-viewer.add_image(image, scale=voxel_size)
+viewer.add_image(img, scale=voxel_size)
 
 # %%
 # Napari GUI: Change the viewer dimension order using the corresponding button.
