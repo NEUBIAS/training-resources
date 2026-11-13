@@ -23,7 +23,7 @@ figure: /figures/binarization.png
 figure_legend: Image before and after applying a threshold of 73 gray values.
 
 multiactivities:
-  - ["binarization/binarization_act1.md", [["ImageJ GUI", "binarization/binarization_act1_imagejgui.md"], ["ImageJ Macro", "binarization/binarization_act1_imagejmacro.ijm"], ["ImageJ Jython", "binarization/binarization_act1_jython.py"], ["skimage napari", "binarization/binarization_act1_skimage_napari.py", "python"],["Galaxy", "binarization/binarization_act1_galaxy.md"]]]
+  - ["binarization/binarization_act1.md", [["ImageJ GUI", "binarization/binarization_act1_imagejgui.md"], ["ImageJ Macro", "binarization/binarization_act1_imagejmacro.ijm"], ["ImageJ Jython", "binarization/binarization_act1_jython.py"], ["skimage napari", "binarization/binarization_act1_skimage_napari.py", "python"],["Galaxy", "binarization/binarization_act1_galaxy.md"], ["Interactive HTML", "binarization/binarization_act1_html.md"]] ]
   - ["binarization/binarization_act2.md", [["ImageJ GUI", "binarization/binarization_act2_imagejgui.md"], ["ImageJ Macro", "binarization/binarization_act2_imagejmacro.ijm"], ["ImageJ Jython", "binarization/binarization_act2_jython.py"], ["ImageJ Jython + input parameters", "binarization/binarization_act2_jython_inputparameters.py"], ["skimage napari", "binarization/binarization_act2_skimage_napari.py"],["Galaxy", "binarization/binarization_act2_galaxy.md"]]]
   - ["binarization/binarization_act3.md", [["ImageJ GUI", "binarization/binarization_act3_imagejgui.md"]]]
 
