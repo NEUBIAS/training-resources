@@ -69,3 +69,86 @@ Depending on the software the foreground value can be different (e.g. 1 in MATLA
 where, `p_im` and `p_bin` are the intensity and binary images respectively.
 
 For binarization, it is also possible to define an interval of threshold values, i.e. a lower and upper threshold value. Pixels with intensity values within this interval belong to the foreground and vice versa.
+
+<script src="{{ site.baseurl }}/assets/js/UTIF.js"></script>
+
+<div style="border: 1px solid #ddd; padding: 15px; border-radius: 6px; margin: 20px 0; text-align: center; background: #fafafa;">
+  <p><strong>Interactive Thresholding Demo (TIFF)</strong></p>
+  
+  <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 15px;">
+    <div>
+      <canvas id="origCanvas" style="border: 1px solid #ccc; max-width: 100%;"></canvas>
+      <div style="font-size: 0.9em; color: #555;">Original Image</div>
+    </div>
+    <div>
+      <canvas id="binCanvas" style="border: 1px solid #ccc; max-width: 100%;"></canvas>
+      <div style="font-size: 0.9em; color: #555;">Binary Mask (t = <span id="threshVal">73</span>)</div>
+    </div>
+  </div>
+
+  <label for="threshSlider"><strong>Threshold (t):</strong> </label>
+  <input type="range" id="threshSlider" min="0" max="255" value="73" style="width: 60%; vertical-align: middle;">
+</div>
+
+<script>
+(function() {
+  const origCanvas = document.getElementById('origCanvas');
+  const binCanvas = document.getElementById('binCanvas');
+  const origCtx = origCanvas.getContext('2d');
+  const binCtx = binCanvas.getContext('2d');
+  const slider = document.getElementById('threshSlider');
+  const threshLabel = document.getElementById('threshVal');
+
+  let originalImageData = null;
+
+  // Make sure this filename matches an actual .tif file in your image_data/ folder
+  const tiffUrl = "{{ site.baseurl }}/image_data/xy_8bit__nuclei_noisy_different_intensity.tif";
+
+  fetch(tiffUrl)
+    .then(response => {
+      if (!response.ok) throw new Error("HTTP " + response.status + " loading " + tiffUrl);
+      return response.arrayBuffer();
+    })
+    .then(buffer => {
+      const ifds = UTIF.decode(buffer);
+      UTIF.decodeImage(buffer, ifds[0]);
+      const rgba = UTIF.toRGBA8(ifds[0]);
+      const width = ifds[0].width;
+      const height = ifds[0].height;
+
+      origCanvas.width = binCanvas.width = width;
+      origCanvas.height = binCanvas.height = height;
+
+      originalImageData = new ImageData(new Uint8ClampedArray(rgba), width, height);
+      origCtx.putImageData(originalImageData, 0, 0);
+
+      applyThreshold(parseInt(slider.value, 10));
+    })
+    .catch(err => console.error("Failed to load TIFF:", err));
+
+  function applyThreshold(threshold) {
+    if (!originalImageData) return;
+    const src = originalImageData.data;
+    const output = binCtx.createImageData(originalImageData.width, originalImageData.height);
+    const dst = output.data;
+
+    for (let i = 0; i < src.length; i += 4) {
+      const intensity = src[i];
+      const val = intensity >= threshold ? 255 : 0;
+      dst[i] = val;
+      dst[i + 1] = val;
+      dst[i + 2] = val;
+      dst[i + 3] = 255;
+    }
+    binCtx.putImageData(output, 0, 0);
+  }
+
+  slider.addEventListener('input', function() {
+    const t = parseInt(this.value, 10);
+    threshLabel.textContent = t;
+    applyThreshold(t);
+  });
+})();
+</script>
+
+
