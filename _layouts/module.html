@@ -292,7 +292,10 @@ layout: base
   <br>
 
   <div class="module-content">
-    {{ content }}
+    {% if content != "" %}
+      <h2>Theory</h2>
+      {{ content }}
+    {% endif %}
   </div>
 
   <br>
