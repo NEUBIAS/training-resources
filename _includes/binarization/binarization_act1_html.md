@@ -2,7 +2,7 @@
 2. Drag the **Threshold (t)** slider to find a value that segments **both** the bright and dim nuclei.
 3. Increase the threshold value further until **only** the brighter nucleus remains segmented.
 
-<script src="{{ site.baseurl }}/assets/js/UTIF.min.js"></script>
+<script src="{{ site.baseurl }}/assets/js/UTIF.js"></script>
 
 <div style="border: 1px solid #ddd; padding: 15px; border-radius: 6px; margin: 15px 0; text-align: center; background: #fafafa;">
   <div style="display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; margin-bottom: 15px;">
