@@ -14,9 +14,9 @@ that can be useful when planning/delivering training in image analysis.
 
 ## About 
 
-- [Publication preprint](https://zenodo.org/records/17669862)
-- [Google slides presentation](https://docs.google.com/presentation/d/1x5euj3p4hoAdOONQbzFA5xf3rnsNeTjC1rpadCbwbQk/edit?usp=sharing)
-- [Recorded webinar](https://www.youtube.com/watch?v=xtm7DAiXtr0)
+- [Publication (Journal of Microscopy)](https://onlinelibrary.wiley.com/doi/10.1111/jmi.70133))
+- [Presentation (Google Slides)](https://docs.google.com/presentation/d/1x5euj3p4hoAdOONQbzFA5xf3rnsNeTjC1rpadCbwbQk/edit?usp=sharing)
+- [Webinar (Youtube)](https://www.youtube.com/watch?v=xtm7DAiXtr0)
 
 ## Teach
 
