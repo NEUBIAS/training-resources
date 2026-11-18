@@ -16,11 +16,10 @@ We are a **[community of developers and trainers](https://github.com/NEUBIAS/tra
 
 More information:
 
-- **[Publication preprint](https://zenodo.org/records/17669862)**
+- **[Publication]([https://zenodo.org/records/17669862](https://onlinelibrary.wiley.com/doi/10.1111/jmi.70133))**
 - **[Video: "Bioimage analysis training resources: How to use"](https://www.youtube.com/watch?v=IcSBmoMRA20)**
 - **[Module Video: "Digital Image Basics: Introduction"](https://www.youtube.com/watch?v=Felvc8zvFeU&list=PLnnMnuibzkscxztDDOZCyXjWfgIqYFobM)**
-- **[Module Video: "Digital image basics: Inspect 2d image with python and napari"](https://www.youtube.com/watch?v=-fN5OxGnfck&list=PLnnMnuibzkscxztDDOZCyXjWfgIqYFobM&index=2)**
-
+- **[Module Video: "Digital Image Basics: Inspect 2d image with python and napari"](https://www.youtube.com/watch?v=-fN5OxGnfck&list=PLnnMnuibzkscxztDDOZCyXjWfgIqYFobM&index=2)**
 
 To get a sense for how this material may be used we compiled a selection of consolidated courses. The course duration is estimated when teaching using coding (e.g. python), the teaching when using a GUI (e.g. FiJi) is about 2/3 of the given time. The credit points (1 ECTS = 30h workload) are estimated from the course duration and an equal amount of self-study (additional activities, further reading).
 
