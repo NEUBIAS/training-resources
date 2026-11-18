@@ -16,7 +16,7 @@ We are a **[community of developers and trainers](https://github.com/NEUBIAS/tra
 
 More information:
 
-- **[Publication]([https://zenodo.org/records/17669862](https://onlinelibrary.wiley.com/doi/10.1111/jmi.70133))**
+- **[Publication](https://onlinelibrary.wiley.com/doi/10.1111/jmi.70133)**
 - **[Video: "Bioimage analysis training resources: How to use"](https://www.youtube.com/watch?v=IcSBmoMRA20)**
 - **[Module Video: "Digital Image Basics: Introduction"](https://www.youtube.com/watch?v=Felvc8zvFeU&list=PLnnMnuibzkscxztDDOZCyXjWfgIqYFobM)**
 - **[Module Video: "Digital Image Basics: Inspect 2d image with python and napari"](https://www.youtube.com/watch?v=-fN5OxGnfck&list=PLnnMnuibzkscxztDDOZCyXjWfgIqYFobM&index=2)**
